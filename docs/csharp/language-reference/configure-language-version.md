@@ -3,12 +3,12 @@ title: Controle de versão da linguagem C# – Guia de C#
 description: Saiba mais sobre como a versão da linguagem C# é determinada com base no seu projeto e os motivos por trás dessa escolha. Saiba como substituir o padrão manualmente.
 ms.custom: updateeachrelease
 ms.date: 08/11/2020
-ms.openlocfilehash: 327a98da37b97830ac7f752a3621a92d8cb161e0
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: a06aa8812dad6f4b9a9254eef9f7c678c22af860
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495454"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634489"
 ---
 # <a name="c-language-versioning"></a>Controle de versão da linguagem C#
 
@@ -29,9 +29,9 @@ O C# 9,0 tem suporte apenas no .NET 5 e em versões mais recentes.
 
 O compilador determina um padrão com base nestas regras:
 
-| Estrutura de destino | version | Padrão da versão da linguagem C# |
+| Estrutura de destino | Versão | Padrão da versão da linguagem C# |
 |------------------|---------|-----------------------------|
-| .NET             | 5     | C# 9,0                      |
+| .NET             | 5     | C# 9.0                      |
 | .NET Core        | 3.x     | C# 8.0                      |
 | .NET Core        | 2. x     | C# 7.3                      |
 | .NET Standard    | 2.1     | C# 8.0                      |
@@ -80,7 +80,7 @@ As compilações em todos os subdiretórios do diretório que contém esse arqui
 
 ## <a name="c-language-version-reference"></a>Referência à versão da linguagem C#
 
-A tabela a seguir mostra todas as versões atuais da linguagem C#. Seu compilador pode não entender necessariamente todos os valores se for mais antigo. Se você instalar o .NET Core 3,0 ou posterior, terá acesso a todos os itens listados.
+A tabela a seguir mostra todas as versões atuais da linguagem C#. Seu compilador pode não entender necessariamente todos os valores se for mais antigo. Se você instalar o SDK do .NET mais recente, terá acesso a todos os itens listados.
 
 [!INCLUDE [langversion-table](includes/langversion-table.md)]
 
@@ -106,7 +106,8 @@ A tabela a seguir mostra todas as versões atuais da linguagem C#. Seu compilado
 > 7.1
 > 7.2
 > 7.3
-> 8.0 (default)
+> 8.0
+> 9.0 (default)
 > latestmajor
 > preview
 > latest

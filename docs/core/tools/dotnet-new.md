@@ -1,16 +1,16 @@
 ---
 title: Comando dotnet new
-description: O comando dotnet new cria novos projetos .NET Core com base no modelo especificado.
+description: O comando dotnet New cria novos projetos .NET com base no modelo especificado.
 no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/04/2020
-ms.openlocfilehash: 2ee06c37cd950f3b9771db2f30fe353435641d67
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: 3ee644f05ea5929ffc7b11054ef1d974b811f418
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400585"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634449"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -33,9 +33,9 @@ dotnet new <TEMPLATE> [-l|--list] [--type <TYPE>]
 dotnet new -h|--help
 ```
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>Description
 
-O `dotnet new` comando cria um projeto do .NET Core ou outros artefatos com base em um modelo.
+O `dotnet new` comando cria um projeto .net ou outros artefatos com base em um modelo.
 
 O comando chama o [mecanismo de modelo](https://github.com/dotnet/templating) para criar os artefatos em disco com base no modelo e nas opções especificadas.
 
@@ -56,7 +56,7 @@ O comando chama o [mecanismo de modelo](https://github.com/dotnet/templating) pa
   - Se a CLI não encontrar uma correspondência de modelo ao invocar `dotnet new` , nem mesmo parcial.
   - Se houver uma versão mais recente do modelo disponível. Nesse caso, o projeto ou artefato é criado, mas a CLI avisa sobre uma versão atualizada do modelo.
 
-  A tabela a seguir mostra os modelos que vêm pré-instalados com o SDK do .NET Core. O idioma padrão do modelo é mostrado entre parênteses. Clique no link nome curto para ver as opções de modelo específicas.
+  A tabela a seguir mostra os modelos que vêm pré-instalados com o SDK do .NET. O idioma padrão do modelo é mostrado entre parênteses. Clique no link nome curto para ver as opções de modelo específicas.
 
 | Modelos                                    | Nome curto                      | Idioma     | Marcações                                  | Introduzida |
 |----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
@@ -135,7 +135,7 @@ O comando chama o [mecanismo de modelo](https://github.com/dotnet/templating) pa
 
 - **`--nuget-source <SOURCE>`**
 
-  Especifica uma origem do NuGet a ser usada durante a instalação. Disponível desde o SDK do .NET Core 2,1.
+  Especifica uma origem do NuGet a ser usada durante a instalação.
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
@@ -177,6 +177,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
   | Versão do SDK | Valor padrão   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
 
@@ -196,7 +197,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
 - _ *`-f|--framework <FRAMEWORK>`**
 
-  Especifica a [estrutura](../../standard/frameworks.md) a ser direcionada. Valores: `netcoreapp<version>` para criar uma Biblioteca de classes do .NET Core ou `netstandard<version>` para criar uma Biblioteca de classes .NET Standard. O valor padrão é `netstandard2.0`.
+  Especifica a [estrutura](../../standard/frameworks.md) a ser direcionada. Valores: `net5.0` ou `netcoreapp<version>` para criar uma biblioteca de classes .net ou `netstandard<version>` para criar uma .net Standard biblioteca de classes. O valor padrão para o SDK do .NET 5,0 é `net5.0` .
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -214,7 +215,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
 - _ *`-f|--framework <FRAMEWORK>`**
 
-  Especifica a [estrutura](../../standard/frameworks.md) a ser direcionada. O valor padrão é `netcoreapp3.1`. Disponível desde o SDK do .NET Core 3,1.
+  Especifica a [estrutura](../../standard/frameworks.md) a ser direcionada. O valor padrão é `net5.0`. Disponível desde o SDK do .NET Core 3,1.
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -268,6 +269,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
   | Versão do SDK | Valor padrão   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
 
@@ -291,6 +293,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
   | Versão do SDK | Valor padrão   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.2         | `netcoreapp2.2` |
@@ -515,6 +518,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
   | Versão do SDK | Valor padrão   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.1` |
@@ -602,6 +606,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
   | Versão do SDK | Valor padrão   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
 
@@ -654,6 +659,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
   | Versão do SDK | Valor padrão   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.0` |
@@ -674,6 +680,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
   | Versão do SDK | Valor padrão   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.0` |
@@ -759,6 +766,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
   | Versão do SDK | Valor padrão   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.1` |
@@ -773,7 +781,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
 - _ *`--sdk-version <VERSION_NUMBER>`**
 
-  Especifica a versão do SDK do .NET Core a ser usada na *global.jsno* arquivo.
+  Especifica a versão do SDK do .NET a ser usada na *global.jsno* arquivo.
 
 ***
 
@@ -845,7 +853,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
   dotnet new globaljson --sdk-version 3.1.101
   ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Modelos personalizados para dotnet new](custom-templates.md)
 - [Create a custom template for dotnet new](../tutorials/cli-templates-create-item-template.md) (Criar um modelo personalizado para dotnet new)

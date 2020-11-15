@@ -2,12 +2,12 @@
 title: Comando dotnet
 description: Saiba mais sobre o comando dotNet (o Driver genérico para a CLI do .NET) e seu uso.
 ms.date: 11/11/2020
-ms.openlocfilehash: a2b4b026e7c89536a6a7eaf69b31e3f62bf5adfc
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 7a0c8f2eb7ab407bd725db56cbf31da4689970e4
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94556817"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634019"
 ---
 # <a name="dotnet-command"></a>Comando dotnet
 
@@ -219,7 +219,7 @@ Comando | Função
 --- | ---
 [dotnet tool install](dotnet-tool-install.md) | Instala uma ferramenta em seu computador.
 [dotnet tool list](dotnet-tool-list.md) | Lista todas as ferramentas globais, ferramentas-caminho ou locais atualmente instaladas no seu computador.
-[pesquisa da ferramenta dotnet](dotnet-tool-list.md) | Pesquisa NuGet.org para ferramentas que têm o termo de pesquisa especificado em seu nome ou metadados.
+[dotnet tool search](dotnet-tool-list.md) | Pesquisa NuGet.org para ferramentas que têm o termo de pesquisa especificado em seu nome ou metadados.
 [dotnet tool uninstall](dotnet-tool-uninstall.md) | Desinstala uma ferramenta do seu computador.
 [dotnet tool update](dotnet-tool-update.md) | Atualiza uma ferramenta instalada em seu computador.
 
@@ -239,7 +239,7 @@ Para obter mais informações sobre cada ferramenta, digite `dotnet <tool-name> 
 
 ## <a name="examples"></a>Exemplos
 
-Crie um novo aplicativo de console .NET Core:
+Crie um novo aplicativo de console .NET:
 
 ```dotnetcli
 dotnet new console
@@ -343,7 +343,7 @@ dotnet myapp.dll
 
   A maneira típica de obter informações detalhadas de rastreamento sobre a inicialização do aplicativo é definir `COREHOST_TRACE=1` e `COREHOST_TRACEFILE=host_trace.txt` , em seguida, executar o aplicativo. Um novo arquivo `host_trace.txt` será criado no diretório atual com as informações detalhadas.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Arquivos de configuração de runtime](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)
 - [Definições de configuração de tempo de execução do .NET](../run-time-config/index.md)

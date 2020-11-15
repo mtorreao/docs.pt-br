@@ -2,18 +2,18 @@
 title: Comando dotnet test
 description: O comando dotnet test é usado para executar testes de unidade em um determinado projeto.
 ms.date: 04/29/2020
-ms.openlocfilehash: 6805564ccd8a8b4911c7c687d97a06df2910c015
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: a5666cfe4c09b2b88d77b256fac922154c7d6bd7
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281604"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634377"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
 **Este artigo aplica-se a:** ✔️ SDK do .net Core 2,1 e versões posteriores
 
-## <a name="name"></a>Nome
+## <a name="name"></a>Name
 
 `dotnet test` - driver de teste do .NET usado para executar testes de unidade.
 
@@ -38,7 +38,7 @@ dotnet test [<PROJECT> | <SOLUTION> | <DIRECTORY> | <DLL>]
 dotnet test -h|--help
 ```
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>Description
 
 O `dotnet test` comando é usado para executar testes de unidade em uma determinada solução. O `dotnet test` comando cria a solução e executa um aplicativo de host de teste para cada projeto de teste na solução. O host de teste executa testes no projeto fornecido usando uma estrutura de teste, por exemplo: MSTest, NUnit ou xUnit, e relata o êxito ou a falha de cada teste. Se todos os testes forem bem-sucedidos, o executor de testes retornará 0 como um código de saída; caso contrário, se algum teste falhar, retornará 1.
 
@@ -249,9 +249,9 @@ Onde `Microsoft.NET.Test.Sdk` é o host de teste, `xunit` é a estrutura de test
 
 | Estrutura de teste | Propriedades com suporte                                                                                      |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
-| MSTest         | <ul><li>FullyQualifiedName</li><li>Nome</li><li>ClassName</li><li>Prioridade</li><li>TestCategory</li></ul> |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>Name</li><li>ClassName</li><li>Prioridade</li><li>TestCategory</li></ul> |
 | xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>Características</li></ul>                                   |
-| NUnit          | <ul><li>FullyQualifiedName</li><li>Nome</li><li>TestCategory</li><li>Prioridade</li></ul>                                   |
+| NUnit          | <ul><li>FullyQualifiedName</li><li>Name</li><li>TestCategory</li><li>Prioridade</li></ul>                                   |
 
 O `<operator>` descreve a relação entre a propriedade o valor:
 
@@ -277,8 +277,8 @@ Inclua expressões em parênteses ao usar operadores condicionais (por exemplo, 
 
 Para obter mais informações e exemplos sobre como usar a filtragem de teste de unidade seletivo, confira [Executando testes de unidade seletivos](../testing/selective-unit-tests.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Estruturas e destinos](../../standard/frameworks.md)
-- [Catálogo de RID (identificador de tempo de execução) do .NET Core](../rid-catalog.md)
+- [Catálogo do RID (.NET Runtime Identifier)](../rid-catalog.md)
 - [Passando argumentos RunSettings por meio de linha de comando](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)

@@ -1,27 +1,27 @@
 ---
 title: Visão geral do global.json
-description: Saiba como usar o arquivo global.json para definir a versão do SDK do .NET Core ao executar comandos de CLI do .NET Core.
+description: Saiba como usar o global.jsno arquivo para definir a versão do SDK do .NET ao executar comandos da CLI do .NET.
 ms.topic: how-to
 ms.date: 05/01/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 714e32ec841cee214f801de65bccf0041af66b0b
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 02a0ab478a23f7df55a8cc2e872e480b311304fe
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281539"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94633993"
 ---
 # <a name="globaljson-overview"></a>Visão geral do global.json
 
 **Este artigo aplica-se a:** ✔️ SDK do .net Core 2,0 e versões posteriores
 
-O arquivo *global.json* permite que você defina qual versão do SDK do .NET Core é usada ao executar comandos de CLI do .NET Core. A seleção do SDK do .NET Core não depende da especificação do runtime ao qual o projeto é direcionado. A versão SDK do .NET Core indica quais versões do CLI do .NET Core são usadas.
+O *global.jsno* arquivo permite que você defina qual versão do SDK do .net é usada quando você executa comandos da CLI do .net. Selecionar o SDK do .NET é independente de especificar o tempo de execução de destino do projeto. A versão do SDK do .NET indica quais versões da CLI do .NET são usadas.
 
 Em geral, você deseja usar a versão mais recente das ferramentas do SDK, portanto, nenhum *global.jsno* arquivo é necessário. Em alguns cenários avançados, talvez você queira controlar a versão das ferramentas do SDK, e este artigo explica como fazer isso.
 
 Para obter mais informações de como especificar o runtime nesse caso, confira [Estruturas de destino](../../standard/frameworks.md).
 
-O SDK do .NET Core procura um arquivo *global.json* no diretório de trabalho atual (que não necessariamente é o mesmo que o diretório do projeto) ou um de seus diretórios pai.
+O SDK do .NET procura um *global.jsno* arquivo no diretório de trabalho atual (que não é necessariamente o mesmo que o diretório do projeto) ou um de seus diretórios pai.
 
 ## <a name="globaljson-schema"></a>Esquema do global.json
 
@@ -29,15 +29,15 @@ O SDK do .NET Core procura um arquivo *global.json* no diretório de trabalho at
 
 Digite: `object`
 
-Especifica as informações sobre o SDK do .NET Core a ser selecionado.
+Especifica informações sobre o SDK do .NET a ser selecionado.
 
-#### <a name="version"></a>version
+#### <a name="version"></a>Versão
 
 - Digite: `string`
 
 - Disponível desde: SDK do .NET Core 1,0.
 
-A versão do SDK do .NET Core a ser usada.
+A versão do SDK do .NET a ser usada.
 
 Este campo:
 
@@ -84,7 +84,7 @@ A tabela a seguir mostra os valores possíveis para a `rollForward` chave:
 | `latestPatch` | Usa o nível de patch mais recente instalado que corresponde à faixa principal, secundária e de recursos solicitada com um nível de patch e maior ou igual ao valor especificado. <br> Se não for encontrado, falhará. |
 | `latestFeature` | Usa a faixa de recursos e o nível de patch mais alto instalados que corresponde ao principal e secundário solicitados com uma faixa de recursos e um nível de patch que é maior ou igual ao valor especificado. <br> Se não for encontrado, falhará. |
 | `latestMinor` | Usa a maior versão instalada, a faixa de recursos e o nível de patch que corresponde à principal solicitada com um nível secundário, de faixa de recursos e de patch que é maior ou igual ao valor especificado. <br> Se não for encontrado, falhará. |
-| `latestMajor` | Usa o SDK do .NET Core mais alto instalado com uma versão maior ou igual à do valor especificado. <br> Se não for encontrado, falha. |
+| `latestMajor` | Usa o SDK do .NET mais alto instalado com uma versão maior ou igual à do valor especificado. <br> Se não for encontrado, falha. |
 | `disable`     | Não rola para frente. Correspondência exata necessária. |
 
 ### <a name="msbuild-sdks"></a>MSBuild-SDKs
@@ -149,11 +149,11 @@ O exemplo a seguir mostra como usar a versão de patch mais alta instalada de um
 }
 ```
 
-## <a name="globaljson-and-the-net-core-cli"></a>global.json e CLI do .NET Core
+## <a name="globaljson-and-the-net-cli"></a>global.jsno e na CLI do .NET
 
-É útil saber quais versões do SDK estão instaladas em seu computador para definir uma na *global.jsno* arquivo. Para obter mais informações sobre como fazer isso, consulte [como verificar se o .NET Core já está instalado](../install/how-to-detect-installed-versions.md#check-sdk-versions).
+É útil saber quais versões do SDK estão instaladas em seu computador para definir uma na *global.jsno* arquivo. Para obter mais informações sobre como fazer isso, consulte [como verificar se o .net já está instalado](../install/how-to-detect-installed-versions.md#check-sdk-versions).
 
-Para instalar versões adicionais do SDK do .NET Core em seu computador, visite a página [baixar o .NET Core](https://dotnet.microsoft.com/download/dotnet-core) .
+Para instalar versões adicionais do SDK do .NET em seu computador, visite a página [baixar o .NET Core](https://dotnet.microsoft.com/download/dotnet-core) .
 
 Você pode criar um novo arquivo *global.json* no diretório atual executando o comando [dotnet new](dotnet-new.md), como no exemplo a seguir:
 
@@ -164,7 +164,7 @@ dotnet new globaljson --sdk-version 3.0.100
 ## <a name="matching-rules"></a>Regras de correspondência
 
 > [!NOTE]
-> As regras de correspondência são governadas pelo `dotnet.exe` ponto de entrada, que é comum em todos os tempos de execução instalados do .NET Core instalados. As regras de correspondência para a versão mais recente instalada do tempo de execução do .NET Core são usadas quando você tem vários tempos de execução instalados lado a lado ou se estiver usando um *global.jsno* arquivo.
+> As regras de correspondência são governadas pelo `dotnet.exe` ponto de entrada, que é comum em todos os tempos de execução instalados do .net. As regras de correspondência para a versão mais recente instalada do tempo de execução do .NET são usadas quando você tem vários tempos de execução instalados lado a lado ou se estiver usando um *global.jsno* arquivo.
 
 ## <a name="net-core-3x"></a>[.NET Core 3.x](#tab/netcore3x)
 
@@ -215,6 +215,6 @@ As versões do SDK do .NET Core `2.1.100` até `2.1.201` foram lançadas durante
 
   A partir do SDK do .NET Core 2.1 (versão 2.1.300), o comando `dotnet ef` vem incluído no SDK. Para compilar seu projeto, instale o SDK do .NET Core 2,0 (versão 2.1.201) ou anterior em seu computador e defina a versão do SDK desejada usando o *global.jsno* arquivo. Para saber mais sobre o comando `dotnet ef`, confira [Ferramentas da linha de comando do .NET EF Core](/ef/core/miscellaneous/cli/dotnet).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Como os SDKs de projeto são resolvidos](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved)

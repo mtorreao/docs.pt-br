@@ -1,13 +1,13 @@
 ---
 title: Comando dotnet pack
-description: O comando dotnet pack cria pacotes NuGet para seu projeto .NET Core.
+description: O comando dotnet Pack cria pacotes NuGet para seu projeto .NET.
 ms.date: 04/28/2020
-ms.openlocfilehash: 409b946d93cf73fec38941740a446c3ee3402490
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4312ea64a75fa89eae58cdb41a6dc3463cdd215c
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537817"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634227"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -48,7 +48,7 @@ Por padrão, `dotnet pack` compila primeiro o projeto. Se você quiser evitar es
 
 Você pode fornecer as propriedades de MSBuild para o comando `dotnet pack` para o processo de empacotamento. Para obter mais informações, consulte [Propriedades de metadados do NuGet](csproj.md#nuget-metadata-properties) e a [Referência de linha de comando MSBuild](/visualstudio/msbuild/msbuild-command-line-reference). A seção [Exemplos](#examples) mostra como usar a opção -p do MSBuild para alguns cenários diferentes.
 
-Projetos da Web não são empacotáveis por padrão. Para substituir o comportamento padrão, adicione a seguinte propriedade ao seu arquivo *.csproj*:
+Projetos da Web não são empacotáveis por padrão. Para substituir o comportamento padrão, adicione a seguinte propriedade ao seu arquivo *.csproj* :
 
 ```xml
 <PropertyGroup>
@@ -154,7 +154,7 @@ Projetos da Web não são empacotáveis por padrão. Para substituir o comportam
   dotnet pack --no-build --output nupkgs
   ```
 
-- Com o sufixo da versão do projeto configurado como `<VersionSuffix>$(VersionSuffix)</VersionSuffix>` no arquivo *.csproj*, empacote o projeto atual e atualize a versão do pacote resultante com o sufixo especificado:
+- Com o sufixo da versão do projeto configurado como `<VersionSuffix>$(VersionSuffix)</VersionSuffix>` no arquivo *.csproj* , empacote o projeto atual e atualize a versão do pacote resultante com o sufixo especificado:
 
   ```dotnetcli
   dotnet pack --version-suffix "ci-1234"
@@ -188,4 +188,4 @@ Projetos da Web não são empacotáveis por padrão. Para substituir o comportam
   
   - [Empacotamento usando um .nuspec](/nuget/reference/msbuild-targets#packing-using-a-nuspec)
   - [Pontos de extensão avançados para criar pacote personalizado](/nuget/reference/msbuild-targets#advanced-extension-points-to-create-customized-package)
-  - [Propriedades globais](/visualstudio/msbuild/msbuild-properties?view=vs-2019#global-properties)
+  - [Propriedades globais](/visualstudio/msbuild/msbuild-properties#global-properties)

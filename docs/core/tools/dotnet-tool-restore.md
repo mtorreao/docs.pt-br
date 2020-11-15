@@ -1,21 +1,21 @@
 ---
 title: comando de restauração da ferramenta dotnet
-description: O comando dotnet ferramenta de restauração instala em seu computador as ferramentas locais do .NET Core que estão no escopo do diretório atual.
+description: O comando dotnet ferramenta de restauração instala em seu computador as ferramentas locais do .NET que estão no escopo para o diretório atual.
 ms.date: 02/14/2020
-ms.openlocfilehash: ceef3274ec9d337f8c51009d5a8c27e808b14035
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 1b7fd10102f2c957b3eb235f6897b60bc8ca9c07
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302666"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634266"
 ---
 # <a name="dotnet-tool-restore"></a>dotnet tool restore
 
 **Este artigo aplica-se a:** ✔️ SDK do .net Core 3,0 e versões posteriores
 
-## <a name="name"></a>Nome
+## <a name="name"></a>Name
 
-`dotnet tool restore`-Instala em seu computador as ferramentas locais do .NET Core que estão no escopo do diretório atual.
+`dotnet tool restore` -Instala em seu computador as ferramentas locais do .NET que estão no escopo para o diretório atual.
 
 ## <a name="synopsis"></a>Sinopse
 
@@ -29,7 +29,7 @@ dotnet tool restore
 dotnet tool restore -h|--help
 ```
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>Description
 
 O `dotnet tool restore` comando localiza o arquivo de manifesto da ferramenta que está no escopo do diretório atual e instala as ferramentas listadas nele. Para obter informações sobre arquivos de manifesto, consulte [instalar uma ferramenta local](global-tools.md#install-a-local-tool) e [invocar uma ferramenta local](global-tools.md#invoke-a-local-tool).
 
@@ -37,7 +37,7 @@ O `dotnet tool restore` comando localiza o arquivo de manifesto da ferramenta qu
 
 - **`--configfile <FILE>`**
 
-  O arquivo de configuração do NuGet (*nuget.config*) a ser usado.
+  O arquivo de configuração do NuGet ( *nuget.config* ) a ser usado.
 
 - **`--add-source <SOURCE>`**
 
@@ -77,7 +77,7 @@ O `dotnet tool restore` comando localiza o arquivo de manifesto da ferramenta qu
 
   Restaura as ferramentas locais para o diretório atual.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Ferramentas do .NET Core](global-tools.md)
-- [Tutorial: instalar e usar uma ferramenta local do .NET Core usando o CLI do .NET Core](local-tools-how-to-use.md)
+- [Ferramentas .NET](global-tools.md)
+- [Tutorial: instalar e usar uma ferramenta local do .NET usando a CLI do .NET](local-tools-how-to-use.md)

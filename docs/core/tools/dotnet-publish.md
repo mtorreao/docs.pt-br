@@ -1,19 +1,19 @@
 ---
 title: Comando dotnet publish
-description: O comando dotnet publish publica um projeto do .NET Core ou uma solução em um diretório.
-ms.date: 02/24/2020
-ms.openlocfilehash: e35a0671cb964e7d9b68ed5bbe261045038229aa
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+description: O comando dotnet publish publica um projeto ou uma solução .NET em um diretório.
+ms.date: 11/11/2020
+ms.openlocfilehash: 9b5d00816e2f4f9557280175e4b016fe79af0673
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440563"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634423"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
 **Este artigo aplica-se a:** ✔️ SDK do .net Core 2,1 e versões posteriores
 
-## <a name="name"></a>Nome
+## <a name="name"></a>Name
 
 `dotnet publish` – Publica o aplicativo e suas dependências em uma pasta para implantação em um sistema de hospedagem.
 
@@ -32,7 +32,7 @@ dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
 dotnet publish -h|--help
 ```
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>Description
 
 `dotnet publish` compila o aplicativo, lê suas dependências especificadas no arquivo de projeto e publica o conjunto de arquivos resultantes em um diretório. A saída inclui os seguintes ativos:
 
@@ -41,7 +41,7 @@ dotnet publish -h|--help
 - Um *.runtimeconfig.jsno* arquivo que especifica o tempo de execução compartilhado que o aplicativo espera, bem como outras opções de configuração para o tempo de execução (por exemplo, tipo de coleta de lixo).
 - As dependências do aplicativo, que são copiadas do cache NuGet para a pasta de saída.
 
-A saída do comando `dotnet publish` está pronta para implantação em um sistema de hospedagem (por exemplo, um servidor, um computador, um Mac, um laptop) para execução. É a única maneira com suporte oficial de preparar o aplicativo para implantação. Dependendo do tipo de implantação especificado pelo projeto, talvez o sistema de hospedagem não tenha o runtime compartilhado do .NET Core instalado. Para obter mais informações, consulte [publicar aplicativos .NET Core com o CLI do .NET Core](../deploying/deploy-with-cli.md).
+A saída do comando `dotnet publish` está pronta para implantação em um sistema de hospedagem (por exemplo, um servidor, um computador, um Mac, um laptop) para execução. É a única maneira com suporte oficial de preparar o aplicativo para implantação. Dependendo do tipo de implantação que o projeto especifica, o sistema de hospedagem pode ou não ter o tempo de execução compartilhado do .NET instalado nele. Para obter mais informações, consulte [publicar aplicativos .NET com a CLI do .net](../deploying/deploy-with-cli.md).
 
 ### <a name="implicit-restore"></a>Restauração implícita
 
@@ -165,7 +165,7 @@ Para obter mais informações, consulte os seguintes recursos:
 
 - **`--self-contained [true|false]`**
 
-  Publica o runtime do .NET Core com seu aplicativo para que não seja necessário instalar o runtime no computador de destino. O padrão é `true` se um identificador de tempo de execução for especificado e o projeto for um projeto executável (não um projeto de biblioteca). Para obter mais informações, consulte [publicação de aplicativos do .NET Core](../deploying/index.md) e [publicar aplicativos .net core com o CLI do .NET Core](../deploying/deploy-with-cli.md).
+  Publica o tempo de execução do .NET com seu aplicativo para que o tempo de execução não precise ser instalado no computador de destino. O padrão é `true` se um identificador de tempo de execução for especificado e o projeto for um projeto executável (não um projeto de biblioteca). Para obter mais informações, consulte [publicação de aplicativos .net](../deploying/index.md) e [publicar aplicativos .NET com a CLI do .net](../deploying/deploy-with-cli.md).
 
   Se essa opção for usada sem especificar `true` ou `false` , o padrão será `true` . Nesse caso, não coloque a solução ou o argumento do projeto imediatamente após `--self-contained` , porque `true` ou `false` é esperado nessa posição.
 
@@ -175,7 +175,7 @@ Para obter mais informações, consulte os seguintes recursos:
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  Publica o aplicativo para um determinado runtime. Para obter uma lista de RIDs (Identificadores de Runtime), veja o [Catálogo de RIDs](../rid-catalog.md). Para obter mais informações, consulte [publicação de aplicativos do .NET Core](../deploying/index.md) e [publicar aplicativos .net core com o CLI do .NET Core](../deploying/deploy-with-cli.md).
+  Publica o aplicativo para um determinado runtime. Para obter uma lista de RIDs (Identificadores de Runtime), veja o [Catálogo de RIDs](../rid-catalog.md). Para obter mais informações, consulte [publicação de aplicativos .net](../deploying/index.md) e [publicar aplicativos .NET com a CLI do .net](../deploying/deploy-with-cli.md).
 
 - **`-v|--verbosity <LEVEL>`**
 
@@ -229,10 +229,10 @@ Para obter mais informações, consulte os seguintes recursos:
   dotnet publish --no-dependencies
   ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [Visão geral da publicação de aplicativos do .NET Core](../deploying/index.md)
-- [Publicar aplicativos .NET Core com o CLI do .NET Core](../deploying/deploy-with-cli.md)
+- [Visão geral da publicação de aplicativos .NET](../deploying/index.md)
+- [Publicar aplicativos .NET com a CLI do .NET](../deploying/deploy-with-cli.md)
 - [Estruturas de destino](../../standard/frameworks.md)
 - [Catálogo de RID (Identificador de Runtime)](../rid-catalog.md)
 - [Trabalhando com o notarization Catalina do macOS](../install/macos-notarization-issues.md)

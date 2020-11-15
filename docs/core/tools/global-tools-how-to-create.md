@@ -1,20 +1,20 @@
 ---
-title: 'Tutorial: criar uma ferramenta do .NET Core'
-description: Saiba como criar uma ferramenta do .NET Core. Uma ferramenta é um aplicativo de console que é instalado usando o CLI do .NET Core.
+title: 'Tutorial: criar uma ferramenta .NET'
+description: Saiba como criar uma ferramenta .NET. Uma ferramenta é um aplicativo de console que é instalado usando a CLI do .NET.
 ms.topic: tutorial
 ms.date: 02/12/2020
-ms.openlocfilehash: c1c17368d8efdece73f5312899553bacf884cfb3
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 93d0567f3d73707f828f84fad6128804debf6579
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062776"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94633772"
 ---
-# <a name="tutorial-create-a-net-core-tool-using-the-net-core-cli"></a>Tutorial: criar uma ferramenta do .NET Core usando o CLI do .NET Core
+# <a name="tutorial-create-a-net-tool-using-the-net-cli"></a>Tutorial: criar uma ferramenta .NET usando a CLI do .NET
 
 **Este artigo aplica-se a:** ✔️ SDK do .net Core 2,1 e versões posteriores
 
-Este tutorial ensina como criar e empacotar uma ferramenta do .NET Core. O CLI do .NET Core permite criar um aplicativo de console como uma ferramenta, que outras pessoas podem instalar e executar. As ferramentas do .NET Core são pacotes NuGet instalados a partir do CLI do .NET Core. Para obter mais informações sobre ferramentas, consulte [visão geral das ferramentas do .NET Core](global-tools.md).
+Este tutorial ensina como criar e empacotar uma ferramenta .NET. A CLI do .NET permite criar um aplicativo de console como uma ferramenta, que outras pessoas podem instalar e executar. As ferramentas .NET são pacotes NuGet que são instalados a partir da CLI do .NET. Para obter mais informações sobre ferramentas, consulte [visão geral das ferramentas .net](global-tools.md).
 
 A ferramenta que você criará é um aplicativo de console que recebe uma mensagem como entrada e exibe a mensagem junto com linhas de texto que criam a imagem de um robô.
 
@@ -156,9 +156,9 @@ Antes de poder empacotar e distribuir o aplicativo como uma ferramenta, você pr
    <PackageOutputPath>./nupkg</PackageOutputPath>
    ```
 
-   `<ToolCommandName>`é um elemento opcional que especifica o comando que invocará a ferramenta após sua instalação. Se esse elemento não for fornecido, o nome do comando para a ferramenta será o nome do arquivo de projeto sem a extensão *. csproj* .
+   `<ToolCommandName>` é um elemento opcional que especifica o comando que invocará a ferramenta após sua instalação. Se esse elemento não for fornecido, o nome do comando para a ferramenta será o nome do arquivo de projeto sem a extensão *. csproj* .
 
-   `<PackageOutputPath>`é um elemento opcional que determina onde o pacote NuGet será produzido. O pacote NuGet é o que o CLI do .NET Core usa para instalar sua ferramenta.
+   `<PackageOutputPath>` é um elemento opcional que determina onde o pacote NuGet será produzido. O pacote NuGet é o que o CLI do .NET Core usa para instalar sua ferramenta.
 
    O arquivo de projeto agora é semelhante ao exemplo a seguir:
 
@@ -189,9 +189,9 @@ Antes de poder empacotar e distribuir o aplicativo como uma ferramenta, você pr
   
    Quando você quiser liberar uma ferramenta publicamente, poderá carregá-la no `https://www.nuget.org` . Depois que a ferramenta estiver disponível no NuGet, os desenvolvedores poderão instalar a ferramenta usando o comando [dotnet ferramenta de instalação](dotnet-tool-install.md) . Para este tutorial, você instala o pacote diretamente da pasta *nupkg* local, portanto, não é necessário carregar o pacote no NuGet.
 
-## <a name="troubleshoot"></a>Solucionar problemas
+## <a name="troubleshoot"></a>Solução de problemas
 
-Se você receber uma mensagem de erro ao seguir o tutorial, consulte [solucionar problemas de uso da ferramenta .NET Core](troubleshoot-usage-issues.md).
+Se você receber uma mensagem de erro ao seguir o tutorial, consulte [solucionar problemas de uso da ferramenta .net](troubleshoot-usage-issues.md).
 
 ## <a name="next-steps"></a>Próximas etapas
 

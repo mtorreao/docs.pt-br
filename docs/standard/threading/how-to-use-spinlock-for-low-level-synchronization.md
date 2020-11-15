@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - SpinLock, how to use
 ms.assetid: a9ed3e4e-4f29-4207-b730-ed0a51ecbc19
-ms.openlocfilehash: 3fb19c2b36d97710685cac4ecd10f47a119814ce
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 8f81df527f83183804132ce09ae713fbbcf6f3ce
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189180"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634240"
 ---
 # <a name="how-to-use-spinlock-for-low-level-synchronization"></a>Como usar SpinLock para sincronização de baixo nível
 
@@ -26,9 +26,9 @@ O exemplo a seguir demonstra como usar o <xref:System.Threading.SpinLock>. No ex
   
  Este exemplo usa a classe <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>, que requer a sincronização de usuário para o acesso de threads múltiplos. Outra opção é usar o <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType> , que não requer nenhum bloqueio de usuário.  
   
- Observe o uso de `false` na chamada para <xref:System.Threading.SpinLock.Exit%2A?displayProperty=nameWithType> . Isso oferece o melhor desempenho. Especifique `true` em arquiteturas IA64 para usar o limite de memória, que libera os buffers de gravação para garantir que o bloqueio agora esteja disponível para que outros threads sejam encerrados.  
+ Observe o uso de `false` na chamada para <xref:System.Threading.SpinLock.Exit%2A?displayProperty=nameWithType> . Isso oferece o melhor desempenho. Especifique `true` em arquiteturas IA64 para usar o limite de memória, que libera os buffers de gravação para garantir que o bloqueio agora esteja disponível para outros threads a serem inseridos.
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Objetos e recursos de Threading](threading-objects-and-features.md)
 - [Instrução lock (C#)](../../csharp/language-reference/keywords/lock-statement.md)

@@ -1,21 +1,21 @@
 ---
 title: comando de pesquisa da ferramenta dotnet
-description: O comando de pesquisa da ferramenta dotnet pesquisa as ferramentas do .NET Core que são publicadas no NuGet.org.
+description: O comando de pesquisa da ferramenta dotnet pesquisa as ferramentas do .NET que são publicadas no NuGet.org.
 ms.date: 11/11/2020
-ms.openlocfilehash: 4357ce4864cad386968e4a76466066fbf2ce4060
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: e0289e651ec4a439c791c8c948bef2d85d9c3794
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94558067"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634136"
 ---
-# <a name="dotnet-tool-search"></a>pesquisa da ferramenta dotnet
+# <a name="dotnet-tool-search"></a>dotnet tool search
 
 **Este artigo aplica-se a:** ✔️ SDK do .NET 5,0 e versões posteriores
 
 ## <a name="name"></a>Name
 
-`dotnet tool search` -Pesquisa todas as [Ferramentas do .NET Core](global-tools.md) que são publicadas no NuGet.
+`dotnet tool search` -Pesquisa todas as [ferramentas .net](global-tools.md) que são publicadas no NuGet.
 
 ## <a name="synopsis"></a>Sinopse
 
@@ -98,8 +98,8 @@ O comando usa a [API de pesquisa do NuGet](/nuget/api/search-query-service-resou
           4.1.131201 Downloads: 145927
   ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Ferramentas do .NET Core](global-tools.md)
-- [Tutorial: instalar e usar uma ferramenta global do .NET Core usando o CLI do .NET Core](global-tools-how-to-use.md)
-- [Tutorial: instalar e usar uma ferramenta local do .NET Core usando o CLI do .NET Core](local-tools-how-to-use.md)
+- [Ferramentas .NET](global-tools.md)
+- [Tutorial: instalar e usar uma ferramenta global do .NET usando a CLI do .NET](global-tools-how-to-use.md)
+- [Tutorial: instalar e usar uma ferramenta local do .NET usando a CLI do .NET](local-tools-how-to-use.md)
