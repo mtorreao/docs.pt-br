@@ -2,14 +2,14 @@
 title: Introdução e visão geral do .NET
 description: Saiba mais sobre o .NET, uma plataforma de desenvolvimento de software livre gratuita para a criação de muitos tipos de aplicativos.
 author: tdykstra
-ms.date: 09/28/2020
+ms.date: 11/16/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: c3626ed223f66622b65cca888b1b043de275f950
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 1fd452ac9b7740c428e92cc6a510bab5f4d2d7d0
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506734"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687511"
 ---
 # <a name="introduction-to-net"></a>Introdução ao .NET
 
@@ -24,7 +24,7 @@ O .NET é uma plataforma de desenvolvimento de software livre gratuita para a cr
   * [Windows Forms](/dotnet/desktop/winforms/)
   * [UWP (Plataforma Universal do Windows)](/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
 * [Jogos](https://dotnet.microsoft.com/apps/games)
-* [Internet das coisas (IoT)](/dotnet/iot)
+* [Internet das Coisas (IoT)](/dotnet/iot)
 * [Aprendizado de máquina](../machine-learning/index.yml)
 * [Aplicativos de console](tutorials/with-visual-studio-code.md)
 * [Serviços do Windows](/aspnet/core/host-and-deploy/windows-service)
@@ -132,7 +132,7 @@ Os ambientes de desenvolvimento integrados para .NET incluem:
 
 O [SDK do .net](sdk.md) é um conjunto de bibliotecas e ferramentas para desenvolver e executar aplicativos .net.
 
-Ao [baixar o .net](https://dotnet.microsoft.com/download/dotnet-core/), você pode escolher o SDK ou um *tempo de execução* , como o tempo de execução do .net ou o tempo de execução do ASP.NET Core. Instale um tempo de execução em um computador que você deseja preparar para executar aplicativos .NET. Instale o SDK em um computador que você deseja usar para desenvolvimento. Ao baixar o SDK, você obtém automaticamente os tempos de execução com ele.
+Ao [baixar o .net](https://dotnet.microsoft.com/download/dotnet-core/), você pode escolher o SDK ou um *tempo de execução*, como o tempo de execução do .net ou o tempo de execução do ASP.NET Core. Instale um tempo de execução em um computador que você deseja preparar para executar aplicativos .NET. Instale o SDK em um computador que você deseja usar para desenvolvimento. Ao baixar o SDK, você obtém automaticamente os tempos de execução com ele.
 
 O download do SDK inclui os seguintes componentes:
 
@@ -153,7 +153,7 @@ Para obter mais informações, consulte os seguintes recursos:
 
 ### <a name="project-system-and-msbuild"></a>Sistema de projeto e MSBuild
 
-Um aplicativo .NET é criado a partir do código-fonte usando o [MSBuild](/visualstudio/msbuild/msbuild). Um arquivo de projeto ( *. csproj* , *. fsproj* ou *. vbproj* ) especifica [destinos](/visualstudio/msbuild/msbuild-targets) e [tarefas](/visualstudio/msbuild/msbuild-tasks) associadas que são responsáveis por compilar, empacotar e publicar código. Há identificadores do SDK que se referem a coleções padrão de destinos e tarefas. O uso desses identificadores ajuda a manter os arquivos de projeto pequenos e fáceis de trabalhar com o. Por exemplo, aqui está um arquivo de projeto para um aplicativo de console:
+Um aplicativo .NET é criado a partir do código-fonte usando o [MSBuild](/visualstudio/msbuild/msbuild). Um arquivo de projeto (*. csproj*, *. fsproj* ou *. vbproj*) especifica [destinos](/visualstudio/msbuild/msbuild-targets) e [tarefas](/visualstudio/msbuild/msbuild-tasks) associadas que são responsáveis por compilar, empacotar e publicar código. Há identificadores do SDK que se referem a coleções padrão de destinos e tarefas. O uso desses identificadores ajuda a manter os arquivos de projeto pequenos e fáceis de trabalhar com o. Por exemplo, aqui está um arquivo de projeto para um aplicativo de console:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -221,7 +221,7 @@ As linguagens .NET de nível mais alto , como C#, são compiladas em um conjunto
 
 Como a compilação JIT ocorre durante a execução do aplicativo, o tempo de compilação é parte do tempo de execução. Portanto, os compiladores JIT precisam balancear o tempo gasto otimizando o código contra as economias que o código resultante pode produzir. Mas um compilador JIT conhece o hardware real e pode liberar os desenvolvedores de ter que enviar diferentes implementações para diferentes plataformas.
 
-O compilador JIT .NET pode fazer uma *compilação em camadas* , o que significa que ele pode recompilar métodos individuais em tempo de execução. Esse recurso permite que ele seja compilado rapidamente e ainda seja capaz de produzir uma versão altamente ajustada do código para métodos usados com frequência.
+O compilador JIT .NET pode fazer uma *compilação em camadas*, o que significa que ele pode recompilar métodos individuais em tempo de execução. Esse recurso permite que ele seja compilado rapidamente e ainda seja capaz de produzir uma versão altamente ajustada do código para métodos usados com frequência.
 
 Para obter mais informações, consulte [processo de execução gerenciado](../standard/managed-execution-process.md) e [compilação em camadas](whats-new/dotnet-core-3-0.md#tiered-compilation).
 
@@ -264,9 +264,9 @@ Para obter mais informações, consulte [visão geral da publicação de aplicat
 
 ## <a name="runtime-libraries"></a>Bibliotecas de runtime
 
-O .NET tem um conjunto extenso padrão de bibliotecas de classes. O conjunto principal é referido como a BCL (base Class Library). O conjunto completo é conhecido como bibliotecas de tempo de execução ou bibliotecas de estrutura. Essas bibliotecas fornecem implementações para muitos tipos específicos de carga de trabalho e de finalidade geral e funcionalidade de utilitário.
+O .NET tem um conjunto padrão de bibliotecas de classes, conhecido como [bibliotecas de tempo de execução](../standard/glossary.md#runtime), bibliotecas de [estruturas](../standard/glossary.md#framework-libraries)ou a [BCL (biblioteca de classes base)](../standard/glossary.md#bcl). Essas bibliotecas fornecem implementações para muitos tipos específicos de carga de trabalho e de finalidade geral e funcionalidade de utilitário.
 
-Aqui estão alguns exemplos de tipos definidos nas bibliotecas de tempo de execução:
+Aqui estão alguns exemplos de tipos definidos nas bibliotecas de tempo de execução do .NET:
 
 * Tipos primitivos, como <xref:System.Boolean?displayProperty=nameWithType> e <xref:System.Int32?displayProperty=nameWithType> .
 * Coleções, como <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> e <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.
@@ -276,9 +276,9 @@ Aqui estão alguns exemplos de tipos definidos nas bibliotecas de tempo de execu
 * Tipos de utilitário de [serialização](../standard/serialization/index.md) , como <xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType> e <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> .
 * Tipos de alto desempenho, como <xref:System.Span%601?displayProperty=nameWithType> <xref:System.Numerics.Vector?displayProperty=nameWithType> [pipelines](../standard/io/pipelines.md), e.
 
-Para obter mais informações, consulte [bibliotecas de estruturas](../standard/framework-libraries.md) e [o código-fonte para as bibliotecas](https://github.com/dotnet/runtime/tree/master/src/libraries).
+Para obter mais informações, consulte [visão geral das bibliotecas de tempo de execução](../standard/runtime-libraries-overview.md). O código-fonte para as bibliotecas está no [repositório de dotnet/tempo de execução do GitHub](https://github.com/dotnet/runtime/tree/master/src/libraries).
 
-## <a name="microsoftextensions-libraries"></a>Bibliotecas Microsoft. Extensions
+### <a name="extensions-to-the-runtime-libraries"></a>Extensões para as bibliotecas de tempo de execução
 
 As bibliotecas para algumas funcionalidades de aplicativos comumente usadas não estão incluídas nas bibliotecas de tempo de execução, mas são disponibilizadas em pacotes NuGet, como o seguinte:
 
@@ -344,6 +344,7 @@ Algumas das terminologias do .NET podem ser confusas porque a mesma palavra é u
   | estrutura de destino | A coleção de APIs da qual um aplicativo ou biblioteca do .NET depende. Exemplos: .NET Core 3,1, .NET Standard 2,0 |
   | TFM (Moniker de Estrutura de Destino)  | Um TFM é um formato de token padronizado para especificar a estrutura de destino de um aplicativo ou biblioteca .NET. Exemplo: `net462` para .NET Framework 4.6.2. |
   | aplicativo dependente de estrutura | Um aplicativo que só pode ser executado em um computador em que você instalou o tempo de execução da [página de download do .net](https://dotnet.microsoft.com/download/dotnet-core). "Estrutura" nesse uso é a mesma coisa que o "tempo de execução" que você baixa da página de download do .NET. |
+  | bibliotecas do Framework | Às vezes, usado como sinônimo para [bibliotecas de tempo de execução](#runtime-libraries). |
 
 * **SDK**
 

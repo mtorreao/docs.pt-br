@@ -2,12 +2,12 @@
 title: Registro em log e rastreamento – .NET Core
 description: Uma introdução ao rastreamento e registro em log do .NET Core.
 ms.date: 10/12/2020
-ms.openlocfilehash: e3f809dab64d66d8b4ba16ca55fc426309614715
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 9af04cceeef3fbfb8392eb91667c21374511548a
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439918"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687577"
 ---
 # <a name="net-core-logging-and-tracing"></a>Log e rastreamento do .NET Core
 
@@ -55,7 +55,7 @@ As APIs a seguir são mais orientadas a eventos. Em vez de registrar cadeias de 
   - Permite apenas rastrear objetos serializáveis.
   - Pode ser consumido em processo por meio de todas as instâncias de [EventListener](xref:System.Diagnostics.Tracing.EventListener) configuradas para consumir a EventSource.
   - Pode ser consumido fora do processo por meio de:
-    - EventPipe do .NET Core em todas as plataformas
+    - [EventPipe do .NET Core](./eventpipe.md) em todas as plataformas
     - [ETW (Rastreamento de Eventos para Windows)](/windows/win32/etw/event-tracing-portal)
     - [Estrutura de rastreamento do LTTng para Linux](https://lttng.org/)
       - Walkthrough: [coletar um rastreamento de LTTng usando PerfCollect](trace-perfcollect-lttng.md).

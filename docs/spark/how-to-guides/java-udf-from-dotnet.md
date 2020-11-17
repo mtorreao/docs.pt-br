@@ -6,12 +6,12 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: edf525102bf5503dcb51247b5fa590aa0d42b369
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 17f0ff611e68a5dab2032f78ef75912f314d88a5
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224118"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688261"
 ---
 # <a name="call-a-java-udf-from-your-net-for-apache-spark-application"></a>Chamar um UDF Java de seu aplicativo .NET para Apache Spark
 
@@ -71,7 +71,7 @@ Um exemplo básico para ilustrar as etapas acima:
 4. Envie este aplicativo usando `spark-submit` passando o jar Java UDF compilado anteriormente por meio da `--jars` opção:
 
     ```bash
-    spark-submit --master local --jars UdfApp-0.0.1.jar --class org.apache.spark.deploy.dotnet.DotnetRunner microsoft-spark-3.0.x-0.12.1.jar InterRuntimeUDFs.exe
+    spark-submit --master local --jars UdfApp-0.0.1.jar --class org.apache.spark.deploy.dotnet.DotnetRunner microsoft-spark-2-4_2.11-1.0.0.jar InterRuntimeUDFs.exe
     ```
 
     O `dfUdf` dataframe resultante tinha o número 5 adicionado a cada linha da coluna de entrada, conforme definido por `JavaUdf` :

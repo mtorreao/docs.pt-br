@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: 5418f96a3b4515224c49a1c1aa38784c348a86db
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: fb478250aa81e61edb13c9d0e0e65f6f19e6153a
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89516145"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687419"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! operador (NULL-tolerante) (referência C#)
 
@@ -51,9 +51,9 @@ No exemplo anterior, você não precisa usar o operador NULL-tolerante porque o 
 
 ## <a name="c-language-specification"></a>Especificação da linguagem C#
 
-Para obter mais informações, consulte [a seção operador NULL-tolerante](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator) do [rascunho da especificação de tipos de referência anulável](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md).
+Para obter mais informações, consulte [a seção operador NULL-tolerante](~/_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md#the-null-forgiving-operator) do [rascunho da especificação de tipos de referência anulável](~/_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../index.md)
 - [Operadores e expressões C#](index.md)

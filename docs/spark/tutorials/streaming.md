@@ -5,12 +5,12 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: 47c716db931dc912b80844fe69283b12d030c238
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 3a02ac52155971f480c7f0c338d4a2a9a7d1d81c
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955571"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688014"
 ---
 # <a name="tutorial-structured-streaming-with-net-for-apache-spark"></a>Tutorial: streaming estruturado com .NET para Apache Spark
 
@@ -145,14 +145,14 @@ StreamingQuery query = arrayDf
 
 ## <a name="run-your-code"></a>Executar seu código
 
-O streaming estruturado no Spark processa dados por meio de uma série de **lotes**pequenos.  Quando você executa o programa, o prompt de comando no qual você estabelece a conexão netcat permite que você comece a digitar. Cada vez que você pressiona a tecla ENTER depois de digitar dados nesse prompt de comando, o Spark considera sua entrada em um lote e executa o UDF.
+O streaming estruturado no Spark processa dados por meio de uma série de **lotes** pequenos.  Quando você executa o programa, o prompt de comando no qual você estabelece a conexão netcat permite que você comece a digitar. Cada vez que você pressiona a tecla ENTER depois de digitar dados nesse prompt de comando, o Spark considera sua entrada em um lote e executa o UDF.
 
 ### <a name="use-spark-submit-to-run-your-app"></a>Use o Spark-Submit para executar seu aplicativo
 
 Depois de iniciar uma nova sessão do netcat, abra um novo terminal e execute o `spark-submit` comando, semelhante ao seguinte comando:
 
 ```powershell
-spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner --master local /path/to/microsoft-spark-<version>.jar Microsoft.Spark.CSharp.Examples.exe Sql.Streaming.StructuredNetworkCharacterCount localhost 9999
+spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner --master local /path/to/microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar Microsoft.Spark.CSharp.Examples.exe Sql.Streaming.StructuredNetworkCharacterCount localhost 9999
 ```
 
 > [!NOTE]

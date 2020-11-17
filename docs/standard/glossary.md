@@ -1,14 +1,13 @@
 ---
 title: Glossário .NET
 description: Descubra o significado de termos selecionados usados na documentação do .NET.
-ms.date: 10/13/2020
-ms.technology: dotnet-standard
-ms.openlocfilehash: 3de9e0aea253b42d65199dc3d66f026dd023f4c7
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.date: 11/16/2020
+ms.openlocfilehash: 143657b4ec360640c0a43099ca5c1c0d9c863453
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224406"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687773"
 ---
 # <a name="net-glossary"></a>Glossário .NET
 
@@ -56,11 +55,18 @@ Um assembly pode incluir tipos como interfaces, classes, estruturas, enumeraçõ
 
 ## <a name="bcl"></a>BCL
 
-Biblioteca de classes base. Também conhecida como *bibliotecas de estrutura*.
+Biblioteca de classes base.
 
 Um conjunto de bibliotecas que compõem o sistema. \* (e com uma extensão limitada da Microsoft. \* ) namespaces. A BCL é uma estrutura de nível inferior e de uso geral, base para a criação de estruturas de aplicativo de nível mais alto, como o ASP.NET Core.
 
-O código-fonte da BCL para [.NET 5 (e .NET Core) e versões posteriores](#net-5-and-later-versions) está contido no [repositório do tempo de execução do .net](https://github.com/dotnet/runtime). A maioria das APIs de BCL para essa implementação mais recente do .NET também está disponível em .NET Framework, portanto, você pode considerar esse código-fonte como uma bifurcação do código-fonte da BCL .NET Framework.
+O código-fonte da BCL para [.NET 5 (e .NET Core) e versões posteriores](#net-5-and-later-versions) está contido no [repositório do tempo de execução do .net](https://github.com/dotnet/runtime). A maioria dessas APIs de BCL também está disponível em .NET Framework, portanto, você pode considerar esse código-fonte como uma bifurcação do código-fonte da BCL .NET Framework.
+
+Os termos a seguir geralmente se referem à mesma coleção de APIs às quais a BCL se refere:
+
+- [principais bibliotecas do .NET](../core/compatibility/3.1-5.0.md#core-net-libraries)
+- [bibliotecas do Framework](#framework-libraries)
+- [bibliotecas de tempo de execução](#runtime)
+- [estrutura compartilhada](#shared-framework)
 
 ## <a name="clr"></a>CLR
 
@@ -106,12 +112,18 @@ Em geral, uma coleção abrangente de APIs que facilita o desenvolvimento e a im
 
 A palavra "estrutura" tem um significado diferente nos seguintes termos:
 
+- [bibliotecas do Framework](#framework-libraries)
 - [.NET Framework](#net-framework)
+- [estrutura compartilhada](#shared-framework)
 - [estrutura de destino](#target-framework)
 - [TFM (Moniker de Estrutura de Destino)](#tfm)
 - [aplicativo dependente de estrutura](../core/deploying/index.md#publish-framework-dependent)
 
-Na documentação .NET herdada, a "estrutura" às vezes se refere a uma [implementação do .net](#implementation-of-net). Por exemplo, um artigo pode chamar o .NET 5 como uma estrutura.
+Às vezes, "estrutura" refere-se a uma [implementação do .net](#implementation-of-net). Por exemplo, um artigo pode chamar o .NET 5 como uma estrutura.
+
+## <a name="framework-libraries"></a>bibliotecas do Framework
+
+O significado depende do contexto. Pode consultar as bibliotecas de estrutura para [.NET 5 (e .NET Core) e versões posteriores](#net-5-and-later-versions); nesse caso, ela se refere às mesmas bibliotecas às quais a [BCL](#bcl) se refere. Ele também pode se referir às bibliotecas do ASP.NET Core Framework, que se baseiam na BCL e fornecem APIs adicionais para aplicativos Web.
 
 ## <a name="gc"></a>GC
 
@@ -145,7 +157,7 @@ Uma implementação do .NET inclui:
 Exemplos de implementações do .NET:
 
 - [.NET Framework](#net-framework)
-- [.NET 5 e versões posteriores (incluindo o .NET Core 2.1-3.1](#net-5-and-later-versions)
+- [.NET 5 e versões posteriores (incluindo o .NET Core 2.1-3.1)](#net-5-and-later-versions)
 - [UWP (Plataforma Universal do Windows)](#uwp)
 - [Mono](#mono)
 
@@ -258,21 +270,34 @@ Em geral, o ambiente de execução para um programa gerenciado. O SO faz parte d
 - .NET Native (para UWP)
 - runtime Mono
 
-A palavra "tempo de execução" tem um significado diferente nos seguintes contextos:
+A palavra "tempo de execução" tem um significado diferente em alguns contextos:
 
-* A [página de download do .net](https://dotnet.microsoft.com/download).
+* *Tempo de execução do .net* na [página de download do .NET 5,0](https://dotnet.microsoft.com/download/dotnet/5.0).
 
-  O "tempo de execução" aqui significa o [CLR](#clr) junto com a [BCL](#bcl) (bibliotecas de estruturas), que você pode baixar e instalar em um computador para que possa executar aplicativos [dependentes da estrutura](../core/deploying/index.md#publish-framework-dependent) no computador.
+  Você pode baixar o *tempo* de execução do .net ou outros tempos de execução, como o *ASP.NET Core Runtime*. Um *tempo de execução* nesse uso é o conjunto de componentes que devem ser instalados em um computador para executar um aplicativo [dependente da estrutura](../core/deploying/index.md#publish-framework-dependent) no computador. O tempo de execução do .NET inclui o [CLR](#clr) e a [estrutura compartilhada](#shared-framework)do .net, que fornece a [BCL](#bcl).
 
-* O [RID (identificador de tempo de execução)](../core/rid-catalog.md) para [.NET 5 (e .NET Core) e versões posteriores](#net-5-and-later-versions).
+* *Bibliotecas de tempo de execução .NET*
 
-  "Tempo de execução" aqui significa a plataforma do sistema operacional e a arquitetura de CPU em que um aplicativo .NET é executado, por exemplo: `linux-x64` .
+  Refere-se às mesmas bibliotecas às quais a [BCL](#bcl) se refere. No entanto, outros tempos de execução, como o ASP.NET Core Runtime, têm [estruturas compartilhadas](#shared-framework)diferentes, com bibliotecas adicionais que se baseiam na BCL.
 
-A documentação .NET herdada, às vezes, usa "Runtime" no sentido de uma [implementação do .net](#implementation-of-net), como nos exemplos a seguir:
+* [RID (identificador de tempo de execução)](../core/rid-catalog.md).
 
-- "Os diversos runtimes do .NET implementam versões específicas do .NET Standard."
-- "Bibliotecas destinadas à execução em vários runtimes devem ter essa estrutura como destino." (referindo-se ao .NET Standard)
-- "Os diversos runtimes do .NET implementam versões específicas do .NET Standard. … Cada versão de runtime do .NET anuncia a última versão do .NET Standard à qual ele dá suporte..."
+  O *tempo de execução* aqui significa a plataforma do sistema operacional e a arquitetura de CPU em que um aplicativo .net é executado, por exemplo: `linux-x64` .
+
+* Às vezes, o "tempo de execução" é usado no sentido de uma [implementação do .net](#implementation-of-net), como nos exemplos a seguir:
+
+  - "Os diversos runtimes do .NET implementam versões específicas do .NET Standard. … Cada versão de runtime do .NET anuncia a última versão do .NET Standard à qual ele dá suporte..."
+  - "Bibliotecas destinadas à execução em vários runtimes devem ter essa estrutura como destino." (referindo-se ao .NET Standard)
+
+## <a name="shared-framework"></a>estrutura compartilhada
+
+O significado depende do contexto. A *estrutura compartilhada do .net* refere-se às bibliotecas incluídas no [tempo de execução do .net](#runtime). Nesse caso, a *estrutura compartilhada* para [.NET 5 (e .NET Core) e versões posteriores](#net-5-and-later-versions) se refere às mesmas bibliotecas às quais a [BCL](#bcl) se refere.
+
+Há outras estruturas compartilhadas. A *estrutura compartilhada ASP.NET Core* refere-se às bibliotecas incluídas no [tempo de execução de ASP.NET Core](#runtime), que inclui a BCL mais APIs adicionais para uso por aplicativos Web.
+
+Para [aplicativos dependentes da estrutura](../core/deploying/index.md#publish-framework-dependent), a estrutura compartilhada consiste em bibliotecas que estão contidas em assemblies instalados em uma pasta no computador que executa o aplicativo. Para [aplicativos](../core/deploying/index.md#publish-self-contained)independentes, os assemblies de estrutura compartilhada são incluídos no aplicativo.
+
+Para obter mais informações, consulte aprofundamento [em primitivos do .NET Core, parte 2: a estrutura compartilhada](https://natemcmaster.com/blog/2018/08/29/netcore-primitives-2/).
 
 ## <a name="stack"></a>stack
 
@@ -306,7 +331,7 @@ Uma implementação do .NET que é usada para criar aplicativos do Windows moder
 
 ## <a name="workload"></a>workload
 
-Um tipo de aplicativo que alguém está criando. Mais genérico do que o [modelo de aplicativo](#app-model). Por exemplo, na parte superior de cada página de documentação do .NET, incluindo esta, é uma lista suspensa para **cargas**de trabalho, que permite que você alterne para a documentação de ** \& dados** **Web**, **móveis**, de **nuvem**, de **área de trabalho**e de Machine Learning.
+Um tipo de aplicativo que alguém está criando. Mais genérico do que o [modelo de aplicativo](#app-model). Por exemplo, na parte superior de cada página de documentação do .NET, incluindo esta, é uma lista suspensa para **cargas** de trabalho, que permite que você alterne para a documentação de **\& dados** **Web**, **móveis**, de **nuvem**, de **área de trabalho** e de Machine Learning.
 
 Em alguns contextos, a *carga de trabalho* refere-se a uma coleção de recursos do Visual Studio que você pode optar por instalar para dar suporte a um tipo específico de aplicativo. Para obter um exemplo, consulte [selecionar uma carga de trabalho](../core/install/windows.md#select-a-workload).
 

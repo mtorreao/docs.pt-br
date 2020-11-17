@@ -2,12 +2,12 @@
 title: dotnet-ferramenta de rastreamento-.NET Core
 description: Instalando e usando a ferramenta de linha de comando dotnet-Trace.
 ms.date: 11/21/2019
-ms.openlocfilehash: d4175ccad785b21f860044a4fd5d691624ec495e
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 4a3694f6ed748779809ee4c4bfd941bb6f1ac490
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94507220"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687623"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-utilitário de análise de desempenho de rastreamento
 
@@ -33,7 +33,7 @@ A `dotnet-trace` ferramenta:
 
 * É uma ferramenta .NET Core de plataforma cruzada.
 * Habilita a coleção de rastreamentos do .NET Core de um processo em execução sem um criador de perfil nativo.
-* O é criado em relação à tecnologia de plataforma cruzada `EventPipe` do tempo de execução do .NET Core.
+* É criado [`EventPipe`](./eventpipe.md) a partir do tempo de execução do .NET Core.
 * Oferece a mesma experiência no Windows, Linux ou macOS.
 
 ## <a name="options"></a>Opções

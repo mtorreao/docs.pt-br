@@ -2,12 +2,12 @@
 title: O que há de novo no C# 9,0 – Guia C#
 description: Obtenha uma visão geral dos novos recursos disponíveis no C# 9,0.
 ms.date: 09/04/2020
-ms.openlocfilehash: 5b3695dee8fc26f69e713d1d6811acdf0cfa9764
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: dbc104cb0bbfc965b0cc055429713538f62ed0e8
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94557214"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687354"
 ---
 # <a name="whats-new-in-c-90"></a>Novidades do C# 9.0
 
@@ -36,7 +36,7 @@ Você pode baixar o SDK do .NET mais recente na [página de downloads do .net](h
 
 ## <a name="record-types"></a>Tipos de registro
 
-O C# 9,0 introduz * *_tipos de registro_* _, que são um tipo de referência que fornece métodos sintetizados para fornecer a semântica de valor para igualdade. Os registros são imutáveis por padrão.
+O C# 9,0 introduz **_tipos de registro_* _, que são um tipo de referência que fornece métodos sintetizados para fornecer a semântica de valor para igualdade. Os registros são imutáveis por padrão.
 
 Os tipos de registro facilitam a criação de tipos de referência imutáveis no .NET. Historicamente, os tipos .NET são classificados em grande parte como tipos de referência (incluindo classes e tipos anônimos) e tipos de valor (incluindo structs e tuplas). Embora tipos de valor imutáveis sejam recomendados, os tipos de valores mutáveis geralmente não introduzem erros. As variáveis de tipo de valor contêm os valores para que as alterações sejam feitas em uma cópia dos dados originais quando os tipos de valor são passados para métodos.
 
@@ -104,9 +104,13 @@ Por fim, o registra as [ `with` expressões](../language-reference/operators/wit
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="Wither":::
 
-A linha acima cria um novo `Person` registro no qual a `LastName` propriedade é uma cópia de `person` e o `FirstName` é `"Paul"` . Você pode definir qualquer número de propriedades em uma `with` expressão.
+A linha anterior cria um novo `Person` registro no qual a `LastName` propriedade é uma cópia de `person` e o `FirstName` é `"Paul"` . Você pode definir qualquer número de propriedades em uma `with` expressão. Você também pode usar `with` expressões para criar uma cópia exata. Especifique o conjunto vazio para as propriedades a serem modificadas:
+
+:::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="WithCopy":::
 
 Qualquer um dos membros sintetizados, exceto o método "clone", pode ser escrito por você. Se um tipo de registro tiver um método que corresponda à assinatura de qualquer método sintetizado, o compilador não sintetizará esse método. O `Dog` exemplo de registro anterior contém um método codificado <xref:System.String.ToString> por mão como um exemplo.
+
+Saiba mais sobre os tipos de registro neste tutorial [de exploração de registros](../tutorials/exploration/records.md) .
 
 ## <a name="init-only-setters"></a>Setters somente init
 
@@ -244,9 +248,9 @@ Dois recursos finais dão suporte a geradores de código C#. Os geradores de có
 
 Um gerador de código lê atributos ou outros elementos de código usando as APIs de análise de Roslyn. A partir dessas informações, ele adiciona um novo código à compilação. Os geradores de origem só podem adicionar código; Eles não têm permissão para modificar nenhum código existente na compilação.
 
-Os dois recursos adicionados para geradores de código são extensões para * **sintaxe do método parcial** _ e _*_inicializadores de módulo_*_. Primeiro, as alterações em métodos parciais. Antes do C# 9,0, os métodos parciais são `private` , mas não podem especificar um modificador de acesso, ter um `void` retorno e não podem ter `out` parâmetros. Essas restrições destinam-se que, se nenhuma implementação de método for fornecida, o compilador removerá todas as chamadas para o método parcial. O C# 9,0 remove essas restrições, mas requer que as declarações de método parciais tenham uma implementação. Os geradores de código podem fornecer essa implementação. Para evitar a introdução de uma alteração significativa, o compilador considera qualquer método parcial sem um modificador de acesso para seguir as regras antigas. Se o método parcial incluir o `private` modificador de acesso, as novas regras regem esse método parcial.
+Os dois recursos adicionados para geradores de código são extensões para ***sintaxe do método parcial** _ e _*_inicializadores de módulo_*_. Primeiro, as alterações em métodos parciais. Antes do C# 9,0, os métodos parciais são `private` , mas não podem especificar um modificador de acesso, ter um `void` retorno e não podem ter `out` parâmetros. Essas restrições destinam-se que, se nenhuma implementação de método for fornecida, o compilador removerá todas as chamadas para o método parcial. O C# 9,0 remove essas restrições, mas requer que as declarações de método parciais tenham uma implementação. Os geradores de código podem fornecer essa implementação. Para evitar a introdução de uma alteração significativa, o compilador considera qualquer método parcial sem um modificador de acesso para seguir as regras antigas. Se o método parcial incluir o `private` modificador de acesso, as novas regras regem esse método parcial.
 
-O segundo novo recurso para geradores de código é _ * _inicializadores de módulo_ * *. Inicializadores de módulo são métodos que têm o <xref:System.Runtime.CompilerServices.ModuleInitializerAttribute> atributo anexado a eles. Esses métodos serão chamados pelo tempo de execução antes de qualquer outro acesso de campo ou invocação de método dentro do módulo inteiro. Um método inicializador de módulo:
+O segundo novo recurso para geradores de código é _ *_inicializadores de módulo_* *. Inicializadores de módulo são métodos que têm o <xref:System.Runtime.CompilerServices.ModuleInitializerAttribute> atributo anexado a eles. Esses métodos serão chamados pelo tempo de execução antes de qualquer outro acesso de campo ou invocação de método dentro do módulo inteiro. Um método inicializador de módulo:
 
 - Deve ser estático
 - Não deve ter parâmetros

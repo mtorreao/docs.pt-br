@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: d4f44d095fffdfa05b82516cfe79700f9e239110
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 16ccc8f40f290c4bc10f03d1f4d1b296b17f6b11
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955402"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687812"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>Tutorial: introdução ao .NET para Apache Spark
 
@@ -53,40 +53,40 @@ Apache Spark é baixado como um arquivo. tgz compactado. Use um programa de extr
 
 ### <a name="4-install-apache-spark"></a>4. instalar o Apache Spark
 
-[Baixe e instale o Apache Spark](https://spark.apache.org/downloads.html). Você precisará selecionar a partir da versão 2,3. * ou 2.4.0, 2.4.1, 2.4.3 ou 2.4.4 (.NET para Apache Spark não é compatível com outras versões do Apache Spark).
+[Baixe e instale o Apache Spark](https://spark.apache.org/downloads.html). Você precisará selecionar a partir da versão 2,3. * ou 2.4.0, 2.4.1, 2.4.3, 2.4.4, 2.4.5, 2.4.6, 2.4.7, 3.0.0 ou 3.0.1 (.NET para Apache Spark não é compatível com outras versões do Apache Spark).
 
-Os comandos usados nas etapas a seguir pressupõem que você tenha [baixado e instalado Apache Spark 2.4.1](https://archive.apache.org/dist/spark/spark-2.4.1/spark-2.4.1-bin-hadoop2.7.tgz). Se você quiser usar uma versão diferente, substitua **2.4.1** pelo número de versão apropriado. Em seguida, extraia o arquivo **. tar** e os arquivos de Apache Spark.
+Os comandos usados nas etapas a seguir pressupõem que você tenha [baixado e instalado Apache Spark 3.0.1](https://spark.apache.org/downloads.html). Se você quiser usar uma versão diferente, substitua o **3.0.1** pelo número de versão apropriado. Em seguida, extraia o arquivo **. tar** e os arquivos de Apache Spark.
 
 Para extrair o arquivo **. tar** aninhado:
 
-* Localize o arquivo **Spark-2.4.1-bin-Hadoop 2.7. tgz** que você baixou.
+* Localize o arquivo **Spark-3.0.1-bin-Hadoop 2.7. tgz** que você baixou.
 * Clique com o botão direito do mouse no arquivo e selecione **7-zip-> extrair aqui**.
-* **Spark-2.4.1-bin-Hadoop 2.7. tar** é criado junto com o arquivo **. tgz** que você baixou.
+* o **Spark-3.0.1-bin-Hadoop 2.7. tar** é criado junto com o arquivo **. tgz** que você baixou.
 
 Para extrair os arquivos de Apache Spark:
 
-* Clique com o botão direito do mouse em **Spark-2.4.1-bin-Hadoop 2.7. tar** e selecione **7-zip-> extrair arquivos...**
+* Clique com o botão direito do mouse em **Spark-3.0.1-bin-Hadoop 2.7. tar** e selecione **7-zip-> extrair arquivos...**
 * Insira **C:\bin** no campo **extrair para** .
 * Desmarque a caixa de seleção abaixo do campo **extrair para** .
 * Selecione **OK**.
-* Os arquivos de Apache Spark são extraídos para C:\bin\spark-2.4.1-bin-hadoop2.7\
+* Os arquivos de Apache Spark são extraídos para C:\bin\spark-3.0.1-bin-hadoop2.7\
 
-![Instalar Spark](https://dotnet.microsoft.com/static/images/spark-extract-with-7-zip.png?v=YvjUv54LIxI9FbALPC3h8zSQdyMtK2-NKbFOliG-f8M)
+![Instalar Spark](./media/spark-extract-with-7-zip.png)
 
 Execute os comandos a seguir para definir as variáveis de ambiente usadas para localizar Apache Spark. No Windows, certifique-se de executar o prompt de comando no modo de administrador.
 
 #### <a name="windows"></a>[Windows](#tab/windows)
 
 ```console
-setx /M HADOOP_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
-setx /M SPARK_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
+setx /M HADOOP_HOME C:\bin\spark-3.0.1-bin-hadoop2.7\
+setx /M SPARK_HOME C:\bin\spark-3.0.1-bin-hadoop2.7\
 setx /M PATH "%PATH%;%HADOOP_HOME%;%SPARK_HOME%\bin"
 ```
 
 #### <a name="maclinux"></a>[Mac/Linux](#tab/linux)
 
 ```bash
-export SPARK_HOME=~/bin/spark-2.4.1-bin-hadoop2.7/
+export SPARK_HOME=~/bin/spark-3.0.1-bin-hadoop2.7/
 export PATH="$SPARK_HOME/bin:$PATH"
 source ~/.bashrc
 ```
@@ -109,24 +109,22 @@ Baixe a versão [Microsoft. Spark. Worker](https://github.com/dotnet/spark/relea
 
 Para extrair o Microsoft. Spark. Worker:
 
-* Localize o arquivo de **Microsoft.Spark.Worker.netcoreapp3.1.win-x64-0.8.0.zip** que você baixou.
+* Localize o arquivo de **Microsoft.Spark.Worker.netcoreapp3.1.win-x64-1.0.0.zip** que você baixou.
 * Clique com o botão direito do mouse e selecione **7-zip-> extrair arquivos...**.
 * Insira **C:\bin** no campo **extrair para** .
 * Desmarque a caixa de seleção abaixo do campo **extrair para** .
 * Selecione **OK**.
 
-![Instalar o .NET Spark](https://dotnet.microsoft.com/static/images/dotnet-for-spark-extract-with-7-zip.png?v=jwCyum9mL0mGIi4V5zC7yuvLfcj1_nL-QFFD8TClhZk)
-
 ### <a name="6-install-winutils-windows-only"></a>6. instalar o WinUtils (somente Windows)
 
-O .NET para Apache Spark requer que o WinUtils seja instalado junto com Apache Spark. [Baixar winutils.exe](https://github.com/steveloughran/winutils/blob/master/hadoop-2.7.1/bin/winutils.exe). Em seguida, copie WinUtils para **C:\bin\spark-2.4.1-bin-hadoop2.7\bin**.
+O .NET para Apache Spark requer que o WinUtils seja instalado junto com Apache Spark. [Baixar winutils.exe](https://github.com/steveloughran/winutils/blob/master/hadoop-2.7.1/bin/winutils.exe). Em seguida, copie WinUtils para **C:\bin\spark-3.0.1-bin-hadoop2.7\bin**.
 
 > [!NOTE]
 > Se você estiver usando uma versão diferente do Hadoop, que é anotada no final do nome da pasta de instalação do Spark, [Selecione a versão do WinUtils](https://github.com/steveloughran/winutils) que é compatível com sua versão do Hadoop.
 
 ### <a name="7-set-dotnet_worker_dir-and-check-dependencies"></a>7. definir DOTNET_WORKER_DIR e verificar dependências
 
-Execute um dos comandos a seguir para definir a `DOTNET_WORKER_DIR` variável de ambiente, que é usada pelos aplicativos .net para localizar o .net para Apache Spark. Certifique-se de substituir `<PATH-DOTNET_WORKER_DIR>` pelo diretório onde você baixou e extraiu o `Microsoft.Spark.Worker` . No Windows, certifique-se de executar o prompt de comando no modo de administrador.
+Execute um dos comandos a seguir para definir a `DOTNET_WORKER_DIR` variável de ambiente, que é usada pelos aplicativos .net para localizar o .net para Apache Spark binários de trabalho. Certifique-se de substituir `<PATH-DOTNET_WORKER_DIR>` pelo diretório onde você baixou e extraiu o `Microsoft.Spark.Worker` . No Windows, certifique-se de executar o prompt de comando no modo de administrador.
 
 #### <a name="windows"></a>[Windows](#tab/windows)
 
@@ -242,7 +240,7 @@ Navegue até o diretório de saída da compilação e use o `spark-submit` coman
 spark-submit ^
 --class org.apache.spark.deploy.dotnet.DotnetRunner ^
 --master local ^
-microsoft-spark-2.4.x-<version>.jar ^
+microsoft-spark-3-0_2.12-<version>.jar ^
 dotnet MySparkApp.dll <path-of-input.txt>
 ```
 
@@ -252,7 +250,7 @@ dotnet MySparkApp.dll <path-of-input.txt>
 spark-submit \
 --class org.apache.spark.deploy.dotnet.DotnetRunner \
 --master local \
-microsoft-spark-2.4.x-<version>.jar \
+microsoft-spark-3-0_2.12-<version>.jar \
 dotnet MySparkApp.dll <path-of-input.txt>
 ```
 

@@ -2,12 +2,12 @@
 title: Programação orientada a objeto (C#)
 description: O C# fornece suporte completo para a programação orientada a objeto, incluindo abstração, encapsulamento, herança e polimorfismo.
 ms.date: 09/30/2020
-ms.openlocfilehash: 353edf8fc68f495f3d875fa678aaaf91f1fd6406
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: 4ae31e18fcd88870f511e77bb0c555f35394fd1b
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471589"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687988"
 ---
 # <a name="object-oriented-programming-c"></a>Programação de Object-Oriented (C#)
 
@@ -48,9 +48,9 @@ public class GiftCardAccount : BankAccount
 }
 ```
 
-Cada uma dessas classes *herda* o comportamento compartilhado de sua *classe base*compartilhada, a `BankAccount` classe. Escreva as implementações para uma funcionalidade nova e diferente em cada uma das *classes derivadas*.  Essas classes derivadas já têm todo o comportamento definido na `BankAccount` classe.
+Cada uma dessas classes *herda* o comportamento compartilhado de sua *classe base* compartilhada, a `BankAccount` classe. Escreva as implementações para uma funcionalidade nova e diferente em cada uma das *classes derivadas*.  Essas classes derivadas já têm todo o comportamento definido na `BankAccount` classe.
 
-É uma boa prática criar cada nova classe em um arquivo de origem diferente. No [Visual Studio](https://visualstudio.com), você pode clicar com o botão direito do mouse no projeto e selecionar *Adicionar classe* para adicionar uma nova classe em um novo arquivo. Em [Visual Studio Code](https://code.visualstudio.com), selecione *arquivo* e *novo* para criar um novo arquivo de origem. Em qualquer ferramenta, nomeie o arquivo para corresponder à classe: *InterestEarningAccount.cs*, *LineOfCreditAccount.cs*e *GiftCardAccount.cs*.
+É uma boa prática criar cada nova classe em um arquivo de origem diferente. No [Visual Studio](https://visualstudio.com), você pode clicar com o botão direito do mouse no projeto e selecionar *Adicionar classe* para adicionar uma nova classe em um novo arquivo. Em [Visual Studio Code](https://code.visualstudio.com), selecione *arquivo* e *novo* para criar um novo arquivo de origem. Em qualquer ferramenta, nomeie o arquivo para corresponder à classe: *InterestEarningAccount.cs*, *LineOfCreditAccount.cs* e *GiftCardAccount.cs*.
 
 Ao criar as classes conforme mostrado no exemplo anterior, você descobrirá que nenhuma de suas classes derivadas são compiladas. Um construtor é responsável por inicializar um objeto. Um construtor de classe derivada deve inicializar a classe derivada e fornecer instruções sobre como inicializar o objeto da classe base incluído na classe derivada. A inicialização apropriada normalmente ocorre sem nenhum código extra. A `BankAccount` classe declara um construtor público com a seguinte assinatura:
 
@@ -173,6 +173,8 @@ A substituição retorna uma transação de taxa quando a conta é sobredesenhad
 Execute o programa e verifique os resultados.
 
 ## <a name="summary"></a>Resumo
+
+Se você ficou preso, pode ver a origem deste tutorial [em nosso repositório GitHub](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/intro-to-csharp/snippets/object-oriented-programming).
 
 Este tutorial demonstrou muitas das técnicas usadas na programação de Object-Oriented:
 

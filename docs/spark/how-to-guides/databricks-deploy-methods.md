@@ -4,12 +4,12 @@ description: Saiba como enviar um .NET para Apache Spark trabalho para o databri
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: fd04f78c47b34ca07042a4e60e2214f5f1ecac55
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 4d37383ccb3c9b311e0fbd0ada195ac20113e505
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91954991"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688196"
 ---
 # <a name="submit-a-net-for-apache-spark-job-to-databricks"></a>Enviar um trabalho .NET para Apache Spark para o databricks
 
@@ -22,13 +22,13 @@ Você pode usar o comando [Spark-Submit](https://spark.apache.org/docs/latest/su
 1. Navegue até o espaço de trabalho do databricks e crie um trabalho. Escolha um título para seu trabalho e, em seguida, selecione **Configurar Spark-Submit**. Cole os seguintes parâmetros na configuração do trabalho e, em seguida, selecione **confirmar**.
 
     ```
-    ["--files","/dbfs/<path-to>/<app assembly/file to deploy to worker>","--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/<path-to>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar","/dbfs/<path-to>/<app name>.zip","<app bin name>","app arg1","app arg2"]
+    ["--files","/dbfs/<path-to>/<app assembly/file to deploy to worker>","--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/<path-to>/microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar","/dbfs/<path-to>/<app name>.zip","<app bin name>","app arg1","app arg2"]
     ```
 
     > [!NOTE]
     > Atualize o conteúdo do parâmetro acima com base em seus arquivos e configurações específicos. Por exemplo, referencie a versão do arquivo JAR do Microsoft. Spark que você carregou em DBFS e use o nome apropriado do seu aplicativo e o arquivo zip do aplicativo publicado.
 
-2. Navegue até seu trabalho e selecione **Editar** para configurar o cluster do trabalho. Defina a versão Databricks Runtime com base na versão do Apache Spark que você deseja usar em sua implantação. Em seguida, selecione **Opções avançadas > scripts de inicialização**e defina caminho do script de inicialização como `dbfs:/spark-dotnet/db-init.sh` . Selecione **confirmar** para confirmar as configurações de cluster.
+2. Navegue até seu trabalho e selecione **Editar** para configurar o cluster do trabalho. Defina a versão Databricks Runtime com base na versão do Apache Spark que você deseja usar em sua implantação. Em seguida, selecione **Opções avançadas > scripts de inicialização** e defina caminho do script de inicialização como `dbfs:/spark-dotnet/db-init.sh` . Selecione **confirmar** para confirmar as configurações de cluster.
 
 3. Navegue até seu trabalho e selecione **executar agora** para executar seu trabalho em seu cluster Spark recém configurado. Leva alguns minutos para que o cluster do trabalho seja criado. Depois que ele for criado, seu trabalho será enviado. Você pode exibir a saída selecionando **clusters** no menu à esquerda do seu espaço de trabalho do databricks e, em seguida, selecionar **logs de driver**.
 
@@ -40,7 +40,7 @@ Como alternativa, você pode usar [set jar](/azure/databricks/jobs#--create-a-jo
 
 1. Navegue até o cluster do databricks e selecione **trabalhos** no menu do lado esquerdo, seguido por **set jar**.
 
-2. Carregue o apropriado `microsoft-spark-<spark-version>-<spark-dotnet-version>.jar` .
+2. Carregue o apropriado `microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar` .
 
 3. Modifique os seguintes parâmetros para incluir o nome correto para o executável que você publicou no lugar de `<your-app-name>` :
 

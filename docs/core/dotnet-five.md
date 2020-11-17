@@ -1,16 +1,16 @@
 ---
 title: Novidades do .NET 5
 description: Saiba mais sobre o .NET 5, uma plataforma de desenvolvimento de plataforma cruzada e de software livre que é a próxima evolução do .NET Core.
-ms.date: 11/06/2020
+ms.date: 11/16/2020
 ms.topic: overview
 ms.author: dapine
 author: IEvangelist
-ms.openlocfilehash: 10c1345f4a0a37e04377250da9a7b6df7df3a105
-ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
+ms.openlocfilehash: 04f72675744426f7dbc99e5978a9ea4bbb8015b1
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94594530"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687590"
 ---
 # <a name="whats-new-in-net-5"></a>Novidades do .NET 5
 
@@ -62,7 +62,7 @@ Para aplicativos e bibliotecas do .NET 5,0, o `net5.0` moniker da estrutura de d
 
 Os desenvolvedores que escrevem aplicativos .NET 5 terão acesso à versão e aos recursos mais recentes do C#. O .NET 5 é emparelhado com o C# 9, que traz muitos recursos novos para a linguagem. Aqui estão alguns destaques:
 
-- Registros: tipos de referência imutáveis que se comportam como tipos de valor e apresentam a nova `with` palavra-chave à linguagem.
+- Registros: tipos de referência com semântica de igualdade baseada em valor e mutação não destrutiva com suporte por uma nova `with` expressão.
 - Correspondência de padrão relacional: estende os recursos de correspondência de padrões para operadores relacionais para avaliações e expressões comparativa, incluindo padrões lógicos – novas palavras-chave `and` , `or` e `not` .
 - Instruções de nível superior: como um meio para acelerar a adoção e o aprendizado do C#, o `Main` método pode ser omitido e o aplicativo tão simples quanto o seguinte é válido:
 
@@ -108,7 +108,7 @@ Isso é semelhante à [`sprintf`](https://fsharp.github.io/fsharp-core-docs/refe
 
 Não há novos recursos de linguagem para Visual Basic no .NET 5. No entanto, com o .NET 5, Visual Basic suporte é estendido para:
 
-| Description                            | Parâmetro `dotnet new` |
+| Descrição                            | Parâmetro `dotnet new` |
 |----------------------------------------|------------------------|
 | Aplicativo do Console                    | `console`              |
 | Biblioteca de classes                          | `classlib`             |
@@ -140,35 +140,6 @@ Há novos recursos no e para o [System.Text.Jsem](../standard/serialization/syst
 - [Permitir que conversores personalizados manipulem NULL](../standard/serialization/system-text-json-converters-how-to.md#handle-null-values)
 - [Copiar JsonSerializerOptions](../standard/serialization/system-text-json-how-to.md#copy-jsonserializeroptions)
 - [Criar JsonSerializerOptions com padrões da Web](../standard/serialization/system-text-json-how-to.md#web-defaults-for-jsonserializeroptions)
-
-## <a name="net-maui"></a>.NET MAUI
-
-O .NET MAUI é uma evolução do mais popular Xamarin. Forms Toolkit e é de software livre no GitHub em [dotnet/Maui](https://github.com/dotnet/maui). Com o .NET MAUI, a escolha para desenvolvedores .NET é simplificada, fornecendo uma única pilha que dá suporte a todas as cargas de trabalho modernas: Android, iOS, macOS e Windows. Com o .NET MAUI, você obtém uma experiência de desenvolvedor de projeto único que tem como alvo várias plataformas e dispositivos.
-
-> [!IMPORTANT]
-> O .NET MAUI está na visualização inicial. O código-fonte de exemplo pode ser encontrado em [xamarin/net6-Samples](https://github.com/xamarin/net6-samples).
-
-### <a name="model-view-update-pattern"></a>Modelo-exibição-padrão de atualização
-
-Os desenvolvedores adoram padrões de desenvolvimento modernos. Uma abordagem fluente do desenvolvimento da interface do usuário, inspirado pela "arquitetura Elm", é o padrão [Model-View-Update](https://elmprogramming.com/model-view-update-part-1.html) ou MVU. O MVU promove um fluxo unidirecional de gerenciamento de dados e estado, bem como uma experiência de desenvolvimento de primeiro código que atualiza rapidamente a interface do usuário aplicando apenas as alterações necessárias.
-
-Como exemplo, considere o seguinte contador escrito em .NET MAUI usando o padrão MVU:
-
-```csharp
-readonly State<int> _count = 0;
-
-[Body]
-View body() => new StackLayout
-{
-    new Label("Welcome to .NET MAUI!"),
-    new Button(
-        () => $"You clicked {_count} times.",
-        () => ++ _count.Value)
-    )
-};
-```
-
-Para obter mais informações, consulte o [roteiro do .net Maui](https://github.com/dotnet/maui/wiki/Roadmap)e apresentando o artigo do [.net Maui](https://devblogs.microsoft.com/dotnet/introducing-net-multi-platform-app-ui) .
 
 ## <a name="see-also"></a>Consulte também
 

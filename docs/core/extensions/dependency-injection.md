@@ -5,12 +5,12 @@ author: IEvangelist
 ms.author: dapine
 ms.date: 10/28/2020
 ms.topic: overview
-ms.openlocfilehash: 2199f51ab13bedd50af747ce33ceee7b6eaefd8f
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 3692b9e779d450f07d47599417349bb57f72ac36
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063143"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687570"
 ---
 # <a name="dependency-injection-in-net"></a>Injeção de dependência no .NET
 
@@ -48,8 +48,8 @@ public class Worker : BackgroundService
 
 A classe cria e depende diretamente da `MessageWriter` classe. As dependências embutidas em código, como no exemplo anterior, são problemáticas e devem ser evitadas pelos seguintes motivos:
 
-- Para substituir `MessageWriter` por uma implementação diferente, a `MessageService` classe deve ser modificada.
-- Se `MessageWriter` tiver dependências, elas também deverão ser configuradas pela `MessageService` classe. Em um projeto grande com várias classes dependendo da `MessageWriter`, o código de configuração fica pulverizado por todo o aplicativo.
+- Para substituir `MessageWriter` por uma implementação diferente, a `Worker` classe deve ser modificada.
+- Se `MessageWriter` tiver dependências, elas também deverão ser configuradas pela `Worker` classe. Em um projeto grande com várias classes dependendo da `MessageWriter`, o código de configuração fica pulverizado por todo o aplicativo.
 - É difícil testar a unidade dessa implementação. O aplicativo deve usar uma simulação ou stub da classe `MessageWriter`, o que não é possível com essa abordagem.
 
 Injeção de dependência trata desses problemas da seguinte maneira:
@@ -95,7 +95,7 @@ static IHostBuilder CreateHostBuilder(string[] args) =>
 
 `LoggingMessageWriter` depende de <xref:Microsoft.Extensions.Logging.ILogger%601> , que ele solicita no construtor. `ILogger<TCategoryName>` é um [serviço fornecido pelo Framework](#framework-provided-services).
 
-Não é incomum usar a injeção de dependência de uma maneira encadeada. Por sua vez, cada dependência solicitada solicita suas próprias dependências. O contêiner resolve as dependências no grafo e retorna o serviço totalmente resolvido. O conjunto de dependências que precisa ser resolvido normalmente é chamado de *árvore de dependência* , *grafo de dependência* ou *grafo de objeto* .
+Não é incomum usar a injeção de dependência de uma maneira encadeada. Por sua vez, cada dependência solicitada solicita suas próprias dependências. O contêiner resolve as dependências no grafo e retorna o serviço totalmente resolvido. O conjunto de dependências que precisa ser resolvido normalmente é chamado de *árvore de dependência*, *grafo de dependência* ou *grafo de objeto*.
 
 O contêiner resolve aproveitando `ILogger<TCategoryName>` os [tipos abertos (genéricos)](/dotnet/csharp/language-reference/language-specification/types#open-and-closed-types), eliminando a necessidade de registrar cada [tipo construído (genérico)](/dotnet/csharp/language-reference/language-specification/types#constructed-types).
 
@@ -253,7 +253,7 @@ Para obter mais informações, consulte:
 - <xref:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddScoped%2A>
 - <xref:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddSingleton%2A>
 
-Os métodos [TryAddEnumerable (Service Descriptor)](xref:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddEnumerable%2A) registram o serviço somente se ainda não houver uma implementação *do mesmo tipo* . Vários serviços são resolvidos via `IEnumerable<{SERVICE}>`. Ao registrar serviços, adicione uma instância se um dos mesmos tipos ainda não tiver sido adicionado. Os autores de biblioteca usam `TryAddEnumerable` para evitar o registro de várias cópias de uma implementação no contêiner.
+Os métodos [TryAddEnumerable (Service Descriptor)](xref:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddEnumerable%2A) registram o serviço somente se ainda não houver uma implementação *do mesmo tipo*. Vários serviços são resolvidos via `IEnumerable<{SERVICE}>`. Ao registrar serviços, adicione uma instância se um dos mesmos tipos ainda não tiver sido adicionado. Os autores de biblioteca usam `TryAddEnumerable` para evitar o registro de várias cópias de uma implementação no contêiner.
 
 No exemplo a seguir, a primeira chamada para `TryAddEnumerable` registra `MessageWriter` como uma implementação para `IMessageWriter1` . A segunda chamada é registrada `MessageWriter` para `IMessageWriter2` . A terceira chamada não tem nenhum efeito porque `IMessageWriter1` já tem uma implementação registrada de `MessageWriter` :
 
@@ -297,7 +297,7 @@ Os serviços podem ser resolvidos usando:
 
 Os construtores podem aceitar argumentos que não são fornecidos pela injeção de dependência, mas que precisam atribuir valores padrão.
 
-Quando os serviços são resolvidos por `IServiceProvider` ou `ActivatorUtilities`, a injeção do construtor exige um construtor *público* .
+Quando os serviços são resolvidos por `IServiceProvider` ou `ActivatorUtilities`, a injeção do construtor exige um construtor *público*.
 
 Quando os serviços são resolvidos por `ActivatorUtilities`, a injeção de construtor exige a existência de apenas de um construtor aplicável. Há suporte para sobrecargas de construtor, mas somente uma sobrecarga pode existir, cujos argumentos podem ser todos atendidos pela injeção de dependência.
 

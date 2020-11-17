@@ -6,12 +6,12 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 928cc8e3559e13af66268f3d1b3766cf2df9041f
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 945e494e8a027d438bf4659d989da6033a13f6f0
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223973"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687597"
 ---
 # <a name="connect-net-for-apache-spark-to-mongodb"></a>Conectar o .NET para Apache Spark ao MongoDB
 
@@ -49,7 +49,7 @@ Para obter o .NET para Apache Spark se comunicar com sua instância do MongoDB, 
         "mongodb+srv://<username>:<password>@<cluster_address>/<database>.<collection>"
         ```
 
-    2. **nome**de usuário: nome de usuário da conta que você criou na etapa 1 da seção anterior
+    2. **nome** de usuário: nome de usuário da conta que você criou na etapa 1 da seção anterior
     3. **senha**: senha da conta de usuário criada
     4. **cluster_address**: nome de host/endereço do seu cluster MongoDB
     5. **banco de dados**: o banco de dados MongoDB ao qual você deseja se conectar
@@ -82,7 +82,7 @@ Para obter o .NET para Apache Spark se comunicar com sua instância do MongoDB, 
 Para executar seu .NET para Apache Spark aplicativo, você deve definir o `mongo-spark-connector` módulo como parte da definição de compilação em seu projeto do Spark, usando o `libraryDependency` no `build.sbt` para projetos SBT. Para ambientes Spark como `spark-submit` (ou `spark-shell` ), você deve usar a `--packages` opção de linha de comando da seguinte forma:
 
 ```bash
-spark-submit --master local --packages org.mongodb.spark:mongo-spark-connector_2.12:3.0.0 --class org.apache.spark.deploy.dotnet.DotnetRunner microsoft-spark-<version>.jar yourApp.exe
+spark-submit --master local --packages org.mongodb.spark:mongo-spark-connector_2.12:3.0.0 --class org.apache.spark.deploy.dotnet.DotnetRunner microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar yourApp.exe
 ```
 
 > [!NOTE]

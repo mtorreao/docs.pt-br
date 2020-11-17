@@ -4,12 +4,12 @@ description: Saiba como instalar o .NET para Apache Spark nos notebooks Jupyter 
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: b5689c9ccdd13209fec33674ad8fc80dcc369660
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: e2319fec833147ce50c7b94dd8ccc84f552f20d2
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955043"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688274"
 ---
 # <a name="install-net-for-apache-spark-on-jupyter-notebooks-on-azure-hdinsight-spark-clusters"></a>Instalar o .NET para Apache Spark em blocos de anotações do Jupyter em clusters Azure HDInsight Spark
 
@@ -36,7 +36,7 @@ No portal do Azure, selecione o **cluster HDInsight Spark** criado na etapa ante
 
 ### <a name="stop-the-livy-server"></a>Parar o servidor Livy
 
-1. No portal, selecione **visão geral**e, em seguida, selecione **Ambari página inicial**. Se solicitado, insira as credenciais de logon para o cluster.
+1. No portal, selecione **visão geral** e, em seguida, selecione **Ambari página inicial**. Se solicitado, insira as credenciais de logon para o cluster.
 
    ![Parar o servidor Livy](./media/hdinsight-notebook-installation/select-ambari.png)
 
@@ -70,10 +70,10 @@ No portal do Azure, selecione o **cluster HDInsight Spark** criado na etapa ante
    |Propriedade  |Descrição  |
    |---------|---------|
    | Tipo de script | Personalizado |
-   | Nome | *Instalar o .NET para Apache Spark experiência de notebook interativa* |
+   | Name | *Instalar o .NET para Apache Spark experiência de notebook interativa* |
    | URI do script Bash | O URI para o qual você carregou `install-interactive-notebook.sh`. |
    | Tipo(s) de nó| Cabeçalho e trabalho |
-   | Parâmetros | .NET para Apache Spark versão. Você pode verificar o [.net em busca de Apache Spark versões](https://github.com/dotnet/spark/releases). Por exemplo, se você quiser instalar o Sparkdotnet versão 0.6.0, ele seria `0.6.0` .
+   | Parâmetros | .NET para Apache Spark versão. Você pode verificar o [.net em busca de Apache Spark versões](https://github.com/dotnet/spark/releases). Por exemplo, se você quiser instalar o Sparkdotnet versão 1.0.0, ele seria `1.0.0` .
 
    Vá para a próxima etapa quando as marcas de seleção verdes aparecerem ao lado do status da ação de script.
 
@@ -83,7 +83,7 @@ Siga as instruções na seção [parar servidor Livy](#stop-the-livy-server) par
 
 ### <a name="set-up-spark-default-configurations"></a>Configurar as configurações padrão do Spark
 
-1. No portal, selecione **visão geral**e, em seguida, selecione **Ambari página inicial**. Em caso de solicitação, insira as credenciais de logon do cluster.
+1. No portal, selecione **visão geral** e, em seguida, selecione **Ambari página inicial**. Em caso de solicitação, insira as credenciais de logon do cluster.
 
 2. Selecione **Spark2** e **configurações**. Em seguida, selecione **Spark2 personalizados-padrões**.
 
@@ -101,7 +101,7 @@ Siga as instruções na seção [parar servidor Livy](#stop-the-livy-server) par
 
    * **Propriedade 2** Use a versão do .NET para Apache Spark que você incluiu na ação de script anterior.
        * Chaves&ensp;&ensp;`spark.dotnet.packages`
-       * Valor: `["nuget: Microsoft.Spark, 0.6.0", "nuget: Microsoft.Spark.Extensions.Delta, 0.6.0"]`
+       * Valor: `["nuget: Microsoft.Spark, 1.0.0", "nuget: Microsoft.Spark.Extensions.Delta, 1.0.0"]`
 
    * **Propriedade 3**
        * Chaves&ensp;&ensp;`spark.dotnet.interpreter`
@@ -115,7 +115,7 @@ Siga as instruções na seção [parar servidor Livy](#stop-the-livy-server) par
 
 4. Reinicie os componentes afetados.
 
-   Depois de adicionar as novas propriedades, você precisa reiniciar os componentes que foram afetados pelas alterações. Na parte superior, selecione **reiniciar**e **reinicie todos os afetados** da lista suspensa.
+   Depois de adicionar as novas propriedades, você precisa reiniciar os componentes que foram afetados pelas alterações. Na parte superior, selecione **reiniciar** e **reinicie todos os afetados** da lista suspensa.
 
    ![Definir configurações](./media/hdinsight-notebook-installation/restart-affected.png)
 

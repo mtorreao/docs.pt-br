@@ -4,12 +4,12 @@ description: Referência para as propriedades e os itens do MSBuild que são com
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: 463e2a163e6a20f5631b0ab82462614834156ae3
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: ecd1cf405f661d0025553974f92fa1401b13220d
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063222"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687465"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>Referência do MSBuild para projetos do SDK do .NET
 
@@ -123,7 +123,7 @@ O XML a seguir exclui o `System.Security` assembly de corte.
 
 ### <a name="useapphost"></a>UseAppHost
 
-A `UseAppHost` propriedade foi introduzida na versão 2.1.400 do SDK do .net. Ele controla se um executável nativo é criado para uma implantação ou não. Um executável nativo é necessário para implantações independentes.
+A `UseAppHost` propriedade controla se um executável nativo é criado para uma implantação ou não. Um executável nativo é necessário para implantações independentes.
 
 No .NET Core 3,0 e versões posteriores, um executável dependente da estrutura é criado por padrão. Defina a `UseAppHost` propriedade como `false` para desabilitar a geração do executável.
 
@@ -142,7 +142,7 @@ Para obter mais informações sobre a implantação, consulte [implantação de 
 
 ### <a name="embeddedresourceusedependentuponconvention"></a>EmbeddedResourceUseDependentUponConvention
 
-A `EmbeddedResourceUseDependentUponConvention` propriedade define se os nomes de arquivo de manifesto de recurso são gerados a partir de informações de tipo em arquivos de origem que são colocados com arquivos de recursos. Por exemplo, se *Form1. resx* estiver na mesma pasta que *Form1.cs* e `EmbeddedResourceUseDependentUponConvention` for definido como `true` , o arquivo *. Resources* gerado usará seu nome do primeiro tipo definido em *Form1.cs* . Por exemplo, se `MyNamespace.Form1` for o primeiro tipo definido em *Form1.cs* , o nome de arquivo gerado *será MyNamespace. Form1. Resources* .
+A `EmbeddedResourceUseDependentUponConvention` propriedade define se os nomes de arquivo de manifesto de recurso são gerados a partir de informações de tipo em arquivos de origem que são colocados com arquivos de recursos. Por exemplo, se *Form1. resx* estiver na mesma pasta que *Form1.cs* e `EmbeddedResourceUseDependentUponConvention` for definido como `true` , o arquivo *. Resources* gerado usará seu nome do primeiro tipo definido em *Form1.cs*. Por exemplo, se `MyNamespace.Form1` for o primeiro tipo definido em *Form1.cs*, o nome de arquivo gerado *será MyNamespace. Form1. Resources*.
 
 > [!NOTE]
 > Se `LogicalName` `ManifestResourceName` os metadados,, ou `DependentUpon` forem especificados para um `EmbeddedResource` Item, o nome do arquivo de manifesto gerado para esse arquivo de recurso será baseado nesses metadados em vez disso.
@@ -183,7 +183,7 @@ A tabela a seguir mostra as opções disponíveis.
 
 | Valor | Significado |
 |-|-|
-| `latest` | Os analisadores de código mais recentes que foram lançados são usados. Esse é o padrão. |
+| `latest` | Os analisadores de código mais recentes que foram lançados são usados. Este é o padrão. |
 | `preview` | Os analisadores de código mais recentes são usados, mesmo se estiverem em versão prévia. |
 | `5.0` | O conjunto de regras que foi habilitado para a versão 5,0 do .NET é usado, mesmo se as regras mais recentes estiverem disponíveis. |
 | `5` | O conjunto de regras que foi habilitado para a versão 5,0 do .NET é usado, mesmo se as regras mais recentes estiverem disponíveis. |
@@ -354,7 +354,7 @@ A `TieredCompilationQuickJitForLoops` propriedade define se o compilador JIT usa
 - [PackageReference](#packagereference)
 - [ProjectReference](#projectreference)
 - [Referência](#reference)
-- [Restaurar propriedades](#restore-properties)
+- [Propriedades relacionadas a restauração](#restore-related-properties)
 
 ### <a name="assettargetfallback"></a>AssetTargetFallback
 
@@ -412,13 +412,44 @@ O `Include` atributo especifica o nome do arquivo e os `HintPath` metadados espe
 </ItemGroup>
 ```
 
-### <a name="restore-properties"></a>Restaurar propriedades
+### <a name="restore-related-properties"></a>Propriedades relacionadas a restauração
 
 A restauração de um pacote referenciado instala todas as suas dependências diretas e todas as dependências dessas dependências. Você pode personalizar a restauração do pacote especificando propriedades como `RestorePackagesPath` e `RestoreIgnoreFailedSources` . Para obter mais informações sobre essas e outras propriedades, consulte [Restore Target](/nuget/reference/msbuild-targets#restore-target).
 
 ```xml
 <PropertyGroup>
   <RestoreIgnoreFailedSource>true</RestoreIgnoreFailedSource>
+</PropertyGroup>
+```
+
+## <a name="hosting-properties-and-items"></a>Hospedando Propriedades e itens
+
+- [EnableComHosting](#enablecomhosting)
+- [EnableDynamicLoading](#enabledynamicloading)
+
+### <a name="enablecomhosting"></a>EnableComHosting
+
+A `EnableComHosting` propriedade indica que um assembly fornece um servidor com. Definir o `EnableComHosting` como `true` também implica que [EnableDynamicLoading](#enabledynamicloading) é `true` .
+
+```xml
+<PropertyGroup>
+  <EnableComHosting>True</EnableComHosting>
+</PropertyGroup>
+```
+
+Para obter mais informações, consulte [expor componentes .net ao com](../native-interop/expose-components-to-com.md).
+
+### <a name="enabledynamicloading"></a>EnableDynamicLoading
+
+A `EnableDynamicLoading` propriedade indica que um assembly é um componente carregado dinamicamente. O componente pode ser uma [biblioteca com](/windows/win32/com/the-component-object-model) ou uma biblioteca não com que pode ser [usada em um host nativo](../tutorials/netcore-hosting.md). Definir essa propriedade como `true` tem os seguintes efeitos:
+
+- Um *.runtimeconfig.jsno* arquivo é gerado.
+- [Roll forward](../whats-new/dotnet-core-3-0.md#major-version-runtime-roll-forward) é definido como `LatestMinor` .
+- As referências do NuGet são copiadas localmente.
+
+```xml
+<PropertyGroup>
+  <EnableDynamicLoading>true</EnableDynamicLoading>
 </PropertyGroup>
 ```
 

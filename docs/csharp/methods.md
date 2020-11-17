@@ -4,12 +4,12 @@ description: Visão geral dos métodos, parâmetros de método e valores retorna
 ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: d5ca96ab3a07b85fa525dd06c975f8e3221c82e8
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: ea07553d20ea6c18bac048a2e8d697f665bfb949
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223662"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687452"
 ---
 # <a name="methods-in-c"></a>Métodos em (C#)
 
@@ -154,7 +154,7 @@ Se um método com vários argumentos opcionais for invocado usando argumentos po
 
 Se um método for chamado usando argumentos nomeados ou uma combinação de argumentos posicionais e nomeados, o chamador poderá omitir todos os argumentos após o último argumento posicional na chamada do método.
 
-A exemplo a seguir chama o método `ExampleMethod` três vezes.  As duas primeiras chamadas de método usam argumentos posicionais. O primeiro omite ambos os argumentos opcionais, enquanto o segundo omite o último argumento. A terceira chamada de método fornece um argumento posicional para o parâmetro obrigatório, mas usa um argumento nomeado para fornecer um valor para o parâmetro `description` enquanto omite o argumento `optionalInt`.
+A exemplo a seguir chama o método `ExampleMethod` três vezes.  As duas primeiras chamadas de método usam argumentos posicionais. O primeiro omite ambos os argumentos opcionais, enquanto o segundo omite o último argumento. A terceira chamada de método fornece um argumento posicional para o parâmetro Required, mas usa um argumento nomeado para fornecer um valor ao `description` parâmetro ao omitir o `optionalInt` argumento.
 
 [!code-csharp[csSnippets.Methods#22](../../samples/snippets/csharp/concepts/methods/optional1.cs#22)]
 
