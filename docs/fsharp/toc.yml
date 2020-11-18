@@ -99,6 +99,8 @@
       href: language-reference/unit-type.md
     - name: Cadeias de caracteres
       href: language-reference/strings.md
+    - name: Cadeias de caracteres interpoladas
+      href: language-reference/interpolated-strings.md
     - name: Tuplas
       href: language-reference/tuples.md
     - name: Tipos de coleção de F#
@@ -248,6 +250,8 @@
       href: language-reference/byrefs.md
     - name: Células de referência
       href: language-reference/reference-cells.md
+    - name: nameof
+      href: language-reference/nameof.md
     - name: Diretivas de compilador
       href: language-reference/compiler-directives.md
     - name: Opção de compilador

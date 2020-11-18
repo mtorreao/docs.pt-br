@@ -2,12 +2,12 @@
 title: Diretrizes de formatação de código do F#
 description: 'Aprenda as diretrizes para formatar o código F #.'
 ms.date: 08/31/2020
-ms.openlocfilehash: 401c0688cd7d0a945dc469f1ab5841b21e1d4ab4
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: af98be75f21cbc594ff9cf779561d49e4965845a
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359279"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688248"
 ---
 # <a name="f-code-formatting-guidelines"></a>Diretrizes de formatação de código do F#
 
@@ -642,21 +642,17 @@ Em alguns casos, o `do...yield` pode ajudar na legibilidade. Esses casos, embora
 
 ## <a name="formatting-if-expressions"></a>Formatando expressões If
 
-O recuo de condicionais depende dos tamanhos das expressões que as compõem. Se `cond` `e1` e `e2` forem curtos, basta escrevê-los em uma linha:
+O recuo de condicionais depende do tamanho e da complexidade das expressões que as compõem.
+Basta escrevê-los em uma linha quando:
+
+- `cond``e1`e `e2` são curtos
+- `e1` e `e2` não são as `if/then/else` próprias expressões.
 
 ```fsharp
 if cond then e1 else e2
 ```
 
-Se `cond` `e1` ou `e2` for maior, mas não uma linha múltipla:
-
-```fsharp
-if cond
-then e1
-else e2
-```
-
-Se qualquer uma das expressões for de várias linhas:
+Se qualquer uma das expressões for de várias linhas ou `if/then/else` expressões.
 
 ```fsharp
 if cond then
@@ -665,13 +661,26 @@ else
     e2
 ```
 
-Várias condicionais com `elif` e `else` são recuadas no mesmo escopo que o `if` :
+Várias condicionais com `elif` e `else` são recuadas no mesmo escopo que o `if` quando seguem as regras das expressões de uma linha `if/then/else` .
 
 ```fsharp
 if cond1 then e1
 elif cond2 then e2
 elif cond3 then e3
 else e4
+```
+
+Se qualquer uma das condições ou expressões for de várias linhas, a `if/then/else` expressão inteira será de várias linhas:
+
+```fsharp
+if cond1 then
+    e1
+elif cond2 then
+    e2
+elif cond3 then
+    e3
+else
+    e4
 ```
 
 ### <a name="pattern-matching-constructs"></a>Constructos de correspondência de padrões
@@ -879,6 +888,41 @@ let makeStreamReader x = new System.IO.StreamReader(path=x)
 
 // Not OK
 let makeStreamReader x = new System.IO.StreamReader(path = x)
+```
+
+### <a name="formatting-constructors-static-members-and-member-invocations"></a>Construtores de formatação, membros estáticos e invocações de membro
+
+Se a expressão for curta, separe os argumentos com espaços e mantenha-os em uma linha.
+
+```fsharp
+let person = new Person(a1, a2)
+
+let myRegexMatch = Regex.Match(input, regex)
+
+let untypedRes = checker.ParseFile(file, source, opts)
+```
+
+Se a expressão for longa, use novas linhas e recue um escopo, em vez de recuar para o colchete.
+
+```fsharp
+let person =
+    new Person(
+        argument1,
+        argument2
+    )
+
+let myRegexMatch =
+    Regex.Match(
+        "my longer input string with some interesting content in it",
+        "myRegexPattern"
+    )
+
+let untypedRes =
+    checker.ParseFile(
+        fileName,
+        sourceText,
+        parsingOptionsWithDefines
+    )
 ```
 
 ## <a name="formatting-attributes"></a>Atributos de formatação

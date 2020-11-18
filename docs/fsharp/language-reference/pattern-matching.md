@@ -1,13 +1,13 @@
 ---
 title: Correspondência padrão
 description: 'Saiba como os padrões são usados em F # para comparar dados com estruturas lógicas, decompor dados em partes constituintes ou extrair informações de dados.'
-ms.date: 08/15/2020
-ms.openlocfilehash: 6d284b941824bc15a8e872a4e28e22c0e159191d
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.date: 11/12/2020
+ms.openlocfilehash: e167712b082b7f587e41a78edcaf0a0db9c7294b
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811503"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687799"
 ---
 # <a name="pattern-matching"></a>Correspondência padrão
 
@@ -29,11 +29,11 @@ Cada padrão atua como uma regra para transformar a entrada de alguma maneira. N
 
 Os padrões com suporte são mostrados na tabela a seguir. Em tempo de execução, a entrada é testada em relação a cada um dos seguintes padrões na ordem listada na tabela, e os padrões são aplicados recursivamente, de primeiro até o último, conforme aparecem no seu código e da esquerda para a direita para os padrões em cada linha.
 
-|Nome|Descrição|Exemplo|
+|Name|Descrição|Exemplo|
 |----|-----------|-------|
 |Padrão de constante|Qualquer literal numérico, de caractere ou de cadeia de caracteres, uma constante de enumeração ou um identificador literal definido|`1.0`, `"test"`, `30`, `Color.Red`|
 |Padrão de identificador|Um valor de case de uma união discriminada, um rótulo de exceção ou um caso de padrão ativo|`Some(x)`<br /><br />`Failure(msg)`|
-|Padrão de variável|*ID*|`a`|
+|Padrão de variável|*identifier*|`a`|
 |`as` padrão|*padrão* como *identificador*|`(a, b) as tuple1`|
 |OU padrão|*pattern1* &#124; *pattern2*|<code>([h] &#124; [h; _])</code>|
 |E padrão|*pattern1* &amp; *pattern2*|`(a, b) & (_, "test")`|
@@ -47,6 +47,7 @@ Os padrões com suporte são mostrados na tabela a seguir. Em tempo de execuçã
 |Padrão junto com a anotação de tipo|*padrão* : *tipo*|`a : int`|
 |Padrão de teste de tipo|:? *tipo* [como *identificador* ]|`:? System.DateTime as dt`|
 |Padrão nulo|null|`null`|
+|Padrão nameof|*expr nameof*|`nameof str`|
 
 ## <a name="constant-patterns"></a>Padrões constantes
 
@@ -139,7 +140,7 @@ O exemplo a seguir é como `detectZeroTuple` mostrado na seção padrão de tupl
 
 ## <a name="cons-pattern"></a>Padrão de contras
 
-O padrão de contras de contras é usado para decompor uma lista no primeiro elemento, no *cabeçalho*e em uma lista que contém os elementos restantes, a *parte final*.
+O padrão de contras de contras é usado para decompor uma lista no primeiro elemento, no *cabeçalho* e em uma lista que contém os elementos restantes, a *parte final*.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4809.fs)]
 
@@ -215,7 +216,23 @@ O exemplo a seguir usa o padrão nulo e o padrão de variável.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4817.fs)]
 
-## <a name="see-also"></a>Confira também
+## <a name="nameof-pattern"></a>Padrão nameof
+
+O `nameof` padrão corresponde a uma cadeia de caracteres quando seu valor é igual à expressão que segue a `nameof` palavra-chave. Por exemplo:
+
+```fsharp
+let f (str: string) =
+    match str with
+    | nameof str -> "It's 'str'!"
+    | _ -> "It is not 'str'!"
+
+f "str" // matches
+f "asdf" // does not match
+```
+
+Consulte o [`nameof`](nameof.md) operador para obter informações sobre o que você pode obter um nome.
+
+## <a name="see-also"></a>Veja também
 
 - [Expressões de correspondência](match-expressions.md)
 - [Padrões ativos](active-patterns.md)
