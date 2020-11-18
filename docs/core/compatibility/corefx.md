@@ -70,7 +70,7 @@ ms.locfileid: "94440165"
 
 [!INCLUDE [remoting-apis-obsolete](../../../includes/core-changes/corefx/5.0/remoting-apis-obsolete.md)]
 
-<span data-ttu-id="ded40-197">\*\*_</span><span class="sxs-lookup"><span data-stu-id="ded40-197">\*\*_</span></span>
+***
 
 [!INCLUDE [globalassemblycache-property-obsolete](../../../includes/core-changes/corefx/5.0/global-assembly-cache-apis-obsolete.md)]
 
@@ -244,4 +244,4 @@ ms.locfileid: "94440165"
 
 [!INCLUDE [startinfo-throws-exception](../../../includes/core-changes/corefx/1.0/startinfo-throws-exception.md)]
 
-<span data-ttu-id="ded40-201">_\*\*</span><span class="sxs-lookup"><span data-stu-id="ded40-201">_\*\*</span></span>
+***
