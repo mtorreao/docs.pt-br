@@ -2,7 +2,6 @@
 title: Práticas recomendadas para expressões regulares no .NET
 description: Saiba como criar expressões regulares eficientes e eficazes no .NET.
 ms.date: 06/30/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - .NET regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.openlocfilehash: 727c3f2b8465c5d69244abe0f441d2a24e84dc5f
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: ae74d263034de4d402520d751fe97af9e33a2a48
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162915"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820586"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Práticas recomendadas para expressões regulares no .NET
 
@@ -208,7 +207,7 @@ O exemplo a seguir ilustra o uso dessa expressão regular para corresponder a um
 
 A linguagem de expressões regulares no .NET inclui os seguintes elementos de linguagem que você pode usar para eliminar quantificadores aninhados. Para saber mais, confira [Constructos de agrupamento](grouping-constructs-in-regular-expressions.md).
 
-|Elemento de linguagem|Description|
+|Elemento de linguagem|Descrição|
 |----------------------|-----------------|
 |`(?=` `subexpression` `)`|Lookahead positivo de largura zero. Examine além da posição atual para determinar se `subexpression` coincide com a cadeia de caracteres de entrada.|
 |`(?!` `subexpression` `)`|Lookahead negativo de largura zero. Examine além da posição atual para determinar se `subexpression` não coincide com a cadeia de caracteres de entrada.|
@@ -236,7 +235,7 @@ O exemplo a seguir define um método `GetWordData` que instancia uma expressão 
 
 ## <a name="capture-only-when-necessary"></a>Capture somente quando necessário
 
-As expressões regulares no .NET dão suporte a vários constructos de agrupamento, que permitem a você agrupar um padrão de expressão regular em uma ou mais subexpressões. As construções de agrupamento usadas com mais frequência na linguagem de expressão regular do .NET são `(` *subexpressão* `)` , que define um grupo de captura numerada e a `(?<` *name* `>` *subexpressão*de nome `)` , que define um grupo de captura nomeado. Os construtores de agrupamento são essenciais para criar referências reversas e definir uma subexpressão à qual um quantificador é aplicado.
+As expressões regulares no .NET dão suporte a vários constructos de agrupamento, que permitem a você agrupar um padrão de expressão regular em uma ou mais subexpressões. As construções de agrupamento usadas com mais frequência na linguagem de expressão regular do .NET são `(` *subexpressão* `)` , que define um grupo de captura numerada e a `(?<` *name* `>` *subexpressão* de nome `)` , que define um grupo de captura nomeado. Os construtores de agrupamento são essenciais para criar referências reversas e definir uma subexpressão à qual um quantificador é aplicado.
 
 No entanto, o uso desses elementos de linguagem tem um custo. Eles fazem com que o objeto <xref:System.Text.RegularExpressions.GroupCollection> retornado pela propriedade <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> seja preenchido com as capturas sem nome ou nomeadas mais recentes. Além disso, se uma única construção de agrupamento capturou várias subcadeias de caracteres na cadeia de caracteres de entrada, também preenchem o objeto <xref:System.Text.RegularExpressions.CaptureCollection> retornado pela propriedade <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> de um grupo de captura específico com vários objetos <xref:System.Text.RegularExpressions.Capture>.
 

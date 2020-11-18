@@ -2,7 +2,6 @@
 title: Nomes de membros de tipo
 description: Conheça as diretrizes para nomear membros de tipo no .NET, como métodos, propriedades, eventos e campos.
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - events [.NET Framework], names
 - methods [.NET Framework], names
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - names [.NET Framework], type members
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
-ms.openlocfilehash: de613673989bd174ac80adda566d04600059642d
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 85f3137b4a8d75de92b12d6535415743395db890
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662492"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820907"
 ---
 # <a name="names-of-type-members"></a>Nomes de membros de tipo
 Tipos são compostos de membros: métodos, propriedades, eventos, construtores e campos. As seções a seguir descrevem as diretrizes de nomenclatura de membros de tipo.
@@ -41,7 +40,7 @@ public class String {
 
  ✔️ as propriedades de nome usando um substantivo, uma frase de substantivo ou um adjetivo.
 
- ❌Não têm propriedades que correspondam ao nome dos métodos "Get", como no exemplo a seguir:
+ ❌ Não têm propriedades que correspondam ao nome dos métodos "Get", como no exemplo a seguir:
 
  `public string TextWriter { get {...} set {...} }` `public string GetTextWriter(int value) { ... }`
 
@@ -73,7 +72,7 @@ public class Control {
 
  Por exemplo, um evento de fechamento gerado antes de uma janela ser fechada seria chamado de `Closing`, e um gerado após a janela ser fechada seria chamado de `Closed`.
 
- ❌Não use prefixos "Before" ou "After" ou as pós-correções para indicar pré e eventos Post. Use os tempos verbais Pretérito e Presente conforme descrito.
+ ❌ Não use prefixos "Before" ou "After" ou as pós-correções para indicar pré e eventos Post. Use os tempos verbais Pretérito e Presente conforme descrito.
 
  ✔️ manipuladores de eventos de nome (delegados usados como tipos de eventos) com o sufixo "EventHandler", conforme mostrado no exemplo a seguir:
 
@@ -92,7 +91,7 @@ public class Control {
 
  ✔️ os campos de nome usando um substantivo, uma frase de substantivo ou um adjetivo.
 
- ❌Não use um prefixo para nomes de campo.
+ ❌ Não use um prefixo para nomes de campo.
 
  Por exemplo, não use "g_" ou "s_" para indicar campos estáticos.
 

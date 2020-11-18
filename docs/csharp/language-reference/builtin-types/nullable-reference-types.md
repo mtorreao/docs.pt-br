@@ -2,12 +2,12 @@
 title: Tipos de referência anuláveis – referência C#
 description: Saiba mais sobre os tipos de referência nulos do C# e como usá-los
 ms.date: 04/06/2020
-ms.openlocfilehash: 274a613a8381a2b7718c9025f51aadb2eb32af36
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: d961af9ba3b4776e6b4ec3eeea5392fb0d0394ce
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471857"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822419"
 ---
 # <a name="nullable-reference-types-c-reference"></a>Tipos de referência anuláveis (referência C#)
 
@@ -72,9 +72,9 @@ Há duas maneiras de controlar o contexto anulável. No nível do projeto, você
 Para obter mais informações, consulte as seguintes propostas para a [especificação da linguagem C#](~/_csharplang/spec/introduction.md):
 
 - [Tipos de referência anuláveis](~/_csharplang/proposals/csharp-8.0/nullable-reference-types.md)
-- [Especificação de tipos de referência Nullable de rascunho](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md)
+- [Especificação de tipos de referência Nullable de rascunho](~/_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md)
 
 ## <a name="see-also"></a>Confira também
 
 - [Referência de C#](../index.md)
-- [Tipos de valor anulável](nullable-value-types.md)
+- [Tipos de valor anuláveis](nullable-value-types.md)

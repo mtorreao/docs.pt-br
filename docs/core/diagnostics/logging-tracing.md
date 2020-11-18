@@ -2,12 +2,12 @@
 title: Registro em log e rastreamento – .NET Core
 description: Uma introdução ao rastreamento e registro em log do .NET Core.
 ms.date: 10/12/2020
-ms.openlocfilehash: 9af04cceeef3fbfb8392eb91667c21374511548a
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 86444f2451079e54050f6698f3e45ddff0700acf
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687577"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820573"
 ---
 # <a name="net-core-logging-and-tracing"></a>Log e rastreamento do .NET Core
 
@@ -93,6 +93,8 @@ Por exemplo, para permitir que você faça a melhor escolha para o seu aplicativ
 - O [registro em log no .net](../extensions/logging.md) fornece uma visão geral das técnicas de log que ele suporta.
 
 - A [interpolação de cadeia de caracteres C#](../../csharp/language-reference/tokens/interpolated.md) pode simplificar o código de registro
+
+- [Lista de eventos do provedor de tempo de execução](../../fundamentals/diagnostics/runtime-events.md)
 
 - A <xref:System.Exception.Message?displayProperty=nameWithType> propriedade é útil para registrar exceções.
 

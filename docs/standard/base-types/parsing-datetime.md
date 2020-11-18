@@ -2,7 +2,6 @@
 title: Converter cadeias de caracteres em DateTime
 description: Aprenda técnicas para analisar cadeias de caracteres que representam datas e horas a fim de criar um DateTime com base na cadeia de caracteres de data e hora.
 ms.date: 02/15/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - base types, parsing strings
 - DateTime object
 - time strings
-ms.openlocfilehash: f6ac4672a81db7047069f726f7eb1b920a82b3db
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 557955b5c47695dea686527fd99653ef2efe19bb
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889030"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821912"
 ---
 # <a name="parse-date-and-time-strings-in-net"></a>Analisar cadeias de caracteres de data e hora no .NET
 
@@ -84,7 +83,7 @@ No exemplo a seguir, o método <xref:System.DateTime.ParseExact%2A?displayProper
 
 Cada sobrecarga dos métodos <xref:System.DateTime.Parse%2A> e <xref:System.DateTime.ParseExact%2A> também tem um parâmetro <xref:System.IFormatProvider> que oferece informações específicas da cultura sobre a formatação da cadeia de caracteres. Esse objeto <xref:System.IFormatProvider> é um objeto <xref:System.Globalization.CultureInfo> que representa uma cultura padrão ou um objeto <xref:System.Globalization.DateTimeFormatInfo> que é retornado pela propriedade <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>.  O <xref:System.DateTime.ParseExact%2A> também usa uma cadeia de caracteres adicional ou um argumento de matriz de cadeia de caracteres que define um ou mais formatos de data e hora personalizados.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Analisando cadeias de caracteres](parsing-strings.md)
 - [Tipos de formatação](formatting-types.md)

@@ -2,7 +2,6 @@
 title: 'Como: Exibir milissegundos em valores de data e hora'
 description: Neste artigo, saiba como incluir um componente de milissegundos de data e hora em cadeias de caracteres de data e hora formatadas no .NET.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - dates [.NET], milliseconds
 - milliseconds [.NET]
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
-ms.openlocfilehash: bff458e73d603781155b18160bc7d088d8bd78cb
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 333b41fe3d4fa68ce26ab5dbd7d5938dda220b9a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888463"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822107"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Como: Exibir milissegundos em valores de data e hora
 Os métodos padrão de formatação de data e hora, como <xref:System.DateTime.ToString?displayProperty=nameWithType>, incluem as horas, minutos e segundos de um valor temporal, mas excluem seu componente de milissegundos. Este tópico mostra como incluir um componente de milissegundos de uma data e hora em cadeias de caracteres de data e hora formatadas.  
@@ -50,7 +49,7 @@ Os métodos padrão de formatação de data e hora, como <xref:System.DateTime.T
 > [!NOTE]
 > É possível exibir unidades fracionárias muito pequenas de um segundo, como dez milésimos de segundo ou centésimos de milésimos de segundo. No entanto, esses valores podem não ser significativos. A precisão dos valores de data e hora depende da resolução do relação ao relógio do sistema. No Windows NT 3,5 e versões posteriores e sistemas operacionais Windows Vista, a resolução do relógio é de aproximadamente 10-15 milissegundos.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Globalization.DateTimeFormatInfo>
 - [Cadeias de caracteres de formato de data e hora personalizado](custom-date-and-time-format-strings.md)

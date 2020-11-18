@@ -1,19 +1,18 @@
 ---
 title: Preservação da ordem em PLINQ
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, order preservation
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
-ms.openlocfilehash: 45752f3ffa64079079505934afd76e812daad7bd
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 59d32f8801a1429718f39ab912f55cfcc5788a0e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290649"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820768"
 ---
 # <a name="order-preservation-in-plinq"></a>Preservação da ordem em PLINQ
 Em PLINQ, o objetivo é maximizar o desempenho mantendo a exatidão. Uma consulta deve ser executada o mais rápido possível, mas ainda produzir os resultados corretos. Em alguns casos, a exatidão requer que a ordem da sequência de origem seja preservada. No entanto, a ordenação pode ser dispendiosa. Portanto, por padrão, o PLINQ não preserva a ordem da sequência de origem. Nesse sentido, o PLINQ assemelha-se a [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)], mas é diferente do LINQ to Objects que preserva a ordenação.  
@@ -92,8 +91,8 @@ Em PLINQ, o objetivo é maximizar o desempenho mantendo a exatidão. Uma consult
 |<xref:System.Linq.ParallelEnumerable.Min%2A>|Não aplicável|Não aplicável|  
 |<xref:System.Linq.ParallelEnumerable.OrderBy%2A>|Reordena a sequência|Inicia nova seção ordenada|  
 |<xref:System.Linq.ParallelEnumerable.OrderByDescending%2A>|Reordena a sequência|Inicia nova seção ordenada|  
-|<xref:System.Linq.ParallelEnumerable.Range%2A>|Não aplicável (mesmo padrão de <xref:System.Linq.ParallelEnumerable.AsParallel%2A>)|Não aplicável|  
-|<xref:System.Linq.ParallelEnumerable.Repeat%2A>|Não aplicável (mesmo padrão de <xref:System.Linq.ParallelEnumerable.AsParallel%2A>)|Não aplicável|  
+|<xref:System.Linq.ParallelEnumerable.Range%2A>|Não aplicável (mesmo padrão de <xref:System.Linq.ParallelEnumerable.AsParallel%2A>)|Não Aplicável|  
+|<xref:System.Linq.ParallelEnumerable.Repeat%2A>|Não aplicável (mesmo padrão de <xref:System.Linq.ParallelEnumerable.AsParallel%2A>)|Não Aplicável|  
 |<xref:System.Linq.ParallelEnumerable.Reverse%2A>|Inverte|Não agir|  
 |<xref:System.Linq.ParallelEnumerable.Select%2A>|Resultados ordenados|Resultados não ordenados|  
 |<xref:System.Linq.ParallelEnumerable.Select%2A> (indexado)|Resultados ordenados|Resultados não ordenados.|  
@@ -120,7 +119,7 @@ Em PLINQ, o objetivo é maximizar o desempenho mantendo a exatidão. Uma consult
   
  Os resultados não ordenados não são ativamente embaralhados. Eles simplesmente não têm qualquer lógica de ordenação especial aplicada a eles. Em alguns casos, uma consulta não ordenada pode manter a ordenação da sequência de origem. No caso das consultas que usam o operador Select indexado, o PLINQ garante que os elementos de saída serão apresentados na ordem de índices crescentes, mas não garante quais índices serão atribuídos a quais elementos.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [LINQ paralelo (PLINQ)](introduction-to-plinq.md)
 - [Programação paralela](index.md)

@@ -1,28 +1,42 @@
 ---
-title: dotnet-despejo-.NET Core
-description: Instalando e usando a ferramenta de linha de comando dotnet-dump.
-ms.date: 10/14/2019
-ms.openlocfilehash: e008dcfc734a8742c495ea32a7a149c9a55c54c6
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+title: dotnet – ferramenta de diagnóstico de despejo-CLI do .NET
+description: Saiba como instalar e usar a ferramenta de CLI de despejo de dotnet para coletar e analisar despejos do Windows e do Linux sem nenhum depurador nativo.
+ms.date: 11/17/2020
+ms.openlocfilehash: ea9a70c4dc47b5006339e9a197712092eb66b241
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598103"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822198"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>Utilitário de coleta e análise de despejo (dotNet-dump)
 
 **Este artigo aplica-se a:** ✔️ SDK do .net Core 3,0 e versões posteriores
 
 > [!NOTE]
-> `dotnet-dump` Não tem suporte no macOS.
+> `dotnet-dump` para macOS só é compatível com o .NET 5,0 e versões posteriores.
 
-## <a name="install-dotnet-dump"></a>Instalar dotnet-dump
+## <a name="install"></a>Instalar
 
-Para instalar a versão de lançamento mais recente do `dotnet-dump` [pacote NuGet](https://www.nuget.org/packages/dotnet-dump), use o comando de [instalação da ferramenta dotnet](../tools/dotnet-tool-install.md) :
+Há duas maneiras de baixar e instalar `dotnet-dump` :
 
-```dotnetcli
-dotnet tool install -g dotnet-dump
-```
+- **ferramenta global dotnet:**
+
+  Para instalar a versão de lançamento mais recente do `dotnet-dump` [pacote NuGet](https://www.nuget.org/packages/dotnet-dump), use o comando de [instalação da ferramenta dotnet](../tools/dotnet-tool-install.md) :
+
+  ```dotnetcli
+  dotnet tool install --global dotnet-dump
+  ```
+
+- **Download direto:**
+
+  Baixe o executável da ferramenta que corresponde à sua plataforma:
+
+  | SO  | Plataforma |
+  | --- | -------- |
+  | Windows | [x86](https://aka.ms/dotnet-dump/win-x86) \| [x64](https://aka.ms/dotnet-dump/win-x64) \| [ARM](https://aka.ms/dotnet-dump/win-arm) \| [ARM-x64](https://aka.ms/dotnet-dump/win-arm64) |
+  | macOS   | [x64](https://aka.ms/dotnet-dump/osx-x64) |
+  | Linux   | [x64](https://aka.ms/dotnet-dump/linux-x64) \| [ARM](https://aka.ms/dotnet-dump/linux-arm) \| [arm64](https://aka.ms/dotnet-dump/linux-arm64) \| [MUSL-x64](https://aka.ms/dotnet-dump/linux-musl-x64) \| [MUSL-arm64](https://aka.ms/dotnet-dump/linux-musl-arm64) |
 
 ## <a name="synopsis"></a>Sinopse
 
@@ -58,7 +72,7 @@ Captura um despejo de um processo.
 ### <a name="synopsis"></a>Sinopse
 
 ```console
-dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag]
+dotnet-dump collect [-h|--help] [-p|--process-id] [-n|--name] [--type] [-o|--output] [--diag]
 ```
 
 ### <a name="options"></a>Opções
@@ -69,7 +83,11 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag
 
 - **`-p|--process-id <PID>`**
 
-  Especifica o número de identificação do processo do qual coletar um despejo de memória.
+  Especifica o número de identificação do processo do qual coletar um despejo.
+
+- **`-n|--name <name>`**
+
+  Especifica o nome do processo do qual coletar um despejo.
 
 - **`--type <Full|Heap|Mini>`**
 

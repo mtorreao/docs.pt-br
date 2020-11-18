@@ -1,7 +1,6 @@
 ---
 title: Metadados e componentes autodescritivos
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - PE files, metadata
 - components [.NET], metadata
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
-ms.openlocfilehash: 2ed09882ba722ace0b7f7be2a35fffc362af2742
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: c597c1ae6153050f08ed2976f7ee6102cdd3c797
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92159346"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822341"
 ---
 # <a name="metadata-and-self-describing-components"></a>Metadados e componentes autodescritivos
 
@@ -157,11 +156,11 @@ O compilador JIT lê o MSIL para o método inteiro o analisa-o por completo, al�
 
 A tabela a seguir mostra parte da tabela **MethodDef** referenciada pelo token de metadados que descreve o método `Add`. Embora haja outras tabelas de metadados nesse assembly e elas tenham seus próprios valores exclusivos, somente essa tabela é examinada.
 
-|Linha|RVA (endereço virtual relativo)|ImplFlags|Flags|Name<br /><br /> (Aponta para o heap da cadeia de caracteres.)|Assinatura (Aponta para o heap de blob.)|
+|Linha|RVA (endereço virtual relativo)|ImplFlags|Flags|Nome<br /><br /> (Aponta para o heap da cadeia de caracteres.)|Assinatura (Aponta para o heap de blob.)|
 |---------|--------------------------------------|---------------|-----------|-----------------------------------------|----------------------------------------|
-|1|0x00002050|IL<br /><br /> Gerenciados|Público<br /><br /> ReuseSlot<br /><br /> SpecialName<br /><br /> RTSpecialName<br /><br /> .ctor|.ctor (construtor)||
-|2|0x00002058|IL<br /><br /> Gerenciados|Público<br /><br /> Estático<br /><br /> ReuseSlot|Principal|String|
-|3|0x0000208c|IL<br /><br /> Gerenciados|Público<br /><br /> Estático<br /><br /> ReuseSlot|Adicionar|int, int, int|
+|1|0x00002050|IL<br /><br /> Gerenciado|Público<br /><br /> ReuseSlot<br /><br /> SpecialName<br /><br /> RTSpecialName<br /><br /> .ctor|.ctor (construtor)||
+|2|0x00002058|IL<br /><br /> Gerenciado|Público<br /><br /> Estático<br /><br /> ReuseSlot|Principal|Cadeia de caracteres|
+|3|0x0000208c|IL<br /><br /> Gerenciado|Público<br /><br /> Estático<br /><br /> ReuseSlot|Adicionar|int, int, int|
 
 Cada coluna da tabela contém informações importantes sobre seu código. A coluna **RVA** permite que o runtime calcule o endereço de memória inicial do MSIL que define esse método. As colunas **ImplFlags** e **Flags** contêm bitmasks que descrevem o método (por exemplo, se o método é público ou particular). A coluna **Nome** indexa o nome do método com base no heap da cadeia de caracteres. A coluna **Assinatura** indexa a definição da assinatura do método no heap de blob.
 
@@ -169,7 +168,7 @@ O runtime calcula o endereço de deslocamento desejado com base na coluna **RVA*
 
 Usando metadados, o ambiente de runtime tem acesso a todas as informações necessárias para carregar seu código e processá-lo em instruções de máquina nativas. Dessa maneira, os metadados permitem arquivos autodescritivos e, com o CTS, a herança entre linguagens.
 
-## <a name="related-topics"></a>Tópicos relacionados
+## <a name="related-topics"></a>Tópicos Relacionados
 
 |Título|Descrição|
 |-----------|-----------------|

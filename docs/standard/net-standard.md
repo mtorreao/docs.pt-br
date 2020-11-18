@@ -2,15 +2,16 @@
 title: .NET Standard
 description: Saiba mais sobre .NET Standard, suas versões e as implementações do .NET que dão suporte a ela.
 ms.date: 10/05/2020
+ms.prod: dotnet
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: a4736e46eb7c25b64278bed8f2c2457002936b81
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: e0adb69d02fe427dd187c788cba34c0673e97ee6
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224156"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822303"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -163,7 +164,7 @@ Aqui estão alguns problemas com .NET Standard que ajudam a explicar por que o .
 * Use `netstandard2.0` para compartilhar código entre .NET Framework e todas as outras implementações do .net.
 * Use `netstandard2.1` para compartilhar código entre o mono, o Xamarin e o .NET Core 3. x.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [.NET Standard versões (origem)](https://github.com/dotnet/standard/blob/master/docs/versions.md)
 - [Versões do .NET Standard (interface do usuário interativa)](https://dotnet.microsoft.com/platform/dotnet-standard#versions)

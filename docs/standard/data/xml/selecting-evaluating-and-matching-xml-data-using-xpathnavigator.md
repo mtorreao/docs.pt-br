@@ -1,14 +1,13 @@
 ---
 title: Selecionando, avaliando e correspondente de dados XML usando XPathNavigator
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 46e059f8-4dc8-4185-9236-784be95228ed
-ms.openlocfilehash: 1418e768db2f5f860ec40cf4e1351b4ec4a14a08
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 249b99a627f3bbcc1723f104a80cb61552404877
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84282201"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822458"
 ---
 # <a name="selecting-evaluating-and-matching-xml-data-using-xpathnavigator"></a>Selecionando, avaliando e correspondente de dados XML usando XPathNavigator
 A classe de <xref:System.Xml.XPath.XPathNavigator> fornece métodos para nós selecionados em um objeto de <xref:System.Xml.XPath.XPathDocument> ou de <xref:System.Xml.XmlDocument> usando uma consulta XPath, valores e examina os resultados de uma expressão XPath, e determina se um nó em um objeto de <xref:System.Xml.XPath.XPathDocument> ou de <xref:System.Xml.XmlDocument> corresponde uma expressão XPath determinada. Esses e outros conceitos relacionados à selecionar, classificar e aos nós em um objeto de <xref:System.Xml.XPath.XPathDocument> ou de <xref:System.Xml.XmlDocument> são descritos nos tópicos a seguir.  
@@ -32,7 +31,7 @@ A classe de <xref:System.Xml.XPath.XPathNavigator> fornece métodos para nós se
  [Expressões XPath compilados](compiled-xpath-expressions.md)  
  Descreve a classe de <xref:System.Xml.XPath.XPathExpression> que representa uma consulta XPath compilado.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

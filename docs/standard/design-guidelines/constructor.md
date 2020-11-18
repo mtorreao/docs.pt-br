@@ -1,7 +1,6 @@
 ---
 title: Design do construtor
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - member design guidelines, constructors
 - constructors, design guidelines
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - parameterless constructors
 - static constructors
 ms.assetid: b4496afe-5fa7-4bb0-85ca-70b0ef21e6fc
-ms.openlocfilehash: a258bebac57258cc1e8fbe2d6b5ccce88cb28872
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 27fb73aa01adf31117d1b82724873db3a03fd269
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280342"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821392"
 ---
 # <a name="constructor-design"></a>Design do construtor
 
@@ -55,11 +54,11 @@ Se você não declarar explicitamente nenhum construtor em um tipo, muitas lingu
 
 Adicionar um construtor com parâmetros a uma classe impede que o compilador adicione o construtor sem parâmetros. Isso geralmente causa alterações de interrupção acidentais.
 
-❌Evite definir construtores sem parâmetros explicitamente em structs.
+❌ Evite definir construtores sem parâmetros explicitamente em structs.
 
 Isso torna a criação de matriz mais rápida, porque se o construtor sem parâmetros não estiver definido, ele não precisará ser executado em todos os slots na matriz. Observe que muitos compiladores, incluindo C#, não permitem que structs tenham construtores sem parâmetros por esse motivo.
 
-❌Evite chamar Membros virtuais em um objeto dentro de seu construtor.
+❌ Evite chamar Membros virtuais em um objeto dentro de seu construtor.
 
 Chamar um membro virtual fará com que a substituição mais derivada seja chamada, mesmo que o construtor do tipo mais derivado ainda não tenha sido totalmente executado.
 
@@ -69,7 +68,7 @@ Chamar um membro virtual fará com que a substituição mais derivada seja chama
 
 Um construtor estático, também chamado de construtor de classe, é usado para inicializar um tipo. O CLR chama o construtor estático antes que a primeira instância do tipo seja criada ou quaisquer membros estáticos nesse tipo sejam chamados. O usuário não tem controle sobre quando o construtor estático é chamado. Se um construtor estático não for privado, ele poderá ser chamado por um código diferente do CLR. Dependendo das operações executadas no construtor, isso pode causar um comportamento inesperado. O compilador C# força os construtores estáticos a serem privados.
 
-❌Não lance exceções de construtores estáticos.
+❌ Não lance exceções de construtores estáticos.
 
 Se uma exceção for gerada de um construtor de tipo, o tipo não poderá ser usado no domínio do aplicativo atual.
 
@@ -79,7 +78,7 @@ Se uma exceção for gerada de um construtor de tipo, o tipo não poderá ser us
 
 *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Diretrizes de design de membro](member.md)
 - [Diretrizes de design de estrutura](index.md)

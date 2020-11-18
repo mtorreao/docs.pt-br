@@ -2,7 +2,6 @@
 title: Converter cadeias de caracteres em tipos
 description: Entenda a análise da cadeia de caracteres no .NET. A análise converte uma cadeia de caracteres que representa um tipo base .NET nesse tipo base. A análise é a operação inversa para formatação.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - parsing strings, about parsing strings
 - IFormatProvider interface, parsing strings
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - Parse method
 - parsing strings
 ms.assetid: 5e758b41-db93-456b-8999-99b7304b090d
-ms.openlocfilehash: 3d23fa9c7ecc3593f03f70dbd5ea7bda841e8f4f
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: 8fbfe8596e49ed101ea7d6bb65298e432a6fac13
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400846"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821899"
 ---
 # <a name="parse-strings-in-net"></a>Analisar cadeias de caracteres no .NET
 
@@ -29,7 +28,7 @@ Uma operação de *análise* converte uma cadeia de caracteres que representa um
  Descreve como converter cadeias de caracteres em tipos **DateTime** do .NET.
 
  [Analisando outras cadeias de caracteres](parsing-other.md)\
- Descreve como converter cadeias de caracteres em tipos **Char** , **Boolean** e **Enum**.
+ Descreve como converter cadeias de caracteres em tipos **Char**, **Boolean** e **Enum**.
 
 ## <a name="related-sections"></a>Seções relacionadas
  [Tipos de formatação](formatting-types.md)\

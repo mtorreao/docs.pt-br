@@ -2,7 +2,6 @@
 title: Como preencher um número com zeros à esquerda
 description: Aprenda a preencher um número com zeros à esquerda. Adicione zeros à esquerda a inteiros ou valores numéricos a um comprimento total específico ou a um número específico de zeros à esquerda.
 ms.date: 02/25/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - number formatting [.NET]
 - numbers [.NET], format strings
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
-ms.openlocfilehash: 7c3ee376fde34663ee0599c0b1ae654871a71206
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 911d6059d3594ca35eb1c1c3e2d29a5684bce738
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888450"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822042"
 ---
 # <a name="how-to-pad-a-number-with-leading-zeros"></a>Como preencher um número com zeros à esquerda
 
@@ -29,9 +28,9 @@ ms.locfileid: "92888450"
 
 1. Determine se quer exibir o inteiro como valor decimal ou hexadecimal.
 
-    - Para exibir o inteiro como um valor decimal, chame seu método `ToString(String)` e passe a cadeia de caracteres "D *n* " como o valor do parâmetro `format`, em que *n* representa o tamanho mínimo da cadeia de caracteres.
+    - Para exibir o inteiro como um valor decimal, chame seu método `ToString(String)` e passe a cadeia de caracteres "D *n*" como o valor do parâmetro `format`, em que *n* representa o tamanho mínimo da cadeia de caracteres.
 
-    - Para exibir o número inteiro como hexadecimal, chame seu método `ToString(String)` e informe a cadeia de caracteres “X *n* ” como valor do parâmetro format, em que *n* representa o comprimento mínimo da cadeia de caracteres.
+    - Para exibir o número inteiro como hexadecimal, chame seu método `ToString(String)` e informe a cadeia de caracteres “X *n*” como valor do parâmetro format, em que *n* representa o comprimento mínimo da cadeia de caracteres.
 
 Você também pode usar a cadeia de caracteres de formato em uma cadeia de caracteres interpolada em [C#](../../csharp/language-reference/tokens/interpolated.md) e em [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) ou você pode chamar um método, como <xref:System.String.Format%2A?displayProperty=nameWithType> ou <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, que usa a [formatação de composição](composite-formatting.md).
 
@@ -54,7 +53,7 @@ O exemplo a seguir formata diversos valores inteiros com zeros à esquerda para 
 
 1. Adicione quantos dígitos zero à esquerda quer incluir na cadeia de caracteres formatada com comprimento da cadeia de caracteres numérica não acrescentada. A adição do número de zeros à esquerda define o comprimento total da cadeia de caracteres preenchida.
 
-1. Chame o método `ToString(String)` do valor inteiro e informe a cadeia de caracteres “D *n* ” para cadeias de caracteres decimais e “X *n* ” para cadeias de caracteres hexadecimais, em que *n* representa o comprimento total da cadeia de caracteres acrescentada. Você também pode usar uma cadeia de caracteres de formato “D *n* ” ou “X *n* ” em um método com suporte para formatação de composição.
+1. Chame o método `ToString(String)` do valor inteiro e informe a cadeia de caracteres “D *n*” para cadeias de caracteres decimais e “X *n*” para cadeias de caracteres hexadecimais, em que *n* representa o comprimento total da cadeia de caracteres acrescentada. Você também pode usar uma cadeia de caracteres de formato “D *n*” ou “X *n*” em um método com suporte para formatação de composição.
 
 O exemplo a seguir acrescenta um valor inteiro com cinco dígitos zero à esquerda.
 
@@ -84,7 +83,7 @@ O exemplo a seguir formata diversos valores numéricos com zeros à esquerda. Co
 
     1. Caso o símbolo esteja presente, determine a quantidade de caracteres à esquerda do ponto decimal.
 
-         -ou-
+         - ou -
 
          Caso o símbolo de decimal não esteja presente, determine o comprimento da cadeia de caracteres.
 
@@ -101,7 +100,7 @@ O exemplo a seguir acrescenta dois valores <xref:System.Double> com cinco dígit
 [!code-csharp[Formatting.HowTo.PadNumber#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.PadNumber/cs/Pad1.cs#4)]
 [!code-vb[Formatting.HowTo.PadNumber#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.PadNumber/vb/Pad1.vb#4)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Cadeias de caracteres de formato numérico personalizado](custom-numeric-format-strings.md)
 - [Cadeias de Caracteres de Formato Numérico Padrão](standard-numeric-format-strings.md)

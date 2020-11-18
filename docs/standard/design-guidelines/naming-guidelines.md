@@ -2,7 +2,6 @@
 title: Diretrizes de nomenclatura
 description: Nesta visão geral, leia sobre as convenções de nomenclatura a serem usadas no desenvolvimento da estrutura. Acesse artigos que abordam a capitalização, nomenclatura geral e outras diretrizes.
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - names [.NET Framework], about naming guidelines
 - naming guidelines [.NET Framework]
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - names [.NET Framework]
 - format naming guidelines [.NET Framework]
 ms.assetid: fc076d66-9b5f-42d3-aa65-61d970c794a3
-ms.openlocfilehash: fbcf5ef5eb02a5e45b5c981b4247ffe1c9c2631b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e82b6941d3ea0243f4ae16bc9d42ea8d1f1fccfb
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447141"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820872"
 ---
 # <a name="naming-guidelines"></a>Diretrizes de nomenclatura
 Seguir um conjunto consistente de convenções de nomenclatura no desenvolvimento de uma estrutura pode ser uma grande contribuição para a usabilidade da estrutura. Ele permite que a estrutura seja usada por muitos desenvolvedores em projetos muito separados. Além da consistência do formulário, os nomes dos elementos da estrutura devem ser facilmente compreendidos e devem transmitir a função de cada elemento.  

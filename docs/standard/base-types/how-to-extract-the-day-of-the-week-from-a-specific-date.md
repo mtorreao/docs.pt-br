@@ -2,7 +2,6 @@
 title: 'Como: Extrair o dia da semana de uma data específica'
 description: Saiba como determinar o dia ordinal da semana para uma determinada data no .NET. Saiba como exibir o nome do dia da semana localizado para uma determinada data.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -23,12 +22,12 @@ helpviewer_keywords:
 - DateTimeOffset.ToString method
 - full weekday names
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
-ms.openlocfilehash: f7a18a3ab414a07fa4908c67c5ec9334ce63953f
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 329a099411651310cf77fa94e9a66b6ac113fdc2
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888515"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822068"
 ---
 # <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>Como: Extrair o dia da semana de uma data específica
 
@@ -100,7 +99,7 @@ O .NET facilita a verificação da posição numérica do dia da semana em uma d
  [!code-csharp[Formatting.HowTo.WeekdayName#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/Howto1.cs#8)]
  [!code-vb[Formatting.HowTo.WeekdayName#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/Howto1.vb#8)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Cadeias de caracteres de formato de data e hora padrão](standard-date-and-time-format-strings.md)
 - [Cadeias de caracteres de formato de data e hora personalizado](custom-date-and-time-format-strings.md)
