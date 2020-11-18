@@ -1,7 +1,6 @@
 ---
 title: 'Como: criar um objeto WindowsPrincipal'
 ms.date: 07/15/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,27 +10,27 @@ helpviewer_keywords:
 - security [.NET], principals
 - principal objects, creating
 ms.assetid: 56eb10ca-e61d-4ed2-af7a-555fc4c25a25
-ms.openlocfilehash: 6cf7153250d2574783515ea53cf99709499d36f9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d4140470308a09774e5e4eee429c1e91b559d063
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556200"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819026"
 ---
-# <a name="how-to-create-a-windowsprincipal-object"></a><span data-ttu-id="5b8b6-102">Como: criar um objeto WindowsPrincipal</span><span class="sxs-lookup"><span data-stu-id="5b8b6-102">How to: Create a WindowsPrincipal Object</span></span>
+# <a name="how-to-create-a-windowsprincipal-object"></a><span data-ttu-id="b7aec-102">Como: criar um objeto WindowsPrincipal</span><span class="sxs-lookup"><span data-stu-id="b7aec-102">How to: Create a WindowsPrincipal Object</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="5b8b6-103">Este artigo aplica-se ao Windows.</span><span class="sxs-lookup"><span data-stu-id="5b8b6-103">This article applies to Windows.</span></span>
+> <span data-ttu-id="b7aec-103">Este artigo aplica-se ao Windows.</span><span class="sxs-lookup"><span data-stu-id="b7aec-103">This article applies to Windows.</span></span>
 >
-> <span data-ttu-id="5b8b6-104">Para obter informações sobre ASP.NET Core, consulte [segurança do ASP.NET Core](/aspnet/core/security/).</span><span class="sxs-lookup"><span data-stu-id="5b8b6-104">For information about ASP.NET Core, see [ASP.NET Core Security](/aspnet/core/security/).</span></span>
+> <span data-ttu-id="b7aec-104">Para obter informações sobre ASP.NET Core, consulte [segurança do ASP.NET Core](/aspnet/core/security/).</span><span class="sxs-lookup"><span data-stu-id="b7aec-104">For information about ASP.NET Core, see [ASP.NET Core Security](/aspnet/core/security/).</span></span>
 
-<span data-ttu-id="5b8b6-105">Há duas maneiras de criar um <xref:System.Security.Principal.WindowsPrincipal> objeto, dependendo se o código deve executar repetidamente a validação baseada em função ou deve executá-la apenas uma vez.</span><span class="sxs-lookup"><span data-stu-id="5b8b6-105">There are two ways to create a <xref:System.Security.Principal.WindowsPrincipal> object, depending on whether code must repeatedly perform role-based validation or must perform it only once.</span></span>  
+<span data-ttu-id="b7aec-105">Há duas maneiras de criar um <xref:System.Security.Principal.WindowsPrincipal> objeto, dependendo se o código deve executar repetidamente a validação baseada em função ou deve executá-la apenas uma vez.</span><span class="sxs-lookup"><span data-stu-id="b7aec-105">There are two ways to create a <xref:System.Security.Principal.WindowsPrincipal> object, depending on whether code must repeatedly perform role-based validation or must perform it only once.</span></span>  
   
-<span data-ttu-id="5b8b6-106">Se o código precisar executar a validação baseada em função repetidamente, o primeiro dos procedimentos a seguir produzirá menos sobrecarga.</span><span class="sxs-lookup"><span data-stu-id="5b8b6-106">If code must repeatedly perform role-based validation, the first of the following procedures produces less overhead.</span></span> <span data-ttu-id="5b8b6-107">Quando o código precisa fazer validações baseadas em função apenas uma vez, você pode criar um <xref:System.Security.Principal.WindowsPrincipal> objeto usando o segundo dos procedimentos a seguir.</span><span class="sxs-lookup"><span data-stu-id="5b8b6-107">When code needs to make role-based validations only once, you can create a <xref:System.Security.Principal.WindowsPrincipal> object by using the second of the following procedures.</span></span>  
+<span data-ttu-id="b7aec-106">Se o código precisar executar a validação baseada em função repetidamente, o primeiro dos procedimentos a seguir produzirá menos sobrecarga.</span><span class="sxs-lookup"><span data-stu-id="b7aec-106">If code must repeatedly perform role-based validation, the first of the following procedures produces less overhead.</span></span> <span data-ttu-id="b7aec-107">Quando o código precisa fazer validações baseadas em função apenas uma vez, você pode criar um <xref:System.Security.Principal.WindowsPrincipal> objeto usando o segundo dos procedimentos a seguir.</span><span class="sxs-lookup"><span data-stu-id="b7aec-107">When code needs to make role-based validations only once, you can create a <xref:System.Security.Principal.WindowsPrincipal> object by using the second of the following procedures.</span></span>  
   
-### <a name="to-create-a-windowsprincipal-object-for-repeated-validation"></a><span data-ttu-id="5b8b6-108">Para criar um objeto WindowsPrincipal para validação repetida</span><span class="sxs-lookup"><span data-stu-id="5b8b6-108">To create a WindowsPrincipal object for repeated validation</span></span>  
+### <a name="to-create-a-windowsprincipal-object-for-repeated-validation"></a><span data-ttu-id="b7aec-108">Para criar um objeto WindowsPrincipal para validação repetida</span><span class="sxs-lookup"><span data-stu-id="b7aec-108">To create a WindowsPrincipal object for repeated validation</span></span>  
   
-1. <span data-ttu-id="5b8b6-109">Chame o <xref:System.AppDomain.SetPrincipalPolicy%2A> método no <xref:System.AppDomain> objeto que é retornado pela <xref:System.AppDomain.CurrentDomain%2A?displayProperty=nameWithType> propriedade estática, passando o método um valor de <xref:System.Security.Principal.PrincipalPolicy> enumeração que indica qual deve ser a nova política.</span><span class="sxs-lookup"><span data-stu-id="5b8b6-109">Call the <xref:System.AppDomain.SetPrincipalPolicy%2A> method on the <xref:System.AppDomain> object that is returned by the static <xref:System.AppDomain.CurrentDomain%2A?displayProperty=nameWithType> property, passing the method a <xref:System.Security.Principal.PrincipalPolicy> enumeration value that indicates what the new policy should be.</span></span> <span data-ttu-id="5b8b6-110">Os valores com suporte são <xref:System.Security.Principal.PrincipalPolicy.NoPrincipal>, <xref:System.Security.Principal.PrincipalPolicy.UnauthenticatedPrincipal> e <xref:System.Security.Principal.PrincipalPolicy.WindowsPrincipal>.</span><span class="sxs-lookup"><span data-stu-id="5b8b6-110">Supported values are <xref:System.Security.Principal.PrincipalPolicy.NoPrincipal>, <xref:System.Security.Principal.PrincipalPolicy.UnauthenticatedPrincipal>, and <xref:System.Security.Principal.PrincipalPolicy.WindowsPrincipal>.</span></span> <span data-ttu-id="5b8b6-111">O código a seguir demonstra essa chamada de método.</span><span class="sxs-lookup"><span data-stu-id="5b8b6-111">The following code demonstrates this method call.</span></span>  
+1. <span data-ttu-id="b7aec-109">Chame o <xref:System.AppDomain.SetPrincipalPolicy%2A> método no <xref:System.AppDomain> objeto que é retornado pela <xref:System.AppDomain.CurrentDomain%2A?displayProperty=nameWithType> propriedade estática, passando o método um valor de <xref:System.Security.Principal.PrincipalPolicy> enumeração que indica qual deve ser a nova política.</span><span class="sxs-lookup"><span data-stu-id="b7aec-109">Call the <xref:System.AppDomain.SetPrincipalPolicy%2A> method on the <xref:System.AppDomain> object that is returned by the static <xref:System.AppDomain.CurrentDomain%2A?displayProperty=nameWithType> property, passing the method a <xref:System.Security.Principal.PrincipalPolicy> enumeration value that indicates what the new policy should be.</span></span> <span data-ttu-id="b7aec-110">Os valores com suporte são <xref:System.Security.Principal.PrincipalPolicy.NoPrincipal>, <xref:System.Security.Principal.PrincipalPolicy.UnauthenticatedPrincipal> e <xref:System.Security.Principal.PrincipalPolicy.WindowsPrincipal>.</span><span class="sxs-lookup"><span data-stu-id="b7aec-110">Supported values are <xref:System.Security.Principal.PrincipalPolicy.NoPrincipal>, <xref:System.Security.Principal.PrincipalPolicy.UnauthenticatedPrincipal>, and <xref:System.Security.Principal.PrincipalPolicy.WindowsPrincipal>.</span></span> <span data-ttu-id="b7aec-111">O código a seguir demonstra essa chamada de método.</span><span class="sxs-lookup"><span data-stu-id="b7aec-111">The following code demonstrates this method call.</span></span>  
   
     ```csharp  
     AppDomain.CurrentDomain.SetPrincipalPolicy(  
@@ -43,7 +42,7 @@ ms.locfileid: "90556200"
         PrincipalPolicy.WindowsPrincipal)  
     ```  
   
-2. <span data-ttu-id="5b8b6-112">Com a política definida, use a <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> propriedade estática para recuperar a entidade de segurança que encapsula o usuário atual do Windows.</span><span class="sxs-lookup"><span data-stu-id="5b8b6-112">With the policy set, use the static <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> property to retrieve the principal that encapsulates the current Windows user.</span></span> <span data-ttu-id="5b8b6-113">Como o tipo de retorno da propriedade é <xref:System.Security.Principal.IPrincipal> , você deve converter o resultado em um <xref:System.Security.Principal.WindowsPrincipal> tipo.</span><span class="sxs-lookup"><span data-stu-id="5b8b6-113">Because the property return type is <xref:System.Security.Principal.IPrincipal>, you must cast the result to a <xref:System.Security.Principal.WindowsPrincipal> type.</span></span> <span data-ttu-id="5b8b6-114">O código a seguir inicializa um novo <xref:System.Security.Principal.WindowsPrincipal> objeto para o valor da entidade de segurança associada ao thread atual.</span><span class="sxs-lookup"><span data-stu-id="5b8b6-114">The following code initializes a new <xref:System.Security.Principal.WindowsPrincipal> object to the value of the principal associated with the current thread.</span></span>  
+2. <span data-ttu-id="b7aec-112">Com a política definida, use a <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> propriedade estática para recuperar a entidade de segurança que encapsula o usuário atual do Windows.</span><span class="sxs-lookup"><span data-stu-id="b7aec-112">With the policy set, use the static <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> property to retrieve the principal that encapsulates the current Windows user.</span></span> <span data-ttu-id="b7aec-113">Como o tipo de retorno da propriedade é <xref:System.Security.Principal.IPrincipal> , você deve converter o resultado em um <xref:System.Security.Principal.WindowsPrincipal> tipo.</span><span class="sxs-lookup"><span data-stu-id="b7aec-113">Because the property return type is <xref:System.Security.Principal.IPrincipal>, you must cast the result to a <xref:System.Security.Principal.WindowsPrincipal> type.</span></span> <span data-ttu-id="b7aec-114">O código a seguir inicializa um novo <xref:System.Security.Principal.WindowsPrincipal> objeto para o valor da entidade de segurança associada ao thread atual.</span><span class="sxs-lookup"><span data-stu-id="b7aec-114">The following code initializes a new <xref:System.Security.Principal.WindowsPrincipal> object to the value of the principal associated with the current thread.</span></span>  
   
     ```csharp  
     WindowsPrincipal myPrincipal =
@@ -55,11 +54,11 @@ ms.locfileid: "90556200"
         CType(Thread.CurrentPrincipal, WindowsPrincipal)
     ```  
   
-3. <span data-ttu-id="5b8b6-115">Quando o objeto principal tiver sido criado, você poderá usar um dos vários métodos para validá-lo.</span><span class="sxs-lookup"><span data-stu-id="5b8b6-115">When the principal object has been created, you can use one of several methods to validate it.</span></span>  
+3. <span data-ttu-id="b7aec-115">Quando o objeto principal tiver sido criado, você poderá usar um dos vários métodos para validá-lo.</span><span class="sxs-lookup"><span data-stu-id="b7aec-115">When the principal object has been created, you can use one of several methods to validate it.</span></span>  
   
-### <a name="to-create-a-windowsprincipal-object-for-a-single-validation"></a><span data-ttu-id="5b8b6-116">Para criar um objeto WindowsPrincipal para uma única validação</span><span class="sxs-lookup"><span data-stu-id="5b8b6-116">To create a WindowsPrincipal object for a single validation</span></span>  
+### <a name="to-create-a-windowsprincipal-object-for-a-single-validation"></a><span data-ttu-id="b7aec-116">Para criar um objeto WindowsPrincipal para uma única validação</span><span class="sxs-lookup"><span data-stu-id="b7aec-116">To create a WindowsPrincipal object for a single validation</span></span>  
   
-1. <span data-ttu-id="5b8b6-117">Inicialize um novo <xref:System.Security.Principal.WindowsIdentity> objeto chamando o método estático <xref:System.Security.Principal.WindowsIdentity.GetCurrent%2A?displayProperty=nameWithType> , que consulta a conta atual do Windows e coloca as informações sobre essa conta no objeto de identidade recém-criado.</span><span class="sxs-lookup"><span data-stu-id="5b8b6-117">Initialize a new <xref:System.Security.Principal.WindowsIdentity> object by calling the static <xref:System.Security.Principal.WindowsIdentity.GetCurrent%2A?displayProperty=nameWithType> method, which queries the current Windows account and places information about that account into the newly created identity object.</span></span> <span data-ttu-id="5b8b6-118">O código a seguir cria um novo <xref:System.Security.Principal.WindowsIdentity> objeto e o inicializa para o usuário autenticado atual.</span><span class="sxs-lookup"><span data-stu-id="5b8b6-118">The following code creates a new <xref:System.Security.Principal.WindowsIdentity> object and initializes it to the current authenticated user.</span></span>  
+1. <span data-ttu-id="b7aec-117">Inicialize um novo <xref:System.Security.Principal.WindowsIdentity> objeto chamando o método estático <xref:System.Security.Principal.WindowsIdentity.GetCurrent%2A?displayProperty=nameWithType> , que consulta a conta atual do Windows e coloca as informações sobre essa conta no objeto de identidade recém-criado.</span><span class="sxs-lookup"><span data-stu-id="b7aec-117">Initialize a new <xref:System.Security.Principal.WindowsIdentity> object by calling the static <xref:System.Security.Principal.WindowsIdentity.GetCurrent%2A?displayProperty=nameWithType> method, which queries the current Windows account and places information about that account into the newly created identity object.</span></span> <span data-ttu-id="b7aec-118">O código a seguir cria um novo <xref:System.Security.Principal.WindowsIdentity> objeto e o inicializa para o usuário autenticado atual.</span><span class="sxs-lookup"><span data-stu-id="b7aec-118">The following code creates a new <xref:System.Security.Principal.WindowsIdentity> object and initializes it to the current authenticated user.</span></span>  
   
     ```csharp  
     WindowsIdentity myIdentity = WindowsIdentity.GetCurrent();  
@@ -69,7 +68,7 @@ ms.locfileid: "90556200"
     Dim myIdentity As WindowsIdentity = WindowsIdentity.GetCurrent()  
     ```  
   
-2. <span data-ttu-id="5b8b6-119">Crie um novo <xref:System.Security.Principal.WindowsPrincipal> objeto e passe-o para o valor do <xref:System.Security.Principal.WindowsIdentity> objeto criado na etapa anterior.</span><span class="sxs-lookup"><span data-stu-id="5b8b6-119">Create a new <xref:System.Security.Principal.WindowsPrincipal> object and pass it the value of the <xref:System.Security.Principal.WindowsIdentity> object created in the preceding step.</span></span>  
+2. <span data-ttu-id="b7aec-119">Crie um novo <xref:System.Security.Principal.WindowsPrincipal> objeto e passe-o para o valor do <xref:System.Security.Principal.WindowsIdentity> objeto criado na etapa anterior.</span><span class="sxs-lookup"><span data-stu-id="b7aec-119">Create a new <xref:System.Security.Principal.WindowsPrincipal> object and pass it the value of the <xref:System.Security.Principal.WindowsIdentity> object created in the preceding step.</span></span>  
   
     ```csharp  
     WindowsPrincipal myPrincipal = new WindowsPrincipal(myIdentity);  
@@ -79,9 +78,9 @@ ms.locfileid: "90556200"
     Dim myPrincipal As New WindowsPrincipal(myIdentity)  
     ```  
   
-3. <span data-ttu-id="5b8b6-120">Quando o objeto principal tiver sido criado, você poderá usar um dos vários métodos para validá-lo.</span><span class="sxs-lookup"><span data-stu-id="5b8b6-120">When the principal object has been created, you can use one of several methods to validate it.</span></span>  
+3. <span data-ttu-id="b7aec-120">Quando o objeto principal tiver sido criado, você poderá usar um dos vários métodos para validá-lo.</span><span class="sxs-lookup"><span data-stu-id="b7aec-120">When the principal object has been created, you can use one of several methods to validate it.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5b8b6-121">Confira também</span><span class="sxs-lookup"><span data-stu-id="5b8b6-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b7aec-121">Confira também</span><span class="sxs-lookup"><span data-stu-id="b7aec-121">See also</span></span>
 
-- [<span data-ttu-id="5b8b6-122">Objetos Principal e Identity</span><span class="sxs-lookup"><span data-stu-id="5b8b6-122">Principal and Identity Objects</span></span>](principal-and-identity-objects.md)
-- [<span data-ttu-id="5b8b6-123">Segurança de ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="5b8b6-123">ASP.NET Core Security</span></span>](/aspnet/core/security/)
+- [<span data-ttu-id="b7aec-122">Objetos Principal e Identity</span><span class="sxs-lookup"><span data-stu-id="b7aec-122">Principal and Identity Objects</span></span>](principal-and-identity-objects.md)
+- [<span data-ttu-id="b7aec-123">Segurança de ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="b7aec-123">ASP.NET Core Security</span></span>](/aspnet/core/security/)
