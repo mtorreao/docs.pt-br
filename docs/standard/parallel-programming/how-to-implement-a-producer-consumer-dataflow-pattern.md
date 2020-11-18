@@ -2,7 +2,6 @@
 title: Como implementar um padrão produtor-consumidor de fluxo de bits
 description: Entenda como implementar um padrão de fluxo de bits produtor-consumidor usando a biblioteca de Dataflow TPL no .NET.
 ms.date: 09/24/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - producer-consumer patterns, implementing [TPL]
 ms.assetid: 47a1d38c-fe9c-44aa-bd15-937bd5659b0b
-ms.openlocfilehash: fc68d9e678dab88ec5008b6c15ef17a5d20f25ae
-ms.sourcegitcommit: d04388f94dbcd756ffd608536c869aee3242cdb0
+ms.openlocfilehash: 3bc97cce2a063e7d5286ad886401cb6ae2ce3026
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91206374"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826925"
 ---
 # <a name="how-to-implement-a-producer-consumer-dataflow-pattern"></a>Como implementar um padrão produtor-consumidor de fluxo de bits
 
@@ -42,6 +41,6 @@ O exemplo a seguir demonstra um modelo básico de produtor-consumidor que usa o 
 
  O método <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceive%2A> retorna `False` quando não há dados disponíveis. Quando vários consumidores têm que acessar simultaneamente o bloco de origem, esse mecanismo garante que os dados ainda estarão disponíveis após a chamada para o <xref:System.Threading.Tasks.Dataflow.DataflowBlock.OutputAvailableAsync%2A>.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Fluxo de dados](dataflow-task-parallel-library.md)

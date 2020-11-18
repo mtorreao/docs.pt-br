@@ -2,7 +2,6 @@
 title: Generics in .NET (Genéricos no .NET)
 description: Saiba mais sobre os genéricos no .NET. Defina & usar genéricos, aprenda suas vantagens & desvantagens, entenda o suporte à biblioteca de classes & idioma e muito mais.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -27,12 +26,12 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: 6455de8e6b874547be7838090fc0527a6ce72b71
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 40a789d9eaa835b1c464f25b5a33a7c1d766d2f8
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063150"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827250"
 ---
 # <a name="generics-in-net"></a>Generics in .NET (Genéricos no .NET)
 
@@ -64,7 +63,7 @@ Os genéricos permitem que você personalize um método, uma classe, uma estrutu
   
 - O termo geral *tipo genérico* inclui definições de tipo genérico e de tipos construídos.  
   
-- *Covariância* e *contravariância* de parâmetros de tipo genérico permitem que você use tipos genéricos construídos cujos argumentos de tipo sejam mais derivados (covariância) ou menos derivados (contravariância) de um tipo construído de destino. A covariância e a contravariância são referidas coletivamente como *variância* . Para obter mais informações, consulte [Covariância e contravariância](covariance-and-contravariance.md).  
+- *Covariância* e *contravariância* de parâmetros de tipo genérico permitem que você use tipos genéricos construídos cujos argumentos de tipo sejam mais derivados (covariância) ou menos derivados (contravariância) de um tipo construído de destino. A covariância e a contravariância são referidas coletivamente como *variância*. Para obter mais informações, consulte [Covariância e contravariância](covariance-and-contravariance.md).  
   
 - *Restrições* são limites colocados em parâmetros de tipo genérico. Por exemplo, você pode limitar um parâmetro de tipo a tipos que implementam a interface genérica <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType>, para garantir que instâncias do tipo possam ser classificadas. Você também pode restringir parâmetros de tipo a tipos que tenham uma determinada classe base, que tenham um construtor sem parâmetros ou que sejam tipos de referência ou tipos de valor. Os usuários do tipo genérico não podem substituir argumentos de tipo que não satisfaçam as restrições.  
   

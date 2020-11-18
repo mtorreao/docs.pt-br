@@ -2,7 +2,6 @@
 title: Como implementar um observador
 description: Implemente um observador no .NET. O padrão de design observador requer uma divisão entre um observador, que se registra para notificações e um provedor.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - observers [.NET], observer design pattern
 - observer design pattern [.NET], implementing observers
 ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
-ms.openlocfilehash: 71df673b580f711ad692454d12beea991810f508
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: bfd595cec8e499b760f75f614bd0a61b031eb207
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064204"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828329"
 ---
 # <a name="how-to-implement-an-observer"></a>Como implementar um observador
 O padrão de design do observador exige uma divisão entre um observador, que registra as notificações, e um provedor, que monitora os dados e envia notificações e um ou mais observadores. Este tópico discute como criar um observador. Um tópico relacionado, [Como implementar um provedor](how-to-implement-a-provider.md), descreve como criar um provedor.  
@@ -48,7 +47,7 @@ O padrão de design do observador exige uma divisão entre um observador, que re
  [!code-csharp[Conceptual.ObserverDesign.HowTo#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/observer.cs#12)]
  [!code-vb[Conceptual.ObserverDesign.HowTo#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/observer.vb#12)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.IObserver%601>
 - [Padrão de design do observador](observer-design-pattern.md)

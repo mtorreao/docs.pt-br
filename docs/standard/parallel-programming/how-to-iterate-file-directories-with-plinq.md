@@ -1,16 +1,15 @@
 ---
 title: 'Como: iterar diretórios de arquivos com PLINQ'
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - PLINQ queries, how to iterate directories
 ms.assetid: 354e8ce3-35c4-431c-99ca-7661d1f3901b
-ms.openlocfilehash: 5033cc24fce5fc17a950e4797de1ef4071e2b98a
-ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
+ms.openlocfilehash: 4e9e8e646594ce3cd8b8861cb270170bafc9afb8
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92925370"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826912"
 ---
 # <a name="how-to-iterate-file-directories-with-plinq"></a>Como: iterar diretórios de arquivos com PLINQ
 
@@ -37,6 +36,6 @@ A segunda consulta usa os métodos estáticos <xref:System.IO.Directory.Enumerat
   
  Se a latência de e/s for um problema, por exemplo, com e/s de arquivo em uma rede, considere usar uma das técnicas de e/s assíncronas descritas na [tpl e a programação assíncrona tradicional do .net](tpl-and-traditional-async-programming.md) e nesta [postagem no blog](https://devblogs.microsoft.com/pfxteam/parallel-extensions-and-io/).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [LINQ paralelo (PLINQ)](introduction-to-plinq.md)

@@ -2,18 +2,17 @@
 title: Separar cadeias de caracteres em subcadeias
 description: Saiba mais sobre técnicas diferentes para extrair partes de uma cadeia de caracteres, incluindo String. Split, expressões regulares e String. substring.
 ms.date: 10/30/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - strings [.NET], breaking up
-ms.openlocfilehash: 88947c4576b0496e4b4e45042d665e3ca5857c53
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: b753476b7d8e5808fdcacc6f28bd1de5f8b232bb
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93403599"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829643"
 ---
 # <a name="extract-substrings-from-a-string"></a>Extrair subcadeias de uma cadeia de caracteres
 

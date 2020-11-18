@@ -2,7 +2,6 @@
 title: 'Como: gravar texto em um arquivo'
 description: Aprenda maneiras de escrever ou anexar texto a um arquivo para um aplicativo .NET. Use métodos do StreamWriter ou das classes de arquivo para gravar texto de forma síncrona ou assíncrona.
 ms.date: 01/04/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - streams, writing text to files
 - data streams, writing text to files
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
-ms.openlocfilehash: df057856385c8e9c63140e45512a97e492130396
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: bd9abc2aac4b02f71e41f71e518a76b2477420da
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189232"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829707"
 ---
 # <a name="how-to-write-text-to-a-file"></a>Como: gravar texto em um arquivo
 
@@ -73,4 +72,4 @@ O exemplo a seguir mostra como gravar texto em um novo arquivo e acrescentar nov
 - [Como: ler e gravar em um arquivo de dados criado recentemente](how-to-read-and-write-to-a-newly-created-data-file.md)
 - [Como: abrir e anexar a um arquivo de log](how-to-open-and-append-to-a-log-file.md)
 - [Como: ler texto de um arquivo](how-to-read-text-from-a-file.md)
-- [E/S de arquivo e de fluxo](index.md)
+- [Arquivo e e/s de fluxo](index.md)

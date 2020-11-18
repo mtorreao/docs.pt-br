@@ -1,7 +1,6 @@
 ---
 title: Manipulando exceções de interoperabilidade COM
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - unmanaged code, exceptions
 - exceptions, unmanaged code
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - exceptions, COM interop
 - COM interop, exceptions
 ms.assetid: e6104aa8-8e5f-4069-b864-def85579c96c
-ms.openlocfilehash: 9c8eb374058ddbd2ba3d866079f0f40b292b69ea
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 058fb6446f69c2e10cb136ce5b5ad73b14d82647
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286100"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828134"
 ---
 # <a name="handling-com-interop-exceptions"></a>Manipulando exceções de interoperabilidade COM
 Os códigos gerenciado e não gerenciado podem trabalhar juntos para tratar de exceções. Se um método lança uma exceção no código gerenciado, o common language runtime pode passar um HRESULT para um objeto COM. Se um método falhar no código não gerenciado, retornando um HRESULT de falha, o runtime lançará uma exceção que pode ser detectada pelo código gerenciado.  
@@ -28,6 +27,6 @@ Os códigos gerenciado e não gerenciado podem trabalhar juntos para tratar de e
   
  Se um método falhar no código não gerenciado, uma exceção poderá ser passada para um segmento de código gerenciado. O tópico [HRESULTS e exceções](../../framework/interop/how-to-map-hresults-and-exceptions.md) contém uma tabela que mostra como HRESULTS mapeia para objetos de exceção de runtime.  
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Exceções](index.md)

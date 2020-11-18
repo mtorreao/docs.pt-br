@@ -1,17 +1,16 @@
 ---
 title: Design de propriedade
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - member design guidelines, properties
 - properties [.NET Framework], design guidelines
 ms.assetid: 127cbc0c-cbed-48fd-9c89-7c5d4f98f163
-ms.openlocfilehash: c49b42ab369ace582c76d7f326da309415e8c45b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 1cf41a08c641e9251084e5dcac6c46bc54857717
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291936"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828732"
 ---
 # <a name="property-design"></a>Design de propriedade
 Embora as propriedades sejam tecnicamente muito semelhantes aos métodos, elas são muito diferentes em termos de seus cenários de uso. Eles devem ser vistos como campos inteligentes. Eles têm a sintaxe de chamada de campos e a flexibilidade dos métodos.
@@ -20,7 +19,7 @@ Embora as propriedades sejam tecnicamente muito semelhantes aos métodos, elas s
 
  Tenha em mente que, se o tipo da propriedade for um tipo de referência mutável, o valor da propriedade poderá ser alterado mesmo se a propriedade for somente obtenção.
 
- ❌Não forneça Propriedades de conjunto ou propriedades com o setter com acessibilidade mais ampla do que o getter.
+ ❌ Não forneça Propriedades de conjunto ou propriedades com o setter com acessibilidade mais ampla do que o getter.
 
  Por exemplo, não use Propriedades com um setter público e um getter protegido.
 
@@ -34,7 +33,7 @@ Embora as propriedades sejam tecnicamente muito semelhantes aos métodos, elas s
 
  ✔️ preservar o valor anterior se um setter de propriedade lançar uma exceção.
 
- ❌Evite lançar exceções de getters de propriedade.
+ ❌ Evite lançar exceções de getters de propriedade.
 
  Os getters de propriedade devem ser operações simples e não devem ter nenhuma condição. Se um getter puder gerar uma exceção, ele provavelmente deve ser reprojetado para ser um método. Observe que essa regra não se aplica aos indexadores, onde podemos esperar exceções como resultado da validação dos argumentos.
 
@@ -47,11 +46,11 @@ Embora as propriedades sejam tecnicamente muito semelhantes aos métodos, elas s
 
  ✔️ Considere fornecer indexadores em tipos que representam coleções de itens.
 
- ❌Evite usar propriedades indexadas com mais de um parâmetro.
+ ❌ Evite usar propriedades indexadas com mais de um parâmetro.
 
  Se o design exigir vários parâmetros, reconsidere se a propriedade representa realmente um acessador para uma coleção lógica. Se não tiver, use métodos em vez disso. Considere iniciar o nome do método com `Get` ou `Set` .
 
- ❌Evite indexadores com tipos de parâmetro diferentes de <xref:System.Int32?displayProperty=nameWithType> , <xref:System.Int64?displayProperty=nameWithType> , <xref:System.String?displayProperty=nameWithType> , <xref:System.Object?displayProperty=nameWithType> ou uma enumeração.
+ ❌ Evite indexadores com tipos de parâmetro diferentes de <xref:System.Int32?displayProperty=nameWithType> , <xref:System.Int64?displayProperty=nameWithType> , <xref:System.String?displayProperty=nameWithType> , <xref:System.Object?displayProperty=nameWithType> ou uma enumeração.
 
  Se o design exigir outros tipos de parâmetros, reavalie fortemente se a API representa realmente um acessador para uma coleção lógica. Se não tiver, use um método. Considere iniciar o nome do método com `Get` ou `Set` .
 
@@ -59,13 +58,13 @@ Embora as propriedades sejam tecnicamente muito semelhantes aos métodos, elas s
 
  Em C#, os indexadores são por item nomeado padrão. O <xref:System.Runtime.CompilerServices.IndexerNameAttribute> pode ser usado para personalizar esse nome.
 
- ❌Não forneça um indexador e métodos que sejam semanticamente equivalentes.
+ ❌ Não forneça um indexador e métodos que sejam semanticamente equivalentes.
 
- ❌Não forneça mais de uma família de indexadores sobrecarregados em um tipo.
+ ❌ Não forneça mais de uma família de indexadores sobrecarregados em um tipo.
 
  Isso é imposto pelo compilador C#.
 
- ❌Não use Propriedades indexadas não padrão.
+ ❌ Não use Propriedades indexadas não padrão.
 
  Isso é imposto pelo compilador C#.
 
@@ -86,7 +85,7 @@ Embora as propriedades sejam tecnicamente muito semelhantes aos métodos, elas s
 
  *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Diretrizes de design de membro](member.md)
 - [Diretrizes de design de estrutura](index.md)

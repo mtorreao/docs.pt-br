@@ -1,7 +1,6 @@
 ---
 title: 'Como: usar JoinBlock para ler dados de várias fontes'
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - TPL dataflow library, joining blocks in
 - dataflow blocks, joining in TPL
 ms.assetid: e9c1ada4-ac57-4704-87cb-2f5117f8151d
-ms.openlocfilehash: cd2f5c65f45d83ef23643dcc747a748bb8ba89d9
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 88e6c7f854c4ba37398c7a3a4749de772cff6676
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290818"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826743"
 ---
 # <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>Como: usar JoinBlock para ler dados de várias fontes
 Este documento explica como usar a classe <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> para executar uma operação quando os dados estão disponíveis em várias fontes. Ele também demonstra como usar o modo não greedy para habilitar vários blocos de junção para compartilhar uma fonte de dados com mais eficiência.
@@ -33,6 +32,6 @@ Este documento explica como usar a classe <xref:System.Threading.Tasks.Dataflow.
 ## <a name="robust-programming"></a>Programação robusta  
  O uso de junções não greedy também pode ajudar a evitar deadlocks em seu aplicativo. Em um aplicativo de software, o *deadlock* ocorre quando cada um dos dois ou mais processos mantiver um recurso e mutuamente aguardar até que outro processo libere algum outro recurso. Considere um aplicativo que define dois objetos <xref:System.Threading.Tasks.Dataflow.JoinBlock%602>. Os dois objetos leem dados de dois blocos de origem compartilhados. No modo greedy, se um bloco de junção ler da primeira fonte e o segundo bloco de junção ler da segunda fonte, o aplicativo poderá causar o deadlock já que ambos os blocos de junção mutuamente aguardam que o outro libere seus recursos. No modo não greedy, cada bloco de junção lê de suas fontes somente quando todos os dados estão disponíveis e, portanto, o risco de deadlock é eliminado.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Fluxo de dados](dataflow-task-parallel-library.md)

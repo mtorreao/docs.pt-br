@@ -1,16 +1,15 @@
 ---
 title: Coletas induzidas
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, forced
 ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
-ms.openlocfilehash: 36dff45587c6c28ba17fd7389dc3863893ff8f61
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 637ba9b3b73d685ee2263315a08f982d862efb35
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286035"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827718"
 ---
 # <a name="induced-collections"></a>Coletas induzidas
 Na maioria dos casos, o coletor de lixo pode determinar o melhor momento para executar uma coleta e você deve permitir que ele seja executado de modo independente. Existem situações raras nas quais uma coleta forçada pode melhorar o desempenho do seu aplicativo. Nesses casos, você poderá induzir a coleta de lixo usando o método <xref:System.GC.Collect%2A?displayProperty=nameWithType> para forçar uma coleta de lixo.  
@@ -20,7 +19,7 @@ Na maioria dos casos, o coletor de lixo pode determinar o melhor momento para ex
 ## <a name="gc-collection-mode"></a>Modo de coleta de GC  
  Você pode usar uma das sobrecargas do método <xref:System.GC.Collect%2A?displayProperty=nameWithType>, que inclui um valor <xref:System.GCCollectionMode>, para especificar o comportamento de uma coleta forçada do modo a seguir.  
   
-|`GCCollectionMode` valor|Description|  
+|`GCCollectionMode` valor|Descrição|  
 |------------------------------|-----------------|  
 |<xref:System.GCCollectionMode.Default>|Usa a configuração de coleta de lixo padrão para a versão do .NET Framework em execução.|  
 |<xref:System.GCCollectionMode.Forced>|Força a coleta de lixo a ocorrer imediatamente. Isso é equivalente a chamar a sobrecarga <xref:System.GC.Collect?displayProperty=nameWithType>. Isso resulta em uma coleta de bloqueio total de todas as gerações.<br /><br /> Você também pode compactar o heap de objeto grande definindo a propriedade <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> como <xref:System.Runtime.GCLargeObjectHeapCompactionMode.CompactOnce?displayProperty=nameWithType> antes de forçar uma coleta de lixo de bloqueio completo imediata.|  
@@ -34,7 +33,7 @@ Na maioria dos casos, o coletor de lixo pode determinar o melhor momento para ex
 |<xref:System.GCCollectionMode.Forced> ou <xref:System.GCCollectionMode.Default>|Uma coleção de bloqueio é executada assim que possível. Se uma coleta em segundo plano estiver em andamento e a geração for 0 ou 1, o método <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> disparará imediatamente uma coleta de bloqueio e retornará quando a coleção for concluída. Se uma coleta em segundo plano estiver em andamento e o parâmetro `generation` for 2, o método aguardará até que a coleta em segundo plano seja concluída, disparará uma coleta de bloqueio de geração 2 e retornará.|Uma coleta é executada assim que possível. O método <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> solicita uma coleta em segundo plano, mas isso não é garantido; dependendo das circunstâncias, uma coleta de bloqueio ainda pode ser executada. Se uma coleta em segundo plano já estiver em andamento, o método retornará imediatamente.|  
 |<xref:System.GCCollectionMode.Optimized>|Uma coleta de bloqueio pode ser executada, dependendo do estado do coletor de lixo e do parâmetro `generation`. O coletor de lixo tenta fornecer um desempenho ideal.|Uma coleta pode ser executada, dependendo do estado do coletor de lixo. O método <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> solicita uma coleta em segundo plano, mas isso não é garantido; dependendo das circunstâncias, uma coleta de bloqueio ainda pode ser executada. O coletor de lixo tenta fornecer um desempenho ideal. Se uma coleta em segundo plano já estiver em andamento, o método retornará imediatamente.|  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Modos de latência](latency.md)
 - [Coleta de lixo](index.md)

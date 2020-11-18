@@ -2,7 +2,6 @@
 title: Manipulando e acionando eventos
 description: Saiba como manipular e disparar eventos .NET, que se baseiam no modelo delegado. Esse modelo permite que os assinantes se registrem ou recebam notificações de provedores.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-ms.openlocfilehash: a2bfbe9a411d3099d02df7a43a42baaad2bb32da
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: e0b8de574475490cd3b15383b6ebc2ace4b74663
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064087"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828264"
 ---
 # <a name="handle-and-raising-events"></a>Manipular e gerar eventos
 
@@ -28,11 +27,11 @@ Os eventos no .NET são baseados no modelo de representante. O modelo de represe
   
 ## <a name="events"></a>Eventos
 
-Um evento é uma mensagem enviada por um objeto para sinalizar a ocorrência de uma ação. A ação pode ser causada pela interação do usuário, como um clique de botão, ou pode resultar de alguma outra lógica do programa, como alterar o valor de uma propriedade. O objeto que aciona o evento é chamado de *remetente do evento* . O remetente do evento não sabe qual objeto ou método receberá (identificador) os eventos que ele aciona. O evento normalmente é membro do remetente do evento. Por exemplo, o evento <xref:System.Web.UI.WebControls.Button.Click> é membro da classe <xref:System.Web.UI.WebControls.Button> e o evento <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> é membro da classe que implementa a interface <xref:System.ComponentModel.INotifyPropertyChanged>.  
+Um evento é uma mensagem enviada por um objeto para sinalizar a ocorrência de uma ação. A ação pode ser causada pela interação do usuário, como um clique de botão, ou pode resultar de alguma outra lógica do programa, como alterar o valor de uma propriedade. O objeto que aciona o evento é chamado de *remetente do evento*. O remetente do evento não sabe qual objeto ou método receberá (identificador) os eventos que ele aciona. O evento normalmente é membro do remetente do evento. Por exemplo, o evento <xref:System.Web.UI.WebControls.Button.Click> é membro da classe <xref:System.Web.UI.WebControls.Button> e o evento <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> é membro da classe que implementa a interface <xref:System.ComponentModel.INotifyPropertyChanged>.  
   
 Para definir um evento, use o C# [`event`](../../csharp/language-reference/keywords/event.md) ou a [`Event`](../../visual-basic/language-reference/statements/event-statement.md) palavra-chave Visual Basic na assinatura de sua classe de evento e especifique o tipo de delegado para o evento. Os representantes são descritos na próxima seção.  
   
-Normalmente, para acionar um evento, você adiciona um método que é marcado como `protected` e `virtual` (em C#) ou `Protected` e `Overridable` (no Visual Basic). Dê a esse método o nome `On`*EventName* ; por exemplo, `OnDataReceived`. O método deve usar um parâmetro que especifica um objeto de dados de evento, que é um objeto do tipo <xref:System.EventArgs> ou um tipo derivado. Você fornece esse método para permitir que as classes derivadas substituam a lógica para acionamento do evento. Uma classe derivada sempre deve chamar o método `On`*EventName* da classe base a fim de garantir que os representantes registrados recebam o evento.  
+Normalmente, para acionar um evento, você adiciona um método que é marcado como `protected` e `virtual` (em C#) ou `Protected` e `Overridable` (no Visual Basic). Dê a esse método o nome `On`*EventName*; por exemplo, `OnDataReceived`. O método deve usar um parâmetro que especifica um objeto de dados de evento, que é um objeto do tipo <xref:System.EventArgs> ou um tipo derivado. Você fornece esse método para permitir que as classes derivadas substituam a lógica para acionamento do evento. Uma classe derivada sempre deve chamar o método `On`*EventName* da classe base a fim de garantir que os representantes registrados recebam o evento.  
 
 O exemplo de código a seguir mostra como declarar um evento denominado `ThresholdReached`. O evento está associado ao representante <xref:System.EventHandler> e é gerado em um método chamado `OnThresholdReached`.  
   
@@ -94,7 +93,7 @@ O .NET permite que os assinantes se registrem para receber notificações de eve
 |[Como manipular vários eventos usando propriedades de evento](how-to-handle-multiple-events-using-event-properties.md)|Mostrar como usar propriedades de evento para manipular vários eventos.|  
 |[Padrão de design do observador](observer-design-pattern.md)|Descreve o padrão de design que permite a um assinante se registrar em um provedor e receber notificações dele.|
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.EventHandler>
 - <xref:System.EventHandler%601>

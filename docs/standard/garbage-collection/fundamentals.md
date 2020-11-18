@@ -2,7 +2,6 @@
 title: Noções básicas da coleta de lixo
 description: Saiba como o coletor de lixo funciona e como ele pode ser configurado para ter um desempenho ideal.
 ms.date: 11/15/2019
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, generations
 - garbage collection, background
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - garbage collection, workstation
 - garbage collection, managed heap
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
-ms.openlocfilehash: b70eb44c3d92e03ab4b33f81b87d48c70797cec5
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 1536aaf936eb8d55aa56b80b50639541e89c9d2c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94441005"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827809"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Noções básicas da coleta de lixo
 
@@ -138,7 +137,7 @@ A coleta de lixo ocorre principalmente com a recuperação de objetos de curta d
 
   Os objetos na geração 2 que sobrevivem a uma coleção permanecem na geração 2 até que sejam determinados como inacessíveis em uma coleção futura.
   
-  Objetos na heap de objeto grande (que às vezes é chamado de *geração 3* ) também são coletados na geração 2.
+  Objetos na heap de objeto grande (que às vezes é chamado de *geração 3*) também são coletados na geração 2.
 
 Coletas de lixo ocorrem em gerações específicas conforme as condições permitirem. Coletar uma geração significa coletar objetos nessa geração e todas as suas gerações mais jovens. Uma coleta de lixo de geração 2 também é conhecida como uma coleta de lixo completa, porque recupera objetos em todas as gerações (ou seja, todos os objetos no heap gerenciado).
 

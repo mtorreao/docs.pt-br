@@ -1,7 +1,6 @@
 ---
 title: Comportamento de expressão regular
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-ms.openlocfilehash: a93e0e7bac782d9a4ce47c1586796b063563d2b6
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 1e5d2d40f52220a8fff40eb19a24d8b2efd3cab5
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888666"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829694"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Detalhes do comportamento de expressões regulares
 
@@ -24,7 +23,7 @@ O mecanismo de expressões regulares do .NET é um correspondente de expressão 
 
  Quando mecanismos de DFA executam a correspondência de padrões, a ordem de processamento é orientada pela cadeia de caracteres de entrada. O mecanismo começa no início da cadeia de caracteres de entrada e continua sequencialmente para determinar se o próximo caractere corresponde ao padrão de expressão regular. Podem assegurar uma correspondência com a cadeia de caracteres mais longa possível. Como nunca testam o mesmo caractere duas vezes, os mecanismos de DFA não dão suporte ao retrocesso. No entanto, como um mecanismo de DFA contém somente o estado finito, não pode corresponder a um padrão com referências inversas; além disso, uma vez que não constrói uma expansão explícita, não pode capturar subexpressões.
 
- Ao contrário de mecanismos de DFA, quando mecanismos de NFA tradicionais executam a correspondência de padrões, a ordem de processamento é orientada pelo padrão de expressão regular. Como processa um elemento de linguagem específico, o mecanismo usa a correspondência Greedy; ou seja, corresponde à maior parte possível da cadeia de caracteres de entrada. Contudo, também consegue salvar seu estado correspondendo a uma subexpressão. Se uma correspondência falhar, o mecanismo poderá retornar para um estado salvo a fim de tentar correspondências adicionais. Esse processo de abandonar uma correspondência de subexpressão bem-sucedida para que elementos de linguagem posteriores na expressão regular também possam corresponder é conhecido como *retrocesso* . Os mecanismos de NFA usam o retrocesso para testar todas as possíveis expansões de uma expressão regular em uma ordem específica e aceitam a primeira correspondência. Como um mecanismo de NFA tradicional constrói uma expansão específica da expressão regular para uma correspondência de sucesso, pode capturar correspondências de subexpressões e referências inversas correspondentes. Entretanto, como um NFA tradicional retrocede, pode visitar o mesmo estado diversas vezes se chegar no estado por diferentes caminhos. Como resultado, pode executar de modo exponencial lentamente na pior das hipóteses. Já que um mecanismo de NFA tradicional aceita a primeira correspondência que encontra, também pode deixar outras correspondências (possivelmente mais longas) não descobertas.
+ Ao contrário de mecanismos de DFA, quando mecanismos de NFA tradicionais executam a correspondência de padrões, a ordem de processamento é orientada pelo padrão de expressão regular. Como processa um elemento de linguagem específico, o mecanismo usa a correspondência Greedy; ou seja, corresponde à maior parte possível da cadeia de caracteres de entrada. Contudo, também consegue salvar seu estado correspondendo a uma subexpressão. Se uma correspondência falhar, o mecanismo poderá retornar para um estado salvo a fim de tentar correspondências adicionais. Esse processo de abandonar uma correspondência de subexpressão bem-sucedida para que elementos de linguagem posteriores na expressão regular também possam corresponder é conhecido como *retrocesso*. Os mecanismos de NFA usam o retrocesso para testar todas as possíveis expansões de uma expressão regular em uma ordem específica e aceitam a primeira correspondência. Como um mecanismo de NFA tradicional constrói uma expansão específica da expressão regular para uma correspondência de sucesso, pode capturar correspondências de subexpressões e referências inversas correspondentes. Entretanto, como um NFA tradicional retrocede, pode visitar o mesmo estado diversas vezes se chegar no estado por diferentes caminhos. Como resultado, pode executar de modo exponencial lentamente na pior das hipóteses. Já que um mecanismo de NFA tradicional aceita a primeira correspondência que encontra, também pode deixar outras correspondências (possivelmente mais longas) não descobertas.
 
  Os mecanismos de NFA POSIX são como mecanismos de NFA tradicionais, exceto pelo fato de continuarem retrocedendo até poderem assegurar que encontraram a correspondência mais longa possível. Como resultado, um mecanismo de NFA POSIX é mais lento do que um mecanismo de NFA tradicional; quando você usa um mecanismo de NFA POSIX, não pode favorecer uma correspondência menor em detrimento de uma maior alterando a ordem da pesquisa de retrocesso.
 

@@ -2,7 +2,6 @@
 title: Como acionar e consumir eventos
 description: Gerar & consumir eventos no .NET. Veja exemplos que usam o delegado EventHandler, o <TEventArgs> delegado EventHandler, & um delegado personalizado.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - raising events
 - events [.NET], samples
 ms.assetid: 42afade7-3a02-4f2e-868b-95845f302f8f
-ms.openlocfilehash: c9121c6b2635788ad8ad7abc6d2b5a58448049a6
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 9d068981694c212c5cb29a67ccd2fcb19dcc907b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064191"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828290"
 ---
 # <a name="how-to-raise-and-consume-events"></a>Como acionar e consumir eventos
 Os exemplos neste tópico mostram como trabalhar com eventos. Elas incluem exemplos do representante <xref:System.EventHandler>, o representante <xref:System.EventHandler%601> e um representante personalizado, para ilustrar eventos com e sem dados.  
@@ -43,6 +42,6 @@ Os exemplos neste tópico mostram como trabalhar com eventos. Elas incluem exemp
  [!code-csharp[EventsOverview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programwithdelegate.cs#7)]
  [!code-vb[EventsOverview#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1withdelegate.vb#7)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Eventos](index.md)

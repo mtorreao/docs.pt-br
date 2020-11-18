@@ -1,7 +1,6 @@
 ---
 title: Aplicando atributos
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - assemblies [.NET], attributes
 - attributes [.NET], applying
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
-ms.openlocfilehash: 24fe58ddf48e40b422652baa4c5bba86eea6b84f
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 83cfb1d5b5aa3ebc8651406850a758146fd329d4
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889225"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829096"
 ---
 # <a name="apply-attributes"></a>Aplicar atributos
 
@@ -33,11 +32,11 @@ Use o processo a seguir para aplicar um atributo a um elemento do código.
 
  O atributo é emitido em metadados quando você compila o código e está disponível para o Common Language Runtime e todas as ferramentas ou aplicativos personalizados por meio dos serviços de reflexão do tempo de execução.
 
- Por convenção, todos os nomes de atributo terminam com "Attribute". No entanto, várias linguagens que têm como destino o runtime, como Visual Basic e C#, não exigem que você especifique o nome completo de um atributo. Por exemplo, se quiser inicializar <xref:System.ObsoleteAttribute?displayProperty=nameWithType>, você só precisa fazer referência a ele como **Obsoleto** .
+ Por convenção, todos os nomes de atributo terminam com "Attribute". No entanto, várias linguagens que têm como destino o runtime, como Visual Basic e C#, não exigem que você especifique o nome completo de um atributo. Por exemplo, se quiser inicializar <xref:System.ObsoleteAttribute?displayProperty=nameWithType>, você só precisa fazer referência a ele como **Obsoleto**.
 
 ## <a name="apply-an-attribute-to-a-method"></a>Aplicar um atributo a um método
 
- O exemplo de código a seguir mostra como usar **System. ObsoleteAttribute** , que marca o código como obsoleto. A cadeia de caracteres `"Will be removed in next version"` é passada para o atributo. Esse atributo faz com que o compilador que exibe a cadeia de caracteres transmitida emita um aviso quando o código que descreve o atributo for chamado.
+ O exemplo de código a seguir mostra como usar **System. ObsoleteAttribute**, que marca o código como obsoleto. A cadeia de caracteres `"Will be removed in next version"` é passada para o atributo. Esse atributo faz com que o compilador que exibe a cadeia de caracteres transmitida emita um aviso quando o código que descreve o atributo for chamado.
 
  [!code-cpp[Conceptual.Attributes.Usage#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source1.cpp#3)]
  [!code-csharp[Conceptual.Attributes.Usage#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source1.cs#3)]
@@ -53,7 +52,7 @@ Use o processo a seguir para aplicar um atributo a um elemento do código.
 
  Quando esse atributo é aplicado, a cadeia de caracteres `"My Assembly"` é colocada no manifesto do assembly na parte de metadados do arquivo. Você pode exibir o atributo usando o [Desmontador de MSIL (Ildasm.exe)](../../framework/tools/ildasm-exe-il-disassembler.md) ou criando um programa personalizado para recuperar o atributo.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Atributos](index.md)
 - [Recuperando informações armazenadas em atributos](retrieving-information-stored-in-attributes.md)

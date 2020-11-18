@@ -2,7 +2,6 @@
 title: Padrão de design do observador
 description: Saiba mais sobre o padrão de design do observador no .NET. Esse padrão permite que um assinante registre e receba notificações de um provedor.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,16 +12,16 @@ helpviewer_keywords:
 - IObservable(Of T) interface
 - observer design pattern [.NET]
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
-ms.openlocfilehash: e1f8dad2c19d3e11281cda5ef749730c5c6334d7
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 1fda2b692d7bbaeedcf881801eb224f114da41e8
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064061"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828238"
 ---
 # <a name="observer-design-pattern"></a>Padrão de design do observador
 
-O padrão de design do observador permite a um assinante se registrar em um provedor e receber notificações dele. Ele é adequado para qualquer cenário que requer a notificação por push. O padrão define um *provedor* (também conhecido como *assunto* ou *observável* ) e zero, um ou mais *observadores* . Observadores registram-se com o provedor e, sempre que uma condição, evento ou alteração de estado predefinido ocorrer, o provedor notificará automaticamente todos os observadores chamando um dos seus métodos. Nessa chamada de método, o provedor também pode fornecer informações sobre o estado atual para observadores. No .NET, o padrão de design do observador é aplicado pela implementação das <xref:System.IObservable%601?displayProperty=nameWithType> interfaces e genéricas <xref:System.IObserver%601?displayProperty=nameWithType> . O parâmetro de tipo genérico representa o tipo que fornece informações de notificação.
+O padrão de design do observador permite a um assinante se registrar em um provedor e receber notificações dele. Ele é adequado para qualquer cenário que requer a notificação por push. O padrão define um *provedor* (também conhecido como *assunto* ou *observável*) e zero, um ou mais *observadores*. Observadores registram-se com o provedor e, sempre que uma condição, evento ou alteração de estado predefinido ocorrer, o provedor notificará automaticamente todos os observadores chamando um dos seus métodos. Nessa chamada de método, o provedor também pode fornecer informações sobre o estado atual para observadores. No .NET, o padrão de design do observador é aplicado pela implementação das <xref:System.IObservable%601?displayProperty=nameWithType> interfaces e genéricas <xref:System.IObserver%601?displayProperty=nameWithType> . O parâmetro de tipo genérico representa o tipo que fornece informações de notificação.
 
 ## <a name="applying-the-pattern"></a>Aplicando o padrão
 

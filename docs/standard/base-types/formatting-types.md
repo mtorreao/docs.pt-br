@@ -2,7 +2,6 @@
 title: Tipos de formatação no .NET
 description: Saiba como formatar tipos no .NET. Entenda como usar ou substituir o método ToString. Saiba mais sobre a formatação sensível à cultura, composta e personalizada.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -26,12 +25,12 @@ helpviewer_keywords:
 - custom formatting [.NET]
 - strings [.NET], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-ms.openlocfilehash: f100c1abcb32e907b92c42f8cfa460d2c1927803
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: a23df3ecfd3042927636813cdb94eecbb71438f0
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888488"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828953"
 ---
 # <a name="format-types-in-net"></a>Tipos de formato no .NET
 
@@ -102,7 +101,7 @@ A exibição do nome de um tipo é geralmente de uso limitado e não permite que
 
 No .NET, o `ToString` método de cada tipo de valor primitivo foi substituído para exibir o valor do objeto em vez de seu nome. A tabela a seguir mostra a substituição de cada tipo primitivo. Observe que a maioria dos métodos substituídos chama outra sobrecarga do método `ToString` e passa-a ao especificador de formato "G", que define o formato geral de seu tipo, além de um objeto <xref:System.IFormatProvider> que representa a cultura atual.
 
-|Tipo|Substituição de ToString|
+|Type|Substituição de ToString|
 |----------|-----------------------|
 |<xref:System.Boolean>|Retorna <xref:System.Boolean.TrueString?displayProperty=nameWithType> ou <xref:System.Boolean.FalseString?displayProperty=nameWithType>.|
 |<xref:System.Byte>|Chama `Byte.ToString("G", NumberFormatInfo.CurrentInfo)` para formatar o valor <xref:System.Byte> para a cultura atual.|
@@ -182,7 +181,7 @@ Você também pode usar cadeias de formato padrão para definir a representaçã
 
 - Suporte para um especificador de formato que é igual a uma referência nula (`Nothing` em Visual Basic). Um especificador de formato igual a uma referência nula deve ser considerado equivalente ao especificador de formato "G".
 
-Por exemplo, um `Temperature` classe interna pode armazenar a temperatura em graus Celsius e usar especificadores de formato para representar o valor do objeto `Temperature` em graus Fahrenheit, graus Celsius e kelvins. O exemplo a seguir fornece uma ilustração.
+Por exemplo, um `Temperature` classe interna pode armazenar a temperatura em graus Celsius e usar especificadores de formato para representar o valor do objeto `Temperature` em graus Fahrenheit, graus Celsius e kelvins. O exemplo a seguir ilustra esse cenário.
 
 [!code-csharp[Conceptual.Formatting.Overview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/appstandard1.cs#7)]
 [!code-vb[Conceptual.Formatting.Overview#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/appstandard1.vb#7)]
@@ -218,8 +217,8 @@ Todos os tipos numéricos (ou seja, os tipos <xref:System.Byte>, <xref:System.De
 |[Cadeias de caracteres de formato numérico personalizado](custom-numeric-format-strings.md)|Descreve cadeias de caracteres de formato personalizado que criam formatos específicos de aplicativo para valores numéricos.|
 |[Cadeias de caracteres de formato de data e hora padrão](standard-date-and-time-format-strings.md)|Descreve cadeias de caracteres de formato padrão que criam representações de cadeia de caracteres de valores <xref:System.DateTime> e <xref:System.DateTimeOffset> frequentemente usadas.|
 |[Cadeias de caracteres de formato de data e hora personalizado](custom-date-and-time-format-strings.md)|Descreve cadeias de caracteres de formato personalizado que criam formatos específicos de aplicativo para valores <xref:System.DateTime> e <xref:System.DateTimeOffset>.|
-|[Cadeias de caracteres de formato standard TimeSpan](standard-timespan-format-strings.md)|Descreve cadeias de caracteres de formato padrão que criam representações de intervalos de tempo frequentemente usadas.|
-|[Cadeias de caracteres de formato de TimeSpan personalizado](custom-timespan-format-strings.md)|Descreve cadeias de caracteres de formato personalizado que criam formatos específicos de aplicativo para intervalos de tempo.|
+|[Cadeias de caracteres de formato TimeSpan padrão](standard-timespan-format-strings.md)|Descreve cadeias de caracteres de formato padrão que criam representações de intervalos de tempo frequentemente usadas.|
+|[Cadeias de caracteres de formato TimeSpan personalizado](custom-timespan-format-strings.md)|Descreve cadeias de caracteres de formato personalizado que criam formatos específicos de aplicativo para intervalos de tempo.|
 |[Cadeias de caracteres de formato de enumeração](enumeration-format-strings.md)|Descreve cadeias de caracteres de formato padrão que são usadas para criar representações de cadeia de caracteres de valores de enumeração.|
 |<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|Descreve cadeias de caracteres de formato padrão para valores <xref:System.Guid>.|
 
@@ -356,8 +355,8 @@ O exemplo a seguir usa a classe `ByteByByteFormatter` para formatar valores inte
 |[Cadeias de caracteres de formato numérico personalizado](custom-numeric-format-strings.md)|Descreve cadeias de caracteres de formato personalizado que criam formatos específicos de aplicativo para valores numéricos.|
 |[Cadeias de caracteres de formato de data e hora padrão](standard-date-and-time-format-strings.md)|Descreve cadeias de caracteres de formato padrão que criam representações de cadeia de caracteres de valores <xref:System.DateTime> frequentemente usadas.|
 |[Cadeias de caracteres de formato de data e hora personalizado](custom-date-and-time-format-strings.md)|Descreve cadeias de caracteres de formato personalizado que criam formatos específicos de aplicativo para valores <xref:System.DateTime>.|
-|[Cadeias de caracteres de formato standard TimeSpan](standard-timespan-format-strings.md)|Descreve cadeias de caracteres de formato padrão que criam representações de intervalos de tempo frequentemente usadas.|
-|[Cadeias de caracteres de formato de TimeSpan personalizado](custom-timespan-format-strings.md)|Descreve cadeias de caracteres de formato personalizado que criam formatos específicos de aplicativo para intervalos de tempo.|
+|[Cadeias de caracteres de formato TimeSpan padrão](standard-timespan-format-strings.md)|Descreve cadeias de caracteres de formato padrão que criam representações de intervalos de tempo frequentemente usadas.|
+|[Cadeias de caracteres de formato TimeSpan personalizado](custom-timespan-format-strings.md)|Descreve cadeias de caracteres de formato personalizado que criam formatos específicos de aplicativo para intervalos de tempo.|
 |[Cadeias de caracteres de formato de enumeração](enumeration-format-strings.md)|Descreve cadeias de caracteres de formato padrão que são usadas para criar representações de cadeia de caracteres de valores de enumeração.|
 |[Formatação composta](composite-formatting.md)|Descreve como inserir um ou mais valores formatados em uma cadeia de caracteres. A cadeia de caracteres pode posteriormente ser exibida no console ou gravada em um fluxo.|
 |[Analisando cadeias de caracteres](parsing-strings.md)|Descreve como inicializar objetos para os valores descritos pelas representações de cadeia de caracteres desses objetos. A análise é a operação inversa da formatação.|

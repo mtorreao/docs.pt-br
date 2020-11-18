@@ -2,16 +2,15 @@
 title: Coleções thread-safe
 description: Introdução às coleções com segurança de thread usando o namespace System. Collections. decurrent no .NET, que inclui classes de coleção com segurança de threads e escalonáveis.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, overview
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
-ms.openlocfilehash: 27b0e887d7dcff6a6c792cf2dfab6a449f59646f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 5f64d7b6a9b3564248a2b6113724e948066bf45c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547682"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827744"
 ---
 # <a name="thread-safe-collections"></a>Coleções thread-safe
 O .NET Framework 4 introduz o namespace <xref:System.Collections.Concurrent?displayProperty=nameWithType>, que inclui várias classes de coleção que são tanto thread-safe quanto escalonáveis. Vários threads podem adicionar ou remover itens dessas coleções de modo seguro e eficiente sem a necessidade de sincronização adicional no código do usuário. Ao escrever um novo código, use as classes de coleção simultâneas sempre que vários threads forem ser gravados simultaneamente nas coleções. Se estiver lendo apenas de uma coleção compartilhada, você poderá usar as classes no namespace <xref:System.Collections.Generic?displayProperty=nameWithType>. É recomendável não usar as classes da coleção 1.0, a menos que você precise ter como destino o runtime do .NET Framework 1.1 ou anterior.  
@@ -33,7 +32,7 @@ O .NET Framework 4 introduz o namespace <xref:System.Collections.Concurrent?disp
   
  A tabela a seguir lista os tipos de coleção no namespace <xref:System.Collections.Concurrent?displayProperty=nameWithType>.  
   
-|Tipo|Description|  
+|Type|Descrição|  
 |----------|-----------------|  
 |<xref:System.Collections.Concurrent.BlockingCollection%601>|Fornece funcionalidade de delimitação e bloqueio de qualquer tipo que implemente <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>. Para obter mais informações, veja [Visão geral de BlockingCollection](blockingcollection-overview.md).|  
 |<xref:System.Collections.Concurrent.ConcurrentDictionary%602>|Implementação thread-safe de um dicionário de pares chave-valor.|  
@@ -42,12 +41,12 @@ O .NET Framework 4 introduz o namespace <xref:System.Collections.Concurrent?disp
 |<xref:System.Collections.Concurrent.ConcurrentBag%601>|Implementação thread-safe de uma coleção não ordenada de elementos.|  
 |<xref:System.Collections.Concurrent.IProducerConsumerCollection%601>|A interface que um tipo deve implementar para uso em um `BlockingCollection`.|  
   
-## <a name="related-topics"></a>Tópicos relacionados  
+## <a name="related-topics"></a>Tópicos Relacionados  
   
 |Título|Descrição|  
 |-----------|-----------------|  
 |[Visão geral de BlockingCollection](blockingcollection-overview.md)|Este tópico descreve a funcionalidade fornecida pelo tipo <xref:System.Collections.Concurrent.BlockingCollection%601>.|  
-|[Como: Adicionar e remover itens de um ConcurrentDictionary](how-to-add-and-remove-items.md)|Descreve como adicionar e remover elementos de um <xref:System.Collections.Concurrent.ConcurrentDictionary%602>|  
+|[Como adicionar e remover itens de um ConcurrentDictionary](how-to-add-and-remove-items.md)|Descreve como adicionar e remover elementos de um <xref:System.Collections.Concurrent.ConcurrentDictionary%602>|  
 |[Como: Adicionar e remover itens individualmente de uma BlockingCollection](how-to-add-and-take-items.md)|Descreve como adicionar e recuperar itens de uma coleta de bloqueio sem usar o enumerador de somente leitura.|  
 |[Como: Adicionar a funcionalidade de delimitação e bloqueio a uma coleção](how-to-add-bounding-and-blocking.md)|Descreve como usar qualquer classe de coleção como o mecanismo de armazenamento subjacente para uma coleção <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>.|  
 |[Como: Usar ForEach para remover itens de uma BlockingCollection](how-to-use-foreach-to-remove.md)|Descreve como usar `foreach` (`For Each` no Visual Basic) para remover todos os itens em uma coleção de bloqueios.|  

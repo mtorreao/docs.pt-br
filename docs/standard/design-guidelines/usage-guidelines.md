@@ -1,16 +1,15 @@
 ---
 title: Diretrizes de uso
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - class library design guidelines [.NET Framework], usage guidelines
 ms.assetid: 42215ffa-a099-4a26-b14e-fb2bdb6f95b7
-ms.openlocfilehash: 03eaba3e52cb25619f65637efb4f414c22770440
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d6ea7c7b9ada95e3d0c425aaea18be6cdbb4ce35
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291338"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828498"
 ---
 # <a name="usage-guidelines"></a>Diretrizes de uso
 
@@ -23,17 +22,17 @@ A <xref:System.IDisposable?displayProperty=nameWithType> interface não é abord
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Matrizes](arrays.md)  
+[matrizes](arrays.md)  
 [Atributos](attributes.md)  
 [Coleções](guidelines-for-collections.md)  
 [Serialização](serialization.md)  
-[Uso de System. xml](system-xml-usage.md)  
+[ Uso deSystem.Xml](system-xml-usage.md)  
 [Operadores de igualdade](equality-operators.md)  
 
 *Partes © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*
 
 *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Diretrizes de design de estrutura](index.md)

@@ -1,16 +1,15 @@
 ---
 title: Estruturas de dados para programação paralela
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - data structures, multi-threading
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
-ms.openlocfilehash: cea9264a30469881e3ec54fc378af3ddb70bff8e
-ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
+ms.openlocfilehash: c7f974c5626cf1efc6bf62c423043089d5c32e7c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92925318"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829525"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Estruturas de dados para programação paralela
 
@@ -21,7 +20,7 @@ O .NET fornece vários tipos úteis em programação paralela, incluindo um conj
   
  A tabela a seguir lista as classes de coleção simultâneas:  
   
-|Tipo|Description|  
+|Type|Descrição|  
 |----------|-----------------|  
 |<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>|Fornece funcionalidades de bloqueio e delimitação para coleções thread-safe que implementam <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType>. Os threads de produtor são bloqueados se nenhum slot estiver disponível, ou se a coleção estiver cheia. Threads de consumidor são bloqueados se a coleção estiver vazia. Esse tipo também oferece suporte ao acesso sem bloqueio de produtores e consumidores. <xref:System.Collections.Concurrent.BlockingCollection%601> pode ser usado como uma classe base ou repositório de backup para fornecer bloqueio e limitação a qualquer classe de coleção que ofereça suporte a <xref:System.Collections.Generic.IEnumerable%601>.|  
 |<xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>|Uma implementação de recipiente thread-safe que fornece operações de adição e get escalonáveis.|  
@@ -36,13 +35,13 @@ O .NET fornece vários tipos úteis em programação paralela, incluindo um conj
   
  A tabela a seguir lista os tipos de sincronização:  
   
-|Tipo|Description|  
+|Type|Descrição|  
 |----------|-----------------|  
 |<xref:System.Threading.Barrier?displayProperty=nameWithType>|Permite que vários threads funcionem em um algoritmo em paralelo fornecendo um ponto em que cada tarefa pode sinalizar sua chegada e, depois, gerar um bloqueio até que algumas ou todas as tarefas tenham chegado. Para saber mais, consulte [Barreira](../threading/barrier.md).|  
 |<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|Simplifica cenários de bifurcação e junção fornecendo um mecanismo fácil de encontro. Para saber mais, confira [CountdownEvent](../threading/countdownevent.md).|  
 |<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>|Um primitivo de sincronização semelhante a <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>. <xref:System.Threading.ManualResetEventSlim> é leve, mas só pode ser usado para comunicação entre processos.|  
 |<xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>|Um primitivo de sincronização que limita o número de threads que podem acessar simultaneamente um recurso ou um pool de recursos. Para saber mais, confira [Semaphore e SemaphoreSlim](../threading/semaphore-and-semaphoreslim.md).|  
-|<xref:System.Threading.SpinLock?displayProperty=nameWithType>|Um primitivo de bloqueio de exclusão mútua que faz com que o thread que está tentando adquirir o bloqueio aguarde em um loop, ou *rotação* , durante um período antes de gerar seu quantum. Em cenários nos quais a espera pelo bloqueio deve ser curta, <xref:System.Threading.SpinLock> oferece um desempenho melhor do que outras formas de bloqueio. Para saber mais, veja [SpinLock](../threading/spinlock.md).|  
+|<xref:System.Threading.SpinLock?displayProperty=nameWithType>|Um primitivo de bloqueio de exclusão mútua que faz com que o thread que está tentando adquirir o bloqueio aguarde em um loop, ou *rotação*, durante um período antes de gerar seu quantum. Em cenários nos quais a espera pelo bloqueio deve ser curta, <xref:System.Threading.SpinLock> oferece um desempenho melhor do que outras formas de bloqueio. Para saber mais, veja [SpinLock](../threading/spinlock.md).|  
 |<xref:System.Threading.SpinWait?displayProperty=nameWithType>|Um tipo de pequeno e leve que girará por um tempo especificado e, no final, colocará o thread em um estado de espera se a contagem de rotações for ultrapassada.  Para saber mais, veja [SpinWait](../threading/spinwait.md).|  
   
  Para obter mais informações, consulte:  
@@ -56,7 +55,7 @@ O .NET fornece vários tipos úteis em programação paralela, incluindo um conj
   
  A tabela a seguir lista os tipos de inicialização lenta:  
   
-|Tipo|Description|  
+|Type|Descrição|  
 |----------|-----------------|  
 |<xref:System.Lazy%601?displayProperty=nameWithType>|Fornece inicialização lenta, leve e thread-safe.|  
 |<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>|Fornece um valor com inicialização lenta em uma base por thread, com cada thread invocando lentamente a função de inicialização.|  
@@ -67,7 +66,7 @@ O .NET fornece vários tipos úteis em programação paralela, incluindo um conj
 ## <a name="aggregate-exceptions"></a>Agregar exceções  
  O tipo <xref:System.AggregateException?displayProperty=nameWithType> pode ser usado para capturar várias exceções lançadas simultaneamente em threads separados e retorná-las para o thread associado como uma única exceção. Os tipos <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> e o PLINQ usam <xref:System.AggregateException> extensivamente para essa finalidade. Para saber mais, veja [Tratamento de exceções](exception-handling-task-parallel-library.md) e [Como tratar exceções em uma consulta PLINQ](how-to-handle-exceptions-in-a-plinq-query.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - <xref:System.Threading?displayProperty=nameWithType>

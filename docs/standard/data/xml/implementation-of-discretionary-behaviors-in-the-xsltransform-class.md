@@ -1,14 +1,13 @@
 ---
 title: Implementação de comportamentos arbitrários na classe XslTransform
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
-ms.openlocfilehash: b37cb0f4bf9a85053d70d549ae005c7d50a50bc0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7617970ead6c2d75b7ca9749578ba66efec311bc
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710798"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829408"
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>Implementação de comportamentos arbitrários na classe XslTransform
 
@@ -54,7 +53,7 @@ Há comportamentos exclusivos para a implementação da classe de <xref:System.X
 
 ## <a name="xslsort"></a>xsl:sort
 
-Ao usar uma transformação para classificar, a recomendação W3C XSLT 1,0 faça algumas observações. Eles são:
+Ao usar uma transformação para classificar, a recomendação W3C XSLT 1,0 faça algumas observações. Elas são:
 
 - Dois processadores XSLT podem ser processadores de conformação, mas ainda podem classificar diferente.
 
@@ -77,7 +76,7 @@ A tabela a seguir mostra os recursos que são opcionais para um processador XSLT
 |-------------|------------------------|-----------|
 |atributo de`disable-output-escaping` em `<xsl:text...>` e em marcas de `<xsl:value-of...>` .|Recomendação W3C XSLT, 1,0<br /><br /> Seção 16,4|O atributo de `disable-output-escaping` é ignorado quando os elementos de `xsl:text` ou de `xsl:value-of` são usados em `xsl:comment`, em `xsl:processing-instruction`, ou no elemento de `xsl:attribute` .<br /><br /> Os fragmentos da árvore de resultado que contêm texto e saída de texto que foram de escape não são suportados.<br /><br /> O atributo de escape é ignorado quando uma transformação a <xref:System.Xml.XmlReader> ou <xref:System.Xml.XmlWriter> objetos.|
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Xml.Xsl.XslTransform>
 - [A classe XslTransform implementa do processador XSLT](xsltransform-class-implements-the-xslt-processor.md)

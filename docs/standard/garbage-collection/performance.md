@@ -2,17 +2,16 @@
 title: Coleta de lixo e desempenho
 description: Leia sobre os problemas relacionados à coleta de lixo e ao uso de memória. Aprenda a minimizar o efeito da coleta de lixo em seus aplicativos.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-ms.openlocfilehash: 7c4a61c1e5e735313a355bcab348fd6ef58a8686
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 15ca3fd06bb607a4f0257b4c5cd62f9c935c6913
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93062965"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827536"
 ---
 # <a name="garbage-collection-and-performance"></a>Coleta de lixo e desempenho
 
@@ -230,7 +229,7 @@ O procedimento a seguir descreve como definir um ponto de interrupção para que
 
   Esse comando força uma interrupção se **RestartEE** é executado após objetos da geração 2 serem recuperados para coleta de lixo.
 
-  Na coleta de lixo do servidor, apenas um thread chama **RestartEE** , portanto, o ponto de interrupção ocorrerá apenas uma vez durante uma coleta de lixo da geração 2.
+  Na coleta de lixo do servidor, apenas um thread chama **RestartEE**, portanto, o ponto de interrupção ocorrerá apenas uma vez durante uma coleta de lixo da geração 2.
 
 ## <a name="performance-check-procedures"></a>Procedimentos de verificação de desempenho
 
@@ -272,9 +271,9 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
 - Examine os dois contadores de desempenho de memória a seguir:
 
-  - **% De tempo em GC** . Exibe o percentual de tempo decorrido que foi gasto na execução de uma coleta de lixo após o último ciclo de coleta de lixo. Use este contador para determinar se o coletor de lixo está gastando tempo demais para disponibilizar espaço de heap gerenciado. Se o tempo gasto na coleta de lixo for relativamente baixo, isso poderá indicar um problema de recurso fora do heap gerenciado. Esse contador pode não ser preciso quando coleta de lixo simultânea ou em segundo plano está envolvida.
+  - **% De tempo em GC**. Exibe o percentual de tempo decorrido que foi gasto na execução de uma coleta de lixo após o último ciclo de coleta de lixo. Use este contador para determinar se o coletor de lixo está gastando tempo demais para disponibilizar espaço de heap gerenciado. Se o tempo gasto na coleta de lixo for relativamente baixo, isso poderá indicar um problema de recurso fora do heap gerenciado. Esse contador pode não ser preciso quando coleta de lixo simultânea ou em segundo plano está envolvida.
 
-  - **N º total de bytes confirmados** . Exibe a quantidade de memória virtual confirmada atualmente pelo coletor de lixo. Use este contador para determinar se a memória consumida pelo coletor de lixo é uma parte excessiva da memória usada pelo aplicativo.
+  - **N º total de bytes confirmados**. Exibe a quantidade de memória virtual confirmada atualmente pelo coletor de lixo. Use este contador para determinar se a memória consumida pelo coletor de lixo é uma parte excessiva da memória usada pelo aplicativo.
 
   A maioria dos contadores de desempenho de memória é atualizada no final de cada coleta de lixo. Portanto, eles podem não refletir as condições atuais sobre as quais você deseja obter informações.
 
@@ -282,7 +281,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
 ### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>Para determinar se a exceção de falta de memória é gerenciada
 
-1. No depurador do Visual Studio ou WinDbg com a extensão de depurador SOS carregada, digite o comando de exceção de impressão ( **pe** ):
+1. No depurador do Visual Studio ou WinDbg com a extensão de depurador SOS carregada, digite o comando de exceção de impressão (**pe**):
 
     **! PE**
 
@@ -330,7 +329,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
   - ou -
 
-- Use o comando **vmstat** :
+- Use o comando **vmstat**:
 
   **!vmstat**
 
@@ -352,9 +351,9 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
 1. Inicie o Gerenciador de tarefas do Windows.
 
-2. Na guia **Desempenho** , examine o valor confirmado. (No Windows 7, examine **Confirmar (KB)** no **grupo Sistema** .)
+2. Na guia **Desempenho**, examine o valor confirmado. (No Windows 7, examine **Confirmar (KB)** no **grupo Sistema**.)
 
-    Se o **Total** está próximo do **Limite** , você está com pouca memória física.
+    Se o **Total** está próximo do **Limite**, você está com pouca memória física.
 
 <a name="ManagedHeapCommit"></a>
 
@@ -371,7 +370,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
 - Use o contador de desempenho de memória de `# Total reserved bytes`.
 
-  O coletor de lixo reserva de memória em segmentos, sendo que você pode determinar a localização do início de um segmento usando o comando **eeheap** .
+  O coletor de lixo reserva de memória em segmentos, sendo que você pode determinar a localização do início de um segmento usando o comando **eeheap**.
 
   > [!IMPORTANT]
   > Embora você possa determinar a quantidade de memória que o coletor de lixo aloca para cada segmento, o tamanho de segmento é específico da implementação e está sujeito a alterações a qualquer momento, incluindo atualizações periódicas. Seu aplicativo nunca deve fazer suposições sobre o tamanho de um segmento em particular nem depender dele, tampouco deve tentar configurar a quantidade de memória disponível para alocações de segmento.
@@ -424,7 +423,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
   Se o heap gerenciado é grande, **dumpheap** pode levar algum tempo para concluir.
 
-  Você pode começar a analisar pelas últimas poucas linhas da saída, pois elas listam os objetos que usam mais espaço. Por exemplo: 
+  Você pode começar a analisar pelas últimas poucas linhas da saída, pois elas listam os objetos que usam mais espaço. Por exemplo:
 
   ```console
   2c6108d4   173712     14591808 DevExpress.XtraGrid.Views.Grid.ViewInfo.GridCellInfo
@@ -785,7 +784,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
   Total 6417525 objects
   ```
 
-  Os objetos `double[]` desapareceram do final da saída, o que significa que eles foram coletados. Esses objetos correspondem a aproximadamente 70 MB. Os objetos restantes não mudaram muito. Sendo assim, esses objetos `double[]` foram o motivo pelo qual essa coleta de lixo de geração 2 ocorreu. A próxima etapa é determinar por que os objetos `double[]` estão lá e por que eles morreram. Você pode perguntar ao desenvolvedor de código a origem desses objetos ou então você pode usar o comando **gcroot** .
+  Os objetos `double[]` desapareceram do final da saída, o que significa que eles foram coletados. Esses objetos correspondem a aproximadamente 70 MB. Os objetos restantes não mudaram muito. Sendo assim, esses objetos `double[]` foram o motivo pelo qual essa coleta de lixo de geração 2 ocorreu. A próxima etapa é determinar por que os objetos `double[]` estão lá e por que eles morreram. Você pode perguntar ao desenvolvedor de código a origem desses objetos ou então você pode usar o comando **gcroot**.
 
 <a name="HighCPU"></a>
 
@@ -795,6 +794,6 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
   Se o valor de `% Time in GC` subir ao mesmo tempo que o tempo de processamento, isso significará que a coleta de lixo está causando um alto uso da CPU. Caso contrário, crie o perfil do aplicativo para encontrar o local de ocorrência do alto uso.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Coleta de lixo](index.md)

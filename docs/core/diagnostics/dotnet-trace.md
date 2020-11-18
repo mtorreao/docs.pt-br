@@ -1,25 +1,39 @@
 ---
-title: dotnet-ferramenta de rastreamento-.NET Core
-description: Instalando e usando a ferramenta de linha de comando dotnet-Trace.
-ms.date: 11/21/2019
-ms.openlocfilehash: 4a3694f6ed748779809ee4c4bfd941bb6f1ac490
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+title: dotnet-ferramenta de diagnóstico de rastreamento-CLI do .NET
+description: Saiba como instalar e usar a ferramenta de CLI de rastreamento dotnet para coletar rastreamentos do .NET de um processo em execução sem o criador de perfil nativo, usando o .NET EventPipe.
+ms.date: 11/17/2020
+ms.openlocfilehash: d0798e4f703c18c48db47193ac24ec0d13b66ae5
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687623"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829304"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-utilitário de análise de desempenho de rastreamento
 
 **Este artigo aplica-se a:** ✔️ SDK do .net Core 3,0 e versões posteriores
 
-## <a name="install-dotnet-trace"></a>Instalar dotnet-Trace
+## <a name="install"></a>Instalar
 
-Instale `dotnet-trace` o [pacote NuGet](https://www.nuget.org/packages/dotnet-trace) com o comando de [instalação da ferramenta dotnet](../tools/dotnet-tool-install.md) :
+Há duas maneiras de baixar e instalar `dotnet-trace` :
 
-```dotnetcli
-dotnet tool install --global dotnet-trace
-```
+- **ferramenta global dotnet:**
+
+  Para instalar a versão de lançamento mais recente do `dotnet-trace` [pacote NuGet](https://www.nuget.org/packages/dotnet-trace), use o comando de [instalação da ferramenta dotnet](../tools/dotnet-tool-install.md) :
+
+  ```dotnetcli
+  dotnet tool install --global dotnet-trace
+  ```
+
+- **Download direto:**
+
+  Baixe o executável da ferramenta que corresponde à sua plataforma:
+
+  | SO  | Plataforma |
+  | --- | -------- |
+  | Windows | [x86](https://aka.ms/dotnet-trace/win-x86) \| [x64](https://aka.ms/dotnet-trace/win-x64) \| [ARM](https://aka.ms/dotnet-trace/win-arm) \| [ARM-x64](https://aka.ms/dotnet-trace/win-arm64) |
+  | macOS   | [x64](https://aka.ms/dotnet-trace/osx-x64) |
+  | Linux   | [x64](https://aka.ms/dotnet-trace/linux-x64) \| [ARM](https://aka.ms/dotnet-trace/linux-arm) \| [arm64](https://aka.ms/dotnet-trace/linux-arm64) \| [MUSL-x64](https://aka.ms/dotnet-trace/linux-musl-x64) \| [MUSL-arm64](https://aka.ms/dotnet-trace/linux-musl-arm64) |
 
 ## <a name="synopsis"></a>Sinopse
 
@@ -196,7 +210,8 @@ Para coletar rastreamentos usando `dotnet-trace` :
 
 ## <a name="launch-a-child-application-and-collect-a-trace-from-its-startup-using-dotnet-trace"></a>Iniciar um aplicativo filho e coletar um rastreamento de sua inicialização usando dotNet-Trace
 
-Observação: isso funciona somente para aplicativos que executam o .NET 5,0 ou posterior.
+> [!IMPORTANT]
+> Isso funciona somente para aplicativos que executam o .NET 5,0 ou posterior.
 
 Às vezes, pode ser útil coletar um rastreamento de um processo a partir de sua inicialização. Para aplicativos que executam o .NET 5,0 ou posterior, é possível fazer isso usando o rastreamento dotnet.
 

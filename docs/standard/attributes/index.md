@@ -2,7 +2,6 @@
 title: Estendendo metadados por meio de atributos
 description: Saiba como estender metadados usando atributos no .NET. Os atributos são declarações descritivas semelhantes a palavras-chave para anotar elementos de programação, como tipos e campos.
 ms.date: 10/14/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - metadata, extending
 - attributes [.NET], metadata
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - runtime, attributes
 - extending metadata
 ms.assetid: 30386922-1e00-4602-9ebf-526b271a8b87
-ms.openlocfilehash: 9a83c0e8ee3476f43ccc2e88c21ccbbc0661bd19
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: e41299b83ae451117ab6829eee928b0d2306be19
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889212"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829070"
 ---
 # <a name="extend-metadata-using-attributes"></a>Estender metadados usando atributos
 
@@ -33,7 +32,7 @@ O .NET usa atributos por vários motivos e para resolver vários problemas. Os a
 |[Aplicando atributos](applying-attributes.md)|Descreve como aplicar um atributo a um elemento do código.|
 |[Escrevendo atributos personalizados](writing-custom-attributes.md)|Descreve como criar classes de atributos personalizados.|
 |[Recuperando informações armazenadas em atributos](retrieving-information-stored-in-attributes.md)|Descreve como recuperar atributos personalizados para o código que é carregado no contexto de execução.|
-|[Metadados e componentes de Self-Describing](../metadata-and-self-describing-components.md)|Fornece uma visão geral dos metadados e descreve como ele é implementado em um arquivo PE (executável portátil do .NET).|
+|[Metadados e componentes autodescritivos](../metadata-and-self-describing-components.md)|Fornece uma visão geral dos metadados e descreve como ele é implementado em um arquivo PE (executável portátil do .NET).|
 |[Como carregar assemblies no contexto de somente reflexão](../../framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|Explica como recuperar informações de atributos personalizados no contexto somente reflexão.|
 
 ## <a name="reference"></a>Referência

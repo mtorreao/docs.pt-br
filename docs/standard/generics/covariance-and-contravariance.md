@@ -2,7 +2,6 @@
 title: Covariância e contravariância em genéricos
 description: Saiba mais sobre covariância, que permite usar um tipo mais derivado e contravariância, que permite que você use um tipo menos derivado, em genéricos .NET.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-ms.openlocfilehash: 1606238b22bd355b997b54cf94e0c28d16ec5cac
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 1ad8f72f80e88971e2bbf672bd92d9c607134783
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063170"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827406"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Covariância e contravariância em genéricos
 
@@ -59,7 +58,7 @@ Quando você está fazendo referência a um sistema de tipos, Covariance, contra
   
  Geralmente, um parâmetro de tipo de covariante pode ser usado como o tipo de retorno de um delegado, e os parâmetros de tipo contravariant podem ser usados como tipos de parâmetro. Para uma interface, os parâmetros de tipo covariantes podem ser usados como os tipos de retorno dos métodos da interface, e os parâmetros de tipo contravariantes podem ser usados como os tipos de parâmetro dos métodos da interface.  
   
- A covariância e a contravariância são referidas coletivamente como *variância* . Um parâmetro de tipo genérico que não é covariante ou contravariante é referido como *invariante* . Um breve resumo de fatos sobre variância em Common Language Runtime:  
+ A covariância e a contravariância são referidas coletivamente como *variância*. Um parâmetro de tipo genérico que não é covariante ou contravariante é referido como *invariante*. Um breve resumo de fatos sobre variância em Common Language Runtime:  
   
 - Os parâmetros de tipo Variant são restritos à interface genérica e tipos de delegado genéricos.  
   
@@ -153,7 +152,7 @@ Visual Basic e C# têm palavras-chave que permitem marcar os parâmetros de tipo
 
 Os seguintes tipos de interface e delegado têm parâmetros de tipo covariant e/ou contravariant.  
   
-|Tipo|Parâmetros de tipo covariantes|Parâmetros de tipo contravariantes|  
+|Type|Parâmetros de tipo covariantes|Parâmetros de tipo contravariantes|  
 |----------|-------------------------------|-----------------------------------|  
 |<xref:System.Action%601> em <xref:System.Action%6016>||Sim|  
 |<xref:System.Comparison%601>||Sim|  
@@ -171,7 +170,7 @@ Os seguintes tipos de interface e delegado têm parâmetros de tipo covariant e/
 |<xref:System.Linq.IOrderedQueryable%601>|Sim||  
 |<xref:System.Linq.IQueryable%601>|Sim||  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Covariância e contravariância (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)
 - [Covariância e contravariância (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)

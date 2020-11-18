@@ -2,19 +2,18 @@
 title: Referências fracas
 description: Saiba mais sobre referências fracas, que permitem que o coletor de lixo do .NET colete um objeto e, ao mesmo tempo, permita que o aplicativo acesse o objeto.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - weak references, short
 - weak references, using
 - weak references, long
 - garbage collection, weak references
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
-ms.openlocfilehash: 1c18b4fa979058893e0683620ec6cff8e7b15b9b
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 40d17009c98a73b7cb51779663360726c5fc7403
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768177"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827354"
 ---
 # <a name="weak-references"></a>Referências fracas
 O coletor de lixo não pode coletar um objeto em uso por um aplicativo enquanto o código do aplicativo pode acessar esse objeto. O aplicativo tem uma referência forte para o objeto.  
@@ -51,6 +50,6 @@ O coletor de lixo não pode coletar um objeto em uso por um aplicativo enquanto 
   
  Evite usar referências fracas como uma solução automática para problemas de gerenciamento de memória. Em vez disso, desenvolva uma política de cache efetiva para lidar com os objetos do seu aplicativo.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Coleta de lixo](index.md)

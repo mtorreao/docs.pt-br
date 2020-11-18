@@ -2,19 +2,18 @@
 title: Paralelismo de dados (biblioteca de tarefas paralelas)
 description: Leia como a TPL (biblioteca paralela de tarefas) dá suporte ao paralelismo de dados para fazer a mesma operação simultaneamente em uma coleção de origem ou elementos da matriz no .NET.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - parallelism, data
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
-ms.openlocfilehash: 617757581f6d2491098e1172072bdf0387c6852b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9d0fe1afef126a9c4f73a74d969d36df27182be9
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558908"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829369"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>Paralelismo de dados (biblioteca de tarefas paralelas)
 *Paralelismo de dados* refere-se a cenários em que a mesma operação é realizada simultaneamente (ou seja, em paralelo) em elementos em uma matriz ou coleção de origem. Nas operações paralelas de dados, a coleção de origem é particionada de modo que múltiplos threads possam operar em segmentos diferentes simultaneamente.  
@@ -38,7 +37,7 @@ ms.locfileid: "90558908"
   
  O paralelismo de dados com a sintaxe declarativa ou similar a uma consulta é suportado pelo PLINQ. Para obter mais informações, consulte [PLINQ (Parallel LINQ)](introduction-to-plinq.md).  
   
-## <a name="related-topics"></a>Tópicos relacionados  
+## <a name="related-topics"></a>Tópicos Relacionados  
   
 |Título|Descrição|  
 |-----------|-----------------|  

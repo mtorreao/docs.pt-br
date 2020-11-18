@@ -1,7 +1,6 @@
 ---
 title: Como implementar um provedor
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - providers [.NET], in observer design pattern
 - observables [.NET], in observer design pattern
 ms.assetid: 790b5d8b-d546-40a6-beeb-151b574e5ee5
-ms.openlocfilehash: b57b595a40494ba0cf6c38b6a13688dece602584
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: c58d4b79c9f722889352587c2cb1313fc1595319
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064217"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828342"
 ---
 # <a name="how-to-implement-a-provider"></a>Como implementar um provedor
 O padrão de design do observador requer uma divisão entre um provedor, que monitora os dados e envia notificações e um ou mais observadores, que recebem notificações (retornos de chamada) do provedor. Este tópico discute como criar um provedor. Um tópico relacionado, [Como implementar um observador](how-to-implement-an-observer.md), descreve como criar um observador.  
@@ -58,7 +57,7 @@ O padrão de design do observador requer uma divisão entre um provedor, que mon
  [!code-csharp[Conceptual.ObserverDesign.HowTo#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#7)]
  [!code-vb[Conceptual.ObserverDesign.HowTo#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#7)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.IObservable%601>
 - [Padrão de design do observador](observer-design-pattern.md)

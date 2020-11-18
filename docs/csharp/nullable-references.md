@@ -3,12 +3,12 @@ title: Tipos de referência anuláveis
 description: Este artigo fornece uma visão geral dos tipos de referência anuláveis, adicionados ao C# 8,0. Você aprenderá como o recurso fornece segurança com relação a exceções de referência nula para projetos novos e existentes.
 ms.technology: csharp-null-safety
 ms.date: 04/21/2020
-ms.openlocfilehash: cb9438db6364b6dc5d34f3a776d3ed7ec2e9978b
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 8a86546ef4adfd7695d957f807a62972b00316dc
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440387"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829161"
 ---
 # <a name="nullable-reference-types"></a>Tipos de referência anuláveis
 
@@ -46,12 +46,12 @@ name!.Length;
 
 ## <a name="nullability-of-types"></a>Possibilidade de nulidade de tipos
 
-Qualquer tipo de referência pode ter uma das quatro *nulidades* , que descreve quando os avisos são gerados:
+Qualquer tipo de referência pode ter uma das quatro *nulidades*, que descreve quando os avisos são gerados:
 
-- Não *nulo* : nulo não pode ser atribuído a variáveis deste tipo. As variáveis desse tipo não precisam ser verificadas quanto à nulidade antes de desreferenciar.
-- *Nullable* : NULL pode ser atribuído a variáveis desse tipo. Desreferenciar variáveis desse tipo sem verificar primeiro se há `null` gera um aviso.
-- *Alheios* : alheios é o estado de pré-C # 8,0. As variáveis desse tipo podem ser desreferenciadas ou atribuídas sem avisos.
-- *Desconhecido* : desconhecido é geralmente para parâmetros de tipo em que as restrições não dizem ao compilador que o tipo deve ser *anulável* ou não *nulo*.
+- Não *nulo*: nulo não pode ser atribuído a variáveis deste tipo. As variáveis desse tipo não precisam ser verificadas quanto à nulidade antes de desreferenciar.
+- *Nullable*: NULL pode ser atribuído a variáveis desse tipo. Desreferenciar variáveis desse tipo sem verificar primeiro se há `null` gera um aviso.
+- *Alheios*: alheios é o estado de pré-C # 8,0. As variáveis desse tipo podem ser desreferenciadas ou atribuídas sem avisos.
+- *Desconhecido*: desconhecido é geralmente para parâmetros de tipo em que as restrições não dizem ao compilador que o tipo deve ser *anulável* ou não *nulo*.
 
 A nulidade de um tipo em uma declaração de variável é controlada pelo *contexto que permite valor nulo* no qual a variável é declarada.
 
@@ -70,7 +70,7 @@ O contexto de anotação anulável e o contexto de aviso anulável podem ser def
 - `disable`: O contexto de anotação anulável está **desabilitado**. O contexto de aviso que permite valor nulo está **desabilitado**.
   - As variáveis de um tipo de referência são alheias, como as versões anteriores do C#. Todos os avisos de nulidade estão desabilitados.
 
-**Exemplo** :
+**Exemplo**:
 
 ```xml
 <Nullable>enable</Nullable>
@@ -88,7 +88,7 @@ Também é possível usar diretivas para definir esses mesmos contextos em qualq
 - `#nullable enable annotations`: Defina o contexto de anotação anulável como **habilitado**.
 - `#nullable restore annotations`: Restaura o contexto de aviso de anotação para as configurações do projeto.
 
-Por padrão, os contextos de anotação e de aviso anuláveis são **desabilitados** , incluindo novos projetos. Isso significa que o código existente é compilado sem alterações e sem gerar nenhum aviso novo.
+Por padrão, os contextos de anotação e de aviso anuláveis são **desabilitados**, incluindo novos projetos. Isso significa que o código existente é compilado sem alterações e sem gerar nenhum aviso novo.
 
 Essas opções fornecem duas estratégias distintas para [atualizar uma base de código existente](nullable-migration-strategies.md) para usar tipos de referência anuláveis.
 
@@ -114,7 +114,7 @@ Em um contexto de anotação que permite valor nulo habilitado, o caractere `?` 
 
 ## <a name="nullable-warning-context"></a>Contexto de aviso que permite valor nulo
 
-O contexto de aviso que permite valor nulo é diferente do contexto de anotação que permite valor nulo. Os avisos podem ser habilitados mesmo quando as novas anotações estão desabilitadas. O compilador usa a análise de fluxo estática para determinar o **estado nulo** de qualquer referência. O estado nulo é **não nulo** ou **talvez nulo** quando o *contexto de aviso que permite valor nulo* não está **desabilitado**. Se você desreferenciar uma referência quando o compilador tiver determinado que ela é **talvez nula** , o compilador avisará. O estado de uma referência é **talvez nulo** , a menos que o compilador possa determinar uma das duas condições:
+O contexto de aviso que permite valor nulo é diferente do contexto de anotação que permite valor nulo. Os avisos podem ser habilitados mesmo quando as novas anotações estão desabilitadas. O compilador usa a análise de fluxo estática para determinar o **estado nulo** de qualquer referência. O estado nulo é **não nulo** ou **talvez nulo** quando o *contexto de aviso que permite valor nulo* não está **desabilitado**. Se você desreferenciar uma referência quando o compilador tiver determinado que ela é **talvez nula**, o compilador avisará. O estado de uma referência é **talvez nulo**, a menos que o compilador possa determinar uma das duas condições:
 
 1. Definitivamente, a variável foi atribuída a um valor não nulo.
 1. A variável ou expressão foi marcada novamente como nula antes de desreferenciá-la.
@@ -205,7 +205,7 @@ No exemplo anterior, a declaração da matriz mostra que ela contém cadeias de 
 
 ## <a name="see-also"></a>Confira também
 
-- [Especificação de tipos de referência Nullable de rascunho](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md)
+- [Especificação de tipos de referência Nullable de rascunho](~/_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md)
 - [Introdução ao tutorial de referências que permitem valor nulo](tutorials/nullable-reference-types.md)
 - [Migrar uma base de código para referências que permitem valor nulo](tutorials/upgrade-to-nullable-references.md)
 - [-Nullable (opção de compilador C#)](language-reference/compiler-options/nullable-compiler-option.md)

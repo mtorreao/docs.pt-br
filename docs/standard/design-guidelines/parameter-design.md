@@ -1,7 +1,6 @@
 ---
 title: Design de parâmetro
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - member design guidelines [.NET Framework], parameters
 - members [.NET Framework], parameters
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - parameters, design guidelines
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
-ms.openlocfilehash: e0bc52f5679a7771d5690be9f903e677ce611605
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 707ae48be3f45d82ed3819f943dc5ba3743172f3
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621581"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828797"
 ---
 # <a name="parameter-design"></a>Design de parâmetro
 
@@ -24,11 +23,11 @@ Esta seção fornece diretrizes amplas sobre o design de parâmetros, incluindo 
 
  Por exemplo, suponha que você queira criar um método que enumere uma coleção e imprima cada item no console. Esse método deve ser adotado <xref:System.Collections.IEnumerable> como o parâmetro, não <xref:System.Collections.ArrayList> ou <xref:System.Collections.IList> , por exemplo.
 
- ❌Não use parâmetros reservados.
+ ❌ Não use parâmetros reservados.
 
  Se mais entradas para um membro forem necessárias em alguma versão futura, uma nova sobrecarga poderá ser adicionada.
 
- ❌Não têm métodos expostos publicamente que usam ponteiros, matrizes de ponteiros ou matrizes multidimensionais como parâmetros.
+ ❌ Não têm métodos expostos publicamente que usam ponteiros, matrizes de ponteiros ou matrizes multidimensionais como parâmetros.
 
  Ponteiros e matrizes multidimensionais são relativamente difíceis de usar corretamente. Em quase todos os casos, as APIs podem ser reprojetadas para evitar a criação desses tipos como parâmetros.
 
@@ -43,7 +42,7 @@ Esta seção fornece diretrizes amplas sobre o design de parâmetros, incluindo 
 ### <a name="choosing-between-enum-and-boolean-parameters"></a>Escolhendo entre parâmetros de enumeração e boolianos  
  ✔️ usar enums se um membro, caso contrário, teria dois ou mais parâmetros boolianos.
 
- ❌Não use boolianos, a menos que esteja absolutamente certo de que nunca haverá necessidade de mais de dois valores.
+ ❌ Não use boolianos, a menos que esteja absolutamente certo de que nunca haverá necessidade de mais de dois valores.
 
  As enumerações oferecem algum espaço para a adição futura de valores, mas você deve estar ciente de todas as implicações da adição de valores a enums, que são descritas em [design de enumeração](enum.md).
 
@@ -60,7 +59,7 @@ Esta seção fornece diretrizes amplas sobre o design de parâmetros, incluindo 
 
  Não assuma que os argumentos de enumeração estarão no intervalo definido pela enumeração. O CLR permite a conversão de qualquer valor inteiro em um valor de enumeração, mesmo se o valor não estiver definido na enumeração.
 
- ❌Não use <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> para verificações de intervalo de enumeração.
+ ❌ Não use <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> para verificações de intervalo de enumeração.
 
  ✔️ estar ciente de que argumentos mutáveis podem ter sido alterados depois de serem validados.
 
@@ -71,15 +70,15 @@ Esta seção fornece diretrizes amplas sobre o design de parâmetros, incluindo 
 
  Quando um argumento é passado por um parâmetro por valor, o membro recebe uma cópia do argumento real passado. Se o argumento for um tipo de valor, uma cópia do argumento será colocada na pilha. Se o argumento for um tipo de referência, uma cópia da referência será colocada na pilha. As linguagens CLR mais populares, como C#, VB.NET e C++, assumem como padrão a passagem de parâmetros por valor.
 
- Quando um argumento é passado por um `ref` parâmetro, o membro recebe uma referência para o argumento real passado. Se o argumento for um tipo de valor, uma referência ao argumento será colocada na pilha. Se o argumento for um tipo de referência, uma referência à referência será colocada na pilha. `Ref`os parâmetros podem ser usados para permitir que o membro modifique os argumentos passados pelo chamador.
+ Quando um argumento é passado por um `ref` parâmetro, o membro recebe uma referência para o argumento real passado. Se o argumento for um tipo de valor, uma referência ao argumento será colocada na pilha. Se o argumento for um tipo de referência, uma referência à referência será colocada na pilha. `Ref` os parâmetros podem ser usados para permitir que o membro modifique os argumentos passados pelo chamador.
 
- `Out`os parâmetros são semelhantes aos `ref` parâmetros, com algumas pequenas diferenças. O parâmetro é inicialmente considerado não atribuído e não pode ser lido no corpo do membro antes de ser atribuído a um valor. Além disso, o parâmetro deve ser atribuído a um valor antes que o membro seja retornado.
+ `Out` os parâmetros são semelhantes aos `ref` parâmetros, com algumas pequenas diferenças. O parâmetro é inicialmente considerado não atribuído e não pode ser lido no corpo do membro antes de ser atribuído a um valor. Além disso, o parâmetro deve ser atribuído a um valor antes que o membro seja retornado.
 
- ❌Evite usar `out` `ref` parâmetros ou.
+ ❌ Evite usar `out` `ref` parâmetros ou.
 
  O uso de `out` `ref` parâmetros ou requer experiência com ponteiros, compreendendo como tipos de valor e tipos de referência diferem e manipulando métodos com vários valores de retorno. Além disso, a diferença entre os `out` `ref` parâmetros e não é amplamente compreendida. Os arquitetos de estrutura que projetam para um público geral não devem esperar que os usuários façam o mestre de trabalho com os `out` `ref` parâmetros ou.
 
- ❌Não passe tipos de referência por referência.
+ ❌ Não passe tipos de referência por referência.
 
  Há algumas exceções limitadas à regra, como um método que pode ser usado para alternar referências.
 
@@ -112,11 +111,11 @@ public class String {
 
  ✔️ Considere adicionar a palavra-chave params aos parâmetros de matriz se você espera que os usuários finais passem matrizes com um pequeno número de elementos. Se for esperado que muitos elementos sejam passados em cenários comuns, os usuários provavelmente não passarão esses elementos embutidos de qualquer forma e, portanto, a palavra-chave params não será necessária.
 
- ❌Evite usar matrizes params se o chamador quase sempre tiver a entrada já em uma matriz.
+ ❌ Evite usar matrizes params se o chamador quase sempre tiver a entrada já em uma matriz.
 
  Por exemplo, os membros com parâmetros de matriz de bytes quase nunca seriam chamados passando bytes individuais. Por esse motivo, os parâmetros de matriz de bytes no .NET Framework não usam a palavra-chave params.
 
- ❌Não use matrizes params se a matriz for modificada pelo membro usando o parâmetro de matriz params.
+ ❌ Não use matrizes params se a matriz for modificada pelo membro usando o parâmetro de matriz params.
 
  Por causa do fato de que muitos compiladores transformam os argumentos para o membro em uma matriz temporária no site de chamada, a matriz pode ser um objeto temporário e, portanto, qualquer modificação na matriz será perdida.
 
@@ -136,7 +135,7 @@ public class String {
 
  Você deve validar que a matriz não é nula antes do processamento.
 
- ❌Não use os `varargs` métodos, caso contrário, conhecidos como reticências.
+ ❌ Não use os `varargs` métodos, caso contrário, conhecidos como reticências.
 
  Algumas linguagens CLR, como C++, dão suporte a uma convenção alternativa para passar listas de parâmetros de variáveis chamados `varargs` métodos. A Convenção não deve ser usada em estruturas, pois não é compatível com CLS.
 
@@ -145,7 +144,7 @@ public class String {
 
  ✔️ fornecem uma alternativa para qualquer membro que usa um argumento de ponteiro, porque os ponteiros não são compatíveis com CLS.
 
- ❌Evite fazer uma verificação cara de argumento dos argumentos de ponteiro.
+ ❌ Evite fazer uma verificação cara de argumento dos argumentos de ponteiro.
 
  ✔️ seguir Convenções comuns relacionadas a ponteiros ao criar membros com ponteiros.
 
@@ -155,7 +154,7 @@ public class String {
 
  *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Diretrizes de design de membro](member.md)
 - [Diretrizes de design de estrutura](index.md)

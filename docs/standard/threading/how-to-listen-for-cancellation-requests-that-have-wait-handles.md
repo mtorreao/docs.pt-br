@@ -1,21 +1,20 @@
 ---
-title: Como ouvir solicitações de cancelamento que têm identificadores de espera
+title: 'Como: ouvir solicitações de cancelamento que têm identificadores de espera'
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - cancellation, waiting with wait handles
 ms.assetid: 6e2aa49b-fc84-4bcf-962b-17db98b7edcb
-ms.openlocfilehash: e44b10b88bef61edcf3f547f56b4020740530e26
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ec5bc796532381b3e21e4dddc037a927b7e68833
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84279537"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826437"
 ---
-# <a name="how-to-listen-for-cancellation-requests-that-have-wait-handles"></a>Como ouvir solicitações de cancelamento que têm identificadores de espera
+# <a name="how-to-listen-for-cancellation-requests-that-have-wait-handles"></a>Como: ouvir solicitações de cancelamento que têm identificadores de espera
 Se um método for bloqueado enquanto ele estiver aguardando que um evento seja sinalizado, ele não poderá verificar o valor do token de cancelamento e responder de maneira oportuna. O primeiro exemplo mostra como resolver esse problema quando você estiver trabalhando com eventos, como <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> que não dão suporte nativamente a estrutura de cancelamento unificado. O segundo exemplo mostra uma abordagem mais simples que usa <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>, que dá suporte ao cancelamento unificado.  
   
 > [!NOTE]
@@ -33,6 +32,6 @@ Se um método for bloqueado enquanto ele estiver aguardando que um evento seja s
  [!code-csharp[Cancellation#10](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex10.cs#10)]
  [!code-vb[Cancellation#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex10.vb#10)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Cancelamento em threads gerenciados](cancellation-in-managed-threads.md)
