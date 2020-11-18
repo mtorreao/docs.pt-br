@@ -2,7 +2,6 @@
 title: Cadeias de caracteres de formato numérico padrão
 description: Neste artigo, aprenda a usar cadeias de caracteres de formato numérico padrão para formatar tipos numéricos comuns em representações de texto no .NET.
 ms.date: 06/10/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -17,24 +16,24 @@ helpviewer_keywords:
 - standard numeric format strings
 - formatting numbers [.NET]
 - format specifiers, standard numeric format strings
-ms.openlocfilehash: e5e1aa16d8df3d0cfce6dac00c91ca8e99e16e3d
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: b8537e8dcfdd45ed8da18b8b82aae5e9fc0cd96e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888965"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818759"
 ---
 # <a name="standard-numeric-format-strings"></a>Cadeias de caracteres de formato numérico padrão
 
 As cadeias de caracteres de formato numérico padrão são usadas para formatar tipos numéricos comuns. Uma cadeia de caracteres de formato numérico padrão assume o formato `Axx`, em que:
 
-- `A` é um caractere alfabético único chamado *especificador de formato* . Qualquer cadeia de caracteres de formato numérico que contém mais de um caractere alfabético, incluindo espaços em branco, é interpretada como uma cadeia de caracteres de formato numérico personalizado. Para obter mais informações, consulte [Cadeias de caracteres de formato numérico personalizado](custom-numeric-format-strings.md).
+- `A` é um caractere alfabético único chamado *especificador de formato*. Qualquer cadeia de caracteres de formato numérico que contém mais de um caractere alfabético, incluindo espaços em branco, é interpretada como uma cadeia de caracteres de formato numérico personalizado. Para obter mais informações, consulte [Cadeias de caracteres de formato numérico personalizado](custom-numeric-format-strings.md).
 
-- `xx` é um inteiro opcional chamado *especificador de precisão* . O especificador de precisão varia de 0 a 99 e afeta o número de dígitos no resultado. Observe que o especificador de precisão controla o número de dígitos na representação da cadeia de caracteres de um número. Ele não arredonda o número em si. Para executar uma operação de arredondamento, use o método <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType> ou <xref:System.Math.Round%2A?displayProperty=nameWithType>.
+- `xx` é um inteiro opcional chamado *especificador de precisão*. O especificador de precisão varia de 0 a 99 e afeta o número de dígitos no resultado. Observe que o especificador de precisão controla o número de dígitos na representação da cadeia de caracteres de um número. Ele não arredonda o número em si. Para executar uma operação de arredondamento, use o método <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType> ou <xref:System.Math.Round%2A?displayProperty=nameWithType>.
 
   Quando o *especificador de precisão* controla o número de dígitos fracionários na cadeia de caracteres de resultado, ela reflete um número que será arredondado para um resultado representável mais próximo do resultado infinitamente preciso. Se houver dois resultados representáveis igualmente próximos:
-  - **No .NET Framework e no .NET Core até o .net core 2,0** , o tempo de execução seleciona o resultado com um dígito maior, menos significativo (ou seja, usando <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType> ).
-  - **No .NET Core 2.1 e versões posteriores** , o runtime selecionará o resultado com um dígito até menos significativo (ou seja, usando <xref:System.MidpointRounding.ToEven?displayProperty=nameWithType>).
+  - **No .NET Framework e no .NET Core até o .net core 2,0**, o tempo de execução seleciona o resultado com um dígito maior, menos significativo (ou seja, usando <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType> ).
+  - **No .NET Core 2.1 e versões posteriores**, o runtime selecionará o resultado com um dígito até menos significativo (ou seja, usando <xref:System.MidpointRounding.ToEven?displayProperty=nameWithType>).
 
   > [!NOTE]
   > O especificador de precisão determina o número de dígitos na cadeia de caracteres de resultado. Para acrescentar espaços à direita ou à esquerda em uma cadeia de caracteres de resultado, use o recurso [formatação de composição](composite-formatting.md) e defina um *componente de alinhamento* no item de formato.
@@ -48,7 +47,7 @@ As cadeias de caractere de formato numérico padrão têm suporte de:
 - [Cadeias de caracteres interpoladas](../../csharp/language-reference/tokens/interpolated.md) em C# e Visual Basic, que fornecem uma sintaxe simplificada quando comparada a cadeias de caracteres de formato composto.
 
 > [!TIP]
-> Baixe o **Utilitário de Formatação** , um aplicativo do Windows Forms do .NET Core que permite aplicar cadeias de caracteres de formato a valores numéricos ou de data e hora e exibir a cadeia de caracteres de resultado. O código-fonte está disponível para o [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) e o [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb).
+> Baixe o **Utilitário de Formatação**, um aplicativo do Windows Forms do .NET Core que permite aplicar cadeias de caracteres de formato a valores numéricos ou de data e hora e exibir a cadeia de caracteres de resultado. O código-fonte está disponível para o [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) e o [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb).
 
 <a name="table"></a> A tabela a seguir descreve os especificadores de formato numérico padrão e exibe a saída de exemplo produzida por cada especificador de formato. Consulte a seção [Notas](#NotesStandardFormatting) para obter informações adicionais sobre como usar cadeias de caracteres de formato numérico padrão e a seção [Exemplo](#example) para obter uma ilustração abrangente de seu uso.
 
@@ -382,7 +381,7 @@ O exemplo a seguir formata um inteiro e um valor numérico de ponto flutuante us
 [!code-csharp[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#FinalExample)]
 [!code-vb[system.x.tostring-and-culture#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.X.ToString-and-Culture/vb/xts.vb#1)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Globalization.NumberFormatInfo>
 - [Cadeias de caracteres de formato numérico personalizado](custom-numeric-format-strings.md)

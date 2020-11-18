@@ -2,19 +2,18 @@
 title: Visão geral de BlockingCollection
 description: Leia sobre BlockingCollection <T> , uma classe de coleção thread-safe no .net. Essa classe oferece recursos como a adição simultânea de & a execução de itens de vários threads.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - BlockingCollection, overview
 ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
-ms.openlocfilehash: fc11f6c28a551e56d3bac4c5be9c08a396c0c6b1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0378d038d6081c7ad04fc233ac151ab2bb223fa5
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600796"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818655"
 ---
 # <a name="blockingcollection-overview"></a>Visão geral de BlockingCollection
 <xref:System.Collections.Concurrent.BlockingCollection%601> é uma classe de coleção thread-safe que fornece os seguintes recursos:  
@@ -79,8 +78,8 @@ BlockingCollection<string> bc = new BlockingCollection<string>(new ConcurrentBag
 ## <a name="using-many-blockingcollections-as-one"></a>Usando vários BlockingCollections como um  
  Para cenários em que um consumidor precisa remover itens de várias coleções simultaneamente, é possível criar matrizes de <xref:System.Collections.Concurrent.BlockingCollection%601> e usar os métodos estáticos como <xref:System.Collections.Concurrent.BlockingCollection%601.TakeFromAny%2A> e <xref:System.Collections.Concurrent.BlockingCollection%601.AddToAny%2A> que adicionarão ou retirarão de qualquer uma das coleções na matriz. Se uma coleção for de bloqueio, o método imediatamente tenta outra até encontrar uma que possa realizar a operação. Para obter mais informações, confira [Como usar matrizes de coleções Blocking em um pipeline](how-to-use-arrays-of-blockingcollections.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [Coleções e estruturas de dados](../index.md)
-- [Coleções com segurança de thread](index.md)
+- [Coleções thread-safe](index.md)

@@ -1,18 +1,17 @@
 ---
 title: Componentes de independência de linguagem e componentes independentes da linguagem
 description: Saiba como você pode desenvolver em uma das muitas linguagens com suporte no .NET, como C#, C++/CLI, F#, IronPython, VB, Visual COBOL e PowerShell.
-ms.date: 07/22/2016
 dev_langs:
 - csharp
 - vb
-ms.technology: dotnet-standard
+ms.date: 07/22/2016
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 524f8dc9838d7c438e8155da683c4fa5b01f36a3
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 259db1b9d33dd3b068f4d4fa18d2118db34bf0b0
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162980"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819078"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Componentes de independência de linguagem e componentes independentes da linguagem
 
@@ -295,7 +294,7 @@ Todos os tipos exibidos em assinaturas de membro, incluindo um tipo de retorno d
 
 O [Common Type System](common-type-system.md) do .NET inclui vários tipos internos com suporte diretamente com o Common Language Runtime e codificados especialmente nos metadados de um assembly. Desses tipos intrínsecos, os tipos listados na tabela a seguir estão em conformidade com CLS.
 
-Tipo em conformidade com CLS | Description
+Tipo em conformidade com CLS | Descrição
 ------------------ | -----------
 [Byte](xref:System.Byte) | Inteiro sem sinal de 8 bits
 [Int16](xref:System.Int16) | Inteiro com sinal de 16 bits
@@ -311,7 +310,7 @@ Tipo em conformidade com CLS | Description
 
 Os tipos intrínsecos listados na tabela a seguir não são compatíveis com CLS.
 
-Tipo não compatível | Description | Alternativa em conformidade com CLS
+Tipo não compatível | Descrição | Alternativa em conformidade com CLS
 ------------------ | ----------- | -------------------------
 [SByte](xref:System.SByte) | Tipo de dados inteiro com sinal de 8 bits | [Int16](xref:System.Int16)
 [UInt16](xref:System.UInt16) | Inteiro sem sinal de 16 bits | [Int32](xref:System.Int32)
@@ -2042,9 +2041,9 @@ As propriedades em tipos em conformidade com CLS devem seguir estas regras:
 
 Um evento é definido por seu nome e tipo. O tipo de evento é um delegado que é usado para indicar o evento. Por exemplo, o evento `DbConnection.StateChange` é do tipo `StateChangeEventHandler`. Além do evento em si, três métodos com nomes com base no nome do evento fornecem a implementação do evento e estão marcados como `SpecialName` nos metadados do assembly:
 
-* Um método para adicionar um manipulador de eventos, chamado `add`_*EventName*. Por exemplo, o método de assinatura do evento para o evento `DbConnection.StateChange` é chamado `add_StateChange`.
+* Um método para adicionar um manipulador de eventos, chamado `add`_ *EventName*. Por exemplo, o método de assinatura do evento para o evento `DbConnection.StateChange` é chamado `add_StateChange`.
 
-* Um método para remover um manipulador de eventos, chamado `remove`_*EventName*. Por exemplo, o método de remoção para o evento `DbConnection.StateChange` é chamado `remove_StateChange`.
+* Um método para remover um manipulador de eventos, chamado `remove`_ *EventName*. Por exemplo, o método de remoção para o evento `DbConnection.StateChange` é chamado `remove_StateChange`.
 
 * Um método para indicar que o evento ocorreu, chamado `raise` \_ *EventName*.
 

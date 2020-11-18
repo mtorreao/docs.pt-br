@@ -1,17 +1,16 @@
 ---
 title: Script de folha de estilos XSLT usando <msxsl:script>
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-ms.openlocfilehash: b2fd5ac6f03c0c66c05117a882d53af37e3f8665
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 61538656580878da775d4a42dac40165c7941eee
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555927"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818265"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>Script de folha de estilos XSLT usando \<msxsl:script>
 A classe <xref:System.Xml.Xsl.XslTransform> dá suporte a scripts inserido usando o elemento `script`.  
@@ -62,9 +61,9 @@ A classe <xref:System.Xml.Xsl.XslTransform> dá suporte a scripts inserido usand
   
  Os argumentos fornecidos e os valores de retorno definidos pelas funções de script devem ser do tipo XPath do W3C (World Wide Web Consortium) ou XSLT. A tabela a seguir mostra os tipos correspondentes de W3C, as classes equivalentes do .NET Framework (tipo) e se o tipo do W3C é XPath ou XSLT.  
   
-|Tipo|Classe equivalente do .NET Framework (tipo)|Tipo XPath ou XSLT|  
+|Type|Classe equivalente do .NET Framework (tipo)|Tipo XPath ou XSLT|  
 |----------|----------------------------------------------|-----------------------------|  
-|String|System.String|XPath|  
+|Cadeia de caracteres|System.String|XPath|  
 |Booliano|System.Boolean|XPath|  
 |Número|System.Double|XPath|  
 |Fragmento da árvore de resultado|System.Xml.XPath.XPathNavigator|XSLT|  

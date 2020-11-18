@@ -3,18 +3,19 @@ title: Analisador de compatibilidade de plataforma
 description: Um analisador de Roslyn que pode ajudar a detectar problemas de compatibilidade de plataforma em aplicativos e bibliotecas de plataforma cruzada.
 author: buyaa-n
 ms.date: 09/17/2020
-ms.openlocfilehash: 44c2c2d9674b13f314a057f847df2d4d474cc2be
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 808e89df49a82e091862a052e62a367e6860fe47
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91805292"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819481"
 ---
 # <a name="platform-compatibility-analyzer"></a>Analisador de compatibilidade de plataforma
 
 Você provavelmente já ouviu o lema de "um .NET": uma única plataforma unificada para criar qualquer tipo de aplicativo. O SDK do .NET 5,0 inclui ASP.NET Core, Entity Framework Core, WinForms, WPF, Xamarin e ML.NET, e adicionará suporte para mais plataformas ao longo do tempo. O .NET 5,0 se esforça para fornecer uma experiência em que você não tem de ponderar sobre os diferentes tipos de .NET, mas não tenta abstrair completamente o sistema operacional subjacente (SO). Você continuará a ser capaz de chamar APIs específicas da plataforma, por exemplo, P/Invokes, WinRT ou as associações do Xamarin para iOS e Android.
 
-Mas usar APIs específicas da plataforma em um componente significa que o código não funciona mais em todas as plataformas. Precisávamos de uma maneira de detectar isso em tempo de design para que os desenvolvedores obtenham diagnósticos quando inadvertidamente usam APIs específicas da plataforma. Para atingir esse objetivo, o .NET 5,0 apresenta o [analisador de compatibilidade de plataforma](/visualstudio/code-quality/ca1416) e APIs complementares para ajudar os desenvolvedores a identificar e usar APIs específicas da plataforma, quando apropriado.
+Mas usar APIs específicas da plataforma em um componente significa que o código não funciona mais em todas as plataformas. Precisávamos de uma maneira de detectar isso em tempo de design para que os desenvolvedores obtenham diagnósticos quando inadvertidamente usam APIs específicas da plataforma. Para atingir esse objetivo, o .NET 5,0 apresenta o [analisador de compatibilidade de plataforma](../../fundamentals/code-analysis/quality-rules/ca1416.md) e APIs complementares para ajudar os desenvolvedores a identificar e usar APIs específicas da plataforma, quando apropriado.
+
 As novas APIs incluem:
 
 - <xref:System.Runtime.Versioning.SupportedOSPlatformAttribute> anotar APIs como sendo específicas da plataforma e <xref:System.Runtime.Versioning.UnsupportedOSPlatformAttribute> anotar APIs como sem suporte em um sistema operacional específico. Esses atributos podem, opcionalmente, incluir o número de versão e já foram aplicados a algumas APIs específicas da plataforma nas principais bibliotecas do .NET.
@@ -25,19 +26,19 @@ As novas APIs incluem:
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-O analisador de compatibilidade de plataforma é um dos analisadores de qualidade de código Roslyn. A partir do .NET 5,0, esses analisadores estão [incluídos no SDK do .net](../../fundamentals/code-analysis/overview.md). O analisador de compatibilidade de plataforma é habilitado por padrão somente para projetos direcionados `net5.0` ou para uma versão posterior. No entanto, você pode [habilitá](/visualstudio/code-quality/ca1416.md#configurability) -lo para projetos direcionados a outras estruturas.
+O analisador de compatibilidade de plataforma é um dos analisadores de qualidade de código Roslyn. Do .NET 5.0 em diante, esses analisadores estão [incluídos no SDK do .NET](../../fundamentals/code-analysis/overview.md). O analisador de compatibilidade de plataforma é habilitado por padrão somente para projetos direcionados `net5.0` ou para uma versão posterior. No entanto, você pode [habilitá-lo](../../fundamentals/code-analysis/quality-rules/ca1416.md#configurability) para projetos direcionados a outras estruturas.
 
 ## <a name="how-the-analyzer-determines-platform-dependency"></a>Como o analisador determina a dependência da plataforma
 
 - Uma **API** não-atributo é considerada para funcionar em **todas as plataformas de sistema operacional**.
 - Uma API marcada com `[SupportedOSPlatform("platform")]` é considerada apenas portátil para o sistema operacional especificado `platform` .
   - O atributo pode ser aplicado várias vezes para indicar **suporte a várias plataformas** ( `[SupportedOSPlatform("windows"), SupportedOSPlatform("Android6.0")]` ).
-  - O analisador produzirá um **aviso** se as APIs específicas da plataforma forem referenciadas sem um **contexto de plataforma**adequado:
+  - O analisador produzirá um **aviso** se as APIs específicas da plataforma forem referenciadas sem um **contexto de plataforma** adequado:
     - **Avisa** se o projeto não visa a plataforma com suporte (por exemplo, uma chamada à API específica do Windows e os destinos do projeto `<TargetFramework>net5.0-ios14.0</TargetFramework>` ).
     - **Avisa** se o projeto tem vários destinos ( `<TargetFramework>net5.0</TargetFramework>` ).
     - **Não avisa** se a API específica da plataforma é referenciada em um projeto que se destina a qualquer uma das **plataformas especificadas** (por exemplo, para uma chamada de API específica do Windows e os destinos do projeto `<TargetFramework>net5.0-windows</TargetFramework>` ).
     - **Não avisará** se a chamada à API específica da plataforma for protegida por métodos de verificação de plataforma correspondentes (por exemplo, `if(OperatingSystem.IsWindows())` ).
-    - **Não avisa** se a API específica da plataforma é referenciada do mesmo contexto específico da plataforma (o**site de chamada também é atribuído** com `[SupportedOSPlatform("platform")` ).
+    - **Não avisa** se a API específica da plataforma é referenciada do mesmo contexto específico da plataforma (o **site de chamada também é atribuído** com `[SupportedOSPlatform("platform")` ).
 - Uma API marcada com `[UnsupportedOSPlatform("platform")]` é considerada não suportada apenas no sistema operacional especificado `platform` , mas com suporte para todas as outras plataformas.
   - O atributo pode ser aplicado várias vezes com diferentes plataformas, por exemplo, `[UnsupportedOSPlatform("iOS"), UnsupportedOSPlatform("Android6.0")]` .
   - O analisador produzirá um **aviso** somente se o `platform` estiver em vigor para o site de chamada:
@@ -50,7 +51,7 @@ O analisador de compatibilidade de plataforma é um dos analisadores de qualidad
       </ItemGroup>
       ```
 
-    - **Não avisará** se você estiver criando um aplicativo que não tem como alvo a plataforma sem suporte ou que tem vários destinos e a plataforma não está incluída no grupo de itens padrão do [MSBuild `<SupportedPlatform>` ](https://github.com/dotnet/sdk/blob/master/src/Tasks/Microsoft.NET.Build.Tasks/targets/Microsoft.NET.SupportedPlatforms.props) .
+    - **Não avisará** se você estiver criando um aplicativo que não tem como alvo a plataforma sem suporte ou que tem vários destinos e a plataforma não está incluída no grupo de itens padrão do [MSBuild `<SupportedPlatform>`](https://github.com/dotnet/sdk/blob/master/src/Tasks/Microsoft.NET.Build.Tasks/targets/Microsoft.NET.SupportedPlatforms.props) .
 - Ambos os atributos podem ser instanciados com ou sem números de versão como parte do nome da plataforma.
   - Os números de versão estão no formato de `major.minor[.build[.revision]]` ; `major.minor` é necessário e `build` as `revision` partes e são opcionais. Por exemplo, "Windows 7.0" indica a versão 7,0 do Windows, mas "Windows" é interpretado como Windows 0,0.
 

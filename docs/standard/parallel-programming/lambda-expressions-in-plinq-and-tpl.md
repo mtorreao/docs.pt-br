@@ -1,7 +1,6 @@
 ---
 title: Expressões lambda em PLINQ e TPL
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - Action delegate, creating with lambda expression
 - lambda expressions, with Action and Func
 ms.assetid: 645b2c17-29d0-4ffa-8684-430743cc2f2d
-ms.openlocfilehash: 469c164630e1dab84b3d54c16c43d031ebf560ed
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 9d884bbcb248effa41b24788d530151783280a53
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063764"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817114"
 ---
 # <a name="lambda-expressions-in-plinq-and-tpl"></a>Expressões lambda em PLINQ e TPL
 
@@ -39,6 +38,6 @@ O exemplo a seguir para o método <xref:System.Threading.Tasks.Parallel.ForEach%
 [!code-csharp[System.Threading.Tasks.Parallel#02](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.parallel/cs/parallelforeach.cs#02)]
 [!code-vb[System.Threading.Tasks.Parallel#02](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallel/vb/parallelforeach.vb#02)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Programação paralela](index.md)

@@ -1,17 +1,16 @@
 ---
 title: XPathNavigator nas transformações
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 118f97d1-7110-4d1b-b0bd-4143252c0bb0
-ms.openlocfilehash: 59fb399d80e1d4d33d1a3c659d2ff74a37fd367d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b28a2d4991e2e4b14027460c0f3c97145862da2a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84282799"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818369"
 ---
 # <a name="xpathnavigator-in-transformations"></a>XPathNavigator nas transformações
 A classe de <xref:System.Xml.XPath.XPathNavigator> fornece de acesso aleatório somente leitura a dados e é criada para uso como uma entrada ao idioma extensível de folha de estilos para transformações (XSLT). É implementada em <xref:System.Xml.XPath.XPathDocument>, em <xref:System.Xml.XmlDataDocument>, e em <xref:System.Xml.XmlDocument>. <xref:System.Xml.XPath.XPathNavigator> é baseado no modelo de dados do World Wide Web Consortium (W3C) como descrito na seção 5 de recomendação de idioma do caminho de XML (XPath).  
@@ -114,6 +113,6 @@ public class sample
 <?xml version="1.0" encoding="utf-8"?>Joe  
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [A classe XslTransform implementa do processador XSLT](xsltransform-class-implements-the-xslt-processor.md)

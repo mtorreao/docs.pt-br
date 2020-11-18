@@ -3,13 +3,12 @@ title: Componentes de arquitetura do .NET
 description: Descreve os componentes de arquitetura do .NET, como .NET Standard, implementações .NET, tempos de execução .NET e ferramentas.
 author: cartermp
 ms.date: 10/05/2020
-ms.technology: dotnet-standard
-ms.openlocfilehash: 316063dbcfba5c92b4a9c6a17051e0a7fc178a3a
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 00d05ee328087042f7603779438436656c45be48
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224389"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819416"
 ---
 # <a name="net-architectural-components"></a>Componentes de arquitetura do .NET
 
@@ -45,7 +44,7 @@ O .NET 5 agora é a principal implementação, aquela que é o foco do desenvolv
 
 O .NET 5 é uma implementação de plataforma cruzada do .NET que foi projetada para lidar com cargas de trabalho de servidor e nuvem em escala. Ele também dá suporte a outras cargas de trabalho, incluindo aplicativos de desktop. Ele é executado no Windows, no macOS e no Linux. Ele implementa .NET Standard, portanto, o código que tem como alvo .NET Standard pode ser executado no .NET 5. [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core), [Windows Forms](/dotnet/desktop/winforms/windows-forms-overview)e [Windows Presentation Foundation (WPF)](/dotnet/desktop/wpf/) são executados no .NET 5.
 
-Para saber mais, consulte os recursos a seguir:
+Para obter mais informações, consulte os seguintes recursos:
 
 - [Introdução ao .NET](../core/introduction.md)
 - [Escolhendo entre o .NET 5 e o .NET Framework para aplicativos de servidor](choosing-core-framework-server.md)
@@ -116,7 +115,7 @@ Os documentos ISO/IEC oficiais estão disponíveis na página de padrões do ISO
 - **Tecnologia da informação — partições de Common Language Infrastructure (CLI) I para vi**: [ISO/IEC 23271:2012](https://standards.iso.org/ittf/PubliclyAvailableStandards/c058046_ISO_IEC_23271_2012(E).zip)
 - **Tecnologia da informação — Common Language Infrastructure (CLI) — relatório técnico sobre informações derivadas do arquivo XML da partição IV**: [ISO/IEC TR 23272:2011](https://standards.iso.org/ittf/PubliclyAvailableStandards/c057955_ISO_IEC_TR_23272_2011.zip)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Introdução ao .NET](../core/introduction.md)
 - [Introdução .NET Standard](net-standard.md)

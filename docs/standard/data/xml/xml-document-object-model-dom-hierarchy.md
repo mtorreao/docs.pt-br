@@ -1,14 +1,13 @@
 ---
 title: Hierarquia DOM (Document Object Model) XML
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 9d187d4f-c76e-4223-a670-cc290783ce47
-ms.openlocfilehash: a6099b6c5e30fbf2e4d5d4ed046369bc8f884845
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2a8bbd4f7cb3feb2a555af9862632a2fa493be32
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291429"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819247"
 ---
 # <a name="xml-document-object-model-dom-hierarchy"></a>Hierarquia DOM (Document Object Model) XML
 A ilustração a seguir mostra a hierarquia de classes para o DOM (Document Object Model) XML, com o nome do World Wide Web Consortium (W3C) entre parênteses junto com o nome da classe onde é relevante.  
@@ -36,6 +35,6 @@ Hierarquia DOM (Document Object Model) XML
   
  A classe **XmlLinkedNode** herda de **XmlNode**. Sua finalidade é substituir dois métodos de **XmlNode**: os métodos **PreviousSibling** e **NextSibling**. Esses métodos substituídos são então herdados e usados por **XmlCharacterData**, **XmlDeclaration**, **XmlDocumentType**, **XmlElement**, **XmlEntityReference** e **XmlProcessingInstruction**, que são classes que têm irmãos anteriores e seguintes.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [XML Document Object Model (DOM)](xml-document-object-model-dom.md)

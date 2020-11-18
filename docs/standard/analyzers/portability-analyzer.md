@@ -2,14 +2,13 @@
 title: O .NET Portability Analyzer – .NET
 description: Saiba como usar a ferramenta .NET Portability Analyzer para avaliar a portabilidade do seu código entre as várias implementações de .NET, incluindo .NET Core, .NET Standard, UWP e Xamarin.
 ms.date: 09/13/2019
-ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: d61dd9ebe744686885dad41ef700caaea9853f85
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 03b5f88a17baf8713b06bdd0eac192d9e093b969
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414793"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819702"
 ---
 # <a name="the-net-portability-analyzer"></a>O .NET Portability Analyzer
 
@@ -75,7 +74,7 @@ A seção Resumo de Portabilidade do relatório mostra o percentual de portabili
 
 ![Captura de tela dos detalhes de portabilidade.](./media/portability-analyzer/api-catalog-portablility-details.png)
 
-A seção de **detalhes** do relatório lista as APIs ausentes em qualquer uma das **plataformas de destino**selecionadas.
+A seção de **detalhes** do relatório lista as APIs ausentes em qualquer uma das **plataformas de destino** selecionadas.
 
 - Tipo de destino: o tipo tem uma API ausente de uma Plataforma de Destino
 - Membro de destino: o método está ausente de uma Plataforma de Destino

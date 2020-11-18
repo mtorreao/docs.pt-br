@@ -2,18 +2,17 @@
 title: Sincronizando dados para multithreading
 description: Saiba como sincronizar dados para multithreading no .NET. Escolha estratégias como regiões de código sincronizado, sincronização manual ou contextos sincronizados.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - synchronization, threads
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-ms.openlocfilehash: 63ee85f3d8bab865ce34566ec381d23676b27991
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 188090a968b49bd77279d35dc41f00e808299938
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188582"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819637"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Sincronizando dados para multithreading
 
@@ -62,7 +61,7 @@ O .NET fornece várias estratégias para sincronizar o acesso à instância e ao
 ### <a name="compiler-support"></a>Suporte de compilador  
  O Visual Basic e o C# dão suporte a uma palavra-chave de idioma que usa <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> e <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> para bloquear o objeto. O Visual Basic oferece suporte à instrução [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md); C# oferece suporte à instrução [lock](../../csharp/language-reference/keywords/lock-statement.md).  
   
- Em ambos os casos, se uma exceção for lançada no bloqueio de código, o bloqueio adquirido por **lock** ou **SyncLock** é liberado automaticamente. Os compiladores C# e Visual Basic emitem um bloco **try** / **finally** com **Monitor. Enter** no início do teste try e **Monitor. Exit** no bloco **finally** . Se uma exceção for lançada dentro do bloqueio **lock** ou **SyncLock** , o manipulador **finally** é executado para permitir que você faça qualquer trabalho de limpeza.  
+ Em ambos os casos, se uma exceção for lançada no bloqueio de código, o bloqueio adquirido por **lock** ou **SyncLock** é liberado automaticamente. Os compiladores C# e Visual Basic emitem um bloco **try** / **finally** com **Monitor. Enter** no início do teste try e **Monitor. Exit** no bloco **finally** . Se uma exceção for lançada dentro do bloqueio **lock** ou **SyncLock**, o manipulador **finally** é executado para permitir que você faça qualquer trabalho de limpeza.  
   
 ## <a name="synchronized-context"></a>Contexto sincronizado  
 

@@ -2,7 +2,6 @@
 title: Fluxo de dados (Task Parallel Library)
 description: Saiba como usar componentes de fluxo de aplicativos na TPL (biblioteca paralela de tarefas) para melhorar a robustez de aplicativos habilitados para simultaneidade.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
-ms.openlocfilehash: 2c7bbc9bf935159ab66bd2a61a60b9484e67018a
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 8c6eeab852f30535d721aa44b3c60e4b6febe0fc
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662544"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817634"
 ---
 # <a name="dataflow-task-parallel-library"></a>Fluxo de dados (Task Parallel Library)
  A TPL (biblioteca de paralelismo de tarefas) fornece componentes de fluxo de dados para ajudar a aumentar a robustez de aplicativos habilitados para simultaneidade. Esses componentes de fluxo de dados são coletivamente chamados de *biblioteca de fluxos de dados TPL*. Esse modelo de fluxo de dados promove programação baseada em ator que fornece transmissão de mensagem no processo para fluxo de dados de alta granularidade e tarefas de pipelining. Os componentes de fluxo de dados baseiam-se nos tipos e na infraestrutura de agendamento da TPL e integram-se ao suporte às linguagens C#, Visual Basic e F# para programação assíncrona. Esses componentes do fluxo de dados são úteis quando você tem várias operações que devem se comunicar umas com as outras de modo assíncrono ou quando você deseja processar dados à medida que são disponibilizados. Por exemplo, considere um aplicativo que processa dados de imagem de uma webcam. Usando o modelo de fluxo de dados, o aplicativo pode processar quadros de imagem assim que eles se tornarem disponíveis. Se o aplicativo aprimora os quadros de imagem, por exemplo, executando a redução de olhos vermelhos ou correção de luz, você pode criar um *pipeline* dos componentes de fluxo de dados. Cada estágio do pipeline pode usar mais funcionalidade de paralelismo de alta granularidade, assim como a funcionalidade fornecida pela TPL, para transformar a imagem.  
@@ -243,9 +242,9 @@ ms.locfileid: "84662544"
 ## <a name="custom-dataflow-blocks"></a>Blocos de fluxo de dados personalizados  
  Embora a biblioteca de fluxo de dados TPL forneça muitos tipos de bloco predefinidos, você pode criar tipos de bloco adicionais que tenham um comportamento personalizado. Implemente as interfaces <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> ou <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> diretamente ou use o método <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Encapsulate%2A> para criar um bloco complexo que encapsula o comportamento dos tipos de bloco existentes. Para obter exemplos que mostram como implementar a funcionalidade de bloco de fluxo de dados personalizado, consulte [Passo a passo: criando um tipo de bloco de fluxo de dados personalizado](walkthrough-creating-a-custom-dataflow-block-type.md).
 
-## <a name="related-topics"></a>Tópicos relacionados  
+## <a name="related-topics"></a>Tópicos Relacionados  
   
-|Title|Descrição|  
+|Título|Descrição|  
 |-----------|-----------------|  
 |[Como: gravar mensagens em um bloco de fluxo de dados e ler mensagens dele](how-to-write-messages-to-and-read-messages-from-a-dataflow-block.md)|Demonstra como gravar e ler mensagens de um objeto <xref:System.Threading.Tasks.Dataflow.BufferBlock%601>.|  
 |[Como: implementar um padrão de fluxo de dados de produtor-consumidor](how-to-implement-a-producer-consumer-dataflow-pattern.md)|Descreve como usar o modelo de fluxo de dados para implementar um padrão de produtor-consumidor, no qual o produtor envia mensagens para um bloco de fluxo de dados e o consumidor lê as mensagens desse bloco.|  

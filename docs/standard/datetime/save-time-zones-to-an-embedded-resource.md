@@ -1,7 +1,6 @@
 ---
 title: 'Como: salvar fusos horários em um recurso inserido'
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - time zone objects [.NET], serializing
 - time zone objects [.NET], saving
 ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
-ms.openlocfilehash: 3d355003b3e6309644fa1ccaf779b2e63b0523d2
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 23f86076b2858404f3dbc900d8c40a6509abe8db
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063398"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817595"
 ---
 # <a name="how-to-save-time-zones-to-an-embedded-resource"></a>Como: salvar fusos horários em um recurso inserido
 
@@ -55,7 +54,7 @@ Além de um arquivo de recurso que é compilado com o aplicativo, vários outros
 
 9. Adicione o arquivo. resx gerado ao projeto do Visual Studio do aplicativo.
 
-10. Usando a janela **Propriedades** no Visual Studio, certifique-se de que a propriedade de **ação de compilação** do arquivo. resx esteja definida como **recurso incorporado** .
+10. Usando a janela **Propriedades** no Visual Studio, certifique-se de que a propriedade de **ação de compilação** do arquivo. resx esteja definida como **recurso incorporado**.
 
 ## <a name="example"></a>Exemplo
 
@@ -68,7 +67,7 @@ Este exemplo serializa os <xref:System.TimeZoneInfo> objetos para que estejam di
 
 Como o <xref:System.Resources.ResXResourceWriter.Generate%2A?displayProperty=nameWithType> método adiciona informações completas de cabeçalho a um arquivo de recurso XML do .net, ele não pode ser usado para adicionar recursos a um arquivo existente. O exemplo trata disso verificando o arquivo SerializedTimeZones. resx e, se ele existir, armazenando todos os seus recursos além dos dois fusos horários serializados para um <xref:System.Collections.Generic.Dictionary%602> objeto genérico. O arquivo existente é excluído e os recursos existentes são adicionados a um novo arquivo SerializedTimeZones. resx. Os dados de fuso horário serializados também são adicionados a esse arquivo.
 
-Os campos de chave (ou **nome** ) dos recursos não devem conter espaços incorporados. O <xref:System.String.Replace%28System.String%2CSystem.String%29> método é chamado para remover todos os espaços inseridos nos identificadores de fuso horário antes que eles sejam atribuídos ao arquivo de recurso.
+Os campos de chave (ou **nome**) dos recursos não devem conter espaços incorporados. O <xref:System.String.Replace%28System.String%2CSystem.String%29> método é chamado para remover todos os espaços inseridos nos identificadores de fuso horário antes que eles sejam atribuídos ao arquivo de recurso.
 
 ## <a name="compiling-the-code"></a>Compilando o código
 
@@ -81,7 +80,7 @@ Este exemplo requer:
   [!code-csharp[TimeZone2.Serialization#2](../../../samples/snippets/csharp/VS_Snippets_CLR/TimeZone2.Serialization/cs/SerializeTimeZoneData.cs#2)]
   [!code-vb[TimeZone2.Serialization#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/TimeZone2.Serialization/vb/SerializeTimeZoneData.vb#2)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Datas, horas e fusos horários](index.md)
 - [Visão geral do fuso horário](time-zone-overview.md)

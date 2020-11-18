@@ -1,17 +1,16 @@
 ---
 title: Recuperação não ordenada do nó por nome ou índice
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
-ms.openlocfilehash: 6847f3c5d233b720f8f4c41cfc52ac663e5e810f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: e0b3b167dc43710e97a5f67fb0eb54c4742e1572
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288622"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819325"
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a>Recuperação não ordenada do nó por nome ou índice
 **XmlNamedNodeMap** é descrito na especificação do W3C (World Wide Web Consortium) como NamedNodeMap e é necessário para tratar um conjunto não ordenado de nós com a capacidade de fazer referência a nós pelos respectivos nome ou índice. A única maneira de ter acesso a um **XmlNamedNodeMap** é quando um **XmlNamedNodeMap** é retornado através de um método ou de uma propriedade. Há três métodos ou propriedades que retornam um **XmlNamedNodeMap**:  
@@ -117,6 +116,6 @@ class test {
   
  Para ver um exemplo de código adicional que mostra um atributo que está sendo removido de **AttributeCollection**, confira o [Método XmlNamedNodeMap.RemoveNamedItem](xref:System.Xml.XmlNamedNodeMap.RemoveNamedItem%2A). Para saber mais sobre métodos e propriedades, confira [Membros XmlNamedNodeMap](xref:System.Xml.XmlNamedNodeMap).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [XML Document Object Model (DOM)](xml-document-object-model-dom.md)

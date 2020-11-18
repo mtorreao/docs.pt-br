@@ -1,14 +1,13 @@
 ---
 title: Transformações XSLT sobre diferentes armazena
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 369850e9-004a-45d2-b5c3-5060d9135adb
-ms.openlocfilehash: 0eb98aad00227688df3e097ad674b44a29e5cb1a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7ed5c938b3c6995fb1315931a8d1fa21b57c1d9d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84281707"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818239"
 ---
 # <a name="xslt-transformations-over-different-stores"></a>Transformações XSLT sobre diferentes armazena
 > [!NOTE]
@@ -18,6 +17,6 @@ ms.locfileid: "84281707"
   
  Os DOM XML fornecem acesso a dados em documentos XML e classes adicionais para ler, gravar, e navega em documentos XML. Essas classes são suportadas no espaço de <xref:System.Xml> , que também unifica os DOM XML com os serviços de acesso a dados fornecidos pelo ADO.NET. <xref:System.Xml.XmlDataDocument> fornece acesso a dados relacional. <xref:System.Xml.XmlDataDocument> mapeia XML para dados relacionais no ADO.NET <xref:System.Data.DataSet>. Qualquer aplicativo baseado em .NET Framework pode usar as classes no namespace de <xref:System.Xml> para acessar e manipular documentos XML e dados relacionais em <xref:System.Xml.XmlDataDocument>. Essa implementação suporta arquiteturas n- múltiplas para coletando dados e de distribuição. Para saber mais, confira [Integração XML com dados relacionais e ADO.NET](xml-integration-with-relational-data-and-adonet.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [A classe XslTransform implementa do processador XSLT](xsltransform-class-implements-the-xslt-processor.md)

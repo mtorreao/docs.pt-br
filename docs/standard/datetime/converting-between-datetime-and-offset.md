@@ -2,7 +2,6 @@
 title: Convertendo entre DateTime e DateTimeOffset
 description: Converter entre valores de DateTimeOffset e valores de DateTime no .NET. A estrutura DateTimeOffset fornece mais reconhecimento de fuso horário do que a estrutura DateTime.
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -17,12 +16,12 @@ helpviewer_keywords:
 - Date data type, converting
 - local time conversions
 ms.assetid: b605ff97-0c45-4c24-833f-4c6a3e8be64c
-ms.openlocfilehash: cccfa37663e5a046b08f70a89ebb7f3566486139
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: af75a467c344e299037dc6c2077e4a6ef6df2df9
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063840"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818076"
 ---
 # <a name="converting-between-datetime-and-datetimeoffset"></a>Convertendo entre DateTime e DateTimeOffset
 
@@ -128,6 +127,6 @@ Observe que esse código faz duas suposições que, dependendo do aplicativo e d
 
 - Ele supõe que uma data e hora cujo deslocamento é igual ao do fuso horário local representa o fuso horário local. Como os valores de data e hora são dissociados do seu fuso horário original, este pode não ser o caso. A data e hora podem ter sido originadas em outro fuso horário com o mesmo deslocamento.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Datas, horas e fusos horários](index.md)

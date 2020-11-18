@@ -1,19 +1,18 @@
 ---
 title: Tarefas filho anexadas e desanexadas
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, child tasks
 ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
-ms.openlocfilehash: c8a5d2c1ccb8bb2d272c2582cd416cdfd75506d8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: e5d27aff02d0afd1c288e5d18e52be4745132a70
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84285684"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817517"
 ---
 # <a name="attached-and-detached-child-tasks"></a>Tarefas filho anexadas e desanexadas
 Uma *tarefa filho* (ou *tarefa aninhada*) é uma instância <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> que é criada no representante do usuário de outra tarefa, conhecida como a *tarefa pai*. Uma tarefa filho pode ser desanexada ou anexada. Um *tarefa filho desanexada* é uma tarefa que é executada de forma independente de sua tarefa pai. Uma *tarefa filho anexada* é uma tarefa aninhada criada com a opção <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> cuja tarefa pai não explicitamente ou por padrão proíbe-a de ser anexada. Uma tarefa pode criar qualquer número de tarefas filho anexadas e desanexadas que só são limitadas pelos recursos do sistema.  
@@ -47,7 +46,7 @@ Uma *tarefa filho* (ou *tarefa aninhada*) é uma instância <xref:System.Threadi
   
  Você pode usar tarefas filho anexadas para criar gráficos totalmente sincronizados de operações assíncronas.  
   
- No entanto, uma tarefa filho pode se anexada à tarefa pai somente se a tarefa pai não proibir tarefas filho anexadas. As tarefas pai podem explicitamente impedir que tarefas filho se anexem a elas especificando a opção <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> no constructo de classe da tarefa pai ou no método <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>. As tarefas pai podem explicitamente impedir que as tarefas filho se anexem a elas se elas tiverem sido criadas chamando o método <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType>. O exemplo a seguir ilustra isto. Ele é idêntico ao exemplo anterior, exceto que a tarefa pai é criada chamando o método <xref:System.Threading.Tasks.Task.Run%28System.Action%29?displayProperty=nameWithType> em vez do método <xref:System.Threading.Tasks.TaskFactory.StartNew%28System.Action%29?displayProperty=nameWithType>. Como a tarefa filho não consegue se anexar à sua tarefa pai, a saída do exemplo é imprevisível. Como as opções de criação da tarefa padrão para as sobrecargas <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> incluem <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType>, este exemplo é funcionalmente equivalente ao primeiro exemplo na seção "Tarefas filho desanexadas".  
+ No entanto, uma tarefa filho pode se anexada à tarefa pai somente se a tarefa pai não proibir tarefas filho anexadas. As tarefas pai podem explicitamente impedir que tarefas filho se anexem a elas especificando a opção <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> no constructo de classe da tarefa pai ou no método <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>. As tarefas pai podem explicitamente impedir que as tarefas filho se anexem a elas se elas tiverem sido criadas chamando o método <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType>. O exemplo a seguir ilustra essa situação. Ele é idêntico ao exemplo anterior, exceto que a tarefa pai é criada chamando o método <xref:System.Threading.Tasks.Task.Run%28System.Action%29?displayProperty=nameWithType> em vez do método <xref:System.Threading.Tasks.TaskFactory.StartNew%28System.Action%29?displayProperty=nameWithType>. Como a tarefa filho não consegue se anexar à sua tarefa pai, a saída do exemplo é imprevisível. Como as opções de criação da tarefa padrão para as sobrecargas <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> incluem <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType>, este exemplo é funcionalmente equivalente ao primeiro exemplo na seção "Tarefas filho desanexadas".  
   
  [!code-csharp[TPL_ChildTasks#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_childtasks/cs/child1a.cs#3)]
  [!code-vb[TPL_ChildTasks#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_childtasks/vb/child1a.vb#3)]  
@@ -76,7 +75,7 @@ Uma *tarefa filho* (ou *tarefa aninhada*) é uma instância <xref:System.Threadi
   
  É provável que você também queira impedir que uma tarefa filho se anexe à sua tarefa pai quando a tarefa filho não for concluída de maneira oportuna. Como a tarefa pai não termina até que todas as tarefas filho sejam concluídas, uma tarefa filho de longa duração pode fazer com que o aplicativo geral tenha um baixo desempenho. Para obter um exemplo que mostre como melhorar o desempenho do aplicativo impedindo que ele seja anexado à sua tarefa pai, confira [Como evitar que uma tarefa filho se anexe à sua tarefa pai](how-to-prevent-a-child-task-from-attaching-to-its-parent.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Programação paralela](index.md)
 - [Paralelismo de dados](data-parallelism-task-parallel-library.md)

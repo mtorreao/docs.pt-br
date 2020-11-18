@@ -2,7 +2,6 @@
 title: 'Como: assinar documento XML com assinaturas digitais'
 description: Saiba como assinar documentos XML com assinaturas digitais. Use classes no namespace System.Security.Cryptography.Xml no .NET.
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - XML signing
 - signing XML
 ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
-ms.openlocfilehash: e1457fd659ab63489bd4cfafd7731a4b098a2791
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 3265417d806104f9c4de96cb98de2330d62d1e48
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557067"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820157"
 ---
 # <a name="how-to-sign-xml-documents-with-digital-signatures"></a>Como: assinar documento XML com assinaturas digitais
 
@@ -130,5 +129,5 @@ Nunca incorpore uma chave privada diretamente em seu código-fonte.  Chaves inse
 - [Serviços criptográficos](cryptographic-services.md)
 - [Criptografia de plataforma cruzada](cross-platform-cryptography.md)
 - <xref:System.Security.Cryptography.Xml>
-- [Como: verificar as assinaturas digitais de documentos XML](how-to-verify-the-digital-signatures-of-xml-documents.md)
+- [Como verificar as assinaturas digitais de documentos XML](how-to-verify-the-digital-signatures-of-xml-documents.md)
 - [Proteção de dados do ASP.NET Core](/aspnet/core/security/data-protection/introduction)

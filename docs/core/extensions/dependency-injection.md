@@ -5,12 +5,12 @@ author: IEvangelist
 ms.author: dapine
 ms.date: 10/28/2020
 ms.topic: overview
-ms.openlocfilehash: 3692b9e779d450f07d47599417349bb57f72ac36
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: cc030e32846690b6544b99030800b50055a3113e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687570"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818824"
 ---
 # <a name="dependency-injection-in-net"></a>Injeção de dependência no .NET
 
@@ -66,7 +66,7 @@ Essa interface é implementada por um tipo concreto, `MessageWriter`:
 
 :::code language="csharp" source="snippets/configuration/dependency-injection/MessageWriter.cs":::
 
-O código de exemplo registra o `IMessageWriter` serviço com o tipo concreto `MessageWriter` . O <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddScoped%2A> método registra o serviço com um tempo de vida de escopo, o tempo de vida de uma única solicitação. Descreveremos posteriormente neste tópico os [tempos de vida do serviço](#service-lifetimes).
+O código de exemplo registra o `IMessageWriter` serviço com o tipo concreto `MessageWriter` . O <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddScoped%2A> método registra o serviço com um tempo de vida de escopo, o tempo de vida de uma única solicitação. Os [tempos de vida do serviço](#service-lifetimes) são descritos posteriormente neste artigo.
 
 :::code language="csharp" source="snippets/configuration/dependency-injection/Program.cs" highlight="16":::
 
@@ -220,7 +220,7 @@ O código-fonte de exemplo anterior registra duas implementações do `IMessageW
 
 :::code language="csharp" source="snippets/configuration/console-di-ienumerable/ExampleService.cs" highlight="9-18":::
 
-O `ExampleService` define dois parâmetros de Construtor; um único `IMessageWriter` e um `IEnumerable<IMessageWriter>` . O único `IMessageWriter` é o último implementação a ser registrado, enquanto que `IEnumerable<IMessageWriter>` representa todas as implementações registradas.
+O `ExampleService` define dois parâmetros de Construtor; um único `IMessageWriter` e um `IEnumerable<IMessageWriter>` . O único `IMessageWriter` é a última implementação a ser registrada, enquanto que `IEnumerable<IMessageWriter>` representa todas as implementações registradas.
 
 A estrutura também fornece `TryAdd{LIFETIME}` métodos de extensão, que registram o serviço somente se ainda não houver uma implementação registrada.
 
@@ -312,7 +312,7 @@ O provedor de serviços raiz é criado quando <xref:Microsoft.Extensions.Depende
 
 Os serviços com escopo são descartados pelo contêiner que os criou. Se um serviço com escopo for criado no contêiner raiz, o tempo de vida do serviço será efetivamente promovido para singleton porque é descartado apenas pelo contêiner raiz quando o aplicativo é desligado. A validação dos escopos de serviço detecta essas situações quando `BuildServiceProvider` é chamado.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Usar injeção de dependência no .NET](dependency-injection-usage.md)
 - [Diretrizes de injeção de dependência](dependency-injection-guidelines.md)

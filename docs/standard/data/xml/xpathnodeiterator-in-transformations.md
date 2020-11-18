@@ -1,17 +1,16 @@
 ---
 title: XPathNodeIterator nas transformações
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2bc6ddc6-674a-4f75-b264-abc35e4e5857
-ms.openlocfilehash: 88b8f4acbb9fa92d71659ee006ee544275353954
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cd8320071f1de15d503c94c138c02cab5742685c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84282747"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818427"
 ---
 # <a name="xpathnodeiterator-in-transformations"></a>XPathNodeIterator nas transformações
 <xref:System.Xml.XPath.XPathNodeIterator> fornece métodos para iterar sobre um conjunto de nós criados como resultado de uma consulta de idioma do caminho de XML (XPath) ou de um fragmento da árvore de resultado convertida em um nó definido por meio do método nó- definido. <xref:System.Xml.XPath.XPathNodeIterator> permite que você para iterar sobre os nós dentro desse conjunto de nó. Uma vez que um conjunto de nó é recuperado, a classe de <xref:System.Xml.XPath.XPathNodeIterator> fornece um cursor somente leitura, e somente para frente ao dataset selecionado de nós. O nó é criado na ordem de documento, o que move em chamar esse método para o nó seguir na ordem de documento. <xref:System.Xml.XPath.XPathNodeIterator> não cria uma árvore de nós de todos os nós no dataset. Em vez disso, fornece uma janela de único nó nos dados, expõe o nó subjacente que aponta para a medida que você se move ao redor de árvore. Os métodos e propriedades disponíveis de classe de <xref:System.Xml.XPath.XPathNodeIterator> permite que você obtenha informações do nó atual. Para obter uma lista de métodos e propriedades disponíveis, consulte <xref:System.Windows.Forms.ToolBar>.  
@@ -156,6 +155,6 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 </out>  
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [A classe XslTransform implementa do processador XSLT](xsltransform-class-implements-the-xslt-processor.md)

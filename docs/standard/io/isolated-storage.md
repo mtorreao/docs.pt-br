@@ -2,7 +2,6 @@
 title: Armazenamentos isolado
 description: Explore o armazenamento isolado, que é um mecanismo de armazenamento de dados que fornece isolamento & segurança definindo maneiras padronizadas de associar código a dados salvos.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - data storage using isolated storage
 - stores
@@ -19,12 +18,12 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: 3699edda6cce24adb8e932d6e8b8a0a5bb977142
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 1b123b231a7b6856ca527d00b5927c1a8d0e08b6
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282024"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819130"
 ---
 # <a name="isolated-storage"></a>Armazenamento isolado
 
@@ -247,7 +246,7 @@ Muitos aplicativos usam bancos de dados para armazenar e isolar os dados. Nesse 
 |[Como: Localizar arquivos e diretórios existentes no armazenamento isolado](how-to-find-existing-files-and-directories-in-isolated-storage.md)|Demonstra como ler a estrutura de diretórios e arquivos no armazenamento isolado.|
 |[Como: Ler e gravar em arquivos no armazenamento isolado](how-to-read-and-write-to-files-in-isolated-storage.md)|Fornece um exemplo de gravação de uma cadeia de caracteres em um arquivo de armazenamento isolado, seguida por sua leitura de volta.|
 |[Como: Excluir arquivos e diretórios no armazenamento isolado](how-to-delete-files-and-directories-in-isolated-storage.md)|Demonstra como excluir arquivos e diretórios isolados.|
-|[Arquivo e e/s de fluxo](index.md)|Explica como você pode executar acesso síncrono e assíncrono a fluxos de dados e arquivos.|
+|[E/S de arquivo e de fluxo](index.md)|Explica como você pode executar acesso síncrono e assíncrono a fluxos de dados e arquivos.|
 
 <a name="reference"></a>
 

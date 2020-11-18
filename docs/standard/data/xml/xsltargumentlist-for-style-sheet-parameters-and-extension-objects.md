@@ -1,17 +1,16 @@
 ---
 title: XsltArgumentList para parâmetros de folha de estilos e objetos de extensão
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
-ms.openlocfilehash: 1c69a6e78207e146c8dbd6cdc252f27f36ab37a2
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 6f0be433abcebed7f9da70225563a04170426314
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84281694"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818200"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>XsltArgumentList para parâmetros de folha de estilos e objetos de extensão
 A classe de <xref:System.Xml.Xsl.XsltArgumentList> contém o idioma extensível de folha de estilos para objetos de parâmetros de transformações (XSLT) e a extensão XSLT. Quando passados para o método de <xref:System.Xml.Xsl.XslTransform.Transform%2A> , esses parâmetros e objetos de extensão podem ser chamados de folhas de estilos.  
@@ -38,8 +37,8 @@ A classe de <xref:System.Xml.Xsl.XsltArgumentList> contém o idioma extensível 
   
 |Tipo W3C|Classe equivalente do .NET Framework (tipo)|Tipo XPath ou XSLT|  
 |--------------|----------------------------------------------|-----------------------------|  
-|String|System.String|XPath|  
-|Boolean|System.Boolean|XPath|  
+|Cadeia de caracteres|System.String|XPath|  
+|Booliano|System.Boolean|XPath|  
 |Número|System.Double|XPath|  
 |Fragmento da árvore de resultado|System.Xml.XPath.XPathNavigator|XSLT|  
 |Node Set|System.Xml.XPath.XPathNodeIterator|XPath|  
@@ -362,6 +361,6 @@ public class Sample
   
  `</circles>`  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [A classe XslTransform implementa do processador XSLT](xsltransform-class-implements-the-xslt-processor.md)

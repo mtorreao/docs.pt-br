@@ -1,17 +1,16 @@
 ---
 title: Compilação do esquema de XmlSchemaCollection
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 76f28770-7126-428f-9ed5-7b5ae8bad5ee
-ms.openlocfilehash: 3d517652665d6d0693e141d623483ff8946bbbf4
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7e93331d106dc74878e4d211c4dc6458c37088a3
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290234"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819117"
 ---
 # <a name="xmlschemacollection-schema-compilation"></a>Compilação do esquema de XmlSchemaCollection
 **XmlSchemaCollection** é um cache ou uma biblioteca em que esquemas XDR (XML-Data Reduced) e XSD (XML Schema definition language) podem ser armazenados e validados. **XmlSchemaCollection** melhora o desempenho armazenando em cache esquemas na memória em vez de acessá-los de um arquivo ou de uma URL.  
@@ -55,7 +54,7 @@ xsc.Add("urn:bookstore-schema", "Books.xsd");
 vr.Schemas.Add(xsc);  
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Validação de XDR com XmlSchemaCollection](xdr-validation-with-xmlschemacollection.md)
 - [Validação de XSD (esquema XML) com XmlSchemaCollection](xml-schema-xsd-validation-with-xmlschemacollection.md)

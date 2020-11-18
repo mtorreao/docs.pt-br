@@ -2,7 +2,6 @@
 title: 'Como: usar a proteção de dados'
 description: Saiba como usar a proteção de dados acessando a API de proteção de dados (DPAPI) no .NET.
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -17,12 +16,12 @@ helpviewer_keywords:
 - decryption
 - data [.NET], encryption
 ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
-ms.openlocfilehash: d3fe7ef3ddbc6e75a248101829b11a8abcb3c15a
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: ed1b18e2c6456b53559e8fb7e989f148fefd35c7
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282049"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820092"
 ---
 # <a name="how-to-use-data-protection"></a>Como: usar a proteção de dados
 
@@ -64,7 +63,7 @@ Este exemplo compila e executa somente ao direcionar .NET Framework e em execuç
   
 - Inclua o <xref:System> namespace,, <xref:System.IO> <xref:System.Security.Cryptography> e <xref:System.Text> .  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Modelo de criptografia](cryptography-model.md)
 - [Serviços criptográficos](cryptographic-services.md)

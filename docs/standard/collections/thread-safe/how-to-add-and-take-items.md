@@ -1,21 +1,20 @@
 ---
-title: Como adicionar e tirar itens individualmente de uma BlockingCollection
+title: 'Como: Adicionar e remover itens individualmente de uma BlockingCollection'
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - thread-safe collections, blocking dictionary
 ms.assetid: 38f2f3d8-15e5-4bf4-9c83-2b5b6f22bad1
-ms.openlocfilehash: f895be4c20a0cccad23e27db3d488355a614cbfc
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5501e108d1866fc1ae6fc66f9fe665b63373414b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287881"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818629"
 ---
-# <a name="how-to-add-and-take-items-individually-from-a-blockingcollection"></a>Como adicionar e tirar itens individualmente de uma BlockingCollection
+# <a name="how-to-add-and-take-items-individually-from-a-blockingcollection"></a>Como: Adicionar e remover itens individualmente de uma BlockingCollection
 Este exemplo mostra como adicionar e remover itens de um <xref:System.Collections.Concurrent.BlockingCollection%601> tanto com bloqueio quanto sem bloqueio. Para obter mais informações sobre <xref:System.Collections.Concurrent.BlockingCollection%601>, veja [Visão geral de BlockingCollection](blockingcollection-overview.md).  
   
  Para obter um exemplo de como enumerar um <xref:System.Collections.Concurrent.BlockingCollection%601> até que ele esteja vazio e nenhum elemento adicional seja adicionado, consulte [como: usar ForEach para remover itens de um BlockingCollection](how-to-use-foreach-to-remove.md).
@@ -32,7 +31,7 @@ Este exemplo mostra como adicionar e remover itens de um <xref:System.Collection
  [!code-csharp[CDS_BlockingCollection#02](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/example02.cs#02)]
  [!code-vb[CDS_BlockingCollection#02](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/nonblockingbc.vb#02)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [Visão geral de BlockingCollection](blockingcollection-overview.md)

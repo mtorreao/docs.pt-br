@@ -1,7 +1,6 @@
 ---
 title: Executando operações aritméticas com datas e horários
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - DateTime structure, arithmetic operations
 - DateTimeOffset structure, arithmetic operations
 ms.assetid: 87c7ddf2-f15e-48af-8602-b3642237e6d0
-ms.openlocfilehash: 8350454c0570bcf0ba82fa5d83639da0433c785c
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: af294c45359f6226c4189aabb34fdfc670bbd1c9
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063554"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817764"
 ---
 # <a name="performing-arithmetic-operations-with-dates-and-times"></a>Executando operações aritméticas com datas e horários
 
@@ -34,7 +33,7 @@ A <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> propriedade permit
 
 O <xref:System.DateTime.CompareTo%28System.DateTime%29> método relata que a hora local é anterior a (ou menor que) a hora UTC, e a operação de subtração indica que a diferença entre o UTC e a hora local de um sistema no fuso horário padrão do Pacífico americano é de sete horas. Mas como esses dois valores fornecem diferentes representações de um único ponto no tempo, é claro que, nesse caso, o intervalo de tempo é totalmente atribuível ao deslocamento do fuso horário local do UTC.
 
-Em geral, a <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> propriedade não afeta os resultados retornados por <xref:System.DateTime.Kind> métodos de comparação e aritméticos (já que a comparação de dois pontos idênticos no tempo indica), embora possa afetar a interpretação desses resultados. Por exemplo: 
+Em geral, a <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> propriedade não afeta os resultados retornados por <xref:System.DateTime.Kind> métodos de comparação e aritméticos (já que a comparação de dois pontos idênticos no tempo indica), embora possa afetar a interpretação desses resultados. Por exemplo:
 
 - O resultado de qualquer operação aritmética executada em dois valores de data e hora cujas <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> Propriedades são iguais <xref:System.DateTimeKind> refletem o intervalo de tempo real entre os dois valores. Da mesma forma, a comparação dos dois valores de data e hora reflete com precisão a relação entre horários.
 
@@ -83,7 +82,7 @@ Por exemplo, o código a seguir é semelhante ao código anterior, que adicionou
 [!code-csharp[System.DateTimeOffset.Conceptual#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual5.cs#5)]
 [!code-vb[System.DateTimeOffset.Conceptual#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual5.vb#5)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Datas, horas e fusos horários](index.md)
 - [Como: usar fusos horários em aritmética de data e hora](use-time-zones-in-arithmetic.md)

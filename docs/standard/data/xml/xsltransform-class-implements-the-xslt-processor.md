@@ -1,17 +1,16 @@
 ---
 title: A classe XslTransform implementa do processador XSLT
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 88373fe2-4a6b-44f9-8a62-8a3e348e3a46
-ms.openlocfilehash: eec5d6588d907e2d12b588ab3bfe743d6d1eaff9
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 57632321edf086b644da7ea4fca893edb589834f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84281603"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818169"
 ---
 # <a name="xsltransform-class-implements-the-xslt-processor"></a>A classe XslTransform implementa do processador XSLT
 
@@ -178,7 +177,7 @@ Console.WriteLine("Passing " + tmpDoc.OuterXml + " to print_root.xsl");
 xslt.Transform(tmpDoc, null, Console.Out, null);
 ```
 
-O exemplo usa os arquivos library. xml e print_root. xsl como entrada e gera o seguinte para o console:
+O exemplo usa os arquivos library.xml e print_root. xsl como entrada e gera o seguinte para o console:
 
 ```console
 Passing <book genre="novel" ISBN="1-861001-57-5"><title>Pride And Prejudice</title></book> to print_root.xsl
@@ -235,7 +234,7 @@ A tabela a seguir mostra os métodos obsoletos e novos para o método de <xref:S
 
 A propriedade <xref:System.Xml.Xsl.XslTransform.XmlResolver%2A?displayProperty=nameWithType> está obsoleta no .NET Framework versão 1.1. Em vez disso, use as novas sobrecargas <xref:System.Xml.Xsl.XslTransform.Transform%2A> que usam um objeto <xref:System.Xml.XmlResolver>.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Xml.Xsl.XslTransform>
 - [Transformações XSLT com a classe XslTransform](xslt-transformations-with-the-xsltransform-class.md)
