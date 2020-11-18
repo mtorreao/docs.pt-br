@@ -1,26 +1,25 @@
 ---
 title: Alterando declarações namespace em um documento XML
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: a2758f40-e497-4964-8d8d-1bb68af14dcd
-ms.openlocfilehash: e55486feeb427c95a9394ac83758e6052603921e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f4f081e1db2ccacf4714ad3009eefdfc290b2ed4
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291572"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821821"
 ---
-# <a name="changing-namespace-declarations-in-an-xml-document"></a><span data-ttu-id="3ef7b-102">Alterando declarações namespace em um documento XML</span><span class="sxs-lookup"><span data-stu-id="3ef7b-102">Changing Namespace Declarations in an XML Document</span></span>
-<span data-ttu-id="3ef7b-103">**XmlDocument** expõe declarações de namespace e atributos **xmlns** como parte do modelo de objeto de documento.</span><span class="sxs-lookup"><span data-stu-id="3ef7b-103">The **XmlDocument** exposes namespace declarations and **xmlns** attributes as part of the document object model.</span></span> <span data-ttu-id="3ef7b-104">São armazenados em **XmlDocument**, para que, quando você salvar o documento, ele possa preservar o local desses atributos.</span><span class="sxs-lookup"><span data-stu-id="3ef7b-104">These are stored in the **XmlDocument**, so when you save the document, it can preserve the location of those attributes.</span></span> <span data-ttu-id="3ef7b-105">Alterar esses atributos não tem efeito nas propriedades **Name**, **NamespaceURI** e **Prefix** de outros nós já na árvore.</span><span class="sxs-lookup"><span data-stu-id="3ef7b-105">Changing these attributes has no affect on the **Name**, **NamespaceURI**, and **Prefix** properties of other nodes already in the tree.</span></span> <span data-ttu-id="3ef7b-106">Por exemplo, se você carregar o documento a seguir, o elemento `test` terá **NamespaceURI** `123.`</span><span class="sxs-lookup"><span data-stu-id="3ef7b-106">For example, if you load the following document, then the `test` element has **NamespaceURI** `123.`</span></span>  
+# <a name="changing-namespace-declarations-in-an-xml-document"></a><span data-ttu-id="d3697-102">Alterando declarações namespace em um documento XML</span><span class="sxs-lookup"><span data-stu-id="d3697-102">Changing Namespace Declarations in an XML Document</span></span>
+<span data-ttu-id="d3697-103">**XmlDocument** expõe declarações de namespace e atributos **xmlns** como parte do modelo de objeto de documento.</span><span class="sxs-lookup"><span data-stu-id="d3697-103">The **XmlDocument** exposes namespace declarations and **xmlns** attributes as part of the document object model.</span></span> <span data-ttu-id="d3697-104">São armazenados em **XmlDocument**, para que, quando você salvar o documento, ele possa preservar o local desses atributos.</span><span class="sxs-lookup"><span data-stu-id="d3697-104">These are stored in the **XmlDocument**, so when you save the document, it can preserve the location of those attributes.</span></span> <span data-ttu-id="d3697-105">Alterar esses atributos não tem efeito nas propriedades **Name**, **NamespaceURI** e **Prefix** de outros nós já na árvore.</span><span class="sxs-lookup"><span data-stu-id="d3697-105">Changing these attributes has no affect on the **Name**, **NamespaceURI**, and **Prefix** properties of other nodes already in the tree.</span></span> <span data-ttu-id="d3697-106">Por exemplo, se você carregar o documento a seguir, o elemento `test` terá **NamespaceURI** `123.`</span><span class="sxs-lookup"><span data-stu-id="d3697-106">For example, if you load the following document, then the `test` element has **NamespaceURI** `123.`</span></span>  
   
 ```xml  
 <test xmlns="123"/>  
 ```  
   
- <span data-ttu-id="3ef7b-107">Se você remover o atributo `xmlns` como indicado a seguir, o elemento `test` ainda terá o **NamespaceURI**`123`.</span><span class="sxs-lookup"><span data-stu-id="3ef7b-107">If you remove the `xmlns` attribute as follows, then the `test` element still has the **NamespaceURI** of `123`.</span></span>  
+ <span data-ttu-id="d3697-107">Se você remover o atributo `xmlns` como indicado a seguir, o elemento `test` ainda terá o **NamespaceURI**`123`.</span><span class="sxs-lookup"><span data-stu-id="d3697-107">If you remove the `xmlns` attribute as follows, then the `test` element still has the **NamespaceURI** of `123`.</span></span>  
   
 ```vb  
 doc.documentElement.RemoveAttribute("xmlns")  
@@ -30,7 +29,7 @@ doc.documentElement.RemoveAttribute("xmlns")
 doc.documentElement.RemoveAttribute("xmlns");  
 ```  
   
- <span data-ttu-id="3ef7b-108">Da mesma forma, se você adicionar um atributo diferente de `xmlns` ao elemento `doc` como indicado a seguir, o elemento `test` ainda terá **NamespaceURI** `123`.</span><span class="sxs-lookup"><span data-stu-id="3ef7b-108">Likewise, if you add a different `xmlns` attribute to the `doc` element as follows, then the `test` element still has **NamespaceURI** `123`.</span></span>  
+ <span data-ttu-id="d3697-108">Da mesma forma, se você adicionar um atributo diferente de `xmlns` ao elemento `doc` como indicado a seguir, o elemento `test` ainda terá **NamespaceURI** `123`.</span><span class="sxs-lookup"><span data-stu-id="d3697-108">Likewise, if you add a different `xmlns` attribute to the `doc` element as follows, then the `test` element still has **NamespaceURI** `123`.</span></span>  
   
 ```vb  
 doc.documentElement.SetAttribute("xmlns","456")
@@ -40,8 +39,8 @@ doc.documentElement.SetAttribute("xmlns","456")
 doc.documentElement.SetAttribute("xmlns","456");  
 ```  
   
- <span data-ttu-id="3ef7b-109">Portanto, alterar atributos `xmlns` não terá nenhum efeito até que você salve e recarregue o objeto **XmlDocument**.</span><span class="sxs-lookup"><span data-stu-id="3ef7b-109">Therefore, changing `xmlns` attributes will have no affect until you save and reload the **XmlDocument** object.</span></span>  
+ <span data-ttu-id="d3697-109">Portanto, alterar atributos `xmlns` não terá nenhum efeito até que você salve e recarregue o objeto **XmlDocument**.</span><span class="sxs-lookup"><span data-stu-id="d3697-109">Therefore, changing `xmlns` attributes will have no affect until you save and reload the **XmlDocument** object.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3ef7b-110">Veja também</span><span class="sxs-lookup"><span data-stu-id="3ef7b-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d3697-110">Confira também</span><span class="sxs-lookup"><span data-stu-id="d3697-110">See also</span></span>
 
-- [<span data-ttu-id="3ef7b-111">XML Document Object Model (DOM)</span><span class="sxs-lookup"><span data-stu-id="3ef7b-111">XML Document Object Model (DOM)</span></span>](xml-document-object-model-dom.md)
+- [<span data-ttu-id="d3697-111">XML Document Object Model (DOM)</span><span class="sxs-lookup"><span data-stu-id="d3697-111">XML Document Object Model (DOM)</span></span>](xml-document-object-model-dom.md)
