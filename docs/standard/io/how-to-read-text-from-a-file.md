@@ -2,7 +2,6 @@
 title: 'Como: ler texto de um arquivo'
 description: Neste artigo, consulte exemplos de como ler texto de forma síncrona ou assíncrona de um arquivo de texto, usando a classe StreamReader no .NET para aplicativos da área de trabalho.
 ms.date: 01/03/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - data streams, reading text from files
 - I/O [.NET], reading text from files
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
-ms.openlocfilehash: 0e90887c2cc4a54355c51facf91c9cc3da7e4320
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 7c772ec1de41d0ba2b4ef0d924a252326ee6909e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189323"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823362"
 ---
 # <a name="how-to-read-text-from-a-file"></a>Como: ler texto de um arquivo
 
@@ -59,4 +58,4 @@ O exemplo a seguir mostra uma operação de leitura síncrona em um aplicativo d
 - [Como: gravar texto em um arquivo](how-to-write-text-to-a-file.md)  
 - [Como: ler caracteres de uma cadeia de caracteres](how-to-read-characters-from-a-string.md)  
 - [Como: gravar caracteres em uma cadeia de caracteres](how-to-write-characters-to-a-string.md)  
-- [E/S de arquivo e de fluxo](index.md)
+- [Arquivo e e/s de fluxo](index.md)

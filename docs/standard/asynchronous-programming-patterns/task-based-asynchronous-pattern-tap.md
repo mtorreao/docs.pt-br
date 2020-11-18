@@ -2,7 +2,6 @@
 title: Padrão assíncrono baseado em tarefa (TAP)
 description: Saiba mais sobre o padrão assíncrono baseado em tarefa (toque). TOQUE em é o padrão de design assíncrono recomendado para desenvolvimento no .NET.
 ms.date: 02/26/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET support for
 - .NET, asynchronous design patterns
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
-ms.openlocfilehash: 2987e7baa52f627d1da41af21d05bfa22a247fbb
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: f194a0bafa0ab7b9606d72f091dbb12e94f31099
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889238"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824012"
 ---
 # <a name="task-based-asynchronous-pattern"></a>Padrão assíncrono baseado em tarefa
 
@@ -31,7 +30,7 @@ O TAP usa um único método para representar o início e a conclusão de uma ope
   
  Os parâmetros de um método TAP devem corresponder aos parâmetros de suas contrapartes síncronas e devem ser fornecidos na mesma ordem.  No entanto, os parâmetros `out` e `ref` são isentos dessa regra e devem ser evitados inteiramente. Quaisquer dados retornados por um parâmetro `out` ou `ref` deve, em vez disso, ser retornado como parte do `TResult` retornado por <xref:System.Threading.Tasks.Task%601> e deve usar uma tupla ou uma estrutura de dados personalizada para acomodar diversos valores. Além disso, considere adicionar um <xref:System.Threading.CancellationToken> parâmetro mesmo se a contraparte síncrona do método Tap não oferecer uma.
 
- Os métodos que são dedicados exclusivamente à criação, ao tratamento ou à combinação de tarefas (onde a intenção assíncrona do método está clara no nome do método ou no nome do tipo ao qual o método pertence) não precisam seguir esse padrão de nomenclatura; esses métodos são geralmente denominados *combinadores* . Os exemplos de combinadores incluem <xref:System.Threading.Tasks.Task.WhenAll%2A> e <xref:System.Threading.Tasks.Task.WhenAny%2A> e são discutidos na seção [Usando os combinadores baseados em tarefas internos](consuming-the-task-based-asynchronous-pattern.md#combinators) do artigo [Consumindo o padrão assíncrono baseado em tarefa](consuming-the-task-based-asynchronous-pattern.md).  
+ Os métodos que são dedicados exclusivamente à criação, ao tratamento ou à combinação de tarefas (onde a intenção assíncrona do método está clara no nome do método ou no nome do tipo ao qual o método pertence) não precisam seguir esse padrão de nomenclatura; esses métodos são geralmente denominados *combinadores*. Os exemplos de combinadores incluem <xref:System.Threading.Tasks.Task.WhenAll%2A> e <xref:System.Threading.Tasks.Task.WhenAny%2A> e são discutidos na seção [Usando os combinadores baseados em tarefas internos](consuming-the-task-based-asynchronous-pattern.md#combinators) do artigo [Consumindo o padrão assíncrono baseado em tarefa](consuming-the-task-based-asynchronous-pattern.md).  
   
  Para obter exemplos de como a sintaxe do TAP difere da sintaxe usada em padrões de programação assíncronos herdados, como APM (Asynchronous Programming Model) e EAP (Event-based Asynchronous Pattern), confira [Padrões de programação assíncrona ](index.md).  
   
@@ -53,7 +52,7 @@ O TAP usa um único método para representar o início e a conclusão de uma ope
  O chamador do método TAP pode bloquear a espera para o método TAP ser concluído com a espera síncrona na tarefa resultante ou pode executar código adicional (continuação) quando a operação assíncrona é concluída. O criador do código de continuação tem o controle sobre o local em que o código é executado. Você pode criar o código de continuação explicitamente com os métodos da classe <xref:System.Threading.Tasks.Task> (por exemplo, <xref:System.Threading.Tasks.Task.ContinueWith%2A>) ou implicitamente usando o suporte à linguagem compilado nas continuações (por exemplo, `await` em C#, `Await` em Visual Basic, `AwaitValue` em F#).  
   
 ## <a name="task-status"></a>Status da tarefa  
- A classe <xref:System.Threading.Tasks.Task> fornece um ciclo de vida para operações assíncronas, e esse ciclo é representado pela enumeração <xref:System.Threading.Tasks.TaskStatus>. Para oferecer suporte a casos extremos de tipos que derivam de <xref:System.Threading.Tasks.Task> e de <xref:System.Threading.Tasks.Task%601> e suporte à separação da construção do agendamento, a classe <xref:System.Threading.Tasks.Task> expõe um método <xref:System.Threading.Tasks.Task.Start%2A>. As tarefas que são criadas pelos construtores públicos <xref:System.Threading.Tasks.Task> são chamadas de *tarefas frias* , porque começam seu ciclo de vida no estado não agendado <xref:System.Threading.Tasks.TaskStatus.Created> e são agendadas somente quando <xref:System.Threading.Tasks.Task.Start%2A> é chamado nessas instâncias.
+ A classe <xref:System.Threading.Tasks.Task> fornece um ciclo de vida para operações assíncronas, e esse ciclo é representado pela enumeração <xref:System.Threading.Tasks.TaskStatus>. Para oferecer suporte a casos extremos de tipos que derivam de <xref:System.Threading.Tasks.Task> e de <xref:System.Threading.Tasks.Task%601> e suporte à separação da construção do agendamento, a classe <xref:System.Threading.Tasks.Task> expõe um método <xref:System.Threading.Tasks.Task.Start%2A>. As tarefas que são criadas pelos construtores públicos <xref:System.Threading.Tasks.Task> são chamadas de *tarefas frias*, porque começam seu ciclo de vida no estado não agendado <xref:System.Threading.Tasks.TaskStatus.Created> e são agendadas somente quando <xref:System.Threading.Tasks.Task.Start%2A> é chamado nessas instâncias.
 
  Todas tarefas restantes começam seu ciclo de vida em um estado quente, o que significa que as operações assíncronas que elas representam já foram iniciadas, e seus status de tarefa são um valor de enumeração diferente de <xref:System.Threading.Tasks.TaskStatus.Created?displayProperty=nameWithType>. Todas as tarefas que são retornadas dos métodos TAP devem ser ativadas. **Se um método TAP usa internamente um construtor de tarefa para instanciar a tarefa a ser retornada, o método TAP deve chamar <xref:System.Threading.Tasks.Task.Start%2A> no <xref:System.Threading.Tasks.Task> objeto antes de retorná-lo.** Os consumidores de um método TAP podem presumir com segurança que a tarefa retornada está ativa e não devem tentar chamar <xref:System.Threading.Tasks.Task.Start%2A> em qualquer <xref:System.Threading.Tasks.Task> que é retornado de um método TAP. A chamada <xref:System.Threading.Tasks.Task.Start%2A> em uma tarefa ativa resulta em uma exceção de <xref:System.InvalidOperationException>.  
   

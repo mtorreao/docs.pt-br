@@ -2,7 +2,6 @@
 title: Criação de novas cadeias de caracteres no .NET
 description: Aprenda a criar cadeias de caracteres usando atribuição, construtores de classe ou métodos System. String que combinam várias cadeias de caracteres, matrizes de cadeias de caracteres ou objetos no .NET.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - strings [.NET], creating
 - Insert method
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
-ms.openlocfilehash: 7dedaf61f56f19343299c841bb4cee70fb9c767a
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: a00274b7b6b7e7a54d8546f2176109688a4c4678
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889433"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824877"
 ---
 # <a name="creating-new-strings-in-net"></a>Criação de novas cadeias de caracteres no .NET
 
@@ -34,7 +33,7 @@ O .NET permite que as cadeias de caracteres sejam criadas usando atribuição si
 ## <a name="methods-that-return-strings"></a>Métodos que retornam cadeias de caracteres  
  A tabela a seguir lista vários métodos úteis que retornam novos objetos de cadeia de caracteres.  
   
-|Nome do método|Uso|  
+|Nome do método|Use|  
 |-----------------|---------|  
 |<xref:System.String.Format%2A?displayProperty=nameWithType>|Cria uma cadeia de caracteres formatada de um conjunto de objetos de entrada.|  
 |<xref:System.String.Concat%2A?displayProperty=nameWithType>|Cria cadeias de caracteres de duas ou mais cadeias de caracteres.|  
@@ -43,7 +42,7 @@ O .NET permite que as cadeias de caracteres sejam criadas usando atribuição si
 |<xref:System.String.CopyTo%2A?displayProperty=nameWithType>|Copia caracteres especificados de uma cadeia de caracteres para uma posição especificada em uma matriz de caracteres.|  
   
 ### <a name="format"></a>Formatar  
- Você pode usar o método **String.Format** para criar cadeias de caracteres formatadas e concatenar cadeias de caracteres que representam vários objetos. Este método converte automaticamente qualquer objeto passado em uma cadeia de caracteres. Por exemplo, se seu aplicativo precisar exibir um valor **Int32** e um valor **DateTime** para o usuário, você pode facilmente criar uma cadeia de caracteres para representar esses valores usando o método **Format** . Para obter informações sobre as convenções de formatação usadas com esse método, consulte a seção sobre [formatação de composição](composite-formatting.md).  
+ Você pode usar o método **String.Format** para criar cadeias de caracteres formatadas e concatenar cadeias de caracteres que representam vários objetos. Este método converte automaticamente qualquer objeto passado em uma cadeia de caracteres. Por exemplo, se seu aplicativo precisar exibir um valor **Int32** e um valor **DateTime** para o usuário, você pode facilmente criar uma cadeia de caracteres para representar esses valores usando o método **Format**. Para obter informações sobre as convenções de formatação usadas com esse método, consulte a seção sobre [formatação de composição](composite-formatting.md).  
   
  O exemplo a seguir usa o método **Format** para criar uma cadeia de caracteres que usa uma variável de inteiro.  
   
@@ -53,7 +52,7 @@ O .NET permite que as cadeias de caracteres sejam criadas usando atribuição si
  Neste exemplo, <xref:System.DateTime.Now%2A?displayProperty=nameWithType> exibe a data e hora atuais da maneira especificada pela cultura associada ao thread atual.  
   
 ### <a name="concat"></a>Concat  
- O método **String.Concat** pode ser usado para criar facilmente um novo objeto de cadeia de caracteres de dois ou mais objetos existentes. Ele fornece uma maneira independente da linguagem para concatenar cadeias de caracteres. Este método aceita qualquer classe derivada de **System.Object** . O exemplo a seguir cria uma cadeia de caracteres de dois objetos de cadeia de caracteres existentes e um caractere de separação.  
+ O método **String.Concat** pode ser usado para criar facilmente um novo objeto de cadeia de caracteres de dois ou mais objetos existentes. Ele fornece uma maneira independente da linguagem para concatenar cadeias de caracteres. Este método aceita qualquer classe derivada de **System.Object**. O exemplo a seguir cria uma cadeia de caracteres de dois objetos de cadeia de caracteres existentes e um caractere de separação.  
   
  [!code-csharp[Strings.Creating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#2)]
  [!code-vb[Strings.Creating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#2)]  
@@ -80,7 +79,7 @@ O .NET permite que as cadeias de caracteres sejam criadas usando atribuição si
  [!code-csharp[Strings.Creating#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#5)]
  [!code-vb[Strings.Creating#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#5)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Operações básicas de cadeia de caracteres](basic-string-operations.md)
 - [Formatação composta](composite-formatting.md)

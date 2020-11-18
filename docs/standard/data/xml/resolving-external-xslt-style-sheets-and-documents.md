@@ -1,14 +1,13 @@
 ---
 title: Resolvendo folhas de estilos XSLT e documentos externos
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
-ms.openlocfilehash: 8e7f66d67f2520b47c30307a98ed2f3fb08455df
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 370d1df296666e5b5c162db34bd7fb35ae8a2e0e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291468"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823583"
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>Resolvendo folhas de estilos XSLT e documentos externos
 Há várias vezes durante uma transformação quando você precise resolver recursos externos.  
@@ -41,14 +40,14 @@ Há várias vezes durante uma transformação quando você precise resolver recu
   
  Quando o método de <xref:System.Xml.Xsl.XslTransform.Transform%2A> é chamado, as permissões são calculadas com a evidência fornecida em tempo de carregamento, e esse conjunto de permissões é atribuído ao processo inteiro de transformação. Se a função de `document()` tentar iniciar uma ação que requer permissões não encontradas no dataset, uma exceção é lançada.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Transformações XSLT com a classe XslTransform](xslt-transformations-with-the-xsltransform-class.md)
 - [A classe XslTransform implementa do processador XSLT](xsltransform-class-implements-the-xslt-processor.md)
 - [Saída de um XslTransform](outputs-from-an-xsltransform.md)
 - [Transformações XSLT sobre diferentes armazena](xslt-transformations-over-different-stores.md)
 - [XsltArgumentList para parâmetros de folha de estilos e objetos de extensão](xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md)
-- [Script de folha de estilos XSLT usando\<msxsl:script>](xslt-stylesheet-scripting-using-msxsl-script.md)
+- [Script de folha de estilos XSLT usando \<msxsl:script>](xslt-stylesheet-scripting-using-msxsl-script.md)
 - [Suporte à função msxsl:node-set()](support-for-the-msxsl-node-set-function.md)
 - [XPathNavigator nas transformações](xpathnavigator-in-transformations.md)
 - [XPathNodeIterator nas transformações](xpathnodeiterator-in-transformations.md)

@@ -4,12 +4,12 @@ description: Este artigo fornece uma breve visão geral dos conceitos de teste, 
 author: IEvangelist
 ms.author: dapine
 ms.date: 10/19/2020
-ms.openlocfilehash: 36e88cc059447a98931593e0535c70cbc92a2cf4
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 137a8f4e3bc9e3be529d5034c233d283cf158b31
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223471"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824851"
 ---
 # <a name="testing-in-net"></a>Teste no .NET
 
@@ -43,9 +43,9 @@ O .net é uma plataforma de desenvolvimento em várias linguagens, e você pode 
 
 ### <a name="xunit"></a>xUnit
 
-o [xUnit](https://xunit.net) é uma ferramenta de teste de unidade gratuita, com foco na Comunidade para .net. Escrito pelo inventário original do NUnit v2, o xUnit.net é a tecnologia mais recente para aplicativos .NET de teste de unidade. xUnit.net funciona com o reCodeRush, o TestDriven.NET e o [Xamarin](/apps/xamarin). É um projeto do [.net Foundation](https://dotnetfoundation.org) e opera sob seu código de conduta.
+o [xUnit](https://xunit.net) é uma ferramenta de teste de unidade gratuita, com foco na Comunidade para .net. Escrito pelo inventário original do NUnit v2, o xUnit.net é a tecnologia mais recente para aplicativos .NET de teste de unidade. xUnit.net funciona com o reCodeRush, o TestDriven.NET e o [Xamarin](https://dotnet.microsoft.com/apps/xamarin). É um projeto do [.net Foundation](https://dotnetfoundation.org) e opera sob seu código de conduta.
 
-Para saber mais, consulte os recursos a seguir:
+Para obter mais informações, consulte os seguintes recursos:
 
 - [Testes de unidade com C #](unit-testing-with-dotnet-test.md)
 - [Teste de unidade com F #](unit-testing-fsharp-with-dotnet-test.md)
@@ -55,7 +55,7 @@ Para saber mais, consulte os recursos a seguir:
 
 O [NUnit](https://nunit.org) é uma estrutura de teste de unidade para todas as linguagens .net. Inicialmente portado do JUnit, a versão de produção atual foi reescrita com muitos recursos novos e suporte para uma ampla variedade de plataformas .NET. É um projeto do [.net Foundation](https://dotnetfoundation.org).
 
-Para saber mais, consulte os recursos a seguir:
+Para obter mais informações, consulte os seguintes recursos:
 
 - [Testes de unidade com C #](unit-testing-with-nunit.md)
 - [Teste de unidade com F #](unit-testing-fsharp-with-nunit.md)
@@ -63,7 +63,7 @@ Para saber mais, consulte os recursos a seguir:
 
 ### <a name="mstest"></a>MSTest
 
-[MSTest](https://github.com/Microsoft/testfx-docs) é a estrutura de teste da Microsoft para todas as linguagens .net. Ele é extensível e funciona com a CLI do .NET e o Visual Studio. Para saber mais, consulte os recursos a seguir:
+[MSTest](https://github.com/Microsoft/testfx-docs) é a estrutura de teste da Microsoft para todas as linguagens .net. Ele é extensível e funciona com a CLI do .NET e o Visual Studio. Para obter mais informações, consulte os seguintes recursos:
 
 - [Testes de unidade com C #](unit-testing-with-mstest.md)
 - [Teste de unidade com F #](unit-testing-fsharp-with-mstest.md)

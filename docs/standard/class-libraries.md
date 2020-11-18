@@ -3,14 +3,13 @@ title: Bibliotecas de classes do .NET
 description: Saiba como as bibliotecas de classes do .NET permitem que você agrupe funcionalidades úteis em módulos que podem ser usados por vários aplicativos.
 author: richlander
 ms.date: 06/20/2016
-ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: 35e408ed3552550f19879409128784b2513e56c8
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: bbf8d5fa44af931e39f2bf1344c13f9d9d9bfe05
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224265"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823947"
 ---
 # <a name="net-class-libraries"></a>Bibliotecas de classes do .NET
 
@@ -42,7 +41,7 @@ Muitos desenvolvedores de biblioteca mudam de produzir várias bibliotecas espec
 
 As bibliotecas do .NET Standard são uma substituição dos conceitos de bibliotecas específicas da plataforma e portáteis. Elas são específicas da plataforma no sentido de que expõem toda a funcionalidade da plataforma subjacente (sem plataformas sintéticas ou interseções de plataforma). Elas são portáteis no sentido de que funcionam em todas as plataformas de suporte.
 
-.NET Standard expõe um conjunto de _contratos_de biblioteca. As implementações do .NET devem dar suporte a cada contrato, completamente ou não dar nenhum suporte. Cada implementação, portanto, dá suporte a um conjunto de contratos do .NET Standard. O resultado é que há suporte para cada biblioteca de classes do .NET Standard nas plataformas compatíveis com suas dependências de contrato.
+.NET Standard expõe um conjunto de _contratos_ de biblioteca. As implementações do .NET devem dar suporte a cada contrato, completamente ou não dar nenhum suporte. Cada implementação, portanto, dá suporte a um conjunto de contratos do .NET Standard. O resultado é que há suporte para cada biblioteca de classes do .NET Standard nas plataformas compatíveis com suas dependências de contrato.
 
 O .NET Standard não expõe toda a funcionalidade do .NET Framework (nem é uma meta), no entanto, eles expõem muitas APIs mais do que as bibliotecas de classes portáteis. Mais APIs serão adicionadas ao longo do tempo.
 

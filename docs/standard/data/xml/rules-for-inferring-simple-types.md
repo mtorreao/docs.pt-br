@@ -1,14 +1,13 @@
 ---
 title: Regras para inferir tipos simples
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
-ms.openlocfilehash: 571019d13433312a5d31f581c3527aae901bbba7
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 817a35c607f810da0a3e2dc681d27ea997c5fcc7
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289064"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823544"
 ---
 # <a name="rules-for-inferring-simple-types"></a>Regras para inferir tipos simples
 Descreve como a classe de <xref:System.Xml.Schema.XmlSchemaInference> infere o tipo de dados para atributos e elementos.  
@@ -74,7 +73,7 @@ Os seguintes esquema- está definindo os atributos que são ignorados durante a 
 |`xsi:schemaLocation`|Se `xsi:schemaLocation` é encontrado, será ignorado.|  
 |`xsi:noNamespaceSchemaLocation`|Se `xsi:noNamespaceSchemaLocation` é encontrado, será ignorado.|  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [SOM (Schema Object Model) XML](xml-schema-object-model-som.md)
 - [Inferindo esquemas de documentos XML](inferring-schemas-from-xml-documents.md)

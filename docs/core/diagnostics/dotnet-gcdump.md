@@ -1,25 +1,39 @@
 ---
-title: dotnet-gcdump-.NET Core
-description: Instalando e usando a ferramenta de linha de comando dotnet-gcdump.
-ms.date: 07/26/2020
-ms.openlocfilehash: c73afae9ecdfa907e9655634a0ac355cab4ef558
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+title: dotnet-ferramenta de diagnóstico do gcdump – CLI do .NET
+description: Saiba como instalar e usar a ferramenta de CLI do dotnet-gcdump para coletar despejos de GC (coletor de lixo) de processos do .NET em tempo real usando o .NET EventPipe.
+ms.date: 11/17/2020
+ms.openlocfilehash: 59de1845ada9e5bdd0b24bf4312517283324ce94
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687610"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826034"
 ---
 # <a name="heap-analysis-tool-dotnet-gcdump"></a>Ferramenta de análise de heap (dotNet-gcdump)
 
 **Este artigo aplica-se a:** ✔️ SDK do .net Core 3,1 e versões posteriores
 
-## <a name="install-dotnet-gcdump"></a>Instalar dotnet-gcdump
+## <a name="install"></a>Instalar
 
-Para instalar a versão de lançamento mais recente do `dotnet-gcdump` [pacote NuGet](https://www.nuget.org/packages/dotnet-gcdump), use o comando de [instalação da ferramenta dotnet](../tools/dotnet-tool-install.md) :
+Há duas maneiras de baixar e instalar `dotnet-gcdump` :
 
-```dotnetcli
-dotnet tool install -g dotnet-gcdump
-```
+- **ferramenta global dotnet:**
+
+  Para instalar a versão de lançamento mais recente do `dotnet-gcdump` [pacote NuGet](https://www.nuget.org/packages/dotnet-gcdump), use o comando de [instalação da ferramenta dotnet](../tools/dotnet-tool-install.md) :
+
+  ```dotnetcli
+  dotnet tool install --global dotnet-gcdump
+  ```
+
+- **Download direto:**
+
+  Baixe o executável da ferramenta que corresponde à sua plataforma:
+
+  | SO  | Plataforma |
+  | --- | -------- |
+  | Windows | [x86](https://aka.ms/dotnet-gcdump/win-x86) \| [x64](https://aka.ms/dotnet-gcdump/win-x64) \| [ARM](https://aka.ms/dotnet-gcdump/win-arm) \| [ARM-x64](https://aka.ms/dotnet-gcdump/win-arm64) |
+  | macOS   | [x64](https://aka.ms/dotnet-gcdump/osx-x64) |
+  | Linux   | [x64](https://aka.ms/dotnet-gcdump/linux-x64) \| [ARM](https://aka.ms/dotnet-gcdump/linux-arm) \| [arm64](https://aka.ms/dotnet-gcdump/linux-arm64) \| [MUSL-x64](https://aka.ms/dotnet-gcdump/linux-musl-x64) \| [MUSL-arm64](https://aka.ms/dotnet-gcdump/linux-musl-arm64) |
 
 ## <a name="synopsis"></a>Sinopse
 

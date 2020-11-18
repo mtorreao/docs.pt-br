@@ -2,7 +2,6 @@
 title: Coleções e estruturas de dados
 description: Saiba como usar coleções e estruturas de dados no .NET. Use coleções genéricas e não genéricas em operações thread-safe.
 ms.date: 04/30/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - grouping data in collections
 - objects [.NET], grouping in collections
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - collections [.NET]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
-ms.openlocfilehash: 4ed4197ecdffad9579424957bf3f1f7ac6a782d7
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 3b92f3aa8c21cc3d171e14100db190d88f2c0284
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889342"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823843"
 ---
 # <a name="collections-and-data-structures"></a>Coleções e estruturas de dados
 
@@ -37,7 +36,7 @@ Todas as coleções fornecem métodos para adicionar, remover ou localizar itens
 
 - **A capacidade de copiar o conteúdo da coleção para uma matriz**
 
-    Todas as coleções podem ser copiadas para uma matriz usando o método **CopyTo** ; no entanto, a ordem dos elementos na nova matriz se baseia na sequência na qual o enumerador os retorna. A matriz resultante é sempre unidimensional com um limite inferior de zero.
+    Todas as coleções podem ser copiadas para uma matriz usando o método **CopyTo**; no entanto, a ordem dos elementos na nova matriz se baseia na sequência na qual o enumerador os retorna. A matriz resultante é sempre unidimensional com um limite inferior de zero.
 
 Além disso, muitas classes de coleção contêm os seguintes recursos:
 
@@ -105,7 +104,7 @@ Além disso, `SortedSet<T>` o tem a mesma complexidade que `ImmutableSortedSet<T
 |[Comparações e classificações dentro de coleções](comparisons-and-sorts-within-collections.md)|Discute o uso de comparações de igualdade e comparações de classificação em coleções.|
 |[Tipos de coleção classificados](sorted-collection-types.md)|Descreve as características e o desempenho de coleções classificadas|
 |[Tipos de Coleção de Tabela de Hash e Dicionário](hashtable-and-dictionary-collection-types.md)|Descreve os recursos de tipos de dicionário baseado em hash genérico e não genérico.|
-|[Coleções com segurança de thread](thread-safe/index.md)|Descreve os tipos de coleção, tais como <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> e <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> que dão suporte a acesso simultâneo seguro e eficiente de vários threads.|
+|[Coleções thread-safe](thread-safe/index.md)|Descreve os tipos de coleção, tais como <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> e <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> que dão suporte a acesso simultâneo seguro e eficiente de vários threads.|
 |System.Collections.Immutable|Apresenta as coleções imutáveis e fornece links para os tipos de coleção.|
 
 <a name="BKMK_Reference"></a>

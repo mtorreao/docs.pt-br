@@ -2,7 +2,6 @@
 title: Comparações e classificações dentro de coleções
 description: As comparações & classificações usando as classes System. Collections no .NET, que ajudam a localizar um elemento para remover ou retornar o valor de um par de chave e valor.
 ms.date: 04/30/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - Equals method
 - collections [.NET], comparisons
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
-ms.openlocfilehash: 40a59809723298ddda21e642098ec8ae74a1828b
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 343f633b3807391b8deea28f56a5166ac3d8c8c5
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889368"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823856"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>Comparações e classificações dentro de coleções
 
@@ -42,7 +41,7 @@ Além disso, algumas sobrecargas de construtores para coleções de dicionários
 
 Métodos como `BinarySearch` e `Sort` usam um comparador de ordenação para os elementos da coleção. As comparações podem ser entre elementos da coleção ou entre um elemento e um valor especificado. Para comparar objetos, há o conceito de um `default comparer` e um `explicit comparer`.
 
-O comparador padrão baseia-se em pelo menos um dos objetos que estão sendo comparados para implementar a interface **IComparable** . É uma boa prática implementar **IComparable** em todas as classes usadas como valores em uma coleção de lista ou como chaves em uma coleção de dicionário. Para uma coleção genérica, a comparação de igualdade é determinada de acordo com o seguinte:
+O comparador padrão baseia-se em pelo menos um dos objetos que estão sendo comparados para implementar a interface **IComparable**. É uma boa prática implementar **IComparable** em todas as classes usadas como valores em uma coleção de lista ou como chaves em uma coleção de dicionário. Para uma coleção genérica, a comparação de igualdade é determinada de acordo com o seguinte:
 
 - Se o tipo T implementa a interface genérica <xref:System.IComparable%601?displayProperty=nameWithType>, então o comparador padrão será o método <xref:System.IComparable%601.CompareTo%28%600%29?displayProperty=nameWithType> dessa interface.
 

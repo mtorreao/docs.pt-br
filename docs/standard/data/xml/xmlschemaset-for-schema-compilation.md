@@ -1,17 +1,16 @@
 ---
 title: XmlSchemaSet para compilação de esquema
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
-ms.openlocfilehash: 44850755c41b212e88e0b90dd3b016f96a0af96d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5916511187741c703cb39a5c168e542e124ab26b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290221"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825917"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>XmlSchemaSet para compilação de esquema
 Descreve <xref:System.Xml.Schema.XmlSchemaSet>, um cache onde os esquemas de linguagem de definição de esquema XML (XSD) podem ser armazenados e validado.  
@@ -249,7 +248,7 @@ foreach (XmlSchema schema in schemaSet.Schemas())
   
  Para saber mais sobre como validar documentos XML usando um <xref:System.Xml.Schema.XmlSchemaSet>, confira [Validação de XSD (esquema XML) com XmlSchemaSet](xml-schema-xsd-validation-with-xmlschemaset.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>
 - <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>

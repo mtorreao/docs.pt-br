@@ -2,7 +2,6 @@
 title: Common Type System
 description: Explore o sistema de tipos no .NET. Leia sobre os tipos no .NET (tipos de valor ou tipos de referência), definição de tipo, membros de tipo e características de membro de tipo.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -16,12 +15,12 @@ helpviewer_keywords:
 - namespaces [.NET], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.openlocfilehash: ad42a77f9c6280211902fc4ffbf25871c537baa5
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: d9ee7020c7ec06f079b7f0a05d5fea67ff1c1a90
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889498"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823180"
 ---
 # <a name="common-type-system"></a>Common Type System
 
@@ -304,7 +303,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
   
 - Um tipo derivado pode substituir um método virtual herdado. O método de substituição fornece uma nova definição do método que será invocado com base no tipo do valor no tempo de execução em vez do tipo de variável conhecido no tempo de compilação. Um método poderá substituir um método virtual somente se o método virtual não estiver marcado como `final` e o novo método for tão acessível quanto o método virtual.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Navegador de API .NET](../../../api/index.md)
 - [Common Language Runtime](../clr.md)

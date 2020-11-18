@@ -1,14 +1,13 @@
 ---
 title: Fragmento da árvore de resultado nas transformações
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
-ms.openlocfilehash: e454c1194e8c280042857f106e22d0d0509417e3
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: e5ca285c0b5d6c32d15647508c611a47ed97ee03
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156355"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823557"
 ---
 # <a name="result-tree-fragment-in-transformations"></a>Fragmento da árvore de resultado nas transformações
 
@@ -190,7 +189,7 @@ O seguinte é o resultado de transformar XML com essa folha de estilos:
 <books xmlns:user="urn:books">Book1Book2Book3Book4</books>
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Xml.XPath.XPathNodeIterator>
 - [Transformações XSLT com a classe XslTransform](xslt-transformations-with-the-xsltransform-class.md)

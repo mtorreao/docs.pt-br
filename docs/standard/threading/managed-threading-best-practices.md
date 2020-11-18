@@ -2,7 +2,6 @@
 title: Práticas recomendadas de threading gerenciado
 description: Conheça as práticas recomendadas de Threading gerenciadas no .NET. Trabalhe com situações difíceis, como a coordenação de vários threads ou a manipulação de threads de bloqueio.
 ms.date: 10/15/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - threading [.NET], best practices
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-ms.openlocfilehash: 88e1f34388cd58fef59bc4005bcaf630c59a661e
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: b2a3f2efc12392316f6d90242ef0a9224e7d13a4
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188998"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826307"
 ---
 # <a name="managed-threading-best-practices"></a>Práticas recomendadas de threading gerenciado
 
@@ -62,7 +61,7 @@ else {
 ### <a name="race-conditions"></a>Condições de corrida  
  Uma condição de corrida é um bug que ocorre quando o resultado de um programa depende de qual dos dois ou mais threads alcança um determinado bloco de código primeiro. Executar o programa muitas vezes produz resultados diferentes e o resultado de qualquer execução não pode ser previsto.  
   
- Um exemplo simples de uma condição de corrida é incrementar um campo. Suponha que uma classe tem um campo **static** particular ( **Shared** no Visual Basic) que é incrementado toda vez que uma instância da classe é criada, usando um código como `objCt++;` (C#) ou `objCt += 1` (Visual Basic). Esta operação requer o carregamento do valor de `objCt` em um registro, incrementando o valor e o armazenando em `objCt`.  
+ Um exemplo simples de uma condição de corrida é incrementar um campo. Suponha que uma classe tem um campo **static** particular (**Shared** no Visual Basic) que é incrementado toda vez que uma instância da classe é criada, usando um código como `objCt++;` (C#) ou `objCt += 1` (Visual Basic). Esta operação requer o carregamento do valor de `objCt` em um registro, incrementando o valor e o armazenando em `objCt`.  
   
  Em um aplicativo com multithreading, um thread que carregou e incrementou o valor pode ser impedido por outro thread que execute todas as três etapas; quando o primeiro thread retomar a execução e armazenar seu valor, ele substituirá `objCt` sem levar em conta o fato de que o valor foi alterado durante o processo.  
   
@@ -96,7 +95,7 @@ Use a <xref:System.Environment.ProcessorCount?displayProperty=nameWithType> prop
   
 - Tenha cuidado ao bloquear em instâncias, por exemplo `lock(this)` em C# ou `SyncLock(Me)` no Visual Basic. Se outro código no seu aplicativo, externo ao tipo, assumir um bloqueio no objeto, podem ocorrer deadlocks.  
   
-- Certifique-se de que um thread que tenha entrado em um monitor sempre o deixe, mesmo que uma exceção ocorra enquanto o thread estiver no monitor. A instrução [lock](../../csharp/language-reference/keywords/lock-statement.md) do C# e a instrução [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) do Visual Basic oferece esse comportamento automaticamente, empregando um bloco **finally** para garantir que <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> seja chamado. Se você não puder garantir que **Exit** seja chamado, considere alterar o design para usar **Mutex** . Um mutex é liberado automaticamente quando o thread que o possui atualmente for encerrado.  
+- Certifique-se de que um thread que tenha entrado em um monitor sempre o deixe, mesmo que uma exceção ocorra enquanto o thread estiver no monitor. A instrução [lock](../../csharp/language-reference/keywords/lock-statement.md) do C# e a instrução [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) do Visual Basic oferece esse comportamento automaticamente, empregando um bloco **finally** para garantir que <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> seja chamado. Se você não puder garantir que **Exit** seja chamado, considere alterar o design para usar **Mutex**. Um mutex é liberado automaticamente quando o thread que o possui atualmente for encerrado.  
   
 - Usar vários threads para tarefas que exigem recursos diferentes e evite atribuir vários threads para um único recurso. Por exemplo, qualquer tarefa que envolva E/S se beneficia em ter seu próprio thread, porque esse thread bloqueará durante as operações de E/S e, assim, permitirá que outros threads sejam executados. A entrada do usuário é outro recurso que se beneficia com um thread dedicado. Em um computador de um processador, uma tarefa que envolve a computação intensiva coexiste com a entrada do usuário e com tarefas que envolvem E/S, mas várias tarefas competem umas com as outras.  
   

@@ -1,17 +1,16 @@
 ---
 title: Recuperação ordenada pelo índice do nó
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5412c90f-2703-4aa8-a9c4-1b8a35183c37
-ms.openlocfilehash: 8ff02a81ab579cc0041074990a76166fcafe6eb5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 73c31c5249262fe9b6624201bc5b9bd6b1374d1e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288713"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823739"
 ---
 # <a name="ordered-node-retrieval-by-index"></a>Recuperação ordenada pelo índice do nó
 O DOM (Modelo de Objeto do Documento) XML do W3C (World Wide Web Consortium) também descreve um NodeList, que tem a capacidade de tratar uma lista ordenada de nós, comparado ao conjunto não ordenado tratado por um **XmlNamedNodeMap**. O NodeList no Microsoft.NET Framework é conhecido como **XmlNodeList**. Os métodos e propriedades que retornam **XmlNodeList** são:  
@@ -92,6 +91,6 @@ End While
   
  Para saber mais sobre os métodos e as propriedades disponíveis no **XmlNodeList**, confira <xref:System.Xml.XmlNodeList>.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [XML Document Object Model (DOM)](xml-document-object-model-dom.md)

@@ -2,20 +2,18 @@
 title: Suporte do SqlClient para LocalDB
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-ms.openlocfilehash: 841c455605b0b32668d26cab16a6207dc1c0f716
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 55ab1346de6f5c14f15d01344a984c18edf30e02
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203417"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824474"
 ---
 # <a name="sqlclient-support-for-localdb"></a>Suporte do SqlClient para LocalDB
 
-Do SQL Server code name Denali em diante, uma versão leve do SQL Server, chamada LocalDB, estará disponível. Este tópico descreve como conectar-se a um banco de dados do LocalDB.  
+Este artigo discute como se conectar a um banco de dados LocalDB. LocalDB é uma versão leve do SQL Server.
   
-## <a name="remarks"></a>Comentários  
-
- Para obter mais informações sobre o LocalDB, inclusive como instalá-lo e configurar sua instância do LocalDB, confira os Manuais Online do SQL Server.  
+## <a name="remarks"></a>Comentários
   
  Para resumir o que você pode fazer com o LocalDB:  
   
@@ -31,7 +29,7 @@ Do SQL Server code name Denali em diante, uma versão leve do SQL Server, chamad
   
  `User Instance=True` não é permitido ao se conectar a um banco de dados LocalDB.  
   
- Você pode baixar LocalDB do [Microsoft SQL Server 2012 Feature Pack](https://www.microsoft.com/download/en/details.aspx?id=29065). Se você usar sqlcmd.exe para modificar dados em sua instância LocalDB, precisará do sqlcmd do SQL Server 2012, que você também poderá obter do SQL Server 2012 Feature Pack.  
+Para obter informações sobre como instalar o LocalDB, consulte [SQL Server Express LocalDB](/sql/database-engine/configure-windows/sql-server-express-localdb).
   
 ## <a name="programmatically-create-a-named-instance"></a>Criar programaticamente uma instância nomeada  
 
@@ -59,7 +57,7 @@ Do SQL Server code name Denali em diante, uma versão leve do SQL Server, chamad
   
 - Use a palavra-chave da cadeia de conexão `AttachDBFilename` para especificar o arquivo .MDF.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Recursos de SQL Server e ADO.NET](sql-server-features-and-adonet.md)
 - [Visão geral do ADO.NET](../ado-net-overview.md)

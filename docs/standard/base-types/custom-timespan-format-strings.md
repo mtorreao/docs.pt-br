@@ -2,7 +2,6 @@
 title: Cadeias de caracteres de formato TimeSpan personalizado
 description: Entender cadeias de caracteres de formato de TimeSpan personalizadas no .NET. Uma cadeia de caracteres de formato personalizado contém um ou mais especificadores de formato TimeSpan & qualquer número de caracteres literais.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - formatting [.NET], time
 - custom TimeSpan format strings
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
-ms.openlocfilehash: b760e7ab7f39d4e4682d5d4c3a6421b9843e1d59
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: e8447e580ac85e1ebbc33f8c8334b7c5cfeb334b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888679"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824357"
 ---
 # <a name="custom-timespan-format-strings"></a>Cadeias de caracteres de formato TimeSpan personalizado
 
@@ -66,7 +65,7 @@ As sequências de formato <xref:System.TimeSpan> personalizado são usadas tamb�
 |"FFFFF"|As centenas de milésimos de segundo em um intervalo de tempo. Zeros à direita fracionais não são incluídos.<br /><br /> Mais informações: [o especificador de formato personalizado "fffff"](#F5_Specifier).|`TimeSpan.Parse("00:00:06.329179")`:<br /><br /> `FFFFF`: 32917<br /><br /> `TimeSpan.Parse("0:0:3.100009")`:<br /><br /> `ss\.FFFFF`: 03.1|
 |"FFFFFF"|Os milionésimos de segundo em um intervalo de tempo. Zeros à direita fracionais não são exibidos.<br /><br /> Mais informações: [o especificador de formato personalizado "FFFFFF"](#F6_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`:<br /><br /> `ss\.FFFFFF`: 03.1|
 |"FFFFFFF"|Os décimos de milionésimos de segundo em um intervalo de tempo. Zeros à direita fracionais ou sete dígitos zero não são exibidos.<br /><br /> Mais informações: [o especificador de formato personalizado "fffffff"](#F7_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 3291791<br /><br /> `TimeSpan.Parse("0:0:3.1900000")`:<br /><br /> `ss\.FFFFFF`: 03.19|
-|' *cadeia de caracteres* '|Delimitador de cadeia de caracteres literal.<br /><br /> Mais informações: [outros caracteres](#other-characters).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|
+|'*cadeia de caracteres*'|Delimitador de cadeia de caracteres literal.<br /><br /> Mais informações: [outros caracteres](#other-characters).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|
 |&#92;|O caractere de escape.<br /><br /> Mais informações: [outros caracteres](#other-characters).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 |Qualquer outro caractere|Qualquer outro caractere sem escape é interpretado como um especificador de formato personalizado.<br /><br /> Mais informações: [outros caracteres](#other-characters).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 
@@ -74,7 +73,7 @@ As sequências de formato <xref:System.TimeSpan> personalizado são usadas tamb�
 
 O especificador de formato personalizado "d" fornece o valor da propriedade <xref:System.TimeSpan.Days%2A?displayProperty=nameWithType>, que representa o número de dias inteiros no intervalo de tempo. Ele gera o número total de dias em um valor de <xref:System.TimeSpan>, mesmo se o valor tiver mais de um dígito. Se o valor da propriedade <xref:System.TimeSpan.Days%2A?displayProperty=nameWithType> for zero, o especificador gerará "0".
 
-Se o especificador de formato personalizado "d" for usado sozinho, especifique "%d" para que ele não seja interpretado incorretamente como uma cadeia de caracteres de formato padrão. O exemplo a seguir fornece uma ilustração.
+Se o especificador de formato personalizado "d" for usado sozinho, especifique "%d" para que ele não seja interpretado incorretamente como uma cadeia de caracteres de formato padrão. O exemplo a seguir ilustra esse cenário.
 
 [!code-csharp[Conceptual.TimeSpan.Custom#3](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#3)]
 [!code-vb[Conceptual.TimeSpan.Custom#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#3)]
@@ -103,12 +102,12 @@ O exemplo a seguir usa esses O especificadores de formato para exibir a represen
 
 O especificador de formato personalizado "h" fornece o valor da propriedade <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType>, que representa o número de horas inteiras no intervalo de tempo que não são contadas como parte do componente de dia. Ele retorna um valor de cadeia de caracteres de um dígito se o valor da propriedade <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> for de 0 a 9 e retorna um valor de cadeia de caracteres de dois dígitos se o valor da propriedade <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> for de 10 a 23.
 
-Se o especificador de formato personalizado "h" for usado sozinho, especifique "%h" para que ele não seja interpretado incorretamente como uma cadeia de caracteres de formato padrão. O exemplo a seguir fornece uma ilustração.
+Se o especificador de formato personalizado "h" for usado sozinho, especifique "%h" para que ele não seja interpretado incorretamente como uma cadeia de caracteres de formato padrão. O exemplo a seguir ilustra esse cenário.
 
 [!code-csharp[Conceptual.TimeSpan.Custom#6](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#6)]
 [!code-vb[Conceptual.TimeSpan.Custom#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#6)]
 
-Normalmente, em uma operação de análise, uma cadeia de caracteres de entrada que inclui apenas um único número é interpretada como o número de dias. Você pode usar o especificador de formato personalizado "%h" em vez disso para interpretar a cadeia de caracteres numérica como o número de horas. O exemplo a seguir fornece uma ilustração.
+Normalmente, em uma operação de análise, uma cadeia de caracteres de entrada que inclui apenas um único número é interpretada como o número de dias. Você pode usar o especificador de formato personalizado "%h" em vez disso para interpretar a cadeia de caracteres numérica como o número de horas. O exemplo a seguir ilustra esse cenário.
 
 [!code-csharp[Conceptual.TimeSpan.Custom#8](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#8)]
 [!code-vb[Conceptual.TimeSpan.Custom#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#8)]
@@ -124,7 +123,7 @@ O exemplo a seguir ilustra o uso do especificador de formato personalizado “h�
 
 O especificador de formato personalizado "hh" fornece o valor da propriedade <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType>, que representa o número de horas inteiras no intervalo de tempo que não são contadas como parte do componente de dia. Para valores de 0 a 9, a cadeia de caracteres de saída inclui um zero à esquerda.
 
-Normalmente, em uma operação de análise, uma cadeia de caracteres de entrada que inclui apenas um único número é interpretada como o número de dias. Você pode usar o especificador de formato personalizado "hh" em vez disso para interpretar a cadeia de caracteres numérica como o número de horas. O exemplo a seguir fornece uma ilustração.
+Normalmente, em uma operação de análise, uma cadeia de caracteres de entrada que inclui apenas um único número é interpretada como o número de dias. Você pode usar o especificador de formato personalizado "hh" em vez disso para interpretar a cadeia de caracteres numérica como o número de horas. O exemplo a seguir ilustra esse cenário.
 
 [!code-csharp[Conceptual.TimeSpan.Custom#9](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#9)]
 [!code-vb[Conceptual.TimeSpan.Custom#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#9)]
@@ -140,12 +139,12 @@ O exemplo a seguir ilustra o uso do especificador de formato personalizado “hh
 
 O especificador de formato personalizado "m" fornece o valor da propriedade <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType>, que representa o número de minutos inteiros no intervalo de tempo que não são contados como parte do componente de dia. Ele retorna um valor de cadeia de caracteres de um dígito se o valor da propriedade <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> for de 0 a 9 e retorna um valor de cadeia de caracteres de dois dígitos se o valor da propriedade <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> for de 10 a 59.
 
-Se o especificador de formato personalizado "m" for usado sozinho, especifique "%m" para que ele não seja interpretado incorretamente como uma cadeia de caracteres de formato padrão. O exemplo a seguir fornece uma ilustração.
+Se o especificador de formato personalizado "m" for usado sozinho, especifique "%m" para que ele não seja interpretado incorretamente como uma cadeia de caracteres de formato padrão. O exemplo a seguir ilustra esse cenário.
 
 [!code-csharp[Conceptual.TimeSpan.Custom#6](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#6)]
 [!code-vb[Conceptual.TimeSpan.Custom#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#6)]
 
-Normalmente, em uma operação de análise, uma cadeia de caracteres de entrada que inclui apenas um único número é interpretada como o número de dias. Você pode usar o especificador de formato personalizado "%m" em vez disso para interpretar a cadeia de caracteres numérica como o número de minutos. O exemplo a seguir fornece uma ilustração.
+Normalmente, em uma operação de análise, uma cadeia de caracteres de entrada que inclui apenas um único número é interpretada como o número de dias. Você pode usar o especificador de formato personalizado "%m" em vez disso para interpretar a cadeia de caracteres numérica como o número de minutos. O exemplo a seguir ilustra esse cenário.
 
 [!code-csharp[Conceptual.TimeSpan.Custom#11](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#11)]
 [!code-vb[Conceptual.TimeSpan.Custom#11](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#11)]
@@ -161,7 +160,7 @@ O exemplo a seguir ilustra o uso do especificador de formato personalizado “m�
 
 O especificador de formato personalizado "mm" fornece o valor da propriedade <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType>, que representa o número de minutos inteiros no intervalo de tempo que não está incluído como parte do componente de dia. Para valores de 0 a 9, a cadeia de caracteres de saída inclui um zero à esquerda.
 
-Normalmente, em uma operação de análise, uma cadeia de caracteres de entrada que inclui apenas um único número é interpretada como o número de dias. Você pode usar o especificador de formato personalizado "mm" em vez disso para interpretar a cadeia de caracteres numérica como o número de minutos. O exemplo a seguir fornece uma ilustração.
+Normalmente, em uma operação de análise, uma cadeia de caracteres de entrada que inclui apenas um único número é interpretada como o número de dias. Você pode usar o especificador de formato personalizado "mm" em vez disso para interpretar a cadeia de caracteres numérica como o número de minutos. O exemplo a seguir ilustra esse cenário.
 
 [!code-csharp[Conceptual.TimeSpan.Custom#13](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#13)]
 [!code-vb[Conceptual.TimeSpan.Custom#13](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#13)]
@@ -177,12 +176,12 @@ O exemplo a seguir ilustra o uso do especificador de formato personalizado “mm
 
 O especificador de formato personalizado "s" fornece o valor da propriedade <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType>, que representa o número de segundos inteiros no intervalo de tempo que não são incluídos como parte do componente de horas, dias ou minutos. Ele retorna um valor de cadeia de caracteres de um dígito se o valor da propriedade <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> for de 0 a 9 e retorna um valor de cadeia de caracteres de dois dígitos se o valor da propriedade <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> for de 10 a 59.
 
-Se o especificador de formato personalizado "s" for usado sozinho, especifique "%s" para que ele não seja interpretado incorretamente como uma cadeia de caracteres de formato padrão. O exemplo a seguir fornece uma ilustração.
+Se o especificador de formato personalizado "s" for usado sozinho, especifique "%s" para que ele não seja interpretado incorretamente como uma cadeia de caracteres de formato padrão. O exemplo a seguir ilustra esse cenário.
 
 [!code-csharp[Conceptual.TimeSpan.Custom#15](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#15)]
 [!code-vb[Conceptual.TimeSpan.Custom#15](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#15)]
 
-Normalmente, em uma operação de análise, uma cadeia de caracteres de entrada que inclui apenas um único número é interpretada como o número de dias. Você pode usar o especificador de formato personalizado "%s" em vez disso para interpretar a cadeia de caracteres numérica como o número de segundos. O exemplo a seguir fornece uma ilustração.
+Normalmente, em uma operação de análise, uma cadeia de caracteres de entrada que inclui apenas um único número é interpretada como o número de dias. Você pode usar o especificador de formato personalizado "%s" em vez disso para interpretar a cadeia de caracteres numérica como o número de segundos. O exemplo a seguir ilustra esse cenário.
 
 [!code-csharp[Conceptual.TimeSpan.Custom#17](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#17)]
 [!code-vb[Conceptual.TimeSpan.Custom#17](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#17)]
@@ -198,7 +197,7 @@ O exemplo a seguir ilustra o uso do especificador de formato personalizado “s�
 
 O especificador de formato personalizado "ss" fornece o valor da propriedade <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType>, que representa o número de segundos inteiros no intervalo de tempo que não são incluídos como parte do componente de horas, dias ou minutos. Para valores de 0 a 9, a cadeia de caracteres de saída inclui um zero à esquerda.
 
-Normalmente, em uma operação de análise, uma cadeia de caracteres de entrada que inclui apenas um único número é interpretada como o número de dias. Você pode usar o especificador de formato personalizado "ss" em vez disso para interpretar a cadeia de caracteres numérica como o número de segundos. O exemplo a seguir fornece uma ilustração.
+Normalmente, em uma operação de análise, uma cadeia de caracteres de entrada que inclui apenas um único número é interpretada como o número de dias. Você pode usar o especificador de formato personalizado "ss" em vez disso para interpretar a cadeia de caracteres numérica como o número de segundos. O exemplo a seguir ilustra esse cenário.
 
 [!code-csharp[Conceptual.TimeSpan.Custom#18](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#18)]
 [!code-vb[Conceptual.TimeSpan.Custom#18](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#18)]
@@ -392,7 +391,7 @@ O exemplo a seguir usa o caractere de escape e a aspa simples para definir uma c
 
 [Voltar à tabela](#table)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Formatar tipos](formatting-types.md)
-- [Cadeias de caracteres de formato standard TimeSpan](standard-timespan-format-strings.md)
+- [Cadeias de caracteres de formato TimeSpan padrão](standard-timespan-format-strings.md)

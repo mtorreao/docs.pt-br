@@ -2,7 +2,6 @@
 title: Pausando e interrompendo threads
 description: Saiba como pausar & threads de interrupção no .NET. Saiba como usar métodos como thread. Sleep & thread. Interrupt, & exceções como ThreadInterruptedException.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - threading [.NET], pausing
 - pausing threads
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
-ms.openlocfilehash: 07fe374acb3d2a3de3a1b51861feb5f8551ecc2e
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 157109ad9e9009516b107b271a59267f982c784d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188959"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826216"
 ---
 # <a name="pausing-and-interrupting-threads"></a>Pausando e interrompendo threads
 

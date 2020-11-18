@@ -1,23 +1,22 @@
 ---
 title: Visão geral do LINQ – .NET
-description: O LINQ (consulta integrada à linguagem) fornece recursos de consulta de nível de linguagem e uma API de função de ordem superior para C# e Visual Basic, que permite escrever código expressivo de expressiva.
+description: A consulta de Language-Integrated (LINQ) fornece recursos de consulta de nível de linguagem e uma API de função de ordem superior para C# e Visual Basic, que permitem escrever código de declaração expressivo.
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 65370a2bd21e2474af4cb070bb8d82a167f10070
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ed78082c97511a8dbcc48d413a75a46c9da906a9
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554990"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825826"
 ---
 # <a name="linq-overview"></a>Visão geral da consulta LINQ
 
-O LINQ (consulta integrada à linguagem) fornece recursos de consulta de nível de linguagem e uma API de [função de ordem superior](https://en.wikipedia.org/wiki/Higher-order_function) para C# e Visual Basic, que permite escrever código expressivo de expressiva.
+A consulta de Language-Integrated (LINQ) fornece recursos de consulta de nível de linguagem e uma API de [função de ordem superior](https://en.wikipedia.org/wiki/Higher-order_function) para C# e Visual Basic, que permitem escrever código de declaração expressivo.
 
 ## <a name="language-level-query-syntax"></a>Sintaxe de consulta de nível de linguagem
 

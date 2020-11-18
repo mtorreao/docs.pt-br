@@ -1,23 +1,22 @@
 ---
 title: SpinWait
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - synchronization primitives, SpinWait
 ms.assetid: 36012f42-34e5-4f86-adf4-973f433ed6c6
-ms.openlocfilehash: fb70697fd14f9f8734ca1a7896fc06c6bca5a71d
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 2031ebc30d0789181786053d401e69da782a619f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188920"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826203"
 ---
 # <a name="spinwait"></a>SpinWait
 
-<xref:System.Threading.SpinWait?displayProperty=nameWithType> é um tipo de sincronização leve que você pode usar em cenários de baixo nível a fim de evitar as alternâncias dispendiosas de contexto e transições de kernel necessárias para eventos de kernel. Em computadores com vários núcleos, quando espera-se que um recurso não seja mantido por muito tempo, talvez seja mais eficiente para um thread em espera executar no modo de usuário durante algumas dezenas ou centenas de ciclos e, em seguida, tentar novamente para adquirir o recurso. Se o recurso estiver disponível após a rotação, você terá salvo vários milhares de ciclos. Se o recurso ainda não estiver disponível, você terá passado apenas alguns ciclos e ainda poderá inserir uma espera baseada em kernel. Essa combinação de rotação e espera é, às vezes, conhecida como uma *operação bifásica de espera* .  
+<xref:System.Threading.SpinWait?displayProperty=nameWithType> é um tipo de sincronização leve que você pode usar em cenários de baixo nível a fim de evitar as alternâncias dispendiosas de contexto e transições de kernel necessárias para eventos de kernel. Em computadores com vários núcleos, quando espera-se que um recurso não seja mantido por muito tempo, talvez seja mais eficiente para um thread em espera executar no modo de usuário durante algumas dezenas ou centenas de ciclos e, em seguida, tentar novamente para adquirir o recurso. Se o recurso estiver disponível após a rotação, você terá salvo vários milhares de ciclos. Se o recurso ainda não estiver disponível, você terá passado apenas alguns ciclos e ainda poderá inserir uma espera baseada em kernel. Essa combinação de rotação e espera é, às vezes, conhecida como uma *operação bifásica de espera*.  
   
  <xref:System.Threading.SpinWait> foi projetado para ser usado em conjunto com os tipos .NET que encapsulam eventos de kernel, como <xref:System.Threading.ManualResetEvent> . <xref:System.Threading.SpinWait> também pode ser usado por si só para a funcionalidade básica de rotação em apenas um programa.  
   

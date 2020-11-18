@@ -1,7 +1,6 @@
 ---
 title: Tabelas de conversão de tipos em .NET
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - widening conversions
 - narrowing conversions
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - tables [.NET], type conversions
 - data types [.NET], converting
 ms.assetid: 0ea65c59-85eb-4a52-94ca-c36d3bd13058
-ms.openlocfilehash: 27578d46a80b0372c6ddc2266a751cd0e6e9aa91
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: c84b1eae8a36a8d4e844cb7b1eb110c32c35993f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889446"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823011"
 ---
 # <a name="type-conversion-tables-in-net"></a>Tabelas de conversão de tipos em .NET
 Conversões de expansão ocorrem quando um valor de um tipo é convertido em outro tipo de tamanho igual ou maior. Conversões de redução ocorrem quando um valor de um tipo é convertido em um valor de outro tipo de tamanho menor. As tabelas neste tópico ilustram os comportamentos exibidos por ambos os tipos de conversões.  
@@ -25,7 +24,7 @@ Conversões de expansão ocorrem quando um valor de um tipo é convertido em out
 ## <a name="widening-conversions"></a>Conversões de expansão  
  A tabela a seguir descreve as conversões de expansão que podem ser executadas sem perda de informações.  
   
-|Tipo|Pode ser convertido sem perda de dados para|  
+|Type|Pode ser convertido sem perda de dados para|  
 |----------|-------------------------------------------|  
 |<xref:System.Byte>|<xref:System.UInt16>, <xref:System.Int16>, <xref:System.UInt32>, <xref:System.Int32>, <xref:System.UInt64>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
 |<xref:System.SByte>|<xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
@@ -40,7 +39,7 @@ Conversões de expansão ocorrem quando um valor de um tipo é convertido em out
   
  Algumas conversões de expansão para <xref:System.Single> ou <xref:System.Double> podem causar perda de precisão. A tabela a seguir descreve as conversões de expansão que, às vezes, resultam em perda de informações.  
   
-|Tipo|Pode ser convertido para|  
+|Type|Pode ser convertido para|  
 |----------|-------------------------|  
 |<xref:System.Int32>|<xref:System.Single>|  
 |<xref:System.UInt32>|<xref:System.Single>|  
@@ -55,7 +54,7 @@ Conversões de expansão ocorrem quando um valor de um tipo é convertido em out
   
  A tabela a seguir lista conversões que lançam <xref:System.OverflowException> usando <xref:System.Convert?displayProperty=nameWithType> ou qualquer conversão selecionada se o valor do tipo que está sendo convertido estiver fora do intervalo definido pelo tipo resultante.  
   
-|Tipo|Pode ser convertido para|  
+|Type|Pode ser convertido para|  
 |----------|-------------------------|  
 |<xref:System.Byte>|<xref:System.SByte>|  
 |<xref:System.SByte>|<xref:System.Byte>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>|  
@@ -69,7 +68,7 @@ Conversões de expansão ocorrem quando um valor de um tipo é convertido em out
 |<xref:System.Single>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64>, <xref:System.UInt64>|  
 |<xref:System.Double>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64>, <xref:System.UInt64>|  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Convert?displayProperty=nameWithType>
 - [Conversão de tipo no .NET](type-conversion.md)

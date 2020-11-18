@@ -1,7 +1,6 @@
 ---
 title: Tipos de coleção Sorted
 ms.date: 04/30/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - SortedDictionary collection type
 - SortedList class, grouping data in collections
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - SortedList collection type
 - collections [.NET], SortedList collection type
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
-ms.openlocfilehash: 339d247f3b7e775de740c6c1ce786b078441c699
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 62e0ffde31d91ea2b0bbe3b5c37cddb87349b5a3
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889316"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823817"
 ---
 # <a name="sorted-collection-types"></a>Tipos de coleção Sorted
 
@@ -47,7 +46,7 @@ Para listas ou dicionários classificados que precisam estar acessíveis simulta
 
 A partir do .NET Framework 4, a <xref:System.Collections.Generic.SortedSet%601> classe fornece uma árvore de balanceamento automático que mantém os dados em ordem classificada após inserções, exclusões e pesquisas. Essa classe e a classe <xref:System.Collections.Generic.HashSet%601> implementam a interface <xref:System.Collections.Generic.ISet%601>.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Collections.IDictionary?displayProperty=nameWithType>
 - <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>

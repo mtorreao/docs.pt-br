@@ -3,7 +3,6 @@ title: Visão geral do CLR (Common Language Runtime)-.NET
 titleSuffix: ''
 description: Introdução ao Common Language Runtime (CLR),. Ambiente de tempo de execução da rede. O CLR executa o código e fornece serviços para facilitar o processo de desenvolvimento.
 ms.date: 10/22/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - compiling source code, runtime functionality
 - code, execution
@@ -18,12 +17,12 @@ helpviewer_keywords:
 - code, runtime functionality
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 ms.custom: updateeachrelease
-ms.openlocfilehash: 39543a511e8f405d9205df2697bcf4fd1194bd7a
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 917649475271c288516f9eb0913a0959601427af
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687513"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823869"
 ---
 # <a name="common-language-runtime-clr-overview"></a>Visão geral do CLR (Common Language Runtime)
 
@@ -75,4 +74,4 @@ No entanto, o número de versão de .NET Framework não corresponde necessariame
 |[Processo de execução gerenciada](managed-execution-process.md)|Descreve as etapas obrigatórias para usufruir o Common Language Runtime.|
 |[Gerenciamento automático de memória](automatic-memory-management.md)|Descreve como o coletor de lixo aloca e libera memória.|
 |[Visão geral do .NET Framework](../framework/get-started/overview.md)|Descreve os principais conceitos de .NET Framework, como o Common Type System, interoperabilidade entre linguagens, execução gerenciada, domínios de aplicativo e assemblies.|
-|[Sistema de tipos comum](./base-types/common-type-system.md)|Descreve como os tipos são declarados, usados e gerenciados no runtime para dar suporte à integração entre linguagens.|
+|[Common Type System](./base-types/common-type-system.md)|Descreve como os tipos são declarados, usados e gerenciados no runtime para dar suporte à integração entre linguagens.|
