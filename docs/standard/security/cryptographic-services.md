@@ -2,7 +2,6 @@
 title: Serviços criptográficos
 description: Uma visão geral dos métodos e das práticas de criptografia com suporte no .NET.
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - cryptography [.NET]
 - pattern of derived class inheritance
@@ -25,12 +24,12 @@ helpviewer_keywords:
 - cryptography [.NET], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-ms.openlocfilehash: 463ccec5f60ff10331d501d39144a979d95eff95
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 5558c60768b992984c3800b482961128d3bf5d0b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281729"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829902"
 ---
 # <a name="cryptographic-services"></a>Serviços criptográficos
 
@@ -71,7 +70,7 @@ A criptografia de chave secreta também é conhecida como criptografia simétric
 
 Um tipo de algoritmo de chave secreta chamado de codificação de bloco é usado para criptografar um bloco de dados de cada vez. As codificações de bloco, como o padrão de criptografia de dados (DES), TripleDES e criptografia AES (AES) transformam criptograficamente um bloco de entrada de *n* bytes em um bloco de saída de bytes criptografados. Se você quiser criptografar ou descriptografar uma sequência de bytes, será necessário bloquear por bloco. Como *n* é pequeno (8 bytes para des e TripleDES; 16 bytes [o padrão], 24 bytes ou 32 bytes para AES), os valores de dados maiores que *n* precisam ser criptografados um bloco por vez. Valores de dados menores que *n* precisam ser expandidos para *n* para serem processados.
 
-Uma forma simples de codificação de bloco é chamada de modo de Codebook eletrônico (ECB). O modo ECB não é considerado seguro, pois não usa um vetor de inicialização para inicializar o primeiro bloco de texto sem formatação. Para uma determinada chave secreta *k* , uma codificação simples de bloco que não usa um vetor de inicialização criptografará o mesmo bloco de entrada de texto sem formatação no mesmo bloco de saída de texto cifrado. Portanto, se você tiver blocos duplicados em seu fluxo de texto não criptografado de entrada, você terá blocos duplicados no fluxo de texto cifrado de saída. Esses blocos de saída duplicados alertam usuários não autorizados à criptografia fraca, usavam os algoritmos que podem ter sido empregados e os possíveis modos de ataque. O modo de codificação ECB é, portanto, muito vulnerável à análise e, por fim, à descoberta de chaves.
+Uma forma simples de codificação de bloco é chamada de modo de Codebook eletrônico (ECB). O modo ECB não é considerado seguro, pois não usa um vetor de inicialização para inicializar o primeiro bloco de texto sem formatação. Para uma determinada chave secreta *k*, uma codificação simples de bloco que não usa um vetor de inicialização criptografará o mesmo bloco de entrada de texto sem formatação no mesmo bloco de saída de texto cifrado. Portanto, se você tiver blocos duplicados em seu fluxo de texto não criptografado de entrada, você terá blocos duplicados no fluxo de texto cifrado de saída. Esses blocos de saída duplicados alertam usuários não autorizados à criptografia fraca, usavam os algoritmos que podem ter sido empregados e os possíveis modos de ataque. O modo de codificação ECB é, portanto, muito vulnerável à análise e, por fim, à descoberta de chaves.
 
 As classes de codificação de bloco que são fornecidas na biblioteca de classes base usam um modo de encadeamento padrão chamado CBC (encadeamento de bloco de codificação), embora você possa alterar esse padrão, se desejar.
 
@@ -216,7 +215,7 @@ O .NET também inclui uma variedade de classes CNG com suporte, como as seguinte
 
 - <xref:System.Security.Cryptography.CngProperty> mantém as propriedades de chave usadas com frequência.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Modelo de criptografia](cryptography-model.md) – descreve como a criptografia é implementada na biblioteca de classes base.
 - [Criptografia de plataforma cruzada](cross-platform-cryptography.md)

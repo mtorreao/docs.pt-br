@@ -2,7 +2,6 @@
 title: O modelo de objeto de expressão regular
 description: Examine o modelo de objeto de expressão regular no .NET. Trabalhe com o mecanismo de expressões regulares, & objetos & coleções relacionadas à correspondência, ao agrupamento & a captura.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -36,12 +35,12 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-ms.openlocfilehash: d6f85d74b40902037620d065f63f1d0ad6cfc205
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: ecaa0016c37abf33c793fb8a362a697672f3275a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888640"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831280"
 ---
 # <a name="the-regular-expression-object-model"></a>O modelo de objeto de expressão regular
 <a name="introduction"></a> Este tópico descreve o modelo do objeto usado ao trabalhar com expressões regulares do .NET. Ele contém as seções a seguir:  
@@ -295,7 +294,7 @@ ms.locfileid: "92888640"
     |`Value`|<xref:System.String.Empty?displayProperty=nameWithType>|  
     |`Length`|0|  
   
-     O exemplo a seguir fornece uma ilustração. No padrão de expressão regular `aaa(bbb)*ccc`, o primeiro grupo de captura (a subcadeia de caracteres “bbb”) pode ser correspondido a zero ou mais vezes. Como a cadeia de caracteres de entrada “aaaccc” corresponde ao padrão, o grupo de captura não tem correspondência.  
+     O exemplo a seguir ilustra esse cenário. No padrão de expressão regular `aaa(bbb)*ccc`, o primeiro grupo de captura (a subcadeia de caracteres “bbb”) pode ser correspondido a zero ou mais vezes. Como a cadeia de caracteres de entrada “aaaccc” corresponde ao padrão, o grupo de captura não tem correspondência.  
   
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/nocapture1.cs#11)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/nocapture1.vb#11)]  
@@ -350,7 +349,7 @@ ms.locfileid: "92888640"
 |`;`|Corresponder a um ponto e vírgula.|  
 |`((\w+(\s\w+)*),(\d+);)+`|Corresponder ao padrão de uma palavra seguida por qualquer palavra adicional seguida por uma vírgula, um ou mais dígitos e um ponto e vírgula, uma ou mais vezes. Este é o primeiro grupo de captura.|  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Text.RegularExpressions>
 - [Expressões regulares do .NET](regular-expressions.md)

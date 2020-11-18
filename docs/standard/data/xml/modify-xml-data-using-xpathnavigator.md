@@ -1,18 +1,17 @@
 ---
 title: Modificar dados XML usando XPathNavigator
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 - cpp
 ms.assetid: 03a7c5a1-b296-4af4-b209-043c958dc0a5
-ms.openlocfilehash: 3b64bc8666274798ebaefc87ef3883fcec1ef6b1
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 79bb23b77557a5a10f021e2167c9fa8ae3ee044a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288830"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830188"
 ---
 # <a name="modify-xml-data-using-xpathnavigator"></a>Modificar dados XML usando XPathNavigator
 A classe <xref:System.Xml.XPath.XPathNavigator> fornece um conjunto de métodos usados para modificar nós e valores em um documento XML. Para usar esses métodos, o objeto <xref:System.Xml.XPath.XPathNavigator> deve ser editável, ou seja, sua propriedade <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> deve ser `true`.  
@@ -28,7 +27,7 @@ A classe <xref:System.Xml.XPath.XPathNavigator> fornece um conjunto de métodos 
   
 |<xref:System.Xml.XPath.XPathNodeType>|Dados alterados|  
 |---------------------------------------------------------------------------------------------------------------------------------------------|------------------|  
-|<xref:System.Xml.XPath.XPathNodeType.Root>|Sem suporte.|  
+|<xref:System.Xml.XPath.XPathNodeType.Root>|Não há suporte.|  
 |<xref:System.Xml.XPath.XPathNodeType.Element>|O conteúdo do elemento.|  
 |<xref:System.Xml.XPath.XPathNodeType.Attribute>|O valor do atributo.|  
 |<xref:System.Xml.XPath.XPathNodeType.Text>|O conteúdo do texto.|  
@@ -246,7 +245,7 @@ Console.WriteLine(navigator.OuterXml);
 ## <a name="saving-an-xml-document"></a>Salvando um documento XML  
  Salvar as alterações feitas em um objeto <xref:System.Xml.XmlDocument> como resultado dos métodos de edição descritos neste tópico é realizado usando os métodos da classe <xref:System.Xml.XmlDocument>. Para saber mais sobre como salvar as alterações feitas em um objeto <xref:System.Xml.XmlDocument>, confira [Salvar e gravar um documento](saving-and-writing-a-document.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

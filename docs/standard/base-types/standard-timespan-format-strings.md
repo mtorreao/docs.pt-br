@@ -2,7 +2,6 @@
 title: Cadeias de caracteres de formato TimeSpan padrão
 description: Examine as cadeias de caracteres de formato TimeSpan padrão, que usam um único especificador de formato para definir a representação de texto de um valor TimeSpan no .NET.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -18,12 +17,12 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: 99529d480ca32cb8be1e2013ca4551534e10026b
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: ab64b2ef0a87cbad3b3c036d74f4690ff7fdb1f4
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888939"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831306"
 ---
 # <a name="standard-timespan-format-strings"></a>Cadeias de caracteres de formato TimeSpan padrão
 
@@ -50,7 +49,7 @@ A tabela a seguir lista os especificadores de formato de intervalo de tempo padr
 ## <a name="the-constant-c-format-specifier"></a>O especificador de formato de constante ("c")  
  O especificador de formato "c" retorna a representação de sequência de um valor <xref:System.TimeSpan> da seguinte forma:  
   
- [-][ *d* .] *hh* : *mm* : *ss* [. *fffffff* ]  
+ [-][*d*.]*hh*:*mm*:*ss*[.*fffffff*]  
   
  Os elementos entre colchetes ([ e ]) são opcionais. O ponto (.) e os dois pontos (:) são símbolos literais. A tabela a seguir descreve os elementos restantes.  
   
@@ -76,7 +75,7 @@ A tabela a seguir lista os especificadores de formato de intervalo de tempo padr
 ## <a name="the-general-short-g-format-specifier"></a>O especificador de formato curto geral ("g")  
  O especificador de formato <xref:System.TimeSpan> de "g" retorna a representação de sequência de um valor <xref:System.TimeSpan> em um formato compacto, incluindo apenas os elementos que são necessários. Ele tem o seguinte formato:  
   
- [-][ *d* :] *h* : *mm* : *ss* [. *FFFFFFF* ]  
+ [-][*d*:]*h*:*mm*:*ss*[.*FFFFFFF*]  
   
  Os elementos entre colchetes ([ e ]) são opcionais. Os dois pontos (:) são um símbolo literal. A tabela a seguir descreve os elementos restantes.  
   
@@ -100,7 +99,7 @@ A tabela a seguir lista os especificadores de formato de intervalo de tempo padr
 ## <a name="the-general-long-g-format-specifier"></a>O especificador de formato longo geral ("G")  
  O especificador de formato <xref:System.TimeSpan> de "G" retorna a representação de sequência de um valor <xref:System.TimeSpan> em um formato longo que sempre inclui dias e a fração de segundo. A sequência que resulta do especificador de formato padrão "G" tem o seguinte formato:  
   
- [-] *d* : *hh* : *mm* : *SS* . *fffffff*  
+ [-] *d*:*hh*:*mm*:*SS*. *fffffff*  
   
  Os elementos entre colchetes ([ e ]) são opcionais. Os dois pontos (:) são um símbolo literal. A tabela a seguir descreve os elementos restantes.  
   
@@ -121,8 +120,8 @@ A tabela a seguir lista os especificadores de formato de intervalo de tempo padr
  [!code-csharp[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/standardlong1.cs#5)]
  [!code-vb[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardlong1.vb#5)]
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Formatar tipos](formatting-types.md)
-- [Cadeias de caracteres de formato de TimeSpan personalizado](custom-timespan-format-strings.md)
+- [Cadeias de caracteres de formato TimeSpan personalizado](custom-timespan-format-strings.md)
 - [Analisando cadeias de caracteres](parsing-strings.md)

@@ -1,17 +1,16 @@
 ---
 title: Conversão de tipos de dados XML
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: a2aa99ba-8239-4818-9281-f1d72ee40bde
-ms.openlocfilehash: d8b60428bc129958355ce5b285662847e9e712c3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d7ee7447ab7a8be1bad0d087dba5fc2afaa878e8
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84282409"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830968"
 ---
 # <a name="conversion-of-xml-data-types"></a>Conversão de tipos de dados XML
 A maioria dos métodos encontrados em uma classe **XmlConvert** é usada para converter dados entre cadeias de caracteres e formatos com rigidez de tipos. Os métodos são independentes de localidade. Isso significa que não levam em conta as configurações de localidade ao fazer a conversão.  
@@ -64,7 +63,7 @@ Int32 vInt32=-2147483648;
 writer.WriteElementString("TestInt32",XmlConvert.ToString(vInt32));  
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Convertendo cadeias de caracteres em tipos de dados do .NET Framework](converting-strings-to-dotnet-data-types.md)
 - [Convertendo tipos do .NET Framework para cadeias de caracteres](converting-dotnet-types-to-strings.md)

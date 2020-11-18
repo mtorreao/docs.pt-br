@@ -2,7 +2,6 @@
 title: Assegurando a integridade dos dados com códigos hash
 description: Saiba como garantir a integridade dos dados usando códigos de hash no .NET. Um valor de hash é um valor numérico de um comprimento fixo que identifica dados exclusivamente.
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - encryption [.NET], hash
 - hash
 ms.assetid: 33660f33-b70f-4dca-8c87-ab35cfc2961a
-ms.openlocfilehash: 3205e37f283cb205f5edfc5948a9cb9f7256f752
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 085a0ea387e3415e6e916bcdf9055ffaa6753fef
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556950"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831085"
 ---
 # <a name="ensuring-data-integrity-with-hash-codes"></a>Assegurando a integridade dos dados com códigos hash
 Um valor de hash é um valor numérico de um comprimento fixo que identifica dados exclusivamente. Os valores de hash representam grandes quantidades de dados como valores numéricos muito menores, para que sejam usados com assinaturas digitais. Você pode assinar um valor de hash com mais eficiência do que assinar o valor maior. Os valores de hash também são úteis para verificar a integridade dos dados enviados por meio de canais inseguros. O valor de hash dos dados recebidos pode ser comparado ao valor de hash dos dados conforme eles foram enviados para determinar se os dados foram alterados.  

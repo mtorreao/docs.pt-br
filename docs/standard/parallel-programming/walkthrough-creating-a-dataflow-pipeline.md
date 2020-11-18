@@ -2,7 +2,6 @@
 title: 'Passo a passo: criar um pipeline de fluxo de dados'
 description: Crie um pipeline de Dataflow, que é uma série de componentes ou blocos de fluxo de os. Um bloco de fluxo de tipos faz uma determinada tarefa para contribuir com uma meta maior.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, creating dataflow pipeline
 ms.assetid: 69308f82-aa22-4ac5-833d-e748533b58e8
-ms.openlocfilehash: 7fe12b63b04d403334e4b64a421b105550467ca4
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 9469bddf381ac33b35234756d4b8538500e55c6b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84767865"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829928"
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>Passo a passo: criar um pipeline de fluxo de dados
 Embora possa usar os métodos <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> para receber mensagens dos blocos de origem, você também pode conectar blocos de mensagens para formar um *pipeline de fluxo de dados*. Um pipeline de fluxo de dados é uma série de componentes, ou *blocos de fluxo de dados*, e cada uma série executa uma tarefa específica que contribui para um objetivo maior. Todos os blocos de fluxo de dados em um pipeline de fluxo de dados realizam trabalhos ao receber uma mensagem de outro bloco de fluxo de dados. Como analogia, podemos usar uma linha de montagem de automóveis. À medida que os veículos passam por ela, uma estação monta a carroceria, a seguinte instala o motor e assim por diante. Como a linha de montagem permite que vários veículos sejam montados ao mesmo tempo, seu desempenho é superior se comparado com a montagem de um veículo completo por vez.
@@ -54,7 +53,7 @@ Embora possa usar os métodos <xref:System.Threading.Tasks.Dataflow.DataflowBloc
  [!code-csharp[TPLDataflow_Palindromes#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_palindromes/cs/dataflowpalindromes.cs#3)]
  [!code-vb[TPLDataflow_Palindromes#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromes.vb#3)]  
   
-|Membro|Tipo|Description|  
+|Membro|Type|Descrição|  
 |------------|----------|-----------------|  
 |`downloadString`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Baixa o texto do catálogo na Web.|  
 |`createWordList`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Separa o texto do catálogo em uma matriz de palavras.|  
@@ -109,6 +108,6 @@ Embora possa usar os métodos <xref:System.Threading.Tasks.Dataflow.DataflowBloc
   
  Você também pode conectar um bloco de fluxo de dados de origem a vários blocos de destino para criar uma *rede de fluxo de dados*. A versão sobrecarregada do método <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> usa um objeto <xref:System.Predicate%601> que define se o bloco de destino aceita cada mensagem com base em seu valor. A maioria dos tipos de blocos de fluxo de dados que agem como fontes fornecem mensagens para todos os blocos de destino conectados, na ordem em que estavam conectados, até que um dos blocos aceite essa mensagem. Com esse mecanismo de filtragem, é possível criar sistemas de blocos de fluxo de dados conectados que direcionam determinados dados por um caminho e outros dados por meio de outro caminho. Para ver um exemplo que usa a filtragem para criar uma rede de fluxo de dados, confira [Explicação passo a passo: usar o fluxo de dados em um aplicativo do Windows Forms](walkthrough-using-dataflow-in-a-windows-forms-application.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Fluxo de dados](dataflow-task-parallel-library.md)

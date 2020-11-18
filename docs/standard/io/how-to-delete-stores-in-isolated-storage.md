@@ -1,7 +1,6 @@
 ---
 title: 'Como: Excluir repositórios no armazenamento isolado'
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - storing data using isolated storage, deleting stores
 - data storage using isolated storage, deleting stores
 ms.assetid: 3947e333-5af6-4601-b2f1-24d4d6129cf3
-ms.openlocfilehash: 885dc8e3ca0ea99de460cee7dd093b061f916388
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 47421b4ab223a0c68a7449ba58fd010ef6f7ccab
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291884"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830773"
 ---
 # <a name="how-to-delete-stores-in-isolated-storage"></a>Como: Excluir repositórios no armazenamento isolado
 A classe <xref:System.IO.IsolatedStorage.IsolatedStorageFile> fornece dois métodos para excluir arquivos de armazenamento isolado:  
@@ -36,7 +35,7 @@ A classe <xref:System.IO.IsolatedStorage.IsolatedStorageFile> fornece dois méto
  [!code-csharp[Conceptual.IsolatedStorage#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source3.cs#3)]
  [!code-vb[Conceptual.IsolatedStorage#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source3.vb#3)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
-- [Armazenamento isolado](isolated-storage.md)
+- [Armazenamentos isolado](isolated-storage.md)

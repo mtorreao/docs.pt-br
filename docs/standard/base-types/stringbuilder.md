@@ -2,7 +2,6 @@
 title: Uso da classe StringBuilder no .NET
 description: Saiba como usar a classe StringBuilder no .NET. Use essa classe para modificar uma cadeia de caracteres sem criar um novo objeto.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -17,12 +16,12 @@ helpviewer_keywords:
 - Insert method
 - strings [.NET], StringBuilder object
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
-ms.openlocfilehash: 1005da650c624b2b8f6616c163082ff95d7dc007
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: c9337df864a01ec0fbdf7068051efea60b6c59aa
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888952"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831293"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>Uso da classe StringBuilder no .NET
 O objeto <xref:System.String> é imutável. Sempre que usa um dos métodos na classe <xref:System.String?displayProperty=nameWithType>, você cria um novo objeto de cadeia de caracteres na memória, o que requer uma nova alocação de espaço para esse novo objeto. Em situações em que você precisa realizar repetidas modificações em uma cadeia de caracteres, a sobrecarga associada à criação de um novo objeto <xref:System.String> pode ser dispendiosa. A classe <xref:System.Text.StringBuilder?displayProperty=nameWithType> pode ser usada quando você deseja modificar uma cadeia de caracteres sem criar um novo objeto. Por exemplo, o uso da classe <xref:System.Text.StringBuilder> pode melhorar o desempenho ao concatenar várias cadeias de caracteres em um loop.  
@@ -56,12 +55,12 @@ O objeto <xref:System.String> é imutável. Sempre que usa um dos métodos na cl
   
  O método <xref:System.Text.StringBuilder.EnsureCapacity%2A> pode ser usado para verificar a capacidade do **StringBuilder** atual. Se a capacidade for maior que o valor transmitido, nenhuma alteração é feita; no entanto, se a capacidade for menor do que o valor transmitido, a capacidade atual é alterada para corresponder ao valor transmitido.  
   
- A propriedade <xref:System.Text.StringBuilder.Length%2A> também pode ser exibida ou definida. Se você definir a propriedade **Comprimento** para um valor maior que a propriedade **Capacidade** , a propriedade **Capacidade** será alterada automaticamente para o mesmo valor que a propriedade **Comprimento** . Definir a propriedade **Comprimento** para um valor menor que o comprimento da cadeia de caracteres no **StringBuilder** atual, diminui a cadeia de caracteres.  
+ A propriedade <xref:System.Text.StringBuilder.Length%2A> também pode ser exibida ou definida. Se você definir a propriedade **Comprimento** para um valor maior que a propriedade **Capacidade**, a propriedade **Capacidade** será alterada automaticamente para o mesmo valor que a propriedade **Comprimento**. Definir a propriedade **Comprimento** para um valor menor que o comprimento da cadeia de caracteres no **StringBuilder** atual, diminui a cadeia de caracteres.  
   
 ## <a name="modifying-the-stringbuilder-string"></a>Modificando a cadeia de caracteres do StringBuilder  
- A tabela a seguir lista os métodos que você pode usar para modificar o conteúdo de um **StringBuilder** .  
+ A tabela a seguir lista os métodos que você pode usar para modificar o conteúdo de um **StringBuilder**.  
   
-|Nome do método|Uso|  
+|Nome do método|Use|  
 |-----------------|---------|  
 |<xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType>|Acrescenta informações ao final do **StringBuilder** atual.|  
 |<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>|Substitui um especificador de formato transmitido em uma cadeia de caracteres com texto formatado.|  
@@ -110,7 +109,7 @@ O objeto <xref:System.String> é imutável. Sempre que usa um dos métodos na cl
  [!code-csharp[Conceptual.StringBuilder#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/tostringexample1.cs#10)]
  [!code-vb[Conceptual.StringBuilder#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/tostringexample1.vb#10)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Text.StringBuilder?displayProperty=nameWithType>
 - [Operações básicas de cadeia de caracteres](basic-string-operations.md)

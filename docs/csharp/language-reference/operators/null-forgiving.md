@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: fb478250aa81e61edb13c9d0e0e65f6f19e6153a
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: f2eb57bba462d471a041c17024fa7031c2c7f87d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687419"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830578"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! operador (NULL-tolerante) (referência C#)
 
@@ -53,7 +53,7 @@ No exemplo anterior, você não precisa usar o operador NULL-tolerante porque o 
 
 Para obter mais informações, consulte [a seção operador NULL-tolerante](~/_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md#the-null-forgiving-operator) do [rascunho da especificação de tipos de referência anulável](~/_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Referência de C#](../index.md)
 - [Operadores e expressões C#](index.md)

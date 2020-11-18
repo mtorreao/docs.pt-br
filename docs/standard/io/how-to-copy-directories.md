@@ -2,7 +2,6 @@
 title: Como copiar diretórios
 description: Consulte como copiar diretórios usando classes de e/s que copiam de forma síncrona o conteúdo de um diretório para outro local.
 ms.date: 12/27/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - copying directories
 - directories [.NET], copying
 ms.assetid: 5a969765-e5f8-4b4e-977e-90e2b0a1fe3c
-ms.openlocfilehash: 476473d5c25ce29d070abbeef7fa29a7cb9621e1
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: b81723b9ed7067826692e8383bf64058d4295f0c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93187977"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830825"
 ---
 # <a name="how-to-copy-directories"></a>Como copiar diretórios
 
@@ -39,6 +38,6 @@ Este exemplo copia os subdiretórios definindo o `copySubDirs` do método `Direc
 - <xref:System.IO.FileInfo>
 - <xref:System.IO.DirectoryInfo>
 - <xref:System.IO.FileStream>
-- [E/S de arquivo e de fluxo](index.md)
+- [Arquivo e e/s de fluxo](index.md)
 - [Tarefas comuns de E/S](common-i-o-tasks.md)
 - [E/S de arquivo assíncrona](asynchronous-file-i-o.md)

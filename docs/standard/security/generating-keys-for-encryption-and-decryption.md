@@ -2,7 +2,6 @@
 title: Gerando chaves para criptografia e descriptografia
 description: Entenda como criar e gerenciar chaves simétricas e assimétricas para criptografia e descriptografia no .NET.
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - asymmetric keys [.NET]
 - cryptography [.NET], keys
 ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
-ms.openlocfilehash: 7ce19dc465fb1fac22545398e0724e6b76dd7098
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: aa95204a90f2aee684cdd20095d1816e890a0306
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556937"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831072"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>Gerando chaves para criptografia e descriptografia
 A criação e o gerenciamento de chaves é uma parte importante do processo criptográfico. Os algoritmos simétricos exigem a criação de uma chave e um vetor de inicialização (IV). A chave deve ser mantida em segredo de qualquer pessoa que não deva descriptografar seus dados. O IV não precisa ser secreto, mas deve ser alterado para cada sessão. Algoritmos assimétricos exigem a criação de uma chave pública e uma chave privada. A chave pública pode se tornar pública para qualquer pessoa, enquanto a chave privada deve ser conhecida somente pela parte que descriptografará os dados criptografados com a chave pública. Esta seção descreve como gerar e gerenciar chaves para algoritmos simétricos e assimétricos.  

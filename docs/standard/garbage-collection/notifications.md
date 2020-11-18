@@ -1,7 +1,6 @@
 ---
 title: Notificações sobre a coleta de lixo
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -9,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - garbage collection, notifications
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
-ms.openlocfilehash: 389e851782edb82578c216951be440070b92723c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c91712b9d25221f1ffd9e9e980c420be32e2379a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84285996"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831176"
 ---
 # <a name="garbage-collection-notifications"></a>Notificações sobre a coleta de lixo
 Há situações em que uma coleta de lixo completa (ou seja, uma coleta de geração 2) pelo common language runtime pode afetar negativamente o desempenho. Isso pode ser um problema particularmente com servidores que processam grandes volumes de solicitações; Nesse caso, uma longa coleta de lixo pode causar um tempo limite de solicitação. Para evitar que uma coleção completa ocorra durante um período crítico, você pode ser notificado de que uma coleta de lixo completa está se aproximando e, em seguida, tomará medidas para redirecionar a carga de trabalho para outra instância de servidor. Você também pode induzir uma coleta por conta própria, desde que a instância atual do servidor não precise processar solicitações.  
@@ -52,7 +51,7 @@ Há situações em que uma coleta de lixo completa (ou seja, uma coleta de gera�
 ## <a name="notification-threshold-parameters"></a>Parâmetros de limite de notificação  
  O método <xref:System.GC.RegisterForFullGCNotification%2A> tem dois parâmetros para especificar os valores de limite do heap de objeto grande e dos objetos de geração 2. Quando esses valores forem atendidos, uma notificação de coleta de lixo deverá ser gerada. A tabela a seguir descreve esses parâmetros.  
   
-|Parâmetro|Description|  
+|Parâmetro|Descrição|  
 |---------------|-----------------|  
 |`maxGenerationThreshold`|Um número entre 1 e 99 que especifica quando a notificação deve ser gerada com base nos objetos promovidos na geração 2.|  
 |`largeObjectHeapThreshold`|Um número entre 1 e 99 que especifica quando a notificação deve ser gerada com base nos objetos alocados no heap de objetos grandes.|  
@@ -120,6 +119,6 @@ Há situações em que uma coleta de lixo completa (ou seja, uma coleta de gera�
  [!code-csharp[GCNotification#1](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#1)]
  [!code-vb[GCNotification#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#1)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Coleta de lixo](index.md)

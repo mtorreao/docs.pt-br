@@ -1,7 +1,6 @@
 ---
 title: Sondando o status de uma operação assíncrona
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - polling asynchronous operation status
 - status information [.NET], asynchronous operations
 ms.assetid: b541af31-dacb-4e20-8847-1b1ff7c35363
-ms.openlocfilehash: c73ee50c67034feed07a4869deb0a32342bb45e5
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: c4e8e7c66551e0a240eaa873513c3975703af946
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888731"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830305"
 ---
 # <a name="polling-for-the-status-of-an-asynchronous-operation"></a>Sondando o status de uma operação assíncrona
 Os aplicativos que podem executar outras tarefas enquanto aguardam os resultados de uma operação assíncrona não devem bloquear a espera até que a operação seja concluída. Use uma das opções a seguir para continuar a execução das instruções ao aguardar a conclusão de uma operação assíncrona:  
@@ -25,12 +24,12 @@ Os aplicativos que podem executar outras tarefas enquanto aguardam os resultados
 - Use um representante do <xref:System.AsyncCallback> para processar os resultados da operação assíncrona em um thread separado. Veja um exemplo que demonstra essa abordagem em [Usar um representante AsyncCallback para finalizar uma operação assíncrona](using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de código a seguir demonstra como usar métodos assíncronos na classe <xref:System.Net.Dns> para recuperar informações do Sistema de Nomes de Domínio de computadores especificados pelo usuário. Este exemplo inicia a operação assíncrona e, em seguida, imprime pontos (".") no console até que a operação seja concluída. Observe que **nulo** ( **Nada** no Visual Basic) é passado para os parâmetros <xref:System.Net.Dns.BeginGetHostByName%2A><xref:System.AsyncCallback> e <xref:System.Object> porque esses argumentos não são necessários quando se usa essa abordagem.  
+ O exemplo de código a seguir demonstra como usar métodos assíncronos na classe <xref:System.Net.Dns> para recuperar informações do Sistema de Nomes de Domínio de computadores especificados pelo usuário. Este exemplo inicia a operação assíncrona e, em seguida, imprime pontos (".") no console até que a operação seja concluída. Observe que **nulo** (**Nada** no Visual Basic) é passado para os parâmetros <xref:System.Net.Dns.BeginGetHostByName%2A><xref:System.AsyncCallback> e <xref:System.Object> porque esses argumentos não são necessários quando se usa essa abordagem.  
   
  [!code-csharp[AsyncDesignPattern#3](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDesignPattern/CS/Async_Poll.cs#3)]
  [!code-vb[AsyncDesignPattern#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDesignPattern/VB/Async_Poll.vb#3)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Padrão assíncrono baseado em evento (EAP)](event-based-asynchronous-pattern-eap.md)
 - [Visão geral do padrão assíncrono baseado em evento](event-based-asynchronous-pattern-overview.md)

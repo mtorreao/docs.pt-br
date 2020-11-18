@@ -1,7 +1,6 @@
 ---
 title: Executando comparações de cadeias de caracteres que não levam em conta a cultura
 ms.date: 08/22/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - culture-insensitive string operations, comparisons
 - culture parameter
 ms.assetid: abae50ef-32f7-4a50-a540-fd256fd1aed0
-ms.openlocfilehash: 1d8dc3f1bf686550eb94d7fb3003d4c21741739e
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 81520f603041693ba97e4ad74764a64627ee7147
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064139"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829785"
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>Executando comparações de cadeias de caracteres que não levam em conta a cultura
 Por padrão, o método <xref:System.String.Compare%2A?displayProperty=nameWithType> executa comparações sensíveis à cultura e com diferenciação de maiúsculas e minúsculas. Esse método também inclui várias sobrecargas que fornecem um parâmetro `culture` que permite especificar a cultura a ser usada e um parâmetro `comparisonType` que permite especificar as regras de comparação que serão usadas. Chamar esses métodos em vez da sobrecarga padrão remove qualquer ambiguidade sobre as regras usadas em uma chamada de método específico e a torna claro se uma comparação é sensível à cultura ou não.  
@@ -39,7 +38,7 @@ Por padrão, o método <xref:System.String.Compare%2A?displayProperty=nameWithTy
 
 Você pode baixar as [Tabelas de peso de classificação](https://www.microsoft.com/download/details.aspx?id=10921), um conjunto de arquivos de texto que contêm informações sobre os pesos de caracteres usados em operações de classificação e comparação dos sistemas operacionais Windows, e a [Tabela de elemento de ordenação Unicode padrão](https://www.unicode.org/Public/UCA/latest/allkeys.txt), a tabela de peso de classificação para Linux e macOS.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.String.Compare%2A?displayProperty=nameWithType>
 - <xref:System.String.CompareTo%2A?displayProperty=nameWithType>

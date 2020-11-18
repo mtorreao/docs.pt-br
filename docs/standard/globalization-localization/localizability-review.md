@@ -1,7 +1,6 @@
 ---
 title: Revisão de localização
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -16,12 +15,12 @@ helpviewer_keywords:
 - global applications, localizability
 - localizing resources
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
-ms.openlocfilehash: 6aa0588ea4baa00be476a05c335cf2abaa22aab4
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 30cde57a5c837d9dc324e9cd263d2a1011641af4
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064152"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829837"
 ---
 # <a name="localizability-review"></a>Revisão de localização
 
@@ -77,7 +76,7 @@ Antes de localizar seu aplicativo, você deve testá-lo usando dados internacion
 
 Se você tiver seguido as recomendações de globalização ao desenvolver seu aplicativo, sendo tratadas corretamente, tratado os recursos sensíveis à cultura e identificado e resolvido os problemas de localização que surgiram durante o teste, você poderá prosseguir para a próxima etapa, [Localização](localization.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Globalização e localização](index.md)
 - [Localização](localization.md)

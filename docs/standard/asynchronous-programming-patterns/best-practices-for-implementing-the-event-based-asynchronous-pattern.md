@@ -1,7 +1,6 @@
 ---
 title: Práticas recomendadas para a implementação do padrão assíncrono baseado em evento
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - Event-based Asynchronous Pattern
 - ProgressChangedEventArgs class
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: 8f2b1b4d6793be3e4de6fbc9fc09e8a7e690762c
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 6c2df4c2877f9191bd2b8190869c359a74de8e8f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888913"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830487"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Práticas recomendadas para a implementação do padrão assíncrono baseado em evento
 
@@ -39,7 +38,7 @@ Para cada método de <em>MethodName</em>**Async** separado, aplique os seguintes
   
 - Defina um evento <em>MethodName</em>**Completed** na mesma classe que o método.  
   
-- Defina uma <xref:System.EventArgs> classe e um delegado de acompanhamento para o evento <em>MethodName</em>**Completed** que deriva da <xref:System.ComponentModel.AsyncCompletedEventArgs> classe. O nome padrão da classe deve seguir a forma <em>MethodName</em>**CompletedEventArgs** .  
+- Defina uma <xref:System.EventArgs> classe e um delegado de acompanhamento para o evento <em>MethodName</em>**Completed** que deriva da <xref:System.ComponentModel.AsyncCompletedEventArgs> classe. O nome padrão da classe deve seguir a forma <em>MethodName</em>**CompletedEventArgs**.  
   
 - Verifique se a classe <xref:System.EventArgs> é específica aos valores retornados do método <em>MethodName</em>. Ao usar a classe <xref:System.EventArgs>, você nunca deve solicitar que os desenvolvedores convertam o resultado.  
   
@@ -148,7 +147,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 - Ao usar multithreading de qualquer tipo, você pode enfrentar bugs muito sérios e complexos. Veja as [Práticas recomendadas de threading gerenciado](../threading/managed-threading-best-practices.md) antes de implementar qualquer solução que use multithreading.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ComponentModel.AsyncOperation>
 - <xref:System.ComponentModel.AsyncOperationManager>

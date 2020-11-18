@@ -1,17 +1,16 @@
 ---
 title: Expressões XPath compilados
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
-ms.openlocfilehash: e74b52e471699fc663504fa42d6c7e502859adda
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 310d5eb01fff02d82ec3762d55ff14e5a6bcd621
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291520"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831007"
 ---
 # <a name="compiled-xpath-expressions"></a>Expressões XPath compilados
 Um objeto de <xref:System.Xml.XPath.XPathExpression> representa uma consulta XPath compilado retornada do método estático de <xref:System.Xml.XPath.XPathExpression.Compile%2A> da classe de <xref:System.Xml.XPath.XPathExpression> ou método de <xref:System.Xml.XPath.XPathNavigator.Compile%2A> da classe de <xref:System.Xml.XPath.XPathNavigator> .  
@@ -35,7 +34,7 @@ Um objeto de <xref:System.Xml.XPath.XPathExpression> representa uma consulta XPa
   
  A tabela a seguir descreve cada um dos tipos de retorno XPath W3C, suas equivalências do Microsoft.NET Framework, e métodos que o objeto de <xref:System.Xml.XPath.XPathExpression> pode ser usado com base no seu tipo de retorno.  
   
-|Tipo de retorno XPath W3C|tipo equivalente do .NET Framework|Description|Métodos|  
+|Tipo de retorno XPath W3C|tipo equivalente do .NET Framework|Descrição|Métodos|  
 |---------------------------|------------------------------------|-----------------|-------------|  
 |`Node set`|<xref:System.Xml.XPath.XPathNodeIterator>|Uma coleção não ordenada de nós sem duplicatas criadas na ordem de documento.|<xref:System.Xml.XPath.XPathNavigator.Select%2A> ou <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
 |`Boolean`|<xref:System.Boolean>|Um valor de `true` ou de `false` .|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> ou<br /><br /> <xref:System.Xml.XPath.XPathNavigator.Matches%2A>|  
@@ -117,7 +116,7 @@ Console.WriteLine(nodes.Current.Value);
   
  Para saber mais sobre os métodos de navegação de conjunto de nós da classe <xref:System.Xml.XPath.XPathNavigator>, confira [Navegação de conjunto de nós usando XPathNavigator](node-set-navigation-using-xpathnavigator.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

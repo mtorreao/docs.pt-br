@@ -2,7 +2,6 @@
 title: Cadeias de caracteres de formato de data e hora padrão
 description: Saiba como usar uma cadeia de caracteres de formato de data e hora padrão para definir a representação de texto de um valor de data e hora no .NET.
 ms.date: 11/05/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - formatting [.NET], time
 - date and time strings
 ms.custom: contperfq2
-ms.openlocfilehash: dc294322317560344a6e3cdba1dbe2cce4f6a3fd
-ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
+ms.openlocfilehash: b6917fa8a012a6fe52db1ea2b79397a0484d9d8f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94329749"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831319"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Cadeias de caracteres de formato de data e hora padrão
 
@@ -31,7 +30,7 @@ Uma cadeia de caracteres de formato de data e hora padrão usa um único caracte
 - Para definir a representação de texto de um valor de data e hora que possa ser convertido em valor de <xref:System.DateTime> ou <xref:System.DateTimeOffset> por uma operação de análise.
 
 > [!TIP]
-> Você pode baixar o **Utilitário de formatação** , um aplicativo .net Windows Forms que permite aplicar cadeias de caracteres de formato a valores numéricos ou de data e hora e exibir a cadeia de caracteres de resultado. O código-fonte está disponível para o [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) e o [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb).
+> Você pode baixar o **Utilitário de formatação**, um aplicativo .net Windows Forms que permite aplicar cadeias de caracteres de formato a valores numéricos ou de data e hora e exibir a cadeia de caracteres de resultado. O código-fonte está disponível para o [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) e o [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb).
 
 [!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-partial-note.md)]
 
@@ -485,6 +484,6 @@ A formatação é influenciada pelas propriedades do objeto <xref:System.Globali
 - <xref:System.DateTime?displayProperty=nameWithType>
 - <xref:System.DateTimeOffset?displayProperty=nameWithType>
 - [Formatar tipos](formatting-types.md)
-- [Cadeias de caracteres de formato de data e hora personalizadas](custom-date-and-time-format-strings.md)
+- [Cadeias de caracteres de formato de data e hora personalizado](custom-date-and-time-format-strings.md)
 - [Amostra: Utilitário de Formatação do WinForms do .NET Core (C#)](/samples/dotnet/samples/windowsforms-formatting-utility-cs)
 - [Amostra: Utilitário de Formatação do WinForms do .NET Core (Visual Basic)](/samples/dotnet/samples/windowsforms-formatting-utility-vb)

@@ -1,14 +1,13 @@
 ---
 title: Conjuntos de nó nas transformações
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: ad034f0e-ff8b-4a71-9a4c-528c754263c4
-ms.openlocfilehash: 33cbae05cf35904903189ce767090d3d3cca8e4d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 72b3af5b471d73cc159dd700ddd29c4ffb5ea639
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288739"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830110"
 ---
 # <a name="node-sets-in-transformations"></a>Conjuntos de nó nas transformações
 Conjuntos de nó é um dos quatro tipos de dados básicos que são retornados das expressões de idioma do caminho de XML (XPath). Um conjunto de nó, que é uma coleção não ordenada de nós sem duplicatas, criada na ordem de documento, pode ser atribuído a um variável em uma folha de estilos.  
@@ -72,7 +71,7 @@ History of Trenton Vol 3
 ******  
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Xml.XPath.XPathNodeIterator>
 - [Transformações XSLT com a classe XslTransform](xslt-transformations-with-the-xsltransform-class.md)

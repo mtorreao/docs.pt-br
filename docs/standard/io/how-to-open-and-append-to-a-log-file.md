@@ -2,7 +2,6 @@
 title: 'Como: abrir e anexar a um arquivo de log'
 description: Abra e acrescente a um arquivo de log usando as classes StreamWriter e StreamReader no .NET, que gravam caracteres e lêem caracteres de fluxos.
 ms.date: 01/21/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - log files, appending to
 - I/O [.NET], log files
 ms.assetid: 74423362-1721-49cb-aa0a-e04005f72a06
-ms.openlocfilehash: ed8345901dc5f44e947bd076944d7e61eac561da
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: f92dd34b15ca79f229b365c7c2db4ace411d9353
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188166"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830747"
 ---
 # <a name="how-to-open-and-append-to-a-log-file"></a>Como: abrir e anexar a um arquivo de log
 
@@ -45,4 +44,4 @@ Como alternativa para esse exemplo, você pode armazenar as informações como u
 - [Como: gravar texto em um arquivo](how-to-write-text-to-a-file.md)  
 - [Como: ler caracteres de uma cadeia de caracteres](how-to-read-characters-from-a-string.md)  
 - [Como: gravar caracteres em uma cadeia de caracteres](how-to-write-characters-to-a-string.md)  
-- [E/S de arquivo e de fluxo](index.md)
+- [Arquivo e e/s de fluxo](index.md)

@@ -1,7 +1,6 @@
 ---
 title: Interoperabilidade com outros tipos e padrões assíncronos
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET support for
 - .NET, asynchronous design patterns
 ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
-ms.openlocfilehash: 5ad49c70aaa69d8a4f830851b80b6a4839388b0f
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: b0dd786e1922d75edcb0326cc9e98037c6e4945c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888744"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830318"
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>Interoperabilidade com outros tipos e padrões assíncronos
 
@@ -87,7 +86,7 @@ Um breve histórico dos padrões assíncronos no .NET:
  [!code-csharp[Conceptual.AsyncInterop#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Wait1.cs#12)]
  [!code-vb[Conceptual.AsyncInterop#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Wait1.vb#12)]  
   
- Com esse método, você pode usar implementações <xref:System.Threading.WaitHandle> existentes em métodos assíncronos.  Por exemplo, se quiser limitar o número de operações assíncronas que são executadas em um determinado momento, você pode utilizar um semáforo (um objeto <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>).  Você pode limitar a *N* o número de operações que são executadas simultaneamente inicializando a contagem do semáforo como *N* , aguardando o semáforo sempre que você desejar executar uma operação e liberando o semáforo quando terminar com uma operação:  
+ Com esse método, você pode usar implementações <xref:System.Threading.WaitHandle> existentes em métodos assíncronos.  Por exemplo, se quiser limitar o número de operações assíncronas que são executadas em um determinado momento, você pode utilizar um semáforo (um objeto <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>).  Você pode limitar a *N* o número de operações que são executadas simultaneamente inicializando a contagem do semáforo como *N*, aguardando o semáforo sempre que você desejar executar uma operação e liberando o semáforo quando terminar com uma operação:  
   
  [!code-csharp[Conceptual.AsyncInterop#13](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Semaphore1.cs#13)]
  [!code-vb[Conceptual.AsyncInterop#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Semaphore1.vb#13)]  
@@ -100,7 +99,7 @@ Um breve histórico dos padrões assíncronos no .NET:
  [!code-csharp[Conceptual.AsyncInterop#14](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Wait1.cs#14)]
  [!code-vb[Conceptual.AsyncInterop#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Wait1.vb#14)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Padrão assíncrono baseado em tarefa (TAP)](task-based-asynchronous-pattern-tap.md)
 - [Implementando o padrão assíncrono baseado em tarefa](implementing-the-task-based-asynchronous-pattern.md)

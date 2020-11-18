@@ -2,18 +2,17 @@
 title: Biblioteca de tarefas paralelas (TPL)
 description: Explore a TPL (biblioteca paralela de tarefas), um conjunto de tipos públicos e APIs para simplificar o processo de adição de paralelismo & simultaneidade a aplicativos no .NET.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - .NET, concurrency in
 - .NET, parallel programming in
 - Parallel Programming
 ms.assetid: b8f99f43-9104-45fd-9bff-385a20488a23
-ms.openlocfilehash: 596671b267484561a8697546caa5a4764242ebd3
-ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
+ms.openlocfilehash: 5c26799338b46f5f0420c3b082e7d84fade27a26
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92925227"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829993"
 ---
 # <a name="task-parallel-library-tpl"></a>Biblioteca de tarefas paralelas (TPL)
 
@@ -32,6 +31,6 @@ A Biblioteca Paralela de Tarefas (TPL) é um conjunto de tipos e APIs públicos 
 |[LINQ paralelo (PLINQ)](introduction-to-plinq.md)|Descreve como obter o paralelismo de dados com consultas LINQ.|  
 |[Programação paralela](index.md)|Nó de nível superior para a programação paralela do .NET.|  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Exemplos de programação paralela com o & do .NET Core .NET Standard](/samples/browse/?products=dotnet-core%2Cdotnet-standard&term=parallel)

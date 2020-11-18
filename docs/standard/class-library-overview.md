@@ -2,7 +2,6 @@
 title: Visão geral da biblioteca de classes do .NET
 description: Saiba mais sobre a biblioteca de classes .NET. As APIs do .NET incluem classes, interfaces, delegados e tipos de valor para fornecer acesso à funcionalidade do sistema.
 ms.date: 02/08/2018
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - classes [.NET], library overview
 - .NET, library overview
@@ -36,12 +35,12 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-ms.openlocfilehash: 95dcbea6e0b3f2cd91bd6955a11ede7c9731caca
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 44a46db4fa7ebf6dd5802cc07e7d18744c72ad68
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687528"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831254"
 ---
 # <a name="net-class-library-overview"></a>Visão geral da biblioteca de classes do .NET
 
@@ -69,7 +68,7 @@ O .NET fornece um conjunto avançado de interfaces, bem como classes abstratas e
   
  Esse esquema de nomenclatura torna mais fácil para os desenvolvedores de biblioteca que estendem o .NET criar grupos hierárquicos de tipos e nomeá-los de maneira consistente e informativa. Ele também permite que tipos sejam identificados sem ambiguidades por seu nome completo (ou seja, pelo namespace e pelo nome de tipo), o que impede conflitos de nomes de tipo. Os desenvolvedores de bibliotecas devem usar a seguinte convenção para criar nomes para seus namespaces:  
   
- *CompanyName* . *TechnologyName*  
+ *CompanyName*.*TechnologyName*  
   
  Por exemplo, o namespace `Microsoft.Word` segue esta diretriz.  
   
@@ -86,17 +85,17 @@ O .NET fornece um conjunto avançado de interfaces, bem como classes abstratas e
 |Categoria|Nome da classe|Descrição|Tipo de dados do Visual Basic|Tipo de dados em C#|Tipo de dados de C++/CLI|Tipo de dados de F#|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |Integer|<xref:System.Byte>|Um inteiro de 8 bits sem sinal.|**Byte**|**byte**|**unsigned char**|**byte**|  
-||<xref:System.SByte>|Um inteiro com sinal de 8 bits.<br /><br /> Não compatível com CLS.|**SByte**|**sbyte**|**char**<br /> -ou-<br /> **signed** **char**|**sbyte**|  
+||<xref:System.SByte>|Um inteiro com sinal de 8 bits.<br /><br /> Não compatível com CLS.|**SByte**|**sbyte**|**char**<br /> - ou -<br /> **signed** **char**|**sbyte**|  
 ||<xref:System.Int16>|Um inteiro de 16 bits com sinal.|**Baixo**|**short**|**short**|**int16**|  
-||<xref:System.Int32>|Um inteiro com sinal de 32 bits.|**Inteiro**|**int**|**int**<br /><br /> -ou-<br /><br /> **longo**|**int**|  
+||<xref:System.Int32>|Um inteiro com sinal de 32 bits.|**Inteiro**|**int**|**int**<br /><br /> - ou -<br /><br /> **longo**|**int**|  
 ||<xref:System.Int64>|Um inteiro com sinal de 64 bits.|**Long**|**longo**|**__int64**|**int64**|  
 ||<xref:System.UInt16>|Um inteiro sem sinal de 16 bits.<br /><br /> Não compatível com CLS.|**Num**|**ushort**|**unsigned short**|**UInt16**|  
-||<xref:System.UInt32>|Um inteiro sem sinal de 32 bits.<br /><br /> Não compatível com CLS.|**UInteger**|**uint**|**unsigned int**<br /> -ou-<br /> **unsigned long**|**uint32**|  
+||<xref:System.UInt32>|Um inteiro sem sinal de 32 bits.<br /><br /> Não compatível com CLS.|**UInteger**|**uint**|**unsigned int**<br /> - ou -<br /> **unsigned long**|**uint32**|  
 ||<xref:System.UInt64>|Um inteiro sem sinal de 64 bits.<br /><br /> Não compatível com CLS.|**ULong**|**ULONG**|**unsigned __int64**|**uint64**|  
 |Ponto flutuante|<xref:System.Single>|Um número de ponto flutuante de precisão simples (32 bits).|**Single**|**float**|**float**|**float32**<br> ou<br>**single**|  
 ||<xref:System.Double>|Um número de ponto flutuante de precisão dupla (64 bits).|**Double**|**double**|**double**|**float**<br> ou <br> **double**|  
 |Lógico|<xref:System.Boolean>|Um valor booliano (verdadeiro ou falso).|**Booliano**|**bool**|**bool**|**bool**|  
-|Outros|<xref:System.Char>|Um caractere Unicode (16 bits).|**º**|**char**|**wchar_t**|**char**|  
+|Outro|<xref:System.Char>|Um caractere Unicode (16 bits).|**º**|**char**|**wchar_t**|**char**|  
 ||<xref:System.Decimal>|Um valor decimal (128 bits).|**Decimal**|**decimal**|**Decimal**|**decimal**|  
 ||<xref:System.IntPtr>|Um inteiro com sinal cujo tamanho dependa da plataforma subjacente (um valor de 32 bits em uma plataforma de 32 bits e um valor de 64 bits em uma plataforma de 64 bits).|**IntPtr**<br /><br /> Nenhum tipo interno.|**IntPtr**<br /><br /> Nenhum tipo interno.|**IntPtr**<br /><br /> Nenhum tipo interno.|**unativeint**|  
 ||<xref:System.UIntPtr>|Um inteiro sem sinal cujo tamanho dependa da plataforma subjacente (um valor de 32 bits em uma plataforma de 32 bits e um valor de 64 bits em uma plataforma de 64 bits).<br /><br /> Não compatível com CLS.|**UIntPtr**<br /><br /> Nenhum tipo interno.|**UIntPtr**<br /><br /> Nenhum tipo interno.|**UIntPtr**<br /><br /> Nenhum tipo interno.|**unativeint**|  
@@ -107,8 +106,8 @@ O .NET fornece um conjunto avançado de interfaces, bem como classes abstratas e
   
  Para obter mais informações sobre namespaces, use o [Navegador de API do .NET](../../api/index.md) para procurar a Biblioteca de classes do .NET. A documentação de referência de API fornece informações sobre cada namespace, seus tipos e cada um dos seus membros.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Sistema de tipos comum](base-types/common-type-system.md)
+- [Common Type System](base-types/common-type-system.md)
 - [Navegador de API .NET](../../api/index.md)
 - [Visão geral](../framework/get-started/overview.md)

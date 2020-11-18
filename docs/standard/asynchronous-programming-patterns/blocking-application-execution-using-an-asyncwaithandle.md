@@ -1,7 +1,6 @@
 ---
 title: Bloqueando a execução de aplicativos com um AsyncWaitHandle
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - stopping asynchronous operations
 - blocking application execution
 ms.assetid: 3e32daf2-8161-4e8f-addd-9fd9ff101b03
-ms.openlocfilehash: 6184e52c3f6e39e452331af27b83520e498062aa
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 15750575aaa4f937104bd36db5f9dedd4cd12f0a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289922"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830461"
 ---
 # <a name="blocking-application-execution-using-an-asyncwaithandle"></a>Bloqueando a execução de aplicativos com um AsyncWaitHandle
 Aplicativos que não continuem a executar outras tarefas enquanto aguardam os resultados de uma operação assíncrona devem bloquear até que a operação seja concluída. Use uma das opções a seguir para bloquear o thread principal do aplicativo ao aguardar a conclusão de uma operação assíncrona:  
@@ -35,7 +34,7 @@ Aplicativos que não continuem a executar outras tarefas enquanto aguardam os re
  [!code-csharp[AsyncDesignPattern#2](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDesignPattern/CS/Async_EndBlockWait.cs#2)]
  [!code-vb[AsyncDesignPattern#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDesignPattern/VB/Async_EndBlockWait.vb#2)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [EAP (Padrão Assíncrono baseado em Evento)](event-based-asynchronous-pattern-eap.md)
+- [Padrão assíncrono baseado em evento (EAP)](event-based-asynchronous-pattern-eap.md)
 - [Visão geral do padrão assíncrono baseado em evento](event-based-asynchronous-pattern-overview.md)

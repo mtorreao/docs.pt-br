@@ -2,7 +2,6 @@
 title: Quantificadores em expressões regulares
 description: Saiba mais sobre quantificadores de expressão regular, que especificam quantas instâncias de um caractere, grupo ou classe de caractere devem estar presentes na entrada para correspondência.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - quantifiers
 - lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-ms.openlocfilehash: 361286b992180e1d7fdf18d88022780cc3aa53fc
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 46f780dff948d290ee7906f8de7e74b03a404cc5
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889420"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831033"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>Quantificadores em expressões regulares
 Os quantificadores especificam quantas instâncias de um caractere, grupo ou classe de caracteres devem estar presentes na entrada para encontrar uma correspondência.  A tabela a seguir lista os quantificadores tem suporte no .NET.  
@@ -270,7 +269,7 @@ Os quantificadores especificam quantas instâncias de um caractere, grupo ou cla
  [!code-csharp[RegularExpressions.Quantifiers.EmptyMatch#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/cs/emptymatch4.cs#2)]
  [!code-vb[RegularExpressions.Quantifiers.EmptyMatch#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/vb/emptymatch4.vb#2)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Linguagem de expressões regulares – referência rápida](regular-expression-language-quick-reference.md)
 - [Retrocesso](backtracking-in-regular-expressions.md)

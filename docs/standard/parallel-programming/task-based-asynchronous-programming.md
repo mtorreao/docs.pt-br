@@ -2,23 +2,22 @@
 title: Programação assíncrona baseada em tarefas – .NET
 description: Neste artigo, saiba mais sobre a programação assíncrona baseada em tarefas por meio da TPL (biblioteca paralela de tarefas) no .NET.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-ms.openlocfilehash: d735cb56c5914dd33ba694c95a8e92446ca47088
-ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
+ms.openlocfilehash: a1abe474628cd88e0c24f4152d83bd8ed7ad7950
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92925240"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830019"
 ---
 # <a name="task-based-asynchronous-programming"></a>Programação assíncrona baseada em tarefas
 
-A TPL (Biblioteca de Paralelismo de Tarefas) é baseada no conceito de uma *tarefa* , que representa uma operação assíncrona. De certa forma, uma tarefa é semelhante a um thread ou a um item de trabalho <xref:System.Threading.ThreadPool>, mas em um nível mais alto de abstração. O termo *paralelismo de tarefas* refere-se a uma ou mais tarefas independentes que são executadas simultaneamente. As tarefas fornecem dois benefícios principais:
+A TPL (Biblioteca de Paralelismo de Tarefas) é baseada no conceito de uma *tarefa*, que representa uma operação assíncrona. De certa forma, uma tarefa é semelhante a um thread ou a um item de trabalho <xref:System.Threading.ThreadPool>, mas em um nível mais alto de abstração. O termo *paralelismo de tarefas* refere-se a uma ou mais tarefas independentes que são executadas simultaneamente. As tarefas fornecem dois benefícios principais:
 
 - Uso mais eficiente e mais dimensionável de recursos do sistema.
 
@@ -114,7 +113,7 @@ O exemplo a seguir fornece uma ilustração simples. Ele altera a cultura atual 
 :::code language="vbnet" source="snippets/vb/asyncculture1.vb" id="1":::
 
 > [!NOTE]
-> Nas versões do .NET Framework antes do .NET Framework 4,6, a cultura de uma tarefa é determinada pela cultura do thread em que ele *é executado* , não pela cultura do *thread de chamada* . Para tarefas assíncronas, isso significa que a cultura usada pela tarefa pode ser diferente para a cultura do thread de chamada.
+> Nas versões do .NET Framework antes do .NET Framework 4,6, a cultura de uma tarefa é determinada pela cultura do thread em que ele *é executado*, não pela cultura do *thread de chamada*. Para tarefas assíncronas, isso significa que a cultura usada pela tarefa pode ser diferente para a cultura do thread de chamada.
 
 Para saber mais sobre a cultura e tarefas assíncronas, veja a seção “Cultura e operações assíncronas baseadas em tarefas assíncronas” no tópico <xref:System.Globalization.CultureInfo>.
 
@@ -138,7 +137,7 @@ Para obter mais informações, consulte [Encadeando tarefas com tarefas de conti
 
 ## <a name="creating-detached-child-tasks"></a>Criando tarefas filho desanexadas
 
-Quando o código do usuário que está executando em uma tarefa cria uma nova tarefa e não especifica a opção de <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent>, a nova tarefa não é sincronizada com a tarefa pai de nenhuma forma especial. Esse tipo de tarefa não sincronizada é chamada de *tarefa aninhada desanexada* ou *tarefa filho desanexada* . O exemplo a seguir mostra uma tarefa que cria uma tarefa filha desanexada.
+Quando o código do usuário que está executando em uma tarefa cria uma nova tarefa e não especifica a opção de <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent>, a nova tarefa não é sincronizada com a tarefa pai de nenhuma forma especial. Esse tipo de tarefa não sincronizada é chamada de *tarefa aninhada desanexada* ou *tarefa filho desanexada*. O exemplo a seguir mostra uma tarefa que cria uma tarefa filha desanexada.
 
 [!code-csharp[TPL_TaskIntro#07](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/taskintro.cs#07)]
 [!code-vb[TPL_TaskIntro#07](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/tpl_intro.vb#07)]
@@ -276,7 +275,7 @@ Se você deve herdar de <xref:System.Threading.Tasks.Task> ou <xref:System.Threa
 |[Paralelismo de dados](data-parallelism-task-parallel-library.md)|Descreve como usar <xref:System.Threading.Tasks.Parallel.For%2A> e <xref:System.Threading.Tasks.Parallel.ForEach%2A> para criar loops paralelos sobre dados.|
 |[Programação paralela](index.md)|Nó de nível superior para a programação paralela do .NET Framework.|
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Programação paralela](index.md)
 - [Exemplos de programação paralela com o & do .NET Core .NET Standard](/samples/browse/?products=dotnet-core%2Cdotnet-standard&term=parallel)

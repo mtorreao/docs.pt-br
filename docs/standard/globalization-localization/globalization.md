@@ -1,7 +1,6 @@
 ---
 title: Globalização
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - application development [.NET], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-ms.openlocfilehash: 66ed197f102583553112083e3a21f89e33cd3e3f
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 055bdfa82ea0e1721a6125ba14d7b6340dc254b9
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064165"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829863"
 ---
 # <a name="globalization"></a>Globalização
 
@@ -338,7 +337,7 @@ Em geral, não faça suposições sobre os valores de propriedades <xref:System.
 
 - Nos sistemas Windows, o usuário pode personalizar as configurações específicas da cultura usando o aplicativo **Região e Idioma** no Painel de Controle. Quando você instancia um objeto <xref:System.Globalization.CultureInfo>, é possível determinar se ele reflete as personalizações desse usuário chamando o construtor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29>. Normalmente, para aplicativos de usuário final, você deve respeitar as preferências do usuário para que o usuário seja apresentado aos dados em um formato que eles esperam.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Globalização e localização](index.md)
 - [Práticas recomendadas para usar cadeias de caracteres](../base-types/best-practices-strings.md)

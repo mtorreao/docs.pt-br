@@ -1,7 +1,6 @@
 ---
 title: Numéricos no .NET
 ms.date: 10/18/2018
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - SIMD
 - System.Numerics.Vectors
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-ms.openlocfilehash: 0fdf1b3ec1141dd637f817115bd1d2351c8af7a0
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: f674f05e864e11c83bb2e046ed54b91afebf167e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687734"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831137"
 ---
 # <a name="numerics-in-net"></a>Numéricos no .NET
 
@@ -96,6 +95,6 @@ Os tipos habilitados para SIMD são implementados de modo que possam ser usados 
 
 Para obter mais informações, consulte [usar tipos numéricos acelerados por SIMD](simd.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Cadeias de Caracteres de Formato Numérico Padrão](base-types/standard-numeric-format-strings.md)

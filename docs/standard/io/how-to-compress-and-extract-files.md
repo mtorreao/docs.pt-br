@@ -2,7 +2,6 @@
 title: Como compactar e extrair arquivos
 description: Compacte & extrair arquivos usando System. IO. compactação. Veja exemplos usando ZipFile, ZipArchive, ZipArchiveEntry, DeflateStream, & GZipStream.
 ms.date: 01/14/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - compression
 - compress files
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
-ms.openlocfilehash: ea078099aba3161818844d14af221eb582e7f11b
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: a1077c7277e0aa54e3c8883cfc27d93926485b8e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188283"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830851"
 ---
 # <a name="how-to-compress-and-extract-files"></a>Como compactar e extrair arquivos
 
@@ -49,7 +48,7 @@ Para executar a amostra, crie uma pasta *Iniciar* na pasta do programa e popule-
 
 ## <a name="example-2-extract-specific-file-extensions"></a>Exemplo 2: extrair extensões de arquivo específicas
 
-O próximo exemplo itera pelo conteúdo de um arquivo *.zip* existente e extrai os arquivos que têm uma extensão *.txt* . Ele usa a classe <xref:System.IO.Compression.ZipArchive> para acessar o zip e a classe <xref:System.IO.Compression.ZipArchiveEntry> para inspecionar as entradas individuais. O método de extensão <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A> para o objeto <xref:System.IO.Compression.ZipArchiveEntry> está disponível na classe <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType>.
+O próximo exemplo itera pelo conteúdo de um arquivo *.zip* existente e extrai os arquivos que têm uma extensão *.txt*. Ele usa a classe <xref:System.IO.Compression.ZipArchive> para acessar o zip e a classe <xref:System.IO.Compression.ZipArchiveEntry> para inspecionar as entradas individuais. O método de extensão <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A> para o objeto <xref:System.IO.Compression.ZipArchiveEntry> está disponível na classe <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType>.
 
 Para executar a amostra, coloque um arquivo *.zip* chamado *result.zip* na pasta do programa. Quando solicitado, forneça um nome de pasta na qual extrair.
 
@@ -80,4 +79,4 @@ Você também pode usar as classes <xref:System.IO.Compression.GZipStream> e <xr
 - <xref:System.IO.Compression.ZipArchiveEntry>  
 - <xref:System.IO.Compression.DeflateStream>  
 - <xref:System.IO.Compression.GZipStream>  
-- [E/S de arquivo e de fluxo](index.md)
+- [Arquivo e e/s de fluxo](index.md)

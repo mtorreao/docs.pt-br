@@ -1,19 +1,18 @@
 ---
-title: TPL e programação assíncrona .NET tradicional
+title: TPL e Programação Assíncrona do .NET Tradicional
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, with other asynchronous models
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
-ms.openlocfilehash: 498bde82d05259bdc561d08819d024090b0417f0
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: bd6f32f8e77161007f4cfe49fa808167a17a3ec6
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92688022"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829980"
 ---
 # <a name="tpl-and-traditional-net-asynchronous-programming"></a>TPL e programação assíncrona .NET tradicional
 
@@ -127,6 +126,6 @@ Essa sobrecarga leva três parâmetros de entrada, da seguinte forma. O primeiro
 
  O arquivo *StreamExtensions.cs* , no repositório de [extras .net Standard extensões paralelas](/samples/dotnet/samples/parallel-programming-extensions-extras-cs/) , contém várias implementações de referência que usam `Task` objetos para e/s de rede e de arquivo assíncrono.
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Biblioteca de tarefas paralelas (TPL)](task-parallel-library-tpl.md)

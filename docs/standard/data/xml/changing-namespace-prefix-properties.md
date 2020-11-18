@@ -1,17 +1,16 @@
 ---
 title: Alterando propriedades de prefixo de namespace
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: d5c87cbe-4d69-429f-aad5-3103c2ca2770
-ms.openlocfilehash: b817a68ff9789be414118ff4c1a3d88ca3ea9f01
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 14a59a9fdc602e63822a62c102cbffa32d6ba850
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290909"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830266"
 ---
 # <a name="changing-namespace-prefix-properties"></a>Alterando propriedades de prefixo de namespace
 A classe **XmlNode** permite que você modifique o prefixo de namespace associado a um nó específico. Por exemplo, o código a seguir mostra o prefixo de um elemento que está sendo alterado.  
@@ -64,6 +63,6 @@ Console.WriteLine(doc.InnerXml);
   
  Quando a árvore foi mantida em uma cadeia de caracteres como resultado da chamada a **doc.InnerXml**, o atributo `xmlns:a='123'` foi adicionado para preservar o namespace do elemento `test`. Foi `'123'`, e permanece `'123'`.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [XML Document Object Model (DOM)](xml-document-object-model-dom.md)

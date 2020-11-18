@@ -2,7 +2,6 @@
 title: Tratamento de erros de E/S no .NET
 description: Saiba como lidar com erros de e/s no .NET. Mapeie códigos de erro para exceções, manipule exceções em operações de e/s e manipule IOException.
 ms.date: 08/27/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bd7112b3052f246a01e4a36d6d425b37cb6174dd
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: fe6796be91d31e3f7bf69605f39a39f3db6b3e83
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188036"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830864"
 ---
 # <a name="handling-io-errors-in-net"></a>Tratamento de erros de E/S no .NET
 

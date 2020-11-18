@@ -1,18 +1,17 @@
 ---
 title: Inferindo esquemas de documentos XML
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 - cpp
 ms.assetid: f3d97d53-614d-4a04-a174-87965b7405f6
-ms.openlocfilehash: 5b0f9bea33346083ce0015fbf3cdfeb0e0ea1181
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 1f7b8c8b3cf51aa707a17b3a9e58c6a8c0d3d833
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287656"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830227"
 ---
 # <a name="inferring-schemas-from-xml-documents"></a>Inferindo esquemas de documentos XML
 Este tópico descreve como usar a classe de <xref:System.Xml.Schema.XmlSchemaInference> para inferir um esquema de linguagem de definição de esquema XML (XSD) da estrutura de um documento XML.  
@@ -80,7 +79,7 @@ Este tópico descreve como usar a classe de <xref:System.Xml.Schema.XmlSchemaInf
 ## <a name="schemas-that-cannot-be-refined"></a>Esquemas que não podem ser refinados  
  Há construções de Esquema XML do W3C que o processo de <xref:System.Xml.Schema.XmlSchemaInference> do idioma da definição de esquema XML (XSD) não pode manipular se um determinado tipo para refinar e causar uma exceção seja lançada. Como um tipo complexo cujo compositor de nível superior é algo diferente de uma sequência. No modelo de objeto (SOM) do esquema, isso corresponde a <xref:System.Xml.Schema.XmlSchemaComplexType> cuja propriedade de <xref:System.Xml.Schema.XmlSchemaComplexType.Particle%2A> não é uma instância de <xref:System.Xml.Schema.XmlSchemaSequence>.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Xml.Schema.XmlSchemaInference>
 - [SOM (Schema Object Model) XML](xml-schema-object-model-som.md)

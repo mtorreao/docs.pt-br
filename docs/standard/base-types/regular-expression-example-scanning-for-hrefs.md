@@ -2,7 +2,6 @@
 title: 'Exemplo de expressão regular: Verificação de HREFs'
 description: Veja um exemplo de expressões regulares no .NET. O exemplo pesquisa uma cadeia de caracteres de entrada e exibe todos os valores de atributo href e suas localizações.
 ms.date: 06/30/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - regular expressions [.NET], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
-ms.openlocfilehash: f2f7cca1e357971d2b0be2a0d7ddfb8ae208a44a
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 6f11825a5d744fd03c08545213bd4d6eaa14dd6d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889394"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830279"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Exemplo de expressão regular: Verificação de HREFs
 O exemplo a seguir procura uma cadeia de caracteres de entrada e exibe todos os valores href="…" e suas localizações na cadeia de caracteres.  
@@ -57,6 +56,6 @@ O exemplo a seguir procura uma cadeia de caracteres de entrada e exibe todos os 
   
  Para resolver esses problemas, a classe <xref:System.Text.RegularExpressions.Regex> dá suporte à sintaxe `(?<name>…)` para capturar uma correspondência em um slot especificado (o slot pode ser nomeado usando uma cadeia de caracteres ou um inteiro; inteiros podem ser recuperados mais rapidamente). Assim, todas as correspondências alternativas para a mesma cadeia de caracteres podem ser direcionadas para o mesmo local. Em caso de conflito, a última correspondência solta em um slot é a correspondência com êxito. (No entanto, está disponível uma lista completa de diversas correspondências para um único slot. Confira a coleção <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> para obter detalhes).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Expressões regulares do .NET](regular-expressions.md)

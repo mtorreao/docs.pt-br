@@ -2,7 +2,6 @@
 title: Consumindo o padrão assíncrono baseado em tarefa
 description: Aprenda a consumir o padrão assíncrono baseado em tarefa (toque) ao trabalhar com operações assíncronas.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - .NET and TAP
 - asynchronous design patterns, .NET
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET support for
 - .NET, asynchronous design patterns
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
-ms.openlocfilehash: 4a2715ab6572c33a1564986c5cfda112d5fa11db
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 2a24c06e55a5f07f4831b32cf52ea2b5b389d5cc
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888861"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830539"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Consumindo o padrão assíncrono baseado em tarefa
 
@@ -836,7 +835,7 @@ private static void Produce(int data)
 > [!NOTE]
 > O <xref:System.Threading.Tasks.Dataflow> namespace está disponível como um pacote NuGet. Para instalar o assembly que contém o <xref:System.Threading.Tasks.Dataflow> namespace, abra o projeto no Visual Studio, escolha **gerenciar pacotes NuGet** no menu projeto e pesquise online para o `System.Threading.Tasks.Dataflow` pacote.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Padrão assíncrono baseado em tarefa (TAP)](task-based-asynchronous-pattern-tap.md)
 - [Implementando o padrão assíncrono baseado em tarefa](implementing-the-task-based-asynchronous-pattern.md)

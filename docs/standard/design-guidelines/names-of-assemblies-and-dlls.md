@@ -2,19 +2,18 @@
 title: Nomes de Assemblies e DLLs
 description: Conheça as diretrizes para nomear assemblies e DLLs (bibliotecas de vínculo dinâmico). Um assembly pode abranger um ou mais arquivos, mas geralmente mapeia um para um com uma DLL.
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - names [.NET Framework], DLLs
 - names [.NET Framework], assemblies
 - assemblies [.NET Framework], names
 - DLLs, names
 ms.assetid: e800b610-31b4-4949-9c14-cb60e9f254be
-ms.openlocfilehash: de7ce3ee774d4598521d7156d0d660c3fe30154c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2d1484889eb7db537de970c31109f26a6d61ad8d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594472"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830045"
 ---
 # <a name="names-of-assemblies-and-dlls"></a>Nomes de Assemblies e DLLs
 Um assembly é a unidade de implantação e identidade para programas de código gerenciado. Embora assemblies possam abranger um ou mais arquivos, normalmente um assembly mapeia um para um com uma DLL. Portanto, esta seção descreve apenas as convenções de nomenclatura de DLL, que podem ser mapeadas para convenções de nomenclatura de assembly.

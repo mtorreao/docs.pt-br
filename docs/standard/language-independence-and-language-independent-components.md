@@ -1,7 +1,6 @@
 ---
 title: Independência da linguagem e componentes independentes da linguagem
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-ms.openlocfilehash: 1097d156aad06b7a17141e4d6786e5411cbaa571
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: aeaf58276537fab72fdcde81b0465acbbdb23140
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92160835"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831150"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Independência da linguagem e componentes independentes da linguagem
 
@@ -172,7 +171,7 @@ Todos os tipos exibidos em assinaturas de membro, incluindo um tipo de retorno d
 
 O [Common Type System](base-types/common-type-system.md) do .NET inclui vários tipos internos com suporte diretamente com o Common Language Runtime e codificados especialmente nos metadados de um assembly. Desses tipos intrínsecos, os tipos listados na tabela a seguir estão em conformidade com CLS.
 
-|Tipo em conformidade com CLS|Description|
+|Tipo em conformidade com CLS|Descrição|
 |-------------------------|-----------------|
 |<xref:System.Byte>|Inteiro sem sinal de 8 bits|
 |<xref:System.Int16>|Inteiro com sinal de 16 bits|
@@ -188,7 +187,7 @@ O [Common Type System](base-types/common-type-system.md) do .NET inclui vários 
 
 Os tipos intrínsecos listados na tabela a seguir não são compatíveis com CLS.
 
-|Tipo não compatível|Description|Alternativa em conformidade com CLS|
+|Tipo não compatível|Descrição|Alternativa em conformidade com CLS|
 |-------------------------|-----------------|--------------------------------|
 |<xref:System.SByte>|Tipo de dados inteiro com sinal de 8 bits|<xref:System.Int16>|
 |<xref:System.TypedReference>|Ponteiro para um objeto e seu tipo de runtime|Nenhum|
@@ -614,7 +613,7 @@ Para compilar o código do Visual Basic, use este comando:
 vbc example.vb /r:UtilityLib.dll
 ```
 
-Para compilar com C#, altere o nome do compilador de **Vbc** para **CSC**e altere a extensão de arquivo de. vb para. cs:
+Para compilar com C#, altere o nome do compilador de **Vbc** para **CSC** e altere a extensão de arquivo de. vb para. cs:
 
 ```console
 csc example.cs /r:UtilityLib.dll

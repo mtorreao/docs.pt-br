@@ -1,19 +1,18 @@
 ---
 title: Exemplo de dados PLINQ
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
-ms.openlocfilehash: 44d3463f23269ceec6372b007ca8ba9684da8c02
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 0ecdea3fa56ee2d8902b24006351c6d43e370c97
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291702"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830565"
 ---
 # <a name="plinq-data-sample"></a>Exemplo de dados PLINQ
 Este exemplo contém dados de exemplo no formato .csv e os métodos que os transformam em coleções na memória de Customers, Products, Orders e Order Details. Para fazer novas experiências com PLINQ, cole os exemplos de código de outros tópicos no código deste tópico e invoque o método `Main`. Você também pode usar esses dados com suas próprias consultas PLINQ.  
@@ -860,6 +859,6 @@ PRODUCTS
 END PRODUCTS  
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [LINQ paralelo (PLINQ)](introduction-to-plinq.md)
