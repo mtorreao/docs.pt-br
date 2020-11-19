@@ -2,12 +2,12 @@
 title: Cadeias de caracteres interpoladas
 description: 'Saiba mais sobre cadeias interpoladas, uma forma especial de cadeia de caracteres que permite inserir expressões F # diretamente dentro delas.'
 ms.date: 11/12/2020
-ms.openlocfilehash: a49d4e743306fd9bdabb1e019ec4e6c77e0e1f5a
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 8c552b44cea7d6c51ec333b6bdd4d407c6f10da7
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688594"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829681"
 ---
 # <a name="interpolated-strings"></a>Cadeias de caracteres interpoladas
 
@@ -44,7 +44,7 @@ let str = $"A pair of braces: {{}}"
 
 ## <a name="typed-interpolated-strings"></a>Cadeias de caracteres interpoladas com tipo
 
-As cadeias de caracteres interpoladas também podem ter especificadores de formato F # para impor o tipo seguro.
+As cadeias de caracteres interpoladas também podem ter especificadores de formato F # para impor a segurança de tipo.
 
 ```fsharp
 let name = "Phillip"
@@ -72,7 +72,7 @@ printfn $"""Name: {"Phillip"}, Age: %d{age}"""
 
 ## <a name="aligning-expressions-in-interpolated-strings"></a>Alinhando expressões em cadeias de caracteres interpoladas
 
-Você pode alinhar as expressões à esquerda ou alinhadas à direita dentro de cadeias interpoladas com `|` e uma especificação de quantos espaços. A cadeia de caracteres interpolada a seguir alinha as expressões esquerda e direita à esquerda e à direita, respectivamente, por 7 espaços.
+Você pode alinhar as expressões à esquerda ou alinhadas à direita dentro de cadeias interpoladas com `|` e uma especificação de quantos espaços. A cadeia de caracteres interpolada a seguir alinha as expressões esquerda e direita à esquerda e à direita, respectivamente, por sete espaços.
 
 ```fsharp
 printfn $"""|{"Left",-7}|{"Right",7}|"""
@@ -89,7 +89,7 @@ printfn $"The speed of light is {speedOfLight:N3} km/s."
 // "The speed of light is 299,792.458 km/s."
 ```
 
-Além disso, uma cadeia de caracteres interpolada também pode ser typechecked <xref:System.FormattableString> por meio de uma anotação de tipo:
+Além disso, uma cadeia de caracteres interpolada também pode ser o tipo marcado como um <xref:System.FormattableString> por meio de uma anotação de tipo:
 
 ```fsharp
 let frmtStr = $"The speed of light is {speedOfLight:N3} km/s." : FormattableString
@@ -99,6 +99,6 @@ let frmtStr = $"The speed of light is {speedOfLight:N3} km/s." : FormattableStri
 
 Observe que a anotação de tipo deve estar na própria expressão de cadeia de caracteres interpolada. O F # não converte implicitamente uma cadeia de caracteres interpolada em um <xref:System.FormattableString> .
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 * [Cadeias de caracteres](strings.md)

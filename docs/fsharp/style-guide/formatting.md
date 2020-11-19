@@ -2,12 +2,12 @@
 title: Diretrizes de formatação de código do F#
 description: 'Aprenda as diretrizes para formatar o código F #.'
 ms.date: 08/31/2020
-ms.openlocfilehash: af98be75f21cbc594ff9cf779561d49e4965845a
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 8f5e333c015f30ae8449c76a3075763370a98e4d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688248"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830513"
 ---
 # <a name="f-code-formatting-guidelines"></a>Diretrizes de formatação de código do F#
 
@@ -102,7 +102,7 @@ let myFunBad (a:decimal)(b)c = a + b + c
 
 ### <a name="place-parameters-on-a-new-line-for-long-definitions"></a>Coloque os parâmetros em uma nova linha para definições longas
 
-Se você tiver uma definição de função muito longa, coloque os parâmetros em novas linhas e recue-os para corresponder ao nível de recuo do parâmetro subsequente.
+Se você tiver uma definição de função longa, coloque os parâmetros em novas linhas e recue-os para corresponder ao nível de recuo do parâmetro subsequente.
 
 ```fsharp
 module M =
@@ -308,7 +308,7 @@ Namespaces, exceções, eventos e projeto/ `.dll` nomes também devem usar Pasca
 
 ### <a name="avoid-underscores-in-names"></a>Evitar sublinhados em nomes
 
-Historicamente, algumas bibliotecas F # usaram sublinhados em nomes. No entanto, isso não é mais amplamente aceito, parcialmente porque ele conflita com as convenções de nomenclatura do .NET. Dito isso, alguns programadores de F # usam sublinhados intensamente, parcialmente por motivos históricos, e a tolerância e o respeito são importantes. No entanto, lembre-se de que o estilo geralmente é desgosto por outros que têm a opção de usá-lo.
+Historicamente, algumas bibliotecas F # usaram sublinhados em nomes. No entanto, isso não é mais amplamente aceito, parcialmente porque ele conflita com as convenções de nomenclatura do .NET. Dito isso, alguns programadores de F # usam sublinhados intensamente, parcialmente por motivos históricos, e a tolerância e o respeito são importantes. No entanto, o estilo geralmente é desgosto por outros que têm a opção de usá-lo.
 
 Uma exceção inclui a interoperação com componentes nativos, onde os sublinhados são comuns.
 
@@ -643,9 +643,9 @@ Em alguns casos, o `do...yield` pode ajudar na legibilidade. Esses casos, embora
 ## <a name="formatting-if-expressions"></a>Formatando expressões If
 
 O recuo de condicionais depende do tamanho e da complexidade das expressões que as compõem.
-Basta escrevê-los em uma linha quando:
+Escreva-os em uma linha quando:
 
-- `cond``e1`e `e2` são curtos
+- `cond`, `e1` e `e2` são curtos
 - `e1` e `e2` não são as `if/then/else` próprias expressões.
 
 ```fsharp
@@ -992,7 +992,7 @@ Evite colocar o atributo na mesma linha que o valor.
 
 ## <a name="formatting-computation-expression-operations"></a>Formatando operações de expressão de computação
 
-Ao criar operações personalizadas para [expressões de computação](../language-reference/computation-expressions.md) , é recomendável usar a nomenclatura CamelCase:
+Ao criar operações personalizadas para [expressões de computação](../language-reference/computation-expressions.md), é recomendável usar a nomenclatura CamelCase:
 
 ```fsharp
 type MathBuilder () =
@@ -1031,5 +1031,5 @@ let myNumber =
     }
 ```
 
-A Convenção de nomenclatura usada deve, em última análise, ser orientada pelo domínio que está sendo modelado.
+O domínio que está sendo modelado deve levar em última análise a Convenção de nomenclatura.
 Se for idiomática usar uma convenção diferente, essa Convenção deverá ser usada em seu lugar.
