@@ -4,12 +4,12 @@ author: IEvangelist
 description: Saiba mais sobre o host genérico do .NET, que é responsável pela inicialização do aplicativo e pelo gerenciamento do tempo de vida.
 ms.author: dapine
 ms.date: 09/18/2020
-ms.openlocfilehash: a1f82f6c6b5d250d6e81351aa02e50e23636280b
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: d00a8aeae8b4de2cbcb091992fa739c47da6dafc
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608269"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916170"
 ---
 # <a name="net-generic-host"></a>Host Genérico .NET
 
@@ -74,7 +74,7 @@ O método <xref:Microsoft.Extensions.Hosting.Host.CreateDefaultBuilder%2A>:
   - EventLog (somente quando em execução no Windows)
 - Habilita validação de escopo e [validação de dependência](xref:Microsoft.Extensions.DependencyInjection.ServiceProviderOptions.ValidateOnBuild) quando o ambiente é `Development` .
 
-O `ConfigureServices` método expõe a capacidade de adicionar serviços à <xref:Microsoft.Extensions.DependencyInjection.IServiceCollection?displayProperty=nameWithType> instância. Posteriormente, esses serviços podem ser disponibilizados da injeção de dependência.
+O `ConfigureServices` método expõe a capacidade de adicionar serviços à <xref:Microsoft.Extensions.DependencyInjection.IServiceCollection?displayProperty=nameWithType> instância. Posteriormente, esses serviços podem se tornar de injeção de dependência.
 
 ## <a name="framework-provided-services"></a>Serviços fornecidos pela estrutura
 
@@ -138,7 +138,7 @@ A configuração criada pelo `ConfigureAppConfiguration` está disponível em [H
 
 Para obter mais informações, consulte [Configuration in .net](configuration.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Configuração no .NET](configuration.md)
 - [Host da Web do ASP.NET Core](/aspnet/core/fundamentals/host/web-host)

@@ -1,16 +1,16 @@
 ---
 title: Novidades do .NET 5
 description: Saiba mais sobre o .NET 5, uma plataforma de desenvolvimento de plataforma cruzada e de software livre que é a próxima evolução do .NET Core.
-ms.date: 11/16/2020
+ms.date: 11/18/2020
 ms.topic: overview
 ms.author: dapine
 author: IEvangelist
-ms.openlocfilehash: 04f72675744426f7dbc99e5978a9ea4bbb8015b1
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 077fb06db40519af2bf8ac2f659488acdf525aec
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687590"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916216"
 ---
 # <a name="whats-new-in-net-5"></a>Novidades do .NET 5
 
@@ -46,11 +46,23 @@ O .NET 5,0 é a principal implementação do .NET no futuro e .NET Framework 4. 
 
 Não há planos de portar as tecnologias a seguir de .NET Framework para o .NET 5,0, mas há alternativas no .NET 5,0:
 
-| Tecnologia                             | Alternativa recomendada                                                                         |
-|----------------------------------------|-------------------------------------------------------------------------------------------------|
-| Web Forms                              | ASP.NET Core [mais](/aspnet/core/blazor) ou [Razor Pages](/aspnet/core/tutorials/razor-pages) |
-| Windows Communication Foundation (WCF) | [gRPC](/aspnet/core/grpc)                                                                       |
-| Windows Workflow (WF)                  | [CoreWF de código-fonte aberto](https://github.com/UiPath-Open/corewf)                                     |
+| Tecnologia            | Alternativa recomendada                                                                         |
+|-----------------------|-------------------------------------------------------------------------------------------------|
+| Web Forms             | ASP.NET Core [mais](/aspnet/core/blazor) ou [Razor Pages](/aspnet/core/tutorials/razor-pages) |
+| Windows Workflow (WF) | [CoreWF de código-fonte aberto](https://github.com/UiPath-Open/corewf)                                     |
+
+### <a name="windows-communication-foundation"></a>Windows Communication Foundation
+
+No entanto, a implementação original do [Windows Communication Foundation (WCF)](../framework/wcf/index.md) era suportada apenas no Windows; Há uma porta do cliente disponível no .NET Foundation. Ele é totalmente de software livre [, de plataforma](https://github.com/dotnet/wcf)cruzada e tem suporte da Microsoft. Os pacotes principais do NuGet estão listados abaixo:
+
+- [System.ServiceModel.Duplex](https://www.nuget.org/packages/System.ServiceModel.Duplex)
+- [System. ServiceModel. Federation](https://www.nuget.org/packages/System.ServiceModel.Federation)
+- [System.ServiceModel.Http](https://www.nuget.org/packages/System.ServiceModel.Http)
+- [System.ServiceModel.NetTcp](https://www.nuget.org/packages/System.ServiceModel.NetTcp)
+- [System.ServiceModel.Primitives](https://www.nuget.org/packages/System.ServiceModel.Primitives)
+- [{1&amp;gt;System.ServiceModel.Security&amp;lt;1}](https://www.nuget.org/packages/System.ServiceModel.Security)
+
+A comunidade mantém os componentes de servidor que complementam as bibliotecas de cliente mencionadas anteriormente. O repositório GitHub pode ser encontrado em [CoreWCF](https://github.com/CoreWCF/CoreWCF). Os componentes do servidor _não_ são oficialmente suportados pela Microsoft. Para obter uma alternativa ao WCF, considere [gRPC](/aspnet/core/grpc).
 
 ## <a name="net-50-doesnt-replace-net-standard"></a>O .NET 5,0 não substitui .NET Standard
 
@@ -141,7 +153,7 @@ Há novos recursos no e para o [System.Text.Jsem](../standard/serialization/syst
 - [Copiar JsonSerializerOptions](../standard/serialization/system-text-json-how-to.md#copy-jsonserializeroptions)
 - [Criar JsonSerializerOptions com padrões da Web](../standard/serialization/system-text-json-how-to.md#web-defaults-for-jsonserializeroptions)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [A jornada para um .NET](https://channel9.msdn.com/Events/Build/2020/BOD106)
 - [Melhorias de desempenho no .NET 5](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-5)
