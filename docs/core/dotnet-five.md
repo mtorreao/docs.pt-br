@@ -5,12 +5,12 @@ ms.date: 11/18/2020
 ms.topic: overview
 ms.author: dapine
 author: IEvangelist
-ms.openlocfilehash: 077fb06db40519af2bf8ac2f659488acdf525aec
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: 1101e218f225eed2a2013ed9e19b60f4ece57738
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94916216"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982296"
 ---
 # <a name="whats-new-in-net-5"></a>Novidades do .NET 5
 
@@ -53,7 +53,7 @@ Não há planos de portar as tecnologias a seguir de .NET Framework para o .NET 
 
 ### <a name="windows-communication-foundation"></a>Windows Communication Foundation
 
-No entanto, a implementação original do [Windows Communication Foundation (WCF)](../framework/wcf/index.md) era suportada apenas no Windows; Há uma porta do cliente disponível no .NET Foundation. Ele é totalmente de software livre [, de plataforma](https://github.com/dotnet/wcf)cruzada e tem suporte da Microsoft. Os pacotes principais do NuGet estão listados abaixo:
+A implementação original do [Windows Communication Foundation (WCF)](../framework/wcf/index.md) era suportada apenas no Windows. No entanto, há uma porta do cliente disponível no .NET Foundation. Ele é totalmente de software livre [, de plataforma](https://github.com/dotnet/wcf)cruzada e tem suporte da Microsoft. Os pacotes principais do NuGet estão listados abaixo:
 
 - [System.ServiceModel.Duplex](https://www.nuget.org/packages/System.ServiceModel.Duplex)
 - [System. ServiceModel. Federation](https://www.nuget.org/packages/System.ServiceModel.Federation)
@@ -153,7 +153,7 @@ Há novos recursos no e para o [System.Text.Jsem](../standard/serialization/syst
 - [Copiar JsonSerializerOptions](../standard/serialization/system-text-json-how-to.md#copy-jsonserializeroptions)
 - [Criar JsonSerializerOptions com padrões da Web](../standard/serialization/system-text-json-how-to.md#web-defaults-for-jsonserializeroptions)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [A jornada para um .NET](https://channel9.msdn.com/Events/Build/2020/BOD106)
 - [Melhorias de desempenho no .NET 5](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-5)

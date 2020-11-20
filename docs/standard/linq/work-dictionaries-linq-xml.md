@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 57bcefe3-8433-4d3b-935a-511c9bcbdfa8
-ms.openlocfilehash: 9f6304dde828b3269f1cf369c3a6f14368676a48
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c9f4d6ad3dfe12f49b907095312477717a73c2c9
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554482"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982169"
 ---
 # <a name="how-to-work-with-dictionaries-using-linq-to-xml"></a>Como trabalhar com dicionários usando LINQ to XML
 
@@ -65,7 +65,7 @@ Esse exemplo gera a saída a seguir:
 
 ## <a name="example-create-a-dictionary-and-load-it-from-xml-data"></a>Exemplo: criar um dicionário e carregá-lo a partir de dados XML
 
-O exemplo a seguir cria uma carga de dicionário carregada a partir de dados XML.
+O exemplo a seguir cria um dicionário que o carrega de dados XML.
 
 ```csharp
 XElement root = new XElement("Root",

@@ -5,12 +5,12 @@ ms.date: 10/07/2020
 ms.topic: overview
 ms.author: tdykstra
 author: tdykstra
-ms.openlocfilehash: 45286e18c41da7eb6717729360077b64539c3db5
-ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
+ms.openlocfilehash: 896b88cbf1f7f31d2d26d69ec7d219da6b27ceff
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91877722"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982289"
 ---
 # <a name="releases-and-support-for-net-core-and-net-5"></a>Versões e suporte para .NET Core e .NET 5
 
@@ -42,7 +42,7 @@ As atualizações de serviço (patches) são entregues quase todos os meses, e e
 
 O controle de versão do SDK do .NET funciona um pouco diferente do tempo de execução do .NET. Para se alinhar com as novas versões do Visual Studio, as atualizações do SDK do .NET às vezes incluem novos recursos ou novas versões de componentes, como MSBuild e NuGet. Esses novos recursos ou componentes podem ser incompatíveis com as versões fornecidas nas atualizações do SDK anteriores para a mesma versão principal ou secundária.
 
-Para diferenciar essas atualizações, o SDK do .NET usa o conceito de faixas de recursos. Por exemplo, o primeiro SDK 3,1 do .NET Core foi 3.1.100. Esta versão corresponde à  *faixa de recursos*do 3.1.1 XX. As faixas de recursos são definidas nos centenas de grupos na terceira seção do número de versão. Por exemplo, 3.1.101 e 3.1.201 são versões em duas faixas de recursos diferentes, enquanto 3.1.101 e 3.1.199 estão na mesma faixa de recursos. Quando SDK do .NET Core 3.1.101 for instalado, SDK do .NET Core 3.1.100 será removido do computador, se existir. Quando SDK do .NET Core 3.1.200 é instalado no mesmo computador, SDK do .NET Core 3.1.101 não é removido.
+Para diferenciar essas atualizações, o SDK do .NET usa o conceito de faixas de recursos. Por exemplo, o primeiro SDK 3,1 do .NET Core foi 3.1.100. Esta versão corresponde à  *faixa de recursos* do 3.1.1 XX. As faixas de recursos são definidas nos centenas de grupos na terceira seção do número de versão. Por exemplo, 3.1.101 e 3.1.201 são versões em duas faixas de recursos diferentes, enquanto 3.1.101 e 3.1.199 estão na mesma faixa de recursos. Quando SDK do .NET Core 3.1.101 for instalado, SDK do .NET Core 3.1.100 será removido do computador, se existir. Quando SDK do .NET Core 3.1.200 é instalado no mesmo computador, SDK do .NET Core 3.1.101 não é removido.
 
 ### <a name="runtime-roll-forward-and-compatibility"></a>Avanço e compatibilidade de tempo de execução
 

@@ -4,12 +4,12 @@ author: IEvangelist
 description: Saiba como usar a estrutura de registro em log fornecida pelo pacote do NuGet Microsoft.Extensions.Logging.
 ms.author: dapine
 ms.date: 09/30/2020
-ms.openlocfilehash: d409d78698e4e85eaf9f2894ee1ed00cea0c0583
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 5a4d333368082389c4dfc134bb6a9a2e618d47e9
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888554"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982316"
 ---
 # <a name="logging-in-net"></a>Registro em log no .NET
 
@@ -30,7 +30,7 @@ O exemplo a seguir:
 
 ## <a name="configure-logging"></a>Configurar o registro em log
 
-A configuração de log é normalmente fornecida pela `Logging` seção de *appSettings* . `{Environment}` arquivos *. JSON* . O seguinte *appsettings.Development.jsno* arquivo é gerado pelos modelos de serviço do .net Worker:
+A configuração de log é normalmente fornecida pela `Logging` seção de *appSettings*. `{Environment}` arquivos *. JSON* . O seguinte *appsettings.Development.jsno* arquivo é gerado pelos modelos de serviço do .net Worker:
 
 :::code language="json" source="snippets/configuration/worker-service/appsettings.Development.json":::
 
@@ -64,7 +64,7 @@ O nível de log mínimo pode ser especificado para qualquer um dos:
 - Categorias específicas: por exemplo, `Logging:LogLevel:Microsoft:Warning`
 - Todos os provedores e todas as categorias: `Logging:LogLevel:Default:Warning`
 
-Todos os logs abaixo do nível mínimo são * **não** _:
+Todos os logs abaixo do nível mínimo são ***não** _:
 
 - Passado para o provedor.
 - Registrado ou exibido.
@@ -130,7 +130,7 @@ O algoritmo a seguir é usado para cada provedor quando um `ILogger` é criado p
 
 - Selecione todas as regras que correspondem ao provedor ou seu alias. Se nenhuma correspondência for encontrada, selecione todas as regras com um provedor vazio.
 - Do resultado da etapa anterior, selecione as regras com o prefixo de categoria de maior correspondência. Se nenhuma correspondência for encontrada, selecione todas as regras que não especificam uma categoria.
-- Se várias regras forem selecionadas, use a **última** .
+- Se várias regras forem selecionadas, use a **última**.
 - Se nenhuma regra for selecionada, use <xref:Microsoft.Extensions.Logging.LoggingBuilderExtensions.SetMinimumLevel(Microsoft.Extensions.Logging.ILoggingBuilder,Microsoft.Extensions.Logging.LogLevel)?displayProperty=nameWithType> para especificar o nível de log mínimo.
 
 ## <a name="log-category"></a>Categoria do log
@@ -179,13 +179,13 @@ A tabela a seguir lista os <xref:Microsoft.Extensions.Logging.LogLevel> valores,
 
 | LogLevel | Valor | Método | Descrição |
 |--|--|--|--|
-| [Trace](xref:Microsoft.Extensions.Logging.LogLevel) | 0 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogTrace%2A> | Conter as mensagens mais detalhadas. Essas mensagens podem conter dados confidenciais do aplicativo. Essas mensagens são desabilitadas por padrão e devem * **não** ser habilitadas na produção. |
+| [Trace](xref:Microsoft.Extensions.Logging.LogLevel) | 0 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogTrace%2A> | Conter as mensagens mais detalhadas. Essas mensagens podem conter dados confidenciais do aplicativo. Essas mensagens são desabilitadas por padrão e devem ***não** ser habilitadas na produção. |
 | [Depurar](xref:Microsoft.Extensions.Logging.LogLevel) | 1 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogDebug%2A> | Para depuração e desenvolvimento. Use com cuidado na produção devido ao alto volume. |
 | [Informações](xref:Microsoft.Extensions.Logging.LogLevel) | 2 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogInformation%2A> | Rastreia o fluxo geral do aplicativo. Pode ter um valor de longo prazo. |
 | [Aviso](xref:Microsoft.Extensions.Logging.LogLevel) | 3 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogWarning%2A> | Para eventos anormais ou inesperados. Normalmente inclui erros ou condições que não fazem com que o aplicativo falhe. |
 | [Erro](xref:Microsoft.Extensions.Logging.LogLevel) | 4 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogError%2A> | Para erros e exceções que não podem ser manipulados. Essas mensagens indicam uma falha na operação ou solicitação atual, não uma falha em todo o aplicativo. |
 | [Crítico](xref:Microsoft.Extensions.Logging.LogLevel) | 5 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogCritical%2A> | Para falhas que exigem atenção imediata. Exemplos: cenários de perda de dados, espaço em disco insuficiente. |
-| [Nenhum](xref:Microsoft.Extensions.Logging.LogLevel) | 6 |  | Especifica que nenhuma mensagem deve ser gravada. |
+| [Nenhuma](xref:Microsoft.Extensions.Logging.LogLevel) | 6 |  | Especifica que nenhuma mensagem deve ser gravada. |
 
 Na tabela anterior, o `LogLevel` é listado da severidade mais baixa para a mais alta.
 
@@ -222,7 +222,7 @@ public async Task<T> GetAsync<T>(string id)
 
 No código anterior, o primeiro `Log{LogLevel}` parâmetro, `AppLogEvents.Read` , é a [ID do evento de log](#log-event-id). O segundo parâmetro é um modelo de mensagem com espaços reservados para valores de argumento fornecidos pelos parâmetros de método restantes. Os parâmetros do método são explicados na seção de [modelo de mensagem](#log-message-template) mais adiante neste artigo.
 
-Configure o nível de log apropriado e chame os métodos corretos `Log{LogLevel}` para controlar a quantidade de saída de log gravada em um meio de armazenamento específico. Por exemplo:
+Configure o nível de log apropriado e chame os `Log{LogLevel}` métodos corretos para controlar a quantidade de saída de log gravada em um meio de armazenamento específico. Por exemplo:
 
 - Em produção:
   - O registro em log nos `Trace` `Information` níveis ou produz um alto volume de mensagens de log detalhadas. Para controlar os custos e não exceder os limites de armazenamento de dados, `Trace` as mensagens de log e de `Information` nível para um armazenamento de dados de alto volume e baixo custo. Considere limitar `Trace` e `Information` para categorias específicas.
@@ -526,10 +526,10 @@ class Program
 - Nível `Information` de log e superior.
 - Todas as categorias que começam com `"Microsoft"` .
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Provedores de log no .NET](logging-providers.md)
 - [Implementar um provedor de log personalizado no .NET](custom-logging-provider.md)
-- [Formatação do log do console](console-log-formatter.md)
+- [Formatação de log de console](console-log-formatter.md)
 - [Registro em log de alto desempenho no .NET](high-performance-logging.md)
 - Os bugs de log devem ser criados no repositório [github.com/dotnet/Extensions](https://github.com/dotnet/extensions/issues)

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: f5c67392705156d6ff05e6f140c7187f41b1d033
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: d30ebfa2dc47265185a96514efbddc3e4937438c
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94915824"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982388"
 ---
 # <a name="is-c-reference"></a>is (Referência de C#)
 
@@ -100,7 +100,7 @@ O exemplo a seguir demonstra uma comparação de verificações de `null`:
 
 [!code-csharp[is#11](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern11.cs#11)]
 
-A expressão `x is null` é computada de forma diferente para tipos de referência e tipos de valor anulável. Para tipos de valor anulável, ele usa <xref:System.Nullable%601.HasValue?displayProperty=nameWithType> . Para tipos de referência, ele usa `x == null` .
+A expressão `x is null` é computada de forma diferente para tipos de referência e tipos de valor anulável. Para tipos de valor anulável, ele usa <xref:System.Nullable%601.HasValue?displayProperty=nameWithType> . Para tipos de referência, ele usa `(object)x == null` .
 
 ### <a name="var-pattern"></a>Padrão var
 
@@ -127,7 +127,7 @@ Para saber mais, confira a seção [O operador is](~/_csharplang/spec/expression
 - [Correspondência de padrões](~/_csharplang/proposals/csharp-7.0/pattern-matching.md)
 - [Correspondência de padrões com genéricos](~/_csharplang/proposals/csharp-7.1/generics-pattern-match.md)
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Referência de C#](../index.md)
 - [Palavras-chave do C#](index.md)

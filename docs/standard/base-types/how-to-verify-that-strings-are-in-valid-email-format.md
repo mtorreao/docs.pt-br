@@ -18,12 +18,12 @@ helpviewer_keywords:
 - email [.NET], validating
 - IsMatch method
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
-ms.openlocfilehash: 0f6b8b19ae6047bc419ce949ab76288a24e00f74
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 88ff326e16ede6a422e9403b71905845014c4c25
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821977"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982486"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Como verificar se cadeias de caracteres estão em um formato de email válido
 
@@ -56,7 +56,7 @@ Para verificar se o endereço de email é válido, o método `IsValidEmail` cham
 O nome de domínio com o caractere @ é passado para o método `DomainMapper`, que usa a classe <xref:System.Globalization.IdnMapping> para converter caracteres Unicode fora do intervalo de caracteres US-ASCII em Punycode. O método também define o sinalizador `invalid` como `True`, caso o método <xref:System.Globalization.IdnMapping.GetAscii%2A?displayProperty=nameWithType> detecte algum caractere inválido no nome do domínio. O método retorna o nome de domínio Punycode precedido pelo símbolo @ para o método `IsValidEmail`.
 
 > [!TIP]
-> É recomendável que você use o padrão de `(@)(.+)$` expressão regular simples para normalizar o domínio e, em seguida, retornar um valor indicando que ele passou ou falhou. No entanto, o exemplo neste artigo descreve como usar uma expressão regular para validar o email. Independentemente de como você valida um email, você deve sempre enviar um email de teste para o endereço para verificar se ele existe.
+> É recomendável que você use o `(@)(.+)$` padrão de expressão regular simples para normalizar o domínio e, em seguida, retornar um valor indicando que ele passou ou falhou. No entanto, o exemplo neste artigo descreve como usar uma expressão regular para validar o email. Independentemente de como você valida um email, você deve sempre enviar um email de teste para o endereço para verificar se ele existe.
 
 Em seguida, o método `IsValidEmail` chama o método <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%29?displayProperty=nameWithType> para verificar se o endereço está adequado para um padrão de expressão regular.
 

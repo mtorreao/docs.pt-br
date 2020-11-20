@@ -2,12 +2,12 @@
 title: Depurar despejos do Linux
 description: Neste artigo, você aprenderá a coletar e analisar despejos de ambientes Linux.
 ms.date: 08/27/2020
-ms.openlocfilehash: d62295e165f56e32ef73ab628ca9ebd77a4435d1
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: 692d6228fae31de015412c23c4ec5317024faaab
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598324"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982256"
 ---
 # <a name="debug-linux-dumps"></a>Depurar despejos do Linux
 
@@ -19,7 +19,7 @@ As duas maneiras recomendadas de coletar despejos no Linux são [`dotnet-dump`](
 
 ### <a name="managed-dumps-with-dotnet-dump"></a>Despejos gerenciados com `dotnet-dump`
 
-A [`dotnet-dump`](dotnet-dump.md) ferramenta é simples de usar e não tem uma dependência em nenhum depurador nativo. `dotnet-dump` funciona em uma ampla variedade de plataformas Linux (como Alpine ou ARM32/ARM64), em que as ferramentas de depuração tradicionais podem não estar disponíveis. No entanto, o `dotnet-dump` só captura o estado gerenciado para que ele não possa ser usado para problemas de depuração no código nativo. Os despejos coletados pelo `dotnet-dump` são analisados em um ambiente com o mesmo so e a arquitetura em que o despejo foi criado. A [`dotnet-gcdump`](dotnet-gcdump.md) ferramenta pode ser usada como uma alternativa que captura apenas informações de heap do GC, mas produz despejos que podem ser analisados no Windows.
+A [`dotnet-dump`](dotnet-dump.md) ferramenta é simples de usar e não tem uma dependência em nenhum depurador nativo. `dotnet-dump` funciona em uma ampla variedade de plataformas Linux (como Alpine ou ARM32/ARM64), em que as ferramentas de depuração tradicionais podem não estar disponíveis. No entanto, o `dotnet-dump` só captura o estado gerenciado para que ele não possa ser usado para problemas de depuração no código nativo. Os despejos coletados pelo `dotnet-dump` são analisados em um ambiente com o mesmo sistema operacional e arquitetura em que o despejo foi criado. A [`dotnet-gcdump`](dotnet-gcdump.md) ferramenta pode ser usada como uma alternativa que captura apenas informações de heap do GC, mas produz despejos que podem ser analisados no Windows.
 
 ### <a name="core-dumps-with-createdump"></a>Dumps principais com `createdump`
 

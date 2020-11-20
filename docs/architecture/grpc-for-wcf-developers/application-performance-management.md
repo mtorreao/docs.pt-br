@@ -2,12 +2,12 @@
 title: Gerenciamento de desempenho de aplicativos-gRPC para desenvolvedores do WCF
 description: Registro em log, métricas e rastreamento para aplicativos ASP.NET Core gRPC.
 ms.date: 09/02/2019
-ms.openlocfilehash: bccb5ba92e2dc8fa2def4dc192b0ca58b332861a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8a13d1c4df95768e55c90ac491150bfc78ec2bab
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91165904"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982336"
 ---
 # <a name="application-performance-management"></a>Gerenciamento de desempenho de aplicativos
 
@@ -59,7 +59,7 @@ Para obter métricas mais avançadas e gravar dados de métrica em uma maior var
 
 A maioria das plataformas de métricas oferece suporte aos seguintes tipos:
 
-| Tipo de métrica | Description |
+| Tipo de métrica | Descrição |
 | ----------- | ----------- |
 | Contador     | Controla com que frequência algo acontece, como solicitações e erros. |
 | Medidor       | Registra um único valor que muda ao longo do tempo, como conexões ativas. |
