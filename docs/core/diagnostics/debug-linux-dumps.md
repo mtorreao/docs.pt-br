@@ -2,12 +2,12 @@
 title: Depurar despejos do Linux
 description: Neste artigo, você aprenderá a coletar e analisar despejos de ambientes Linux.
 ms.date: 08/27/2020
-ms.openlocfilehash: 692d6228fae31de015412c23c4ec5317024faaab
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.openlocfilehash: 94f923f2ec7b5fa20c2ebc9b83540094348dff03
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94982256"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95099140"
 ---
 # <a name="debug-linux-dumps"></a>Depurar despejos do Linux
 
@@ -23,9 +23,9 @@ A [`dotnet-dump`](dotnet-dump.md) ferramenta é simples de usar e não tem uma d
 
 ### <a name="core-dumps-with-createdump"></a>Dumps principais com `createdump`
 
-Alternativa ao `dotnet-dump` que cria despejos somente gerenciados, [`createdump`](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md) é a ferramenta recomendada para criar dumps centrais no Linux contendo informações nativas e gerenciadas. Outras ferramentas como o gdb ou o gcore também podem ser usadas para criar dumps principais, mas podem perder o estado necessário para a depuração gerenciada, resultando em nomes de função ou tipo "desconhecido" durante a análise.
+Como alternativa ao `dotnet-dump` , que cria despejos somente gerenciados, [`createdump`](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md) é a ferramenta recomendada para criar dumps de núcleo no Linux contendo informações nativas e gerenciadas. Outras ferramentas como o gdb ou o gcore também podem ser usadas para criar dumps principais, mas podem perder o estado necessário para a depuração gerenciada, resultando em nomes de função ou tipo "desconhecido" durante a análise.
 
-As `createdump` ferramentas são instaladas com o tempo de execução do .NET Core e podem ser encontradas ao lado de libcoreclr.so (normalmente em "/usr/share/dotnet/Shared/Microsoft.NETCore.app/[Version]"). A ferramenta usa uma ID de processo para coletar um despejo de como seu argumento principal e também pode usar parâmetros opcionais que especificam o tipo de despejo a ser coletado (um minidespejo com heap é o padrão). As opções incluem:
+A `createdump` ferramenta é instalada com o tempo de execução do .NET Core e pode ser encontrada ao lado de libcoreclr.so (normalmente em "/usr/share/dotnet/Shared/Microsoft.NETCore.app/[Version]"). A ferramenta usa uma ID de processo para coletar um despejo de como seu argumento principal e também pode usar parâmetros opcionais que especificam o tipo de despejo a ser coletado (um minidespejo com heap é o padrão). As opções incluem:
 
 - **`<input-filename>`**
 
@@ -57,7 +57,7 @@ As `createdump` ferramentas são instaladas com o tempo de execução do .NET Co
 
   Habilitar mensagens de diagnóstico.
 
-Observe que a coleta de despejos de núcleo requer a `SYS_PTRACE` capacidade ou que `createdump` seja executada com sudo ou su.
+A coleta de despejos de núcleo requer o `SYS_PTRACE` recurso ou pode `createdump` ser executada com sudo ou su.
 
 ## <a name="analyze-dumps-on-linux"></a>Analisar despejos no Linux
 

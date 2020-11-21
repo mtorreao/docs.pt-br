@@ -26,16 +26,16 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: 40a789d9eaa835b1c464f25b5a33a7c1d766d2f8
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: eae1b52f5462cdc395504da877e40e62e5417b76
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827250"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95098808"
 ---
 # <a name="generics-in-net"></a>Generics in .NET (Genéricos no .NET)
 
-Os genéricos permitem que você personalize um método, uma classe, uma estrutura ou uma interface para o tipo exato de dados no qual ele atua. Por exemplo, em vez de usar a classe <xref:System.Collections.Hashtable>, que permite que as chaves e os valores sejam de qualquer tipo, você pode usar a classe genérica <xref:System.Collections.Generic.Dictionary%602> e especificar o tipo permitido para a chave e o tipo permitido para o valor. Entre os benefícios de genéricos estão maior reutilização de códigos e segurança de tipos.  
+Os genéricos permitem que você personalize um método, uma classe, uma estrutura ou uma interface para o tipo exato de dados no qual ele atua. Por exemplo, em vez de usar a <xref:System.Collections.Hashtable> classe, que permite que chaves e valores sejam de qualquer tipo, você pode usar a <xref:System.Collections.Generic.Dictionary%602> classe genérica e especificar os tipos permitidos para a chave e o valor. Entre os benefícios de genéricos estão maior reutilização de códigos e segurança de tipos.  
 
 ## <a name="defining-and-using-generics"></a>Definindo e usando genéricos
  Genéricos são classes, estruturas, interfaces e métodos que possuem espaços reservados (parâmetros de tipo) para um ou mais dos tipos que eles armazenam ou usam. Uma classe de coleção genérica pode usar um parâmetro de tipo como um espaço reservado para o tipo de objetos que ela armazena; os parâmetros de tipo aparecem como os tipos de seus campos e os tipos de parâmetro de seus métodos. Um método genérico pode usar seu parâmetro de tipo como o tipo de seu valor de retorno ou como o tipo de um de seus parâmetros formais. O código a seguir ilustra uma definição de classe genérica simples.  
