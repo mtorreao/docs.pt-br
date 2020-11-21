@@ -414,6 +414,8 @@ items:
                 href: ../core/diagnostics/dotnet-sos.md
           - name: Tutoriais de diagnóstico do .NET Core
             items:
+              - name: Coletar rastreamento de desempenho no Linux com PerfCollect
+                href: ../core/diagnostics/trace-perfcollect-lttng.md
               - name: Obter métricas de desempenho com o EventCounters
                 href: ../core/diagnostics/event-counter-perf.md
               - name: Depurar um vazamento de memória
