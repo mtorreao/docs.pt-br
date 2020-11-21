@@ -4,12 +4,12 @@ description: 'Saiba como F# Interativo (dotNet FSI) é usado para executar o có
 ms.date: 10/31/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: 89570a54ecebe625a1612e4b97b01c3693e4707c
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: 6f865483762e92964c8baa51498f07974c109691
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400860"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982499"
 ---
 # <a name="interactive-programming-with-f"></a>Programação interativa com F\#
 
@@ -76,7 +76,7 @@ let getOddSquares xs =
     |> List.filter (fun x -> x % 2 <> 0)
     |> List.map (fun x -> x * x)
 
-getOddSquares [1..10]
+printfn "%A" (getOddSquares [1..10])
 ```
 
 Quando esse arquivo é criado em seu computador, você pode executá-lo com `dotnet fsi` e ver a saída diretamente na janela do seu terminal:
@@ -210,7 +210,7 @@ Você também pode usar `System.Environment.GetCommandLineArgs()` o para acessar
 
 As `#r` `#load` diretivas e vistas anteriormente só estão disponíveis no F# interativo. Há várias diretivas disponíveis somente no F# Interativo:
 
-|Diretiva|Descrição|
+|Diretiva|Description|
 |---------|-----------|
 |`#r "nuget:..."`|Referencia um pacote do NuGet|
 |`#r "assembly-name.dll"`|Faz referência a um assembly no disco|
@@ -237,7 +237,7 @@ Quando você compila o código no F# Interativo, quer você esteja executando in
 
 Para executar o F# Interativo por meio do Visual Studio, você pode clicar no botão de barra de ferramentas apropriado rotulado como **F# Interativo** ou usar as teclas **Ctrl+Alt+F**. Isso abrirá a janela interativa, uma janela da ferramenta que executa uma sessão de F# interativo. Você também pode selecionar um código que deseja executar na janela interativa e pressionar a combinação de teclas **ALT + Enter**. O F# interativo é iniciado em uma janela da ferramenta rotulada como **F# Interativo**. Quando você usar essa combinação de teclas, certifique-se de que a janela do editor tenha o foco.
 
-Se você estiver usando o console ou o Visual Studio, será exibido um prompt de comando e o interpretador aguardará a entrada. Você pode inserir o código como faria em um arquivo de código. Para compilar e executar o código, insira dois sinais de ponto e vírgula ( **;;** ) para terminar uma linha ou várias linhas de entrada.
+Se você estiver usando o console ou o Visual Studio, será exibido um prompt de comando e o interpretador aguardará a entrada. Você pode inserir o código como faria em um arquivo de código. Para compilar e executar o código, insira dois sinais de ponto e vírgula (**;;**) para terminar uma linha ou várias linhas de entrada.
 
 O F# interativo tenta compilar o código e, se tiver êxito, executará o código e imprimirá a assinatura dos tipos e valores que ele compilou. Se ocorrerem erros, o interpretador imprime as mensagens de erro.
 
@@ -245,7 +245,7 @@ O código digitado na mesma sessão tem acesso a quaisquer construções inserid
 
 Quando executado no Visual Studio, o F# interativo é executado independentemente do seu projeto, então, por exemplo, não é possível usar construções definidas em seu projeto em F# interativo, a menos que você copie o código para a função na janela interativa.
 
-Você pode controlar a F# Interativo argumentos de linha de comando (opções) ajustando as configurações. No menu **Ferramentas** , selecione **Opções...** e expanda **Ferramentas do F#**. As duas configurações que podem ser alteradas são as opções do F# interativo e a configuração do **F# Interativo de 64 bits** , que é relevante apenas se você estiver executando o F# interativo em uma máquina de 64 bits. Essa configuração determina se você deseja executar a versão dedicada de 64 bits do **fsi.exe** ou **fsianycpu.exe** , que usa a arquitetura do computador para determinar se deve ser executado como um processo de 32 ou 64 bits.
+Você pode controlar a F# Interativo argumentos de linha de comando (opções) ajustando as configurações. No menu **Ferramentas**, selecione **Opções...** e expanda **Ferramentas do F#**. As duas configurações que podem ser alteradas são as opções do F# interativo e a configuração do **F# Interativo de 64 bits**, que é relevante apenas se você estiver executando o F# interativo em uma máquina de 64 bits. Essa configuração determina se você deseja executar a versão dedicada de 64 bits do **fsi.exe** ou **fsianycpu.exe**, que usa a arquitetura do computador para determinar se deve ser executado como um processo de 32 ou 64 bits.
 
 ## <a name="related-articles"></a>Artigos relacionados
 

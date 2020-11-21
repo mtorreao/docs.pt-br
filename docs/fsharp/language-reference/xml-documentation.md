@@ -2,12 +2,12 @@
 title: Documentação XML
 description: 'Saiba mais sobre o suporte no F # para gerar documentação de comentários.'
 ms.date: 09/15/2020
-ms.openlocfilehash: a5bec20f27c23caee951cda2dc5d17808f69d384
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 8720d66204333eb21dc998655467f9a5745a33f3
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679397"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982473"
 ---
 # <a name="document-your-code-with-xml-comments"></a>Documente seu código com comentários XML
 
@@ -53,26 +53,26 @@ Este é um comentário de documentação XML típico em um arquivo de assinatura
 
 Se você estiver usando marcas XML, a tabela a seguir descreve as marcas externas reconhecidas nos comentários de código XML F #.
 
-| Sintaxe de marca                                  | Descrição |
+| Sintaxe de marca                                  | Description |
 |---------------------------------------------|-----------|
 | `<summary>`**_texto_**`</summary>`           | Especifica que o *texto* é uma breve descrição do elemento Program. A descrição geralmente é uma ou duas frases.|
 | `<remarks>`**_texto_**`</remarks>`           | Especifica que o *texto* contém informações suplementares sobre o elemento Program.|
-| `<param name="`**_nome_** `">` do ** _Descrição_ do**`</param>` | Especifica o nome e a descrição de um parâmetro de função ou método.|
-| `<typeparam name="`**_nome_** `">` do ** _Descrição_ do**`</typeparam>` | Especifica o nome e a descrição de um parâmetro de tipo.|
+| `<param name="`**_nome_** `">` do **_Descrição_ do**`</param>` | Especifica o nome e a descrição de um parâmetro de função ou método.|
+| `<typeparam name="`**_nome_** `">` do **_Descrição_ do**`</typeparam>` | Especifica o nome e a descrição de um parâmetro de tipo.|
 | `<returns>`**_texto_**`</returns>`           | Especifica que o *texto* descreve o valor de retorno de uma função ou método.|
-| `<exception cref="`**_tipo_** `">` de ** _Descrição_ do**`</exception>` |Especifica o tipo de exceção que pode ser gerado e as circunstâncias sob as quais ela é gerada.|
+| `<exception cref="`**_tipo_** `">` de **_Descrição_ do**`</exception>` |Especifica o tipo de exceção que pode ser gerado e as circunstâncias sob as quais ela é gerada.|
 | `<seealso cref="`**_referência_**`"/>`      | Especifica um link consulte também a documentação de outro tipo. A *referência* é o nome que aparece no arquivo de documentação XML. Consulte também os links geralmente aparecem na parte inferior de uma página de documentação.|
 
 A tabela a seguir descreve as marcas para uso nas seções de descrição:
 
-| Sintaxe de marca                                | Descrição |
+| Sintaxe de marca                                | Description |
 |-------------------------------------------|-------------|
 | `<para>`**_texto_**`</para>`               | Especifica um parágrafo de texto. Isso é usado para separar o texto dentro da marca de **comentários** .|
 | `<code>`**_texto_**`</code>`               | Especifica que o *texto* tem várias linhas de código. Essa marca pode ser usada por geradores de documentação para exibir texto em uma fonte apropriada para o código.|
 | `<paramref name="`**_nomes_**`"/>`         | Especifica uma referência a um parâmetro no mesmo comentário de documentação.|
 | `<typeparamref name="`**_nomes_**`"/>`     | Especifica uma referência a um parâmetro de tipo no mesmo comentário de documentação.|
 | `<c>`**_texto_**`</c>`                     | Especifica que o *texto* é um código embutido. Essa marca pode ser usada por geradores de documentação para exibir texto em uma fonte apropriada para o código.|
-| `<see cref="`**_referência_** `">` do ** _texto_ de**`</see>` | Especifica um link embutido para outro elemento de programa. A *referência* é o nome que aparece no arquivo de documentação XML. O *texto* é o texto mostrado no link.|
+| `<see cref="`**_referência_** `">` do **_texto_ de**`</see>` | Especifica um link embutido para outro elemento de programa. A *referência* é o nome que aparece no arquivo de documentação XML. O *texto* é o texto mostrado no link.|
 
 ### <a name="user-defined-tags"></a>Marcas definidas pelo usuário
 
