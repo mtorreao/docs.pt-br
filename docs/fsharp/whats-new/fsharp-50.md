@@ -2,12 +2,12 @@
 title: 'O que há de novo no guia F # 5,0-F #'
 description: 'Obtenha uma visão geral dos novos recursos disponíveis em F # 5,0.'
 ms.date: 11/06/2020
-ms.openlocfilehash: 0b25d48a97792e780515226170151f3bbf2f2301
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.openlocfilehash: 29b5b110379dec476d7c0aa51540984acb25f26e
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94982460"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95098691"
 ---
 # <a name="whats-new-in-f-50"></a>O que há de novo no F # 5,0
 
@@ -285,13 +285,13 @@ let inline negate x = -x
 <@ negate 1.0 @>  |> eval
 ```
 
-A restrição gerada pela `inline` função é mantida no código qutoation. O `negate` formulário quotated da função agora pode ser avaliado.
+A restrição gerada pela `inline` função é mantida na cotação de código. O `negate` formulário entre aspas da função agora pode ser avaliado.
 
 Esse recurso implementa o [F # RFC FS-1071](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1071-witness-passing-quotations.md).
 
 ## <a name="applicative-computation-expressions"></a>Expressões de computação Applicative
 
-As [expressões de computação (CES)](../language-reference/computation-expressions.md) são usadas hoje para modelar "computações contextuais" ou em uma terminologia amigável de programação mais funcional, computações de monadic.
+As [expressões de computação (CES)](../language-reference/computation-expressions.md) são usadas hoje para modelar "computações contextuais", ou em uma terminologia mais funcional com programação amigável, computações monadics.
 
 O F # 5 apresenta Applicative CEs, que oferece um modelo computacional diferente. O Applicative CEs permite cálculos mais eficientes, desde que cada computação seja independente e seus resultados sejam acumulados no final. Quando as computações são independentes umas das outras, elas também são trivialmente paralelizáveis, permitindo que os autores de CE escrevam bibliotecas mais eficientes. No entanto, esse benefício apresenta uma restrição: as computações que dependem de valores calculados anteriormente não são permitidas.
 
@@ -340,7 +340,7 @@ Se você é um autor de biblioteca que expõe CEs em sua biblioteca hoje, há al
 
 Esse recurso implementa o [F # RFC FS-1063](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1063-support-letbang-andbang-for-applicative-functors.md).
 
-## <a name="interfaces-can-be-implemeneted-at-different-generic-instantiations"></a>As interfaces podem ser implemeneteddas em instanciações genéricas diferentes
+## <a name="interfaces-can-be-implemented-at-different-generic-instantiations"></a>As interfaces podem ser implementadas em instanciações genéricas diferentes
 
 Agora você pode implementar a mesma interface em instanciações genéricas diferentes:
 
@@ -490,7 +490,7 @@ Esse recurso implementa o [F # RFC FS-1076](https://github.com/fsharp/fslang-des
 
 As expressões de computação são um recurso poderoso para autores de biblioteca e estrutura. Eles permitem que você aprimore significativamente a expressividade dos componentes, permitindo que você defina membros conhecidos e formate uma DSL para o domínio no qual você está trabalhando.
 
-O F # 5 adiciona suporte à visualização para sobrecarregar operações personalizadas em expressões de computação. Ele permite que o seguinte código seja gravado e consumido:
+O F # 5 adiciona suporte à visualização para sobrecarregar operações personalizadas em expressões de computação. Ele permite que o seguinte código seja escrito e consumido:
 
 ```fsharp
 open System

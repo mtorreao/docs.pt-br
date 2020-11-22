@@ -1,25 +1,25 @@
 ---
 title: Fatias
 description: 'Saiba como usar fatias para tipos de dados F # existentes e como definir suas próprias fatias para outros tipos de dados.'
-ms.date: 12/23/2019
-ms.openlocfilehash: a3920ad9e1b205b506aaee92c4606bcebf94feba
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.date: 11/20/2020
+ms.openlocfilehash: 9c072648ed46ae29871f2be5cc64b493f6a9b857
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94557071"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95098951"
 ---
 # <a name="slices"></a>Fatias
 
-Em F #, uma fatia é um subconjunto de qualquer tipo de dados que tem um `GetSlice` método em sua definição ou em uma [extensão de tipo](type-extensions.md)no escopo. Ele é mais comumente usado com matrizes e listas de F #. Este artigo explica como tirar fatias de tipos existentes de F # e como definir suas próprias fatias.
+Este artigo explica como tirar fatias de tipos existentes de F # e como definir suas próprias fatias.
 
-As fatias são semelhantes aos [indexadores](./members/indexed-properties.md), mas em vez de produzir um único valor da estrutura de dados subjacente, elas produzem várias delas.
+Em F #, uma fatia é um subconjunto de qualquer tipo de dados.  As fatias são semelhantes aos [indexadores](./members/indexed-properties.md), mas em vez de produzir um único valor da estrutura de dados subjacente, elas produzem várias delas. As fatias usam a `..` sintaxe do operador para selecionar o intervalo de índices especificados em um tipo de dados. Para obter mais informações, consulte o [artigo referência de expressões de looping](./loops-for-in-expression.md).
 
-O F # atualmente tem suporte intrínseco para cadeias de caracteres de divisão, listas, matrizes e matrizes 2D.
+O F # atualmente tem suporte intrínseco para cadeias de caracteres de divisão, listas, matrizes e matrizes multidimensionais (2D, 3D, 4D). A divisão é mais comumente usada com matrizes e listas de F #. Você pode adicionar fatias a seus tipos de dados personalizados usando o `GetSlice` método em sua definição de tipo ou em uma extensão de [tipo](type-extensions.md)no escopo.
 
-## <a name="basic-slicing-with-f-lists-and-arrays"></a>Divisão básica com listas e matrizes F #
+## <a name="slicing-f-lists-and-arrays"></a>Divisão de listas e matrizes de F #
 
-Os tipos de dados mais comuns que são segmentados são listas e matrizes de F #. O exemplo a seguir demonstra como fazer isso com listas:
+Os tipos de dados mais comuns que são segmentados são listas e matrizes de F #.  O exemplo a seguir demonstra como segmentar listas:
 
 ```fsharp
 // Generate a list of 100 integers
@@ -89,8 +89,6 @@ let twoByTwo = A.[0..1,0..1]
 printfn "%A" twoByTwo
 ```
 
-A biblioteca de núcleos F # não define atualmente `GetSlice` para matrizes 3D. Se você quiser fatiar matrizes 3D ou outras matrizes de mais dimensões, defina o `GetSlice` membro por conta própria.
-
 ## <a name="defining-slices-for-other-data-structures"></a>Definindo fatias para outras estruturas de dados
 
 A biblioteca de núcleos F # define fatias para um conjunto limitado de tipos. Se você quiser definir fatias para mais tipos de dados, poderá fazer isso na própria definição de tipo ou em uma extensão de tipo.
@@ -151,9 +149,9 @@ printfn "%A" xs.[2..5] // Includes the 5th index
 
 ## <a name="built-in-f-empty-slices"></a>Fatias internas F # vazias
 
-Listas F #, matrizes, sequências, cadeias de caracteres, matrizes 2D, matrizes 3D e matrizes 4D produzirão uma fatia vazia se a sintaxe puder produzir uma fatia que não existe.
+As listas de F #, matrizes, sequências, cadeias de caracteres, matrizes multidimensionais (2D, 3D, 4D) produzirão uma fatia vazia se a sintaxe puder produzir uma fatia que não existe.
 
-Considere o seguinte:
+Considere o exemplo a seguir:
 
 ```fsharp
 let l = [ 1..10 ]
@@ -165,7 +163,8 @@ let emptyArray = a.[-2..(-1)]
 let emptyString = s.[-2..(-1)]
 ```
 
-Os desenvolvedores de C# podem esperar que eles lancem uma exceção em vez de produzir uma fatia vazia. Essa é uma decisão de design enraizada no fato de que coleções vazias compõem em F #. Uma lista de F # vazia pode ser composta com outra lista de F #, uma cadeia de caracteres vazia pode ser adicionada a uma cadeia de caracteres existente e assim por diante. Pode ser comum pegar fatias com base nos valores passados como parâmetros e ser tolerante a fora dos limites, produzindo uma coleção vazia se ajusta à natureza composicional do código F #.
+> [!IMPORTANT]
+> Os desenvolvedores de C# podem esperar que eles lancem uma exceção em vez de produzir uma fatia vazia. Essa é uma decisão de design enraizada no fato de que coleções vazias compõem em F #. Uma lista de F # vazia pode ser composta com outra lista de F #, uma cadeia de caracteres vazia pode ser adicionada a uma cadeia de caracteres existente e assim por diante. Pode ser comum pegar fatias com base em valores passados como parâmetros, e ser tolerante a fora dos limites > por meio da produção de uma coleção vazia cabe à natureza composicional do código F #.
 
 ## <a name="fixed-index-slices-for-3d-and-4d-arrays"></a>Fatias de índice fixo para matrizes 3D e 4D
 
@@ -174,12 +173,14 @@ Para matrizes F # 3D e 4D, você pode "corrigir" um índice específico e fatiar
 Para ilustrar isso, considere a seguinte matriz 3D:
 
 *z = 0*
+
 | x\y   | 0 | 1 |
 |-------|---|---|
 | **0** | 0 | 1 |
 | **1** | 2 | 3 |
 
 *z = 1*
+
 | x\y   | 0 | 1 |
 |-------|---|---|
 | **0** | 4 | 5 |
@@ -203,8 +204,8 @@ for z in 0..dim-1 do
 m.[*, 0, 1]
 ```
 
-A última linha corrige o `y` e as `z` índicos da matriz 3D e leva o restante dos `x` valores que correspondem à matriz.
+A última linha corrige os `y` `z` índices e da matriz 3D e leva o restante dos `x` valores que correspondem à matriz.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Propriedades indexadas](./members/indexed-properties.md)

@@ -2,12 +2,12 @@
 title: Documentação XML
 description: 'Saiba mais sobre o suporte no F # para gerar documentação de comentários.'
 ms.date: 09/15/2020
-ms.openlocfilehash: 8720d66204333eb21dc998655467f9a5745a33f3
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.openlocfilehash: 24d9dbfb5e28d39e224ef9428f025298464fc7f4
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94982473"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95099003"
 ---
 # <a name="document-your-code-with-xml-comments"></a>Documente seu código com comentários XML
 
@@ -17,7 +17,7 @@ Comentários em documentação XML são um tipo especial de comentário, adicion
 Eles são especiais porque podem ser processados pelo compilador para gerar um arquivo de documentação XML em tempo de compilação.
 O arquivo XML gerado pelo compilador pode ser distribuído junto com seu assembly .NET para que as IDEs possam usar dicas de ferramenta para mostrar informações rápidas sobre tipos ou membros. Além disso, o arquivo XML pode ser executado por meio de ferramentas como [fsdocs](http://fsprojects.github.io/FSharp.Formatting/) para gerar sites de referência de API.
 
-Comentários de documentação XML, como todos os outros comentários, são ignorados pelo compilador, a menos que as opções descritas abaixo estejam habilitadas para verificar a validade e a integridade de comentários em tempo de compilação.
+Comentários de documentação XML, como todos os outros comentários, são ignorados pelo compilador, a menos que as opções descritas abaixo estejam habilitadas para verificar a validade e a integridade dos comentários em tempo de compilação.
 
 É possível gerar o arquivo XML em tempo de compilação seguindo um destes procedimentos:
 
@@ -33,9 +33,9 @@ Há duas maneiras de escrever comentários de documentação XML: com e sem marc
 
 ## <a name="comments-without-xml-tags"></a>Comentários sem marcas XML
 
-Se um `///` comentário não começar com um `<` , o texto inteiro do comentário será levado como a documentação resumida da construção de código que segue imediatamente. Use esse método quando desejar escrever apenas um breve resumo para cada construção.
+Se um `///` comentário não começar com um `<` , todo o texto do comentário será levado como a documentação resumida da construção de código que segue imediatamente. Use esse método quando desejar escrever apenas um breve resumo para cada construção.
 
-O comentário é codificado em XML durante a preparação da documentação, portanto, caracteres como `<` `>` e `&` não precisam ser ignorados. Se você não especificar uma marca de resumo explicitamente, não deverá especificar outras marcas, como **param** ou **retorna** marcas.
+O comentário é codificado em XML durante a preparação da documentação, portanto, caracteres como `<` , `>` e `&` não precisam ser ignorados. Se você não especificar uma marca de resumo explicitamente, não deverá especificar outras marcas, como **param** ou **retorna** marcas.
 
 O exemplo a seguir mostra o método alternativo, sem marcas XML. Neste exemplo, o texto inteiro no comentário é considerado um resumo.
 
@@ -86,7 +86,7 @@ Quando `--warnon:3390` é habilitado, o compilador verifica a sintaxe do XML e o
 
 ## <a name="documenting-f-constructs"></a>Documentando construções F #
 
-Construções F #, como módulos, membros, casos União e campos de registro, são documentados por um `///` comentário imediatamente antes de sua declaração.
+Construções F #, como módulos, membros, casos de União e campos de registro, são documentados por um `///` comentário imediatamente antes de sua declaração.
 Se necessário, os construtores implícitos de classes são documentados fornecendo um `///` comentário antes da lista de argumentos. Por exemplo:
 
 ```fsharp
@@ -105,7 +105,7 @@ Não há suporte para alguns recursos da documentação XML em C# e em outras li
 
 - Em F #, as referências cruzadas devem usar a assinatura XML completa do símbolo correspondente, por exemplo `cref="T:System.Console"` .
   Referências cruzadas simples no estilo C#, como `cref="Console"` não são elaboradas para assinaturas XML completas, e esses elementos não são verificados pelo compilador F #. Algumas ferramentas de documentação podem permitir o uso dessas referências cruzadas por processamento posterior, mas as assinaturas completas devem ser usadas.
-  
+
 - As marcas `<include>` `<inheritdoc>` não são suportadas pelo compilador F #. Nenhum erro será fornecido se forem usados, mas eles serão simplesmente copiados para o arquivo de documentação gerado sem, de outra forma, afetar a documentação gerada.
 
 - Referências cruzadas não são verificadas pelo compilador F #, mesmo quando `-warnon:3390` é usado.
@@ -124,7 +124,7 @@ Documentar o código é recomendável por vários motivos. O que vem a seguir s�
 
 - Para fins de consistência, todos os tipos visíveis publicamente e seus membros devem ser documentados. Se você precisar fazer isso, faça tudo.
 
-- No mínimo, os módulos, os tipos e seus membros devem ter um `///` comentário ou `<summary>` marca simples. Isso será exibido em uma janela de dica de ferramenta de preenchimento automático em ferramentas de edição F #.
+- No mínimo, os módulos, os tipos e seus membros devem ter um `///` comentário ou marca simples `<summary>` . Isso será exibido em uma janela de dica de ferramenta de preenchimento automático em ferramentas de edição F #.
 
 - O texto da documentação deve ser escrito usando frases terminadas com ponto final.
 
