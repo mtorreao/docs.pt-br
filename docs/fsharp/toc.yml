@@ -37,8 +37,6 @@
           href: tutorials/type-providers/type-provider-security.md
         - name: Solução de problemas de provedores de tipos
           href: tutorials/type-providers/troubleshooting-type-providers.md
-    - name: F# Interativo
-      href: tutorials/fsharp-interactive/index.md
 - name: Novidades no F#
   items:
     - name: F# 5.0
@@ -266,6 +264,10 @@
       href: language-reference/verbose-syntax.md
     - name: Erros e avisos do compilador
       href: language-reference/compiler-messages/index.md
+- name: Ferramentas do F#
+  items:
+    - name: F# Interativo
+      href: tools/fsharp-interactive/index.md
 - name: Guia de estilo do F#
   href: style-guide/index.md
   items:
