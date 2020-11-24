@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 535d51c5-9112-401b-8c36-85f35d7ee609
 topic_type:
 - apiref
-ms.openlocfilehash: 7baabafc61e14d127ff3f0cdb7453be6f1a2abeb
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: f07958a1a21bb3e93e4ca8202a65407b39188af4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804968"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95680775"
 ---
 # <a name="ihostautoeventwait-method"></a>Método IHostAutoEvent::Wait
+
 Faz com que a instância de [IHostAutoEvent](ihostautoevent-interface.md) atual aguarde até que ela seja propriedade ou um período de tempo especificado decorre.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -35,6 +36,7 @@ HRESULT Wait (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `dwMilliseconds`  
  no O número de milissegundos que a `IHostAutoEvent` instância atual deve aguardar antes de retornar, se nenhum thread ou fibra assumir a propriedade.  
   
@@ -45,7 +47,7 @@ HRESULT Wait (
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`Wait`retornado com êxito.|  
+|S_OK|`Wait` retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -54,11 +56,12 @@ HRESULT Wait (
 |HOST_E_DEADLOCK|O host detectou um deadlock durante o intervalo de espera e escolheu o evento representado pela `IHostAutoEvent` instância atual como a vítima do deadlock.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

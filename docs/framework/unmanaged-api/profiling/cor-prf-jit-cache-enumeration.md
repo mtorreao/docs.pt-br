@@ -14,18 +14,19 @@ helpviewer_keywords:
 ms.assetid: e7b8f6b4-95bc-4ba5-b9eb-f5590a7326a4
 topic_type:
 - apiref
-ms.openlocfilehash: d19d7ed2262db6d3c6e7f15db0e96da52f86db4a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 0bf17e7c9d8ff16dc8f07e4a386f599284828f40
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500852"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682231"
 ---
 # <a name="cor_prf_jit_cache-enumeration"></a>Enumeração COR_PRF_JIT_CACHE
+
 Indica o resultado de uma busca de função armazenada em cache.  
   
 > [!NOTE]
-> `COR_PRF_CACHED_FUNCTION_FOUND`tem um valor de zero, portanto `COR_PRF_JIT_CACHE` não pode ser usado como um substituto booliano.  
+> `COR_PRF_CACHED_FUNCTION_FOUND` tem um valor de zero, portanto `COR_PRF_JIT_CACHE` não pode ser usado como um substituto booliano.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,12 +39,13 @@ typedef enum {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |`COR_PRF_FUNCTION_FOUND`|A pesquisa encontrou a função.|  
 |`COR_PRF_FUNCTION_NOT_FOUND`|A pesquisa não encontrou a função.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: c3be2cbd-2d93-438b-9888-9a0251b63c03
 topic_type:
 - apiref
-ms.openlocfilehash: 237fe23493460df77a79ba3aed9f0a809cd8aa23
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 37f606a67bef79936c81b2a36f12a00d24bd82f1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501463"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95680528"
 ---
 # <a name="ihostsecuritymanager-interface"></a>Interface IHostSecurityManager
+
 Fornece métodos que permitem o acesso e o controle sobre o contexto de segurança do thread em execução no momento.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método GetSecurityContext](ihostsecuritymanager-getsecuritycontext-method.md)|Obtém o [IHostSecurityContext](ihostsecuritycontext-interface.md) solicitado do host.|  
 |[Método ImpersonateLoggedOnUser](ihostsecuritymanager-impersonateloggedonuser-method.md)|Solicita que o código seja executado usando as credenciais da identidade do usuário atual.|  
@@ -36,7 +37,8 @@ Fornece métodos que permitem o acesso e o controle sobre o contexto de seguran�
 |[Método SetThreadToken](ihostsecuritymanager-setthreadtoken-method.md)|Define um identificador para o thread em execução no momento.|  
   
 ## <a name="remarks"></a>Comentários  
- Um host pode controlar todo o acesso de código aos tokens de thread pelo Common Language Runtime (CLR) e pelo código do usuário. Ele também pode garantir que as informações completas do contexto de segurança sejam passadas entre operações assíncronas ou pontos de código com acesso restrito ao código. `IHostSecurityContext`encapsula essas informações de contexto de segurança, que são opacas para o CLR.  
+
+ Um host pode controlar todo o acesso de código aos tokens de thread pelo Common Language Runtime (CLR) e pelo código do usuário. Ele também pode garantir que as informações completas do contexto de segurança sejam passadas entre operações assíncronas ou pontos de código com acesso restrito ao código. `IHostSecurityContext` encapsula essas informações de contexto de segurança, que são opacas para o CLR.  
   
  O CLR lida internamente com o contexto de thread gerenciado. Ele consulta o processo específico `IHostSecurityManager` nas seguintes situações:  
   
@@ -49,11 +51,12 @@ Fornece métodos que permitem o acesso e o controle sobre o contexto de seguran�
 - Em serviços de portas de conclusão de e/s.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

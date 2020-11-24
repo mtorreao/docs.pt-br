@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a6bf5a04-e03e-44f0-917a-96f6a6d3cc96
 topic_type:
 - apiref
-ms.openlocfilehash: 5e5510ec098b2c1aa3b768830b812328287fd31a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 62055a98197f5f8bd4cfc02e99891b83ef6341e9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503023"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95680271"
 ---
 # <a name="icorprofilerinfogetappdomaininfo-method"></a>Método ICorProfilerInfo::GetAppDomainInfo
+
 Aceita uma ID de domínio do aplicativo. Retorna um nome de domínio de aplicativo e a ID do processo que o contém.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -38,6 +39,7 @@ HRESULT GetAppDomainInfo(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `appDomainId`  
  no A ID do domínio do aplicativo.  
   
@@ -54,11 +56,13 @@ HRESULT GetAppDomainInfo(
  fora Um ponteiro para a ID do processo que contém o domínio do aplicativo.  
   
 ## <a name="remarks"></a>Comentários  
+
  Depois que esse método retornar, você deverá verificar se o `szName` buffer era grande o suficiente para conter o nome completo do domínio do aplicativo. Para fazer isso, compare o valor que `pcchName` aponta com o valor do `cchName` parâmetro. Se `pcchName` apontar para um valor maior que `cchName` , aloque um `szName` buffer maior, atualize `cchName` com o tamanho novo, maior e chame `GetAppDomainInfo` novamente.  
   
  Como alternativa, você pode primeiro chamar `GetAppDomainInfo` com um buffer de comprimento zero `szName` para obter o tamanho de buffer correto. Em seguida, você pode definir o tamanho do buffer para o valor retornado em `pcchName` e chamar `GetAppDomainInfo` novamente.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

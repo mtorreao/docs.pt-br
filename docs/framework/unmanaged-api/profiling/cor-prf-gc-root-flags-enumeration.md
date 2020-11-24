@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4611ee6f-0f05-4d84-91e1-e83d5e7dd7e4
 topic_type:
 - apiref
-ms.openlocfilehash: bbc163c71b47e6fee0db89284d6e3fd27e882768
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 6b4c71a099e1ddb03b8a5287b56b750f7119e34e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500878"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682348"
 ---
 # <a name="cor_prf_gc_root_flags-enumeration"></a>Enumeração COR_PRF_GC_ROOT_FLAGS
+
 Indica uma propriedade de uma raiz de coleta de lixo.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,7 +38,7 @@ typedef enum {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |`COR_PRF_GC_ROOT_PINNING`|A raiz impede que uma coleta de lixo mova o objeto.|  
 |`COR_PRF_GC_ROOT_WEAKREF`|A raiz não impede a coleta de lixo.|  
@@ -45,9 +46,11 @@ typedef enum {
 |`COR_PRF_GC_ROOT_REFCOUNTED`|A raiz impedirá a coleta de lixo se a contagem de referência do objeto for um determinado valor.|  
   
 ## <a name="remarks"></a>Comentários  
- `COR_PRF_GC_ROOT_FLAGS`é um bitmask que fornece informações adicionais sobre raízes especiais. No entanto, nem todas as raízes são especiais. Por exemplo, algumas raízes não são referências fracas, ponteiros interiores, fixados ou contados por referência. Para essas raízes, não há nenhum sinalizador para transmitir. Portanto, os métodos que usam essa enumeração, como o método [ICorProfilerCallback2:: RootReferences2](icorprofilercallback2-rootreferences2-method.md) , enviam 0 para o bitmask dos sinalizadores, indicando que todos os sinalizadores estão desativados.  
+
+ `COR_PRF_GC_ROOT_FLAGS` é um bitmask que fornece informações adicionais sobre raízes especiais. No entanto, nem todas as raízes são especiais. Por exemplo, algumas raízes não são referências fracas, ponteiros interiores, fixados ou contados por referência. Para essas raízes, não há nenhum sinalizador para transmitir. Portanto, os métodos que usam essa enumeração, como o método [ICorProfilerCallback2:: RootReferences2](icorprofilercallback2-rootreferences2-method.md) , enviam 0 para o bitmask dos sinalizadores, indicando que todos os sinalizadores estão desativados.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

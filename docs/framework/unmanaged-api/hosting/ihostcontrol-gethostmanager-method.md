@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0fa34bca-ed18-4626-9e78-d33684d18edb
 topic_type:
 - apiref
-ms.openlocfilehash: 25e931ec17cad3508d548fb4ca7e53b0ade3f119
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: e340dcb5dc093f965e6c08a24a3d65ed0aa6e07a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804962"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95680814"
 ---
 # <a name="ihostcontrolgethostmanager-method"></a>Método IHostControl::GetHostManager
+
 Obtém um ponteiro de interface para a implementação do host da interface com o especificado `IID` .  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -35,6 +36,7 @@ HRESULT GetHostManager (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `riid`  
  no O `IID` da interface que o Common Language Runtime (CLR) está consultando.  
   
@@ -45,7 +47,7 @@ HRESULT GetHostManager (
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`GetHostManager`retornado com êxito.|  
+|S_OK|`GetHostManager` retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O CLR não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -55,6 +57,7 @@ HRESULT GetHostManager (
 |E_NOINTERFACE|Não há suporte para a interface solicitada.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O CLR consulta o host para determinar se ele dá suporte a uma ou mais das seguintes interfaces:  
   
 - [IHostMemoryManager](ihostmemorymanager-interface.md)  
@@ -80,11 +83,12 @@ HRESULT GetHostManager (
  O CLR não chama `Release` os gerenciadores de host, mesmo quando você o desliga.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

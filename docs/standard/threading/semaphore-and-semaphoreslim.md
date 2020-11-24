@@ -10,12 +10,12 @@ helpviewer_keywords:
 - SemaphoreSlim class, about SemaphoreSlim class
 - threading [.NET], Semaphore class
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
-ms.openlocfilehash: bda88012fde60481d8870f701e98924acdeeb5a2
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 34ffe11f7211d2d8b282bfd27f8c48328a5cb6d1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94817139"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95681893"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore e SemaphoreSlim
 
@@ -24,16 +24,19 @@ A classe <xref:System.Threading.Semaphore?displayProperty=nameWithType> represen
  A classe <xref:System.Threading.SemaphoreSlim> representa um sinal leve e rápido que pode ser usado para aguardar por um único processo quando forem esperados tempos de espera muito curtos. <xref:System.Threading.SemaphoreSlim> conta com o máximo possível em primitivos de sincronização fornecidos pelo Common Language Runtime (CLR). No entanto, fornece também identificadores de espera baseados no kernel inicializados lentamente, conforme necessário para dar suporte à espera de vários sinais. <xref:System.Threading.SemaphoreSlim> oferece suporte também ao uso de tokens de cancelamento, mas não oferece suporte a sinais com nome ou ao uso de um identificador de espera para sincronização.  
   
 ## <a name="managing-a-limited-resource"></a>Gerenciando um recurso limitado  
+
  Os threads inserem o sinal chamando o método <xref:System.Threading.WaitHandle.WaitOne%2A>, que é herdado da classe <xref:System.Threading.WaitHandle>, no caso de um objeto <xref:System.Threading.Semaphore?displayProperty=nameWithType> ou o método <xref:System.Threading.SemaphoreSlim.Wait%2A?displayProperty=nameWithType> ou <xref:System.Threading.SemaphoreSlim.WaitAsync%2A?displayProperty=nameWithType>, no caso de um objeto <xref:System.Threading.SemaphoreSlim>. Quando a chamada é retornada, a contagem no sinal é reduzida. Quando um thread solicita entrada e a contagem é zero, o thread é bloqueado. À medida que os threads liberam o sinal chamando o método <xref:System.Threading.Semaphore.Release%2A?displayProperty=nameWithType> ou <xref:System.Threading.SemaphoreSlim.Release%2A?displayProperty=nameWithType>, os threads bloqueados têm permissão para entrar. Não há uma ordem garantida, como primeiro a entrar, primeiro a sair (PEPS) ou último a entrar, primeiro a sair (UEPS) para threads bloqueados para inserir o sinal.  
   
  Um thread pode inserir o sinal várias vezes chamando o método <xref:System.Threading.Semaphore?displayProperty=nameWithType> do objeto <xref:System.Threading.WaitHandle.WaitOne%2A> ou o método <xref:System.Threading.SemaphoreSlim> do objeto <xref:System.Threading.SemaphoreSlim.Wait%2A> repetidas vezes. Para liberar o sinal, o thread pode chamar a sobrecarga do método <xref:System.Threading.Semaphore.Release?displayProperty=nameWithType> ou <xref:System.Threading.SemaphoreSlim.Release?displayProperty=nameWithType> o mesmo número de vezes ou chamar a sobrecarga do método <xref:System.Threading.Semaphore.Release%28System.Int32%29?displayProperty=nameWithType> ou <xref:System.Threading.SemaphoreSlim.Release%28System.Int32%29?displayProperty=nameWithType> e especificar o número de entradas a ser liberado.  
   
 ### <a name="semaphores-and-thread-identity"></a>Sinais e identidade do thread  
+
  Os dois tipos de sinais não impõem a identidade do thread em chamadas para os métodos <xref:System.Threading.WaitHandle.WaitOne%2A>, <xref:System.Threading.SemaphoreSlim.Wait%2A>, <xref:System.Threading.Semaphore.Release%2A> e <xref:System.Threading.SemaphoreSlim.Release%2A?displayProperty=nameWithType>. Por exemplo, um cenário de uso comum para sinais envolve um thread de produtor e um thread de consumidor, com um thread sempre incrementando a contagem de sinais e o outro sempre diminuindo-a.  
   
  É responsabilidade do programador garantir que um thread não libere o sinal muitas vezes. Por exemplo, suponha que um sinal tenha uma contagem máxima de dois, e que o thread A e o thread B insiram o sinal. Se um erro de programação no thread B fizer com que ele chame `Release` duas vezes, ambas as chamadas serão bem-sucedidas. A contagem no sinal está completa e quando o thread A eventualmente chama `Release`, uma <xref:System.Threading.SemaphoreFullException> é lançada.  
   
 ## <a name="named-semaphores"></a>Sinais com nome  
+
  O sistema operacional Windows permite que os sinais tenham nomes. Um sinal com nome é para todo o sistema. Ou seja, depois que o sinal com nome for criado, ele ficará visível para todos os threads em todos os processos. Assim, o sinal com nome pode ser usado para sincronizar as atividades de processos, bem como os threads.  
   
  Você pode criar um objeto <xref:System.Threading.Semaphore> que representa um sinal de sistema com nome usando um dos construtores que especifica um nome.  
