@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c55e35d9-f9aa-4268-94b5-dce44c61acf2
 topic_type:
 - apiref
-ms.openlocfilehash: f2850e6c9cbb2250a08ab4a0e34c69e377d3a23d
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: fb9d07fffd2ec98225ce60b211f525f8dafd9725
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83375849"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95691061"
 ---
 # <a name="icordebugthread3createstackwalk-method"></a>Método ICorDebugThread3::CreateStackWalk
+
 Cria um objeto [ICorDebugStackWalk](icordebugstackwalk-interface.md) para o thread cuja pilha você deseja desenrolar.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -32,10 +33,12 @@ HRESULT CreateStackWalk([out] ICorDebugStackWalk **ppStackWalk);
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `ppStackWalk`  
  fora Um ponteiro para o endereço do objeto [ICorDebugStackWalk](icordebugstackwalk-interface.md) para o thread cuja pilha você deseja desenrolar.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
@@ -46,9 +49,11 @@ HRESULT CreateStackWalk([out] ICorDebugStackWalk **ppStackWalk);
 ## <a name="exceptions"></a>Exceções  
   
 ## <a name="remarks"></a>Comentários  
+
  Se o `CreateStackWalk` método tiver sucesso, o `ICorDebugStackWalk` contexto do objeto retornado será definido como o contexto atual do thread.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

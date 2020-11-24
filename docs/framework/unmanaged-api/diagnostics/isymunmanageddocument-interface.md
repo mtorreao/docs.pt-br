@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 5c26b366-6e81-467c-9dd0-02dd26fee0a3
 topic_type:
 - apiref
-ms.openlocfilehash: a8ff6d3a925773e58e0713a87b167420c246f85b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 83c683e1f60f13f7cee4ddc6fe5af5a94e36eb93
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615560"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95692170"
 ---
 # <a name="isymunmanageddocument-interface"></a>Interface ISymUnmanagedDocument
+
 Representa um documento referenciado por um repositório de símbolos. Um documento é definido por um Uniform Resource Locator (URL) e um GUID de tipo de documento. Você pode localizar o documento independentemente de como ele é armazenado usando a URL e o tipo de documento GUID. Você pode armazenar a origem do documento no repositório de símbolos e recuperá-lo por meio desta interface.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método FindClosestLine](isymunmanageddocument-findclosestline-method.md)|Retorna a linha mais próxima que é um ponto de sequência, dada uma linha neste documento que pode ou não ser um ponto de sequência.|  
 |[Método GetCheckSum](isymunmanageddocument-getchecksum-method.md)|Obtém a soma de verificação.|  

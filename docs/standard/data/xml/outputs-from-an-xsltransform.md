@@ -2,14 +2,15 @@
 title: Saída de um XslTransform
 ms.date: 03/30/2017
 ms.assetid: 8e149d32-4b2f-493f-9e4b-d0d93475acde
-ms.openlocfilehash: 765f6f9a91cc44a55ab0d66ed71f19f60ef81a56
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ebe276a9627a36f1248f0043af6c82e76fe7fd78
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830058"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95691364"
 ---
 # <a name="outputs-from-an-xsltransform"></a>Saída de um XslTransform
+
 Como as folhas de estilos podem determinar o formato de saída usando uma instrução de `<xsl:output>` com o atributo de `method` , a tabela a seguir descreve quais o formato de saída é quando o método de <xref:System.Xml.Xsl.XslTransform.Transform%2A> é usado para gravar a saída, e o formato de saída é declarado como <xref:System.IO.Stream> ou <xref:System.IO.TextWriter>.  
   
 > [!NOTE]
@@ -52,6 +53,7 @@ Como as folhas de estilos podem determinar o formato de saída usando uma instru
 - médio tipo: o tipo médio  
   
 ## <a name="escaping-special-characters"></a>Caracteres de escape especiais  
+
  A marca de `<xsl:text disable-output-escaping>` é usada para indicar se os caracteres especiais precisam ser escapados em um formulário XML (por exemplo, usando `<&lt>` no lugar do símbolo de `"<"` ) ou esquerdo em condição atual. O atributo de `disable-output-escaping` é ignorado quando uma transformação a <xref:System.Xml.XmlReader> ou <xref:System.Xml.XmlWriter> objetos e não tem efeito em caracteres especiais.  
   
 ## <a name="see-also"></a>Confira também

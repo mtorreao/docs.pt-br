@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9634e995-d46d-4397-ab66-cc5781d11e4e
 topic_type:
 - apiref
-ms.openlocfilehash: fb3b89d25b4c2e23c3980b167db4279246c4d27b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: dd45703540f8dc41b746ca03b4f09d74186aa9aa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83609294"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690935"
 ---
 # <a name="symlinedelta-structure"></a>Estrutura SYMLINEDELTA
+
 Fornece informações para o manipulador de símbolos sobre métodos que foram movidos como resultado de edições.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,12 +37,13 @@ typedef struct _SYMLINEDELTA
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |`mdMethod`|O token de metadados do método.|  
 |`delta`|O número de linhas que o método foi movido.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl  
   
 ## <a name="see-also"></a>Confira também
