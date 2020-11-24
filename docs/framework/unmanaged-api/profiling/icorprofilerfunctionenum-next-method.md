@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5ed4aa83-ce56-4b9f-9237-5da7587787fe
 topic_type:
 - apiref
-ms.openlocfilehash: df62ad1af0ea91783cb62bb0590b6e36d812de3a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 76e0fe011769217f3cecb40c8d2ba83904b26706
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503062"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95669218"
 ---
 # <a name="icorprofilerfunctionenumnext-method"></a>Método ICorProfilerFunctionEnum::Next
+
 Obtém o número especificado de funções contíguas de uma coleção sequencial de funções, começando na posição atual do enumerador na sequência.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -35,6 +36,7 @@ HRESULT Next([in]  ULONG      celt,
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `celt`  
  no O número de funções a serem recuperadas.  
   
@@ -45,14 +47,16 @@ HRESULT Next([in]  ULONG      celt,
  fora Um ponteiro para o número de funções realmente retornadas na `ids` matriz.  
   
 ## <a name="return-value"></a>Valor Retornado  
+
  Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`celt`elementos foram retornados.|  
+|S_OK|`celt` elementos foram retornados.|  
 |S_FALSE|Menos de `celt` elementos foram retornados, o que indica que a enumeração foi concluída.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

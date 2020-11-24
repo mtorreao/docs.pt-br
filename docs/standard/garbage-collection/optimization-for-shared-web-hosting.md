@@ -6,14 +6,15 @@ helpviewer_keywords:
 - garbage collection, optimizing
 - garbage collection, shared Web hosting
 ms.assetid: be98c0ab-7ef8-409f-8a0d-cb6e5b75ff20
-ms.openlocfilehash: 6398c6749028827e5e3ee79a5511ac0879facbef
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: abab4ac451a70fbc81ac6d7c9da6f8d0123287a8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824461"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95669023"
 ---
 # <a name="optimization-for-shared-web-hosting"></a>Otimização da hospedagem Web compartilhada
+
 Se você for o administrador de um servidor que é compartilhado ao hospedar vários sites pequenos, poderá otimizar o desempenho e aumentar a capacidade do site adicionando a seguinte configuração `gcTrimCommitOnLowMemory` ao nó `runtime` no arquivo Aspnet.config no diretório .NET:  
   
  `<gcTrimCommitOnLowMemory enabled="true|false"/>`  
@@ -28,6 +29,7 @@ Se você for o administrador de um servidor que é compartilhado ao hospedar vá
  Quando as condições permitirem, o coletor de lixo poderá decidir que a configuração `gcTrimCommitOnLowMemory` não ajudará o aplicativo atual e poderá ignorá-lo.  
   
 ## <a name="example"></a>Exemplo  
+
  O fragmento XML a seguir mostra como habilitar a configuração `gcTrimCommitOnLowMemory`. As reticências indicam outras configurações que estariam no nó `runtime`.  
   
 ```xml  

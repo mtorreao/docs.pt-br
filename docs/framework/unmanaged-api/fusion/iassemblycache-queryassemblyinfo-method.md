@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 09313cb5-06f6-43bd-94f4-1055c6b0c99a
 topic_type:
 - apiref
-ms.openlocfilehash: e975db68252e866a0bf7898f1c9d3cbe67bbe24f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f764be9b80a8d4dcb15791d406412ece9e7e7c87
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134574"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95670921"
 ---
 # <a name="iassemblycachequeryassemblyinfo-method"></a>Método IAssemblyCache::QueryAssemblyInfo
+
 Obtém os dados solicitados sobre o assembly especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,8 +37,9 @@ HRESULT QueryAssemblyInfo (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `dwFlags`  
- no Sinalizadores definidos em Fusion. idl. Há suporte para os seguintes valores:  
+ no Sinalizadores definidos em Fusion. idl. Os seguintes valores têm suporte:  
   
 - QUERYASMINFO_FLAG_VALIDATE (0x00000001)  
   
@@ -47,15 +49,16 @@ HRESULT QueryAssemblyInfo (
  no O nome do assembly para o qual os dados serão recuperados.  
   
  `pAsmInfo`  
- [entrada, saída] Uma estrutura [ASSEMBLY_INFO](assembly-info-structure.md) que contém dados sobre o assembly.  
+ [entrada, saída] Uma estrutura de [ASSEMBLY_INFO](assembly-info-structure.md) que contém dados sobre o assembly.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Fusion. h  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IAssemblyCache](iassemblycache-interface.md)

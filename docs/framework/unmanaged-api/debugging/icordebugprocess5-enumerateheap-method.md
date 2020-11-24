@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b0192104-6073-4089-a4df-dc29ee033074
 topic_type:
 - apiref
-ms.openlocfilehash: 9386c77cc98df17d797d5886e1603ffc4824b6dc
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 22ab29f8a204a4b27dafdefcd3652cc3dcf9769c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205230"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95671129"
 ---
 # <a name="icordebugprocess5enumerateheap-method"></a>Método ICorDebugProcess5::EnumerateHeap
+
 Obtém um enumerador para os objetos no heap gerenciado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,15 +35,18 @@ HRESULT EnumerateHeap(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `ppObject`  
  fora Um ponteiro para o endereço de um objeto de interface [ICorDebugHeapEnum](icordebugheapenum-interface.md) que é um enumerador para os objetos que residem no heap gerenciado.  
   
 ## <a name="remarks"></a>Comentários  
+
  Antes de chamar o `ICorDebugProcess5::EnumerateHeap` método, você deve chamar o método [ICorDebugProcess5:: GetGCHeapInformation](icordebugprocess5-getgcheapinformation-method.md) e examinar o valor do `areGCStructuresValid` campo do objeto de [COR_HEAPINFO](cor-heapinfo-structure.md) retornado para garantir que o heap de coleta de lixo em seu estado atual seja enumerável. Além disso, o `ICorDebugProcess5::EnumerateHeap` retorna `E_FAIL` se você anexar muito cedo no tempo de vida do processo, antes que a memória para o heap gerenciado seja alocada.  
   
  O objeto de interface [ICorDebugHeapEnum](icordebugheapenum-interface.md) é um enumerador padrão derivado da interface ICorDebugEnum que permite que você enumere [COR_HEAPOBJECT](cor-heapobject-structure.md) objetos. Esse método popula o objeto da coleção [ICorDebugHeapEnum](icordebugheapenum-interface.md) com [COR_HEAPOBJECT](cor-heapobject-structure.md) instâncias que fornecem informações sobre todos os objetos. A coleção também pode incluir [COR_HEAPOBJECT](cor-heapobject-structure.md) instâncias que fornecem informações sobre objetos que não são enraizada por nenhum objeto, mas que ainda não foram coletados pelo coletor de lixo.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

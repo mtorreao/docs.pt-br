@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9a7393b9-9735-43c6-8616-afb103c432fd
 topic_type:
 - apiref
-ms.openlocfilehash: aac3d54d25b50d0e2ce3e93cdfba5a17679e1f76
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 8b7fab5fc5a02f8e43dc5f6fe8fc98087859ee3d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209663"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95671103"
 ---
 # <a name="icordebugprocess5getarraylayout-method"></a>Método ICorDebugProcess5::GetArrayLayout
+
 Fornece informações sobre o layout de tipos de matriz.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -32,6 +33,7 @@ HRESULT GetArrayLayout(    [in] COR_TYPEID id,     [out] COR_ARRAY_LAYOUT *pLayo
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `id`  
  no Um [COR_TYPEID](cor-typeid-structure.md) token que especifica a matriz cujo layout é desejado.  
   
@@ -41,6 +43,7 @@ HRESULT GetArrayLayout(    [in] COR_TYPEID id,     [out] COR_ARRAY_LAYOUT *pLayo
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

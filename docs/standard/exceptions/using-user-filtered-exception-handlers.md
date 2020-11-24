@@ -5,12 +5,12 @@ helpviewer_keywords:
 - user-filtered exceptions
 - exceptions, user-filtered
 ms.assetid: aa80d155-060d-41b4-a636-1ceb424afee8
-ms.openlocfilehash: d98412ed651886afc54e15b346a63dc0c549abd0
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4b85c2be0ed61af38eac1b65fb70f0ef1ea4405e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827978"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95669036"
 ---
 # <a name="using-user-filtered-exception-handlers"></a>Usando manipuladores de exceções filtrados pelo usuário
 
@@ -31,6 +31,7 @@ End Try
  A expressão da cláusula filtrada pelo usuário não é restrita de nenhuma forma. Se ocorrer uma exceção durante a execução da expressão filtrada pelo usuário, essa exceção será descartada e será considerado que a expressão do filtro foi avaliada como falsa. Nesse caso, o Common Language Runtime continua a pesquisar um manipulador para a exceção atual.  
   
 ## <a name="combining-the-specific-exception-and-the-user-filtered-clauses"></a>Combinar a exceção específica e as cláusulas filtradas pelo usuário  
+
  Uma instrução catch pode contar a exceção específica e as cláusulas filtradas pelo usuário. O runtime testa primeiro a exceção específica. Se a exceção específica for bem-sucedida, o runtime executará o filtro do usuário. O filtro genérico pode conter uma referência à variável declarada no filtro da classe. Observe que a ordem das duas cláusulas do filtro não pode ser invertida.  
   
  O seguinte exemplo do Visual Basic mostra a exceção específica `ClassLoadException` na instrução **Catch**, além da cláusula filtrada pelo usuário usando a palavra-chave **When**.  
