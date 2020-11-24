@@ -2,14 +2,15 @@
 title: Resolvendo folhas de estilos XSLT e documentos externos
 ms.date: 03/30/2017
 ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
-ms.openlocfilehash: 370d1df296666e5b5c162db34bd7fb35ae8a2e0e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f1fbf950f7d67d46937652987516e5faf9857b85
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823583"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686560"
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>Resolvendo folhas de estilos XSLT e documentos externos
+
 Há várias vezes durante uma transformação quando você precise resolver recursos externos.  
   
 > [!NOTE]
@@ -24,6 +25,7 @@ Há várias vezes durante uma transformação quando você precise resolver recu
 - Durante <xref:System.Xml.Xsl.XslTransform.Transform%2A> para resolver algumas funções de `document()` .  
   
 ## <a name="using-the-xmlresolver-class"></a>Usando a classe de XmlResolver  
+
  Se a autenticação for necessária para acessar um recurso de rede, use os métodos de <xref:System.Xml.Xsl.XslTransform.Load%2A> que têm um parâmetro de <xref:System.Xml.XmlResolver> para passar o objeto de <xref:System.Xml.XmlResolver> , que tem as propriedades credenciais necessárias definidas.  
   
  Se você tiver <xref:System.Xml.XmlResolver> personalizado que você deseja usar, ou se você precisar especificar credenciais diferentes, a tabela a seguir lista a tarefa necessária, como quando o recurso externo precisar a resolução.  

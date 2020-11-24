@@ -15,12 +15,12 @@ helpviewer_keywords:
 - global applications, localizability
 - localizing resources
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
-ms.openlocfilehash: 30cde57a5c837d9dc324e9cd263d2a1011641af4
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ecfba7b6b5908a16bb23860704a35035f58e3ed4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829837"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686012"
 ---
 # <a name="localizability-review"></a>Revisão de localização
 
@@ -35,11 +35,13 @@ A revisão de localização é composta pelas três verificações a seguir:
 - [Você testou seu aplicativo com dados internacionais?](#test)
 
 <a name="global"></a>
+
 ## <a name="implement-globalization-recommendations"></a>Implementar as recomendações de globalização
 
 Se você tiver projetado e desenvolvido seu aplicativo com a localização em mente, e se tiver seguido as recomendações discutidas no artigo [Globalização](globalization.md), a revisão de localização será essencialmente uma aprovação da garantia de qualidade. Caso contrário, durante este estágio, examine e implemente as recomendações de [globalização](globalization.md) e corrija os erros no código-fonte que impedem a localização.
 
 <a name="culture"></a>
+
 ## <a name="handle-culture-sensitive-features"></a>Lidar com recursos com detecção de cultura
 
 O .NET não dá suporte de programação em várias áreas, que podem variar amplamente com a cultura. Na maioria dos casos, você deve escrever um código personalizado para lidar com áreas de recurso como as seguintes:
@@ -58,6 +60,7 @@ O .NET não dá suporte de programação em várias áreas, que podem variar amp
    [!code-vb[Conceptual.Localizability#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.localizability/vb/ismetric1.vb#1)]
 
 <a name="test"></a>
+
 ## <a name="test-your-application"></a>Teste seu aplicativo
 
 Antes de localizar seu aplicativo, você deve testá-lo usando dados internacionais em versões internacionais do sistema operacional. Apesar de grande parte da interface do usuário não estar localizada neste ponto, você será capaz de detectar problemas, como os seguintes:

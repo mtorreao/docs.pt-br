@@ -2,14 +2,15 @@
 title: Processar dados XML usando o modelo DOM
 ms.date: 03/30/2017
 ms.assetid: 56b6e9c7-ed82-4a65-a647-7be32c83bcc8
-ms.openlocfilehash: 2608008f33eb8bc0dd0a9b5fe96e619df6138b51
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b0e24527e0edafee16511ea03a229e049b31126c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830903"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686963"
 ---
 # <a name="process-xml-data-using-the-dom-model"></a>Processar dados XML usando o modelo DOM
+
 O DOM (Document Object Model) XML trata dados XML como um conjunto padrão de objetos e é usado para processar dados XML na memória. O namespace `System.Xml` fornece uma representação programática de documentos XML, fragmentos, nós ou conjuntos de nós. É baseado nas recomendações de núcleo de nível 1 do DOM do W3C e de núcleo de nível 2 do DOM.  
   
  A classe <xref:System.Xml.XmlDocument> representa um documento XML. Ele inclui membros para recuperar e criar todos outros objetos XML. Com o <xref:System.Xml.XmlDocument> e suas classes relacionadas, você pode criar documentos XML, carregar e acessar dados, modificar dados e salvar alterações.  
@@ -55,5 +56,6 @@ O DOM (Document Object Model) XML trata dados XML como um conjunto padrão de ob
 - [Estendendo os DOM](extending-the-dom.md)  
   
 ## <a name="related-sections"></a>Seções relacionadas  
+
  [Processar dados XML usando o modelo de dados XPath](process-xml-data-using-the-xpath-data-model.md)  
  Discute o processamento de XML usando a classe <xref:System.Xml.XPath.XPathNavigator>.

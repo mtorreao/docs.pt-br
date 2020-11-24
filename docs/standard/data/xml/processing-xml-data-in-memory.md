@@ -2,14 +2,15 @@
 title: Processamento de Dados XML na memória
 ms.date: 03/30/2017
 ms.assetid: 1bbb4d05-ead7-4bda-8ece-f86d35c57ad4
-ms.openlocfilehash: 1b74e029bcda4476d166b83ddecb06e5d607fc3d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 878e008f5c7c3a018389e8666263269162989812
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824682"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686911"
 ---
 # <a name="processing-xml-data-in-memory"></a>Processamento de Dados XML na memória
+
 O Microsoft .NET Framework inclui três modelos para processar dados XML: as classes <xref:System.Xml.XmlDocument> e <xref:System.Xml.XPath.XPathDocument>, além de [LINQ to XML (C#)](../../linq/linq-xml-overview.md) e [LINQ to XML (Visual Basic)](../../linq/linq-xml-overview.md).  
   
  A classe <xref:System.Xml.XmlDocument> implementa o núcleo de nível 1 do DOM (Modelo de Objeto de Documento) do W3C e as recomendações de nível 2 do DOM principal. O DOM é uma representação de árvore na memória (em cache) de um documento XML. Com o <xref:System.Xml.XmlDocument> e suas classes relacionadas, você pode criar documentos XML, carregar e acessar dados, modificar dados e salvar alterações.  
@@ -19,6 +20,7 @@ O Microsoft .NET Framework inclui três modelos para processar dados XML: as cla
  [LINQ to XML](../../linq/linq-xml-overview.md) é um modelo introduzido no .NET Framework versão 3.5 para processar dados XML. Ele é um modelo na memória que aproveita a [LINQ (consulta integrada à linguagem)](../../../csharp/programming-guide/concepts/linq/index.md). O LINQ estende a sintaxe da linguagem C# e Visual Basic para fornecer novos recursos de consulta.  
   
 ## <a name="in-this-section"></a>Nesta seção  
+
  [Processar dados XML usando o modelo DOM](process-xml-data-using-the-dom-model.md)  
  Discute o uso <xref:System.Xml.XmlDocument> e suas classes relacionadas para processar dados XML.  
   
@@ -29,4 +31,5 @@ O Microsoft .NET Framework inclui três modelos para processar dados XML: as cla
  Fornece uma visão geral do LINQ to XML e fornece links para a documentação do LINQ to XML.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
+
  [Documentos e dados XML](index.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: dbab7d90-d515-4dc9-8195-294d5d04bab6
 topic_type:
 - apiref
-ms.openlocfilehash: 76f56971223154d3ed966c272081049adf30de54
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 688b9975cc68463de066e5225c6ab1e04cbb5337
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500488"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685359"
 ---
 # <a name="icorprofilercallbackappdomaincreationfinished-method"></a>Método ICorProfilerCallback::AppDomainCreationFinished
+
 Notifica o criador de perfil de que um domínio de aplicativo foi criado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -44,11 +45,13 @@ HRESULT AppDomainCreationFinished(
   \[in] um HRESULT que indica se a criação do domínio do aplicativo foi concluída com êxito.
 
 ## <a name="remarks"></a>Comentários  
+
  A ID do aplicativo não é válida para nenhuma solicitação de informações até que o `AppDomainCreationFinished` método seja chamado.  
   
  Algumas partes do carregamento do domínio do aplicativo podem continuar após o `AppDomainCreationFinished` retorno de chamada. Um HRESULT de falha em `hrStatus` indica uma falha. No entanto, um HRESULT de êxito em `hrStatus` indica apenas que a primeira parte da criação do domínio do aplicativo foi bem-sucedida.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

@@ -2,17 +2,19 @@
 title: Considerações de segurança XSLT
 ms.date: 03/30/2017
 ms.assetid: fea695be-617c-4977-9567-140e820436fc
-ms.openlocfilehash: ad96ebb6048e8a397e0761a2217fec89e0d206b0
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a8d077cf35da56795cc0b0c22e9bab26ce99f3a2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818278"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685195"
 ---
 # <a name="xslt-security-considerations"></a>Considerações de segurança XSLT
+
 O idioma XSLT tem um conjunto rico de recursos que oferecem várias energia e flexibilidade. Inclui muitos recursos que, quando úteis, podem também ser explorados por fontes fora. Para usar com segurança XSLT, você deve compreender os tipos de problemas de segurança que ocorrem ao usar XSLT, e as estratégias básicas que você pode usar para atenuar esses riscos.  
   
 ## <a name="xslt-extensions"></a>Extensões XSLT  
+
  Duas extensões populares XSLT são objetos de script e a extensão de folha de estilos. Essas extensões permitem que o processador XSLT executa o código.  
   
 - Os objetos de extensão adicionar recursos de programação as transformações XSL.  
@@ -20,15 +22,19 @@ O idioma XSLT tem um conjunto rico de recursos que oferecem várias energia e fl
 - Os scripts podem ser inseridos na folha de estilos usando o elemento de extensão de `msxsl:script` .  
   
 ### <a name="extension-objects"></a>Objetos de extensão  
+
  Os objetos de extensão são adicionados usando o método <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> . O conjunto de permissões FullTrust é necessário para oferecer suporte objetos de extensão. Isso garante que a elevação de permissões não ocorre quando o código de objeto de extensão é executado. Tentar chamar o método de <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> sem permissões FullTrust de resulta em uma exceção de segurança que está sendo lançada.  
   
 ### <a name="style-sheet-scripts"></a>Scripts de folha de estilos  
+
  Os scripts podem ser inseridos em uma folha de estilos usando o elemento de extensão de `msxsl:script` . Suporte de script é um recurso opcional na classe de <xref:System.Xml.Xsl.XslCompiledTransform> que é desativada por padrão. O script pode ser ativado definindo a propriedade de <xref:System.Xml.Xsl.XsltSettings.EnableScript%2A?displayProperty=nameWithType> a `true` e passando o objeto de <xref:System.Xml.Xsl.XsltSettings> para o método de <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> .  
   
 #### <a name="guidelines"></a>Diretrizes  
+
  Habilitar scripts somente quando a folha de estilos vem de uma fonte confiável. Se você não pode verificar a fonte da folha de estilos, ou se a folha de estilos não vem de uma fonte confiável, passe em `null` para o argumento configurações de fonte.  
   
 ## <a name="external-resources"></a>Recursos externos  
+
  O idioma XSLT tem recursos como `xsl:import`, `xsl:include`, ou a função de `document()` , onde o processador precisa resolver referências de um URI. A classe de <xref:System.Xml.XmlResolver> é usada para resolver recursos externos. Os recursos externos podem precisar ser resolvido nos dois seguintes casos:  
   
 - Ao criar uma folha de estilos, <xref:System.Xml.XmlResolver> é usado para `xsl:import` e resolução de `xsl:include` .  
@@ -41,6 +47,7 @@ O idioma XSLT tem um conjunto rico de recursos que oferecem várias energia e fl
  Os métodos cada um de <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> e de <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> incluem as sobrecargas que aceitam <xref:System.Xml.XmlResolver> como um dos argumentos. Se <xref:System.Xml.XmlResolver> não for especificado, <xref:System.Xml.XmlUrlResolver> padrão sem credenciais é usado.  
   
 #### <a name="guidelines"></a>Diretrizes  
+
  Ativar a função de `document()` somente quando a folha de estilos vem de uma fonte confiável.  
   
  A lista a seguir descreve quando você pode querer especificar um objeto de <xref:System.Xml.XmlResolver> :  

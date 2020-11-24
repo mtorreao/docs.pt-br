@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0451d752-1e5c-4c9a-8bad-6cd35b7ba3df
 topic_type:
 - apiref
-ms.openlocfilehash: 387f5f01f2d2589c0b34e50b69398e1feb0e77e0
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 3005db62bba4089c669a00f62e3c1e62f9e1dae9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008238"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685676"
 ---
 # <a name="iceegentruncatesection-method"></a>Método ICeeGen::TruncateSection
+
 Trunca a seção de código especificada pelo comprimento especificado.  
   
  Este método é obsoleto e não deve ser usado.  
@@ -37,6 +38,7 @@ HRESULT TruncateSection (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `section`  
  no A seção a ser truncada.  
   
@@ -44,14 +46,16 @@ HRESULT TruncateSection (
  no O comprimento, em bytes, pelo qual truncar a seção.  
   
 ## <a name="remarks"></a>Comentários  
+
  Chame `TruncateSection` somente se você tiver requisitos de seção especiais que não são tratados por outros métodos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como um recurso em MsCorEE. dll  
+ **Biblioteca:** Usado como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

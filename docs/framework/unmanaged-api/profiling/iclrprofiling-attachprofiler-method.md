@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 535a6839-c443-405b-a6f4-e2af90725d5b
 topic_type:
 - apiref
-ms.openlocfilehash: 48ac09e1862ae58e79707235e891f72920de1251
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 94495ca0ea75bd41996d430159474c707a3e68b2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500553"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685416"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>Método ICLRProfiling::AttachProfiler
+
 Anexa o criador de perfil especificado ao processo especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -64,6 +65,7 @@ HRESULT AttachProfiler(
   \[em] o tamanho, em bytes, dos dados que `pvClientData` aponta para.
 
 ## <a name="return-value"></a>Valor Retornado  
+
  Esse método retorna os HRESULTs a seguir.  
   
 |HRESULT|Descrição|  
@@ -84,9 +86,11 @@ HRESULT AttachProfiler(
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="memory-management"></a>Gerenciamento de memória  
+
  Ao manter as convenções com, o chamador de `AttachProfiler` (por exemplo, o código de gatilho criado pelo desenvolvedor do criador de perfil) é responsável por alocar e desalocar a memória para os dados aos quais o `pvClientData` parâmetro aponta. Quando o CLR executa a `AttachProfiler` chamada, ele faz uma cópia da memória que `pvClientData` aponta para e a transmite para o processo de destino. Quando o CLR dentro do processo de destino recebe sua própria cópia do `pvClientData` bloco, ele passa o bloco para o criador de perfil por meio do `InitializeForAttach` método e, em seguida, desaloca sua cópia do `pvClientData` bloco do processo de destino.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

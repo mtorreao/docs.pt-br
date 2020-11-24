@@ -2,19 +2,21 @@
 title: Regras para inferir tipos simples
 ms.date: 03/30/2017
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
-ms.openlocfilehash: 817a35c607f810da0a3e2dc681d27ea997c5fcc7
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b8fa3037d9ad5af057f477733ffdea74681f5549
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823544"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686534"
 ---
 # <a name="rules-for-inferring-simple-types"></a>Regras para inferir tipos simples
+
 Descreve como a classe de <xref:System.Xml.Schema.XmlSchemaInference> infere o tipo de dados para atributos e elementos.  
   
  A classe de <xref:System.Xml.Schema.XmlSchemaInference> infere o tipo de dados para atributos e elementos como tipos simples. Esta seção descreve os tipos inferidos possivelmente, como os valores de diferentes de vários são reconciliados a um único tipo, e como esquema- definindo atributos de `xsi` são tratados.  
   
 ## <a name="inferred-types"></a>Tipos inferidos  
+
  A classe de <xref:System.Xml.Schema.XmlSchemaInference> infere valores de elemento e atributo como tipos simples e inclui um atributo de tipo no esquema resultante. Todos os tipos são inferidos tipos simples. Qualquer tipo base ou aspecto são incluído como parte do esquema resultante.  
   
  Os valores são examinados individualmente que são encontrados no documento XML. O tipo é inferido para um valor então é examinado. Se um tipo é inferido de um atributo ou um elemento, e um valor para o atributo ou o elemento está localizado que não corresponde ao tipo atualmente inferido, a classe de <xref:System.Xml.Schema.XmlSchemaInference> eleva tipo para cada um de um conjunto de regras. Essas regras são discutidas na seção da promoção de tipos, posterior neste tópico.  
@@ -44,6 +46,7 @@ Descreve como a classe de <xref:System.Xml.Schema.XmlSchemaInference> infere o t
 |string|Um ou mais caracteres Unicode.|  
   
 ## <a name="type-promotion"></a>Promoção de tipos  
+
  A classe de <xref:System.Xml.Schema.XmlSchemaInference> examina valores de atributo e de um elemento de cada vez. Como valores são encontrados, o tipo mais restritivo, o mais sem sinal é inferido. Se um tipo é inferido de um atributo ou um elemento, e um novo valor está localizado que não corresponde ao tipo atualmente inferido, o tipo é inferido alto para um novo tipo que se aplica a ambos tipo atualmente inferido e o novo valor. A classe de <xref:System.Xml.Schema.XmlSchemaInference> considera valores anteriores para elevar o tipo inferido.  
   
  Por exemplo, considere os seguintes fragmentos XML de dois documentos XML:  

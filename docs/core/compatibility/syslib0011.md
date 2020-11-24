@@ -3,12 +3,12 @@ title: Aviso de SYSLIB0011
 description: Saiba mais sobre o obsoletions que gera SYSLIB0011 de aviso de tempo de compilação.
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: 1b4f4c24c64148319f659b78573a4d80fd5b98a7
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 99cdd9f5335f71eb9325039891db17972fb48532
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440009"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685000"
 ---
 # <a name="syslib0011-binaryformatter-serialization-is-obsolete"></a>SYSLIB0011: a serialização BinaryFormatter está obsoleta
 
@@ -32,4 +32,4 @@ Para obter mais informações sobre as ações recomendadas, consulte [Resolvend
 ## <a name="see-also"></a>Confira também
 
 - [Resolvendo erros de desativação e BinaryFormatter obsoletion](https://aka.ms/binaryformatter)
-- [Os métodos de serialização BinaryFormatter são obsoletos e proibidos em aplicativos ASP.NET](corefx.md#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps)
+- [Os métodos de serialização BinaryFormatter são obsoletos e proibidos em aplicativos ASP.NET](core-libraries/5.0/binaryformatter-serialization-obsolete.md)

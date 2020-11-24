@@ -2,17 +2,19 @@
 title: Erros recuperáveis XSLT
 ms.date: 03/30/2017
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
-ms.openlocfilehash: 8a77600c8cc1baf61ed21cc7a480b75dd2fde2dc
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2123ead435fe389693f3b141a26873700ba5647f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827575"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686768"
 ---
 # <a name="recoverable-xslt-errors"></a>Erros recuperáveis XSLT
+
 A recomendação de versão 1,0 do W3C de transformações XSL (XSLT) inclui as áreas no qual o provedor de implementação pode decidir como manipular uma situação. Essas áreas são consideradas como comportamento arbitrário. Por exemplo, em instruções de processamento criadoras da seção 7,3, XSLT 1,0 estados de recomendação que é um erro se criar uma instância do conteúdo de `xsl:processing-instruction` cria nós diferentes de nós de texto. Para alguns problemas, a recomendação XSLT 1,0 indica o que a decisão deve ser feita se o processador decidir recuperar de erro. Para o problema da seção 7,3, o W3C com a implementação pode recuperar esse erro ignorando os nós e seu conteúdo.  
   
 ## <a name="discretionary-behaviors"></a>Comportamentos arbitrários  
+
  A tabela a seguir lista cada um dos comportamentos arbitrários permitidas pela recomendação XSLT 1,0, e como esses comportamentos são tratados pela classe de <xref:System.Xml.Xsl.XslCompiledTransform> .  
   
 - Recupere indica que a classe de <xref:System.Xml.Xsl.XslCompiledTransform> recuperar esse erro. O evento de <xref:System.Xml.Xsl.XsltArgumentList.XsltMessageEncountered?displayProperty=nameWithType> pode ser usado para relatar todos os eventos do processador XSLT.  

@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
-ms.openlocfilehash: 6f0be433abcebed7f9da70225563a04170426314
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: fe227a2d3efc5c36b818b7f4431896e6f62b1f26
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818200"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685039"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>XsltArgumentList para parâmetros de folha de estilos e objetos de extensão
+
 A classe de <xref:System.Xml.Xsl.XsltArgumentList> contém o idioma extensível de folha de estilos para objetos de parâmetros de transformações (XSLT) e a extensão XSLT. Quando passados para o método de <xref:System.Xml.Xsl.XslTransform.Transform%2A> , esses parâmetros e objetos de extensão podem ser chamados de folhas de estilos.  
   
 > [!NOTE]
@@ -31,14 +32,15 @@ A classe de <xref:System.Xml.Xsl.XsltArgumentList> contém o idioma extensível 
 - Suporte que passam partes da árvore de resultado à folha de estilos com o uso de <xref:System.Xml.XPath.XPathNodeIterator>.  
   
 ## <a name="xslt-style-sheet-parameters"></a>Parâmetros de folha de estilos XSLT  
+
  Os parâmetros XSLT são adicionados a <xref:System.Xml.Xsl.XsltArgumentList> usando o método <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> . Um nome qualificado e um namespace Uniform Resource Identifier (URI) são associados com o objeto de parâmetro no momento.  
   
  O objeto de parâmetro deve corresponder a um tipo de World Wide Web Consortium (W3C). A tabela seguinte mostra tipos correspondentes W3C, as classes equivalentes do .NET Framework (tipo), e se o tipo W3C é um tipo de XPath (linguagem de caminho XML) ou tipo de XSLT.  
   
 |Tipo W3C|Classe equivalente do .NET Framework (tipo)|Tipo XPath ou XSLT|  
 |--------------|----------------------------------------------|-----------------------------|  
-|Cadeia de caracteres|System.String|XPath|  
-|Booliano|System.Boolean|XPath|  
+|String|System.String|XPath|  
+|Boolean|System.Boolean|XPath|  
 |Número|System.Double|XPath|  
 |Fragmento da árvore de resultado|System.Xml.XPath.XPathNavigator|XSLT|  
 |Node Set|System.Xml.XPath.XPathNodeIterator|XPath|  
@@ -54,6 +56,7 @@ A classe de <xref:System.Xml.Xsl.XsltArgumentList> contém o idioma extensível 
 3. Passar <xref:System.Xml.Xsl.XsltArgumentList> para o método de <xref:System.Xml.Xsl.XslTransform.Transform%2A> .  
   
 ### <a name="example"></a>Exemplo  
+
  O exemplo a seguir usa o método de <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> para criar um parâmetro para conter uma data calculada de desconto. A data de desconto é calculada para ser a 20 dias de data pedido.  
   
 ```vb  
@@ -137,6 +140,7 @@ public class Sample
 ```  
   
 ### <a name="input"></a>Entrada  
+
  order.xml  
   
 ```xml  
@@ -178,6 +182,7 @@ public class Sample
 ```  
   
 ## <a name="xslt-extension-objects"></a>Objetos de extensão XSLT  
+
  Os objetos de extensão XSLT são adicionados a <xref:System.Xml.Xsl.XsltArgumentList> usando o método <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> . Um nome qualificado e URI de namespace são associados com o objeto de extensão no momento.  
   
  Quando um objeto é adicionado, o chamador de <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> deve ser totalmente confiável na política de segurança. Se o chamador é de confiança parcial, a adição falhará.  
@@ -195,6 +200,7 @@ public class Sample
 3. Passar <xref:System.Xml.Xsl.XsltArgumentList> para o método de <xref:System.Xml.Xsl.XslTransform.Transform%2A> .  
   
 ### <a name="example"></a>Exemplo  
+
  O exemplo a seguir calcula a circunferência de um círculo determinado o raio.  
   
 ```vb  
@@ -305,6 +311,7 @@ public class Sample
 ```  
   
 ### <a name="input"></a>Entrada  
+
  number.xml  
   
 ```xml  
@@ -341,6 +348,7 @@ public class Sample
 ```  
   
 ### <a name="output"></a>Saída  
+
  `<circles xmlns:myObj="urn:myObj">`  
   
  `<circle>`  

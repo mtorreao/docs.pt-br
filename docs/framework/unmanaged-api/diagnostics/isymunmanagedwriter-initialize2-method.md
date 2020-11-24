@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 93de56b6-4ae8-4cca-acdc-25a434623509
 topic_type:
 - apiref
-ms.openlocfilehash: 869d7d36ac24bfeee5b2361dd569945ad77eaf7f
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 93a96a5da3342f4beff611de1d448dc199dd39dd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83610061"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687124"
 ---
 # <a name="isymunmanagedwriterinitialize2-method"></a>Método ISymUnmanagedWriter::Initialize2
+
 Define a interface do emissor de metadados com a qual esse gravador será associado e define o nome do arquivo de saída para o qual os símbolos de depuração serão gravados. Esse método também permite que você defina o local final do arquivo de banco de dados do programa (PDB).  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,6 +38,7 @@ HRESULT Initialize2(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `emitter`  
  no Um ponteiro para a interface do emissor de metadados.  
   
@@ -47,15 +49,17 @@ HRESULT Initialize2(
  no Se especificado, o gravador de símbolo emitirá os símbolos para o determinado em <xref:System.Runtime.InteropServices.ComTypes.IStream> vez de para o arquivo especificado no `filename` parâmetro. O `pIStream` é opcional.  
   
  `fFullBuild`  
- [in] `true` Se esta for uma recompilação completa; `false`se esta for uma compilação incremental.  
+ [in] `true` Se esta for uma recompilação completa; `false` se esta for uma compilação incremental.  
   
  `finalfilename`  
  no Um ponteiro para um `WCHAR` que é a cadeia de caracteres do caminho para o local final do arquivo PDB.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Confira também
