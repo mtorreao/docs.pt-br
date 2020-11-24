@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7bf8a141-b2c0-4058-9885-1cef7dcaa811
 topic_type:
 - apiref
-ms.openlocfilehash: e188fe80e770481aac02244a2c105639e4da19e2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9418be85f5b72bac8eed7f5ea4af4fc42439b01f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73108886"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683219"
 ---
 # <a name="createapplicationcontext-function"></a>Função CreateApplicationContext
+
 Essa função dá suporte à infraestrutura de .NET Framework e não se destina a ser usada diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,6 +35,7 @@ HRESULT CreateApplicationContext (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pName`  
  no Um ponteiro para um nome amigável.  
   
@@ -41,16 +43,17 @@ HRESULT CreateApplicationContext (
  fora Um ponteiro para um contexto de aplicativo.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Fusion. h  
   
- **Biblioteca:** Incluído como um recurso em Fusion. dll  
+ **Biblioteca:** Incluído como um recurso no Fusion.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IAssemblyCache](iassemblycache-interface.md)
 - [Funções estáticas globais de fusão](fusion-global-static-functions.md)
-- [Cache de assembly global](../../app-domains/gac.md)
+- [Cache de assemblies global](../../app-domains/gac.md)

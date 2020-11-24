@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: a5ed2fd0-c7d2-4603-aaca-5d0caad92675
 topic_type:
 - apiref
-ms.openlocfilehash: ee856dbd398d0fa5e3eee7d9b2b2cfc7c7a57ecf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 52d5ad3a18c102422e90621c7d1e23b2692c0000
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176585"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683220"
 ---
 # <a name="create_asm_name_obj_flags-enumeration"></a>Enumeração CREATE_ASM_NAME_OBJ_FLAGS
-Especifica os atributos de um objeto [IAssemblyName Interface](iassemblyname-interface.md) quando ele é construído pela função [CreateAssemblyNameObject.](createassemblynameobject-function.md)  
+
+Especifica os atributos de um objeto de [interface IAssemblyName](iassemblyname-interface.md) quando ele é construído pela função [CreateAssemblyNameObject](createassemblynameobject-function.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,19 +41,20 @@ typedef enum {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |`CANOF_PARSE_DISPLAY_NAME`|Indica que o parâmetro passado é uma identidade textual.|  
 |`CANOF_SET_DEFAULT_VALUES`|Define alguns valores padrão.|  
-|`CANOF_VERIFY_FRIEND_ASSEMBLYNAME`|Verifica a regra da assembléia do amigo (apenas nome e chave pública). Este membro é apenas para uso interno.|  
-|`CANOF_PARSE_FRIEND_DISPLAY_NAME`|Uma combinação `CANOF_PARSE_DISPLAY_NAME` de `CANOF_VERIFY_FRIEND_ASSEMBLYNAME` bandeiras. Este membro é apenas para uso interno.|  
+|`CANOF_VERIFY_FRIEND_ASSEMBLYNAME`|Verifica a regra do assembly Friend (somente nome e chave pública). Este membro é somente para uso interno.|  
+|`CANOF_PARSE_FRIEND_DISPLAY_NAME`|Uma combinação dos `CANOF_PARSE_DISPLAY_NAME` sinalizadores e `CANOF_VERIFY_FRIEND_ASSEMBLYNAME` . Este membro é somente para uso interno.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Fusion.h  
+ **Cabeçalho:** Fusion. h  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 

@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 80a5308e-c22f-4201-ba89-31cc8562515b
 topic_type:
 - apiref
-ms.openlocfilehash: 58d11e9084f53c69f2656b4f0ee6bc7d2cc4ae21
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c3e623b0b5f8b49e043fe3a1aa8311558e573573
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84495860"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682829"
 ---
 # <a name="icorprofilerinfo4-interface"></a>Interface ICorProfilerInfo4
+
 Fornece métodos que os profileres de código usam para se comunicar com o Common Language Runtime (CLR) para controlar o monitoramento de eventos e informações de solicitação. . A `ICorProfilerInfo4` interface é uma extensão das outras `ICorProfilerInfo` interfaces. Ele fornece novos métodos para dar suporte à recompilação JIT (just-in-time), adicionada ao .NET Framework 4,5.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método EnumJITedFunctions2](icorprofilerinfo4-enumjitedfunctions2-method.md)|Retorna um enumerador para todas as funções que foram previamente compiladas e recompiladas por JIT.|  
 |[Método EnumThreads](icorprofilerinfo4-enumthreads-method.md)|Obtém um enumerador que fornece métodos para iterar sequencialmente através da coleção de todos os threads gerenciados no processo de perfil.|  
@@ -40,9 +41,11 @@ Fornece métodos que os profileres de código usam para se comunicar com o Commo
 |[Método RequestRevert](icorprofilerinfo4-requestrevert-method.md)|Reverte todas as instâncias das funções especificadas para suas versões originais.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O CLR implementa os métodos da `ICorProfilerInfo4` interface usando o modelo de thread livre. Cada método retorna um HRESULT para indicar êxito ou falha. Para obter uma lista de possíveis códigos de retorno, consulte o arquivo CorError. h.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

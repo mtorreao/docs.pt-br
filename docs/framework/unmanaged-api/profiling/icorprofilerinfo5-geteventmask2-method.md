@@ -12,14 +12,15 @@ api_type:
 ms.assetid: f854b68f-009c-4ffb-89cd-ca874d1c0fb7
 topic_type:
 - apiref
-ms.openlocfilehash: 758e5b71443b127c80c820eb8531056530e81b13
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 81509db178b0ab1a524dcc4b00f39264e87a220d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84495691"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682777"
 ---
 # <a name="icorprofilerinfo5geteventmask2-method"></a>ICorProfilerInfo5::Método GetEventMask2
+
 [Com suporte no .NET Framework 4.5.2 e versões posteriores]  
   
  Obtém as categorias de eventos atuais para as quais o criador de perfil deseja receber notificações para o Common Language Runtime (CLR).  Ele fornece funcionalidade não fornecida pelo método [ICorProfilerInfo:: GetEventMask](icorprofilerinfo-geteventmask-method.md) .  
@@ -34,6 +35,7 @@ HRESULT GetEventMask2(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pdwEventsLow`  
  [out] Um ponteiro para um valor de 4 bytes que especifica as categorias de eventos. Cada bit controla uma capacidade, um comportamento ou um tipo de evento diferente. Os bits são descritos na enumeração [COR_PRF_MONITOR](cor-prf-monitor-enumeration.md) .  
   
@@ -41,11 +43,13 @@ HRESULT GetEventMask2(
  [out] Um ponteiro para um valor de 4 bytes que especifica as categorias de eventos.  Cada bit controla uma capacidade, um comportamento ou um tipo de evento diferente. Os bits são descritos na enumeração [COR_PRF_HIGH_MONITOR](cor-prf-high-monitor-enumeration.md) .  
   
 ## <a name="remarks"></a>Comentários  
+
  O método `GetEventMask2` é usado para determinar para quais retornos de chamada o criador de perfil fez assinatura. Normalmente, você executa um OR lógico dos `pdwEventsLow` valores e `pdwEventsHigh` e quaisquer novos bits que deseja definir e, em seguida, chama o método [SetEventMask2](icorprofilerinfo5-seteventmask2-method.md) .  
   
  Esse método é a alternativa recomendada para o método [GetEventMask](icorprofilerinfo-geteventmask-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

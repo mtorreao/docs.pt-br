@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 88989482-a09f-4bd0-9adb-16f47b0291fd
 topic_type:
 - apiref
-ms.openlocfilehash: 5f95202bd0c8c5045c10378068ae83cad3d93fdd
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: e3934cbce76df3997fa07d8fa3a99bd8ddab09a2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396462"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684337"
 ---
 # <a name="icordebugvalueenum-interface"></a>Interface ICorDebugValueEnum
+
 Implementa os métodos "ICorDebugEnum" e enumera as matrizes "ICorDebugValue".  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método Next](icordebugvalueenum-next-method.md)|Obtém o número especificado de `ICorDebugValue` instâncias da enumeração, começando na posição atual.|  
   
@@ -36,6 +37,7 @@ Implementa os métodos "ICorDebugEnum" e enumera as matrizes "ICorDebugValue".
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -44,6 +46,6 @@ Implementa os métodos "ICorDebugEnum" e enumera as matrizes "ICorDebugValue".
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Depurando interfaces](debugging-interfaces.md)

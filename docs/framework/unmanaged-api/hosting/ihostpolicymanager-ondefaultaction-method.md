@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 071e73bd-4795-470f-9373-cfaef553b7f2
 topic_type:
 - apiref
-ms.openlocfilehash: e6aa8cb814e509d310c2f5b5524e0fd6727fc43f
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: a22f16c14514b90ce888fafc0ea554bd9f90cb11
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804280"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684075"
 ---
 # <a name="ihostpolicymanagerondefaultaction-method"></a>Método IHostPolicyManager::OnDefaultAction
+
 Notifica o host que o Common Language Runtime (CLR) está prestes a executar a ação padrão que foi definida por uma chamada para o método [ICLRPolicyManager:: Setpadrãoaction](iclrpolicymanager-setdefaultaction-method.md) em resposta a uma anulação ou <xref:System.AppDomain> descarregamento de thread.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -35,6 +36,7 @@ HRESULT OnDefaultAction (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `operation`  
  no Um dos valores de [EClrOperation](eclroperation-enumeration.md) , indicando o tipo de evento para o qual o CLR está respondendo.  
   
@@ -45,7 +47,7 @@ HRESULT OnDefaultAction (
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`OnDefaultAction`retornado com êxito.|  
+|S_OK|`OnDefaultAction` retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O CLR não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada. com êxito|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -53,11 +55,12 @@ HRESULT OnDefaultAction (
 |E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retorna E_FAIL, o CLR não é mais utilizável no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

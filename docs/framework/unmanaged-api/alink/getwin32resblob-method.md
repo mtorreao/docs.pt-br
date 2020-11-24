@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 36997e04-f9f6-4254-a041-6767ac6c51d9
 topic_type:
 - apiref
-ms.openlocfilehash: ff3103a46390c880a56ff443bfe20744f2ba0bfd
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 03f6c97b4a5bbbdc0aeaf7b3f07277e66d7d0e9a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74430694"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684506"
 ---
 # <a name="getwin32resblob-method"></a>Método GetWin32ResBlob
+
 Recupera o blob de recursos do Win32. Chame esse método depois de definir as opções de assembly.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -38,6 +39,7 @@ HRESULT GetWin32ResBlob(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `AssemblyID`  
  ID do assembly.  
   
@@ -56,13 +58,15 @@ HRESULT GetWin32ResBlob(
  `pcbResBlob`  
  Recebe o tamanho do blob.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  Retorna S_OK se o método tiver sucesso.  
   
 ## <a name="requirements"></a>Requisitos  
+
  Requer ALink. h  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IALink](ialink-interface.md)
 - [Interface IALink2](ialink2-interface.md)

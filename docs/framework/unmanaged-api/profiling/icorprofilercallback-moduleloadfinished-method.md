@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 050649e5-ffc0-4458-a0a4-d9ee128a219e
 topic_type:
 - apiref
-ms.openlocfilehash: 481fc2c40331e31f6a018d012fb2b2543d4fd9b5
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5a29507ca56cac4ab800845e3a88706dc7a25379
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503361"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683986"
 ---
 # <a name="icorprofilercallbackmoduleloadfinished-method"></a>Método ICorProfilerCallback::ModuleLoadFinished
+
 Notifica o criador de perfil que concluiu o carregamento de um módulo.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,6 +35,7 @@ HRESULT ModuleLoadFinished(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `moduleId`  
  no A ID do módulo que concluiu o carregamento.  
   
@@ -41,11 +43,13 @@ HRESULT ModuleLoadFinished(
  no Um HRESULT que indica se o módulo foi carregado com êxito.  
   
 ## <a name="remarks"></a>Comentários  
+
  O valor de `moduleId` não é válido para uma solicitação de informações até que o `ModuleLoadFinished` método seja chamado.  
   
  Algumas partes do carregamento do módulo podem continuar após o `ModuleLoadFinished` retorno de chamada. Um HRESULT de falha em `hrStatus` indica uma falha. No entanto, um HRESULT de êxito em `hrStatus` indica apenas que a primeira parte do carregamento do módulo foi bem-sucedida.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

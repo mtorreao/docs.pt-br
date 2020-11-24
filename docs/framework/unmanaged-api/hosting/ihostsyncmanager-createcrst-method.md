@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ac278cc8-2540-4a6c-b5c6-b90c3970b4f4
 topic_type:
 - apiref
-ms.openlocfilehash: 3566907544c72da2735e155d9088fe09fea4a728
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 27861a9258916f4c188d981c44833e5be4c507f2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803471"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682868"
 ---
 # <a name="ihostsyncmanagercreatecrst-method"></a>Método IHostSyncManager::CreateCrst
+
 Cria um objeto de seção crítica para sincronização.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,6 +35,7 @@ HRESULT CreateCrst (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `ppCrst`  
  fora Um ponteiro para o endereço de uma instância de [IHostCrst](ihostcrst-interface.md) implementada pelo host, ou NULL se a seção crítica não puder ser criada.  
   
@@ -41,7 +43,7 @@ HRESULT CreateCrst (
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`CreateCrst`retornado com êxito.|  
+|S_OK|`CreateCrst` retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -50,14 +52,16 @@ HRESULT CreateCrst (
 |E_OUTOFMEMORY|Não há memória suficiente disponível para criar a seção crítica solicitada.|  
   
 ## <a name="remarks"></a>Comentários  
- Os objetos de seção crítica fornecem sincronização semelhante à fornecida por um objeto mutex, exceto que as seções críticas podem ser usadas somente pelos threads de um único processo. `CreateCrst`espelha a função do Win32 `InitializeCriticalSection` .  
+
+ Os objetos de seção crítica fornecem sincronização semelhante à fornecida por um objeto mutex, exceto que as seções críticas podem ser usadas somente pelos threads de um único processo. `CreateCrst` espelha a função do Win32 `InitializeCriticalSection` .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -2,12 +2,12 @@
 title: Definindo o aplicativo de vários contêineres com o docker-compose.yml
 description: Como especificar a composição de microsserviços para um aplicativo de vários contêineres com o docker-compose.yml.
 ms.date: 01/30/2020
-ms.openlocfilehash: 47f2bf9bcdbf021ec4232ff9e25f6b2b228aaeaa
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c375d328ab9064315682fab91cb5e49e9a384b56
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539301"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682660"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definindo o aplicativo de vários contêineres com o docker-compose.yml
 
@@ -115,7 +115,7 @@ Concentrando-se em um único contêiner, o contêiner Catalog-API-Microservice t
 
 Esse serviço em contêiner tem a seguinte configuração básica:
 
-- Ele se baseia na imagem personalizada do **eshop/Catalog-API** . Para simplificar, não há nenhuma configuração Build: Key no arquivo. Isso significa que a imagem precisa ser previamente compilada (com docker build) ou ser baixada (com o comando docker pull) de qualquer registro do Docker.
+- Ele se baseia na imagem personalizada do **eshop/Catalog-API** . Para simplificar, não há nenhuma configuração Build: Key no arquivo. Isso significa que a imagem deverá ser previamente compilada (com docker build) ou ser baixada (com o comando docker pull) de qualquer registro do Docker.
 
 - Ele define uma variável de ambiente denominada ConnectionString, com a cadeia de conexão a ser usada pelo Entity Framework para acessar a instância do SQL Server que contém o modelo de dados de catálogo. Nesse caso, o mesmo contêiner do SQL Server está mantendo vários bancos de dados. Dessa forma, você precisará de menos memória no computador de desenvolvimento do Docker. No entanto, você também poderia implantar um contêiner do SQL Server para cada banco de dados de microsserviço.
 
@@ -143,7 +143,7 @@ Portanto, ao usar o comando docker-compose você pode ter os seguintes principai
 
 Ao desenvolver aplicativos, é importante ser capaz de executar um aplicativo em um ambiente de desenvolvimento isolado. Você pode usar o comando Docker-Compose CLI para criar esse ambiente ou o Visual Studio, que usa o Docker-Compose nos bastidores.
 
-O arquivo Docker-Compose. yml permite que você configure e documente todas as dependências de serviço do seu aplicativo (outros serviços, cache, bancos de dados, filas, etc.). Usando o comando da CLI docker-compose, você pode criar e iniciar um ou mais contêineres para cada dependência com um único comando (docker-compose up).
+O arquivo Docker-Compose. yml permite que você configure e documente todas as dependências de serviço do seu aplicativo (outros serviços, cache, bancos de dados, filas, etc.). Ao usar o comando de CLI docker-compose, você pode criar e iniciar um ou mais contêineres para cada dependência com um único comando (docker-compose up).
 
 Os docker-compose.yml são arquivos de configuração interpretados pelo mecanismo do Docker, mas também servem como arquivos de documentação convenientes, com informações sobre a composição de seu aplicativo para vários contêineres.
 
@@ -187,7 +187,7 @@ estrutura do arquivo de projeto do **Docker-Compose** :
 - *Docker-Compose. yml* -usado para compor microserviços
 - *Docker-Compose. Override. yml* -usado para configurar o ambiente de microserviços
 
-Edite os arquivos docker-compose com qualquer editor, como o Visual Studio Code ou o Sublime, e execute o aplicativo com o comando docker-compose up.
+Você pode editar os arquivos docker-compose com qualquer editor, como o Visual Studio Code ou o Sublime, e executar o aplicativo com o comando docker-compose up.
 
 Por convenção, o arquivo docker-compose.yml contém sua configuração base e outras configurações estáticas. Isso significa que a configuração do serviço não deve ser alterada de acordo com o ambiente de implantação que você tem como destino.
 
@@ -388,7 +388,7 @@ services:
 
 Neste exemplo, a configuração de substituição de desenvolvimento expõe algumas portas para o host, define variáveis de ambiente com URLs de redirecionamento e especifica cadeias de conexão para o ambiente de desenvolvimento. Todas essas configurações são apenas para o ambiente de desenvolvimento.
 
-Quando você executa `docker-compose up` (ou o inicia no Visual Studio), o comando lerá as substituições automaticamente como se estivesse mesclando os dois arquivos.
+Quando você executa `docker-compose up` (ou o inicia no Visual Studio), o comando lerá as substituições automaticamente como se estivesse mesclando os dois arquivos.
 
 Suponha que você deseja outro arquivo de composição para o ambiente de produção, com valores de configuração, portas ou cadeias de conexão diferentes. Você pode criar outro arquivo de substituição, como um arquivo chamado `docker-compose.prod.yml`, com diferentes configurações e variáveis de ambiente. Esse arquivo poderá ser armazenado em outro repositório GIT ou gerenciado e protegido por uma equipe diferente.
 
@@ -437,7 +437,7 @@ Os valores definidos no ambiente de tempo de execução sempre substituem os val
 Se estiver explorando o Docker e o .NET Core em fontes na Internet, você encontrará Dockerfiles que demonstram a simplicidade da criação de uma imagem do Docker por meio da cópia da fonte em um contêiner. Esses exemplos sugerem que, ao usar uma configuração simples, você pode ter uma imagem do Docker com o ambiente empacotado com seu aplicativo. O exemplo a seguir mostra um Dockerfile simples neste sentido.
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1
+FROM mcr.microsoft.com/dotnet/sdk:3.1
 WORKDIR /app
 ENV ASPNETCORE_URLS http://+:80
 EXPOSE 80
@@ -458,7 +458,7 @@ A equipe do .NET está realizando um trabalho importante para tornar o .NET Core
 
 3. **Produção**: o foco é a implantação rápida e a inicialização de contêineres, portanto, essas imagens são limitadas aos binários e ao conteúdo necessário para executar o aplicativo.
 
-A equipe do .NET fornece quatro variantes básicas no [dotnet/núcleo](https://hub.docker.com/_/microsoft-dotnet-core/) (no Hub do Docker):
+A equipe do .NET fornece quatro variantes básicas no [dotnet/núcleo](https://hub.docker.com/_/microsoft-dotnet/) (no Hub do Docker):
 
 1. **sdk**: para cenários de desenvolvimento e build
 1. **aspnet**: para cenários de produção do ASP.NET

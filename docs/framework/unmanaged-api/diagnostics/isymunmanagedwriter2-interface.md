@@ -14,25 +14,27 @@ helpviewer_keywords:
 ms.assetid: 8e78faa4-cf43-44fb-a91d-94d6df692a25
 topic_type:
 - apiref
-ms.openlocfilehash: 1fe6055d930c6d30e947d6bc774d0520a9e175ae
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 6feb48b7c78dda64ba372e470b83ffb14f21f2f9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614676"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683323"
 ---
 # <a name="isymunmanagedwriter2-interface"></a>Interface ISymUnmanagedWriter2
-Representa um gravador de símbolo e fornece métodos para definir documentos, pontos de sequência, escopos léxicos e variáveis. Essa interface estende a interface [ISymUnmanagedWriter](isymunmanagedwriter-interface.md) .  
+
+Representa um gravador de símbolo e fornece métodos para definir documentos, pontos de sequência, escopos lexicais e variáveis. Essa interface estende a interface [ISymUnmanagedWriter](isymunmanagedwriter-interface.md) .  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método DefineConstant2](isymunmanagedwriter2-defineconstant2-method.md)|Define um nome para um valor constante.|  
 |[Método DefineGlobalVariable2](isymunmanagedwriter2-defineglobalvariable2-method.md)|Define uma única variável global.|  
 |[Método DefineLocalVariable2](isymunmanagedwriter2-definelocalvariable2-method.md)|Define uma única variável no escopo léxico atual.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Confira também

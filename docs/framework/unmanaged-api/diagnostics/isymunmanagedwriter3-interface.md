@@ -14,24 +14,26 @@ helpviewer_keywords:
 ms.assetid: a034c21e-e371-4360-b470-29e88288948f
 topic_type:
 - apiref
-ms.openlocfilehash: 006045ce101884119f676e4f6324815eb21a10a4
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: dfc2e39a6a39e7386bd7358d422d5c6978ec42ec
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614650"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683284"
 ---
 # <a name="isymunmanagedwriter3-interface"></a>Interface ISymUnmanagedWriter3
-Representa um gravador de símbolo e fornece métodos para definir documentos, pontos de sequência, escopos léxicos e variáveis. Essa interface estende a interface [ISymUnmanagedWriter](isymunmanagedwriter-interface.md) .  
+
+Representa um gravador de símbolo e fornece métodos para definir documentos, pontos de sequência, escopos lexicais e variáveis. Essa interface estende a interface [ISymUnmanagedWriter](isymunmanagedwriter-interface.md) .  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método Commit](isymunmanagedwriter3-commit-method.md)|Confirma as alterações gravadas até o fluxo.|  
 |[Método OpenMethod2](isymunmanagedwriter3-openmethod2-method.md)|Abre um método e fornece seu deslocamento de seção real na imagem.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Confira também

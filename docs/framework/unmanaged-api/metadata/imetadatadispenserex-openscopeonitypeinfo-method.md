@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3480bbdb-c442-44a0-b7c6-333354503c52
 topic_type:
 - apiref
-ms.openlocfilehash: 8e119093800ea0a0119ba25ba38cf2eaf9afe96b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6056a64b354f69ce39692173da01892870fba9e1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540831"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682842"
 ---
 # <a name="imetadatadispenserexopenscopeonitypeinfo-method"></a>Método IMetaDataDispenserEx::OpenScopeOnITypeInfo
+
 Este método não está implementado. Se chamado, ele retornará E_NOTIMPL.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,6 +38,7 @@ HRESULT OpenScopeOnITypeInfo (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pITI`  
  no Ponteiro para uma interface [ITypeInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) que fornece as informações de tipo nas quais abrir o escopo.  
   
@@ -50,6 +52,7 @@ HRESULT OpenScopeOnITypeInfo (
  fora Ponteiro para um ponteiro para a interface retornada.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataforma:** Consulte [requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
