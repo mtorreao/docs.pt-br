@@ -2,14 +2,15 @@
 title: Suporte à função msxsl:node-set()
 ms.date: 03/30/2017
 ms.assetid: d0cbf517-d9f6-4097-9851-4fa62903decd
-ms.openlocfilehash: 26ae3014af93377dc106b5638ba194bd38e3dc9e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 6c84e3789916e8d842e51e8417cb27505cb5cba6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818538"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673391"
 ---
 # <a name="support-for-the-msxslnode-set-function"></a>Suporte à função msxsl:node-set()
+
 A função `msxsl:node-set` permite que você converta um fragmento da árvore de resultados em um conjunto de nós. O conjunto de nós resultante sempre contém um único nó e é o nó raiz da árvore.  
   
 > [!NOTE]
@@ -18,6 +19,7 @@ A função `msxsl:node-set` permite que você converta um fragmento da árvore d
  A função `msxsl:node-set` permite que você converta um fragmento da árvore de resultados em um conjunto de nós. O conjunto de nós resultante sempre contém um único nó e é o nó raiz da árvore.  
   
 ## <a name="example"></a>Exemplo  
+
  No exemplo a seguir, `$books` é uma variável que é uma árvore de nós na folha de estilos. A instrução for-each combinada com a função `node-set` permite que o usuário itere sobre essa árvore de nós como um conjunto de nós.  
   
 ## <a name="nodesetxsl"></a>nodeset.xsl  
@@ -43,6 +45,7 @@ A função `msxsl:node-set` permite que você converta um fragmento da árvore d
 ```  
   
 ## <a name="output"></a>Saída  
+
  A saída da transformação é  
   
 ```xml  

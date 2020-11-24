@@ -6,14 +6,15 @@ helpviewer_keywords:
 - unsealed classes
 - inheritance, classes
 ms.assetid: 9a3bd505-90f5-4053-9f0d-3cf5fa3d3ebf
-ms.openlocfilehash: b2e14b435aa567f231230da34307014210d46ccb
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9e380f533cfc290e952281c6a04f19978fa92aa3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828511"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677499"
 ---
 # <a name="unsealed-classes"></a>Classes não seladas
+
 As classes seladas não podem ser herdadas de e impedem a extensibilidade. Por outro lado, as classes que podem ser herdadas são chamadas de classes sem lacre.
 
  ✔️ Considere o uso de classes sem lacre sem nenhum membro virtual ou protegido adicionado como uma ótima maneira de fornecer uma extensibilidade econômica, mas muito apreciada para uma estrutura.

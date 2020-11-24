@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: bac0b156-31a3-4e7f-be4d-ab21789c81f1
 topic_type:
 - apiref
-ms.openlocfilehash: 896e797acc76e8d8034bd964e488317a62eed97b
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 1ae9fc1f1154866945d40cd63042fa8a43b88905
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378772"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677291"
 ---
 # <a name="icordebugstackwalksetcontext-method"></a>Método ICorDebugStackWalk::SetContext
+
 Define o contexto atual do objeto [ICorDebugStackWalk](icordebugstackwalk-interface.md) como um contexto válido para o thread.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,6 +35,7 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `flag`  
  no Um sinalizador [CorDebugSetContextFlag](cordebugsetcontextflag-enumeration.md) que indica se o contexto é do quadro ativo na pilha ou um contexto obtido com o desenrolamento da pilha.  
   
@@ -43,7 +45,8 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
  `context`  
  no O `CONTEXT` buffer.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
@@ -56,6 +59,7 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
 ## <a name="exceptions"></a>Exceções  
   
 ## <a name="remarks"></a>Comentários  
+
  Esse método não altera o contexto atual do thread.  
   
  A definição do contexto atual como um contexto inválido pode causar resultados imprevisíveis do Stack Walker.  
@@ -63,6 +67,7 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
  Você pode recuperar uma cópia de bit exata desse contexto chamando imediatamente o método [ICorDebugStackWalk:: GetContext](icordebugstackwalk-getcontext-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

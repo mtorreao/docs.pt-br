@@ -6,18 +6,19 @@ helpviewer_keywords:
 - debugging structures [.NET Framework]
 - structures [.NET Framework debugging]
 ms.assetid: 173ba2c2-ab34-49ae-b6a8-e5c49882bf05
-ms.openlocfilehash: a18094fb2621478dbdb4bbf672df436234112ed0
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: bf84f8ddb1e86da3b9d0e4326584e61304640558
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793752"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676264"
 ---
 # <a name="debugging-structures"></a>Estruturas de depuração
 
 Esta seção descreve as estruturas não gerenciadas que a API de depuração usa.
 
 ## <a name="in-this-section"></a>Nesta seção
+
  [Estrutura de CLRDATA_ADDRESS_RANGE](clrdata-address-range-structure.md) Define um intervalo de endereços.
 
  [Estrutura de CLRDATA_IL_ADDRESS_MAP](clrdata-il-address-map-structure.md) Define um IL para o mapeamento de endereços
@@ -68,9 +69,9 @@ Esta seção descreve as estruturas não gerenciadas que a API de depuração us
 
  [Estrutura DacpReJitData](dacprejitdata-structure.md) Define as informações básicas sobre um determinado método de instrumento do criador de perfil.
 
- [Estrutura de StackTrace_SimpleContext](stacktrace-simplecontext-structure.md) Fornece um contexto simples que pode ser usado no lugar de uma estrutura de `CONTEXT` completa.
+ [Estrutura de StackTrace_SimpleContext](stacktrace-simplecontext-structure.md) Fornece um contexto simples que pode ser usado no lugar de uma `CONTEXT` estrutura completa.
 
-## <a name="related-sections"></a>Seções Relacionadas
+## <a name="related-sections"></a>Seções relacionadas
 
  [Depurando coclasses](debugging-coclasses.md)
 

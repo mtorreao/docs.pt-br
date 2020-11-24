@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: ca2af325-eb9d-4a91-90e4-267e45b98611
 topic_type:
 - apiref
-ms.openlocfilehash: 1572c206f4a5a5fe0fd189ca84d0bcda2249c6d4
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 347b323951b0125ffa5f82626b2d9b235079492c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007644"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676940"
 ---
 # <a name="cormethodsemanticsattr-enumeration"></a>Enumeração CorMethodSemanticsAttr
+
 Contém valores que descrevem a relação entre um método e uma propriedade ou evento associado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -41,7 +42,7 @@ typedef enum CorMethodSemanticsAttr {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |`msSetter`|Especifica que o método é um `set` acessador para uma propriedade.|  
 |`msGetter`|Especifica que o método é um `get` acessador para uma propriedade.|  
@@ -51,6 +52,7 @@ typedef enum CorMethodSemanticsAttr {
 |`msFire`|Especifica que o método gera um evento.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorHdr. h  

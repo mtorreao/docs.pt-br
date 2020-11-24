@@ -2,14 +2,15 @@
 title: Tipos de nós XML
 ms.date: 03/30/2017
 ms.assetid: 71d03b78-6898-4ce7-b0fc-1282573f31f7
-ms.openlocfilehash: 97458fc26b3c63dd6d7882c180192aef63109e1a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: edf47246782e86cf134ea88d41381bed9ff16f69
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824591"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675627"
 ---
 # <a name="types-of-xml-nodes"></a>Tipos de nós XML
+
 Quando um documento XML é lido na memória como uma árvore de nós, os tipos de nós são decididos quando os nós são criados. A especificação DOM (Document Object Model) XML tem vários tipos de nós, determinados pelo W3C (World Wide Web Consortium) e listados na seção 1.1.1 (The DOM Structure Model). A tabela a seguir lista os tipos de nós, o objeto atribuído ao tipo de nó e uma breve descrição de cada tipo.  
   
 |Tipo de nó DOM|Objeto|Descrição|  

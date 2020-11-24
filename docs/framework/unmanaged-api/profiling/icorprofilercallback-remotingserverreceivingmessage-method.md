@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5604d21f-e6b7-490e-b469-42122a7568e1
 topic_type:
 - apiref
-ms.openlocfilehash: 157e6bc6cb9603fa9558ad6d39f0b086849fc7b0
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 0fc84a15d3250d5103c1dbc6486960f0ea780a2b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499890"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676810"
 ---
 # <a name="icorprofilercallbackremotingserverreceivingmessage-method"></a>Método ICorProfilerCallback::RemotingServerReceivingMessage
+
 Notifica o criador de perfil de que o processo recebeu uma invocação de método remoto ou uma solicitação de ativação.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,6 +35,7 @@ HRESULT RemotingClientSendingMessage(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pCookie`  
  no Um valor que corresponderá com o valor fornecido em [ICorProfilerCallback:: RemotingClientSendingMessage](icorprofilercallback-remotingclientsendingmessage-method.md) sob estas condições:  
   
@@ -49,9 +51,11 @@ HRESULT RemotingClientSendingMessage(
  no Um valor que é `true` se a chamada for assíncrona; caso contrário, `false` .  
   
 ## <a name="remarks"></a>Comentários  
+
  Se a solicitação de mensagem for assíncrona, a solicitação poderá ser atendida por qualquer thread arbitrário.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

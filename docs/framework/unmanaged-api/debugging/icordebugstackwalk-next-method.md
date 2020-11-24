@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 189c36be-028c-4fba-a002-5edfb8fcd07f
 topic_type:
 - apiref
-ms.openlocfilehash: b89e968e9b12943c8192af3b280f8bd321a02110
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 497dda473e6510cfa31405b2066c63b1a70dd5e9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378785"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677317"
 ---
 # <a name="icordebugstackwalknext-method"></a>Método ICorDebugStackWalk::Next
+
 Move o objeto [ICorDebugStackWalk](icordebugstackwalk-interface.md) para o próximo quadro.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -32,6 +33,7 @@ HRESULT Next();
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
+
  Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
@@ -44,9 +46,11 @@ HRESULT Next();
 ## <a name="exceptions"></a>Exceções  
   
 ## <a name="remarks"></a>Comentários  
+
  O `Next` método avança o `ICorDebugStackWalk` objeto para o quadro de chamada somente se o tempo de execução puder desenrolar o quadro atual. Caso contrário, o objeto avança para o próximo quadro que o tempo de execução é capaz de desenrolar.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

@@ -2,12 +2,12 @@
 title: Fluxo de trabalho de desenvolvimento do loop interno para aplicativos do Docker
 description: Saiba mais sobre o fluxo de trabalho de desenvolvimento de "loop interno" para aplicativos do Docker.
 ms.date: 08/06/2020
-ms.openlocfilehash: 071e16afede91f4cfd6cbe8662fa68814ffdcdd7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d66274a64591f79f242c1e8a63951b51d94a9ecd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539756"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676524"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Fluxo de trabalho de desenvolvimento do loop interno para aplicativos do Docker
 
@@ -107,7 +107,7 @@ Na Figura 4-24, você pode ver as etapas para adicionar os arquivos do Docker a 
 
 **Figura 4-24**. Arquivos do Docker adicionados usando o comando **Adicionar arquivos do Docker ao espaço de trabalho**
 
-Quando você adiciona um DockerFile, você especifica qual imagem do Docker base você usará (como usar `FROM mcr.microsoft.com/dotnet/core/aspnet` ). Normalmente, você criará sua imagem personalizada usando uma imagem de base que obteve de qualquer repositório oficial no [Registro do Docker Hub](https://hub.docker.com/) (como uma [imagem para .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/) o a imagem [para Node.js](https://hub.docker.com/_/node/)).
+Quando você adiciona um DockerFile, você especifica qual imagem do Docker base você usará (como usar `FROM mcr.microsoft.com/dotnet/aspnet` ). Normalmente, você criará sua imagem personalizada usando uma imagem de base que obteve de qualquer repositório oficial no [Registro do Docker Hub](https://hub.docker.com/) (como uma [imagem para .NET Core](https://hub.docker.com/_/microsoft-dotnet/) o a imagem [para Node.js](https://hub.docker.com/_/node/)).
 
 > [!TIP]
 > Você precisará repetir esse procedimento para cada projeto em seu aplicativo. No entanto, a extensão solicitará que o arquivo do Docker-compote gerado seja substituído após a primeira vez. Você deve responder a não substituí-lo, portanto, a extensão cria arquivos separados do Docker-Compose, que você pode mesclar manualmente, antes de executar o Docker-Compose.
@@ -119,12 +119,12 @@ Usar um repositório oficial de uma pilha de linguagem com um número de versão
 A seguir, há um DockerFile de exemplo para um contêiner do .NET Core:
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
+FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
 COPY ["src/WebApi/WebApi.csproj", "src/WebApi/"]
 RUN dotnet restore "src/WebApi/WebApi.csproj"
@@ -141,7 +141,7 @@ COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "WebApi.dll"]
 ```
 
-Nesse caso, a imagem é baseada na versão 3,1 do oficial ASP.NET Core imagem do Docker (vários arcos para Linux e Windows), de acordo com a linha `FROM mcr.microsoft.com/dotnet/core/aspnet:3.1` . (Para obter mais informações sobre esse tópico, confira a página [Imagem do Docker do ASP.NET Core](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) e a página [Imagem do Docker do .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/)).
+Nesse caso, a imagem é baseada na versão 3,1 do oficial ASP.NET Core imagem do Docker (vários arcos para Linux e Windows), de acordo com a linha `FROM mcr.microsoft.com/dotnet/aspnet:3.1` . (Para obter mais informações sobre esse tópico, confira a página [Imagem do Docker do ASP.NET Core](https://hub.docker.com/_/microsoft-dotnet-aspnet/) e a página [Imagem do Docker do .NET Core](https://hub.docker.com/_/microsoft-dotnet/)).
 
 No DockerFile, você também pode instruir o Docker para escutar a porta TCP que você usará no tempo de execução (como a porta 80 ou 443).
 
@@ -154,9 +154,9 @@ Você pode especificar mais definições de configurações no Dockerfile, depen
 
 **Usar repositórios de imagens com várias arquiteturas**
 
-Um único nome de imagem em um repositório pode conter variantes de plataforma, como uma imagem do Linux e uma imagem do Windows. Esse recurso permite que fornecedores como a Microsoft (criadores de imagem base) criem um único repositório para abranger várias plataformas (ou seja, Linux e Windows). Por exemplo, o repositório [dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/), disponível no registro do Docker Hub, é compatível com Linux e Windows Nano Server usando o mesmo nome de imagem.
+Um único nome de imagem em um repositório pode conter variantes de plataforma, como uma imagem do Linux e uma imagem do Windows. Esse recurso permite que fornecedores como a Microsoft (criadores de imagem base) criem um único repositório para abranger várias plataformas (ou seja, Linux e Windows). Por exemplo, o repositório [dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-aspnet/), disponível no registro do Docker Hub, é compatível com Linux e Windows Nano Server usando o mesmo nome de imagem.
 
-Efetuar pull da imagem [dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) de um host do Windows efetua pull da variante do Windows, enquanto efetuar pull do mesmo nome de imagem de um host Linux efetua pull da variante do Linux.
+Efetuar pull da imagem [dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-aspnet/) de um host do Windows efetua pull da variante do Windows, enquanto efetuar pull do mesmo nome de imagem de um host Linux efetua pull da variante do Linux.
 
 **_Criar sua imagem base do zero_**
 

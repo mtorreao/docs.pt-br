@@ -3,12 +3,12 @@ title: Ferramenta de Definição de Esquema XML (Xsd.exe)
 description: O gerador de serializador XML cria um assembly de serialização XML para tipos em um assembly especificado, o que melhora o desempenho de inicialização do XmlSerializer.
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: c8ae3e05f2d775cbc4c44ce27e7474d1fcfc06a3
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: a66ebfee3a461bb800e61e4f1d789f497da2f9d1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281751"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676602"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>Ferramenta de Definição de Esquema XML (Xsd.exe)
 
@@ -17,7 +17,7 @@ A Ferramenta de Definição de Esquema XML (Xsd.exe) gera um esquema XML ou clas
 A ferramenta de definição de esquema XML (Xsd.exe) geralmente pode ser encontrada no seguinte caminho: \
 _C: \\ arquivos de programas (x86) \\ Microsoft SDKs \\ Windows \\ {version} \\ Bint \\ {version} ferramentas\\_
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sintaxe
 
 Execute a ferramenta na linha de comando.
 
@@ -42,7 +42,7 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 
 ## <a name="general-options"></a>Opções gerais
 
-|Opção|Descrição|
+|Opção|DESCRIÇÃO|
 |------------|-----------------|
 |**/h \[\]**|Exibe sintaxe de comando e opções para a ferramenta.|
 |**/o \[ utputdir \] :**_diretório_|Especifica o diretório para arquivos de saída. Esse argumento pode aparecer somente uma vez. O padrão é o diretório atual.|
@@ -50,16 +50,17 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 |**/p \[ arameters \] :** _file.xml_|As opções de leitura para vários modos de operação do arquivo .xml especificado. A forma curta é `/p:`. Para obter mais informações, consulte a seção [comentários](#remarks) .|
 
 ## <a name="xsd-file-options"></a>Opções de arquivo XSD
+
  Você deve especificar somente uma das seguintes opções para arquivos .xsd.
 
-|Opção|Descrição|
+|Opção|DESCRIÇÃO|
 |------------|-----------------|
 |**/c \[ Lasses\]**|Gera classes que correspondem ao esquema especificado. Para ler dados XML em um objeto, use o método <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A?displayProperty=nameWithType>.|
 |**/d \[ ados\]**|Gera uma classe derivada de <xref:System.Data.DataSet> que corresponde ao esquema especificado. Para ler dados XML na classe derivada, use o método <xref:System.Data.DataSet.ReadXml%2A?displayProperty=nameWithType>.|
 
  Você também pode especificar qualquer uma das seguintes opções para arquivos .xsd.
 
-|Opção|Descrição|
+|Opção|DESCRIÇÃO|
 |------------|-----------------|
 |**/e \[ lementar \] :**_Element_|Especifica o elemento no esquema para o qual gerar código. Por padrão, todos os elementos são tipados. Você pode especificar esse argumento mais de uma vez.|
 |**/enableDataBinding**|Implementa a interface <xref:System.ComponentModel.INotifyPropertyChanged> em todos os tipos gerados para habilitar a associação de dados. A forma curta é `/edb`.|
@@ -74,7 +75,7 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 
 ## <a name="dll-and-exe-file-options"></a>Opções de arquivo DLL e EXE
 
-|Opção|Descrição|
+|Opção|DESCRIÇÃO|
 |------------|-----------------|
 |**/t \[ tipo \] :**_TypeName_|Especifica o nome do tipo para o qual criar um esquema. Você pode especificar vários argumentos de tipo. Se *typename* não especificar um namespace, o Xsd.exe corresponderá todos os tipos no assembly com o tipo especificado. Se *typename* especificar um namespace, somente esse tipo terá uma correspondência. Se *typename* terminar com um caractere de asterisco (\*), a ferramenta corresponderá todos os tipos que começam com a cadeia de caracteres antes do \*. Se você omitir a opção `/type`, o Xsd.exe gera esquemas para todos os tipos no assembly.|
 
@@ -105,7 +106,7 @@ Ao usar a opção `/parameters`, você pode especificar um único arquivo XML qu
 </xsd>
 ```
 
-Se o XML anterior estiver contido em um arquivo chamado GenerateSchemas.xml, use a `/parameters` opção digitando o seguinte em um prompt de comando e pressionando **Enter** :
+Se o XML anterior estiver contido em um arquivo chamado GenerateSchemas.xml, use a `/parameters` opção digitando o seguinte em um prompt de comando e pressionando **Enter**:
 
 ```console
  xsd /p:GenerateSchemas.xml
@@ -130,7 +131,7 @@ xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
 
 Você deve especificar somente uma das seguintes opções para o elemento `<generateSchemas>`.
 
-|Elemento|Descrição|
+|Elemento|DESCRIÇÃO|
 |-------------|-----------------|
 |\<assembly>|Especifica um assembly do qual gerar o esquema.|
 |\<type>|Especifica um tipo encontrado em um assembly para o qual gerar um esquema.|
@@ -149,7 +150,7 @@ Para gerar um arquivo de código, use o elemento `<generateClasses>`. O exemplo 
 
  As opções que você pode definir para o elemento `<generateClasses>` incluem o seguinte.
 
-|Elemento|Descrição|
+|Elemento|DESCRIÇÃO|
 |-------------|-----------------|
 |\<element>|Especifica um elemento no arquivo .xsd para o qual gerar código.|
 |\<schemaImporterExtensions>|Especifica um tipo derivado de uma classe <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension>.|
@@ -174,7 +175,7 @@ A tabela a seguir mostra os atributos que também podem ser usados com o element
 
 As opções que você pode definir para o elemento `<generateDataSet>` incluem o seguinte.
 
-|Elemento|Descrição|
+|Elemento|DESCRIÇÃO|
 |-------------|-----------------|
 |\<schema>|Especifica um arquivo de esquema XML para o qual gerar um código. Vários arquivos de esquema XML podem ser especificados usando vários \<schema> elementos.|
 
@@ -205,6 +206,7 @@ A tabela a seguir mostra os atributos que também podem ser usados com o element
 |ajuda|Exibe sintaxe de comando e opções para a ferramenta. Definir como `true` ou `false`.|
 
 ## <a name="examples"></a>Exemplos
+
  O comando a seguir gera um esquema XML de `myFile.xdr` e salva-o no diretório atual.
 
 ```console
@@ -229,7 +231,7 @@ O comando a seguir gera esquemas XML para todos os tipos no assembly `myAssembly
 xsd myAssembly.dll
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Data.DataSet>
 - <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>

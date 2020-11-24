@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - cancellation in .NET, overview
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
-ms.openlocfilehash: 578db725458ad5c4a90256a06744a58a6d1918da
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9e73be220f3f04ec6bd05b1193d4188825f1b8e8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819949"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676498"
 ---
 # <a name="cancellation-in-managed-threads"></a>Cancelamento em threads gerenciados
 
@@ -51,9 +51,10 @@ O padrão geral para implementar o modelo de cancelamento cooperativo é:
 - Os ouvintes podem ser notificados sobre solicitações de cancelamento por sondagem, registro de retorno de chamada ou aguardando identificadores de espera.  
   
 ## <a name="cancellation-types"></a>Tipos de cancelamento  
+
  A estrutura de cancelamento é implementada como um conjunto de tipos relacionados, que estão listados na tabela a seguir.  
   
-|Nome do tipo|Descrição|  
+|Nome do tipo|DESCRIÇÃO|  
 |---------------|-----------------|  
 |<xref:System.Threading.CancellationTokenSource>|O objeto que cria um token de cancelamento, e também emite o pedido de cancelamento para todas as cópias desse token.|  
 |<xref:System.Threading.CancellationToken>|O tipo de valor leve passado a um ou mais ouvintes, normalmente como um parâmetro de método. Os ouvintes monitoram o valor da propriedade `IsCancellationRequested` do token por sondagem, retorno de chamada ou identificador de espera.|  
@@ -62,6 +63,7 @@ O padrão geral para implementar o modelo de cancelamento cooperativo é:
  O modelo de cancelamento é integrado ao .NET em vários tipos. Os mais importantes são <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> e <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>. É recomendável que você use esse modelo de cancelamento cooperativo para todos os novos códigos de biblioteca e aplicativo.  
   
 ## <a name="code-example"></a>Exemplo de código  
+
  No exemplo a seguir, o objeto solicitante cria um objeto <xref:System.Threading.CancellationTokenSource> e, em seguida, passa sua propriedade <xref:System.Threading.CancellationTokenSource.Token%2A> para a operação cancelável. A operação que recebe a solicitação monitora o valor da propriedade <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> do token por sondagem. Quando o valor se torna `true`, o ouvinte pode concluir de qualquer maneira apropriada. Neste exemplo, o método apenas sai, que é tudo necessário em muitos casos.  
   
 > [!NOTE]
@@ -71,6 +73,7 @@ O padrão geral para implementar o modelo de cancelamento cooperativo é:
  [!code-vb[Cancellation#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex1.vb#1)]  
   
 ## <a name="operation-cancellation-versus-object-cancellation"></a>Cancelamento de operação versus cancelamento de objeto  
+
  Na estrutura de cancelamento Cooperation, o cancelamento refere-se a operações, não a objetos. A solicitação de cancelamento significa que a operação deve ser interrompida o mais rápido possível após a conclusão de qualquer limpeza necessária. Um token de cancelamento deve se referir a uma "operação cancelável", no entanto, essa operação pode ser implementada em seu programa. Depois que a propriedade <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> do token foi configurada para `true`, não pode ser redefinida para `false`. Portanto, os tokens de cancelamento não podem ser reutilizados depois de terem sido cancelados.  
   
  Se você precisar de um mecanismo de cancelamento de objeto, pode baseá-lo no mecanismo de cancelamento da operação chamando o método <xref:System.Threading.CancellationToken.Register%2A?displayProperty=nameWithType>, como mostrado no exemplo a seguir.  
@@ -81,6 +84,7 @@ O padrão geral para implementar o modelo de cancelamento cooperativo é:
  Se um objeto oferecer suporte a mais de uma operação simultânea cancelável, passe um token separado como entrada para cada operação cancelável distinta. Dessa forma, uma operação pode ser cancelada sem afetar as outras.  
   
 ## <a name="listening-and-responding-to-cancellation-requests"></a>Detectar e responder a solicitações de cancelamento  
+
  No delegado do usuário, o implementador de uma operação cancelável determina como concluir a operação em resposta a uma solicitação de cancelamento. Em muitos casos, o delegado do usuário pode apenas executar qualquer limpeza necessária e depois retornar imediatamente.  
   
  No entanto, em casos mais complexos, pode ser necessário que o delegado do usuário notifique ao código da biblioteca que ocorreu o cancelamento. Nesses casos, a maneira correta de concluir a operação é o delegado chamar o método <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A>, que fará com que um <xref:System.OperationCanceledException> seja lançado. O código da biblioteca pode capturar essa exceção no thread do delegado de usuário e examinar o token da exceção para determinar se a exceção indica cancelamento cooperativo ou alguma outra situação excepcional.  
@@ -88,6 +92,7 @@ O padrão geral para implementar o modelo de cancelamento cooperativo é:
  A classe <xref:System.Threading.Tasks.Task> lida com o <xref:System.OperationCanceledException> dessa forma. Para obter mais informações, consulte [Cancelamento de tarefas](../parallel-programming/task-cancellation.md).  
   
 ### <a name="listening-by-polling"></a>Detectar por sondagem  
+
  Para cálculos de longa execução que fazem loop ou repetição, você pode detectar uma solicitação de cancelamento periodicamente pesquisando o valor da propriedade <xref:System.Threading.CancellationToken.IsCancellationRequested%2A?displayProperty=nameWithType>. Se o valor for `true`, o método deve ser limpo e concluído o mais rápido possível. A frequência de pesquisa ideal depende do tipo de aplicativo. Cabe ao desenvolvedor determinar a melhor frequência de sondagem para qualquer programa. A sondagem em si não afeta o desempenho significativamente. O exemplo a seguir mostra uma abordagem possível para a sondagem.  
   
  [!code-csharp[Cancellation#3](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex11.cs#3)]
@@ -96,6 +101,7 @@ O padrão geral para implementar o modelo de cancelamento cooperativo é:
  Para um exemplo mais completo, confira [Como detectar solicitações de cancelamento por sondagem](how-to-listen-for-cancellation-requests-by-polling.md).  
   
 ### <a name="listening-by-registering-a-callback"></a>Ouvir ao registrar um retorno de chamada  
+
  Algumas operações podem ser bloqueadas de tal forma que não podem verificar o valor do token de cancelamento em tempo hábil. Para esses casos, você pode registrar um método de retorno de chamada que desbloqueia o método quando um pedido de cancelamento é recebido.  
   
  O método <xref:System.Threading.CancellationToken.Register%2A> retorna um objeto <xref:System.Threading.CancellationTokenRegistration> que é usado especificamente para essa finalidade. O exemplo a seguir mostra como usar o método <xref:System.Threading.CancellationToken.Register%2A> para cancelar uma solicitação da Web assíncrona.  
@@ -116,6 +122,7 @@ O padrão geral para implementar o modelo de cancelamento cooperativo é:
  Para um exemplo mais completo, confira [Como registrar retornos de chamada para solicitações de cancelamento](how-to-register-callbacks-for-cancellation-requests.md).  
   
 ### <a name="listening-by-using-a-wait-handle"></a>Ouvir usando um identificador de espera  
+
  Quando uma operação cancelável pode bloquear enquanto aguarda um primitivo de sincronização, como <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> ou <xref:System.Threading.Semaphore?displayProperty=nameWithType>, você pode usar a propriedade <xref:System.Threading.CancellationToken.WaitHandle%2A?displayProperty=nameWithType> para permitir que a operação aguarde o evento e a solicitação de cancelamento. O identificador de espera do token de cancelamento será sinalizado em resposta a um pedido de cancelamento e o método pode usar o valor de retorno do método <xref:System.Threading.WaitHandle.WaitAny%2A> para determinar se foi o token de cancelamento que sinalizou. A operação poderá, em seguida, simplesmente sair ou lançar um <xref:System.OperationCanceledException>, conforme apropriado.  
   
  [!code-csharp[Cancellation#5](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex9.cs#5)]
@@ -129,6 +136,7 @@ O padrão geral para implementar o modelo de cancelamento cooperativo é:
  Para um exemplo mais completo, confira [Como detectar solicitações de cancelamento que possuem identificadores de espera](how-to-listen-for-cancellation-requests-that-have-wait-handles.md).  
   
 ### <a name="listening-to-multiple-tokens-simultaneously"></a>Detectar vários tokens simultaneamente  
+
  Em alguns casos, um ouvinte pode ter que detectar vários tokens de cancelamento simultaneamente. Por exemplo, uma operação cancelável pode ter que monitorar um token de cancelamento interno, além de um token passado externamente como um argumento para um parâmetro de método. Para fazer isso, crie uma fonte de token vinculada que pode juntar dois ou mais tokens em um token, como mostrado no exemplo a seguir.  
   
  [!code-csharp[Cancellation#7](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex13.cs#7)]
@@ -137,6 +145,7 @@ O padrão geral para implementar o modelo de cancelamento cooperativo é:
  Observe que você deve chamar `Dispose` na fonte de token vinculada quando concluir. Para um exemplo mais completo, confira [Como detectar múltiplas solicitações de cancelamento](how-to-listen-for-multiple-cancellation-requests.md).  
   
 ## <a name="cooperation-between-library-code-and-user-code"></a>Cooperação entre o código de biblioteca e o código do usuário  
+
  A estrutura de cancelamento unificada permite que o código da biblioteca cancele o código do usuário e que o código do usuário cancele o código da biblioteca de forma cooperativa. A cooperação sem problemas depende da conformidade com as seguintes diretrizes:  
   
 - Se o código da biblioteca fornece operações canceláveis, ele também deve fornecer métodos públicos que aceitam um token de cancelamento externo para que o código do usuário possa solicitar o cancelamento.  

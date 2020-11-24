@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4e0c3521-e54d-43c1-9857-cc76b49b8ffc
 topic_type:
 - apiref
-ms.openlocfilehash: 779a8f88b7521aa4b0a75594552981b41714ee3f
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 6c3e721c24da217eaf2e8857377359e1c51b7b59
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007670"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677005"
 ---
 # <a name="cormethodattr-enumeration"></a>Enumeração CorMethodAttr
+
 Contém valores que descrevem os recursos de um método.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -64,7 +65,7 @@ typedef enum CorMethodAttr {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |`mdMemberAccessMask`|Especifica o acesso de membro.|  
 |`mdPrivateScope`|Especifica que o membro não pode ser referenciado.|  
@@ -92,6 +93,7 @@ typedef enum CorMethodAttr {
 |`mdRequireSecObject`|Especifica que o método chama outro método que contém o código de segurança.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorHdr. h  

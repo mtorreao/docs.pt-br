@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: aa3cc15d-058e-4e6f-b03e-39569646ba47
 topic_type:
 - apiref
-ms.openlocfilehash: b372021fcda39d9973d96a9c39e93e38617887a6
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: bca84fdba575ed9bfe572b9fd7a5869620962de6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615456"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675861"
 ---
 # <a name="isymunmanagedreader-interface"></a>Interface ISymUnmanagedReader
+
 Representa um leitor de símbolo que fornece acesso a documentos, métodos e variáveis em um repositório de símbolos.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método GetDocument](isymunmanagedreader-getdocument-method.md)|Localiza um documento.|  
 |[Método GetDocuments](isymunmanagedreader-getdocuments-method.md)|Retorna uma matriz de todos os documentos definidos no repositório de símbolos.|  
@@ -47,6 +48,7 @@ Representa um leitor de símbolo que fornece acesso a documentos, métodos e var
 |[Método UpdateSymbolStore](isymunmanagedreader-updatesymbolstore-method.md)|Atualiza o repositório de símbolos existente com um repositório de símbolos delta.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Confira também

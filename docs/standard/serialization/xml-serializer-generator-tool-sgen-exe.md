@@ -3,18 +3,18 @@ title: Ferramenta geradora de serializador de XML (Sgen.exe)
 description: O gerador de serializador XML cria um assembly de serialização XML para tipos em um assembly, o que melhora o desempenho de inicialização do XmlSerializer.
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-ms.openlocfilehash: 80295a9a54b6f9b1970fb65dacdee43b2e938070
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: c2f33236e39f61638118f45f0d5ab5385df27ac3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282349"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676511"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>Ferramenta geradora de serializador de XML (Sgen.exe)
 
 O gerador de serializador XML cria um assembly de serialização XML para tipos em um assembly especificado. O assembly de serialização melhora o desempenho de inicialização de um <xref:System.Xml.Serialization.XmlSerializer> quando serializa ou desserializa objetos dos tipos especificados.
   
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sintaxe
 
 Execute a ferramenta na linha de comando.
   
@@ -27,7 +27,7 @@ sgen [options]
   
 ## <a name="parameters"></a>parâmetros  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |**/a \[ me \] :**_nome de arquivo_|Gera o código de serialização para todos os tipos contidos no assembly ou no executável especificado pelo *filename*. Somente um nome de arquivo pode ser fornecido. Se esse argumento for repetido, o último nome de arquivo será usado.|  
 |**/c \[ Ackers \] :**_Opções_|Especifica as opções para passar para o compilador C#. Todas as opções csc.exe têm suporte quando são passadas para o compilador. Isso pode ser usado para especificar que o assembly deve ser assinado e para especificar o arquivo de chave.|  
@@ -45,6 +45,7 @@ sgen [options]
 |**/?**|Exibe sintaxe de comando e opções para a ferramenta.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Quando o Gerador do Serializador do XML não é usado, um <xref:System.Xml.Serialization.XmlSerializer> gera o código de serialização e um assembly de serialização para cada tipo toda vez que um aplicativo é executado. Para melhorar o desempenho da inicialização de serialização XML, use a ferramenta Sgen.exe para gerar esses assemblies com antecedência. Esses assemblies podem então ser implantados com o aplicativo.  
   
  O Gerador do Serializador do XML também pode aprimorar o desempenho de clientes que usam proxies de serviço Web XML para se comunicarem com servidores porque o processo de serialização não incorrerá em um acerto de desempenho quando o tipo for carregado pela primeira vez.  
@@ -54,6 +55,7 @@ sgen [options]
  Se o assembly que contém o tipo para serializar é denominado MyType.dll, o assembly de serialização associada será denominado MyType.XmlSerializers.dll.  
   
 ## <a name="examples"></a>Exemplos  
+
  O comando a seguir cria um assembly denominado Data.XmlSerializers.dll para serializar todos os tipos contidos no assembly denominado Data.dll.  
   
 ```console  
@@ -62,7 +64,7 @@ sgen Data.dll
   
  O assembly Data.XmlSerializers.dll pode ser referenciado do código que precisa serializar e desserializar os tipos no Data.dll.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Ferramentas](../../framework/tools/index.md)
 - [Prompts de comando](../../framework/tools/developer-command-prompt-for-vs.md)

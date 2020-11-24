@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 37b95cce-9bfb-4ecf-a00b-33dcba782c67
 topic_type:
 - apiref
-ms.openlocfilehash: fa2b5052a1d569487f0c6c72699ff9ab571beefc
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d2794b53ed17640413928b3af0d1ed3656e25f22
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504388"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675757"
 ---
 # <a name="eclrfailure-enumeration"></a>Enumeração EClrFailure
+
 Descreve o conjunto de falhas para as quais um host pode definir ações de política.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -40,7 +41,7 @@ typedef enum {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |`FAIL_NonCriticalResource`|Ocorreu uma falha durante uma tentativa de alocar um recurso (como um thread, um bloco de memória ou um bloqueio) em uma região não crítica de código.|  
 |`FAIL_CriticalResource`|Ocorreu uma falha durante uma tentativa de alocar um recurso (como um thread, um bloco de memória ou um bloqueio) em uma região crítica de código.|  
@@ -51,14 +52,16 @@ typedef enum {
 |`FAIL_CodeContract`|Ocorreu uma falha de contrato de código. Consulte [contratos de código](../../debug-trace-profile/code-contracts.md).|  
   
 ## <a name="remarks"></a>Comentários  
+
  Consulte o método [ICLRPolicyManager:: SetActionOnFailure](iclrpolicymanager-setactiononfailure-method.md) para obter uma lista de valores [EPolicyAction](epolicyaction-enumeration.md) que o host pode usar para especificar as ações de política para condições de falha. Para obter mais informações sobre regiões críticas e não críticas de código, consulte [EClrOperation](eclroperation-enumeration.md).  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE. dll  
+ **Biblioteca:** MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

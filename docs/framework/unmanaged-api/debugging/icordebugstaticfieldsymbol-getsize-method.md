@@ -2,14 +2,15 @@
 title: 'Método ICorDebugStaticFieldSymbol:: GetSize'
 ms.date: 03/30/2017
 ms.assetid: 72389860-7e37-4656-ba46-b6aeee1860f8
-ms.openlocfilehash: e36c94bf411e75f915cca86aee74cdf161674d25
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 34567247935588363d96b141717d7ec07bb76546
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379406"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677203"
 ---
 # <a name="icordebugstaticfieldsymbolgetsize-method"></a>Método ICorDebugStaticFieldSymbol:: GetSize
+
 Obtém o tamanho em bytes do campo estático.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -21,6 +22,7 @@ HRESULT GetSize(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pcbSize`  
  fora Um ponteiro para o comprimento do campo.  
   
@@ -30,6 +32,7 @@ HRESULT GetSize(
 > Esse método está disponível somente com .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

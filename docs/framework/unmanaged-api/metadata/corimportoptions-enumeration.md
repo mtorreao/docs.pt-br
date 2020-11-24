@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4e5d03cb-97c9-4ff4-8dbd-17d94ee374d3
 topic_type:
 - apiref
-ms.openlocfilehash: 3be8a004be752af8a8675a3499bdb6cbfd785840
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 3d5989d43644088403a77f26c02af9ffaae0732b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009191"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677200"
 ---
 # <a name="corimportoptions-enumeration"></a>Enumeração CorImportOptions
+
 Contém valores de sinalizador que controlam o comportamento durante a importação de um assembly fora do escopo atual.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -44,7 +45,7 @@ typedef enum CorImportOptions {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |`MDImportOptionDefault`|Indica o comportamento padrão, que é para ignorar os registros excluídos.|  
 |`MDImportOptionAll`|Indica que todos os metadados devem ser enumerados.|  
@@ -57,6 +58,7 @@ typedef enum CorImportOptions {
 |`MDImportOptionAllExportedTypes`|Indica que todos os tipos exportados, incluindo aqueles excluídos, devem ser enumerados.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorHdr. h  

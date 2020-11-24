@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1b0306b7-622b-4b57-8edc-3c713bb147ae
 topic_type:
 - apiref
-ms.openlocfilehash: ebdff88e9fdf499b809d56c4c29a906dbef9ec40
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: f8334cb44042e21c086bc05c723e99b0c079fa2c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008970"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677057"
 ---
 # <a name="cormanifestresourceflags-enumeration"></a>Enumeração CorManifestResourceFlags
+
 Indica a visibilidade dos recursos codificados em um manifesto do assembly.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -38,13 +39,14 @@ typedef enum CorManifestResourceFlags {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |`mrVisibilityMask`|Reservado.|  
 |`mrPublic`|Os recursos são públicos.|  
 |`mrPrivate`|Os recursos são privados.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorHdr. h  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 605ff39e-e5cc-4bff-8196-e8d68a9715b9
 topic_type:
 - apiref
-ms.openlocfilehash: 6bbe5db75ded15f32a6ff3564e1116d40a745a65
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b85b2576660f77eb901c504d398e8bc7909882f7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446526"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676368"
 ---
 # <a name="emitassembly-method"></a>Método EmitAssembly
+
 Cria o assembly. Chame esse método depois que todos os outros arquivos forem fechados, exceto o arquivo do assembly. Não chame esse método ao produzir módulos desvinculados.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,16 +35,19 @@ HRESULT EmitAssembly(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `AssemblyID`  
  ID do assembly.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  Retorna S_OK se o método tiver sucesso.  
   
 ## <a name="requirements"></a>Requisitos  
+
  Requer ALink. h  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IALink](ialink-interface.md)
 - [Interface IALink2](ialink2-interface.md)

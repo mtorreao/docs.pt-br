@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 22d2e339-f174-40b5-a478-0b744501566f
 topic_type:
 - apiref
-ms.openlocfilehash: e6cdc924df126e56d2e7c8c9cb8762ee88712fcc
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 386f975ab0bbbe804fda2bd7567acf24f69e77fb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860694"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676069"
 ---
 # <a name="iclrdataenummemoryregionsenummemoryregions-method"></a>Método ICLRDataEnumMemoryRegions::EnumMemoryRegions
+
 Enumera áreas especificadas de memória.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,6 +37,7 @@ HRESULT EnumMemoryRegions (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `callback`  
  no Um ponteiro para uma instância de [ICLRDataEnumMemoryRegionsCallback](iclrdataenummemoryregionscallback-interface.md) que é chamada por esse método para cada região de memória que está sendo enumerada para notificar o depurador do resultado.  
   
@@ -48,9 +50,11 @@ HRESULT EnumMemoryRegions (
  no Um valor da enumeração [CLRDataEnumMemoryFlags](clrdataenummemoryflags-enumeration.md) que especifica as regiões de memória a serem enumeradas.  
   
 ## <a name="remarks"></a>Comentários  
+
  Esse método usa a instância [ICLRDataEnumMemoryRegionsCallback](iclrdataenummemoryregionscallback-interface.md) especificada para notificar o chamador de resultados.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** ClrData. idl, ClrData. h  

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: ffbb3caf-20da-4a4b-8983-77376e72b990
 topic_type:
 - apiref
-ms.openlocfilehash: b32e8f0b03ef6d550c384f3d932cc295a7270028
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 40e82997e58292a10f5e960cc9d9785d9ea8946a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007657"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676966"
 ---
 # <a name="cormethodimpl-enumeration"></a>Enumeração CorMethodImpl
+
 Contém valores que descrevem os recursos de implementação do método.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -54,7 +55,7 @@ typedef enum CorMethodImpl {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |`miCodeTypeMask`|Sinalizadores que descrevem o tipo de código.|  
 |`miIL`|Especifica que a implementação do método é MSIL (Microsoft Intermediate Language).|  
@@ -74,6 +75,7 @@ typedef enum CorMethodImpl {
 |`miMaxMethodImplVal`|O valor máximo válido para um `CorMethodImpl` .|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorHdr. h  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: aba45a99562b67df17e1ff33ecc3c8bbad63ec30
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 1e8c46e11d3a82ca0bce29f9cb7bbc749c219198
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440810"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676719"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>Como serializar e desserializar (empacotar e desempacotar) JSON no .NET
 
@@ -116,6 +116,7 @@ Uma <xref:System.Text.Json.JsonSerializer.Serialize%2A> sobrecarga que usa um <x
 A serialização para UTF-8 é de cerca de 5-10% mais rápida do que usar os métodos baseados em cadeia de caracteres. A diferença é porque os bytes (como UTF-8) não precisam ser convertidos em cadeias de caracteres (UTF-16).
 
 ## <a name="serialization-behavior"></a>Comportamento de serialização
+
 ::: zone pivot="dotnet-5-0"
 
 * Por padrão, todas as propriedades públicas são serializadas. Você pode [especificar propriedades a serem ignoradas](#ignore-properties).
@@ -693,7 +694,7 @@ O exemplo a seguir mostra o JSON que resulta do código anterior:
 }
 ```
 
-Para obter mais informações sobre a **serialização** polimórfica e informações sobre a **desserialização** , consulte [como migrar do Newtonsoft.Json para System.Text.Json o](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization).
+Para obter mais informações sobre a **serialização** polimórfica e informações sobre a **desserialização**, consulte [como migrar do Newtonsoft.Json para System.Text.Json o](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization).
 
 ## <a name="allow-comments-and-trailing-commas"></a>Permitir comentários e vírgulas à direita
 
