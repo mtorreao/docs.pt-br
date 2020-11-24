@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1c8d9959-95b5-4131-be4a-556d97774014
 topic_type:
 - apiref
-ms.openlocfilehash: 0dce86a12ed3e93983ee62620fa0ddf7dfbc48f5
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 169d344975762b97f89e8dc32d72f2b9c95fea11
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616938"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678162"
 ---
 # <a name="iclrgcmanagersetgcstartuplimits-method"></a>Método ICLRGCManager::SetGCStartupLimits
+
 Define o tamanho de um segmento de coleta de lixo e o tamanho máximo da geração 0 do sistema de coleta de lixo.  
   
 > [!IMPORTANT]
@@ -38,6 +39,7 @@ HRESULT SetGCStartupLimits (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `SegmentSize`  
  no O tamanho especificado de um segmento de coleta de lixo.  
   
@@ -48,11 +50,11 @@ HRESULT SetGCStartupLimits (
   
  O tamanho mínimo de 0 de geração é 64 KB.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`SetGCStartupLimits`retornado com êxito.|  
+|S_OK|`SetGCStartupLimits` retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -60,14 +62,16 @@ HRESULT SetGCStartupLimits (
 |E_FAIL|Ocorreu uma falha catastrófica desconhecida. Depois que um método retorna E_FAIL, o CLR não pode mais ser usado no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Os valores que `SetGCStartupLimits` definem podem ser especificados apenas uma vez. As chamadas posteriores para `SetGCStartupLimits` são ignoradas.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55e57640-b3d2-413d-b4f4-fbc27fb8e37c
 topic_type:
 - apiref
-ms.openlocfilehash: 36a18d92f05db55957bba55de84490c0da1a1f86
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 8fb0cfc72867653eaff65f3183dacf9191604290
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976506"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679722"
 ---
 # <a name="icordebugdatatargetreadvirtual-method"></a>Método ICorDebugDataTarget::ReadVirtual
+
 Obtém um bloco de memória contígua a partir do endereço especificado e a retorna no buffer fornecido.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,6 +38,7 @@ HRESULT ReadVirtual(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `address`  
  no O endereço inicial da memória solicitada.  
   
@@ -47,12 +49,14 @@ HRESULT ReadVirtual(
  no O número de bytes a serem obtidos do endereço de destino.  
   
  `pBytesRead`  
- fora O número de bytes realmente lidos do endereço de destino. Isso pode ser menor que `bytesRequested`.  
+ fora O número de bytes realmente lidos do endereço de destino. Isso pode ser menor que `bytesRequested` .  
   
 ## <a name="remarks"></a>Comentários  
+
  Se o primeiro byte (no endereço inicial especificado) puder ser lido, a chamada deverá retornar êxito (para dar suporte à leitura eficiente de estruturas de dados com comprimento autodescritivo, como cadeias de caracteres terminadas em nulo).  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -61,7 +65,7 @@ HRESULT ReadVirtual(
   
  **.NET Framework versões:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorDebugDataTarget](icordebugdatatarget-interface.md)
 - [Depurando interfaces](debugging-interfaces.md)

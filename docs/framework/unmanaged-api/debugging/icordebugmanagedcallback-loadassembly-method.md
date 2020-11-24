@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55cb673a-e240-43a6-a406-6912e7c0fe66
 topic_type:
 - apiref
-ms.openlocfilehash: 8cb8699c103f48b42694449a2bb2bbd25c42d3c6
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 243a1661ce2910cf1713ef8884bb6ae5422e8013
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212718"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679670"
 ---
 # <a name="icordebugmanagedcallbackloadassembly-method"></a>Método ICorDebugManagedCallback::LoadAssembly
+
 Notifica o depurador de que um assembly Common Language Runtime (CLR) foi carregado com êxito.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -35,6 +36,7 @@ HRESULT LoadAssembly (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pAppDomain`  
  no Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio do aplicativo no qual o assembly foi carregado.  
   
@@ -42,6 +44,7 @@ HRESULT LoadAssembly (
  no Um ponteiro para um objeto ICorDebugAssembly que representa o assembly.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ce259d1d-cd81-4490-a7a1-0d0ea0804872
 topic_type:
 - apiref
-ms.openlocfilehash: 8622920a81f4b469361ffa879f7a4eeda697cab9
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 70fe8b132f03925c41b6bc7aae8e60fea1b05202
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504219"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678266"
 ---
 # <a name="iclrgcmanagergetstats-method"></a>Método ICLRGCManager::GetStats
+
 Obtém um conjunto de estatísticas atuais sobre o sistema de coleta de lixo do Common Language Runtime.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,6 +35,7 @@ HRESULT GetStats (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pStats`  
  [entrada, saída] Uma instância de [COR_GC_STATS](cor-gc-stats-structure.md) que contém as estatísticas solicitadas.  
   
@@ -41,7 +43,7 @@ HRESULT GetStats (
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`GetStats`retornado com êxito.|  
+|S_OK|`GetStats` retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -49,6 +51,7 @@ HRESULT GetStats (
 |E_FAIL|Ocorreu uma falha catastrófica desconhecida. Depois que um método retorna E_FAIL, o CLR não pode mais ser usado no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O CLR calcula e retorna somente as estatísticas que são especificadas pelo `Flags` campo de `pStats` .  
   
  Defina o `Flags` campo como um ou mais valores da enumeração [COR_GC_STAT_TYPES](cor-gc-stat-types-enumeration.md) para especificar quais estatísticas na estrutura de [COR_GC_STATS](cor-gc-stats-structure.md) devem ser definidas.  
@@ -62,11 +65,12 @@ pCLRGCManager->GetStats(&GCStats);
 ```  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

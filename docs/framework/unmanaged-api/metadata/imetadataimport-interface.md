@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 0adbbd35-5e8d-4fec-8268-dc70a07c5975
 topic_type:
 - apiref
-ms.openlocfilehash: 02d1ea1ef12fa158ce7ec94aeca4356ac54d4e5f
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 0049db66d7a753488388c85e87e1f907db56c7cf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503478"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679085"
 ---
 # <a name="imetadataimport-interface"></a>Interface IMetaDataImport
+
 Fornece métodos para importar e manipular metadados existentes de um arquivo executável portátil (PE) ou outra fonte, como uma biblioteca de tipos ou um binário de metadados de tempo de execução autônomo.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método CloseEnum](imetadataimport-closeenum-method.md)|Fecha o enumerador com o identificador especificado.|  
 |[Método CountEnum](imetadataimport-countenum-method.md)|Obtém o número de elementos no enumerador com o identificador especificado.|  
@@ -92,6 +93,7 @@ Fornece métodos para importar e manipular metadados existentes de um arquivo ex
 |[Método ResolveTypeRef](imetadataimport-resolvetyperef-method.md)|Obtém informações de tipo para o tipo referenciado pelo token TypeRef especificado.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O design da `IMetaDataImport` interface destina-se principalmente a ser usado por ferramentas e serviços que irão importar informações de tipo (por exemplo, ferramentas de desenvolvimento) ou gerenciar componentes implantados (por exemplo, serviços de resolução/ativação). Os métodos no se `IMetaDataImport` encaixam nas seguintes categorias de tarefas:  
   
 - Enumerando coleções de itens no escopo de metadados.  
@@ -103,11 +105,12 @@ Fornece métodos para importar e manipular metadados existentes de um arquivo ex
 - Os métodos get são projetados especificamente para retornar propriedades de valor único de um item de metadados. Quando a propriedade é uma referência a outro item, um token para esse item é retornado. Qualquer tipo de entrada de ponteiro pode ser nulo para indicar que o valor específico não está sendo solicitado. Para obter propriedades que são essencialmente objetos de coleção (por exemplo, a coleção de interfaces que uma classe implementa), use os métodos de enumeração.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como um recurso em MsCorEE. dll  
+ **Biblioteca:** Usado como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

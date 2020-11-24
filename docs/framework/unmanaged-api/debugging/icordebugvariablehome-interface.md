@@ -16,19 +16,20 @@ helpviewer_keywords:
 ms.assetid: 76f2bf3b-759f-4eed-bce7-119415b25915
 topic_type:
 - apiref
-ms.openlocfilehash: caf6a24207be98be9afb10be2bd027b51405fa3b
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 089e68278113dfdf509ed848f424ad32baa145ed
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396548"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679540"
 ---
 # <a name="icordebugvariablehome-interface"></a>Interface ICorDebugVariableHome
+
 Representa uma variável local ou um argumento de uma função.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método GetArgumentIndex](icordebugvariablehome-getargumentindex-method.md)|Obtém o índice de um argumento de função.|  
 |[Método GetCode](icordebugvariablehome-getcode-method.md)|Obtém a instância "ICorDebugCode" que contém este `ICorDebugVariableHome` objeto.|  
@@ -39,6 +40,7 @@ Representa uma variável local ou um argumento de uma função.
 |[Método GetSlotIndex](icordebugvariablehome-getslotindex-method.md)|Obtém o índice de slot gerenciado de uma variável local.|  
   
 ## <a name="example"></a>Exemplo  
+
  O fragmento de código a seguir usa o objeto [ICorDebugCode4](icordebugcode4-interface.md) chamado `pCode4` .  
   
 ```cpp  
@@ -81,6 +83,7 @@ for (int i = 0; i < celtFetched; i++)
 ```  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -89,7 +92,7 @@ for (int i = 0; i < celtFetched; i++)
   
  **.NET Framework versões:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Depurando interfaces](debugging-interfaces.md)
 - [Interface ICorDebugVariableHomeEnum](icordebugvariablehomeenum-interface.md)

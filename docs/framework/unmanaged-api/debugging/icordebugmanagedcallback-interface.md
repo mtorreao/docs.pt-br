@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: b47f1d61-c7dc-4196-b926-0b08c94f7041
 topic_type:
 - apiref
-ms.openlocfilehash: cb2b69c5e6dfed4e0cb4e4e324c4ec6ad664f3e7
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 6eebabc3a08027eab4ac55c1e46dd75b1f75bd21
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212744"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679696"
 ---
 # <a name="icordebugmanagedcallback-interface"></a>Interface ICorDebugManagedCallback
+
 Fornece métodos para processar retornos de chamada do depurador.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método Break](icordebugmanagedcallback-break-method.md)|Notifica o depurador quando uma <xref:System.Reflection.Emit.OpCodes.Break> instrução no fluxo de código é executada.|  
 |[Método Breakpoint](icordebugmanagedcallback-breakpoint-method.md)|Notifica o depurador quando um ponto de interrupção é encontrado.|  
@@ -56,6 +57,7 @@ Fornece métodos para processar retornos de chamada do depurador.
 |[Método UpdateModuleSymbols](icordebugmanagedcallback-updatemodulesymbols-method.md)|Notifica o depurador de que os símbolos de um módulo CLR foram alterados.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Todos os retornos de chamada são serializados, chamados no mesmo thread e chamados com o processo no estado SYNCHRONIZED.  
   
  Cada implementação de retorno de chamada deve chamar [ICorDebugController:: Continue](icordebugcontroller-continue-method.md) para retomar a execução. Se `ICorDebugController::Continue` não for chamado antes que o retorno de chamada seja retornado, o processo permanecerá parado e nenhum mais retornos de chamada de evento ocorrerá até que `ICorDebugController::Continue` seja chamado.  
@@ -66,6 +68,7 @@ Fornece métodos para processar retornos de chamada do depurador.
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

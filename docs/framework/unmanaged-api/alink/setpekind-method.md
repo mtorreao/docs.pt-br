@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 050e77ee-3014-45c0-9e29-2ebe29347b0d
 topic_type:
 - apiref
-ms.openlocfilehash: 5a8442b1f0869e1592a05dfeeb0f5e6d583f3ea8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: be8a11cbf70e2c6f19ace67648b124515c1fb3c3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179383"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95680034"
 ---
 # <a name="setpekind-method"></a>Método SetPEKind
-Determina o tipo executável portátil, específico da máquina ou agnóstico da máquina.  
+
+Determina o tipo de executável portátil, específico do computador ou independente do computador.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,24 +36,27 @@ HRESULT SetPEKind(
 ) PURE;
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
+
  `AssemblyID`  
- ID da assembléia.  
+ ID do assembly.  
   
  `FileToken`  
- Token de arquivo para o qual o tipo PE deve ser definido. Pode ser `AssemblyID` NULO se não indicar um módulo de rede não vinculado.  
+ Token do arquivo para o qual o tipo PE deve ser definido. Pode ser NULL se não `AssemblyID` indicar um netmodule não associado.  
   
  `dwPEKind`  
  O tipo de PE, conforme indicado pela [Enumeração CorPEKind](../metadata/corpekind-enumeration.md).  
   
  `dwMachine`  
- A arquitetura da máquina de destino, conforme indicado no cabeçalho NT.  
+ A arquitetura do computador de destino, conforme indicado no cabeçalho do NT.  
   
-## <a name="return-value"></a>Valor retornado  
- Retorna S_OK se o método for bem sucedido.  
+## <a name="return-value"></a>Valor Retornado  
+
+ Retorna S_OK se o método tiver sucesso.  
   
 ## <a name="requirements"></a>Requisitos  
- Requer alink.h.  
+
+ Requer ALink. h.  
   
 ## <a name="see-also"></a>Confira também
 

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d228f684-2be3-4029-93ae-31fe02213c1f
 topic_type:
 - apiref
-ms.openlocfilehash: 7ed4236187fab1c1e81be9ddcdff1f1852e38f70
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: a23d61da2913d8732c3860a44eb58ffadab48315
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421183"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677928"
 ---
 # <a name="icorpublishenumgetcount-method"></a>Método ICorPublishEnum::GetCount
+
 Obtém o número de itens na enumeração.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,10 +35,12 @@ HRESULT GetCount (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pcelt`  
  fora Um ponteiro para o número de itens na enumeração.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorPub. idl, CorPub. h  
@@ -46,6 +49,6 @@ HRESULT GetCount (
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorPublishEnum](icorpublishenum-interface.md)

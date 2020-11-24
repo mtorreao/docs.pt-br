@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e6121cc3-2f11-42c7-bdae-47808581ff71
 topic_type:
 - apiref
-ms.openlocfilehash: 91f174cab4986882df795eb531baedfc0dd43962
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 74d47b3f55c10f65d47f726a2b96ba5e0b18b749
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615857"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679137"
 ---
 # <a name="iclrassemblyreferencelistisstringassemblyreferenceinlist-method"></a>Método ICLRAssemblyReferenceList::IsStringAssemblyReferenceInList
+
 Obtém um valor que indica se o nome fornecido corresponde ao nome de um assembly na lista.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,10 +35,11 @@ HRESULT IsStringAssemblyReferenceInList (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pwzAssemblyName`  
  no O nome do assembly para o qual Pesquisar.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
@@ -46,11 +48,12 @@ HRESULT IsStringAssemblyReferenceInList (
 |E_FAIL|Ocorreu uma falha catastrófica desconhecida. Depois que um método retorna E_FAIL, o Common Language Runtime não pode mais ser usado no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

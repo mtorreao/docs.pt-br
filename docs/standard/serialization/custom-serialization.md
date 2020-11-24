@@ -18,12 +18,12 @@ helpviewer_keywords:
 - OnDeserializedAttribute class, custom serialization
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
-ms.openlocfilehash: 8e8d8d38ab8170a9bf9fae098e267be1a38f27d0
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 4ca78c71f464a914c07583825d4a7027ebb11bf6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281793"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679033"
 ---
 # <a name="custom-serialization"></a>Serialização personalizada
 
@@ -51,6 +51,7 @@ A maneira recomendada de executar métodos personalizados durante e após a seri
  Além disso, ao adicionar um novo campo a um tipo serializável existente, aplique o atributo <xref:System.Runtime.Serialization.OptionalFieldAttribute> ao campo. <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> e <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> ignoram a ausência do campo quando um fluxo que não tem o novo campo é processado.  
   
 ## <a name="implementing-the-iserializable-interface"></a>Implementando a interface ISerializable  
+
  A outra maneira de controlar a serialização é obtida pela implementação da interface <xref:System.Runtime.Serialization.ISerializable> em um objeto. Observe, no entanto, que o método na seção anterior substitui esse método para controlar a serialização.  
   
  Além disso, você não deve usar a serialização padrão em uma classe que está marcada com o atributo [Serializable](xref:System.SerializableAttribute) e que tem segurança declarativa ou imperativa no nível da classe ou em seus construtores. Em vez disso, essas classes sempre devem implementar a interface <xref:System.Runtime.Serialization.ISerializable>.  
@@ -126,7 +127,7 @@ End Class
   
  Para restaurar o estado do objeto, basta recuperar os valores das variáveis de <xref:System.Runtime.Serialization.SerializationInfo> usando os nomes usados durante a serialização. Se a classe base implementar o <xref:System.Runtime.Serialization.ISerializable>, o construtor de base deverá ser chamado para permitir que o objeto base restaure suas variáveis.  
   
- Quando você derivar uma nova classe de uma que implementa <xref:System.Runtime.Serialization.ISerializable>, a classe derivada deverá implementar o construtor, bem como o método **GetObjectData** , se tiver variáveis que precisam ser serializadas. O exemplo de código a seguir mostra como isso é feito usando a classe `MyObject` mostrada anteriormente.  
+ Quando você derivar uma nova classe de uma que implementa <xref:System.Runtime.Serialization.ISerializable>, a classe derivada deverá implementar o construtor, bem como o método **GetObjectData**, se tiver variáveis que precisam ser serializadas. O exemplo de código a seguir mostra como isso é feito usando a classe `MyObject` mostrada anteriormente.  
   
 ```csharp
 [Serializable]
@@ -182,7 +183,7 @@ End Class
   
  Os objetos são recriados de dentro para fora; e os métodos de chamada durante a desserialização podem ter efeitos colaterais indesejáveis, porque os métodos chamados podem se referir a referências de objeto que não foram desserializados no momento em que a chamada foi feita. Se a classe que está sendo desserializada implementar o <xref:System.Runtime.Serialization.IDeserializationCallback>, o método <xref:System.Runtime.Serialization.IDeserializationCallback.OnDeserialization%2A> será chamado automaticamente quando o gráfico do objeto inteiro tiver sido desserializado. Neste ponto, todos os objetos filho referenciados foram restaurados totalmente. Uma tabela de hash é um exemplo típico de uma classe que é difícil desserializar sem usar a escuta de eventos. É fácil recuperar os pares de chave e valor durante a desserialização, mas adicionar esses objetos de volta à tabela de hash pode causar problemas, porque não há nenhuma garantia de que as classes que derivaram da tabela de hash foram desserializadas. Os métodos de chamada em uma tabela de hash nesse estágio são, portanto, não aconselháveis.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Serialização binária](binary-serialization.md)
 - [Serialização de XML e SOAP](xml-and-soap-serialization.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 66ec04e9-87cb-42ce-9720-81522abb5d5a
 topic_type:
 - apiref
-ms.openlocfilehash: cd4a16bc8b48f147ed03555b51eee5f42a445bc6
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 698a5cb88884febc4dfb3b916c00df20c1a77819
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212692"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679644"
 ---
 # <a name="icordebugmanagedcallbackloadmodule-method"></a>Método ICorDebugManagedCallback::LoadModule
+
 Notifica o depurador de que um módulo Common Language Runtime (CLR) foi carregado com êxito.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -35,6 +36,7 @@ HRESULT LoadModule (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pAppDomain`  
  no Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio do aplicativo no qual o módulo foi carregado.  
   
@@ -42,9 +44,11 @@ HRESULT LoadModule (
  no Um ponteiro para um objeto ICorDebugModule que representa o módulo CLR.  
   
 ## <a name="remarks"></a>Comentários  
+
  O `LoadModule` retorno de chamada fornece um tempo apropriado para examinar os metadados do módulo, definir sinalizadores de compilador JIT (just-in-time) ou habilitar ou desabilitar retornos de chamada de carregamento de classe para o módulo.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

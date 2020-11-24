@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: fb511c9b-3fe4-41b0-822a-6ba4a079d1f5
 topic_type:
 - apiref
-ms.openlocfilehash: f878e2f1f86bc42c0ff5abada8d7df4feb9ed228
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: dbe3df6bb20e5ad8f9eb534a366405eb9c33984f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504180"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678227"
 ---
 # <a name="iclrgcmanager-interface"></a>Interface ICLRGCManager
+
 Fornece métodos que permitem que um host interaja com o sistema de coleta de lixo do Common Language Runtime.  
   
 > [!NOTE]
@@ -29,21 +30,23 @@ Fornece métodos que permitem que um host interaja com o sistema de coleta de li
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método Collect](iclrgcmanager-collect-method.md)|Força uma coleta de lixo para a geração especificada.|  
 |[Método GetStats](iclrgcmanager-getstats-method.md)|Obtém um conjunto de estatísticas atuais sobre o sistema de coleta de lixo.|  
 |[Método SetGCStartupLimits](iclrgcmanager-setgcstartuplimits-method.md)|Define o tamanho de um segmento de coleta de lixo e o tamanho máximo da geração 0 do sistema de coleta de lixo.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O Common Language Runtime (CLR) implementa seu mecanismo de coleta de lixo com o <xref:System.GC> tipo gerenciado. Para obter mais informações sobre o sistema de coleta de lixo, consulte [coleta de lixo](../../../standard/garbage-collection/index.md).  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

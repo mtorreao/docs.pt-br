@@ -14,24 +14,26 @@ helpviewer_keywords:
 ms.assetid: fde7e21d-1169-4bed-a34d-792e69652bf9
 topic_type:
 - apiref
-ms.openlocfilehash: 3f6cea68a4379f8769ccbdbc6911cc5c425d3369
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: af4124aed823a0a2475a181efe3fa68e1fae0bfe
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614871"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678383"
 ---
 # <a name="isymunmanagedreadersymbolsearchinfo-interface"></a>Interface ISymUnmanagedReaderSymbolSearchInfo
+
 Fornece métodos que recebem informações de pesquisa de símbolo. Obtenha essa interface chamando `QueryInterface` em um objeto que implementa a interface [ISymUnmanagedReader](isymunmanagedreader-interface.md) .  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método GetSymbolSearchInfo](isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfo-method.md)|Obtém informações de pesquisa de símbolo.|  
 |[Método GetSymbolSearchInfoCount](isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfocount-method.md)|Obtém uma contagem de informações de pesquisa de símbolo.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Confira também

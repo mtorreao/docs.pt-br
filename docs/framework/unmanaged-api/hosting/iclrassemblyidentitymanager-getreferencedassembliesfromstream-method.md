@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: fe9849c1-c3fc-477b-a31f-e8619f5516f5
 topic_type:
 - apiref
-ms.openlocfilehash: 4f06dd7b85446eec986055418d2cf558b9b5bd7a
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: a5e71d6ca90c8d0aa489176eb5a90bfe6896b1cb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615924"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679307"
 ---
 # <a name="iclrassemblyidentitymanagergetreferencedassembliesfromstream-method"></a>Método ICLRAssemblyIdentityManager::GetReferencedAssembliesFromStream
+
 Obtém um ponteiro para um objeto [ICLRReferenceAssemblyEnum](iclrreferenceassemblyenum-interface.md) que contém dados de identidade de assembly para os assemblies referenciados pelo assembly no fluxo especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,6 +38,7 @@ HRESULT GetReferencedAssembliesFromStream (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pStream`  
  no Um ponteiro de interface para um `IStream` que contém o assembly a ser avaliado.  
   
@@ -49,7 +51,7 @@ HRESULT GetReferencedAssembliesFromStream (
  `ppReferenceEnum`  
  fora Um ponteiro para o endereço de um `ICLRReferenceAssemblyEnum` objeto que contém dados de identidade de assembly para os assemblies referenciados pelo assembly no `pStream` , excluindo os assemblies no `pExcludeAssembliesList` .  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
@@ -61,18 +63,20 @@ HRESULT GetReferencedAssembliesFromStream (
 |E_FAIL|Ocorreu uma falha catastrófica desconhecida. Se um método retornar E_FAIL, o CLR não poderá mais ser usado no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O chamador pode optar por excluir um conjunto de referências de assembly conhecidas da lista retornada. Esse conjunto é definido por `pExcludeAssembliesList` .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICLRAssemblyIdentityManager](iclrassemblyidentitymanager-interface.md)
 - [Interface ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md)

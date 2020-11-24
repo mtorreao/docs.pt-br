@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a7e6c54e-7be9-4e52-bbb4-95f52458e8e4
 topic_type:
 - apiref
-ms.openlocfilehash: 366b5124cc66a4e9a1c3bd4e77f604f15ba8d8a8
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: eb8692aebe7b702b5778b3f13e496d81dcd45784
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379680"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678529"
 ---
 # <a name="icordebugthread4getblockingobjects-method"></a>Método ICorDebugThread4::GetBlockingObjects
+
 Fornece uma enumeração ordenada de estruturas [CorDebugBlockingObject](cordebugblockingobject-structure.md) que fornecem informações de bloqueio de thread.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -33,10 +34,12 @@ HRESULT GetBlockingObjects (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `ppBlockingObjectEnum`  
  fora Um ponteiro para uma enumeração ordenada de estruturas [CorDebugBlockingObject](cordebugblockingobject-structure.md) .  
   
 ## <a name="remarks"></a>Comentários  
+
  O primeiro elemento na enumeração retornada corresponde à primeira estrutura que está bloqueando o thread. O segundo elemento corresponde a um item de bloqueio que é encontrado durante a execução de uma APC (chamada de procedimento assíncrono) quando bloqueado no primeiro e assim por diante.  
   
  A enumeração é válida somente pela duração do estado atual sincronizado.  
@@ -48,6 +51,7 @@ HRESULT GetBlockingObjects (
  Se um thread for bloqueado e o erro não puder ser determinado, o método retornará um HRESULT que indica falha; caso contrário, ele retornará S_OK.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

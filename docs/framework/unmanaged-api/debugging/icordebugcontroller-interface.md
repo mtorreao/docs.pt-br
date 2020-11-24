@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dbb1c4dc-269a-459b-ab1d-6c70788782ce
 topic_type:
 - apiref
-ms.openlocfilehash: e494bbb24e8f2245593e7945625e72e70ae1dde5
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 1ca9e55a2183ca4293d30607496b588cbf21d6dd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82892769"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679939"
 ---
 # <a name="icordebugcontroller-interface"></a>Interface ICorDebugController
 
@@ -27,7 +27,7 @@ Representa um escopo, um <xref:System.Diagnostics.Process> ou um <xref:System.Ap
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |`ICorDebugController::CanCommitChanges`|Esse método é obsoleto.|  
 |`ICorDebugController::CommitChanges`|Esse método é obsoleto.|  
@@ -41,12 +41,14 @@ Representa um escopo, um <xref:System.Diagnostics.Process> ou um <xref:System.Ap
 |[Método Terminate](icordebugcontroller-terminate-method.md)|Encerra o processo com o código de saída especificado.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Se `ICorDebugController` o estiver controlando um processo, o escopo incluirá todos os threads do processo. Se `ICorDebugController` o estiver controlando um domínio de aplicativo, o escopo incluirá somente os threads desse domínio de aplicativo específico.  
   
 > [!NOTE]
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -55,6 +57,6 @@ Representa um escopo, um <xref:System.Diagnostics.Process> ou um <xref:System.Ap
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Depurando interfaces](debugging-interfaces.md)

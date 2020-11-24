@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: dd31c210-6829-45eb-927e-cc53932638b7
 topic_type:
 - apiref
-ms.openlocfilehash: f8eb4cb6bad95295e10a72812fa8dbb0adfcc898
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: dcab63b603d4a9a8e1430228043d2a5e597bbf4f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614780"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678286"
 ---
 # <a name="isymunmanagedwritergetdebuginfo-method"></a>Método ISymUnmanagedWriter::GetDebugInfo
+
 Retorna as informações necessárias para um compilador gravar a entrada do diretório de depuração no cabeçalho do arquivo PE (executável portátil). O gravador de símbolos preenche todos os campos, exceto para `TimeDateStamp` e `PointerToRawData` . (O compilador é responsável por definir esses dois campos adequadamente.)  
   
  Um compilador deve chamar esse método, emitir o blob de dados para o arquivo PE, definir o `PointerToRawData` campo no IMAGE_DEBUG_DIRECTORY para apontar para os dados emitidos e gravar o IMAGE_DEBUG_DIRECTORY no arquivo PE. O compilador também deve definir o `TimeDateStamp` campo para igual ao `TimeDateStamp` do arquivo PE que está sendo gerado.  
@@ -39,6 +40,7 @@ HRESULT GetDebugInfo(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pIDD`  
  [entrada, saída] Um ponteiro para um IMAGE_DEBUG_DIRECTORY que o gravador de símbolo preencherá.  
   
@@ -51,10 +53,12 @@ HRESULT GetDebugInfo(
  `data`  
  fora Um ponteiro para um buffer que é grande o suficiente para manter os dados de depuração para o armazenamento de símbolo.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Confira também

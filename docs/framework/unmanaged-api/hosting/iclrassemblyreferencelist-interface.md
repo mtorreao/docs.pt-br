@@ -14,32 +14,35 @@ helpviewer_keywords:
 ms.assetid: 5f890fdf-d22a-429e-a35f-135273d1a636
 topic_type:
 - apiref
-ms.openlocfilehash: f1aa40ef868bf6ff7730e01ab66a6fec58af1196
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: a75235cd0ac0e55412f0ba58881796e3ebc801f1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615872"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679176"
 ---
 # <a name="iclrassemblyreferencelist-interface"></a>Interface ICLRAssemblyReferenceList
+
 Gerencia uma lista de assemblies que são carregados pelo Common Language Runtime (CLR) e não pelo host.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método IsAssemblyReferenceInList](iclrassemblyreferencelist-isassemblyreferenceinlist-method.md)|Obtém um valor que indica se o ponteiro fornecido faz referência a um assembly na lista.|  
 |[Método IsStringAssemblyReferenceInList](iclrassemblyreferencelist-isstringassemblyreferenceinlist-method.md)|Obtém um valor que indica se o nome fornecido corresponde ao nome de um assembly na lista.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Chame o método [ICLRAssemblyIdentityManager:: GetCLRAssemblyReferenceList](iclrassemblyidentitymanager-getclrassemblyreferencelist-method.md) para obter um ponteiro para uma instância do `ICLRAssemblyReferenceList` .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
