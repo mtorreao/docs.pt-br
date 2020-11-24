@@ -9,12 +9,12 @@ helpviewer_keywords:
 - versions, determining for .NET Framework
 - .NET Framework, determining version
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-ms.openlocfilehash: fe28a4bf4a5432d6e33b7ad3238c1d7c0d4e7a84
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f4cb85e346e0043a3f28c48845f574afa89548db
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831358"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673352"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Como determinar quais versões do .NET Framework estão instaladas
 
@@ -30,7 +30,7 @@ As ferramentas mantidas pela Comunidade estão disponíveis para ajudar a detect
 
 - [https://github.com/jmalarcon/DotNetVersions](https://github.com/jmalarcon/DotNetVersions)
 
-  Uma ferramenta de linha de comando do .NET 2,0.
+  Uma ferramenta de linha de comando .NET Framework 2,0.
 
 - [https://github.com/EliteLoser/DotNetVersionLister](https://github.com/EliteLoser/DotNetVersionLister)
 
@@ -138,7 +138,7 @@ Cada versão do .NET Framework de 1,1 a 4,0 é listada como uma subchave em **HK
 | ------------------ | --------------- | ----- |
 | 1.0                | **HKLM \\ software \\ Microsoft \\ . Política de NETFramework \\ \\ v 1.0 \\ 3705**     | **Instalar** o REG_SZ igual a `1` |
 | 1,1                | **HKLM \\ software \\ Microsoft \\ NET Framework Setup \\ NDP \\ v 1.1.4322**   | **Instalar** o REG_DWORD igual a `1` |
-| 2.0                | **HKLM \\ software \\ Microsoft \\ NET Framework Setup \\ NDP \\ v 2.0.50727**  | **Instalar** o REG_DWORD igual a `1` |
+| 2,0                | **HKLM \\ software \\ Microsoft \\ NET Framework Setup \\ NDP \\ v 2.0.50727**  | **Instalar** o REG_DWORD igual a `1` |
 | 3.0                | **HKLM \\ software \\ Microsoft \\ NET Framework Setup \\ NDP \\ v 3.0 \\ instalação** | **InstallSuccess** REG_DWORD igual a `1` |
 | 3,5                | **HKLM \\ software \\ Microsoft \\ NET Framework Setup \\ NDP \\ v 3.5**        | **Instalar** o REG_DWORD igual a `1` |
 | 4,0 perfil do cliente | **HKLM \\ software \\ Microsoft \\ NET Framework Setup \\ NDP \\ v4 \\ Client**  | **Instalar** o REG_DWORD igual a `1` |

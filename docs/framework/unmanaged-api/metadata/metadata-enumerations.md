@@ -6,17 +6,19 @@ helpviewer_keywords:
 - metadata enumerations [.NET Framework]
 - unmanaged enumerations [.NET Framework], metadata
 ms.assetid: 711ab251-cfdb-4280-aaa6-9bc1b341cdc3
-ms.openlocfilehash: 2409998c53aee8cb76e66cbc9a6cd92ad9fb6cd2
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d0a146ff5b6887e6678ee69d7e39731bd109c6d5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84489615"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672897"
 ---
 # <a name="metadata-enumerations"></a>Enumerações de metadados
+
 Esta seção descreve as enumerações não gerenciadas que a API de metadados usa.  
   
 ## <a name="in-this-section"></a>Nesta seção  
+
  [Enumeração AssemblyFlags](assemblyflags-enumeration.md)  
  Contém valores que descrevem os recursos de tempo de execução de um assembly.  
   
@@ -156,6 +158,7 @@ Esta seção descreve as enumerações não gerenciadas que a API de metadados u
  Especifica constantes usadas por [CoUninitializeEE](../hosting/couninitializeee-function.md) ao inicializar o Common Language Runtime.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
+
  [Interfaces de metadados](metadata-interfaces.md)  
   
  [Funções estáticas globais de metadados](metadata-global-static-functions.md)  

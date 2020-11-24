@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: eb4e4ce0-06e7-4469-bbc4-edc2eb5da4b1
 topic_type:
 - apiref
-ms.openlocfilehash: cc8ab6f0c8115da4d74280023dc692b66846ed94
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a029784a28036e531670ad373893b4256c5864c4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497745"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95671181"
 ---
 # <a name="icorprofilerinfo-interface"></a>Interface ICorProfilerInfo
+
 Fornece métodos para uso por infilers de código para se comunicar com o Common Language Runtime (CLR) para controlar o monitoramento de eventos e informações de solicitação.  
   
 > [!NOTE]
@@ -29,7 +30,7 @@ Fornece métodos para uso por infilers de código para se comunicar com o Common
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método BeginInprocDebugging](icorprofilerinfo-begininprocdebugging-method.md)|Inicializa o suporte à depuração em processo. Esse método é obsoleto no .NET Framework versão 2,0.|  
 |[Método EndInprocDebugging](icorprofilerinfo-endinprocdebugging-method.md)|Desliga uma sessão de depuração em processo. Esse método é obsoleto no .NET Framework versão 2,0.|  
@@ -66,6 +67,7 @@ Fornece métodos para uso por infilers de código para se comunicar com o Common
 |[Método SetILInstrumentedCodeMap](icorprofilerinfo-setilinstrumentedcodemap-method.md)|Especifica como os deslocamentos de um MSIL original da função especificada são mapeados para os novos deslocamentos do MSIL do criador de perfil da função.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Um criador de perfil chama um método na `ICorProfilerInfo` interface para se comunicar com o CLR para controlar as informações de solicitação e monitoramento de eventos.  
   
  Os métodos da `ICorProfilerInfo` interface são implementados pelo CLR usando o modelo de thread livre. Cada método retorna um HRESULT para indicar êxito ou falha. Consulte CorError. h para obter uma lista de possíveis códigos de retorno.  
@@ -73,6 +75,7 @@ Fornece métodos para uso por infilers de código para se comunicar com o Common
  O CLR passa, por meio da implementação do criador de perfil de [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md), uma `ICorProfilerInfo` interface para cada criador de perfil de código durante a inicialização. Um criador de perfil de código pode então chamar métodos da `ICorProfilerInfo` interface para obter informações sobre o código gerenciado que está sendo executado sob o controle do CLR.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

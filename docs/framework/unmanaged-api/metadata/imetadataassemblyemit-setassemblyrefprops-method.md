@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 70a32bf3-9051-4f96-ae87-11356d06a073
 topic_type:
 - apiref
-ms.openlocfilehash: fb381a872cbeb787da0c6920f2cdeef434fb33ea
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: e28659f3c6912489775dd09951610f19e4400942
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008086"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672741"
 ---
 # <a name="imetadataassemblyemitsetassemblyrefprops-method"></a>Método IMetaDataAssemblyEmit::SetAssemblyRefProps
+
 Modifica a estrutura de `AssemblyRef` metadados especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -41,6 +42,7 @@ HRESULT SetAssemblyRefProps (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `ar`  
  no O token de metadados que especifica a `AssemblyRef` estrutura de metadados a ser modificada.  
   
@@ -66,14 +68,16 @@ HRESULT SetAssemblyRefProps (
  no Uma combinação de bits de valores [AssemblyRefFlags](assemblyrefflags-enumeration.md) que especifica atributos do assembly referenciado.  
   
 ## <a name="remarks"></a>Comentários  
+
  Para criar uma `AssemblyRef` estrutura de metadados, use o método [IMetaDataAssemblyEmit::D efineassemblyref](imetadataassemblyemit-defineassemblyref-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como um recurso em MsCorEE. dll  
+ **Biblioteca:** Usado como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

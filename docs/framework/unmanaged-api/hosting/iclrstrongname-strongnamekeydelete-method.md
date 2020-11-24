@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0163412f-f617-4428-89e0-03992fec31e8
 topic_type:
 - apiref
-ms.openlocfilehash: 8f6f2445d88d608d51be4e6fe1e064efbb58325d
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 46345ae570673c9c9c0c58fb6edea1464ba8dd91
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83763092"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95671688"
 ---
 # <a name="iclrstrongnamestrongnamekeydelete-method"></a>Método ICLRStrongName::StrongNameKeyDelete
+
 Exclui o contêiner de chave especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,25 +35,29 @@ HRESULT StrongNameKeyDelete (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `wszKeyContainer`  
  no O nome do contêiner de chave a ser excluído.  
   
 ## <a name="return-value"></a>Valor Retornado  
- `S_OK`Se o método foi concluído com êxito; caso contrário, um valor HRESULT que indica falha (consulte [valores de HRESULT comuns](/windows/win32/seccrypto/common-hresult-values) para uma lista).  
+
+ `S_OK` Se o método foi concluído com êxito; caso contrário, um valor HRESULT que indica falha (consulte [valores de HRESULT comuns](/windows/win32/seccrypto/common-hresult-values) para uma lista).  
   
 ## <a name="remarks"></a>Comentários  
+
  Use o método [ICLRStrongName:: StrongNameKeyInstall](iclrstrongname-strongnamekeyinstall-method.md) para importar um par de chaves pública/privada para um contêiner.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MetaHost. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Método StrongNameKeyInstall](iclrstrongname-strongnamekeyinstall-method.md)
 - [Interface ICLRStrongName](iclrstrongname-interface.md)

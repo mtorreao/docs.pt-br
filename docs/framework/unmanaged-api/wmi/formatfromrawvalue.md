@@ -14,14 +14,15 @@ helpviewer_keywords:
 - FormatFromRawValue function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: e7f3e4eef4a7e378529c2097a8fe1a753a98c961
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e678aca5baf82c07ec9fc5c85cef22630af5ab0a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553708"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672325"
 ---
 # <a name="formatfromrawvalue-function"></a>Função FormatFromRawValue
+
 Converte um valor de dados de desempenho brutos para o formato especificado, ou dois valores de dados de desempenho brutos se a conversão de formato é baseada em tempo.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -47,7 +48,7 @@ no O tipo de contador. Para obter uma lista de tipos de contadores, consulte [ti
 `dwFormat`\
 no O formato para o qual converter os dados de desempenho brutos. Pode ser um dos seguintes valores:
 
-|Constante  |Valor  |Descrição |
+|Constante  |Valor  |DESCRIÇÃO |
 |---------|---------|---------|
 | `PDH_FMT_DOUBLE` |0x00000200 | Retorna o valor calculado como um valor de ponto flutuante de precisão dupla. |
 | `PDH_FMT_LARGE` | 0x00000400 | Retorne o valor calculado como um inteiro de 64 bits. |
@@ -55,7 +56,7 @@ no O formato para o qual converter os dados de desempenho brutos. Pode ser um do
 
 Um dos valores anteriores pode ser vinculada com um dos seguintes sinalizadores de dimensionamento:
 
-|Constante  |Valor  |Descrição |
+|Constante  |Valor  |DESCRIÇÃO |
 |---------|---------|---------|
 | `PDH_FMT_NOSCALE` | 0x00001000 | Não aplique os fatores de dimensionamento do contador. |
 | `PDH_FMT_1000` | 0x00002000 | Multiplique o valor final por 1.000. |
@@ -76,7 +77,7 @@ fora Um ponteiro para uma [`PDH_FMT_COUNTERVALUE`](/windows/win32/api/pdh/ns-pdh
 
 Os valores a seguir são retornados por essa função:
 
-|Constante  |Valor  |Descrição  |
+|Constante  |Valor  |DESCRIÇÃO  |
 |---------|---------|---------|
 | `ERROR_SUCCESS` | 0 | A chamada de função foi bem-sucedida. |
 | `PDH_INVALID_ARGUMENT` | 0xC0000BBD | Um argumento necessário está ausente ou incorreto. |

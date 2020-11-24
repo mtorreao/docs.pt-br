@@ -7,19 +7,21 @@ helpviewer_keywords:
 - .NET Framework 2.0, hosting global static functions
 - hosting global static functions [.NET Framework], version 2.0
 ms.assetid: 91fbbb35-e543-4814-b806-371cebae8c5a
-ms.openlocfilehash: 083d0ff285abb4a99ad05c791bc504ff7f282c6a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 9e19502672973f292991b72c7ea9b4fdc17f5707
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504362"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673118"
 ---
 # <a name="deprecated-clr-hosting-functions"></a>Funções de hospedagem CLR reprovadas
+
 Esta seção descreve as funções estáticas globais não gerenciadas que as versões anteriores da API de hospedagem usavam.  
   
  Com exceção das funções de infraestrutura ( `_Cor*` funções), que são usadas somente pelo .NET Framework, essas funções foram preteridas no .NET Framework 4.  
   
 ## <a name="activation-functions"></a>Funções de ativação  
+
  [Função ClrCreateManagedInstance](clrcreatemanagedinstance-function.md)  
  Preterido. Cria uma instância do tipo gerenciado especificado.  
   
@@ -57,6 +59,7 @@ Esta seção descreve as funções estáticas globais não gerenciadas que as ve
  Preterido. Obtém informações de versão e diretório sobre o CLR solicitado por um aplicativo.  
   
 ## <a name="clr-version-functions"></a>Funções de versão do CLR  
+
  As funções nesta seção retornam uma versão do CLR; Eles não ativam o CLR.  
   
  [Função GetCORVersion](getcorversion-function.md)  
@@ -78,6 +81,7 @@ Esta seção descreve as funções estáticas globais não gerenciadas que as ve
  Preterido. Permite que o host determine qual versão do CLR será usada dentro do processo antes de inicializar explicitamente o CLR.  
   
 ## <a name="hosting-functions"></a>Funções de hospedagem  
+
  [Função CallFunctionShim](callfunctionshim-function.md)  
  Preterido. Faz uma chamada para a função que tem o nome e os parâmetros especificados na biblioteca especificada.  
   
@@ -139,6 +143,7 @@ Esta seção descreve as funções estáticas globais não gerenciadas que as ve
  Preterido. Aponta para uma função que notifica o host de que um identificador de espera foi sinalizado ou atingiu o tempo limite.  
   
 ## <a name="infrastructure-functions"></a>Funções de infraestrutura  
+
  As funções nesta seção são para uso apenas pelo .NET Framework.  
   
  [Função _CorDllMain](cordllmain-function.md)  

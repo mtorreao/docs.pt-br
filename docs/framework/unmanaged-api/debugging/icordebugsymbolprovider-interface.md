@@ -2,19 +2,20 @@
 title: Interface ICorDebugSymbolProvider
 ms.date: 03/30/2017
 ms.assetid: 85b24196-b6c6-4bda-9de3-47180bd6ff96
-ms.openlocfilehash: 25faad4f4bc67b57c339bc63d1a18ab4d275cd71
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: ff1f39be3d3db43f70cfa4a0711a3f42c180bc1a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379350"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672078"
 ---
 # <a name="icordebugsymbolprovider-interface"></a>Interface ICorDebugSymbolProvider
+
 Fornece métodos que podem ser usados para recuperar informações de símbolo de depuração.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método GetAssemblyImageBytes](icordebugsymbolprovider-getassemblyimagebytes-method.md)|Lê dados de um assembly mesclado, dado um endereço virtual relativo (RVA) no assembly mesclado.|  
 |[Método GetAssemblyImageMetadata](icordebugsymbolprovider-getassemblyimagemetadata-method.md)|Retorna os metadados de um assembly mesclado.|  
@@ -34,6 +35,7 @@ Fornece métodos que podem ser usados para recuperar informações de símbolo d
 > Essa interface está disponível somente com .NET Native. Se você implementar essa interface para cenários ICorDebug fora do .NET Native, o Common Language Runtime ignorará essa interface.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

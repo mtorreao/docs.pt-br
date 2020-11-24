@@ -2,12 +2,12 @@
 title: Como aproveitar contêineres e orquestradores
 description: Aproveitando contêineres do Docker e orquestradores kubernetes no Azure
 ms.date: 05/31/2020
-ms.openlocfilehash: 07e66ece1d1d1b3f252e56789461ae2922d9649a
-ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
+ms.openlocfilehash: 0ca69b71aa7d414a7bc55253b123020d49468dee
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91877568"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672507"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>Como aproveitar contêineres e orquestradores
 
@@ -156,7 +156,7 @@ O que é o Minikube? O projeto Minikube diz "Minikube implementa um cluster kube
 - DNS
 - NodePorts
 - ConfigMaps e segredos
-- Painéis
+- Dashboards
 - Tempos de execução de contêiner: Docker, RKT, CRI-O e em contêineres
 - Habilitando o CNI (interface de rede de contêiner)
 - Entrada
@@ -184,12 +184,12 @@ O Visual Studio dá suporte ao desenvolvimento do Docker para aplicativos basead
 Quando essa opção é selecionada, o projeto é criado com um `Dockerfile` em sua raiz, que pode ser usado para criar e hospedar o aplicativo em um contêiner do Docker. Um exemplo de Dockerfile é mostrado na Figura 3 -6. git
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
+FROM mcr.microsoft.com/dotnet/aspnet:3.1-buster-slim AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
+FROM mcr.microsoft.com/dotnet/sdk:3.1-buster AS build
 WORKDIR /src
 COPY ["eShopWeb/eShopWeb.csproj", "eShopWeb/"]
 RUN dotnet restore "eShopWeb/eShopWeb.csproj"

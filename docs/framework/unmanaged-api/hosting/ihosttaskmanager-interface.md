@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 4a0b05b9-3ef1-4607-b7c8-bd4dd43647a0
 topic_type:
 - apiref
-ms.openlocfilehash: 190908c675b96b8ea2d81fb0203aa16a80d6a8b4
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: deb14d291bfd511e8f3534f3c5e32787c259c5e8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501389"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673105"
 ---
 # <a name="ihosttaskmanager-interface"></a>Interface IHostTaskManager
+
 Fornece métodos que permitem que o Common Language Runtime (CLR) trabalhe com tarefas por meio do host em vez de usar as funções de fibra ou de Threading do sistema operacional padrão.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método BeginDelayAbort](ihosttaskmanager-begindelayabort-method.md)|Notifica o host de que o código gerenciado está entrando em um período no qual a tarefa atual não deve ser anulada.|  
 |[Método BeginThreadAffinity](ihosttaskmanager-beginthreadaffinity-method.md)|Notifica o host de que o código gerenciado está entrando em um período no qual a tarefa atual não deve ser movida para outro thread do sistema operacional.|  
@@ -48,14 +49,16 @@ Fornece métodos que permitem que o Common Language Runtime (CLR) trabalhe com t
 |[Método SwitchToTask](ihosttaskmanager-switchtotask-method.md)|Notifica o host de que ele deve desativar a tarefa atual.|  
   
 ## <a name="remarks"></a>Comentários  
- `IHostTaskManager`permite que o CLR crie e gerencie tarefas, para fornecer ganchos para o host tomar uma ação quando o controle transfere de um código gerenciado para não gerenciado e vice-versa, e para especificar determinadas ações que o host pode e não pode executar durante a execução do código.  
+
+ `IHostTaskManager` permite que o CLR crie e gerencie tarefas, para fornecer ganchos para o host tomar uma ação quando o controle transfere de um código gerenciado para não gerenciado e vice-versa, e para especificar determinadas ações que o host pode e não pode executar durante a execução do código.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

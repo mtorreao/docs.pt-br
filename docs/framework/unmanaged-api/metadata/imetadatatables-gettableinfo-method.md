@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 50cbe557-2322-41aa-8e0d-f967602eaa0f
 topic_type:
 - apiref
-ms.openlocfilehash: 7e60dd9535809ca13f3bbe6ac76f5ea1209df734
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 65943ac169106a95feaff7d44017444e65764b60
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501155"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672520"
 ---
 # <a name="imetadatatablesgettableinfo-method"></a>Método IMetaDataTables::GetTableInfo
+
 Obtém o nome, o tamanho da linha, o número de linhas, o número de colunas e o índice da coluna de chave da tabela especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -39,6 +40,7 @@ HRESULT GetTableInfo (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `ixTbl`  
  no O identificador da tabela cujas propriedades retornar.  
   
@@ -58,11 +60,12 @@ HRESULT GetTableInfo (
  fora Um ponteiro para um ponteiro para o nome da tabela.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como um recurso em MsCorEE. dll  
+ **Biblioteca:** Usado como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

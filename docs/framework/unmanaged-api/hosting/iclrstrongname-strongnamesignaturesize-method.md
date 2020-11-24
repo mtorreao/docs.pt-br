@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 76d4f93a-5e25-4399-abcc-a1389549481d
 topic_type:
 - apiref
-ms.openlocfilehash: edce771b3c36f2c56637aa2a21fe524be0ae12c8
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: f43a4e65442ca79ece71ce7e5e014309a611d7cc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83763014"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95671597"
 ---
 # <a name="iclrstrongnamestrongnamesignaturesize-method"></a>Método ICLRStrongName::StrongNameSignatureSize
+
 Retorna o tamanho da assinatura de nome forte. Esse método é normalmente usado por compiladores para determinar a quantidade de espaço a ser reservada no arquivo ao criar um assembly com assinatura atrasada.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,6 +37,7 @@ HRESULT StrongNameSignatureSize (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pbPublicKeyBlob`  
  no Uma estrutura do tipo [PublicKeyBlob](../strong-naming/publickeyblob-structure.md) que contém a parte pública do par de chaves usado para gerar a assinatura de nome forte.  
   
@@ -46,17 +48,19 @@ HRESULT StrongNameSignatureSize (
  no O número de bytes necessários para armazenar a assinatura de nome forte.  
   
 ## <a name="return-value"></a>Valor Retornado  
- `S_OK`Se o método foi concluído com êxito; caso contrário, um valor HRESULT que indica falha (consulte [valores de HRESULT comuns](/windows/win32/seccrypto/common-hresult-values) para uma lista).  
+
+ `S_OK` Se o método foi concluído com êxito; caso contrário, um valor HRESULT que indica falha (consulte [valores de HRESULT comuns](/windows/win32/seccrypto/common-hresult-values) para uma lista).  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MetaHost. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICLRStrongName](iclrstrongname-interface.md)

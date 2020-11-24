@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: e36e1fd8-8456-4359-bdc3-3ec1765f041f
 topic_type:
 - apiref
-ms.openlocfilehash: 294b82efd66704014aab1b73171afe9165f17664
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 454cfa2dd1b676f32649050625b1074fbd776d54
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616444"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673326"
 ---
 # <a name="createiceefilegen-function"></a>Função CreateICeeFileGen
+
 Cria um objeto [ICeeFileGen](iceefilegen-class.md) .  
   
  Essa função foi preterida no .NET Framework 4.  
@@ -37,26 +38,30 @@ HRESULT CreateICeeFileGen (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `ceeFileGen`  
  fora Um ponteiro para o endereço de um novo `ICeeFileGen` objeto.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  Esse método retorna códigos de erro COM padrão.  
   
 ## <a name="remarks"></a>Comentários  
+
  O `ICeeFileGen` objeto é usado para criar Common Language Runtime (CLR) arquivos executáveis portáteis (PE).  
   
  Chame a função [DestroyICeeFileGen](destroyiceefilegen-function.md) para destruir o `ICeeFileGen` objeto quando terminar.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** ICeeFileGen. h  
   
- **Biblioteca:** MSCorPE. dll  
+ **Biblioteca:** MSCorPE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Funções de hospedagem CLR reprovadas](deprecated-clr-hosting-functions.md)
