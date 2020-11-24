@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - synchronization primitives, SpinLock
 ms.assetid: f9af93bb-7a0d-4ba5-afe8-74f48b6b6958
-ms.openlocfilehash: 071bde6e8b32d5712256e24c83d713cd63f2bffb
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: adb80ffb1917ea725c458dbe3c37f3d364276fb6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819000"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674288"
 ---
 # <a name="spinlock"></a>SpinLock
+
 A estrutura <xref:System.Threading.SpinLock> é uma primitiva de sincronização de nível inferior com exclusão mútua que gira enquanto aguarda adquirir um bloqueio. Em computadores com vários núcleos, quando os tempos de espera devem ser curtos e a contenção mínima, o <xref:System.Threading.SpinLock> pode ter melhor desempenho que outros tipos de bloqueios. No entanto, recomendamos usar o <xref:System.Threading.SpinLock> somente quando você determinar pela criação de perfil que o método <xref:System.Threading.Monitor?displayProperty=nameWithType> ou os métodos <xref:System.Threading.Interlocked> estejam causando lentidão significativa no desempenho do seu programa.  
   
  O <xref:System.Threading.SpinLock> pode resultar no fracionamento de tempo do thread mesmo que ainda não tenha adquirido o bloqueio. Isso é feito para evitar a inversão de prioridade de thread e para habilitar o progresso do coletor de lixo. Ao usar um <xref:System.Threading.SpinLock>, nenhum thread deverá manter o bloqueio por mais do que um breve intervalo de tempo ou fechar enquanto mantém o bloqueio.  

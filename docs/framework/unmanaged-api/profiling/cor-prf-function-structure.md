@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8bb5acf5-cf4b-4ccb-93f1-46db1f3f8bf3
 topic_type:
 - apiref
-ms.openlocfilehash: 856e01c7934709a17556aa53851204bf6a917de8
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 1da8f414ccf0c1eed3ec7dde842dd381440a3fa9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500930"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674951"
 ---
 # <a name="cor_prf_function-structure"></a>Estrutura COR_PRF_FUNCTION
+
 Fornece uma representação única de uma função pela combinação de sua ID com a ID de sua versão recompilada.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -32,7 +33,7 @@ typedef struct _COR_PRF_FUNCTION {    FunctionID functionId;    ReJITID    reJit
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |`functionId`|A ID da função.|  
 |`reJitId`|A ID da função recompilada. Um valor de 0 (zero) representa a versão original da função.|  
@@ -40,6 +41,7 @@ typedef struct _COR_PRF_FUNCTION {    FunctionID functionId;    ReJITID    reJit
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl  

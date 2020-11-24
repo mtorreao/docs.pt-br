@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0b1b432a-d234-4002-839b-81366c3a8bdc
 topic_type:
 - apiref
-ms.openlocfilehash: 18492f3e95947a3a11da9d5d303651c04d764a8f
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 4ce50f7706583f291d2e6a141d40ab6dd3e4b3e2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762624"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674379"
 ---
 # <a name="iclrvalidatorvalidate-method"></a>Método ICLRValidator::Validate
+
 Valida o executável portátil (PE) ou o Microsoft Intermediate Language (MSIL) no arquivo especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -41,6 +42,7 @@ HRESULT Validate (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `veh`  
  no Um ponteiro para uma `IVEHandler` instância que manipula erros de validação.  
   
@@ -67,9 +69,9 @@ HRESULT Validate (
   
 ## <a name="return-value"></a>Valor Retornado  
   
-|HRESULT|Description|  
+|HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`Validate`retornado com êxito.|  
+|S_OK|`Validate` retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -77,14 +79,15 @@ HRESULT Validate (
 |E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retorna E_FAIL, o CLR não é mais utilizável no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** IValidator. idl, IValidator. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICLRValidator](iclrvalidator-interface.md)

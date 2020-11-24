@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: eb412622-77cc-4abd-a2cd-c910fe8edd54
 topic_type:
 - apiref
-ms.openlocfilehash: 9a402b7dfc3ece9d38994ed897162fe0d81ff0b9
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: fda234a6a280aeea1f497ad195d6d41efb6aa951
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503296"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674312"
 ---
 # <a name="icorprofilercallbackobjectallocated-method"></a>Método ICorProfilerCallback::ObjectAllocated
+
 Notifica o criador de perfil de que a memória dentro do heap foi alocada para um objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,6 +35,7 @@ HRESULT ObjectAllocated(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `objectId`  
  no A ID do objeto para o qual a memória foi alocada.  
   
@@ -41,9 +43,11 @@ HRESULT ObjectAllocated(
  no A ID da classe da qual o objeto é uma instância.  
   
 ## <a name="remarks"></a>Comentários  
+
  O `ObjectedAllocated` método não é chamado para alocações a partir da pilha ou da memória não gerenciada. O `classId` parâmetro pode se referir a uma classe no código gerenciado que ainda não foi carregado. O criador de perfil receberá um retorno de chamada de carga de classe para essa classe imediatamente após o `ObjectAllocated` retorno de chamada.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

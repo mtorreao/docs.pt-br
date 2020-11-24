@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5c826ba3-8258-49bc-a417-78807915fcaf
 topic_type:
 - apiref
-ms.openlocfilehash: 9d1c7f4f5b881f7f55539602c152b557a7950472
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 7ba35823ccb670ad0201d1950687dc83cc9ba64a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504401"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673728"
 ---
 # <a name="corbindtoruntimehost-function"></a>Função CorBindToRuntimeHost
+
 Permite que os hosts carreguem uma versão especificada do Common Language Runtime (CLR) em um processo.  
   
  Essa função foi preterida no .NET Framework 4.  
@@ -42,6 +43,7 @@ HRESULT CorBindToRuntimeHost (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pwszVersion`  
  no Uma cadeia de caracteres que descreve a versão do CLR que você deseja carregar.  
   
@@ -78,11 +80,12 @@ HRESULT CorBindToRuntimeHost (
  fora Um ponteiro de interface para a versão do tempo de execução que foi carregado.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. idl  
   
- **Biblioteca:** MSCorEE. dll  
+ **Biblioteca:** MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

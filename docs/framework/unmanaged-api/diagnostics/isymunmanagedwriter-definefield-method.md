@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c6a1f797-dbf4-40f5-ab99-d9b4bfb26148
 topic_type:
 - apiref
-ms.openlocfilehash: aba551a1973a41a909869316cda07e8d655e9882
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 5683c10938873821cbe998dbf13937a6a7d24d7c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614832"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675081"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a>Método ISymUnmanagedWriter::DefineField
+
 Define uma única variável que não está dentro de um método. Esse método é usado para determinados campos em classes, campos de bits e assim por diante.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -41,6 +42,7 @@ HRESULT DefineField(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `parent`  
  no O tipo de metadados ou o token do método.  
   
@@ -68,10 +70,12 @@ HRESULT DefineField(
  `addr3`  
  no O terceiro endereço para a especificação de campo.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Confira também

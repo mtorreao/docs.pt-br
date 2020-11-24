@@ -8,14 +8,14 @@ api_location:
 api_type:
 - DLLExport
 ms.assetid: d60f19fe-7bec-47ba-b60e-ba9ce66abf8c
-ms.openlocfilehash: 1f53df33a65d3f75b7574eda3507e370c2e086ac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5c1e2bfc7fd55e807af68744e28faa473daea772
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73099829"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674210"
 ---
-# <a name="_axlrsakeyvaluetopublickeytoken-function"></a>\_função AxlRSAKeyValueToPublicKeyToken
+# <a name="_axlrsakeyvaluetopublickeytoken-function"></a>\_Função AxlRSAKeyValueToPublicKeyToken
 
 Converte um Módulo e um Expoente em um token de chave pública com nome forte.  
   
@@ -30,18 +30,20 @@ HRESULT _AxlRSAKeyValueToPublicKeyToken (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pModulusBlob`  
- no O blob de módulo codificado em Base64 (do elemento \<> do módulo).  Consulte a estrutura [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) .  
+ no O blob de módulo codificado em Base64 (do \<Modulus> elemento).  Consulte a estrutura de [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) .  
   
  `pExponentBlob`  
- no O blob de expoente codificado em Base64 (do elemento \<expoente >). Consulte a estrutura [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) .  
+ no O blob de expoente codificado em Base64 (do \<Exponent> elemento). Consulte a estrutura de [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) .  
   
  `ppwszPublicKeyToken`  
  [out] Um ponteiro para WCHAR * para receber o token de chave pública com codificação hexadecimal.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  `S_OK` se a função for bem-sucedida. Caso contrário, retornará um código de erro.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Authenticode](index.md)

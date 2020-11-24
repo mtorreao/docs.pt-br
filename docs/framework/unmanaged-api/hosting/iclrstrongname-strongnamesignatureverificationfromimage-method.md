@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: da91c138-ee30-4fd4-a040-464d97d7e41a
 topic_type:
 - apiref
-ms.openlocfilehash: 1ba7355fae1888436d57562cc21d3865ebc7a4f4
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 134b32b6b281a08997849f4c23edfc1f357dadcd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83763170"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674392"
 ---
 # <a name="iclrstrongnamestrongnamesignatureverificationfromimage-method"></a>Método ICLRStrongName::StrongNameSignatureVerificationFromImage
+
 Verifica se um assembly, que já foi mapeado para a memória, é válido para a chave pública associada.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,6 +38,7 @@ HRESULT StrongNameSignatureVerificationFromImage (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pbBase`  
  no O endereço virtual relativo do manifesto do assembly mapeado.  
   
@@ -44,37 +46,39 @@ HRESULT StrongNameSignatureVerificationFromImage (
  no O tamanho, em bytes, da imagem mapeada.  
   
  `dwInFlags`  
- no Sinalizadores que influenciam o comportamento da verificação. Os valores a seguir têm suporte:  
+ no Sinalizadores que influenciam o comportamento da verificação. Os seguintes valores têm suporte:  
   
-- `SN_INFLAG_FORCE_VER`(0x00000001) – força a verificação mesmo que seja necessário substituir as configurações do registro.  
+- `SN_INFLAG_FORCE_VER` (0x00000001) – força a verificação mesmo que seja necessário substituir as configurações do registro.  
   
-- `SN_INFLAG_INSTALL`(0x00000002) – especifica que esta é a primeira verificação executada nesta imagem.  
+- `SN_INFLAG_INSTALL` (0x00000002) – especifica que esta é a primeira verificação executada nesta imagem.  
   
-- `SN_INFLAG_ADMIN_ACCESS`(0x00000004) – especifica que o cache permitirá acesso somente aos usuários que têm privilégios administrativos.  
+- `SN_INFLAG_ADMIN_ACCESS` (0x00000004) – especifica que o cache permitirá acesso somente aos usuários que têm privilégios administrativos.  
   
-- `SN_INFLAG_USER_ACCESS`(0x00000008) – especifica que o assembly será acessível somente para o usuário atual.  
+- `SN_INFLAG_USER_ACCESS` (0x00000008) – especifica que o assembly será acessível somente para o usuário atual.  
   
-- `SN_INFLAG_ALL_ACCESS`(0x00000010) – especifica que o cache não oferecerá nenhuma garantia de restrição de acesso.  
+- `SN_INFLAG_ALL_ACCESS` (0x00000010) – especifica que o cache não oferecerá nenhuma garantia de restrição de acesso.  
   
-- `SN_INFLAG_RUNTIME`(0x80000000)-reservado para depuração interna.  
+- `SN_INFLAG_RUNTIME` (0x80000000)-reservado para depuração interna.  
   
  `pdwOutFlags`  
  fora Um sinalizador para informações de saída adicionais. Há suporte para o seguinte valor:  
   
-- `SN_OUTFLAG_WAS_VERIFIED`(0x00000001)-esse valor é definido como `false` para especificar que a verificação foi bem-sucedida devido a configurações do registro.  
+- `SN_OUTFLAG_WAS_VERIFIED` (0x00000001)-esse valor é definido como `false` para especificar que a verificação foi bem-sucedida devido a configurações do registro.  
   
 ## <a name="return-value"></a>Valor Retornado  
- `S_OK`Se o método foi concluído com êxito; caso contrário, um valor HRESULT que indica falha (consulte [valores de HRESULT comuns](/windows/win32/seccrypto/common-hresult-values) para uma lista).  
+
+ `S_OK` Se o método foi concluído com êxito; caso contrário, um valor HRESULT que indica falha (consulte [valores de HRESULT comuns](/windows/win32/seccrypto/common-hresult-values) para uma lista).  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MetaHost. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICLRStrongName](iclrstrongname-interface.md)

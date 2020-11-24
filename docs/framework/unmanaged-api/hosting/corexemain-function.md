@@ -17,14 +17,15 @@ helpviewer_keywords:
 ms.assetid: 898f76e2-16f4-4a63-b7d9-dad2d3824d8a
 topic_type:
 - apiref
-ms.openlocfilehash: 935ac478fb966315e81fdcc004761038b28e3178
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: af1d0e2039024a51341e30bec497c581a0bcacb3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616581"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673664"
 ---
 # <a name="_corexemain-function"></a>Função _CorExeMain
+
 Inicializa o Common Language Runtime (CLR), localiza o ponto de entrada gerenciado no cabeçalho CLR do assembly executável e começa a execução.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,6 +35,7 @@ __int32 STDMETHODCALLTYPE _CorExeMain ();
 ```  
   
 ## <a name="remarks"></a>Comentários  
+
  Essa função é chamada pelo carregador em processos criados a partir de assemblies executáveis gerenciados. Para assemblies DLL, o carregador chama a função [_CorDllMain](cordllmain-function.md) em vez disso.  
   
  O carregador do sistema operacional chama esse método, independentemente do ponto de entrada especificado no arquivo de imagem.  
@@ -43,14 +45,15 @@ __int32 STDMETHODCALLTYPE _CorExeMain ();
  Para obter informações adicionais, consulte a seção comentários no tópico [_CorValidateImage](corvalidateimage-function.md) .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Funções estáticas globais de metadados](../metadata/metadata-global-static-functions.md)
