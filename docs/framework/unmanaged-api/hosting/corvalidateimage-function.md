@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0117e080-05f9-4772-885d-e1847230947c
 topic_type:
 - apiref
-ms.openlocfilehash: 426b39aa3d1ada5ae44565a742b70681a7bcf6d3
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2d49a40610bd0e1a7629594e245bde9eacfcc06d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84493428"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687971"
 ---
 # <a name="_corvalidateimage-function"></a>Função _CorValidateImage
+
 Valida as imagens de módulo gerenciado e notifica o carregador do sistema operacional depois que elas tiverem sido carregadas.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,6 +35,7 @@ STDAPI _CorValidateImage (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `ImageBase`  
  no Um ponteiro para o local inicial da imagem a ser validada como código gerenciado. A imagem já deve estar carregada na memória.  
   
@@ -41,6 +43,7 @@ STDAPI _CorValidateImage (
  no O nome do arquivo da imagem.  
   
 ## <a name="return-value"></a>Valor Retornado  
+
  Essa função retorna os valores padrão `E_INVALIDARG` , `E_OUTOFMEMORY` , `E_UNEXPECTED` e `E_FAIL` , bem como os valores a seguir.  
   
 |Valor retornado|Descrição|  
@@ -49,7 +52,8 @@ STDAPI _CorValidateImage (
 |`STATUS_SUCCESS`|A imagem é válida. Esse valor tem o HRESULT 0x00000000l.|  
   
 ## <a name="remarks"></a>Comentários  
- No Windows XP e versões posteriores, o carregador do sistema operacional verifica módulos gerenciados examinando o bit do diretório do descritor COM no cabeçalho COFF (Common Object File Format). Um bit definido indica um módulo gerenciado. Se o carregador detectar um módulo gerenciado, ele carregará o MsCorEE. dll e `_CorValidateImage` as chamadas, que executarão as seguintes ações:  
+
+ No Windows XP e versões posteriores, o carregador do sistema operacional verifica módulos gerenciados examinando o bit do diretório do descritor COM no cabeçalho COFF (Common Object File Format). Um bit definido indica um módulo gerenciado. Se o carregador detectar um módulo gerenciado, ele carregará MsCorEE.dll e chamadas `_CorValidateImage` , o que executará as seguintes ações:  
   
 - Confirma que a imagem é um módulo gerenciado válido.  
   
@@ -61,7 +65,7 @@ STDAPI _CorValidateImage (
   
  Para imagens executáveis, o carregador do sistema operacional chama a função [_CorExeMain](corexemain-function.md) , independentemente do ponto de entrada especificado no executável. Para imagens de assembly de DLL, o carregador chama a função [_CorDllMain](cordllmain-function.md) .  
   
- `_CorExeMain`ou `_CorDllMain` executa as seguintes ações:  
+ `_CorExeMain` ou `_CorDllMain` executa as seguintes ações:  
   
 - Inicializa o CLR.  
   
@@ -72,11 +76,12 @@ STDAPI _CorValidateImage (
  O carregador chama a função [_CorImageUnloading](corimageunloading-function.md) quando as imagens de módulo gerenciado são descarregadas. No entanto, essa função não executa nenhuma ação; Ele apenas retorna.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 78b0f14f-2fae-4e63-8412-4df119ee8468
 topic_type:
 - apiref
-ms.openlocfilehash: 612b63ba9aa3504cab5196932293946d486955ce
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: c5be9231bcd5aaddfa0cf1b0051f8e1184faef04
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210196"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687613"
 ---
 # <a name="icordebugmanagedcallback2exception-method"></a>Método ICorDebugManagedCallback2::Exception
+
 Notifica o depurador de que uma pesquisa de um manipulador de exceção foi iniciada.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -39,6 +40,7 @@ HRESULT Exception (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pAppDomain`  
  no Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio do aplicativo que contém o thread no qual a exceção foi gerada.  
   
@@ -58,6 +60,7 @@ HRESULT Exception (
  no Um valor da enumeração [CorDebugExceptionFlags](cordebugexceptionflags-enumeration.md) que especifica informações adicionais sobre a exceção  
   
 ## <a name="remarks"></a>Comentários  
+
  O `Exception` retorno de chamada é chamado em vários pontos durante a fase de pesquisa do processo de tratamento de exceção. Ou seja, ele pode ser chamado mais de uma vez ao desenrolar uma exceção.  
   
  A exceção que está sendo processada pode ser recuperada do objeto ICorDebugThread referenciado pelo `pThread` parâmetro.  
@@ -72,6 +75,7 @@ HRESULT Exception (
 |DEBUG_EXCEPTION_UNHANDLED|NULO|Indefinido.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

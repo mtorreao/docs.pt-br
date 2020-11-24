@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d815486e-b3bd-4fe8-ba28-02abdb4d67ba
 topic_type:
 - apiref
-ms.openlocfilehash: 786582c7118fbed394de7c414a10243616cf4ee1
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 51beed47e7187d6fa22e60baed16598a8ad73adb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209793"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688985"
 ---
 # <a name="icordebugmanagedcallbackexitappdomain-method"></a>Método ICorDebugManagedCallback::ExitAppDomain
+
 Notifica o depurador de que um domínio de aplicativo foi encerrado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -35,6 +36,7 @@ HRESULT ExitAppDomain (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pProcess`  
  no Um ponteiro para um objeto ICorDebugProcess que representa o processo que contém o domínio de aplicativo fornecido.  
   
@@ -42,6 +44,7 @@ HRESULT ExitAppDomain (
  no Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio do aplicativo que foi encerrado.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

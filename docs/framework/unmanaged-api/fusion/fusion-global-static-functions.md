@@ -6,17 +6,19 @@ helpviewer_keywords:
 - fusion global static functions [.NET Framework]
 - global static functions [.NET Framework fusion]
 ms.assetid: 229b2188-9168-4b44-a987-e1f515494688
-ms.openlocfilehash: ff94ed23f3e39888b4f7e255feece99898f8aa74
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 691fd50e05cadd3f82196fc6ba5df9bb84a66faa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73108263"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688738"
 ---
 # <a name="fusion-global-static-functions"></a>Funções estáticas globais de fusão
+
 Esta seção descreve as funções estáticas globais não gerenciadas que a API do Fusion usa.  
   
 ## <a name="in-this-section"></a>Nesta seção  
+
  [Função ClearDownloadCache](cleardownloadcache-function.md)  
  Limpa o cache de assembly global de assemblies baixados.  
   
@@ -45,7 +47,7 @@ Esta seção descreve as funções estáticas globais não gerenciadas que a API
  Obtém um ponteiro para uma instância de [IAppIdAuthority](iappidauthority-interface.md) que gerencia chaves para identidades e referências de aplicativo.  
   
  [Função GetAssemblyIdentityFromFile](getassemblyidentityfromfile-function.md)  
- Obtém um ponteiro para um objeto `IUnknown` com o `IID` especificado no assembly no caminho de arquivo especificado.  
+ Obtém um ponteiro para um `IUnknown` objeto com o especificado `IID` no assembly no caminho do arquivo especificado.  
   
  [Função GetCachePath](getcachepath-function.md)  
  Obtém o caminho para o assembly armazenado em cache, usando os sinalizadores especificados.  
@@ -66,10 +68,11 @@ Esta seção descreve as funções estáticas globais não gerenciadas que a API
  Obtém o nome de exibição de pós-política para um assembly.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
+
  [Interfaces de fusão](fusion-interfaces.md)  
   
- [Enumerações de fusão](fusion-enumerations.md)  
+ [Enumerações Fusion](fusion-enumerations.md)  
   
  [Estruturas de fusão](fusion-structures.md)  
   
- [Cache de assembly global](../../app-domains/gac.md)
+ [Cache de assemblies global](../../app-domains/gac.md)

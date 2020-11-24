@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1edd1670-976a-4fc8-bef7-7c41e60ad989
 topic_type:
 - apiref
-ms.openlocfilehash: e8065a5492884a4b7f5d662737e4beddc6fca5b3
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 0f9cb8db35a1669cead6f9f26c9a89e063628dd8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007592"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687665"
 ---
 # <a name="cornotificationfortokenmovement-enumeration"></a>Enumeração CorNotificationForTokenMovement
+
 Especifica as notificações que serão enviadas para o cliente da API de metadados quando ocorrer um remapeamento de token.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -61,7 +62,7 @@ typedef enum CorNotificationForTokenMovement {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |`MDNotifyDefault`|Notifique quando `mdTypeRef` os `mdMethodDef` `mdMemberRef` `mdFieldDef` tokens são movidos.|  
 |`MDNotifyAll`|Notificar quando qualquer token for movido.|  
@@ -88,9 +89,11 @@ typedef enum CorNotificationForTokenMovement {
 |`MDNotifyResource`|Notificar quando um `mdManifestResource` token se mover.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Um token pode ser mapeado novamente (ou seja, movido) durante uma mesclagem de metadados.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorHdr. h  

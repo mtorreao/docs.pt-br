@@ -10,12 +10,12 @@ helpviewer_keywords:
 - permissions [.NET]
 - security [.NET], about security
 ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
-ms.openlocfilehash: a9f0703217b55c90c4e98503402d3fbf60a45ea7
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 73e4d0474810d097c5eee8b99ae30b6096ee1695
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831059"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687539"
 ---
 # <a name="key-security-concepts"></a>Conceitos principais de segurança
 
@@ -49,6 +49,7 @@ Uma entidade de segurança representa a identidade e a função de um usuário e
 Para obter mais informações, consulte [objetos principal e de identidade](principal-and-identity-objects.md).  
   
 ## <a name="authentication"></a>Autenticação  
+
 A autenticação é o processo de descoberta e verificação da identidade de uma entidade de segurança examinando as credenciais do usuário e validando essas credenciais em alguma autoridade. As informações obtidas durante a autenticação do são diretamente utilizáveis pelo seu código. Você também pode usar a segurança baseada em função do .NET para autenticar o usuário atual e para determinar se deve permitir que essa entidade acesse seu código. Consulte as sobrecargas do <xref:System.Security.Principal.WindowsPrincipal.IsInRole%2A?displayProperty=nameWithType> método para obter exemplos de como autenticar a entidade de segurança para funções específicas. Por exemplo, você pode usar a <xref:System.Security.Principal.WindowsPrincipal.IsInRole%28System.String%29?displayProperty=nameWithType> sobrecarga para determinar se o usuário atual é membro do grupo Administradores.  
   
 Uma variedade de mecanismos de autenticação são usados hoje, muitos dos quais podem ser usados com a segurança baseada em função do .NET. Alguns dos mecanismos mais comumente usados são Basic, Digest, Passport, sistema operacional (como NTLM ou Kerberos) ou mecanismos definidos pelo aplicativo.  

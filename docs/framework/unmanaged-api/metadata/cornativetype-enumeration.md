@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: e47a72f1-9609-48ed-bb34-97170d7f6890
 topic_type:
 - apiref
-ms.openlocfilehash: dd97c479f12e7bdb015b39a802b398ca2b0bcd3f
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 95bbb0cc2f223cfa96e1314ed28f46016c81a2fa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007631"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687691"
 ---
 # <a name="cornativetype-enumeration"></a>Enumeração CorNativeType
+
 Contém valores que descrevem os tipos nativos não gerenciados.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -87,7 +88,7 @@ typedef enum CorNativeType {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |`NATIVE_TYPE_END`|Obsoleto.|  
 |`NATIVE_TYPE_VOID`|Obsoleto.|  
@@ -138,6 +139,7 @@ typedef enum CorNativeType {
 |`NATIVE_TYPE_MAX`|Um valor inválido.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorHdr. h  

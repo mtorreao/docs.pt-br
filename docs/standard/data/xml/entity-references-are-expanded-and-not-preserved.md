@@ -2,14 +2,15 @@
 title: Referências a entidades são expandidos e não preservadas
 ms.date: 03/30/2017
 ms.assetid: ffd97806-ab43-4538-8de2-5828bfbbde57
-ms.openlocfilehash: a446ef35cc9e22660e66d71a9c9332f80117d1ae
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5a3c93807866c5925696f2d913dfc443d8ff12a4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827666"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687444"
 ---
 # <a name="entity-references-are-expanded-and-not-preserved"></a>Referências a entidades são expandidos e não preservadas
+
 Quando a referência de entidade é expandida e substituído pelo texto que representa, o nó de **XmlEntityReference** não é criado. Em vez disso, a declaração de entidade é processada e os nós criados na declaração de conteúdo são copiados no lugar de **XmlEntityReference**. Portanto, no exemplo de `&publisher;`, `&publisher;` não é salvo, mas em vez disso, um nó de **XmlText** é criado.  
   
  ![estrutura de árvore expandida](media/xmlentityref-expanded-nodes.gif "xmlentityref_expanded_nodes")  

@@ -2,12 +2,12 @@
 title: Docker-gRPC para desenvolvedores do WCF
 description: Criando imagens do Docker para aplicativos ASP.NET Core gRPC
 ms.date: 09/02/2019
-ms.openlocfilehash: 379750edfa1a9fc282e43ffa83e5695425f31a26
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0a680d0918868829042e521506fa8c1a1628bf5c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152709"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688439"
 ---
 # <a name="create-docker-images"></a>Criar imagens do Docker
 
@@ -22,8 +22,8 @@ A Microsoft fornece uma variedade de imagens básicas para a criação e a execu
 
 | Imagem | Descrição |
 | ----- | ----------- |
-| [mcr.microsoft.com/dotnet/core/sdk](https://hub.docker.com/_/microsoft-dotnet-core-sdk/) | Para a criação de aplicativos com o `docker build` . Não deve ser usado na produção. |
-| [mcr.microsoft.com/dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) | Contém as dependências de tempo de execução e ASP.NET Core. Para produção. |
+| [mcr.microsoft.com/dotnet/sdk](https://hub.docker.com/_/microsoft-dotnet-sdk/) | Para a criação de aplicativos com o `docker build` . Não deve ser usado na produção. |
+| [mcr.microsoft.com/dotnet/aspnet](https://hub.docker.com/_/microsoft-dotnet-aspnet/) | Contém as dependências de tempo de execução e ASP.NET Core. Para produção. |
 
 Para cada imagem, há quatro variantes com base em diferentes distribuições do Linux, diferenciadas por marcas.
 
@@ -45,7 +45,7 @@ Uma imagem do Docker é definida por um *Dockerfile*. Esse é um arquivo de text
 
 ```dockerfile
 # Application build steps
-FROM mcr.microsoft.com/dotnet/core/sdk:3.0 as builder
+FROM mcr.microsoft.com/dotnet/sdk:3.0 as builder
 
 WORKDIR /src
 
@@ -56,7 +56,7 @@ RUN dotnet restore
 RUN dotnet publish -c Release -o /published src/StockData/StockData.csproj
 
 # Runtime image creation
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.0
+FROM mcr.microsoft.com/dotnet/aspnet:3.0
 
 # Uncomment the line below if running with HTTPS
 # ENV ASPNETCORE_URLS=https://+:443
@@ -72,7 +72,7 @@ O Dockerfile tem duas partes: a primeira usa a `sdk` imagem base para compilar e
 
 ### <a name="the-build-steps"></a>As etapas de compilação
 
-| Etapa | Descrição |
+| Etapa | DESCRIÇÃO |
 | ---- | ----------- |
 | `FROM ...` | Declara a imagem base e atribui o `builder` alias. |
 | `WORKDIR /src` | Cria o `/src` diretório e o define como o diretório de trabalho atual. |
@@ -82,7 +82,7 @@ O Dockerfile tem duas partes: a primeira usa a `sdk` imagem base para compilar e
 
 ### <a name="the-runtime-image-steps"></a>As etapas da imagem de tempo de execução
 
-| Etapa | Descrição |
+| Etapa | DESCRIÇÃO |
 | ---- | ----------- |
 | `FROM ...` | Declara uma nova imagem de base. |
 | `WORKDIR /app` | Cria o `/app` diretório e o define como o diretório de trabalho atual. |
@@ -95,7 +95,7 @@ As imagens base da Microsoft para o Docker definem a `ASPNETCORE_URLS` variável
 
 ```dockerfile
 # Runtime image creation
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.0
+FROM mcr.microsoft.com/dotnet/aspnet:3.0
 
 ENV ASPNETCORE_URLS=https://+:443
 ```

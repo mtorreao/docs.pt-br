@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e29b46bc-5fdc-4894-b0c2-619df4b65ded
 topic_type:
 - apiref
-ms.openlocfilehash: 5984c63f0e1a1859dd5cc2550d6dc37c963affb3
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 337c4fd091ebf7c39f7eee2358ca4f4df239cce3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502997"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687522"
 ---
 # <a name="icorprofilerinfogetilfunctionbody-method"></a>Método ICorProfilerInfo::GetILFunctionBody
+
 Obtém um ponteiro para o corpo de um método no código da MSIL (Microsoft Intermediate Language), começando em seu cabeçalho.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,6 +37,7 @@ HRESULT GetILFunctionBody(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `moduleId`  
  no A ID do módulo no qual a função reside.  
   
@@ -49,11 +51,13 @@ HRESULT GetILFunctionBody(
  fora Um inteiro que especifica o tamanho do método.  
   
 ## <a name="remarks"></a>Comentários  
+
  Um método tem o escopo definido pelo módulo no qual reside. Como o `GetILFunctionBody` método foi projetado para dar a uma ferramenta acesso ao código MSIL antes de ser carregado pelo Common Language Runtime (CLR), ele usa o token de metadados do método para localizar a instância desejada.  
   
- `GetILFunctionBody`pode retornar um CORPROF_E_FUNCTION_NOT_IL HRESULT se o `methodId` aponta para um método sem qualquer código MSIL (como um método abstract ou um método de invocação de plataforma (PInvoke)).  
+ `GetILFunctionBody` pode retornar um CORPROF_E_FUNCTION_NOT_IL HRESULT se o `methodId` aponta para um método sem qualquer código MSIL (como um método abstract ou um método de invocação de plataforma (PInvoke)).  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: d16703fd-518f-412e-92cb-74433d11032e
 topic_type:
 - apiref
-ms.openlocfilehash: c8c2757e99b80204ad52e69a596d62c55c369965
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 70d789f417700734b546cac6ff527ed5aa84fcf9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007410"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688621"
 ---
 # <a name="corfileflags-enumeration"></a>Enumeração CorFileFlags
+
 Contém valores que descrevem o tipo de arquivo definido em uma chamada para [IMetaDataAssemblyEmit::D efinefile](imetadataassemblyemit-definefile-method.md).  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,12 +38,13 @@ typedef enum CorFileFlags {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |`ffContainsMetaData`|Indica que o arquivo não é um arquivo de recurso.|  
 |`ffContainsNoMetaData`|Indica que o arquivo, possivelmente um arquivo de recurso, não contém metadados.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorHdr. h  
