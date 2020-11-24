@@ -15,28 +15,31 @@ helpviewer_keywords:
 ms.assetid: f6961922-46ec-4d2c-8369-85f880731f37
 topic_type:
 - apiref
-ms.openlocfilehash: 4331728a4766d81b723c439747e5e1181815394f
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 394832d6144509717d2f79a78afaff50ad81c01d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614663"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683297"
 ---
-# <a name="isymunmanagedwriter3commit-method"></a><span data-ttu-id="03247-102">Método ISymUnmanagedWriter3::Commit</span><span class="sxs-lookup"><span data-stu-id="03247-102">ISymUnmanagedWriter3::Commit Method</span></span>
-<span data-ttu-id="03247-103">Confirma as alterações gravadas até o fluxo.</span><span class="sxs-lookup"><span data-stu-id="03247-103">Commits the changes written so far to the stream.</span></span>  
+# <a name="isymunmanagedwriter3commit-method"></a><span data-ttu-id="f6ad6-102">Método ISymUnmanagedWriter3::Commit</span><span class="sxs-lookup"><span data-stu-id="f6ad6-102">ISymUnmanagedWriter3::Commit Method</span></span>
+
+<span data-ttu-id="f6ad6-103">Confirma as alterações gravadas até o fluxo.</span><span class="sxs-lookup"><span data-stu-id="f6ad6-103">Commits the changes written so far to the stream.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="03247-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="03247-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f6ad6-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="f6ad6-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Commit();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="03247-105">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="03247-105">Return Value</span></span>  
- <span data-ttu-id="03247-106">S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.</span><span class="sxs-lookup"><span data-stu-id="03247-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="03247-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="03247-107">Requirements</span></span>  
- <span data-ttu-id="03247-108">**Cabeçalho:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="03247-108">**Header:** CorSym.idl, CorSym.h</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="03247-109">Confira também</span><span class="sxs-lookup"><span data-stu-id="03247-109">See also</span></span>
+## <a name="return-value"></a><span data-ttu-id="f6ad6-105">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="f6ad6-105">Return Value</span></span>  
 
-- [<span data-ttu-id="03247-110">Interface ISymUnmanagedWriter3</span><span class="sxs-lookup"><span data-stu-id="03247-110">ISymUnmanagedWriter3 Interface</span></span>](isymunmanagedwriter3-interface.md)
+ <span data-ttu-id="f6ad6-106">S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.</span><span class="sxs-lookup"><span data-stu-id="f6ad6-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="f6ad6-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f6ad6-107">Requirements</span></span>  
+
+ <span data-ttu-id="f6ad6-108">**Cabeçalho:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="f6ad6-108">**Header:** CorSym.idl, CorSym.h</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="f6ad6-109">Confira também</span><span class="sxs-lookup"><span data-stu-id="f6ad6-109">See also</span></span>
+
+- [<span data-ttu-id="f6ad6-110">Interface ISymUnmanagedWriter3</span><span class="sxs-lookup"><span data-stu-id="f6ad6-110">ISymUnmanagedWriter3 Interface</span></span>](isymunmanagedwriter3-interface.md)
