@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: e1555328-2c71-4ece-b357-9eb6d3a8efc4
 topic_type:
 - apiref
-ms.openlocfilehash: 078168ae8860f18ff6f811dcc972e3eb3c857e1d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fd5ae6ef40cb171c33132df0f640acbef96d69b5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447199"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684662"
 ---
 # <a name="getscope-method"></a>Método GetScope
+
 Obtém um escopo de importação.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,6 +37,7 @@ HRESULT GetScope(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `AssemblyID`  
  ID exclusiva do assembly para o qual importar.  
   
@@ -48,13 +50,15 @@ HRESULT GetScope(
  `ppImportScope`  
  Recebe a interface da [interface IMetaDataImport](../metadata/imetadataimport-interface.md) para o escopo.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  Retorna S_OK se o método tiver sucesso.  
   
 ## <a name="requirements"></a>Requisitos  
+
  Requer ALink. h  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IALink](ialink-interface.md)
 - [Interface IALink2](ialink2-interface.md)

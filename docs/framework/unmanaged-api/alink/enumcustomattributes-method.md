@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 08dff60c-f01b-4050-8865-ea3f95361c9f
 topic_type:
 - apiref
-ms.openlocfilehash: 6a5b3f1e9bf1444feb73949ef7133fbd9ae35134
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 445c833d10631341ef7ad579eaff8ddd96be3428
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446479"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684844"
 ---
 # <a name="enumcustomattributes-method"></a>Método EnumCustomAttributes
+
 Recupera atributos personalizados no nível do assembly.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -38,6 +39,7 @@ HRESULT EnumCustomAttributes(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `hEnum`  
  Identificador do enumerador.  
   
@@ -48,18 +50,20 @@ HRESULT EnumCustomAttributes(
  Recebe tokens de atributos personalizados.  
   
  `cMax`  
- Especifica o tamanho da matriz de `rCustomValues`.  
+ Especifica o tamanho da `rCustomValues` matriz.  
   
  `pcCustomValues`  
  Opcionalmente, recebe a contagem de valores de token.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  Retorna S_OK se o método tiver sucesso.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
+
  Requer ALink. h  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IALink](ialink-interface.md)
 - [Interface IALink2](ialink2-interface.md)

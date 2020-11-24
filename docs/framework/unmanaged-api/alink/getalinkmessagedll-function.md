@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 67985a22-88a2-4c54-8d99-4bcde9d6213e
 topic_type:
 - apiref
-ms.openlocfilehash: 63719d0c6e13768e9dc7ed80e52e2a293e32a8a1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 554bd32ae965b21a88a09577749bbd7975f5ec7e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449346"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684740"
 ---
 # <a name="getalinkmessagedll-function"></a>Função GetALinkMessageDll
+
 Localiza e carrega a DLL de mensagem. Retornará 0 se a DLL de mensagem não puder ser localizada ou carregada. A DLL de mensagem deve estar em um subdiretório cujo nome é uma ID de idioma ou no diretório atual.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -31,11 +32,12 @@ Localiza e carrega a DLL de mensagem. Retornará 0 se a DLL de mensagem não pud
 HINSTANCE WINAPI GetALinkMessageDll();  
 ```  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** ALink. h  
   
- **Biblioteca**: Alink. dll  
+ **Biblioteca**: alink.dll  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Al.exe (Assembly Linker)](../../tools/al-exe-assembly-linker.md)
+- [Al.exe (vinculador de assembly)](../../tools/al-exe-assembly-linker.md)
