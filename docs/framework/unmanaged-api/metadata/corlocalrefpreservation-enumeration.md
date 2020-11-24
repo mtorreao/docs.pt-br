@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 44757163-1228-4213-a4c4-d4de503cc75d
 topic_type:
 - apiref
-ms.openlocfilehash: 42cb4e76bb77aebcee3b28035635a877513cdc04
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 49b0298f4fa776c93f89ac380ce65568b493379b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008983"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677109"
 ---
-# <a name="corlocalrefpreservation-enumeration"></a><span data-ttu-id="ee331-102">Enumeração CorLocalRefPreservation</span><span class="sxs-lookup"><span data-stu-id="ee331-102">CorLocalRefPreservation Enumeration</span></span>
-<span data-ttu-id="ee331-103">Contém valores de sinalizador para o tratamento de referências locais.</span><span class="sxs-lookup"><span data-stu-id="ee331-103">Contains flag values for the treatment of local references.</span></span>  
+# <a name="corlocalrefpreservation-enumeration"></a><span data-ttu-id="bec61-102">Enumeração CorLocalRefPreservation</span><span class="sxs-lookup"><span data-stu-id="bec61-102">CorLocalRefPreservation Enumeration</span></span>
+
+<span data-ttu-id="bec61-103">Contém valores de sinalizador para o tratamento de referências locais.</span><span class="sxs-lookup"><span data-stu-id="bec61-103">Contains flag values for the treatment of local references.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ee331-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="ee331-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bec61-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="bec61-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorLocalRefPreservation  
@@ -35,21 +36,22 @@ typedef enum CorLocalRefPreservation
 } CorLocalRefPreservation;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="ee331-105">Membros</span><span class="sxs-lookup"><span data-stu-id="ee331-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="bec61-105">Membros</span><span class="sxs-lookup"><span data-stu-id="bec61-105">Members</span></span>  
   
-|<span data-ttu-id="ee331-106">Membro</span><span class="sxs-lookup"><span data-stu-id="ee331-106">Member</span></span>|<span data-ttu-id="ee331-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="ee331-107">Description</span></span>|  
+|<span data-ttu-id="bec61-106">Membro</span><span class="sxs-lookup"><span data-stu-id="bec61-106">Member</span></span>|<span data-ttu-id="bec61-107">DESCRIÇÃO</span><span class="sxs-lookup"><span data-stu-id="bec61-107">Description</span></span>|  
 |------------|-----------------|  
-|`MDPreserveLocalRefsNone`|<span data-ttu-id="ee331-108">Não preservar referências locais.</span><span class="sxs-lookup"><span data-stu-id="ee331-108">Preserve no local references.</span></span>|  
-|`MDPreserveLocalTypeRef`|<span data-ttu-id="ee331-109">Preserve referências de tipo local.</span><span class="sxs-lookup"><span data-stu-id="ee331-109">Preserve local type references.</span></span>|  
-|`MDPreserveLocalMemberRef`|<span data-ttu-id="ee331-110">Preserve referências de membro local.</span><span class="sxs-lookup"><span data-stu-id="ee331-110">Preserve local member references.</span></span>|  
+|`MDPreserveLocalRefsNone`|<span data-ttu-id="bec61-108">Não preservar referências locais.</span><span class="sxs-lookup"><span data-stu-id="bec61-108">Preserve no local references.</span></span>|  
+|`MDPreserveLocalTypeRef`|<span data-ttu-id="bec61-109">Preserve referências de tipo local.</span><span class="sxs-lookup"><span data-stu-id="bec61-109">Preserve local type references.</span></span>|  
+|`MDPreserveLocalMemberRef`|<span data-ttu-id="bec61-110">Preserve referências de membro local.</span><span class="sxs-lookup"><span data-stu-id="bec61-110">Preserve local member references.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="ee331-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ee331-111">Requirements</span></span>  
- <span data-ttu-id="ee331-112">**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ee331-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="ee331-113">**Cabeçalho:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="ee331-113">**Header:** CorHdr.h</span></span>  
-  
- <span data-ttu-id="ee331-114">**.NET Framework versões:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ee331-114">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="ee331-115">Confira também</span><span class="sxs-lookup"><span data-stu-id="ee331-115">See also</span></span>
+## <a name="requirements"></a><span data-ttu-id="bec61-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="bec61-111">Requirements</span></span>  
 
-- [<span data-ttu-id="ee331-116">Enumerações de metadados</span><span class="sxs-lookup"><span data-stu-id="ee331-116">Metadata Enumerations</span></span>](metadata-enumerations.md)
+ <span data-ttu-id="bec61-112">**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bec61-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="bec61-113">**Cabeçalho:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="bec61-113">**Header:** CorHdr.h</span></span>  
+  
+ <span data-ttu-id="bec61-114">**.NET Framework versões:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bec61-114">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="bec61-115">Confira também</span><span class="sxs-lookup"><span data-stu-id="bec61-115">See also</span></span>
+
+- [<span data-ttu-id="bec61-116">Enumerações de metadados</span><span class="sxs-lookup"><span data-stu-id="bec61-116">Metadata Enumerations</span></span>](metadata-enumerations.md)
