@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: cf7b7cfa-1c4b-4d8c-be70-4f9ed15a788b
 topic_type:
 - apiref
-ms.openlocfilehash: b00be90316598e458f01f6cd440d0ad0a2e79c50
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 937a2fb322eb63461d90e215635e1b10ab6afd09
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212354"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689778"
 ---
 # <a name="icordebugmanagedcallback2-interface"></a>Interface ICorDebugManagedCallback2
-Fornece métodos para oferecer suporte à manipulação de exceção do depurador e aos assistentes de depuração gerenciados (MDAs). `ICorDebugManagedCallback2`é uma extensão lógica da interface [ICorDebugManagedCallback](icordebugmanagedcallback-interface.md) .  
+
+Fornece métodos para oferecer suporte à manipulação de exceção do depurador e aos assistentes de depuração gerenciados (MDAs). `ICorDebugManagedCallback2` é uma extensão lógica da interface [ICorDebugManagedCallback](icordebugmanagedcallback-interface.md) .  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método ChangeConnection](icordebugmanagedcallback2-changeconnection-method.md)|Notifica o depurador de que o conjunto de tarefas associado à conexão especificada foi alterado.|  
 |[Método CreateConnection](icordebugmanagedcallback2-createconnection-method.md)|Notifica o depurador de que uma nova conexão foi criada.|  
@@ -38,6 +39,7 @@ Fornece métodos para oferecer suporte à manipulação de exceção do depurado
 |[Método MDANotification](icordebugmanagedcallback2-mdanotification-method.md)|Fornece uma notificação de que a execução de código encontrou uma mensagem do assistente de depuração gerenciada (MDA).|  
   
 ## <a name="remarks"></a>Comentários  
+
  A `ICorDebugManagedCallback2` interface estende a `ICorDebugManagedCallback` interface para manipular novos eventos de depuração introduzidos na versão .NET Framework 2,0.  
   
  Um depurador deve implementar `ICorDebugManagedCallback2` se estiver depurando .NET Framework aplicativos 2,0. Uma instância do `ICorDebugManagedCallback` ou `ICorDebugManagedCallback2` é passada como o objeto de retorno de chamada para [ICorDebug:: SetManagedHandler](icordebug-setmanagedhandler-method.md).  
@@ -46,6 +48,7 @@ Fornece métodos para oferecer suporte à manipulação de exceção do depurado
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -56,6 +59,6 @@ Fornece métodos para oferecer suporte à manipulação de exceção do depurado
   
 ## <a name="see-also"></a>Confira também
 
-- [Diagnosticando erros com assistentes para depuração gerenciada](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosticando erros com assistentes de depuração gerenciados](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [Depurando interfaces](debugging-interfaces.md)
 - [Interface ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)

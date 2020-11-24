@@ -7,17 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, performance tuning
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
-ms.openlocfilehash: 247ebb868a9256deaf59c1369e6143e15af4d6b0
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 64eb346ba57e9af9f5be0cc1b42398c4f539d4d4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829967"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689895"
 ---
 # <a name="understanding-speedup-in-plinq"></a>Noções básicas sobre agilização em PLINQ
+
 O principal objetivo do PLINQ é acelerar a execução das consultas do LINQ to Objects executando os delegados da consulta em paralelo em computadores com vários núcleos. O PLINQ funciona melhor quando o processamento de cada elemento em uma coleção de origem é independente, sem nenhum estado compartilhado envolvido entre os delegados individuais. Tais operações são comuns em LINQ to Objects e PLINQ, e muitas vezes são chamadas de "*fantasticamente paralelas*", pois elas se prestam facilmente ao agendamento em múltiplos segmentos. No entanto, nem todas as consultas consistem por completo em operações fantasticamente paralelas; na maioria dos casos, uma consulta envolve alguns operadores que não podem ser paralelizados ou que retardam a execução paralela. E mesmo com consultas que são fantasticamente paralelas por completo, o PLINQ ainda deve particionar a fonte de dados e agendar o trabalho nos threads e, normalmente, mesclar os resultados quando a consulta for concluída. Todas essas operações aumentam o custo computacional da paralelização; esses custos de adição de paralelização são chamados de *sobrecarga*. Para obter o melhor desempenho em uma consulta PLINQ, o objetivo é maximizar as partes que são fantasticamente paralelas e minimizar as partes que exigem sobrecarga. Este artigo fornece informações que ajudarão você a gravar consultas PLINQ que sejam tão eficientes quanto possível, enquanto ainda produzem resultados corretos.  
   
 ## <a name="factors-that-impact-plinq-query-performance"></a>Fatores que afetam o desempenho da consulta PLINQ  
+
  As seções a seguir enumeram alguns dos fatores mais importantes que influenciam o desempenho da consulta paralela. Essas são declarações gerais que, por si só, não são suficientes para prever o desempenho da consulta em todos os casos. Como sempre, é importante medir o desempenho real de consultas específicas em computadores com uma variedade de configurações e cargas representativas.  
   
 1. Custo computacional do trabalho geral.  
@@ -65,6 +67,7 @@ O principal objetivo do PLINQ é acelerar a execução das consultas do LINQ to 
      Em alguns casos, uma consulta PLINQ sobre uma coleção de fonte indexável pode resultar em uma carga de trabalho desbalanceada. Quando isso ocorre, você poderá aumentar o desempenho da consulta criando um particionador personalizado. Para saber mais, veja [Particionadores personalizados para PLINQ e TPL](custom-partitioners-for-plinq-and-tpl.md).  
   
 ## <a name="when-plinq-chooses-sequential-mode"></a>Quando o PLINQ escolhe o modo sequencial  
+
  PLINQ sempre tentará executar uma consulta pelo menos tão rápido quanto a consulta seria executada sequencialmente. Embora o PLINQ não observe o quanto delegados de usuário são computacionalmente caros, ou quanto a fonte de entrada é grande, ele procura determinadas "formas" de consulta. Especificamente, ele busca operadores de consulta ou combinações de operadores que geralmente fazem com que uma consulta seja executada mais lentamente em modo paralelo. Quando encontradas essas formas, o PLINQ por padrão voltará ao modo sequencial.  
   
  No entanto, depois de medir o desempenho de uma consulta específica, você pode determinar que ele realmente é executado mais rápido no modo paralelo. Nesses casos, você pode usar o sinalizador <xref:System.Linq.ParallelExecutionMode.ForceParallelism?displayProperty=nameWithType> através do método <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> para instruir o PLINQ para paralelizar a consulta. Para saber mais, veja [Como especificar o modo de execução em PLINQ](how-to-specify-the-execution-mode-in-plinq.md).  

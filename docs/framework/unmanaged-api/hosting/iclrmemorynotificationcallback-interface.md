@@ -14,31 +14,34 @@ helpviewer_keywords:
 ms.assetid: 873639e2-4837-4568-83b3-4493e67e4174
 topic_type:
 - apiref
-ms.openlocfilehash: 52fc21044d345998ad72c045cdf5e80a8a03a38e
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 5762a354bec485cb382b5460dfd2a337f79bee1a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703807"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689531"
 ---
 # <a name="iclrmemorynotificationcallback-interface"></a>Interface ICLRMemoryNotificationCallback
+
 Permite que o host relate condições de pressão de memória usando uma abordagem semelhante à da `CreateMemoryResourceNotification` função do Win32.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método OnMemoryNotification](iclrmemorynotificationcallback-onmemorynotification-method.md)|Notifica o Common Language Runtime (CLR) da carga de memória no computador.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O host usa a `ICLRMemoryNotificationCallback` interface para solicitar que os recursos de memória livre do CLR.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

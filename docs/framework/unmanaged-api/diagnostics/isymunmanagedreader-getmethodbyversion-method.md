@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6ddb0631-4569-41b3-93e4-50fdfaa486dc
 topic_type:
 - apiref
-ms.openlocfilehash: 60fbccabd21fb8bee118689a524efa9031bb2124
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 64e6b9a1942e9a69e43de3d2f09564814328ec08
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614988"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689609"
 ---
 # <a name="isymunmanagedreadergetmethodbyversion-method"></a>Método ISymUnmanagedReader::GetMethodByVersion
+
 Obtém um método de leitor de símbolo, dado um token de método e um número de versão de edição e cópia. Os números de versão começam em 1 e são incrementados cada vez que o método é alterado como resultado de uma operação de edição e cópia.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -35,6 +36,7 @@ HRESULT GetMethodByVersion (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `token`  
  no O token do método.  
   
@@ -44,10 +46,12 @@ HRESULT GetMethodByVersion (
  `pRetVal`  
  fora Um ponteiro para a interface retornada.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Confira também

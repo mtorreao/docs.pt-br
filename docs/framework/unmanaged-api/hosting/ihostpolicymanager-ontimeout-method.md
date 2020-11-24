@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0a313b51-5e4d-4714-a86b-af75cf3902e6
 topic_type:
 - apiref
-ms.openlocfilehash: fb0f943d710322257d052edc5c16108671622790
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: e3f2dc7ff9beaf417184f3d09db76e611982118a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804216"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690662"
 ---
 # <a name="ihostpolicymanagerontimeout-method"></a>Método IHostPolicyManager::OnTimeout
+
 Notifica o host que o Common Language Runtime (CLR) está prestes a executar a ação especificada por uma chamada para o método [ICLRPolicyManager:: SetActionOnTimeout](iclrpolicymanager-setactionontimeout-method.md) em resposta a um tempo limite.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -35,6 +36,7 @@ HRESULT OnTimeout (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `operation`  
  no Um dos valores de [EClrOperation](eclroperation-enumeration.md) , indicando o tipo de operação que atingiu o tempo limite.  
   
@@ -45,7 +47,7 @@ HRESULT OnTimeout (
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`OnTimeout`retornado com êxito.|  
+|S_OK|`OnTimeout` retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O CLR não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -53,11 +55,12 @@ HRESULT OnTimeout (
 |E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retorna E_FAIL, o CLR não é mais utilizável no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

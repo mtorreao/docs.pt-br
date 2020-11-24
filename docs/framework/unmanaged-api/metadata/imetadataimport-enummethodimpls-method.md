@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4e0f865d-88b5-44bd-be35-492622e5e08e
 topic_type:
 - apiref
-ms.openlocfilehash: b8fabea78f85448e39fc6d31f0a7969458343877
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 40ab610110e96018b1c598d04b24a762ecb50717
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84491999"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690480"
 ---
 # <a name="imetadataimportenummethodimpls-method"></a>Método IMetaDataImport::EnumMethodImpls
+
 Enumera os tokens MethodBody e MethodDeclaration que representam métodos do tipo especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -39,6 +40,7 @@ HRESULT EnumMethodImpls (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `phEnum`  
  [entrada, saída] Um ponteiro para o enumerador. Isso deve ser nulo para a primeira chamada deste método.  
   
@@ -59,17 +61,18 @@ HRESULT EnumMethodImpls (
   
 ## <a name="return-value"></a>Valor Retornado  
   
-|HRESULT|Descrição|  
+|HRESULT|DESCRIÇÃO|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodImpls`retornado com êxito.|  
+|`S_OK`|`EnumMethodImpls` retornado com êxito.|  
 |`S_FALSE`|Não há tokens de método para enumerar. Nesse caso, `pcTokens` é zero.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

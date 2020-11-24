@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ae6cfb29-bc2c-4606-af86-1d32ebd31020
 topic_type:
 - apiref
-ms.openlocfilehash: 864acb07797676c825afe62321b0d65e37938fa6
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 3f0d0e060bba832080dd8fbfab62f3115fec0aab
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615001"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689635"
 ---
 # <a name="isymunmanagedreadergetmethod-method"></a>Método ISymUnmanagedReader::GetMethod
+
 Obtém um método de leitor de símbolo, dado um token de método.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,16 +35,19 @@ HRESULT GetMethod (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `token`  
  no O token do método.  
   
  `pRetVal`  
  fora Um ponteiro para a interface retornada.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Confira também

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 347d7e5c-c90f-45ad-bd1e-2c7912b0b19c
 topic_type:
 - apiref
-ms.openlocfilehash: 79b1493d262288c1d85a56538810e35a73441595
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: eef2c733f96d74e3353a940cc90f1a631cf48a36
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84491743"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690485"
 ---
 # <a name="imetadataimportenumpermissionsets-method"></a>Método IMetaDataImport::EnumPermissionSets
+
 Enumera permissões para os objetos em um escopo de metadados especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -39,6 +40,7 @@ HRESULT EnumPermissionSets
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `phEnum`  
  [entrada, saída] Um ponteiro para o enumerador. Isso deve ser nulo para a primeira chamada deste método.  
   
@@ -59,17 +61,18 @@ HRESULT EnumPermissionSets
   
 ## <a name="return-value"></a>Valor Retornado  
   
-|HRESULT|Descrição|  
+|HRESULT|DESCRIÇÃO|  
 |-------------|-----------------|  
-|`S_OK`|`EnumPermissionSets`retornado com êxito.|  
+|`S_OK`|`EnumPermissionSets` retornado com êxito.|  
 |`S_FALSE`|Não há tokens para enumerar. Nesse caso, `pcTokens` é zero.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
