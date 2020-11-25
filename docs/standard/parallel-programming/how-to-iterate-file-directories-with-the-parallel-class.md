@@ -7,17 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - parallel loops, how to iterate directories
 ms.assetid: 555e9f48-f53d-4774-9bcf-3e965c732ec5
-ms.openlocfilehash: e29769a0dc40e88a53b0a3f063f79c8c89edbce6
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 75097485c78e9ded67f41d9632f5399c081b3a16
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825696"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734459"
 ---
 # <a name="how-to-iterate-file-directories-with-the-parallel-class"></a>Como: fazer iterações de diretórios de arquivos com a Classe Paralela
+
 Em muitos casos, a iteração de arquivo é uma operação que pode ser facilmente paralelizada. O tópico [Como iterar diretórios de arquivos com o PLINQ](how-to-iterate-file-directories-with-plinq.md) mostra a maneira mais fácil de executar essa tarefa para muitos cenários. No entanto, podem surgir complicações quando seu código precisa lidar com vários tipos de exceções ao acessar o sistema de arquivos. O exemplo a seguir mostra uma abordagem para o problema. Ele usa uma iteração baseada em pilha para transportar todos os arquivos e pastas para um diretório especificado, e permite que seu código capture e trate várias exceções. É claro que a forma como você manipula as exceções fica a seu critério.  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir itera os diretórios sequencialmente, mas processa os arquivos em paralelo. Essa é provavelmente a melhor abordagem quando você tem uma proporção de arquivo para diretório grande. Também é possível paralelizar a iteração de diretórios e acessar cada arquivo em sequência. Provavelmente, não é eficiente paralelizar os dois loops, a menos que você esteja direcionando especificamente a uma máquina com muitos processadores. No entanto, como em todos os casos, você deve testar cuidadosamente seu aplicativo para determinar a melhor abordagem.  
   
  [!code-csharp[TPL_Parallel#08](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/parallel_file.cs#08)]

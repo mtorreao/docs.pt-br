@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 20bdf8ff-2d15-4c64-8950-6888f642d6c0
 topic_type:
 - apiref
-ms.openlocfilehash: 9a3a6c07a9cace0ac9834cdb05925a301285204c
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: c76c8b23e707b530cbf1c28d03fbf2f84d424482
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615313"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734004"
 ---
 # <a name="isymunmanagedsourceservermodulegetsourceserverdata-method"></a>Método ISymUnmanagedSourceServerModule::GetSourceServerData
+
 Retorna os dados do servidor de origem para o módulo. O chamador deve liberar recursos usando o `CoTaskMemFree` .  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,18 +35,21 @@ HRESULT GetSourceServerData(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pDataByteCount`  
  fora Um ponteiro para um `ULONG32` que recebe o tamanho, em bytes, dos dados do servidor de origem.  
   
  `ppData`  
  fora Um ponteiro para o `pDataByteCount` valor retornado.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ISymUnmanagedSourceServerModule](isymunmanagedsourceservermodule-interface.md)

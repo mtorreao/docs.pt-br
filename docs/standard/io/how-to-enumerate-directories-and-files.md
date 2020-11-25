@@ -8,14 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - I/O [.NET], enumerating directories and files
 ms.assetid: 86b69a08-3bfa-4e5f-b4e1-3b7cb8478215
-ms.openlocfilehash: da55881b9ca517abd045d4ebd2a5307c67d06560
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7f565531bc3ed44370da8859ed210e0e25027d78
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830890"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734654"
 ---
 # <a name="how-to-enumerate-directories-and-files"></a>Como: enumerar diretórios e arquivos
+
 Coleções enumeráveis fornecem um desempenho melhor do que matrizes ao trabalhar com coleções grandes de arquivos e diretórios. Para enumerar diretórios e arquivos, use métodos que retornam uma coleção enumerável de nomes de diretório ou arquivo ou seus objetos <xref:System.IO.DirectoryInfo>, <xref:System.IO.FileInfo> ou <xref:System.IO.FileSystemInfo>.  
   
 Caso deseje pesquisar e retornar somente os nomes de diretórios ou arquivos, use os métodos de enumeração da classe <xref:System.IO.Directory>. Caso deseje pesquisar e retornar outras propriedades de diretórios ou arquivos, use as classes <xref:System.IO.DirectoryInfo> e <xref:System.IO.FileSystemInfo>.  
@@ -63,4 +64,4 @@ O exemplo a seguir usa o método <xref:System.IO.DirectoryInfo.EnumerateFiles%2A
   
 ## <a name="see-also"></a>Confira também
 
-- [Arquivo e e/s de fluxo](index.md)
+- [E/S de arquivo e de fluxo](index.md)

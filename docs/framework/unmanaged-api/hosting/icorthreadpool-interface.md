@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 18485a27-cae3-4c6a-baa8-f7df601122d5
 topic_type:
 - apiref
-ms.openlocfilehash: c50c109dc786a0749cca1543d10b7d172e03f0b1
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 2be1c5273a5450ce0f793ffa1fc10746e2f1161f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805345"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733939"
 ---
 # <a name="icorthreadpool-interface"></a>Interface ICorThreadpool
+
 Fornece métodos para acessar o pool de threads.  
   
 > [!NOTE]
@@ -29,7 +30,7 @@ Fornece métodos para acessar o pool de threads.
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método CorRegisterWaitForSingleObject](icorthreadpool-corregisterwaitforsingleobject-method.md)|Reservado apenas para uso interno.|  
 |[Método CorUnregisterWait](icorthreadpool-corunregisterwait-method.md)|Reservado apenas para uso interno.|  
@@ -44,11 +45,12 @@ Fornece métodos para acessar o pool de threads.
 |[Método CorGetAvailableThreads](icorthreadpool-corgetavailablethreads-method.md)|Reservado apenas para uso interno.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

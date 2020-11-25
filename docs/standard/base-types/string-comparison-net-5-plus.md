@@ -2,20 +2,20 @@
 title: Alterações de comportamento ao comparar cadeias de caracteres no .NET 5 +
 description: Saiba mais sobre alterações de comportamento de comparação de cadeia de caracteres no .NET 5 e versões posteriores no Windows.
 ms.date: 11/04/2020
-ms.openlocfilehash: 49be2169bb165b8fe0205800415542bea7bf9787
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: fa1a1d12f45e5b41877a674d7b8747bb2b2f9658
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93403601"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734225"
 ---
 # <a name="behavior-changes-when-comparing-strings-on-net-5"></a>Alterações de comportamento ao comparar cadeias de caracteres no .NET 5 +
 
-O .NET 5,0 apresenta uma alteração comportamental de tempo de execução em que as APIs de globalização [agora usam o ICU por padrão](../../core/compatibility/3.1-5.0.md#globalization-apis-use-icu-libraries-on-windows) em todas as plataformas com suporte. Essa é uma partida de versões anteriores do .NET Core e da .NET Framework, que utiliza a funcionalidade NLS (suporte ao idioma nacional) do sistema operacional quando executada no Windows. Para obter mais informações sobre essas alterações, incluindo opções de compatibilidade que podem reverter a alteração de comportamento, consulte [.net Globalization and ICU](../globalization-localization/globalization-icu.md).
+O .NET 5,0 apresenta uma alteração comportamental de tempo de execução em que as APIs de globalização [agora usam o ICU por padrão](../../core/compatibility/globalization/5.0/icu-globalization-api.md) em todas as plataformas com suporte. Essa é uma partida de versões anteriores do .NET Core e da .NET Framework, que utiliza a funcionalidade NLS (suporte ao idioma nacional) do sistema operacional quando executada no Windows. Para obter mais informações sobre essas alterações, incluindo opções de compatibilidade que podem reverter a alteração de comportamento, consulte [.net Globalization and ICU](../globalization-localization/globalization-icu.md).
 
 ## <a name="reason-for-change"></a>Motivo da alteração
 
-Essa alteração foi introduzida para unificar. Comportamento de globalização da rede em todos os sistemas operacionais com suporte. Ele também fornece a capacidade de os aplicativos agruparem suas próprias bibliotecas de globalização em vez de depender das bibliotecas internas do sistema operacional. Para obter mais informações, consulte [a notificação de alteração significativa](../../core/compatibility/3.1-5.0.md#globalization-apis-use-icu-libraries-on-windows).
+Essa alteração foi introduzida para unificar. Comportamento de globalização da rede em todos os sistemas operacionais com suporte. Ele também fornece a capacidade de os aplicativos agruparem suas próprias bibliotecas de globalização em vez de depender das bibliotecas internas do sistema operacional. Para obter mais informações, consulte [a notificação de alteração significativa](../../core/compatibility/globalization/5.0/icu-globalization-api.md).
 
 ## <a name="behavioral-differences"></a>Diferenças de comportamento
 
@@ -139,9 +139,9 @@ Para obter uma análise mais detalhada do comportamento padrão de cada <xref:Sy
 
 ## <a name="ordinal-vs-linguistic-search-and-comparison"></a>Pesquisa e comparação de ordinal vs. linguística
 
-A pesquisa e a comparação de *ordinal* (também conhecida como *não lingüística* ) decompõem uma cadeia de caracteres em seus `char` elementos individuais e executa uma pesquisa Char-por-char ou uma comparação. Por exemplo, as cadeias de caracteres `"dog"` e `"dog"` comparar como *iguais* em um comparador `Ordinal` , já que as duas cadeias de caracteres consistem na mesma sequência exata de caracteres. No entanto, `"dog"` e `"Dog"` comparar como *não igual* em um comparador `Ordinal` , porque eles não consistem na mesma sequência exata de caracteres. Ou seja, o `'D'` ponto de código de maiúsculas `U+0044` ocorre antes `'d'` do ponto de código de minúsculas `U+0064` , resultando na `"dog"` classificação antes `"Dog"` .
+A pesquisa e a comparação de *ordinal* (também conhecida como *não lingüística*) decompõem uma cadeia de caracteres em seus `char` elementos individuais e executa uma pesquisa Char-por-char ou uma comparação. Por exemplo, as cadeias de caracteres `"dog"` e `"dog"` comparar como *iguais* em um comparador `Ordinal` , já que as duas cadeias de caracteres consistem na mesma sequência exata de caracteres. No entanto, `"dog"` e `"Dog"` comparar como *não igual* em um comparador `Ordinal` , porque eles não consistem na mesma sequência exata de caracteres. Ou seja, o `'D'` ponto de código de maiúsculas `U+0044` ocorre antes `'d'` do ponto de código de minúsculas `U+0064` , resultando na `"dog"` classificação antes `"Dog"` .
 
-Um comparador `OrdinalIgnoreCase` ainda opera com base Char-por-Char, mas elimina diferenças de maiúsculas e minúsculas ao executar a operação. Em um `OrdinalIgnoreCase` comparador, os pares de caracteres `'d'` e `'D'` comparar como *iguais* , assim como os pares de caracteres `'á'` e `'Á'` . Mas o caractere não acentuado `'a'` compara como *não igual* ao caractere acentuado `'á'` .
+Um comparador `OrdinalIgnoreCase` ainda opera com base Char-por-Char, mas elimina diferenças de maiúsculas e minúsculas ao executar a operação. Em um `OrdinalIgnoreCase` comparador, os pares de caracteres `'d'` e `'D'` comparar como *iguais*, assim como os pares de caracteres `'á'` e `'Á'` . Mas o caractere não acentuado `'a'` compara como *não igual* ao caractere acentuado `'á'` .
 
 Alguns exemplos disso são fornecidos na tabela a seguir:
 

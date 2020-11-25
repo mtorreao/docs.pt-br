@@ -6,17 +6,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8e4450dc-56b3-472b-b467-32f5694f83ad
-ms.openlocfilehash: b8a67d1fd508d0674d9230d4b934071a15669599
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b6b68d9351431acc6d9ef20276f51ac4d667d325
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829239"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734680"
 ---
 # <a name="select-nodes-using-xpath-navigation"></a>Selecionar nós usando a navegação XPath
+
 O DOM (Document Object Model) XML contém métodos que permitem que você use a navegação da linguagem XPath para consultar informações no DOM. Você pode usar a linguagem XPath para localizar um único nó específico ou todos os nós que correspondam a alguns critérios.  
   
 ## <a name="xpath-select-methods"></a>Métodos de seleção XPath  
+
  As classes DOM fornecem dois métodos de seleção XPath: o método <xref:System.Xml.XmlNode.SelectSingleNode%2A> e o método <xref:System.Xml.XmlNode.SelectNodes%2A>. O método <xref:System.Xml.XmlNode.SelectSingleNode%2A> retorna o primeiro nó que corresponde aos critérios de seleção. O método <xref:System.Xml.XmlNode.SelectNodes%2A> retorna um <xref:System.Xml.XmlNodeList> que contém os nós correspondentes.  
   
  O exemplo a seguir usa o método <xref:System.Xml.XmlNode.SelectSingleNode%2A> para selecionar o primeiro nó `book`, no qual o sobrenome do autor atende a critérios específicos. O arquivo bookstore.xml (que é fornecido no final deste tópico) é usado como o arquivo de entrada.  
@@ -122,12 +124,14 @@ this doc.DocumentElement.FirstChild.SelectNodes(. . .);
 > Quando o documento subjacente é modificado, é aconselhável executar novamente a seleção. Se o nó modificado for um que possa fazer com que o nó seja adicionado à lista de nós quando não tiver sido anteriormente, ou que agora faça com que ele seja removido da lista, não haverá nenhuma garantia de que a lista de nós agora esteja exata.  
   
 ## <a name="namespaces-in-xpath-expressions"></a>Namespaces em expressões XPath  
+
  As expressões XPath podem incluir namespaces A resolução de namespace tem suporte com o uso do <xref:System.Xml.XmlNamespaceManager>. Se a expressão XPath incluir um prefixo, o par de prefixo e URI de namespace deverá ser adicionado a <xref:System.Xml.XmlNamespaceManager>, e <xref:System.Xml.XmlNamespaceManager> será passado ao método <xref:System.Xml.XmlNode.SelectNodes%28System.String%2CSystem.Xml.XmlNamespaceManager%29> ou <xref:System.Xml.XmlNode.SelectSingleNode%28System.String%2CSystem.Xml.XmlNamespaceManager%29>. Observe que os exemplos de código acima usam <xref:System.Xml.XmlNamespaceManager> para resolver o namespace do documento bookstore.xml.  
   
 > [!NOTE]
 > Se a expressão XPath não incluir um prefixo, presume-se que o URI do namespace seja o namespace vazio. Se o XML incluir um namespace padrão, você ainda deverá adicionar um prefixo e um URI de namespace a <xref:System.Xml.XmlNamespaceManager>; caso contrário, nenhum nó será selecionado.  
   
 #### <a name="input-file"></a>Arquivo de entrada  
+
  A seguir está o arquivo bookstore.xml que é usado como o arquivo de entrada nos exemplos deste tópico:  
   
 ```xml  

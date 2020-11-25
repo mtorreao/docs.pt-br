@@ -6,14 +6,15 @@ helpviewer_keywords:
 - virtual members
 - members [.NET Framework], virtual
 ms.assetid: 8ff4eb97-0364-43ec-8a02-934b5cd94d19
-ms.openlocfilehash: 22eb71ccfc1b9a3d359b0453e4ff47f3f41827f5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7727ea7fcfdbbecf2e53ddd7a44b4cf907211f80
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828394"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734342"
 ---
 # <a name="virtual-members"></a>Membros virtuais
+
 Os membros virtuais podem ser substituídos, alterando assim o comportamento da subclasse. Eles são bastante semelhantes aos retornos de chamada em termos da extensibilidade que eles fornecem, mas são melhores em termos de desempenho de execução e consumo de memória. Além disso, os membros virtuais sentem-se mais naturais em cenários que exigem a criação de um tipo especial de um Type (especialização) existente.
 
  Os membros virtuais têm um desempenho melhor do que retornos de chamada e eventos, mas não têm melhor desempenho do que métodos não virtuais.

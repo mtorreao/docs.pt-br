@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: cdeda721-b214-4503-a291-c70b68b5f36b
 topic_type:
 - apiref
-ms.openlocfilehash: daf5319f5d57f44cb20ce9f28d3c7b84c7015ff6
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 3794a3b308bd5c96a38337d8b81e61167e4dc988
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894914"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734043"
 ---
 # <a name="icordebugassemblygetname-method"></a>Método ICorDebugAssembly::GetName
+
 Obtém o nome do assembly que esta `ICorDebugAssembly` instância representa.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,6 +37,7 @@ HRESULT GetName (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `cchName`  
  no O tamanho da `szName` matriz.  
   
@@ -46,9 +48,11 @@ HRESULT GetName (
  fora Uma matriz que armazena o nome.  
   
 ## <a name="remarks"></a>Comentários  
+
  O `GetName` método retorna o caminho completo e o nome do arquivo do assembly.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

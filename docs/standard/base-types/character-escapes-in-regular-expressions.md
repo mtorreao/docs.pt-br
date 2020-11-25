@@ -14,14 +14,15 @@ helpviewer_keywords:
 - .NET regular expressions, character escapes
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-ms.openlocfilehash: 5a9890f9ada6a4e749c8cf5ee96d9e8668525040
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 820e6cd7fa4a60fa6adfcaf0f0ff4d25fdda0f21
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823258"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734381"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Escapes de caracteres em expressões regulares
+
 A barra invertida (\\) em uma expressão regular indica uma das situações a seguir:  
   
 - O caractere que segue é um caractere especial, conforme mostrado na tabela na seção a seguir. Por exemplo, `\b` é uma âncora que indica que uma correspondência da expressão regular deve começar em um limite de palavra, `\t` representa uma tabulação e `\x020` representa um espaço.  
@@ -32,6 +33,7 @@ A barra invertida (\\) em uma expressão regular indica uma das situações a se
 > Escapes de caracteres são reconhecidos em padrões de expressão regulares, mas não em padrões de substituição.  
   
 ## <a name="character-escapes-in-net"></a>Escapes de caracteres em .NET  
+
  A tabela a seguir lista os escapes de caracteres com suporte das expressões regulares em .NET.  
   
 |Caractere ou sequência|Descrição|  
@@ -47,11 +49,12 @@ A barra invertida (\\) em uma expressão regular indica uma das situações a se
 |`\e`|Corresponde a um escape, `\u001B`.|  
 |`\`*nnn*|Corresponde a um caractere ASCII, em que *nnn* consiste em dois ou três dígitos que representam o código de caractere octal. Por exemplo, `\040` representa um caractere de espaço. Esse constructo é interpretado como referência inversa se tiver apenas um dígito (por exemplo, `\2`) ou se corresponder ao número de um grupo de captura. (Confira [Constructos de referência inversa](backreference-constructs-in-regular-expressions.md)).|  
 |`\x` *nn*|Corresponde a um caractere ASCII, em que *nn* é um código de caractere hexadecimal com dois dígitos.|  
-|`\c`*X*|Corresponde a um caractere de controle ASCII, em que X é a letra do caractere de controle. Por exemplo, `\cC` é CTRL-C.|  
+|`\c` *X*|Corresponde a um caractere de controle ASCII, em que X é a letra do caractere de controle. Por exemplo, `\cC` é CTRL-C.|  
 |`\u` *nnnn*|Corresponde a uma unidade de código UTF-16 cujo valor é *nnnn* hexadecimal. **Observação:**  O caractere de escape do Perl 5 que é usado para especificar o Unicode não tem suporte do .NET. O escape de caractere do Perl 5 tem o formulário `\x{` *####* `…}` , em que *####* `…` é uma série de dígitos hexadecimais. Em vez disso, use `\u`*nnnn*.|  
 |`\`|Quando seguido por um caractere que não é reconhecido como um caractere com escape, corresponde a esse caractere. Por exemplo, `\*` corresponde a um asterisco (*) e é igual a `\x2A`.|  
   
 ## <a name="an-example"></a>Um Exemplo  
+
  O exemplo a seguir ilustra o uso de escapes de caracteres em uma expressão regular. Ele analisa uma cadeia de caracteres que contém os nomes das maiores cidades do mundo e suas populações em 2009. O nome de cada cidade é separado da sua população por uma tabulação (`\t`) ou uma barra vertical (&#124; ou `\u007c`). Cidades individuais e suas populações são separadas umas das outras por um retorno de carro e uma alimentação de linha.  
   
  [!code-csharp[RegularExpressions.Language.Escapes#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.escapes/cs/escape1.cs#1)]

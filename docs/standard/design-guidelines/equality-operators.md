@@ -8,14 +8,15 @@ helpviewer_keywords:
 - Equals method
 - == operator (equality) [.NET Framework]
 ms.assetid: bc496a91-fefb-4ce0-ab4c-61f09964119a
-ms.openlocfilehash: 85a9e81d28995229e6b47d7fe4d0b541265999f8
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2331a852adb4dd254af85060a5077f454bcfe0eb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821340"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734420"
 ---
 # <a name="equality-operators"></a>Operadores de igualdade
+
 Esta seção discute como sobrecarregar operadores de igualdade e se refere `operator==` e `operator!=` como operadores de igualdade.
 
  ❌ Não sobrecarregar um dos operadores de igualdade e não o outro.
@@ -29,11 +30,13 @@ Esta seção discute como sobrecarregar operadores de igualdade e se refere `ope
  Por exemplo, retorne FALSE se um dos argumentos for nulo em vez de lançá-lo `NullReferenceException` .
 
 ## <a name="equality-operators-on-value-types"></a>Operadores de igualdade em tipos de valor
+
  ✔️ sobrecarregar os operadores de igualdade em tipos de valor, se a igualdade for significativa.
 
  Na maioria das linguagens de programação, não há nenhuma implementação padrão de `operator==` para tipos de valor.
 
 ## <a name="equality-operators-on-reference-types"></a>Operadores de igualdade em tipos de referência
+
  ❌ EVITE sobrecarregar operadores de igualdade em tipos de referência mutáveis.
 
  Muitas linguagens têm operadores de igualdade internos para tipos de referência. Os operadores internos geralmente implementam a igualdade de referência e muitos desenvolvedores ficam surpresos quando o comportamento padrão é alterado para a igualdade do valor.

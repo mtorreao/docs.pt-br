@@ -2,17 +2,19 @@
 title: Tipos de nós reconhecidos com consultas XPath
 ms.date: 03/30/2017
 ms.assetid: 1d33e22d-18e5-43f8-a466-2e3d0a8dd094
-ms.openlocfilehash: 87f4ed0c8182e250f6926d6c3d82893e6f8b985c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: bfc94958dbe54f05773a3adfcdfa9bf1c7ee8037
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830097"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734077"
 ---
 # <a name="node-types-recognized-with-xpath-queries"></a>Tipos de nós reconhecidos com consultas XPath
+
 Os tipos de nós reconhecidas em uma consulta XPath não são os mesmos tipos de nós localizados em Document Object Model (DOM).  
   
 ## <a name="w3c-xpath-node-types"></a>Tipos de nós XPath W3C  
+
  Os tipos de nós reconhecidas em uma consulta XPath não são tipos de nós localizados em Document Object Model (DOM). A seguir estão os tipos de nós XPath representados pela enumeração de <xref:System.Xml.XPath.XPathNodeType> .  
   
 - <xref:System.Xml.XPath.XPathNodeType.All>  

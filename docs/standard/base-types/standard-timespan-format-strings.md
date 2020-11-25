@@ -17,12 +17,12 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: ab64b2ef0a87cbad3b3c036d74f4690ff7fdb1f4
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 251f90e85d037d8cf4f3fd58bc27659c98d04b5e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831306"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734238"
 ---
 # <a name="standard-timespan-format-strings"></a>Cadeias de caracteres de formato TimeSpan padrão
 
@@ -47,13 +47,14 @@ A tabela a seguir lista os especificadores de formato de intervalo de tempo padr
 |"G"|Formato longo geral|Esse especificador sempre gera dias e sete dígitos de fração. Ele é sensível à cultura e assume o formato `[-]d':'hh':'mm':'ss.fffffff`.<br /><br /> Mais informações: [o especificador de formato longo geral ("G")](#the-general-long-g-format-specifier).|`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000 (en-US)<br /><br /> `New TimeSpan(18, 30, 0)` -> 0:18:30:00,0000000 (fr-FR)|  
 
 ## <a name="the-constant-c-format-specifier"></a>O especificador de formato de constante ("c")  
+
  O especificador de formato "c" retorna a representação de sequência de um valor <xref:System.TimeSpan> da seguinte forma:  
   
  [-][*d*.]*hh*:*mm*:*ss*[.*fffffff*]  
   
  Os elementos entre colchetes ([ e ]) são opcionais. O ponto (.) e os dois pontos (:) são símbolos literais. A tabela a seguir descreve os elementos restantes.  
   
-|Elemento|Descrição|  
+|Elemento|DESCRIÇÃO|  
 |-------------|-----------------|  
 |*-*|Um sinal negativo opcional, que indica um intervalo de tempo negativo.|  
 |*d*|O número opcional de dias, sem zeros à esquerda.|  
@@ -73,13 +74,14 @@ A tabela a seguir lista os especificadores de formato de intervalo de tempo padr
  [!code-vb[Conceptual.TimeSpan.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardc1.vb#1)]  
 
 ## <a name="the-general-short-g-format-specifier"></a>O especificador de formato curto geral ("g")  
+
  O especificador de formato <xref:System.TimeSpan> de "g" retorna a representação de sequência de um valor <xref:System.TimeSpan> em um formato compacto, incluindo apenas os elementos que são necessários. Ele tem o seguinte formato:  
   
  [-][*d*:]*h*:*mm*:*ss*[.*FFFFFFF*]  
   
  Os elementos entre colchetes ([ e ]) são opcionais. Os dois pontos (:) são um símbolo literal. A tabela a seguir descreve os elementos restantes.  
   
-|Elemento|Descrição|  
+|Elemento|DESCRIÇÃO|  
 |-------------|-----------------|  
 |*-*|Um sinal negativo opcional, que indica um intervalo de tempo negativo.|  
 |*d*|O número opcional de dias, sem zeros à esquerda.|  
@@ -97,13 +99,14 @@ A tabela a seguir lista os especificadores de formato de intervalo de tempo padr
  [!code-vb[Conceptual.TimeSpan.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardshort1.vb#4)]  
 
 ## <a name="the-general-long-g-format-specifier"></a>O especificador de formato longo geral ("G")  
+
  O especificador de formato <xref:System.TimeSpan> de "G" retorna a representação de sequência de um valor <xref:System.TimeSpan> em um formato longo que sempre inclui dias e a fração de segundo. A sequência que resulta do especificador de formato padrão "G" tem o seguinte formato:  
   
  [-] *d*:*hh*:*mm*:*SS*. *fffffff*  
   
  Os elementos entre colchetes ([ e ]) são opcionais. Os dois pontos (:) são um símbolo literal. A tabela a seguir descreve os elementos restantes.  
   
-|Elemento|Descrição|  
+|Elemento|DESCRIÇÃO|  
 |-------------|-----------------|  
 |*-*|Um sinal negativo opcional, que indica um intervalo de tempo negativo.|  
 |*d*|O número de dias, sem zeros à esquerda.|  

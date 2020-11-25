@@ -12,14 +12,15 @@ helpviewer_keywords:
 - data stores, obtaining
 - data storage using isolated storage, obtaining stores
 ms.assetid: fcb6b178-d526-47c4-b029-e946f880f9db
-ms.openlocfilehash: a3803f50c99b8c31030c6afe756e209c9350137f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ac53432374b546a46417e9d3b9de342a7ea2ef81
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830734"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734615"
 ---
 # <a name="how-to-obtain-stores-for-isolated-storage"></a>Como: Obter repositórios para o armazenamento isolado
+
 Um repositório isolado expõe um sistema de arquivos virtual dentro de um compartimento de dados. A classe <xref:System.IO.IsolatedStorage.IsolatedStorageFile> fornece vários métodos para interagir com um repositório isolado. Para criar e recuperar repositórios, o <xref:System.IO.IsolatedStorage.IsolatedStorageFile> fornece três métodos estáticos:  
   
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> retorna o armazenamento que é isolado pelo usuário e pelo assembly.  
@@ -45,6 +46,7 @@ Um repositório isolado expõe um sistema de arquivos virtual dentro de um compa
  Não há mecanismos que impeçam o código de passar um objeto <xref:System.IO.IsolatedStorage.IsolatedStorageFile> para o código que não tem acesso suficiente para obter o próprio repositório. As identidades de domínio e de assembly e as permissões de armazenamento isolado são verificadas apenas quando uma referência a um objeto <xref:System.IO.IsolatedStorage.IsolatedStorage> é obtida, normalmente no método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> ou <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A>. Proteger referências a objetos <xref:System.IO.IsolatedStorage.IsolatedStorageFile> é, portanto, a responsabilidade do código que usa essas referências.  
   
 ## <a name="example"></a>Exemplo  
+
  O código a seguir fornece um exemplo simples de uma classe obtendo um repositório que é isolado pelo usuário e pelo assembly. O código pode ser alterado para recuperar um repositório que é isolado pelo usuário, domínio e assembly adicionando <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Domain?displayProperty=nameWithType> aos argumentos que o método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> passa.  
   
  Depois de executar o código, você pode confirmar se um repositório foi criado digitando **StoreAdm /LIST** na linha de comando. Essa ação executa a [Ferramenta de armazenamento isolado (Storeadm.exe)](../../framework/tools/storeadm-exe-isolated-storage-tool.md) e lista todos os atuais repositórios isolados para o usuário.  

@@ -2,17 +2,19 @@
 title: Selecionando, avaliando e correspondente de dados XML usando XPathNavigator
 ms.date: 03/30/2017
 ms.assetid: 46e059f8-4dc8-4185-9236-784be95228ed
-ms.openlocfilehash: 249b99a627f3bbcc1723f104a80cb61552404877
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 3096582055dc17d5724cebd79e74d2aa24154bcb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822458"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734667"
 ---
 # <a name="selecting-evaluating-and-matching-xml-data-using-xpathnavigator"></a>Selecionando, avaliando e correspondente de dados XML usando XPathNavigator
+
 A classe de <xref:System.Xml.XPath.XPathNavigator> fornece métodos para nós selecionados em um objeto de <xref:System.Xml.XPath.XPathDocument> ou de <xref:System.Xml.XmlDocument> usando uma consulta XPath, valores e examina os resultados de uma expressão XPath, e determina se um nó em um objeto de <xref:System.Xml.XPath.XPathDocument> ou de <xref:System.Xml.XmlDocument> corresponde uma expressão XPath determinada. Esses e outros conceitos relacionados à selecionar, classificar e aos nós em um objeto de <xref:System.Xml.XPath.XPathDocument> ou de <xref:System.Xml.XmlDocument> são descritos nos tópicos a seguir.  
   
 ## <a name="in-this-section"></a>Nesta seção  
+
  [Selecionar dados XML usando XPathNavigator](select-xml-data-using-xpathnavigator.md)  
  Descreve o conjunto de métodos da classe <xref:System.Xml.XPath.XPathNavigator> usados para selecionar um conjunto de nós em um objeto de <xref:System.Xml.XPath.XPathDocument> ou de <xref:System.Xml.XmlDocument> usando uma expressão XPath.  
   

@@ -13,24 +13,26 @@ helpviewer_keywords:
 - reading data, strings
 - streams, reading characters from string
 ms.assetid: 27ea5e52-6db8-42d8-980a-50bcfc7fd270
-ms.openlocfilehash: ef545ddd1bebf993db32b1ec450b38defd567f65
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: beb3f4f38a5c28d19eff6fece5a6bb3c4e7a9c48
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830682"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734563"
 ---
 # <a name="how-to-read-characters-from-a-string"></a>Como: ler caracteres de uma cadeia de caracteres
 
 Os exemplos de código a seguir mostram como ler caracteres de forma síncrona ou assíncrona de uma cadeia de caracteres.  
   
 ## <a name="example-read-characters-synchronously"></a>Exemplo: ler caracteres de forma síncrona
+
  Este exemplo lê 13 caracteres de forma síncrona de uma cadeia de caracteres, armazena-os em uma matriz e exibe-os. Em seguida, o exemplo lê os caracteres restantes na cadeia de caracteres, armazena-os na matriz começando pelo sexto elemento e exibe o conteúdo da matriz.  
   
  [!code-csharp[Conceptual.StringReader#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.stringreader/cs/source.cs#1)]
  [!code-vb[Conceptual.StringReader#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.stringreader/vb/source.vb#1)]  
   
 ## <a name="example-read-characters-asynchronously"></a>Exemplo: ler caracteres de forma assíncrona  
+
  O próximo exemplo é o código por trás de um aplicativo WPF. Na carga de janela, o exemplo lê todos os caracteres de forma assíncrona de um controle <xref:System.Windows.Controls.TextBox> e os armazena em uma matriz. Em seguida, ele grava cada letra ou caractere de espaço em branco de forma assíncrona em uma linha separada de um controle <xref:System.Windows.Controls.TextBlock>.  
   
  [!code-csharp[Conceptual.StringReader#2](../../../samples/snippets/csharp/VS_Snippets_Wpf/StringReaderWriter/MainWindow.xaml.cs)]
@@ -47,4 +49,4 @@ Os exemplos de código a seguir mostram como ler caracteres de forma síncrona o
 - [Como: ler texto de um arquivo](how-to-read-text-from-a-file.md)  
 - [Como: gravar texto em um arquivo](how-to-write-text-to-a-file.md)  
 - [Como: gravar caracteres em uma cadeia de caracteres](how-to-write-characters-to-a-string.md)  
-- [Arquivo e e/s de fluxo](index.md)
+- [E/S de arquivo e de fluxo](index.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-ms.openlocfilehash: 0f2fbe7e8b9c13d811a2fe50db0709405dfa1da7
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f1cab01e7a6ee48bd01f65d4cc8a8a540fbabc61
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818811"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734199"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Substituições em expressões regulares
 
@@ -38,6 +38,7 @@ As substituições são elementos de linguagem que são reconhecidos apenas em p
 |$\_|Inclui a cadeia de entrada inteira na cadeia de caracteres de substituição. Para obter mais informações, consulte [substituindo toda a cadeia de caracteres de entrada](#substituting-the-entire-input-string).|  
   
 ## <a name="substitution-elements-and-replacement-patterns"></a>Elementos de substituição e padrões de substituição  
+
  As substituições são as únicas construções especiais reconhecidas em um padrão de substituição. Nenhum dos outros elementos de linguagem de expressões regulares, incluindo caracteres de escape e o ponto final (`.`), que corresponde a qualquer caractere, são aceitos. Da mesma forma, os elementos de linguagem de substituição são reconhecidos apenas nos padrões de substituição e nunca são válidos em padrões de expressões regulares.  
   
  O único caractere que pode aparecer em um padrão de expressão regular ou em uma substituição é o caractere `$`, embora ele tenha um significado diferente em cada contexto. Em um padrão de expressão regular, `$` é uma âncora que corresponde ao final da cadeia de caracteres. Em um padrão de substituição, `$` indica o início de uma substituição.  
@@ -46,6 +47,7 @@ As substituições são elementos de linguagem que são reconhecidos apenas em p
 > Para uma funcionalidade semelhante a um padrão de substituição dentro de uma expressão regular, use um backreference. Para obter mais informações sobre referências anteriores, consulte [construções de referência anterior](backreference-constructs-in-regular-expressions.md).  
 
 ## <a name="substituting-a-numbered-group"></a>Substituindo um grupo numerado  
+
  O `$` elemento de idioma *Number* inclui a última subcadeia de caracteres correspondida pelo grupo de captura de *número* na cadeia de caracteres de substituição, em que *Number* é o índice do grupo de captura. Por exemplo, o padrão de substituição `$1` indica que a subcadeia de caracteres correspondente deve ser substituída pelo primeiro grupo capturado. Para saber mais sobre os grupos de captura numerados, consulte [Constructos de agrupamento](grouping-constructs-in-regular-expressions.md).  
   
  Todos os dígitos a seguir `$` são interpretados como pertencentes ao grupo de *números* . Se essa não for sua intenção, você poderá substituir um grupo nomeado. Por exemplo, você pode usar a cadeia de caracteres de substituição `${1}1` em vez de `$11` para definir a cadeia de caracteres de substituição como o valor do primeiro grupo capturado junto com o número “1 ". Para obter mais informações, consulte [substituindo um grupo nomeado](#substituting-a-named-group).  
@@ -71,6 +73,7 @@ As substituições são elementos de linguagem que são reconhecidos apenas em p
 |`(\s?\d+[.,]?\d*)`|Corresponde a um espaço em branco seguido por um ou mais dígitos decimais, seguidos por zero ou um ponto ou uma vírgula, seguidos por zero ou mais dígitos decimais. Este é o primeiro grupo de captura. Como o padrão de substituição é `$1`, a chamada ao método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> substitui a subcadeia de caracteres inteira correspondente a esse grupo capturado.|  
 
 ## <a name="substituting-a-named-group"></a>Substituindo um grupo nomeado  
+
  O `${` elemento *Name* `}` Language substitui a última subcadeia de caracteres correspondida pelo *nome* capturando o grupo, em que *Name* é o nome de um grupo de captura definido pelo `(?<` elemento *Name* `>)` Language. Para saber mais sobre os grupos de captura nomeados, consulte [Constructos de agrupamento](grouping-constructs-in-regular-expressions.md).  
   
  Se o *nome* não especificar um grupo de captura nomeado válido definido no padrão de expressão regular, mas consistir em dígitos, o `${` *nome* `}` será interpretado como um grupo numerado.  
@@ -94,6 +97,7 @@ As substituições são elementos de linguagem que são reconhecidos apenas em p
 |`(?<amount>\s?\d[.,]?\d*)`|Corresponde a um espaço em branco seguido por um ou mais dígitos decimais, seguidos por zero ou um ponto ou uma vírgula, seguidos por zero ou mais dígitos decimais. Este é o grupo de captura chamado `amount`. Como o padrão de substituição é `${amount}`, a chamada ao método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> substitui a subcadeia de caracteres inteira correspondente a esse grupo capturado.|  
 
 ## <a name="substituting-a--character"></a>Substituindo um caractere “$”  
+
  A substituição de `$$` insere um caractere literal “$” na cadeia de caracteres substituída.  
   
  O exemplo a seguir usa o objeto <xref:System.Globalization.NumberFormatInfo> para determinar o símbolo de moeda atual da cultura e seu posicionamento em uma cadeia de caracteres de moeda. Ele então cria um padrão de expressão regular e um padrão de substituição dinamicamente. Se o exemplo é executado em um computador cuja cultura atual é en-US, ele gera o padrão de expressão regular `\b(\d+)(\.(\d+))?` e o padrão de substituição `$$ $1$2`. O padrão de substituição substitui o texto correspondente por um símbolo de moeda e um espaço seguido pelo primeiro e segundo grupos capturados.  
@@ -112,6 +116,7 @@ As substituições são elementos de linguagem que são reconhecidos apenas em p
 |`(\.(\d+))?`|Faz a correspondência de zero ou uma ocorrência de um período seguido por um ou mais dígitos decimais. Este é o segundo grupo de captura.|  
 
 ## <a name="substituting-the-entire-match"></a>Substituindo a correspondência inteira  
+
  A substituição `$&` inclui a correspondência inteira na cadeia de caracteres de substituição. Muitas vezes, ela é usada para adicionar uma subcadeia de caracteres ao início ou fim da cadeia de caracteres correspondente. Por exemplo, o padrão de substituição `($&)` adiciona parênteses no início e no final de cada correspondência. Se não houver correspondência, a substituição `$&` não terá efeito.  
   
  O exemplo a seguir usa a substituição `$&` para adicionar aspas no início e no final de títulos de livros armazenados em uma matriz de cadeia de caracteres.  
@@ -130,6 +135,7 @@ As substituições são elementos de linguagem que são reconhecidos apenas em p
  O padrão de substituição `"$&"` adiciona aspas literais no início e no final de cada correspondência.  
 
 ## <a name="substituting-the-text-before-the-match"></a>Substituindo texto antes da correspondência  
+
  A substituição ``$` `` substitui a cadeia de caracteres correspondida pela cadeia de caracteres de entrada inteira antes da correspondência. Ou seja, ela duplica a cadeia de caracteres de entrada até a correspondência e remove o texto correspondido. Qualquer texto após o texto correspondido permanece inalterado na cadeia de caracteres de resultado. Se houver várias correspondências em uma cadeia de caracteres de entrada, o texto de substituição será derivado da cadeia de caracteres de entrada original, em vez da cadeia de caracteres em que o texto foi substituído por correspondências anteriores. \(O exemplo fornece uma ilustração. \) Se não houver correspondência, a ``$` `` substituição não terá nenhum efeito.  
   
  O exemplo a seguir usa o padrão de expressão regular `\d+` para corresponder a uma sequência de um ou mais dígitos decimais na cadeia de caracteres de entrada. A cadeia de caracteres de substituição ``$` `` substitui esses dígitos pelo texto que precede a correspondência.  
@@ -148,6 +154,7 @@ As substituições são elementos de linguagem que são reconhecidos apenas em p
 |5|14|aa1bb2cc3dd4ee|aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddee **aa1bb2cc3dd4ee**|
 
 ## <a name="substituting-the-text-after-the-match"></a>Substituindo texto após a correspondência  
+
  A substituição `$'` substitui a cadeia de caracteres correspondida pela cadeia de caracteres de entrada inteira após a correspondência. Ou seja, ela duplica a cadeia de caracteres de entrada após a correspondência e remove o texto correspondido. Qualquer texto antes do texto correspondido permanece inalterado na cadeia de caracteres de resultado. Se não houver correspondência, a substituição `$'` não terá efeito.  
   
  O exemplo a seguir usa o padrão de expressão regular `\d+` para corresponder a uma sequência de um ou mais dígitos decimais na cadeia de caracteres de entrada. A cadeia de caracteres de substituição `$'` substitui esses dígitos pelo texto após a correspondência.  
@@ -166,6 +173,7 @@ As substituições são elementos de linguagem que são reconhecidos apenas em p
 |5|14|<xref:System.String.Empty?displayProperty=nameWithType>|aabb2cc3dd4ee5bbcc3dd4ee5ccdd4ee5ddee5ee|  
 
 ## <a name="substituting-the-last-captured-group"></a>Substituindo o último grupo capturado  
+
  A substituição `$+` substitui a cadeia de caracteres correspondida pelo último grupo capturado. Se não houver nenhum grupo capturado ou se o valor do grupo capturado por último for <xref:System.String.Empty?displayProperty=nameWithType>, a substituição `$+` não terá efeito.  
   
  O exemplo a seguir identifica palavras duplicadas em uma cadeia de caracteres e usa a substituição `$+` para substituí-los por uma única ocorrência da palavra. A opção <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> é usada para garantir que as palavras que diferem apenas em termos de letras maiúsculas e minúsculas, mas que de outra forma são idênticas, sejam consideradas duplicadas.  
@@ -184,6 +192,7 @@ As substituições são elementos de linguagem que são reconhecidos apenas em p
 |`\b`|Termina a correspondência em um limite de palavra.|  
 
 ## <a name="substituting-the-entire-input-string"></a>Substituindo a cadeia de caracteres de entrada inteira  
+
  A substituição `$_` substitui a cadeia de caracteres correspondida pela cadeia de caracteres de entrada inteira. Ou seja, ela remove o texto correspondido e o substitui pela cadeia de caracteres inteira, inclusive o texto correspondido.  
   
  O exemplo a seguir corresponde a um ou mais dígitos decimais na cadeia de caracteres de entrada. Ele usa a substituição `$_` para substituí-los pela cadeia de caracteres de entrada inteira.  

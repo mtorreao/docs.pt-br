@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: c7ba51a1-0dd5-4452-b471-232febe0f897
 topic_type:
 - apiref
-ms.openlocfilehash: 12dc5466d5be73b327f171c389c41c55901f2915
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 6d00d17a5876dd7454b9f89ffa916bc62efb3d0c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894949"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734121"
 ---
 # <a name="icordebugassemblyenumeratemodules-method"></a>Método ICorDebugAssembly::EnumerateModules
-Obtém um enumerador para os módulos contidos no `ICorDebugAssembly`.  
+
+Obtém um enumerador para os módulos contidos no `ICorDebugAssembly` .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,10 +35,12 @@ HRESULT EnumerateModules (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `ppModules`  
  fora Um ponteiro para o endereço da interface ICorDebugModuleEnum que é o enumerador.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

@@ -9,14 +9,15 @@ helpviewer_keywords:
 - post-events
 - signatures, event handling
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
-ms.openlocfilehash: eee4b1a9e72c167b9b1e48a73dbb3f0528744bdc
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: d04ffd2cab21177f1342a13259a81df22b65723a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821327"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734407"
 ---
 # <a name="event-design"></a>Design de eventos
+
 Os eventos são a forma mais comumente usada de retornos de chamada (construções que permitem que a estrutura chame no código do usuário). Outros mecanismos de retorno de chamada incluem membros que tomam delegados, membros virtuais e plug-ins baseados em interface. Os dados de estudos de usabilidade indicam que a maioria dos desenvolvedores é mais confortável usando eventos do que usar os outros mecanismos de retorno de chamada. Os eventos são perfeitamente integrados ao Visual Studio e a várias linguagens.
 
  É importante observar que há dois grupos de eventos: eventos gerados antes que um estado do sistema seja alterado, chamado pré-eventos e eventos gerados depois de um Estado ser alterado, chamado post-events. Um exemplo de um pré-evento seria `Form.Closing` , que é gerado antes de um formulário ser fechado. Um exemplo de um post-Event seria `Form.Closed` , que é gerado depois que um formulário é fechado.
@@ -52,6 +53,7 @@ Os eventos são a forma mais comumente usada de retornos de chamada (construçõ
  Use <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType> ou sua subclasse como o argumento de evento para permitir que o usuário final cancele eventos.
 
 ### <a name="custom-event-handler-design"></a>Design do manipulador de eventos personalizado
+
  Há casos em que `EventHandler<T>` não podem ser usados, como quando a estrutura precisa trabalhar com versões anteriores do CLR, que não davam suporte a genéricos. Nesses casos, talvez seja necessário criar e desenvolver um delegado de manipulador de eventos personalizado.
 
  ✔️ usar um tipo de retorno de void para manipuladores de eventos.

@@ -6,14 +6,15 @@ helpviewer_keywords:
 - explicitly throwing exceptions
 - throwing exceptions, design guidelines
 ms.assetid: 5388e02b-52f5-460e-a2b5-eeafe60eeebe
-ms.openlocfilehash: 6f22878a9ddfb394f6705a335930ef2cc270895f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: d41467b971e43ca9b22c59e3b64bdd45d16c740b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821262"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734394"
 ---
 # <a name="exception-throwing"></a>Gerar exceções
+
 As diretrizes de lançamento de exceção descritas nesta seção exigem uma boa definição do significado da falha de execução. A falha de execução ocorre sempre que um membro não pode fazer o que foi projetado (o que o nome do membro implica). Por exemplo, se o `OpenFile` método não puder retornar um identificador de arquivo aberto para o chamador, ele será considerado uma falha de execução.
 
  A maioria dos desenvolvedores se sente confortável com o uso de exceções para erros de uso, como divisão por zero ou referências nulas. Na estrutura, as exceções são usadas para todas as condições de erro, incluindo erros de execução.

@@ -7,19 +7,21 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], extensibility
 - class library extensibility [.NET Framework]
 ms.assetid: 1cdb8740-871a-456c-9bd9-db96ca8d79b3
-ms.openlocfilehash: 9e75ef433f3bd9af34e8dd40331a8267755e59fe
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7b7b1bcfc907612be12e7f8ca7114183f7e830ef
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821379"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734446"
 ---
 # <a name="designing-for-extensibility"></a>Designer voltado para extensibilidade
+
 Um aspecto importante da criação de uma estrutura é garantir que a extensibilidade da estrutura tenha sido cuidadosamente considerada. Isso exige que você compreenda os custos e os benefícios associados a vários mecanismos de extensibilidade. Este capítulo ajuda você a decidir quais dos mecanismos de extensibilidade — a subclasse, os eventos, os membros virtuais, os retornos de chamada e assim por diante — pode atender melhor aos requisitos de sua estrutura.  
   
  Há várias maneiras de permitir a extensibilidade em estruturas. Elas variam de menos poderosas, mas menos dispendiosas a muito poderosas, mas caras. Para qualquer requisito de extensibilidade específico, você deve escolher o mecanismo de extensibilidade menos dispendioso que atenda aos requisitos. Tenha em mente que geralmente é possível adicionar mais extensibilidade posteriormente, mas você nunca pode descartar sem introduzir alterações significativas.  
   
 ## <a name="in-this-section"></a>Nesta seção  
+
  [Classes sem lacre](unsealed-classes.md)  
  [Membros protegidos](protected-members.md)  
  [Eventos e retornos de chamada](events-and-callbacks.md)  
