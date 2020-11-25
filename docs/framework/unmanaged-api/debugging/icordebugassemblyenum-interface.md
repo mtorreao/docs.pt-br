@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 891ceb43-5161-421e-a0bf-299962fd7efd
 topic_type:
 - apiref
-ms.openlocfilehash: 988637956b1176235618bf8f4aee7ecec9ce1187
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: dea5c0fd5d4ed1f830d9e75097d49c544dac2e57
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894831"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719236"
 ---
 # <a name="icordebugassemblyenum-interface"></a>Interface ICorDebugAssemblyEnum
 
@@ -37,6 +37,7 @@ Implementa métodos ICorDebugEnum e enumera matrizes ICorDebugAssembly.
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -45,6 +46,6 @@ Implementa métodos ICorDebugEnum e enumera matrizes ICorDebugAssembly.
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Depurando interfaces](debugging-interfaces.md)

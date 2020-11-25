@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 077e6c7f-f857-480c-bebb-76ee1de4e8fc
 topic_type:
 - apiref
-ms.openlocfilehash: 9fb2f960098e970b4d3d9f0be499f4d9fda6558e
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 1db2c9b5e65ae150f05242172f5ea16db433bbb5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82893902"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717819"
 ---
 # <a name="icordebugclass2setjmcstatus-method"></a>Método ICorDebugClass2::SetJMCStatus
+
 Para cada método da classe, define um valor que indica se o método é um código definido pelo usuário.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,15 +35,18 @@ HRESULT SetJMCStatus (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `bIsJustMyCode`  
- no Defina como `true` para indicar que o método é um código definido pelo usuário; caso contrário, defina `false`como.  
+ no Defina como `true` para indicar que o método é um código definido pelo usuário; caso contrário, defina como `false` .  
   
 ## <a name="remarks"></a>Comentários  
+
  Um stepper JMC (Just-the-code) ignorará o código não definido pelo usuário. O código definido pelo usuário deve ser um subconjunto de código depurável.  
   
- `SetJMCStatus`Retorna um valor HRESULT de S_FALSE se ele falhar ao definir o valor de qualquer método, mesmo se ele definir com êxito o valor para todos os outros métodos.  
+ `SetJMCStatus` Retorna um valor HRESULT de S_FALSE se ele falhar ao definir o valor de qualquer método, mesmo se ele definir com êxito o valor para todos os outros métodos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

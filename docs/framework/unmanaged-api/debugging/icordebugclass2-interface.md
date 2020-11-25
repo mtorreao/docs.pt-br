@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5416de70-43f2-4cdf-a11f-d570759c9c0c
 topic_type:
 - apiref
-ms.openlocfilehash: ff15297eb479f7474c9f07123a29263fb4da3205
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: ce3f289ae914817071fad5274c45d1e5fae71a06
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82893981"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717975"
 ---
 # <a name="icordebugclass2-interface"></a>Interface ICorDebugClass2
 
@@ -38,6 +38,7 @@ Representa uma classe genérica ou uma classe com um parâmetro do método do ti
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -46,7 +47,7 @@ Representa uma classe genérica ou uma classe com um parâmetro do método do ti
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorDebugClass](icordebugclass-interface.md)
 - [Depurando interfaces](debugging-interfaces.md)

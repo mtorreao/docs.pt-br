@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 694c0fa0-7011-41a9-9dfd-f0e16ea574b5
 topic_type:
 - apiref
-ms.openlocfilehash: f1836f26af99f91ab1765107573f6b067edd5e95
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: fbe721bad56ec2be434039f00e741ad9a177815f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007917"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718963"
 ---
 # <a name="corattributetargets-enumeration"></a>Enumeração CorAttributeTargets
+
 Especifica os elementos do aplicativo no qual ele é válido para aplicar um atributo.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -60,7 +61,7 @@ typedef enum CorAttributeTargets
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |`catAssembly`|O atributo pode ser aplicado a um assembly.|  
 |`catModule`|O atributo pode ser aplicado a um módulo executável portátil (. dll ou. exe).|  
@@ -80,11 +81,13 @@ typedef enum CorAttributeTargets
 |`catClassMembers`|O atributo pode ser aplicado a um membro de uma classe.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Os `CorAttributeTargets` valores de enumeração podem ser combinados com uma operação OR bit a bit para obter a combinação preferida.  
   
  O `CorAttributeTargets` paraleliza a enumeração gerenciada <xref:System.AttributeTargets?displayProperty=nameWithType> .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorHdr. h  

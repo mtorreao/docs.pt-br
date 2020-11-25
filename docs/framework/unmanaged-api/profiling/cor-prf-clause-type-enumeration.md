@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: f64c325a-ed3a-4aaf-b847-a88edbc4fefc
 topic_type:
 - apiref
-ms.openlocfilehash: a308017dc80dd973cbf108ba9df824193775f5ff
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c3058229a3c2b3c529136dad70fea35a23708a33
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501047"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718651"
 ---
 # <a name="cor_prf_clause_type-enumeration"></a>Enumeração COR_PRF_CLAUSE_TYPE
+
 Indica o tipo de cláusula de exceção que o código acabou de inserir ou deixar.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,7 +38,7 @@ typedef enum {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |`COR_PRF_CLAUSE_NONE`|A cláusula de exceção não é válida.|  
 |`COR_PRF_CLAUSE_FILTER`|A cláusula de exceção é uma expressão de filtro.|  
@@ -45,6 +46,7 @@ typedef enum {
 |`COR_PRF_CLAUSE_FINALLY`|A cláusula de exceção é uma `finally` instrução.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 89dc7363-2f29-4eb2-8f23-fccdda6a76a6
 topic_type:
 - apiref
-ms.openlocfilehash: d3d081e389e29833f24063ba75289f3db8c5504a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d6f22d6185f4063078463043a6ffd46e56289267
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504271"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719847"
 ---
 # <a name="iclrdebugmanagerendconnection-method"></a>Método ICLRDebugManager::EndConnection
+
 Remove a associação entre uma lista de tarefas e um identificador e um nome amigável.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,6 +35,7 @@ HRESULT EndConnection (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `dwConnectionId`  
  no O identificador específico do host para a conexão e a lista associada de tarefas de Common Language Runtime (CLR).  
   
@@ -41,7 +43,7 @@ HRESULT EndConnection (
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`EndConnection`retornado com êxito.|  
+|S_OK|`EndConnection` retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O CLR não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -50,17 +52,19 @@ HRESULT EndConnection (
 |E_INVALIDARG|A [beginconnectização](iclrdebugmanager-beginconnection-method.md) nunca foi chamada `dwConnectionId` de using `dwConnectionId` ou era zero.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O [ICLRDebugManager](iclrdebugmanager-interface.md) fornece três métodos, `BeginConnection` , [SetConnectionTasks](iclrdebugmanager-setconnectiontasks-method.md), e `EndConnection` , para associar listas de tarefas com identificadores e nomes amigáveis.  
   
 > [!IMPORTANT]
-> Esses três métodos devem ser chamados em uma ordem específica para cada conjunto de tarefas. `BeginConnection`é chamado primeiro para estabelecer uma nova conexão. `SetConnectionTasks`é chamado ao lado de fornecer o conjunto de tarefas a ser associado a essa conexão. `EndConnection`é chamado por último para remover a associação entre a lista de tarefas e o identificador e o nome amigável. No entanto, as chamadas para diferentes conexões podem ser aninhadas.  
+> Esses três métodos devem ser chamados em uma ordem específica para cada conjunto de tarefas. `BeginConnection` é chamado primeiro para estabelecer uma nova conexão. `SetConnectionTasks` é chamado ao lado de fornecer o conjunto de tarefas a ser associado a essa conexão. `EndConnection` é chamado por último para remover a associação entre a lista de tarefas e o identificador e o nome amigável. No entanto, as chamadas para diferentes conexões podem ser aninhadas.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

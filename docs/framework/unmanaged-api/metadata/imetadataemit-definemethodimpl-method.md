@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9dcc8b3d-33ee-4c7c-8d6f-322c57b94a0f
 topic_type:
 - apiref
-ms.openlocfilehash: 5ed5afbbf49b6680d00e78b6af3d45c6f0a7229d
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 24a7c5bca1287e55f3eb06d63e1fed8da37eb3b0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004485"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719561"
 ---
 # <a name="imetadataemitdefinemethodimpl-method"></a>Método IMetaDataEmit::DefineMethodImpl
+
 Cria uma definição para implementação de um método herdado de uma interface e retorna um token para essa definição de implementação de método.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,6 +37,7 @@ HRESULT DefineMethodImpl (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `td`  
  no O `mdTypedef` token da classe de implementação.  
   
@@ -46,11 +48,12 @@ HRESULT DefineMethodImpl (
  no O `mdMethodDef` `mdMemberRef` token ou do método de interface que está sendo implementado.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como um recurso em MSCorEE. dll  
+ **Biblioteca:** Usado como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

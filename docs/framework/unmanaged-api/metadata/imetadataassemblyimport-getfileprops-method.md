@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c5e6216f-ae3d-4697-9688-66b69c1251ec
 topic_type:
 - apiref
-ms.openlocfilehash: 78c192f10f629a0c1316ae7af7fc774819f4de8f
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 0b9ff2716cc0bc32c81fe6fcdd4e6c367d4d835f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007475"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718170"
 ---
 # <a name="imetadataassemblyimportgetfileprops-method"></a>Método IMetaDataAssemblyImport::GetFileProps
+
 Obtém as propriedades do arquivo com a assinatura de metadados especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -40,6 +41,7 @@ HRESULT GetFileProps (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `mdf`  
  no O `mdFile` token de metadados que representa o arquivo para o qual obter as propriedades.  
   
@@ -62,11 +64,12 @@ HRESULT GetFileProps (
  fora Um ponteiro para os sinalizadores que descrevem os metadados aplicados a um arquivo. O valor de flags é uma combinação de um ou mais valores de [CorFileFlags](corfileflags-enumeration.md) .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataforma:** Consulte [requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como um recurso em MsCorEE. dll  
+ **Biblioteca:** Usado como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

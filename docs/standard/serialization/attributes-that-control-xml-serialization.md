@@ -10,14 +10,15 @@ helpviewer_keywords:
 - serialization, attributes
 - XML Schema, serializing
 ms.assetid: 414b820f-a696-4206-b576-2711d85490c7
-ms.openlocfilehash: 032843728c74799d7ee78257b21243b31cb4f99c
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 55c36ea6313bfd3000b1d8502d4eda7c552e08cf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281982"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717923"
 ---
 # <a name="attributes-that-control-xml-serialization"></a>Atributos que controlam a serialização XML
+
 Você pode aplicar os atributos na tabela a seguir para classes e membros de classe para controlar a maneira pela qual o <xref:System.Xml.Serialization.XmlSerializer> serializa ou desserializa uma instância da classe. Para entender como esses atributos controlam a serialização XML, consulte [Controlando a serialização XML usando atributos](controlling-xml-serialization-using-attributes.md).  
   
  Esses atributos também podem ser usados para controlar as mensagens SOAP literais de estilo geradas por um serviço Web XML. Para obter mais informações sobre como aplicar esses atributos a um método de serviços Web XML, consulte [Serialização XML com serviços Web XML](xml-serialization-with-xml-web-services.md).  
@@ -44,7 +45,7 @@ Você pode aplicar os atributos na tabela a seguir para classes e membros de cla
   
  Para controlar a serialização XML de SOAP codificada, consulte [Atributos que controlam a serialização SOAP codificada](attributes-that-control-encoded-soap-serialization.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Serialização de XML e SOAP](xml-and-soap-serialization.md)
 - <xref:System.Xml.Serialization.XmlSerializer>

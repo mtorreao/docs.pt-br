@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: dd11c485-be95-4b97-9cd8-68679a4fb432
 topic_type:
 - apiref
-ms.openlocfilehash: dc064b00e32bb6b1d8c2d0c20f571b35919eae23
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 2e75b6322e40fe010e9e0a3412a99c0d3460afae
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009334"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719353"
 ---
 # <a name="imetadataemitdefinetypedef-method"></a>Método IMetaDataEmit::DefineTypeDef
+
 Cria uma definição de tipo para um tipo de Common Language Runtime e Obtém um token de metadados para essa definição de tipo.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -38,6 +39,7 @@ HRESULT DefineTypeDef (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `szTypeDef`  
  no O nome do tipo em Unicode.  
   
@@ -54,6 +56,7 @@ HRESULT DefineTypeDef (
  fora O `mdTypeDef` token atribuído.  
   
 ## <a name="remarks"></a>Comentários  
+
  Um sinalizador em `dwTypeDefFlags` especifica se o tipo que está sendo criado é um tipo de referência de Common Type System (classe ou interface) ou um tipo de valor de Common Type System.  
   
  Dependendo dos parâmetros fornecidos, esse método, como um efeito colateral, também pode criar um `mdInterfaceImpl` registro para cada interface herdada ou implementada por esse tipo. No entanto, esse método não retorna nenhum desses `mdInterfaceImpl` tokens. Se um cliente quiser adicionar ou modificar um token posteriormente `mdInterfaceImpl` , ele deverá usar a `IMetaDataImport` interface para enumerá-los. Se você quiser usar a semântica COM da `[default]` interface, deverá fornecer a interface padrão como o primeiro elemento em `rtkImplements` ; um atributo personalizado definido na classe indicará que a classe tem uma interface padrão (que sempre é considerada o primeiro `mdInterfaceImpl` token declarado para a classe).  
@@ -61,11 +64,12 @@ HRESULT DefineTypeDef (
  Cada elemento da `rtkImplements` matriz contém um `mdTypeDef` token ou `mdTypeRef` . O último elemento na matriz deve ser `mdTokenNil` .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como um recurso em MSCorEE. dll  
+ **Biblioteca:** Usado como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c30a4ce3-2d3e-411a-98df-e62ac4a5dd50
 topic_type:
 - apiref
-ms.openlocfilehash: ae30140e69926be32570960a32524a74b850bda4
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: b83c868f1a804d4e6f32adffc190ae086aa5e0a0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009347"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719327"
 ---
 # <a name="imetadataemitdefinetyperefbyname-method"></a>Método IMetaDataEmit::DefineTypeRefByName
+
 Obtém um token de metadados para um tipo que é definido no escopo especificado, que está fora do escopo atual.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,6 +37,7 @@ HRESULT DefineTypeRefByName (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `tkResolutionScope`  
  no O token que especifica o escopo de resolução. Os seguintes tipos de token são válidos:  
   
@@ -56,11 +58,12 @@ HRESULT DefineTypeRefByName (
  fora Um ponteiro para o `mdTypeRef` token que é atribuído ao tipo.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como um recurso em MSCorEE. dll  
+ **Biblioteca:** Usado como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

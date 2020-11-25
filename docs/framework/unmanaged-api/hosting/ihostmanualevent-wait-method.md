@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1fbb7d8b-8a23-4c2b-8376-1a70cd2d6030
 topic_type:
 - apiref
-ms.openlocfilehash: 6d0276764a07d5bb202d66b653fdf5cb96320c08
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 3fe8434ba4a7fc49b99bdf3084ce4f3981f25a9b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804548"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719821"
 ---
 # <a name="ihostmanualeventwait-method"></a>Método IHostManualEvent::Wait
+
 Faz com que a instância [IHostManualEvent](ihostmanualevent-interface.md) atual aguarde até que ela seja propriedade ou um período de tempo especificado decorre.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -35,6 +36,7 @@ HRESULT Wait (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `dwMilliseconds`  
  no O número de milissegundos a aguardar antes de retornar, se a `IHostManualEvent` instância atual não pertence.  
   
@@ -45,7 +47,7 @@ HRESULT Wait (
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`Wait`retornado com êxito.|  
+|S_OK|`Wait` retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -54,11 +56,12 @@ HRESULT Wait (
 |HOST_E_DEADLOCK|O host detectou um deadlock durante o intervalo de espera e escolheu a `IHostManualEvent` instância atual como a vítima do deadlock.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

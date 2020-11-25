@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1e994de6-4628-459c-b967-b34be1e9fe4f
 topic_type:
 - apiref
-ms.openlocfilehash: 2b24c2ca6907dfdb63ad934ec30557c246db174c
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 99dc141cca0f911c8dd65645f6c22d950cc678d4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004348"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719535"
 ---
 # <a name="imetadataemitdefinenestedtype-method"></a>Método IMetaDataEmit::DefineNestedType
+
 Cria a assinatura de metadados de uma definição de tipo, retorna um `mdTypeDef` token para esse tipo e especifica que o tipo definido é um membro do tipo referenciado pelo `tdEncloser` parâmetro.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -39,6 +40,7 @@ HRESULT DefineNestedType (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `szTypeDef`  
  no O nome do tipo em Unicode.  
   
@@ -58,11 +60,12 @@ HRESULT DefineNestedType (
  fora O `mdTypeDef` token atribuído.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como um recurso em MSCorEE. dll  
+ **Biblioteca:** Usado como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

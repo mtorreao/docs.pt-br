@@ -14,23 +14,25 @@ helpviewer_keywords:
 ms.assetid: edaaed1d-0d26-40f0-83f1-48efc0ded1c6
 topic_type:
 - apiref
-ms.openlocfilehash: 7c8c21a589554bac81ebfce3505917869ef8de27
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1398da1ef6f7f62ecd9c9e58f7b6010916bf9c57
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553591"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719769"
 ---
 # <a name="itypelibresolver-interface"></a>Interface ITypeLibResolver
+
 Fornece o [Método ResolveTypeLib](resolvetypelib-method.md), que resolve o caminho do arquivo de uma biblioteca de tipos.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método ResolveTypeLib](resolvetypelib-method.md)|Resolve o nome simples de uma biblioteca de tipos retornando seu caminho totalmente qualificado.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** TlbRef. idl, TlbRef. h  

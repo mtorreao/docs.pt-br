@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d86a3d14-4796-4909-9591-dfafe3de5ce4
 topic_type:
 - apiref
-ms.openlocfilehash: a58e03875ec021b41479085fa9e27a4321ae965e
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 5b3f89bb14be0d7128682f8702548545b1e50928
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004342"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719522"
 ---
 # <a name="imetadataemitdefineparam-method"></a>Método IMetaDataEmit::DefineParam
+
 Cria uma definição de parâmetro com a assinatura especificada para o método referenciado pelo token especificado e Obtém um token para essa definição de parâmetro.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -41,6 +42,7 @@ HRESULT DefineParam (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `md`  
  no O token para o método cujo parâmetro está sendo definido.  
   
@@ -66,14 +68,16 @@ HRESULT DefineParam (
  fora O `mdParamDef` token atribuído.  
   
 ## <a name="remarks"></a>Comentários  
+
  Os valores de sequência em `ulParamSeq` começam com 1 para parâmetros. Um valor de retorno tem um número de sequência de 0.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como um recurso em MSCorEE. dll  
+ **Biblioteca:** Usado como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

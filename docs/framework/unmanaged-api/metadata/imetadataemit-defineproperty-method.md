@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c4c1dc2-d40d-4173-bbe6-7058fb21c98f
 topic_type:
 - apiref
-ms.openlocfilehash: 479cb25ad8e1c263d3539a4203ac5bea781eb931
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: d2a4a15126f34666a58021a59e9e193685b15a49
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009366"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719483"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>Método IMetaDataEmit::DefineProperty
+
 Cria uma definição de propriedade para o tipo especificado, com os `get` `set` acessadores de método e especificados, e Obtém um token para essa definição de propriedade.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -45,6 +46,7 @@ HRESULT DefineProperty (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `td`  
  no O token para a classe ou interface na qual a propriedade está sendo definida.  
   
@@ -82,11 +84,12 @@ HRESULT DefineProperty (
  fora O `mdProperty` token atribuído.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como um recurso em MSCorEE. dll  
+ **Biblioteca:** Usado como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

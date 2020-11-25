@@ -13,14 +13,15 @@ helpviewer_keywords:
 ms.assetid: 95d2aa0d-8eeb-4a9f-a216-5249f7e2c167
 topic_type:
 - apiref
-ms.openlocfilehash: 65bbae614c8872ab5d78b3855b56ceaf2aad50da
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 84eea78b9c2e73e24238a5ecbc9442f3d63dbd4e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558154"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719782"
 ---
 # <a name="resolvetypelib-method"></a>Método ResolveTypeLib
+
 Resolve o nome simples de uma biblioteca de tipos retornando seu caminho totalmente qualificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,6 +38,7 @@ HRESULT ResolveTypeLib(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `bstrSimpleName`  
  no Um [BSTR](/previous-versions/windows/desktop/automat/bstr) que contém o nome simples da biblioteca de tipos.  
   
@@ -59,11 +61,13 @@ HRESULT ResolveTypeLib(
  fora Um ponteiro para um [BSTR](/previous-versions/windows/desktop/automat/bstr) que contém o caminho completo da biblioteca de tipos chamada no `bstrSimpleName` parâmetro.  
   
 ## <a name="remarks"></a>Comentários  
+
  O `ResolveTypeLib` método é chamado pela [função LoadTypeLibWithResolver](loadtypelibwithresolver-function.md) durante o processamento de [Tlbexp.exe (tipo de exportador de biblioteca de tipos)](../../tools/tlbexp-exe-type-library-exporter.md) .  
   
  Implementações personalizadas dessa interface devem retornar um [BSTR](/previous-versions/windows/desktop/automat/bstr) que contém o caminho completo da biblioteca de tipos chamada no `bstrSimpleName` parâmetro.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** TlbRef. idl, TlbRef. h  
