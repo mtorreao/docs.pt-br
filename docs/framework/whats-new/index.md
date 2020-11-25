@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: c99f7c0778b1160c926d5ed62a6a2d295f5c50c5
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 3421afee304125413f4fcade6b20df990e922f58
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94557240"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704793"
 ---
 # <a name="whats-new-in-net-framework"></a>O que há de novo no .NET Framework
 
@@ -844,7 +844,7 @@ End Class
 
 Você pode criar um arquivo de recurso, DataAnnotation.Localization.fr.resx, cuja chave é a cadeia de caracteres da mensagem de erro e cujo valor é a mensagem de erro localizada. O arquivo deve ser encontrado na pasta `App.LocalResources`. Por exemplo, veja a seguir a chave e seu valor em uma mensagem de erro localizada no idioma francês (fr):
 
-| Name                                 | Valor                                     |
+| Nome                                 | Valor                                     |
 | ------------------------------------ | ----------------------------------------- |
 | A classificação deve estar entre 1 e 10. | La note doit être comprise entre 1 et 10. |
 
@@ -958,7 +958,7 @@ O .NET Framework 3.5 adicionou suporte para o Contrato de chave Diffie-Hellman d
 
 Para resolver isso no .NET Framework 4.6.2, os três métodos a seguir foram adicionados à  <xref:System.Security.Cryptography.ECDiffieHellman> classe base para representar mais claramente essas rotinas de KDF e suas entradas:
 
-|Método ECDiffieHellman|Description|
+|Método ECDiffieHellman|DESCRIÇÃO|
 |----------------------------|-----------------|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHash%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Deriva o material da chave usando a fórmula<br /><br /> HASH(secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HASH(secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> em que *x* é o resultado calculado do algoritmo EC Diffie-Hellman.|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHmac%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Deriva o material da chave usando a fórmula<br /><br /> HMAC(hmacKey, secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HMAC(hmacKey, secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> em que *x* é o resultado calculado do algoritmo EC Diffie-Hellman.|
@@ -1311,7 +1311,7 @@ Agora, o SqlClient fornece automaticamente uma conexão mais rápida para um AG 
 
 Windows Presentation Foundation inclui diversos aprimoramentos e alterações.
 
-**Desempenho aprimorado**
+**desempenho aprimorado**
 
 O atraso no acionamento de eventos de toque foi corrigido no .NET Framework 4.6.1. Além disso, a digitação de controle <xref:System.Windows.Controls.RichTextBox> não ocupa mais o thread de renderização durante a entrada rápida.
 
@@ -1585,9 +1585,9 @@ O .NET 2015 apresenta o .NET Framework 4,6 e o .NET Core. Alguns recursos novos 
 
     É útil usar um formato consistente para opções, já que elas são um contrato formal exposto por uma biblioteca. Veja a seguir dois formatos óbvios.
 
-    - *Opção*. *namespace*. *nomedaopção*
+    - *Opção*.*namespace*.*nomedaopção*
 
-    - *Opção*. *biblioteca*. *nomedaopção*
+    - *Opção*.*biblioteca*.*nomedaopção*
 
   - **Mudanças no TAP (padrão assíncrono baseado em tarefas)**
 
@@ -1623,7 +1623,7 @@ O .NET 2015 apresenta o .NET Framework 4,6 e o .NET Core. Alguns recursos novos 
 
   - **Aprimoramentos de HDPI**
 
-    O suporte do HDPI no WPF agora é melhor no .NET Framework 4,6. Foram feitas alterações no layout para reduzir as ocorrências de distorção em controles com bordas. Por padrão, esse recurso será habilitado somente se <xref:System.Runtime.Versioning.TargetFrameworkAttribute> estiver definido para o .NET 4.6.  Aplicativos que visam versões anteriores do Framework, mas que estão em execução no .NET Framework 4,6 podem aceitar o novo comportamento adicionando a seguinte linha à [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) seção do arquivo app.config:
+    O suporte do HDPI no WPF agora é melhor no .NET Framework 4,6. Foram feitas alterações no layout para reduzir as ocorrências de distorção em controles com bordas. Por padrão, esse recurso será habilitado somente se o <xref:System.Runtime.Versioning.TargetFrameworkAttribute> estiver definido como .NET Framework 4,6.  Aplicativos que visam versões anteriores do Framework, mas que estão em execução no .NET Framework 4,6 podem aceitar o novo comportamento adicionando a seguinte linha à [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) seção do arquivo app.config:
 
     ```xml
     <AppContextSwitchOverrides
@@ -1843,7 +1843,7 @@ O .NET 2015 apresenta o .NET Framework 4,6 e o .NET Core. Alguns recursos novos 
 
 ## <a name="whats-new-in-net-framework-451"></a>Novidades no .NET Framework 4.5.1
 
-**Atualizações de abril de 2014** :
+**Atualizações de abril de 2014**:
 
 - [Atualização 2 do Visual Studio 2013](https://go.microsoft.com/fwlink/p/?LinkId=393658) inclui atualizações para modelos de Biblioteca de Classes Portátil para suporte destes cenários:
 
@@ -1967,7 +1967,7 @@ A Ferramenta de Otimização Orientada de Perfil Gerenciado (Mpgo.exe) permite m
 
 ### <a name="parallel-computing"></a>Computação paralela
 
-O .NET Framework 4,5 fornece vários novos recursos e aprimoramentos para a computação paralela. Entre eles estão melhor desempenho, mais controle, maior suporte para programação assíncrona, uma nova biblioteca de fluxo de dados e o melhor suporte para a depuração paralela e a análise de desempenho. Veja a entrada [novidades para paralelismo no .net 4,5](https://devblogs.microsoft.com/pfxteam/whats-new-for-parallelism-in-net-4-5/) no blog programação paralela com o .net.
+O .NET Framework 4,5 fornece vários novos recursos e aprimoramentos para a computação paralela. Entre eles estão melhor desempenho, mais controle, maior suporte para programação assíncrona, uma nova biblioteca de fluxo de dados e o melhor suporte para a depuração paralela e a análise de desempenho. Veja a entrada [novidades para paralelismo no .NET Framework 4,5](https://devblogs.microsoft.com/pfxteam/whats-new-for-parallelism-in-net-4-5/) no blog programação paralela com o .net.
 
 <a name="web"></a>
 
@@ -2127,7 +2127,7 @@ Os aplicativos Windows 8.x Store foram projetados para fatores forma específico
 
 O projeto Biblioteca de Classes Portátil no Visual Studio 2012 (e em versões posteriores) permite gravar e compilar assemblies gerenciados que funcionem em várias plataformas do .NET Framework. Usando um projeto de biblioteca de classes portátil, você escolhe as plataformas (como Windows Phone e .NET para aplicativos da loja do Windows 8. x) para o destino. Os tipos e membros disponíveis em seu projeto são restritos automaticamente aos tipos e membros comuns através dessas plataformas. Para saber mais, veja [Biblioteca de Classes Portátil](../cross-platform/portable-class-library.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [O .NET Framework e lançamentos fora da banda](../get-started/the-net-framework-and-out-of-band-releases.md)
 - [O que há de novo na acessibilidade no .NET Framework](whats-new-in-accessibility.md)

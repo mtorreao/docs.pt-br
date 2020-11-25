@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a4de6805-e159-4280-99e5-3390c86166d0
 topic_type:
 - apiref
-ms.openlocfilehash: 354736061a2c50b7db16070c3d4ff9c2548d394d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: ff1670472b34292cb216a1a8817243ced6a938af
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499942"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704819"
 ---
 # <a name="icorprofilercallbackremotingserverinvocationreturned-method"></a>Método ICorProfilerCallback::RemotingServerInvocationReturned
+
 Notifica o criador de perfil de que o processo concluiu a invocação de um método em resposta a uma solicitação de invocação de método remoto.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -32,6 +33,7 @@ HRESULT RemotingServerInvocationReturned();
 ```  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

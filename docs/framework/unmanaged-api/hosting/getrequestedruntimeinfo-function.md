@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0dfd7cdc-c116-4e25-b56a-ac7b0378c942
 topic_type:
 - apiref
-ms.openlocfilehash: 0efda458d51677fcd16140cd0f0a835b76c20173
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: b120b854e1787824808dd64d95b0fa78ba6c9fa2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617172"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705482"
 ---
 # <a name="getrequestedruntimeinfo-function"></a>Função GetRequestedRuntimeInfo
+
 Obtém informações de versão e diretório sobre o Common Language Runtime (CLR) solicitado por um aplicativo.  
   
  Essa função foi preterida no .NET Framework 4.  
@@ -46,6 +47,7 @@ HRESULT GetRequestedRuntimeInfo (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pExe`  
  no O nome do aplicativo.  
   
@@ -79,7 +81,8 @@ HRESULT GetRequestedRuntimeInfo (
  `dwlength`  
  fora Um ponteiro para o comprimento da cadeia de caracteres da versão.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  Esse método retorna códigos de erro padrão de Component Object Model (COM), conforme definido no WinError. h, além dos valores a seguir.  
   
 |Código de retorno|Descrição|  
@@ -88,6 +91,7 @@ HRESULT GetRequestedRuntimeInfo (
 |ERROR_INSUFFICIENT_BUFFER|O buffer de diretório não é grande o suficiente para armazenar o caminho do diretório.<br /><br /> - ou -<br /><br /> O buffer de versão não é grande o suficiente para armazenar a cadeia de caracteres de versão.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O `GetRequestedRuntimeInfo` método retorna informações de tempo de execução sobre a versão carregada no processo, que não é necessariamente a versão mais recente instalada no computador.  
   
  Na versão .NET Framework 2,0, você pode obter informações sobre a versão instalada mais recente usando o `GetRequestedRuntimeInfo` método da seguinte maneira:  
@@ -113,11 +117,12 @@ HRESULT GetRequestedRuntimeInfo (
 - RUNTIME_INFO_REQUEST_X86  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE. dll  
+ **Biblioteca:** MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   

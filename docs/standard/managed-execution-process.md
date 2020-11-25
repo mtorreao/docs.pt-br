@@ -9,14 +9,15 @@ helpviewer_keywords:
 - managed execution process
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
-ms.openlocfilehash: 17494c3b5620ac649aeb3e6ef73085097517d1f5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: bf62afff86a6a315e40a681250396af4bd3563e2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830669"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706353"
 ---
 # <a name="managed-execution-process"></a>Processo de execução gerenciada
+
 <a name="introduction"></a> O processo de execução gerenciada inclui as seguintes etapas, que serão discutidas em detalhes mais adiante neste tópico:
 
 1. [Escolhendo um compilador](#choosing_a_compiler).
@@ -36,7 +37,9 @@ ms.locfileid: "94830669"
      O Common Language Runtime fornece a infraestrutura que permite que a execução ocorra e os serviços que podem ser usados durante a execução.
 
 <a name="choosing_a_compiler"></a>
+
 ## <a name="choosing-a-compiler"></a>Escolhendo um compilador
+
  Para obter as vantagens fornecidas pelo CLR (Common Language Runtime), você deve usar um ou mais compiladores de linguagem que direcionam o tempo de execução, como Visual Basic, C#, Visual C++, F# ou um dos muitos compiladores de terceiros como um Eiffel, um Perl ou um compilador COBOL.
 
  Por ser um ambiente de execução multilíngue, o runtime dá suporte a uma grande variedade de tipos de dados e recursos de linguagem. O compilador de linguagem que você usa determina quais recursos do runtime estão disponíveis, e você cria seu código usando esses recursos. O seu compilador, e não o runtime, estabelece a sintaxe que seu código deve usar. Se o componente deve ser completamente utilizável por componentes escritos em outras linguagens, os tipos exportados do seu componente devem expor somente recursos de linguagem incluídos na [Independência de linguagem e componentes independentes de linguagem](language-independence-and-language-independent-components.md) (CLS). Você pode usar o atributo <xref:System.CLSCompliantAttribute> para garantir que seu código seja compatível com CLS. Para saber mais, veja [Componentes de independência de linguagem e componentes independentes da linguagem](language-independence-and-language-independent-components.md).
@@ -44,7 +47,9 @@ ms.locfileid: "94830669"
  [Voltar ao início](#introduction)
 
 <a name="compiling_to_msil"></a>
+
 ## <a name="compiling-to-msil"></a>Compilando para MSIL
+
  Quando compila para o código gerenciado, o compilador converte seu código fonte em MSIL, que é um conjunto de instruções independente de CPU que pode ser convertido em código nativo com eficiência. O MSIL inclui instruções para carregamento, armazenamento, inicialização e chamada de métodos em objetos, bem como instruções para operações aritméticas e lógicas, fluxo de controle, acesso direto à memória, tratamento de exceções e outras operações. Para o código ser executado, a MSIL deve ser convertida em código específico de CPU, geralmente por um [Compilador JIT (Just-In-Time)](#compiling_msil_to_native_code). Como o Common Language Runtime fornece um ou mais compiladores JIT para cada arquitetura de computador para a qual dá suporte, o mesmo conjunto de MSIL pode ser compilado por JIT e executado em qualquer arquitetura compatível.
 
  Quando um compilador produz MSIL, ele também produz metadados. Metadados descrevem os tipos no seu código, incluindo a definição de cada tipo, as assinaturas de membros de cada tipo, os membros que seu código referencia e outros dados que o runtime usa no runtime. O MSIL e os metadados estão contidos em um arquivo PE (Portable Executable) com base no e que estende o arquivo PE Microsoft publicado e o COFF (Common Object File Format) usados historicamente no conteúdo executável. Esse formato de arquivo, que acomoda MSIL ou código nativo, bem como metadados, permite ao sistema operacional reconhecer imagens do Common Language Runtime. A presença de metadados no arquivo com MSIL permite que seu código se descreva, o que significa que não há necessidade de bibliotecas de tipos ou IDL (Interface Definition Language). O runtime localiza e extrai os metadados do arquivo conforme necessário durante a execução.
@@ -52,7 +57,9 @@ ms.locfileid: "94830669"
  [Voltar ao início](#introduction)
 
 <a name="compiling_msil_to_native_code"></a>
+
 ## <a name="compiling-msil-to-native-code"></a>Compilando MSIL para código nativo
+
  Para executar o MSIL, ele deve ser compilado no CLR para código nativo da arquitetura do computador de destino. O .NET fornece duas maneiras de executar essa conversão:
 
 - Um compilador JIT (just-in-time) do .NET.
@@ -60,11 +67,13 @@ ms.locfileid: "94830669"
 - [Ngen.exe (gerador de imagem nativa)](../framework/tools/ngen-exe-native-image-generator.md).
 
 ### <a name="compilation-by-the-jit-compiler"></a>Compilação pelo compilador JIT
+
  A compilação JIT converte MSIL para código nativo sob demanda no tempo de execução do aplicativo, quando o conteúdo de um assembly é carregado e executado. Como o CLR fornece um compilador JIT para cada arquitetura de CPU compatível, os desenvolvedores podem compilar um conjunto de assemblies MSIL que pode ser compilado pelo JIT e executado em diferentes computadores com arquiteturas diferentes. No entanto, se seu código gerenciado chama APIs nativas específicas da plataforma ou uma biblioteca de classes específica da plataforma, ele será executado somente nesse sistema operacional.
 
  A compilação JIT leva em conta a possibilidade de um código jamais ser chamado durante a execução. Em vez de usar o tempo e a memória para converter todo o MSIL em um arquivo PE para código nativo, ele converte o MSIL conforme necessário durante a execução e armazena o código nativo resultante na memória de forma que seja acessível para chamadas subsequentes no contexto desse processo. O carregador cria e anexa um stub para cada método em um tipo quando o tipo é carregado e inicializado. Quando um método é chamado pela primeira vez, o stub passa o controle para o compilador JIT, que converte o MSIL para esse método em código nativo e modifica o stub para apontar diretamente para o código nativo gerado. Portanto, as chamadas subsequentes para o método compilado por JIT vão diretamente para o código nativo.
 
 ### <a name="install-time-code-generation-using-ngenexe"></a>Geração de código do tempo de instalação usando NGen.exe
+
  Como o compilador JIT converte o MSIL do assembly para código nativo quando métodos individuais definidos nesse assembly são chamados, ele afeta o desempenho negativamente no tempo de execução. Na maioria dos casos, esse desempenho diminuído é aceitável. Mais importante, o código gerado pelo compilador JIT é associado ao processo que disparou a compilação. Ele não pode ser compartilhado por vários processos. Para permitir que o código gerado seja compartilhado por várias invocações de um aplicativo ou por vários processos que compartilham um conjunto de assemblies, o CLR dá suporte a um modo de compilação antecipado. Esse modo de compilação Ahead Of Time usa o [Ngen.exe (Gerador de Imagem Nativa)](../framework/tools/ngen-exe-native-image-generator.md) para converter assemblies MSIL em código nativo de maneira semelhante ao compilador JIT. No entanto, a operação de Ngen.exe é diferente da operação do compilador JIT de três maneiras:
 
 - Ele executa a conversão do MSIL em código nativo antes de executar o aplicativo, e não durante a execução do aplicativo.
@@ -74,6 +83,7 @@ ms.locfileid: "94830669"
 - Ele mantém o código gerado no Cache de Imagem Nativa como um arquivo no disco.
 
 ### <a name="code-verification"></a>Verificação de código
+
  Como parte de sua compilação para código nativo, o código MSIL deve passar por um processo de verificação, a menos que um administrador estabeleça uma política de segurança permitindo que o código ignore a verificação. A verificação examina o MSIL e os metadados para descobrir se o código é fortemente tipado, o que significa que ele acessa apenas os locais de memória que está autorizado a acessar. A segurança de tipo ajuda a isolar objetos uns dos outros e a protegê-los de danos não intencionais ou corrupção mal-intencionada. Ela também dá garantia de que restrições de segurança no código possam ser aplicadas confiavelmente.
 
  O runtime depende das seguintes declarações serem verdadeiras para o código que é comprovadamente fortemente tipado:
@@ -89,7 +99,9 @@ ms.locfileid: "94830669"
  [Voltar ao início](#introduction)
 
 <a name="running_code"></a>
+
 ## <a name="running-code"></a>Executando o código
+
  O CLR fornece a infraestrutura que permite que a runtime gerenciada ocorra e os serviços que podem ser usados durante a runtime. Para um método ser executado, ele deve ser compilado para o código específico do processador. Cada método para MSIL gerado é compilado por JIT quando é chamado pela primeira vez e executado. Na próxima vez em que o método for executado, o código nativo compilado por JIT existente será executado. O processo de compilação por JIT e a execução do código é repetido até a execução ser concluída.
 
  Durante a execução, o código gerenciado recebe serviços como coleta de lixo, segurança, interoperabilidade com código não gerenciado, suporte à depuração entre linguagens e suporte avançado à implantação e ao controle de versão.
@@ -108,7 +120,7 @@ ms.locfileid: "94830669"
 
 - [Visão geral](../framework/get-started/overview.md)
 - [Independência da linguagem e componentes independentes da linguagem](language-independence-and-language-independent-components.md)
-- [Metadados e componentes autodescritivos](metadata-and-self-describing-components.md)
+- [Metadados e componentes de Self-Describing](metadata-and-self-describing-components.md)
 - [Ilasm.exe (assembler IL)](../framework/tools/ilasm-exe-il-assembler.md)
 - [Segurança](security/index.md)
 - [Interoperação com código não gerenciado](../framework/interop/index.md)

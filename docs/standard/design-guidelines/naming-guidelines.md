@@ -11,14 +11,15 @@ helpviewer_keywords:
 - names [.NET Framework]
 - format naming guidelines [.NET Framework]
 ms.assetid: fc076d66-9b5f-42d3-aa65-61d970c794a3
-ms.openlocfilehash: e82b6941d3ea0243f4ae16bc9d42ea8d1f1fccfb
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: de68eeb287b13bc9f55230243f23cd03508f2561
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820872"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706418"
 ---
 # <a name="naming-guidelines"></a>Diretrizes de nomenclatura
+
 Seguir um conjunto consistente de convenções de nomenclatura no desenvolvimento de uma estrutura pode ser uma grande contribuição para a usabilidade da estrutura. Ele permite que a estrutura seja usada por muitos desenvolvedores em projetos muito separados. Além da consistência do formulário, os nomes dos elementos da estrutura devem ser facilmente compreendidos e devem transmitir a função de cada elemento.  
   
  O objetivo deste capítulo é fornecer um conjunto consistente de convenções de nomenclatura que resulte em nomes que fazem sentido imediato para os desenvolvedores.  
@@ -26,6 +27,7 @@ Seguir um conjunto consistente de convenções de nomenclatura no desenvolviment
  Embora a adoção dessas convenções de nomenclatura como diretrizes gerais de desenvolvimento de código resulte em nomes mais consistentes em todo o seu código, você só é necessário aplicá-las a APIs que são divulgadas publicamente (tipos e membros públicos ou protegidos e interfaces implementadas explicitamente).  
   
 ## <a name="in-this-section"></a>Nesta seção  
+
  [Convenções de capitalização](capitalization-conventions.md)  
  [Convenções de nomenclatura gerais](general-naming-conventions.md)  
  [Nomes de assemblies e DLLs](names-of-assemblies-and-dlls.md)  

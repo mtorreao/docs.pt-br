@@ -2,24 +2,20 @@
 title: Modernizar aplicativos .NET existentes com contêineres do Windows e da nuvem do Azure (2ª edição)
 description: Aprenda a migrar aplicativos usando o método lift-and-shift e modernizar os existentes para a nuvem e contêineres do Azure com este livro eletrônico.
 ms.date: 04/28/2018
-ms.openlocfilehash: 74359b526bead85788a6ddc8039ef05b4c475d5e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f4ae4e2d24d343b55811955fb43e929c0db6f01b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172248"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705326"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernizar aplicativos .NET existentes com contêineres do Windows e da nuvem do Azure (2ª edição)
 
 ![Imagem da capa do guia Modernizar aplicativos .NET.](./media/index/web-application-guide-cover-image.png)
 
-PUBLICADO POR  
-Microsoft Press e Microsoft DevDiv  
-Divisões da Microsoft Corporation  
-One Microsoft Way  
-Redmond, Washington 98052-6399  
+PUBLICADO pelas divisões da Microsoft Press e do Microsoft representante da Microsoft Corporation, One Microsoft Way Redmond, Washington 98052-6399
 
-Copyright © 2020 da Microsoft Corporation  
+Copyright © 2020 da Microsoft Corporation
 
 Todos os direitos reservados. Nenhuma parte do conteúdo deste guia pode ser reproduzida de nenhuma forma, nem por nenhum meio, sem a permissão por escrito do distribuidor.
 
@@ -37,12 +33,7 @@ Autor:
 > **Cesar de la Torre**, Sr. pm, equipe de produtos .net, Microsoft Corp.
 
 Participantes e revisores:
-> **Scott Hunter**, PM Diretor de Parceiro, equipe do .NET, Microsoft  
-> **Paul Yuknewicz**, gerente de PM Principal, equipe das Ferramentas do Visual Studio, Microsoft  
-> **Lisa Guthrie**, PM sênior, equipe de Ferramentas do Visual Studio, Microsoft  
-> **Ankit Asthana**, Gerente de PM Principal, equipe do .NET, Microsoft  
-> **Unai Zorrilla**, líder de desenvolvimento, conceitos simples  
-> **Javier Valero**, Diretor Executivo de Operações no Grupo Solutio  
+> **Scott Hunter**, diretor de parceiros, equipe do .net, Microsoft **Paul Yuknewicz**, gerente principal de PM, equipe de ferramentas do Visual Studio, Microsoft **Lisa Guthrie**, Sr. pm, equipe de ferramentas do Visual Studio, Microsoft **ankit** as, gerente principal PM, equipe do .net, Microsoft **Unai Zorrilla**, líder de desenvolvedor, conceitos simples **Javier Valero**, diretor de operações no grupo Solutio
 
 ## <a name="introduction"></a>Introdução
 
@@ -70,7 +61,7 @@ Para aplicativos modernos com a melhor agilidade e valor a longo prazo para a or
 
 A Figura 1-1 mostra os caminhos possíveis que podem ser escolhidos ao mover os aplicativos .NET existente para a nuvem em fases incrementais.
 
- ![Caminhos de modernização para aplicativos e serviços .NET existentes](./media/image1-1.png)
+ ![Caminhos de modernização para aplicativos e serviços .NET existentes](./media/image1-1.png)
 
 **Figura 1-1**. Caminhos de modernização para aplicativos e serviços .NET existentes
 
@@ -78,7 +69,7 @@ Cada abordagem de migração traz diferentes vantagens e motivos para usá-la. V
 
 A definição e a breve explicação de cada nível de maturidade do aplicativo são as seguintes:
 
-**Nível 1: aplicativos prontos para a infraestrutura de nuvem** : nessa abordagem de migração, você simplesmente migra ou rehospeda seus aplicativos locais atuais para uma plataforma[IaaS](https://azure.microsoft.com/overview/what-is-iaas/)(infraestrutura como serviço). Os aplicativos têm quase a mesma composição de antes, mas agora você os implanta em VMs na nuvem.
+**Nível 1: aplicativos prontos para a infraestrutura de nuvem** : nessa abordagem de migração, você simplesmente migra ou rehospeda seus aplicativos locais atuais para uma plataforma [IaaS](https://azure.microsoft.com/overview/what-is-iaas/)(infraestrutura como serviço). Os aplicativos têm quase a mesma composição de antes, mas agora você os implanta em VMs na nuvem.
 Esse tipo simples de migração é normalmente conhecido no setor como "lift-and-shift".
 
 **Nível 2: aplicativos otimizados na nuvem** : nesse nível e ainda sem rearquitetar ou alterar código significativo, você pode obter benefícios adicionais na execução de seu aplicativo na nuvem com tecnologias modernas, como contêineres e serviços adicionais gerenciados na nuvem. Melhore a agilidade dos seus aplicativos para distribuição mais rápida refinando seus processos de DevOps (operações de desenvolvimento) corporativas. Faça isso usando tecnologias como Contêineres do Windows, que é baseada no Mecanismo do Docker. Contêineres removem a fricção que é causada pelas dependências de aplicativo ao implantar em vários estágios. Nesse modelo de maturidade, você pode implantar contêineres ou IaaS ou PaaS ao usar serviços gerenciados por nuvem adicionais relacionados a bancos de dados, cache como serviço, monitoramento e pipelines de CI/CD (integração contínua/implantação contínua).
@@ -103,7 +94,7 @@ A Tabela 1-1 descreve as principais vantagens e motivos para escolher cada abord
 
 ### <a name="key-technologies-and-architectures-by-maturity-level"></a>Principais tecnologias e arquiteturas por nível de maturidade
 
-Aplicativos do .NET Framework inicialmente começavam com o .NET Framework versão 1.0, que foi lançado no final de 2001. Assim, as empresas são movidas para versões mais recentes (como 2.0, 3.5 e .NET 4.x). A maioria dos aplicativos era executada no Windows Server e no IIS (Servidor de Informações da Internet) e usava um banco de dados relacional, como o SQL Server, Oracle, MySQL ou qualquer outro RDBMS.
+Aplicativos do .NET Framework inicialmente começavam com o .NET Framework versão 1.0, que foi lançado no final de 2001. Em seguida, as empresas foram movidas para versões mais recentes (como 2,0, 3,5 e .NET Framework 4. x). A maioria dos aplicativos era executada no Windows Server e no IIS (Servidor de Informações da Internet) e usava um banco de dados relacional, como o SQL Server, Oracle, MySQL ou qualquer outro RDBMS.
 
 A maioria dos aplicativos .NET existentes hoje em dia se baseia no .NET Framework 4.x ou até mesmo no .NET Framework 3.5 e usa estruturas da Web como o ASP.NET MVC, Web Forms do ASP.NET, ASP.NET Web API, WCF (Windows Communication Foundation), ASP.NET SignalR e Páginas da Web ASP.NET. Esses tecnologias estabelecidas do .NET Framework dependem do Windows. É importante considerar essa dependência se você estiver migrando simplesmente migrando aplicativos herdados e deseja realizar o mínimo de alterações na sua infraestrutura de aplicativo.
 

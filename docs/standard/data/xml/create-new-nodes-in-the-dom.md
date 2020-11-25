@@ -2,14 +2,15 @@
 title: Criar novos nós no DOM
 ms.date: 03/30/2017
 ms.assetid: 6c2b9789-b61a-49f9-b33f-db01a945edf2
-ms.openlocfilehash: 835d92b972341e67bc163563ec62c24db610a65a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: dea7add100fbdbb9e761fe39d0d824d27975757f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822744"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704741"
 ---
 # <a name="create-new-nodes-in-the-dom"></a>Criar novos nós no DOM
+
 O <xref:System.Xml.XmlDocument> tem um método de criação para todos os tipos de nó. Forneça o método com um nome se necessário, e conteúdo ou outros parâmetros para os nós que têm conteúdo (por exemplo, um nó de texto), e o nó é criado. Os seguintes métodos são os que precisam de um nome e alguns outros parâmetros preenchidos para criar um nó apropriado.  
   
 - <xref:System.Xml.XmlDocument.CreateCDataSection%2A>  

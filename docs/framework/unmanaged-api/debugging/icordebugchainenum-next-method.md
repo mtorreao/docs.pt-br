@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6b791351-bcc5-4ddd-9cab-eff2f7dd5142
 topic_type:
 - apiref
-ms.openlocfilehash: 2d075820df534e08bdf4c2b75d36f6a60f979662
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 0f42020821ec71d1e59ae8097f22ee530e16a576
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894089"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706171"
 ---
 # <a name="icordebugchainenumnext-method"></a>Método ICorDebugChainEnum::Next
+
 Obtém o número especificado de instâncias de ICorDebugChain da enumeração, começando na posição atual.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,16 +38,18 @@ HRESULT Next (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `celt`  
  no O número de `ICorDebugChain` instâncias a serem recuperadas.  
   
  `chains`  
- fora Uma matriz de ponteiros, cada um dos quais aponta `ICorDebugChain` para um objeto que representa uma cadeia.  
+ fora Uma matriz de ponteiros, cada um dos quais aponta para um `ICorDebugChain` objeto que representa uma cadeia.  
   
  `pceltFetched`  
  fora Um ponteiro para o número de `ICorDebugChain` instâncias retornadas de fato. Esse valor pode ser nulo se `celt` for um.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

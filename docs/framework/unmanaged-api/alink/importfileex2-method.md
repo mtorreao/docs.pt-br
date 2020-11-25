@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 02c789fd-16fc-48c6-9619-56e87e2a37ca
 topic_type:
 - apiref
-ms.openlocfilehash: 7e270dbfc63c03e77cb4b0694296e48c2035b8a6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 59149e79e926a0b9a3e549e013bf178e54ddf6fa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445694"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705170"
 ---
 # <a name="importfileex2-method"></a>Método ImportFileEx2
+
 Importa assemblies e módulos desvinculados. Esse método é como o [Método ImportFile](importfile-method.md), mas funciona mesmo que o arquivo que está sendo importado não exista no disco.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -40,6 +41,7 @@ HRESULT ImportFileEx2(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pszFilename`  
  Nome do arquivo a ser importado.  
   
@@ -64,13 +66,15 @@ HRESULT ImportFileEx2(
  `pdwCountOfScopes`  
  Recebe o número de arquivos e/ou escopos importados.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  Retorna S_OK se o método tiver sucesso.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
+
  Requer ALink. h.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IALink2](ialink2-interface.md)
 - [Interface IALink](ialink-interface.md)

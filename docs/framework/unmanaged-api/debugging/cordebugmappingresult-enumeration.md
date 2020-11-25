@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 701281dd-2936-45c8-a1f0-3bf7332b093b
 topic_type:
 - apiref
-ms.openlocfilehash: a7a450e85f7eaa765766ffa985d7c01538e2669c
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 0e7afa386af1bd2eebc2b58592d01b764660248f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795788"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704689"
 ---
 # <a name="cordebugmappingresult-enumeration"></a>Enumeração CorDebugMappingResult
+
 Fornece os detalhes sobre como o valor do ponteiro de instrução (IP) foi obtido.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -39,7 +40,7 @@ typedef enum CorDebugMappingResult {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |`MAPPING_PROLOG`|O código nativo está no prólogo, portanto, o valor do IP é 0.|  
 |`MAPPING_EPILOG`|O código nativo está em um epílogo, portanto, o valor do IP é o endereço da última instrução do método.|  
@@ -49,9 +50,11 @@ typedef enum CorDebugMappingResult {
 |`MAPPING_APPROXIMATE`|O método foi mapeado com êxito, mas o valor do IP pode ser aproximado.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Você pode usar o método [ICorDebugILFrame:: GetIP](icordebugilframe-getip-method.md) para obter o valor do ponteiro de instrução.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -60,6 +63,6 @@ typedef enum CorDebugMappingResult {
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Declarando enumerações](debugging-enumerations.md)

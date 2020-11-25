@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 524c7fd3-9b5c-46e7-99ba-555fd2fe33f0
 topic_type:
 - apiref
-ms.openlocfilehash: c0f7e1fd6bf4c9386300b11477df85e87899fc67
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 7fc431861ac8f5c0e47e12e688f4ca004313c062
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803316"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704429"
 ---
 # <a name="ihostsyncmanagercreatemonitorevent-method"></a>Método IHostSyncManager::CreateMonitorEvent
+
 Cria um objeto de evento monitorado de redefinição automática.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -35,6 +36,7 @@ HRESULT CreateMonitorEvent (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `cookie`  
  no Um cookie a ser associado ao objeto de evento.  
   
@@ -45,7 +47,7 @@ HRESULT CreateMonitorEvent (
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`CreateMonitorEvent`retornado com êxito.|  
+|S_OK|`CreateMonitorEvent` retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -54,16 +56,18 @@ HRESULT CreateMonitorEvent (
 |E_OUTOFMEMORY|Não havia memória suficiente disponível para criar o objeto de evento solicitado.|  
   
 ## <a name="remarks"></a>Comentários  
- `CreateMonitorEvent`Retorna um `IHostAutoEvent` que o CLR usa em sua implementação do tipo gerenciado <xref:System.Threading.Monitor?displayProperty=nameWithType> . Esse método espelha a função do Win32 `CreateEvent` , com um valor de `false` especificado para o `bManualReset` parâmetro.  
+
+ `CreateMonitorEvent` Retorna um `IHostAutoEvent` que o CLR usa em sua implementação do tipo gerenciado <xref:System.Threading.Monitor?displayProperty=nameWithType> . Esse método espelha a função do Win32 `CreateEvent` , com um valor de `false` especificado para o `bManualReset` parâmetro.  
   
  O host pode usar o cookie para determinar qual tarefa está aguardando no monitor chamando o método [ICLRSyncManager:: GetMonitorOwner](iclrsyncmanager-getmonitorowner-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

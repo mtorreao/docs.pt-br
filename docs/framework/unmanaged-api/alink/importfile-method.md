@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: bcbe321f-b83a-4e9a-9f10-8d913e244dc9
 topic_type:
 - apiref
-ms.openlocfilehash: cda6d90865f8ad2b9d565f6a6378c35b03c65bf7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f30307884a268008fd4d1a8de31ec5a49b6ab92d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446997"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705235"
 ---
 # <a name="importfile-method"></a>Método ImportFile
+
 Importa assemblies e módulos desvinculados.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -38,6 +39,7 @@ HRESULT ImportFile(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pszFilename`  
  Nome totalmente qualificado do arquivo a ser importado.  
   
@@ -56,13 +58,15 @@ HRESULT ImportFile(
  `pdwCountOfScopes`  
  Ponteiro para a contagem de arquivos e/ou escopos que foram importados.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  Retorna S_OK se o método tiver sucesso.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
+
  Requer ALink. h  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IALink](ialink-interface.md)
 - [Interface IALink2](ialink2-interface.md)

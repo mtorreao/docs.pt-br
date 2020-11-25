@@ -14,21 +14,22 @@ helpviewer_keywords:
 ms.assetid: 383d20b0-efe9-4e71-8fb8-1186b2e7d0c0
 topic_type:
 - apiref
-ms.openlocfilehash: e6cf0aa6f731d0a417e1a2be0ca1d0f8c9299379
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 2c180a135608350b0feec3f419be98f4f428b186
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008268"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704507"
 ---
 # <a name="iceegen-interface"></a>Interface ICeeGen
+
 Fornece métodos para a compilação dinâmica de código.  
   
  Esta interface está obsoleta e não deve ser usada.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método AddSectionReloc](iceegen-addsectionreloc-method.md)|Obsoleto. Adiciona uma instrução. realocação à base de código.|  
 |[Método AllocateMethodBuffer](iceegen-allocatemethodbuffer-method.md)|Obsoleto. Cria um buffer do tamanho especificado para um método e Obtém o endereço virtual relativo do método.|  
@@ -47,11 +48,12 @@ Fornece métodos para a compilação dinâmica de código.
 |[Método TruncateSection](iceegen-truncatesection-method.md)|Obsoleto. Trunca a seção de código especificada pelo comprimento especificado.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como um recurso em MsCorEE. dll  
+ **Biblioteca:** Usado como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

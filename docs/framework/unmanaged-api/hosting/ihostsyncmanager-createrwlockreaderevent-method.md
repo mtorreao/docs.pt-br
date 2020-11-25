@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 68c4ea19-c47c-45c6-b420-d3a2ba1c2d50
 topic_type:
 - apiref
-ms.openlocfilehash: f3e7456c3f992527981a15b3b1835e1ca72603ad
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 7c9bf2186d3dc4500694225ea4023df3609b9010
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803290"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704377"
 ---
 # <a name="ihostsyncmanagercreaterwlockreaderevent-method"></a>Método IHostSyncManager::CreateRWLockReaderEvent
+
 Cria um objeto de evento de redefinição manual para a implementação de um bloqueio de leitor.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,6 +37,7 @@ HRESULT CreateRWLockReaderEvent (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `bInitialState`  
  [in] `true` , se `ppEvent` deve ser sinalizado; caso contrário, `false` .  
   
@@ -49,7 +51,7 @@ HRESULT CreateRWLockReaderEvent (
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`CreateRWLockReaderEvent`retornado com êxito.|  
+|S_OK|`CreateRWLockReaderEvent` retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -58,14 +60,16 @@ HRESULT CreateRWLockReaderEvent (
 |E_OUTOFMEMORY|Não havia memória suficiente disponível para criar o objeto de evento solicitado.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O CLR chama `CreateRWLockReaderEvent` para obter uma referência a uma `IHostManualEvent` instância a ser usada na implementação de um bloqueio de leitor. O host pode usar o cookie para determinar quais tarefas estão aguardando no bloqueio do leitor consultando a interface [ICLRSyncManager](iclrsyncmanager-interface.md) .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

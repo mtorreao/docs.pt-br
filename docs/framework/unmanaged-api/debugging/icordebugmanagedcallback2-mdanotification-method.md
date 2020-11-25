@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 93f79627-bd31-4f4f-b95d-46a032a52fe4
 topic_type:
 - apiref
-ms.openlocfilehash: f850b3cd35fda8bd554b99e14553100008cb4eca
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 09a410f54ddf07c9a5f6bb7dd34f2aaf266e0734
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83208519"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704572"
 ---
 # <a name="icordebugmanagedcallback2mdanotification-method"></a>Método ICorDebugManagedCallback2::MDANotification
+
 Fornece uma notificação de que a execução de código encontrou um MDA (Assistente de depuração gerenciada) no aplicativo que está sendo depurado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,6 +37,7 @@ HRESULT MDANotification(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pController`  
  no Um ponteiro para uma interface ICorDebugController que expõe o domínio do processo ou do aplicativo no qual o MDA ocorreu.  
   
@@ -52,6 +54,7 @@ HRESULT MDANotification(
  no Um ponteiro para uma interface [ICorDebugMDA](icordebugmda-interface.md) que expõe as informações de MDA.  
   
 ## <a name="remarks"></a>Comentários  
+
  Um MDA é um aviso heurístico e não requer nenhuma ação de depurador explícita, exceto para chamar [ICorDebugController:: Continue](icordebugcontroller-continue-method.md) para retomar a execução do aplicativo que está sendo depurado.  
   
  O Common Language Runtime (CLR) pode determinar quais MDAs são disparadas e quais dados estão em qualquer MDA determinado em qualquer ponto. Portanto, os depuradores não devem criar nenhuma funcionalidade que exija padrões de MDA específicos.  
@@ -61,6 +64,7 @@ HRESULT MDANotification(
  Um depurador deve liberar a referência a uma `ICorDebugMDA` instância imediatamente após retornar do `MDANotification` retorno de chamada, para permitir que o CLR Recicle a memória consumida por um MDA. A liberação da instância pode melhorar o desempenho se muitas MDAs estiverem sendo acionadas.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -71,6 +75,6 @@ HRESULT MDANotification(
   
 ## <a name="see-also"></a>Confira também
 
-- [Diagnosticando erros com assistentes para depuração gerenciada](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosticando erros com assistentes de depuração gerenciados](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [Interface ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md)
 - [Interface ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)

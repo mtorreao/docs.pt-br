@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bc14f408-b359-4c8c-ade2-888ccdf7261b
 topic_type:
 - apiref
-ms.openlocfilehash: 7c5359ddf2c021f77ad1ea0a8579316c3c773fd5
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: cfa0950ca2ef4e969258c147b762fa95e52a82e5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209780"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705807"
 ---
 # <a name="icordebuggenericvalue-interface"></a>Interface ICorDebugGenericValue
 
@@ -33,7 +33,8 @@ Uma subclasse de "ICorDebugValue" que se aplica a todos os valores. Essa interfa
 |[Método SetValue](icordebuggenericvalue-setvalue-method.md)|Copia um novo valor do buffer especificado.|  
   
 ## <a name="remarks"></a>Comentários  
- `ICorDebugGenericValue`é uma subinterface porque ela não é remota.  
+
+ `ICorDebugGenericValue` é uma subinterface porque ela não é remota.  
   
  Para tipos de referência, o valor é a referência em vez do conteúdo da referência.  
   
@@ -43,6 +44,7 @@ Uma subclasse de "ICorDebugValue" que se aplica a todos os valores. Essa interfa
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
