@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7b0e9b10-8cef-4ba6-8432-40bf63e65ab1
 topic_type:
 - apiref
-ms.openlocfilehash: 2bd05b49c3d51ac13865997910c99cc0cd5ca2d9
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 458a90bc47711d9f831805faa8468a49f3e0d305
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84491222"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703987"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>Método IMetaDataImport::GetFieldProps
+
 Obtém os metadados associados ao campo referenciado pelo token FieldDef especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -44,6 +45,7 @@ HRESULT GetFieldProps (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `mb`  
  no Um token FieldDef que representa o campo para o qual obter metadados associados.  
   
@@ -78,11 +80,12 @@ HRESULT GetFieldProps (
  fora O tamanho em caracteres de `ppValue` , ou zero, se nenhuma cadeia de caracteres existir.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

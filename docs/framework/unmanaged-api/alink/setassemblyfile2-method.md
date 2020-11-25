@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: eedb9125-1ef1-4000-abfc-7de86e5a1f17
 topic_type:
 - apiref
-ms.openlocfilehash: 4f710ef9741869a2b4fd8473ed3ecf379cfcc56d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 131f5d951e524ef48f2cfe1e3e88ef80ac21c452
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445588"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703675"
 ---
 # <a name="setassemblyfile2-method"></a>Método SetAssemblyFile2
+
 Define o nome e as opções para um novo assembly. Não chame esse método quando você produzir módulos não associados.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,6 +37,7 @@ HRESULT SetAssemblyFile2(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pszFilename`  
  Nome do arquivo de manifesto.  
   
@@ -48,13 +50,15 @@ HRESULT SetAssemblyFile2(
  `pAssemblyID`  
  Recebe uma ID exclusiva para o assembly que está sendo construído.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  Retorna S_OK se o método tiver sucesso.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
+
  Requer ALink. h.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IALink2](ialink2-interface.md)
 - [Interface IALink](ialink-interface.md)

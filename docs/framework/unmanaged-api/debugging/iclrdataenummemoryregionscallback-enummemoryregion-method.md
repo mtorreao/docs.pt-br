@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9bb93fab-57e8-4f9a-9ef3-1794504fa896
 topic_type:
 - apiref
-ms.openlocfilehash: e4fa0a3745200d39a468292e9520b1aeb0e9f1b2
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: b5ca524d223fad7ded0d56def3293eb40be69fa0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860673"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703714"
 ---
 # <a name="iclrdataenummemoryregionscallbackenummemoryregion-method"></a>Método ICLRDataEnumMemoryRegionsCallback::EnumMemoryRegion
+
 Chamado por [ICLRDataEnumMemoryRegions:: EnumMemoryRegions](iclrdataenummemoryregions-enummemoryregions-method.md) para relatar ao depurador o resultado de uma tentativa de enumerar uma região especificada de memória.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -35,6 +36,7 @@ HRESULT EnumMemoryRegion (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `address`  
  no O endereço inicial da região de memória que deve ser enumerada.  
   
@@ -42,11 +44,13 @@ HRESULT EnumMemoryRegion (
  no O tamanho, em bytes, da região de memória.  
   
 ## <a name="remarks"></a>Comentários  
+
  O `ICLRDataEnumMemoryRegions::EnumMemoryRegions` método chamará esse método de retorno de chamada após cada tentativa de enumerar uma região de memória. A enumeração continuará mesmo se esse método retornar um HRESULT indicando falha.  
   
  As regiões relatadas por esse retorno de chamada podem ser duplicatas ou sobrepostas regiões.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** ClrData. idl, ClrData. h  

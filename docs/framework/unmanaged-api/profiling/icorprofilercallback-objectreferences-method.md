@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: dd5e9b64-b4a3-4ba6-9be6-ddb540f4ffcf
 topic_type:
 - apiref
-ms.openlocfilehash: 12a0792e8fafc73b480de6bacc86f98470dfedf7
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 9485e3ca657ab108d2bcc9d00b1c475f8ee3c086
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503283"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703948"
 ---
 # <a name="icorprofilercallbackobjectreferences-method"></a>Método ICorProfilerCallback::ObjectReferences
+
 Notifica o criador de perfil sobre objetos na memória que estão sendo referenciados pelo objeto especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,6 +37,7 @@ HRESULT ObjectReferences(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `objectId`  
  no A ID do objeto que está fazendo referência a objetos.  
   
@@ -49,6 +51,7 @@ HRESULT ObjectReferences(
  no Uma matriz de IDs de objetos que estão sendo referenciados pelo `objectId` .  
   
 ## <a name="remarks"></a>Comentários  
+
  O `ObjectReferences` método é chamado para cada objeto restante no heap após a conclusão de uma coleta de lixo. Se o criador de perfil retornar um erro desse retorno de chamada, os serviços de criação de perfil descontinuarão invocando esse retorno de chamada até a próxima coleta de lixo.  
   
  O `ObjectReferences` retorno de chamada pode ser usado em conjunto com o retorno de chamada [ICorProfilerCallback:: RootReferences](icorprofilercallback-rootreferences-method.md) para criar um grafo de referência de objeto completo para o tempo de execução. O Common Language Runtime (CLR) garante que cada referência de objeto seja relatada apenas uma vez pelo `ObjectReferences` método.  
@@ -58,6 +61,7 @@ HRESULT ObjectReferences(
  Um NULL `ClassId` indica que `objectId` tem um tipo que está descarregando.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

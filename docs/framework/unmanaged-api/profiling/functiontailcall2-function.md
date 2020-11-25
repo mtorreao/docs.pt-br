@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 249f9892-b5a9-41e1-b329-28a925904df6
 topic_type:
 - apiref
-ms.openlocfilehash: cb7e21e0c6aad5ebb328ae5d1a993716f96e8d47
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e1cd3ef78d303aaa325699e1bcdec95f077fef21
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500566"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703974"
 ---
 # <a name="functiontailcall2-function"></a>Função FunctionTailcall2
+
 Notifica o criador de perfil de que a função atualmente em execução está prestes a executar uma chamada tail para outra função e fornece informações sobre o registro de ativação.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -51,6 +52,7 @@ void __stdcall FunctionTailcall2 (
   O criador de perfil deve tratar isso como um identificador opaco que pode ser passado de volta para o mecanismo de execução no método [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) .
 
 ## <a name="remarks"></a>Comentários  
+
  A função de destino da chamada tail usará o quadro de pilhas atual e retornará diretamente para o chamador da função que fez a chamada final. Isso significa que um retorno de chamada [FunctionLeave2](functionleave2-function.md) não será emitido para uma função que seja o destino de uma chamada tail.  
   
  O valor do `func` parâmetro não é válido depois que a `FunctionTailcall2` função retorna, pois o valor pode ser alterado ou destruído.  
@@ -68,6 +70,7 @@ void __stdcall FunctionTailcall2 (
  Além disso, a `FunctionTailcall2` função não deve chamar um código gerenciado ou, de qualquer forma, causar uma alocação de memória gerenciada.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl  

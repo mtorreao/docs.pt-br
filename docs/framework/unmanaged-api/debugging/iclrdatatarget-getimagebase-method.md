@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 091c5f32-c160-49e3-a75f-4692e084c8e4
 topic_type:
 - apiref
-ms.openlocfilehash: 71b07e11cd3fec1a0dbebe986d98067c2e6f18e1
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: f1b9f55a383f1deb867c6b3e2fa385a82158d1e9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860639"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703571"
 ---
 # <a name="iclrdatatargetgetimagebase-method"></a>Método ICLRDataTarget::GetImageBase
+
 Obtém o endereço de memória base da imagem especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -35,6 +36,7 @@ HRESULT GetImageBase (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `imagePath`  
  no O nome do arquivo da imagem, incluindo seu caminho.  
   
@@ -42,9 +44,11 @@ HRESULT GetImageBase (
  fora Um ponteiro para um CLRDATA_ADDRESS que armazena o endereço base da imagem.  
   
 ## <a name="remarks"></a>Comentários  
+
  O nome do arquivo de imagem pode ou não ter um caminho. Se um caminho for especificado, a correspondência será feita no caminho inteiro; caso contrário, a correspondência será feita apenas no nome do arquivo.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** ClrData. idl, ClrData. h  
