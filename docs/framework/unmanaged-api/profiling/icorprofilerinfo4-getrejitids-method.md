@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 634ac28c-a5b7-4fc3-af84-256c24ca8177
 topic_type:
 - apiref
-ms.openlocfilehash: ba15440df79dded95a8afa9438657d064e167f36
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2ac645cbaaa45554568874653be016e4691bbd2f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84495964"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707471"
 ---
 # <a name="icorprofilerinfo4getrejitids-method"></a>Método ICorProfilerInfo4::GetReJITIDs
+
 Retorna uma matriz de IDs que identifica todas as versões recompiladas por JIT da função especificada que ainda estão alocadas. Isso inclui versões recompiladas do JIT de funções que foram revertidas posteriormente, mas ainda não foram liberadas (por exemplo, quando o domínio do aplicativo que contém a função revertida ainda estiver em uso).  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,6 +37,7 @@ HRESULT GetReJITIDs (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `functionId`  
  no O `FunctionID` da instância de função para a qual enumerar versões.  
   
@@ -49,9 +51,11 @@ HRESULT GetReJITIDs (
  fora Uma matriz alocada pelo chamador que conterá as IDs de compilação JIT recompiladas para a função especificada.  
   
 ## <a name="remarks"></a>Comentários  
- `GetReJITIDs`enumera as IDs de recompilação JIT ativas para uma determinada instância de função. Ele segue o mesmo padrão de uso que outras `ICorProfilerInfo` funções que aceitam buffers alocados pelo chamador.  
+
+ `GetReJITIDs` enumera as IDs de recompilação JIT ativas para uma determinada instância de função. Ele segue o mesmo padrão de uso que outras `ICorProfilerInfo` funções que aceitam buffers alocados pelo chamador.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

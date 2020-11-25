@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: fc994fef-65c9-432a-84cb-66c8141147e7
 topic_type:
 - apiref
-ms.openlocfilehash: 532288364b2db1e6be49b9e6f87019b1e41e6866
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 516a12b7a4457a0f67da24294ad96fb79d1aa5aa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497914"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707510"
 ---
 # <a name="icorprofilerinfogetthreadinfo-method"></a>Método ICorProfilerInfo::GetThreadInfo
+
 Obtém a identidade do Thread Win32 atual para o thread especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,6 +35,7 @@ HRESULT GetThreadInfo(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `threadId`  
  no A ID do thread para o qual obter a ID do Win32 atual.  
   
@@ -41,6 +43,7 @@ HRESULT GetThreadInfo(
  fora Um ponteiro para a ID de thread do Win32 atual do thread especificado.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

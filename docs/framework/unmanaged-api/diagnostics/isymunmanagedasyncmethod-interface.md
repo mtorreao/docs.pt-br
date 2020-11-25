@@ -2,14 +2,15 @@
 title: Interface ISymUnmanagedAsyncMethod
 ms.date: 03/30/2017
 ms.assetid: f2de5224-fd91-45de-9e58-bc600c6d22f1
-ms.openlocfilehash: 448ed719331469dce8f15500f14d5c1b0707ecf7
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 02b1866f2b9e89cdc8c8795f399ecc0c733c7202
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504446"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707159"
 ---
 # <a name="isymunmanagedasyncmethod-interface"></a>Interface ISymUnmanagedAsyncMethod
+
 Essa interface é o complemento de leitura para a [interface ISymUnmanagedAsyncMethodPropertiesWriter](isymunmanagedasyncmethodpropertieswriter-interface.md).  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -19,6 +20,7 @@ Essa interface é o complemento de leitura para a [interface ISymUnmanagedAsyncM
 ```  
   
 ## <a name="methods"></a>Métodos  
+
  Essa interface contém os seguintes métodos:  
   
 |Método|Descrição|  
@@ -31,6 +33,7 @@ Essa interface é o complemento de leitura para a [interface ISymUnmanagedAsyncM
 |[Método IsAsyncMethod](isymunmanagedasyncmethod-isasyncmethod-method.md)|Verifica se o método tem informações assíncronas ou não.<br /><br /> Se esse método retornar `FALSE` , ele será inválido para chamar outros métodos nesta interface. Eles serão retornados `E_UNEXPECTED` nesse caso.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Confira também

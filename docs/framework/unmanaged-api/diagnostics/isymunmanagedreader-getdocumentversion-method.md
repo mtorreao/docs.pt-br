@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a51f1f64-e084-44c5-830c-2222da5a6bbf
 topic_type:
 - apiref
-ms.openlocfilehash: c2cc541b2a78f16d5ca6b19405794faa825a9d72
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: fc38c167b47ea72c7bc7ad81074f9cb1a0d217d8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615027"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707557"
 ---
 # <a name="isymunmanagedreadergetdocumentversion-method"></a>Método ISymUnmanagedReader::GetDocumentVersion
+
 Obtém a versão especificada do documento especificado. A versão do documento começa em 1 e é incrementada toda vez que o documento é atualizado usando o método [UpdateSymbolStore](isymunmanagedreader-updatesymbolstore-method.md) . Se o `pbCurrent` parâmetro for `true` , esta é a versão mais recente do documento.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -35,6 +36,7 @@ HRESULT GetDocumentVersion (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pDoc`  
  no O documento especificado.  
   
@@ -44,10 +46,12 @@ HRESULT GetDocumentVersion (
  `pbCurrent`  
  fora Um ponteiro para uma variável que recebe `true` se esta é a versão mais recente do documento ou `false` se não é a versão mais recente.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Confira também

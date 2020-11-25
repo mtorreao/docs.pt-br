@@ -10,12 +10,12 @@ helpviewer_keywords:
 - threading [.NET], best practices
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-ms.openlocfilehash: b2a3f2efc12392316f6d90242ef0a9224e7d13a4
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 88cbf266d15a10ff7c56e07a30161e0a800989d5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826307"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708043"
 ---
 # <a name="managed-threading-best-practices"></a>Práticas recomendadas de threading gerenciado
 
@@ -25,9 +25,11 @@ O multithreading requer programação cuidadosa. Para a maioria das tarefas, voc
 > A partir do .NET Framework 4, a biblioteca paralela de tarefas e o PLINQ fornecem APIs que reduzem parte da complexidade e dos riscos da programação multi-threaded. Para saber mais, confira [Programação paralela em .NET](../parallel-programming/index.md).  
   
 ## <a name="deadlocks-and-race-conditions"></a>Deadlocks e condições de corrida  
+
  O multithreading resolve problemas com taxa de transferência e capacidade de resposta, mas, ao fazer isso, ele introduz novos problemas: deadlocks e condições de corrida.  
   
 ### <a name="deadlocks"></a>Deadlocks  
+
  Um deadlock ocorre quando um dos dois threads tenta bloquear um recurso que o outro já bloqueou. Nenhum dos threads pode fazer progresso adicional.  
   
  Muitos métodos das classes de threading gerenciadas fornecem tempos limite para ajudá-lo a detectar deadlocks. Por exemplo, o código a seguir tenta adquirir um bloqueio em um objeto denominado `lockObject`. Se o bloqueio não for obtido em 300 milissegundos, <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType> retornará `false`.  
@@ -59,6 +61,7 @@ else {
 ```  
   
 ### <a name="race-conditions"></a>Condições de corrida  
+
  Uma condição de corrida é um bug que ocorre quando o resultado de um programa depende de qual dos dois ou mais threads alcança um determinado bloco de código primeiro. Executar o programa muitas vezes produz resultados diferentes e o resultado de qualquer execução não pode ser previsto.  
   
  Um exemplo simples de uma condição de corrida é incrementar um campo. Suponha que uma classe tem um campo **static** particular (**Shared** no Visual Basic) que é incrementado toda vez que uma instância da classe é criada, usando um código como `objCt++;` (C#) ou `objCt += 1` (Visual Basic). Esta operação requer o carregamento do valor de `objCt` em um registro, incrementando o valor e o armazenando em `objCt`.  
@@ -70,6 +73,7 @@ else {
  Condições de corrida também podem ocorrer quando você sincroniza as atividades de vários threads. Sempre que você escreve uma linha de código, é preciso considerar o que poderia acontecer se um thread fosse impedido antes de executar a linha (ou antes de qualquer uma das instruções de máquina individuais que compõem a linha) e outro thread o substituísse.  
   
 ## <a name="static-members-and-static-constructors"></a>Membros estáticos e construtores estáticos  
+
  Uma classe não é inicializada até que o construtor de classe (construtor `static` em C#, `Shared Sub New` no Visual Basic) tenha terminado de ser executado. Para impedir a execução de código em um tipo não inicializado, o Common Language Runtime bloqueia todas as chamadas de outros threads para membros `static` da classe (membros `Shared` no Visual Basic) até que o construtor da classe tenha concluído sua execução.  
   
  Por exemplo, se um construtor de classe iniciar um novo thread, e o procedimento do thread chamar um membro `static` da classe, o novo thread bloqueia até que o construtor da classe seja concluído.  
@@ -83,6 +87,7 @@ A existência de apenas um ou de vários processadores disponíveis em um sistem
 Use a <xref:System.Environment.ProcessorCount?displayProperty=nameWithType> propriedade para determinar o número de processadores disponíveis em tempo de execução.
   
 ## <a name="general-recommendations"></a>Recomendações gerais  
+
  Ao usar vários threads, considere as seguintes diretrizes:  
   
 - Não use <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> para encerrar outros threads. Chamar **Abort** em outro thread equivale a gerar uma exceção nesse thread sem saber qual ponto ele alcançou nesse processamento.  
@@ -163,6 +168,7 @@ Use a <xref:System.Environment.ProcessorCount?displayProperty=nameWithType> prop
     > A <xref:System.Threading.Interlocked.CompareExchange%60%601%28%60%600%40%2C%60%600%2C%60%600%29> sobrecarga do método fornece uma alternativa de tipo seguro para tipos de referência.
   
 ## <a name="recommendations-for-class-libraries"></a>Recomendações para bibliotecas de classes  
+
  Considere as seguintes diretrizes ao criar bibliotecas de classes para multithreading:  
   
 - Evite a necessidade de sincronização, se possível. Isso é especialmente válido para o código de uso intensivo. Por exemplo, um algoritmo pode ser ajustado para tolerar uma condição de corrida em vez de eliminá-la. Sincronização desnecessária reduz o desempenho e cria a possibilidade de deadlocks e condições de corrida.  

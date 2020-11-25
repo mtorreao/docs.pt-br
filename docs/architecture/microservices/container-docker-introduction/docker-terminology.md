@@ -2,12 +2,12 @@
 title: Terminologia do Docker
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Terminologia do Docker
 ms.date: 01/30/2020
-ms.openlocfilehash: 16aaaa2df0f68434b766d4d1cc96974e83449953
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: b30ea26ee174caf3484931945c832c72a1acf93d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199892"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707757"
 ---
 # <a name="docker-terminology"></a>Terminologia do Docker
 
@@ -35,7 +35,7 @@ docker build
 
 **Registro**: um serviço que dá acesso aos repositórios. O registro padrão para as imagens mais públicas é o [Docker Hub](https://hub.docker.com/) (propriedade da Docker como uma organização). Um registro geralmente contém repositórios de várias equipes. As empresas geralmente têm registros privados para armazenar e gerenciar as imagens que criaram. O Registro de Contêiner do Azure é outro exemplo.
 
-**Imagem de vários arcos**: para várias arquiteturas, trata-se de um recurso que simplifica a seleção da imagem apropriada, de acordo com a plataforma em que o Docker está em execução. Por exemplo, quando um Dockerfile solicita uma imagem base **do MCR.Microsoft.com/dotnet/Core/SDK:3.1** a partir do registro, ele realmente Obtém **3,1-SDK-** los-1909, **3,1-sdk-los Server-1809** ou **3,1-SDK-Buster-Slim**, dependendo do sistema operacional e da versão em que o Docker está em execução.
+**Imagem de vários arcos**: para várias arquiteturas, trata-se de um recurso que simplifica a seleção da imagem apropriada, de acordo com a plataforma em que o Docker está em execução. Por exemplo, quando um Dockerfile solicita uma imagem base **do MCR.Microsoft.com/dotnet/SDK:3.1** a partir do registro, ele realmente Obtém **3,1-SDK-** los-1909, **3,1-sdk-los Server-1809** ou **3,1-SDK-Buster-Slim**, dependendo do sistema operacional e da versão em que o Docker está em execução.
 
 **Docker Hub**: um registro público para carregar imagens e trabalhar com elas. O Docker Hub hospeda imagens do Docker, registros públicos ou privados, cria gatilhos e ganchos da Web e integra-se com o GitHub e o Bitbucket.
 
@@ -54,5 +54,5 @@ docker build
 **Orquestrador**: uma ferramenta que simplifica o gerenciamento de clusters e hosts do Docker. Os orquestradores permitem gerenciar imagens, contêineres e hosts por meio de uma CLI (interface de linha de comando) ou uma interface do usuário gráfica. É possível gerenciar a rede de contêiner, configurações, balanceamento de carga, descoberta de serviço, alta disponibilidade, configuração de host do Docker e muito mais. Um orquestrador é responsável por executar, distribuir, dimensionar e reparar de cargas de trabalho em uma coleção de nós. Normalmente, produtos de orquestrador são os mesmos que fornecem infraestrutura de cluster, como Kubernetes e Azure Service Fabric, além de outras ofertas no mercado.
 
 >[!div class="step-by-step"]
->[Anterior](docker-defined.md)
->[próximo](docker-containers-images-registries.md)
+>[Anterior](docker-defined.md) 
+> [Avançar](docker-containers-images-registries.md)

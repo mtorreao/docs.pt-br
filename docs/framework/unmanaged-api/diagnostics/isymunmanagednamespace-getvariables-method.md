@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ea7c1617-f3ce-4220-8288-f2b50eaf0f0f
 topic_type:
 - apiref
-ms.openlocfilehash: 091f497024b48589953456e1ea6daf6635738240
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: f554fa95f552285ad92d9f780a8d77f53e6890b6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615079"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707692"
 ---
 # <a name="isymunmanagednamespacegetvariables-method"></a>Método ISymUnmanagedNamespace::GetVariables
+
 Retorna todas as variáveis definidas no escopo global dentro deste namespace.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,6 +37,7 @@ HRESULT GetVariables(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `cVars`  
  no Um `ULONG32` que indica o tamanho da `pVars` matriz.  
   
@@ -45,10 +47,12 @@ HRESULT GetVariables(
  `pVars`  
  fora Um ponteiro para um buffer que contém os namespaces.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Confira também

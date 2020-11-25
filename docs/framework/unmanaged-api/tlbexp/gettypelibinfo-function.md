@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: a1c4d165-9bdc-4ca8-940e-292d4ffcc338
 topic_type:
 - apiref
-ms.openlocfilehash: 4c630f5f7e3dc66ce44f10cd69fcd108226b0250
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e9f6ae9a0fcd6651395c54c2e44973e53668c1ac
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554326"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708316"
 ---
 # <a name="gettypelibinfo-function"></a>Função GetTypeLibInfo
+
 Retorna informações sobre a biblioteca de tipos especificada examinando sua estrutura [TLIBATTR](/windows/win32/api/oaidl/ns-oaidl-tlibattr) .  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -38,6 +39,7 @@ HRESULT GetTypeLibInfo(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `szFile`  
  no O nome do arquivo da biblioteca de tipos.  
   
@@ -57,11 +59,13 @@ HRESULT GetTypeLibInfo(
  fora O número de versão secundária da biblioteca de tipos. Por exemplo, para a versão *x. y*, o número de versão secundária é *y*.  
   
 ## <a name="remarks"></a>Comentários  
+
  A `GetTypeLibInfo` função é chamada pelo [Tlbexp.exe (tipo de exportador da biblioteca de tipos)](../../tools/tlbexp-exe-type-library-exporter.md). Essa ferramenta gera uma biblioteca de tipos que descreve os tipos em um assembly Common Language Runtime (CLR).  
   
  Se qualquer parâmetro for nulo, a função retornará um `HRESULT` de `E_POINTER` . Caso contrário, ele retornará `S_OK`.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** TlbRef. h  

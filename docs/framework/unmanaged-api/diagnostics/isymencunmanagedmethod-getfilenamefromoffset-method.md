@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 00e2e194-12f5-436e-a997-2b9d3e844d4f
 topic_type:
 - apiref
-ms.openlocfilehash: 857410187edf1c712865626a3327dd4c92cc211f
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: ad9631039c8d032e7ffdba1e6098b66398f82277
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441923"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707380"
 ---
 # <a name="isymencunmanagedmethodgetfilenamefromoffset-method"></a>Método ISymENCUnmanagedMethod::GetFileNameFromOffset
+
 Obtém o nome do arquivo da linha associada a um deslocamento.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,6 +38,7 @@ HRESULT GetFileNameFromOffset(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `dwOffset`  
  no Um `ULONG32` que contém o deslocamento.  
   
@@ -49,10 +51,12 @@ HRESULT GetFileNameFromOffset(
  `szName`  
  fora O buffer que contém os nomes de arquivo.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Confira também

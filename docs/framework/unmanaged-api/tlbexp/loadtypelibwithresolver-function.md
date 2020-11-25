@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7123a89b-eb9b-463a-a552-a081e33b0a3a
 topic_type:
 - apiref
-ms.openlocfilehash: 395d5f63eef12570c07f1f601de7f9e480d62905
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6497dd3e720874e47de9dfda74e483a642cbb181
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540499"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708225"
 ---
 # <a name="loadtypelibwithresolver-function"></a>Função LoadTypeLibWithResolver
+
 Carrega uma biblioteca de tipos e usa a [interface ITypeLibResolver](itypelibresolver-interface.md) fornecida para resolver quaisquer bibliotecas de tipos referenciadas internamente.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -35,6 +36,7 @@ HRESULT LoadTypeLibWithResolver(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `szFile`  
  no O caminho do arquivo da biblioteca de tipos.  
   
@@ -54,11 +56,12 @@ HRESULT LoadTypeLibWithResolver(
  fora Uma referência à biblioteca de tipos que está sendo carregada.  
   
 ## <a name="return-value"></a>Valor Retornado  
+
  Um dos valores HRESULT listados na tabela a seguir.  
   
 |Valor retornado|Significado|  
 |------------------|-------------|  
-|`S_OK`|Êxito.|  
+|`S_OK`|Sucesso.|  
 |`E_OUTOFMEMORY`|Sem memória.|  
 |`E_POINTER`|Um ou mais ponteiros são inválidos.|  
 |`E_INVALIDARG`|Um ou mais argumentos são inválidos.|  
@@ -68,6 +71,7 @@ HRESULT LoadTypeLibWithResolver(
 |`TYPE_E_CANTLOADLIBRARY`|Não foi possível carregar a biblioteca de tipos ou a DLL.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O [Tlbexp.exe (tipo de exportador da biblioteca de tipos)](../../tools/tlbexp-exe-type-library-exporter.md) chama a `LoadTypeLibWithResolver` função durante o processo de conversão de assembly para tipo de biblioteca.  
   
  Essa função carrega a biblioteca de tipos especificada com acesso mínimo ao registro. Em seguida, a função examina a biblioteca de tipos para bibliotecas de tipos referenciadas internamente, cada uma delas deve ser carregada e adicionada à biblioteca de tipos pai.  
@@ -83,6 +87,7 @@ HRESULT LoadTypeLibWithResolver(
  Se você chamar `LoadTypeLibWithResolver` diretamente, deverá fornecer sua própria implementação de [interface ITypeLibResolver](itypelibresolver-interface.md) .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** TlbRef. h  

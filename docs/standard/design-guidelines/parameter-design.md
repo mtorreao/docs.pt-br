@@ -8,12 +8,12 @@ helpviewer_keywords:
 - parameters, design guidelines
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
-ms.openlocfilehash: 707ae48be3f45d82ed3819f943dc5ba3743172f3
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 815075198f34c0c045603b9d377b9d5fbdf1a91d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828797"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707874"
 ---
 # <a name="parameter-design"></a>Design de parâmetro
 
@@ -40,6 +40,7 @@ Esta seção fornece diretrizes amplas sobre o design de parâmetros, incluindo 
  Isso comunica melhor a relação entre os métodos.
 
 ### <a name="choosing-between-enum-and-boolean-parameters"></a>Escolhendo entre parâmetros de enumeração e boolianos  
+
  ✔️ usar enums se um membro, caso contrário, teria dois ou mais parâmetros boolianos.
 
  ❌ Não use boolianos, a menos que esteja absolutamente certo de que nunca haverá necessidade de mais de dois valores.
@@ -49,6 +50,7 @@ Esta seção fornece diretrizes amplas sobre o design de parâmetros, incluindo 
  ✔️ Considere usar boolianos para parâmetros de construtor que são verdadeiramente valores de dois Estados e são simplesmente usados para inicializar propriedades booleanas.
 
 ### <a name="validating-arguments"></a>Validando argumentos
+
  ✔️ validar argumentos passados para membros públicos, protegidos ou explicitamente implementados. Throw <xref:System.ArgumentException?displayProperty=nameWithType> , ou uma de suas subclasses, se a validação falhar.
 
  Observe que a validação real não precisa necessariamente acontecer no próprio membro público ou protegido. Isso pode acontecer em um nível inferior em alguma rotina privada ou interna. O ponto principal é que toda a área de superfície exposta aos usuários finais verifica os argumentos.
@@ -66,6 +68,7 @@ Esta seção fornece diretrizes amplas sobre o design de parâmetros, incluindo 
  Se o membro for sensível à segurança, você será incentivado a fazer uma cópia e, em seguida, validar e processar o argumento.
 
 ### <a name="parameter-passing"></a>Passagem de parâmetro
+
  Da perspectiva de um designer de estrutura, há três grupos principais de parâmetros: parâmetros por valor, `ref` parâmetros e `out` parâmetros.
 
  Quando um argumento é passado por um parâmetro por valor, o membro recebe uma cópia do argumento real passado. Se o argumento for um tipo de valor, uma cópia do argumento será colocada na pilha. Se o argumento for um tipo de referência, uma cópia da referência será colocada na pilha. As linguagens CLR mais populares, como C#, VB.NET e C++, assumem como padrão a passagem de parâmetros por valor.
@@ -83,6 +86,7 @@ Esta seção fornece diretrizes amplas sobre o design de parâmetros, incluindo 
  Há algumas exceções limitadas à regra, como um método que pode ser usado para alternar referências.
 
 ### <a name="members-with-variable-number-of-parameters"></a>Membros com número variável de parâmetros
+
  Os membros que podem obter um número variável de argumentos são expressos fornecendo um parâmetro de matriz. Por exemplo, <xref:System.String> o fornece o seguinte método:
 
 ```csharp
@@ -140,6 +144,7 @@ public class String {
  Algumas linguagens CLR, como C++, dão suporte a uma convenção alternativa para passar listas de parâmetros de variáveis chamados `varargs` métodos. A Convenção não deve ser usada em estruturas, pois não é compatível com CLS.
 
 ### <a name="pointer-parameters"></a>Parâmetros do ponteiro
+
  Em geral, os ponteiros não devem aparecer na área de superfície pública de uma estrutura de código gerenciada bem projetada. Na maioria das vezes, os ponteiros devem ser encapsulados. No entanto, em alguns casos, os ponteiros são necessários para motivos de interoperabilidade e o uso de ponteiros nesses casos é apropriado.
 
  ✔️ fornecem uma alternativa para qualquer membro que usa um argumento de ponteiro, porque os ponteiros não são compatíveis com CLS.
