@@ -15,19 +15,20 @@ helpviewer_keywords:
 ms.assetid: 71f362a9-8fe2-47ce-9302-05a645cf3d7d
 topic_type:
 - apiref
-ms.openlocfilehash: 031bfc3d7fcd9f1f04e616e460cb3201813eae55
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: ca427439f03d92b20e7714b9724d90b240e9cecb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616548"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704065"
 ---
-# <a name="corlaunchapplication-function"></a><span data-ttu-id="b6235-102">Função CorLaunchApplication</span><span class="sxs-lookup"><span data-stu-id="b6235-102">CorLaunchApplication Function</span></span>
-<span data-ttu-id="b6235-103">Inicia o aplicativo no caminho de rede especificado, usando os manifestos especificados e outros dados de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="b6235-103">Starts the application at the specified network path, using the specified manifests and other application data.</span></span>  
+# <a name="corlaunchapplication-function"></a><span data-ttu-id="eebcb-102">Função CorLaunchApplication</span><span class="sxs-lookup"><span data-stu-id="eebcb-102">CorLaunchApplication Function</span></span>
+
+<span data-ttu-id="eebcb-103">Inicia o aplicativo no caminho de rede especificado, usando os manifestos especificados e outros dados de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="eebcb-103">Starts the application at the specified network path, using the specified manifests and other application data.</span></span>  
   
- <span data-ttu-id="b6235-104">Essa função foi preterida no .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="b6235-104">This function has been deprecated in the .NET Framework 4.</span></span>  
+ <span data-ttu-id="eebcb-104">Essa função foi preterida no .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="eebcb-104">This function has been deprecated in the .NET Framework 4.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b6235-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="b6235-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="eebcb-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="eebcb-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT CorLaunchApplication (  
@@ -41,37 +42,39 @@ HRESULT CorLaunchApplication (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b6235-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="b6235-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="eebcb-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="eebcb-106">Parameters</span></span>  
+
  `dwClickOnceHost`  
- <span data-ttu-id="b6235-107">no Um valor da enumeração [HOST_TYPE](host-type-enumeration.md) que especifica o tipo de host que está iniciando o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="b6235-107">[in] A value of the [HOST_TYPE](host-type-enumeration.md) enumeration that specifies the type of host that is launching the application.</span></span>  
+ <span data-ttu-id="eebcb-107">no Um valor da enumeração [HOST_TYPE](host-type-enumeration.md) que especifica o tipo de host que está iniciando o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="eebcb-107">[in] A value of the [HOST_TYPE](host-type-enumeration.md) enumeration that specifies the type of host that is launching the application.</span></span>  
   
  `pwzAppFullName`  
- <span data-ttu-id="b6235-108">no O nome completo do aplicativo que está sendo iniciado.</span><span class="sxs-lookup"><span data-stu-id="b6235-108">[in] The full name of the application that is being launched.</span></span>  
+ <span data-ttu-id="eebcb-108">no O nome completo do aplicativo que está sendo iniciado.</span><span class="sxs-lookup"><span data-stu-id="eebcb-108">[in] The full name of the application that is being launched.</span></span>  
   
  `dwManifestPaths`  
- <span data-ttu-id="b6235-109">no O número de caminhos de manifesto para o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="b6235-109">[in] The number of manifest paths for the application.</span></span>  
+ <span data-ttu-id="eebcb-109">no O número de caminhos de manifesto para o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="eebcb-109">[in] The number of manifest paths for the application.</span></span>  
   
  `ppwzManifestPaths`  
- <span data-ttu-id="b6235-110">no Uma matriz de cadeias de caracteres, cada uma delas especifica um caminho para um manifesto para o aplicativo que está sendo iniciado.</span><span class="sxs-lookup"><span data-stu-id="b6235-110">[in] An array of strings, each of which specifies a path to a manifest for the application that is being launched.</span></span>  
+ <span data-ttu-id="eebcb-110">no Uma matriz de cadeias de caracteres, cada uma delas especifica um caminho para um manifesto para o aplicativo que está sendo iniciado.</span><span class="sxs-lookup"><span data-stu-id="eebcb-110">[in] An array of strings, each of which specifies a path to a manifest for the application that is being launched.</span></span>  
   
  `dwActivationData`  
- <span data-ttu-id="b6235-111">no O número de itens de dados de ativação para o aplicativo que está sendo iniciado.</span><span class="sxs-lookup"><span data-stu-id="b6235-111">[in] The number of activation data items for the application that is being launched.</span></span>  
+ <span data-ttu-id="eebcb-111">no O número de itens de dados de ativação para o aplicativo que está sendo iniciado.</span><span class="sxs-lookup"><span data-stu-id="eebcb-111">[in] The number of activation data items for the application that is being launched.</span></span>  
   
  `ppwzActivationData`  
- <span data-ttu-id="b6235-112">no Uma matriz de cadeias de caracteres, cada uma delas é um item de dados de ativação para o aplicativo que está sendo iniciado.</span><span class="sxs-lookup"><span data-stu-id="b6235-112">[in] An array of strings, each of which is an activation data item for the application that is being launched.</span></span>  
+ <span data-ttu-id="eebcb-112">no Uma matriz de cadeias de caracteres, cada uma delas é um item de dados de ativação para o aplicativo que está sendo iniciado.</span><span class="sxs-lookup"><span data-stu-id="eebcb-112">[in] An array of strings, each of which is an activation data item for the application that is being launched.</span></span>  
   
  `lpProcessInformation`  
- <span data-ttu-id="b6235-113">fora Um ponteiro para informações sobre o processo no qual o aplicativo foi carregado.</span><span class="sxs-lookup"><span data-stu-id="b6235-113">[out] A pointer to information about the process in which the application has been loaded.</span></span>  
+ <span data-ttu-id="eebcb-113">fora Um ponteiro para informações sobre o processo no qual o aplicativo foi carregado.</span><span class="sxs-lookup"><span data-stu-id="eebcb-113">[out] A pointer to information about the process in which the application has been loaded.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b6235-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b6235-114">Requirements</span></span>  
- <span data-ttu-id="b6235-115">**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b6235-115">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="b6235-116">**Cabeçalho:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="b6235-116">**Header:** MSCorEE.h</span></span>  
-  
- <span data-ttu-id="b6235-117">**Biblioteca:** MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="b6235-117">**Library:** MSCorEE.dll</span></span>  
-  
- <span data-ttu-id="b6235-118">**.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b6235-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="b6235-119">Veja também</span><span class="sxs-lookup"><span data-stu-id="b6235-119">See also</span></span>
+## <a name="requirements"></a><span data-ttu-id="eebcb-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="eebcb-114">Requirements</span></span>  
 
-- [<span data-ttu-id="b6235-120">Funções de hospedagem CLR reprovadas</span><span class="sxs-lookup"><span data-stu-id="b6235-120">Deprecated CLR Hosting Functions</span></span>](deprecated-clr-hosting-functions.md)
+ <span data-ttu-id="eebcb-115">**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="eebcb-115">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="eebcb-116">**Cabeçalho:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="eebcb-116">**Header:** MSCorEE.h</span></span>  
+  
+ <span data-ttu-id="eebcb-117">**Biblioteca:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="eebcb-117">**Library:** MSCorEE.dll</span></span>  
+  
+ <span data-ttu-id="eebcb-118">**.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eebcb-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="eebcb-119">Confira também</span><span class="sxs-lookup"><span data-stu-id="eebcb-119">See also</span></span>
+
+- [<span data-ttu-id="eebcb-120">Funções de hospedagem CLR reprovadas</span><span class="sxs-lookup"><span data-stu-id="eebcb-120">Deprecated CLR Hosting Functions</span></span>](deprecated-clr-hosting-functions.md)
