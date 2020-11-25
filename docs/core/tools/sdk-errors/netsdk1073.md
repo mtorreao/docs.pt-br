@@ -6,16 +6,16 @@ ms.topic: error-reference
 ms.date: 10/9/2020
 f1_keywords:
 - NETSDK1073
-ms.openlocfilehash: 59b5f63dcfe0115feabc2d87d24a09c6a650cc62
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 2b2dbf2a0d3e13dca4fe634529b7951f2333ce28
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91957131"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713022"
 ---
 # <a name="netsdk1073-the-frameworkreference-was-not-recognized"></a>NETSDK1073: o FrameworkReference não foi reconhecido
 
-**Este artigo aplica-se a:** ✔️ o SDK do .NET 2.1.100 e versões posteriores
+**Este artigo aplica-se a:** ✔️ SDK 2.1.100 do .NET Core e versões posteriores
 
 Esse erro normalmente significa que há uma versão de um determinado FrameworkReference que o SDK não pode localizar. Tente excluir as pastas *obj* e *bin* e execute `dotnet restore` para baixar novamente os pacotes de direcionamento mais recentes.
 

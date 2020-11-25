@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 966da50d-5665-4fff-bf7b-1c72bbadd9a4
 topic_type:
 - apiref
-ms.openlocfilehash: 0bffd2db0a4a061a8629ff50a03a319feec6d836
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 4b071bd8e9d96084848c1553385eec5f8beca624
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396559"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711722"
 ---
 # <a name="icordebugvariablehomegetslotindex-method"></a>Método ICorDebugVariableHome:: GetSlotIndex
+
 Obtém o índice de slot gerenciado de uma variável local.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,21 +35,25 @@ HRESULT GetSlotIndex(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pSlotIndex`  
  fora Um ponteiro para o índice de slot de uma variável local.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  O método retorna os valores a seguir.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |`S_OK`|A chamada de método retornou um valor de índice de slot em `pSlotIndex` .|  
 |`E_FAIL`|A instância [ICorDebugVariableHome](icordebugvariablehome-interface.md) atual representa um argumento de função.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O slot-index pode ser usado para recuperar os metadados para essa variável local.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -57,6 +62,6 @@ HRESULT GetSlotIndex(
   
  **.NET Framework versões:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorDebugVariableHome](icordebugvariablehome-interface.md)

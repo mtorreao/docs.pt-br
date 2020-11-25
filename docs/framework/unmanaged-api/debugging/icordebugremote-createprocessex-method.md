@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 41af93c7-e448-4251-8d4d-413d38c635f2
 topic_type:
 - apiref
-ms.openlocfilehash: 4b2689f04228c9ecbbbb18531a0aefd3c40e3072
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 37bf800f27754d1bf80aece962b7cbb85b1cbedc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83377986"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712177"
 ---
 # <a name="icordebugremotecreateprocessex-method"></a>Método ICorDebugRemote::CreateProcessEx
+
 Inicia um processo em um computador remoto sob o depurador.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -46,6 +47,7 @@ HRESULT CreateProcessEx (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pRemoteTarget`  
  no Ponteiro para uma [interface ICorDebugRemoteTarget](icordebugremotetarget-interface.md). Usado para determinar o computador remoto no qual o processo será iniciado.  
   
@@ -85,7 +87,8 @@ HRESULT CreateProcessEx (
  `ppProcess`  
  fora Um ponteiro para o endereço de um objeto "interface ICorDebugProcess" que representa o processo.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  S_OK  
  O processo foi iniciado com êxito no computador remoto e retornou uma "interface ICorDebugProcess" para depuração.  
   
@@ -93,9 +96,11 @@ HRESULT CreateProcessEx (
  Não é possível iniciar o processo no computador remoto e retornar uma "interface ICorDebugProcess" para depuração.  
   
 ## <a name="remarks"></a>Comentários  
+
  Não há suporte para a depuração de modo misto no Silverlight.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug. idl  

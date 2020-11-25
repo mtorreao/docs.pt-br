@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: bd9936a6-cc24-4869-8761-0988664464e6
 topic_type:
 - apiref
-ms.openlocfilehash: 4883c208468db0096bed3ff8cf4a8ed50a5d7cc6
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 4212597b5ba43f0e4767aa585ca28a011e73e07a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379225"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711982"
 ---
 # <a name="icordebugremotetarget-interface"></a>Interface ICorDebugRemoteTarget
+
 Fornece métodos que permitem aos desenvolvedores depurar aplicativos baseados no Silverlight no ambiente Common Language Runtime (CLR).  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -41,14 +42,16 @@ interface ICorDebugRemoteTarget  : IUnknown
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método ICorDebugRemoteTarget::GetHostName](icordebugremotetarget-gethostname-method.md)|Retorna o nome do host ou o endereço IP de um computador remoto.|  
   
 ## <a name="remarks"></a>Comentários  
+
  A depuração de modo misto (ou seja, código gerenciado e nativo) não tem suporte no Windows 95, Windows 98 ou Windows ME, ou em plataformas não x86 (como IA-64 e AMD64).  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug. idl  

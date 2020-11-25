@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 6dfc220f-d0d4-45b3-bfce-5829f817766f
 topic_type:
 - apiref
-ms.openlocfilehash: 23bc251053dd27a7c5accb48ab4759ecdb79fe09
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0fabf8159c2626d4e1716e3be60baaf1ec834032
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134302"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712970"
 ---
 # <a name="iassemblynameisequal-method"></a>Método IAssemblyName::IsEqual
-Determina se um objeto [IAssemblyName](iassemblyname-interface.md) especificado é igual a este `IAssemblyName`, com base nos sinalizadores de comparação especificados.  
+
+Determina se um objeto [IAssemblyName](iassemblyname-interface.md) especificado é igual a este `IAssemblyName` , com base nos sinalizadores de comparação especificados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,20 +36,22 @@ HRESULT IsEqual (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pName`  
- no O objeto `IAssemblyName` para o qual comparar esse `IAssemblyName`.  
+ no O `IAssemblyName` objeto para o qual comparar `IAssemblyName` .  
   
  `dwCmpFlags`  
- no Uma combinação de bits de valores [ASM_CMP_FLAGS](asm-cmp-flags-enumeration.md) que influencia a comparação.  
+ no Uma combinação de bits de [ASM_CMP_FLAGS](asm-cmp-flags-enumeration.md) de valores que influencia a comparação.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Fusion. h  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IAssemblyName](iassemblyname-interface.md)
-- [Enumerações de fusão](fusion-enumerations.md)
+- [Enumerações Fusion](fusion-enumerations.md)

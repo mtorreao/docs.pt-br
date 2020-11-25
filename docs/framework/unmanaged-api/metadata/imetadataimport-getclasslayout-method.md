@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8f35414d-f40b-4b99-8768-9adb675c622a
 topic_type:
 - apiref
-ms.openlocfilehash: 36c0ffef2d984604be4ae19899e8f3f912cee123
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5a442d8d0916b0e86f25c03507de66fc999f2159
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84491466"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711228"
 ---
 # <a name="imetadataimportgetclasslayout-method"></a>Método IMetaDataImport::GetClassLayout
+
 Obtém informações de layout para a classe referenciada pelo token de TypeDef especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -39,6 +40,7 @@ HRESULT GetClassLayout  (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `td`  
  no O token de TypeDef para a classe com o layout a ser retornado.  
   
@@ -58,11 +60,12 @@ HRESULT GetClassLayout  (
  fora O tamanho em bytes da classe representada por `td` .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 909aa530-2e3b-4d0a-a38a-a2750e535d7d
 topic_type:
 - apiref
-ms.openlocfilehash: e6921a0f6420546ba1e866e37a7a7cb129a77c67
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 3eb894aaf8ccdc99ea23ddf946f39f3ec71773d1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84491427"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711202"
 ---
 # <a name="imetadataimportgetcustomattributebyname-method"></a>Método IMetaDataImport::GetCustomAttributeByName
+
 Obtém o atributo personalizado, dado seu nome e proprietário.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,6 +38,7 @@ HRESULT GetCustomAttributeByName (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `tkObj`  
  no Um token de metadados que representa o objeto que possui o atributo personalizado.  
   
@@ -50,14 +52,16 @@ HRESULT GetCustomAttributeByName (
  fora O tamanho em bytes dos dados retornados em * `ppData` .  
   
 ## <a name="remarks"></a>Comentários  
+
  É legal definir vários atributos personalizados para o mesmo proprietário; Eles podem até mesmo ter o mesmo nome. No entanto, `GetCustomAttributeByName` retorna apenas uma instância. ( `GetCustomAttributeByName` retorna a primeira instância que ele encontra.) Para localizar todas as instâncias de um atributo personalizado, chame o método [IMetaDataImport:: EnumCustomAttributes](imetadataimport-enumcustomattributes-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

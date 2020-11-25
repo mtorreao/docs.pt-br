@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 62eb5d55-53ee-4fb3-8d47-7b6c96808f9e
 topic_type:
 - apiref
-ms.openlocfilehash: 83ac91133b226e2ac263356941c3fc3288355e7e
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 281b9f46194e93220f47ef8aadbf29ce03084582
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379931"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711933"
 ---
 # <a name="icordebugtypegetstaticfieldvalue-method"></a>Método ICorDebugType::GetStaticFieldValue
+
 Obtém um ponteiro de interface para um objeto ICorDebugValue que contém o valor do campo estático referenciado pelo token de campo especificado no quadro de ativação especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,6 +37,7 @@ HRESULT GetStaticFieldValue (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `fieldDef`  
  no Um `mdFieldDef` token que especifica o campo estático.  
   
@@ -46,6 +48,7 @@ HRESULT GetStaticFieldValue (
  fora Um ponteiro para o endereço de um `ICorDebugValue` que contém o valor do campo estático.  
   
 ## <a name="remarks"></a>Comentários  
+
  O `GetStaticFieldValue` método poderá ser usado somente se o tipo for ELEMENT_TYPE_CLASS ou ELEMENT_TYPE_VALUETYPE, conforme indicado pelo método [ICorDebugType:: GetType](icordebugtype-gettype-method.md) .  
   
  Para tipos não genéricos, a operação executada pelo `GetStaticFieldValue` é idêntica à chamada de [ICorDebugClass:: GetStaticFieldValue](icordebugclass-getstaticfieldvalue-method.md) no objeto ICorDebugClass retornado por [ICorDebugType:: GetClass](icordebugtype-getclass-method.md).  
@@ -53,9 +56,11 @@ HRESULT GetStaticFieldValue (
  Para tipos genéricos, um valor de campo estático será relativo a uma instanciação específica. Além disso, se o campo estático puder ser relativo a um thread, um contexto ou um domínio de aplicativo, o quadro de pilha ajudará o depurador a determinar o valor adequado.  
   
 ## <a name="remarks"></a>Comentários  
- `GetStaticFieldValue`pode ser usado somente quando uma chamada para `ICorDebugType::GetType` retorna um valor de ELEMENT_TYPE_CLASS ou ELEMENT_TYPE_VALUETYPE.  
+
+ `GetStaticFieldValue` pode ser usado somente quando uma chamada para `ICorDebugType::GetType` retorna um valor de ELEMENT_TYPE_CLASS ou ELEMENT_TYPE_VALUETYPE.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

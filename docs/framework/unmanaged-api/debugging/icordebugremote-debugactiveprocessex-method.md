@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b0df5c5d-9a2e-47bf-894c-6f8a9fe24a1f
 topic_type:
 - apiref
-ms.openlocfilehash: b95e9f3a0d584511a2bcf156ed2c50a98f96d071
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: c9847fd6122aa32c95aecd5643a62a6775ae38d3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379056"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712112"
 ---
 # <a name="icordebugremotedebugactiveprocessex-method"></a>Método ICorDebugRemote::DebugActiveProcessEx
+
 Inicia um processo em um computador remoto sob o depurador.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,6 +38,7 @@ HRESULT DebugActiveProcessEx (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pRemoteTarget`  
  no Ponteiro para uma [interface ICorDebugRemoteTarget](icordebugremotetarget-interface.md). Esse parâmetro é usado para determinar o computador no qual o processo está em execução.  
   
@@ -49,7 +51,8 @@ HRESULT DebugActiveProcessEx (
  `ppProcess`  
  fora Um ponteiro para o endereço de um objeto "ICorDebugProcess" que representa o processo ao qual o depurador foi anexado.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  S_OK  
  Anexado com êxito ao processo no computador remoto.  
   
@@ -57,9 +60,11 @@ HRESULT DebugActiveProcessEx (
  Não é possível anexar ao processo no computador remoto.  
   
 ## <a name="remarks"></a>Comentários  
+
  Não há suporte para a depuração de modo misto no Silverlight.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

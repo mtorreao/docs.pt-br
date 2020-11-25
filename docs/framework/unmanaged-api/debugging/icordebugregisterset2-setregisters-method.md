@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: fe0ac7e7-c9e1-4ec1-9f4e-1c56d63d73ac
 topic_type:
 - apiref
-ms.openlocfilehash: ebbd8dc2b715541850ed3b3bc530c0dd28993e1d
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 53660a5b10858632dffc5b31c290e9cb98d634c4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378123"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712294"
 ---
 # <a name="icordebugregisterset2setregisters-method"></a>Método ICorDebugRegisterSet2::SetRegisters
-`SetRegisters`Não está implementado na versão .NET Framework 2,0. Não chame esse método.  
+
+`SetRegisters` Não está implementado na versão .NET Framework 2,0. Não chame esse método.  
   
 > [!NOTE]
 > Use as operações de nível superior, como [ICorDebugILFrame:: SetIP](icordebugilframe-setip-method.md) ou [ICorDebugNativeFrame:: SetIP](icordebugnativeframe-setip-method.md).  
@@ -40,6 +41,7 @@ HRESULT SetRegisters (
 ```  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

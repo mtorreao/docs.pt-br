@@ -6,17 +6,19 @@ helpviewer_keywords:
 - fusion interfaces [.NET Framework]
 - unmanaged interfaces [.NET Framework], fusion
 ms.assetid: e2cf98b7-40c1-4f74-86c7-8a76dd9da677
-ms.openlocfilehash: 81c66825e69d9526abddfe06133426a2274ad08f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 59e34a39bada1dcf5e66a0c5b92a7fcbfb41d884
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73108188"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711683"
 ---
 # <a name="fusion-interfaces"></a>Interfaces de fusão
+
 Esta seção descreve as interfaces não gerenciadas que a API do Fusion usa para acessar as propriedades dos recursos de um aplicativo e localizar as versões corretas desses recursos para o aplicativo.  
   
 ## <a name="in-this-section"></a>Nesta seção  
+
  [Interface IAppIdAuthority](iappidauthority-interface.md)  
  Fornece métodos que geram e comparam chaves para identidades e referências de aplicativos.  
   
@@ -27,7 +29,7 @@ Esta seção descreve as interfaces não gerenciadas que a API do Fusion usa par
  Representa um único assembly no cache de assembly global.  
   
  [Interface IAssemblyEnum](iassemblyenum-interface.md)  
- Representa um enumerador para uma matriz de objetos `IAssemblyName`.  
+ Representa um enumerador para uma matriz de `IAssemblyName` objetos.  
   
  [Interface IAssemblyName](iassemblyname-interface.md)  
  Fornece métodos para descrever e trabalhar com a identidade exclusiva de um assembly.  
@@ -39,13 +41,13 @@ Esta seção descreve as interfaces não gerenciadas que a API do Fusion usa par
  Representa a assinatura exclusiva do código que define o aplicativo no escopo atual.  
   
  [Interface IEnumDefinitionIdentity](ienumdefinitionidentity-interface.md)  
- Serve como o enumerador para uma coleção de objetos `IDefinitionIdentity`.  
+ Serve como o enumerador para uma coleção de `IDefinitionIdentity` objetos.  
   
  [Interface IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)  
  Serve como um enumerador para os atributos do objeto de código no escopo atual.  
   
  [Interface IEnumReferenceIdentity](ienumreferenceidentity-interface.md)  
- Serve como um enumerador para uma coleção de objetos `IReferenceIdentity`.  
+ Serve como um enumerador para uma coleção de `IReferenceIdentity` objetos.  
   
  [Interface IIdentityAuthority](iidentityauthority-interface.md)  
  Gerencia chaves de identidade para objetos de código.  
@@ -63,13 +65,15 @@ Esta seção descreve as interfaces não gerenciadas que a API do Fusion usa par
  Representa uma referência à assinatura exclusiva de um objeto de código.  
   
 ## <a name="reference"></a>Referência  
+
  <xref:System.Reflection>  
   
  <xref:System.Reflection.Emit>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
+
  [Funções estáticas globais de fusão](fusion-global-static-functions.md)  
   
- [Enumerações de fusão](fusion-enumerations.md)  
+ [Enumerações Fusion](fusion-enumerations.md)  
   
  [Estruturas de fusão](fusion-structures.md)
