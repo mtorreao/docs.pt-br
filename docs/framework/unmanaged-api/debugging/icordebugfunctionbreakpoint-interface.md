@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9c149303-14b1-4138-83d7-e8c3e0fcd332
 topic_type:
 - apiref
-ms.openlocfilehash: 6a378e3579ab9ea8d9534a408d0e456373616cad
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 0f1e6bbdf16c953b0dd22d9dfa44bc3585f1269e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213129"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726243"
 ---
 # <a name="icordebugfunctionbreakpoint-interface"></a>Interface ICorDebugFunctionBreakpoint
 
@@ -27,7 +27,7 @@ Estende a interface ICorDebugBreakpoint para dar suporte a pontos de interrupç�
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método GetFunction](icordebugfunctionbreakpoint-getfunction-method.md)|Obtém um ponteiro de interface para um ICorDebugFunction que faz referência à função na qual o ponto de interrupção está definido.|  
 |[Método GetOffset](icordebugfunctionbreakpoint-getoffset-method.md)|Obtém o deslocamento do ponto de interrupção dentro da função.|  
@@ -38,6 +38,7 @@ Estende a interface ICorDebugBreakpoint para dar suporte a pontos de interrupç�
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

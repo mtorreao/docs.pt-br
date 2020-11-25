@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: e48b5c64-049f-4f93-ad87-d07ae9cd5845
 topic_type:
 - apiref
-ms.openlocfilehash: 986ae69e7ebb8f607be5d37fab426bcc787abb26
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 25a1c29ab94a785304b83d5b1bcb2d7176742a68
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445647"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726012"
 ---
 # <a name="init-method"></a>Método Init
+
 Prepara objetos que implementam a [interface IALink](ialink-interface.md) para uso.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,19 +35,22 @@ HRESULT Init(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pDispenser`  
  Ponteiro de [interface IMetaDataDispenserEx](../metadata/imetadatadispenserex-interface.md) para o dispensador de metadados.  
   
  `pErrorHandler`  
  Ponteiro de [interface IMetaDataError](../metadata/imetadataerror-interface.md) para uma interface de tratamento de erro opcional.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  Retorna S_OK se o método tiver sucesso.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
+
  Requer ALink. h  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IALink](ialink-interface.md)
 - [Interface IALink2](ialink2-interface.md)

@@ -14,27 +14,29 @@ helpviewer_keywords:
 ms.assetid: b22fbe19-b30f-4696-8175-e6b91da9edab
 topic_type:
 - apiref
-ms.openlocfilehash: f4f925282d65cd9cbc8eb1c8825f358602de68ed
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 554e59484f00626726f7f024c69e93a5e6647130
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441689"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727374"
 ---
 # <a name="isymunmanagedbinder-interface"></a>Interface ISymUnmanagedBinder
-Representa um fichário de símbolo para código não gerenciado.  
+
+Representa um associador de símbolo para o código não gerenciado.  
   
 > [!IMPORTANT]
 > É um risco de segurança abrir um arquivo de banco de dados do programa (PDB) de uma fonte não confiável.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método GetReaderForFile](isymunmanagedbinder-getreaderforfile-method.md)|Dada uma interface de metadados e um nome de arquivo, retorna a estrutura [ISymUnmanagedReader](isymunmanagedreader-interface.md) correta que lerá os símbolos de depuração associados ao módulo.|  
 |[Método GetReaderFromStream](isymunmanagedbinder-getreaderfromstream-method.md)|Dada uma interface de metadados e um fluxo que contém o armazenamento de símbolo, retorna a estrutura [ISymUnmanagedReader](isymunmanagedreader-interface.md) correta que lerá os símbolos de depuração do repositório de símbolos fornecido.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Confira também

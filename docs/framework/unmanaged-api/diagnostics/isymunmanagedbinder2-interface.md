@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7a59f405-73e8-4434-8bcc-a9dc45ea08e6
 topic_type:
 - apiref
-ms.openlocfilehash: f6155eb777b5071ff522af4f27d5fb2d73aa25ef
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c5a43f6c277f582f9f14cefe5bfba6f5300c09d8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501827"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727348"
 ---
 # <a name="isymunmanagedbinder2-interface"></a>Interface ISymUnmanagedBinder2
+
 Representa um fichário de símbolo para código não gerenciado e estende a interface [ISymUnmanagedBinder](isymunmanagedbinder-interface.md) .  
   
 > [!IMPORTANT]
@@ -29,11 +30,12 @@ Representa um fichário de símbolo para código não gerenciado e estende a int
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método GetReaderForFile2](isymunmanagedbinder2-getreaderforfile2-method.md)|Dada uma interface de metadados e um nome de arquivo, retorna a interface [ISymUnmanagedReader](isymunmanagedreader-interface.md) correta que lerá os símbolos de depuração associados ao módulo. Fornece uma pesquisa mais abrangente do que o método [ISymUnmanagedBinder:: GetReaderForFile](isymunmanagedbinder-getreaderforfile-method.md) .|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Confira também

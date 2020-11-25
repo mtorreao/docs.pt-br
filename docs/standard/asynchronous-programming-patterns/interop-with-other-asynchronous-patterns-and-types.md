@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET support for
 - .NET, asynchronous design patterns
 ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
-ms.openlocfilehash: b0dd786e1922d75edcb0326cc9e98037c6e4945c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2ae1c514185152dd709fe06018df513fb54b874b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830318"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726711"
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>Interoperabilidade com outros tipos e padrões assíncronos
 
@@ -28,6 +28,7 @@ Um breve histórico dos padrões assíncronos no .NET:
 ## <a name="tasks-and-the-asynchronous-programming-model-apm"></a>Tarefas e APM (Modelo Assíncrono de Programação)
 
 ### <a name="from-apm-to-tap"></a>De APM para TAP  
+
  Como o padrão do [modelo de programação assíncrona (APM)](asynchronous-programming-model-apm.md) é estruturado, é muito fácil criar um wrapper para expor uma implementação de APM como uma implementação de toque. O .NET Framework 4 e versões posteriores incluem rotinas auxiliares na forma de <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> sobrecargas de método para fornecer essa tradução.  
   
  Considere a classe <xref:System.IO.Stream> e seus métodos <xref:System.IO.Stream.BeginRead%2A> e <xref:System.IO.Stream.EndRead%2A>, que representam a contrapartida do APM para o método síncrono <xref:System.IO.Stream.Read%2A>:  
@@ -50,6 +51,7 @@ Um breve histórico dos padrões assíncronos no .NET:
  [!code-vb[Conceptual.AsyncInterop#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Wrap2.vb#5)]  
   
 ### <a name="from-tap-to-apm"></a>De TAP para APM  
+
  Se a infraestrutura existente esperar o padrão APM, convém também pegar uma implementação do TAP e usá-la onde uma implementação do APM é esperada.  Como as tarefas podem ser compostas e a classe <xref:System.Threading.Tasks.Task> implementa o <xref:System.IAsyncResult>, você pode usar uma função auxiliar simples para fazer isso. O código a seguir usa uma extensão da classe <xref:System.Threading.Tasks.Task%601>, mas você pode usar uma função quase idêntica para tarefas não genéricas.  
   
  [!code-csharp[Conceptual.AsyncInterop#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/APM1.cs#6)]
@@ -73,6 +75,7 @@ Um breve histórico dos padrões assíncronos no .NET:
  [!code-vb[Conceptual.AsyncInterop#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/APM2.vb#10)]  
   
 ## <a name="tasks-and-the-event-based-asynchronous-pattern-eap"></a>Tarefas e o EAP (Padrão assíncrono baseado em evento)  
+
  Dispor uma implementação do [EAP (Padrão assíncrono baseado em evento)](event-based-asynchronous-pattern-eap.md) é mais envolvente do que dispor um padrão do APM porque o padrão EAP possui mais variações e menos estrutura do que o padrão APM.  Para demonstrar, o código a seguir se dispõe ao redor do método `DownloadStringAsync`.  `DownloadStringAsync` aceita um URI, gera o evento `DownloadProgressChanged` durante o download para oferecer várias estatísticas sobre o andamento e, quando tiver terminado, gera o evento `DownloadStringCompleted`.  O resultado final é uma cadeia de caracteres que contém o conteúdo da página no URI especificado.  
   
  [!code-csharp[Conceptual.AsyncInterop#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/EAP1.cs#11)]
@@ -81,6 +84,7 @@ Um breve histórico dos padrões assíncronos no .NET:
 ## <a name="tasks-and-wait-handles"></a>Tarefas e identificadores de espera  
   
 ### <a name="from-wait-handles-to-tap"></a>De Identificadores de espera para TAP  
+
  Embora os identificadores de espera não implementem um padrão assíncrono, os desenvolvedores avançados podem usar a classe <xref:System.Threading.WaitHandle> e o método <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> em notificações assíncronas quando um identificador de espera estiver definido.  Você pode dispor o método <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> para habilitar uma alternativa baseada em tarefa para qualquer espera síncrona em um identificador de espera:  
   
  [!code-csharp[Conceptual.AsyncInterop#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Wait1.cs#12)]
@@ -94,6 +98,7 @@ Um breve histórico dos padrões assíncronos no .NET:
  Você também pode criar um semáforo assíncrono que não depende de identificadores de espera e só trabalha com tarefas. Para fazer isso, você pode usar técnicas, como aquelas discutidas em [Consumir o Padrão assíncrono baseado em tarefa](consuming-the-task-based-asynchronous-pattern.md), para criar estruturas de dados em cima de <xref:System.Threading.Tasks.Task>.  
   
 ### <a name="from-tap-to-wait-handles"></a>De TAP para Identificadores de espera  
+
  Conforme mencionado anteriormente, a classe <xref:System.Threading.Tasks.Task> implementa o <xref:System.IAsyncResult> e essa implementação expõe uma propriedade <xref:System.Threading.Tasks.Task.System%23IAsyncResult%23AsyncWaitHandle%2A> que retorna um identificador de espera que será definido quando <xref:System.Threading.Tasks.Task> for concluído.  Você pode obter um <xref:System.Threading.WaitHandle> para um <xref:System.Threading.Tasks.Task> da seguinte maneira:  
   
  [!code-csharp[Conceptual.AsyncInterop#14](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Wait1.cs#14)]

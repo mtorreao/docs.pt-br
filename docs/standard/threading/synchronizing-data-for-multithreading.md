@@ -7,12 +7,12 @@ helpviewer_keywords:
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-ms.openlocfilehash: 188090a968b49bd77279d35dc41f00e808299938
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e1b90bdc5657c1fd22c6e77e31890ff63c3cc3ea
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819637"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727452"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Sincronizando dados para multithreading
 
@@ -38,12 +38,15 @@ O .NET fornece várias estratégias para sincronizar o acesso à instância e ao
 |Sincronização manual|Manual|Manual|Manual|Manual|Manual|Manual|  
   
 ## <a name="no-synchronization"></a>Sem sincronização  
+
  Este é o padrão para objetos. Qualquer thread pode acessar qualquer método ou campo a qualquer momento. Apenas um thread por vez deve acessar esses objetos.  
   
 ## <a name="manual-synchronization"></a>Sincronização manual  
+
  A biblioteca de classes do .NET fornece uma série de classes para sincronizar threads. Confira [Visão geral dos primitivos de sincronização](overview-of-synchronization-primitives.md).  
   
 ## <a name="synchronized-code-regions"></a>Regiões de código sincronizadas  
+
  Você pode usar a classe <xref:System.Threading.Monitor> ou uma palavra-chave do compilador para sincronizar blocos de código, métodos de instância e métodos estáticos. Não há suporte para campos estáticos sincronizados.  
   
  Tanto o Visual Basic quanto o C # dão suporte à marcação de blocos de código com uma palavra-chave de idioma específica, a instrução `lock` em C # ou a instrução `SyncLock` no Visual Basic. Quando o código é executado por um thread, uma tentativa é feita para adquirir o bloqueio. Se o bloqueio já foi adquirido por outro thread, o thread bloqueia até que o bloqueio fique disponível. Quando o thread sai do bloco de código sincronizado, o bloqueio é liberado, não importa como o thread sai do bloco.  
@@ -59,6 +62,7 @@ O .NET fornece várias estratégias para sincronizar o acesso à instância e ao
 > Não bloqueie o tipo — isto é, `typeof(MyType)` no C#, `GetType(MyType)` no Visual Basic, ou `MyType::typeid` no C++ — para proteger métodos `static` (métodos `Shared` no Visual Basic). Use um objeto estático privado em vez disso. Da mesma forma, não use `this` no C # (`Me` no Visual Basic) para bloquear métodos de instância. Use um objeto privado em vez disso. Uma classe ou instância pode ser bloqueada por código diferente do seu, potencialmente causando deadlocks ou problemas de desempenho.  
   
 ### <a name="compiler-support"></a>Suporte de compilador  
+
  O Visual Basic e o C# dão suporte a uma palavra-chave de idioma que usa <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> e <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> para bloquear o objeto. O Visual Basic oferece suporte à instrução [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md); C# oferece suporte à instrução [lock](../../csharp/language-reference/keywords/lock-statement.md).  
   
  Em ambos os casos, se uma exceção for lançada no bloqueio de código, o bloqueio adquirido por **lock** ou **SyncLock** é liberado automaticamente. Os compiladores C# e Visual Basic emitem um bloco **try** / **finally** com **Monitor. Enter** no início do teste try e **Monitor. Exit** no bloco **finally** . Se uma exceção for lançada dentro do bloqueio **lock** ou **SyncLock**, o manipulador **finally** é executado para permitir que você faça qualquer trabalho de limpeza.  

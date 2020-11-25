@@ -7,12 +7,12 @@ helpviewer_keywords:
 - local thread storage
 - TLS
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
-ms.openlocfilehash: c9ea2939dcff321a1d4e24e7a97c056c016e5fdc
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b45c83887d278589cc1704ec1398ec99e27550ad
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819624"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727517"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>Armazenamento local de thread: campos estáticos relativos a thread e slots de dados
 
@@ -27,6 +27,7 @@ Você pode usar o armazenamento local de threads gerenciados (TLS) para armazena
 Você pode usar a <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> classe para criar objetos de thread local que são inicializados lentamente quando o objeto é consumido pela primeira vez. Para obter mais informações, veja [Inicialização lenta](../../framework/performance/lazy-initialization.md).  
   
 ## <a name="uniqueness-of-data-in-managed-tls"></a>Exclusividade de dados em TLS gerenciado  
+
  Não importa se você usa campos estáticos relativos a thread ou slots de dados, os dados em TLS gerenciado são exclusivos da combinação de thread e domínio de aplicativos.  
   
 - Dentro de um domínio de aplicativo, um thread não pode modificar dados de outro thread, mesmo quando ambos threads usam o mesmo campo ou slot.  
@@ -38,6 +39,7 @@ Você pode usar a <xref:System.Threading.ThreadLocal%601?displayProperty=nameWit
  Da mesma forma, quando um segmento obtém o mesmo slot de dados nomeado em dois domínios de aplicativo diferentes, os dados no primeiro domínio do aplicativo permanecem independentes dos dados no segundo domínio do aplicativo.  
   
 ## <a name="thread-relative-static-fields"></a>Campos estáticos relativos a thread  
+
  Se você sabe que um dado é sempre exclusivo a uma combinação de thread e domínio de aplicativo, aplique o atributo <xref:System.ThreadStaticAttribute> ao campo estático. Use o campo como você usaria qualquer outro campo estático. Os dados no campo são exclusivos para cada thread que os usa.  
   
  Campos estáticos relativos a thread fornecem melhor desempenho do que os slots de dados e têm o benefício da verificação do tipo de tempo de compilação.  

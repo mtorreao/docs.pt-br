@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: ed86185f-2152-459c-961f-10c06d62e83f
 topic_type:
 - apiref
-ms.openlocfilehash: cbc272070e9eb6810b34ec1f3fdc9e944c624cd3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c50ba530d78296ebb956329b2f34b4f1e5cae94c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132376"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727413"
 ---
 # <a name="cor_active_function-structure"></a>Estrutura COR_ACTIVE_FUNCTION
+
 Contém informações sobre as funções que estão atualmente ativas nos quadros de um thread. Essa estrutura é usada pelo método [ICorDebugThread2:: GetActiveFunctions](icordebugthread2-getactivefunctions-method.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -38,24 +39,25 @@ typedef struct  _COR_ACTIVE_FUNCTION {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
-|`pAppDomain`|Ponteiro para o proprietário do domínio de aplicativo do campo `ilOffset`.|  
-|`pModule`|Ponteiro para o proprietário do módulo do campo `ilOffset`.|  
-|`pFunction`|Ponteiro para o proprietário da função do campo `ilOffset`.|  
+|`pAppDomain`|Ponteiro para o proprietário do campo do domínio do aplicativo `ilOffset` .|  
+|`pModule`|Ponteiro para o proprietário do módulo do `ilOffset` campo.|  
+|`pFunction`|Ponteiro para o proprietário da função do `ilOffset` campo.|  
 |`ilOffset`|O deslocamento da MSIL (Microsoft Intermediate Language) do quadro.|  
 |`flags`|Reservado para extensibilidade futura.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug. idl  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Estruturas de depuração](debugging-structures.md)
 - [Depuração](index.md)

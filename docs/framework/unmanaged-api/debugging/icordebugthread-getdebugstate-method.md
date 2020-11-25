@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9be27b0c-1d99-4722-b0d4-40cf6753ce5c
 topic_type:
 - apiref
-ms.openlocfilehash: 13125f60f596cb8a80d9c42c51a979f632de494b
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 746fef3629e6573d7dfe47d5a3fcf9ee9a1d4250
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379753"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728037"
 ---
 # <a name="icordebugthreadgetdebugstate-method"></a>Método ICorDebugThread::GetDebugState
+
 Obtém o estado de depuração atual deste objeto ICorDebugThread.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,13 +35,16 @@ HRESULT GetDebugState (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pState`  
  fora Um ponteiro para uma combinação de bits de valor de enumeração CorDebugThreadState que descreve o estado de depuração atual desse thread.  
   
 ## <a name="remarks"></a>Comentários  
+
  Se o processo estiver parado no momento, `pState` representará o estado de depuração que existiria para esse thread se o processo fosse continuado, não o estado real atual desse thread.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

@@ -3,12 +3,12 @@ title: Diretrizes de segurança do conjunto de tabela e DataTable
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: e9973df02ff478eedc932099fb8be0526a97b899
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 8798c4542acc578c8f7f00c9b26cd01a0db20c42
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679449"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726061"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>Diretrizes de segurança do conjunto de tabela e DataTable
 
@@ -18,7 +18,7 @@ Este artigo aplica-se a:
 * .NET Core e posterior
 * .NET 5,0 e posterior
 
-Os tipos [DataSet](/dotnet/api/system.data.dataset) e [DataTable](/dotnet/api/system.data.datatable) são componentes .net herdados que permitem a representação de conjuntos de dados como objetos gerenciados. Esses componentes foram introduzidos no .NET 1,0 como parte da infraestrutura original do [ADO.net](./index.md). Sua meta era fornecer uma exibição gerenciada sobre um conjunto de dados relacionais, abstraindo se a fonte subjacente dos dados era XML, SQL ou outra tecnologia.
+Os tipos [DataSet](/dotnet/api/system.data.dataset) e [DataTable](/dotnet/api/system.data.datatable) são componentes .net herdados que permitem a representação de conjuntos de dados como objetos gerenciados. Esses componentes foram introduzidos no .NET Framework 1,0 como parte da [infraestrutura ADO.net](./index.md)original. Sua meta era fornecer uma exibição gerenciada sobre um conjunto de dados relacionais, abstraindo se a fonte subjacente dos dados era XML, SQL ou outra tecnologia.
 
 Para obter mais informações sobre ADO.NET, incluindo paradigmas de exibição de dados mais modernos, consulte [a documentação do ADO.net](../index.md).
 
@@ -34,13 +34,9 @@ Em todas as versões com suporte do .NET Framework, .NET Core e .NET, `DataSet` 
 
 Se os dados XML de entrada contiverem um objeto cujo tipo não está nesta lista:
 
-* Uma exceção é lançada com a mensagem e o rastreamento de pilha a seguir.  
-Mensagem de erro:  
-System. InvalidOperationException: tipo ' \<Type Name\> , Version = \<n.n.n.n\> , Culture = \<culture\> , PublicKeyToken = \<token value\> ' não é permitido aqui. Consulte [https://go.microsoft.com/fwlink/?linkid=2132227](https://go.microsoft.com/fwlink/?linkid=2132227) para obter mais detalhes.  
-Rastreamento de pilha:  
-em System. Data. TypeLimiter. EnsureTypeIsAllowed (tipo Type, TypeLimiter capturedLimiter)  
-em System. Data. DataColumn. UpdateColumnType (tipo Type, o storagetype typeCode)  
-em System. Data. DataColumn. set_DataType (valor de tipo)  
+* Uma exceção é lançada com a mensagem e o rastreamento de pilha a seguir.
+Mensagem de erro: System. InvalidOperationException: tipo ' \<Type Name\> , versão = \<n.n.n.n\> , cultura = \<culture\> , PublicKeyToken = \<token value\> ' não é permitido aqui. Consulte [https://go.microsoft.com/fwlink/?linkid=2132227](https://go.microsoft.com/fwlink/?linkid=2132227) para obter mais detalhes.
+Rastreamento de pilha: em System. Data. TypeLimiter. EnsureTypeIsAllowed (tipo Type, TypeLimiter capturedLimiter) em System. Data. DataColumn. UpdateColumnType (tipo Type, storagetype typeCode) em System.Data.DataColumn.set_DataType (valor de tipo)
 
 * A operação de desserialização falha.
 
@@ -278,7 +274,7 @@ Se `AppContext` não estiver disponível, as verificações de limitação de ti
 * Um administrador deve configurar o registro.
 * O uso do registro é uma alteração em todo o computador e afetará _todos os_ aplicativos em execução no computador.
 
-| Tipo  |  Valor |
+| Type  |  Valor |
 |---|---|
 | **Chave do Registro** | `HKLM\SOFTWARE\Microsoft\.NETFramework\AppContext` |
 | **Nome do valor** | `Switch.System.Data.AllowArbitraryDataSetTypeInstantiation` |
@@ -293,7 +289,7 @@ Para obter mais informações sobre como usar o registro para configurar o `AppC
 
 ## <a name="safety-with-regard-to-untrusted-input"></a>Segurança em relação à entrada não confiável
 
-Embora `DataSet` e `DataTable` imponham as limitações padrão nos tipos que podem estar presentes durante a desserialização de cargas XML __ `DataSet` e, `DataTable` em geral, não são seguras quando preenchidas com entrada não confiável.__ Veja a seguir uma lista de maneiras não exaustivas de que `DataSet` uma `DataTable` instância ou pode ler uma entrada não confiável.
+Embora `DataSet` e `DataTable` imponham as limitações padrão nos tipos que podem estar presentes durante a desserialização de cargas XML __`DataSet` e, `DataTable` em geral, não são seguras quando preenchidas com entrada não confiável.__ Veja a seguir uma lista de maneiras não exaustivas de que `DataSet` uma `DataTable` instância ou pode ler uma entrada não confiável.
 
 * Um `DataAdapter` faz referência a um banco de dados e o `DataAdapter.Fill` método é usado para popular um `DataSet` com o conteúdo de uma consulta de banco de dados.
 * O `DataSet.ReadXml` `DataTable.ReadXml` método ou é usado para ler um arquivo XML contendo informações de coluna e linha.
@@ -479,9 +475,9 @@ A desserialização de uma `DataSet` ou `DataTable` dessa maneira de um blob JSO
 
 ## <a name="deserialize-a-dataset-or-datatable-via-binaryformatter"></a>Desserializar um DataSet ou DataTable via BinaryFormatter
 
-Os desenvolvedores nunca devem usar os `BinaryFormatter` `NetDataContractSerializer` `SoapFormatter` formatadores ***inseguros*** ,, ou relacionados para desserializar uma `DataSet` `DataTable` instância do ou de uma carga não confiável:
+Os desenvolvedores nunca devem usar os `BinaryFormatter` `NetDataContractSerializer` `SoapFormatter` formatadores ***inseguros**,, ou relacionados, para desserializar uma `DataSet` `DataTable` instância do ou de uma carga não confiável:
 
-* Isso é suscetível a um ataque de execução de código remoto completo.
+_ Isso é suscetível a um ataque de execução de código remoto completo.
 * O uso de um personalizado `SerializationBinder` não é suficiente para evitar esse tipo de ataque.
 
 ## <a name="safe-replacements"></a>Substituições seguras

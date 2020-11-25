@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e986986-2223-4d5f-b040-85d716146924
 topic_type:
 - apiref
-ms.openlocfilehash: 200e68abb3f176c267045bf2a5e7e35d18400519
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 7c4589c3371d2c66279684a365cde102bef58c6e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83610087"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727582"
 ---
 # <a name="isymunmanagedwriterdefineconstant-method"></a>Método ISymUnmanagedWriter::DefineConstant
+
 Define um nome para um valor constante.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,6 +37,7 @@ HRESULT DefineConstant(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `name`  
  no Um ponteiro para um `WCHAR` que define o nome da constante.  
   
@@ -48,10 +50,12 @@ HRESULT DefineConstant(
  `signature`  
  no A assinatura de tipo para a constante.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Confira também

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 003bb138-7960-4291-ac88-0d87e470ff70
 topic_type:
 - apiref
-ms.openlocfilehash: 19d0dcf8a5633371765861fcc29df4ef8c91ebc4
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 85df98e83396c9439c28dd41a3ffa02b820c9c3e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795710"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726048"
 ---
 # <a name="cordebugregister-enumeration"></a>Enumeração CorDebugRegister
+
 Especifica os registros associados a uma determinada arquitetura de processador.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -114,7 +115,7 @@ typedef enum CorDebugRegister {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |`REGISTER_INSTRUCTION_POINTER`|Um registro de ponteiro de instrução em qualquer processador.|  
 |`REGISTER_STACK_POINTER`|Um registro de ponteiro de pilha em qualquer processador.|  
@@ -190,6 +191,7 @@ typedef enum CorDebugRegister {
 |`REGISTER_ARM_LR`|O registro de vínculo (R14) no processador ARM.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Existem 128 registros de dados de uso geral e 128 registros de dados de ponto flutuante no processador IA-64, porém, apenas os valores `REGISTER_IA64_R0` e `REGISTER_IA64_F0` são fornecidos. Os outros valores podem ser determinados da seguinte maneira:  
   
 - Some o número do registro ao `REGISTER_IA64_R0` para os valores `REGISTER_IA64_R1` até `REGISTER_IA64_R127`, que correspondem ao registro de dados #1 até o registro de dados #127 no processador IA-64.  
@@ -199,6 +201,7 @@ typedef enum CorDebugRegister {
  Por exemplo, se for necessário especificar o registro de dados #83 no processador IA-64, use `REGISTER_IA64_R0` + 83.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -207,6 +210,6 @@ typedef enum CorDebugRegister {
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Declarando enumerações](debugging-enumerations.md)

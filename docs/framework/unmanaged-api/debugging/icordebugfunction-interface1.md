@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 783faea9-8083-41c1-b04a-51a81ac4c8f3
 topic_type:
 - apiref
-ms.openlocfilehash: 6b7b6969c1f207decbf47217e98b7fee3aa9ce54
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 668b27932ea7a2bdc244e1ac0bb8e6891cbd4d17
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213229"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726284"
 ---
 # <a name="icordebugfunction-interface"></a>Interface ICorDebugFunction
 
@@ -27,7 +27,7 @@ Representa uma função ou um método gerenciado.
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método CreateBreakpoint](icordebugfunction-createbreakpoint-method.md)|Cria um ponto de interrupção no início desta função.|  
 |[Método GetClass](icordebugfunction-getclass-method.md)|Obtém um objeto ICorDebugClass que representa a classe da qual essa função é membro.|  
@@ -39,6 +39,7 @@ Representa uma função ou um método gerenciado.
 |[Método GetToken](icordebugfunction-gettoken-method.md)|Obtém o token de metadados para esta função.|  
   
 ## <a name="remarks"></a>Comentários  
+
  A `ICorDebugFunction` interface não representa uma função com parâmetros de tipo genérico. Por exemplo, uma `ICorDebugFunction` instância representaria `Func<T>` , mas não `Func<string>` . Chame [ICorDebugILFrame2:: EnumerateTypeParameters](icordebugilframe2-enumeratetypeparameters-method.md) para obter os parâmetros de tipo genérico.  
   
  A relação entre o token de metadados de um método, o `mdMethodDef` e o objeto de um método `ICorDebugFunction` depende se editar e continuar é permitido na função:  
@@ -51,6 +52,7 @@ Representa uma função ou um método gerenciado.
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

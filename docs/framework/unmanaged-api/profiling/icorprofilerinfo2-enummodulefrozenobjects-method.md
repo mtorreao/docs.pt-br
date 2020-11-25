@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 920b6483-7064-4d64-8613-fcc38ccf9b1e
 topic_type:
 - apiref
-ms.openlocfilehash: 1fe44f8f84c079e920c8c82fb9d52d1980d3b852
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: fe4f3a7355339c9b5adbe5de062f0a5688d81c23
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497199"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727179"
 ---
 # <a name="icorprofilerinfo2enummodulefrozenobjects-method"></a>Método ICorProfilerInfo2::EnumModuleFrozenObjects
+
 Obtém um enumerador que permite a iteração sobre os objetos congelados no módulo especificado. Este método é obsoleto.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,6 +35,7 @@ HRESULT EnumModuleFrozenObjects(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `moduleID`  
  no A ID do módulo que contém os objetos congelados a serem enumerados.  
   
@@ -41,6 +43,7 @@ HRESULT EnumModuleFrozenObjects(
  fora Um ponteiro para o endereço de uma interface [ICorProfilerObjectEnum](icorprofilerobjectenum-interface.md) , que enumera os objetos congelados.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

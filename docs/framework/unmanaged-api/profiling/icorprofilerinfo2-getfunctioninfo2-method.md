@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0aa60f24-8bbd-4c83-83c5-86ad191b1d82
 topic_type:
 - apiref
-ms.openlocfilehash: f5438ddc655f0f6a7c11d978a47b1bf9e2a13059
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e44b8afe22fdb10077048dc7bc2ccb1f605edd75
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496995"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727088"
 ---
 # <a name="icorprofilerinfo2getfunctioninfo2-method"></a>Método ICorProfilerInfo2::GetFunctionInfo2
+
 Obtém a classe pai, o token de metadados e o `ClassID` de cada argumento de tipo, se presente, de uma função.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -40,6 +41,7 @@ HRESULT GetFunctionInfo2(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `funcId`  
  no A ID da função para a qual obter a classe pai e outras informações.  
   
@@ -65,11 +67,12 @@ HRESULT GetFunctionInfo2(
  fora Uma matriz de `ClassID` valores, cada qual é a ID de um argumento de tipo da função. Quando o método retornar, `typeArgs` conterá alguns ou todos os `ClassID` valores.  
   
 ## <a name="remarks"></a>Comentários  
+
  O código do criador de perfil pode chamar [ICorProfilerInfo:: GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md) para obter uma interface de [metadados](../metadata/index.md) para um determinado módulo. O token de metadados que é retornado para o local referenciado por `pToken` pode ser usado para acessar os metadados para a função.  
   
  Os argumentos ID de classe e tipo retornados por meio dos `pClassId` `typeArgs` parâmetros e dependem do valor que é passado no `frameInfo` parâmetro, conforme mostrado na tabela a seguir.  
   
-|Valor do `frameInfo` parâmetro|Result|  
+|Valor do `frameInfo` parâmetro|Resultado|  
 |----------------------------------------|------------|  
 |Um `COR_PRF_FRAME_INFO` valor que foi obtido de um `FunctionEnter2` retorno de chamada|O `ClassID` , retornado no local referenciado por `pClassId` , e todos os argumentos de tipo, retornados na `typeArgs` matriz, será exato.|  
 |Um `COR_PRF_FRAME_INFO` que foi obtido de uma fonte diferente de um `FunctionEnter2` retorno de chamada|Os `ClassID` argumentos exato e de tipo não podem ser determinados. Ou seja, o `ClassID` pode ser nulo e alguns argumentos de tipo podem retornar como <xref:System.Object> .|  
@@ -80,6 +83,7 @@ HRESULT GetFunctionInfo2(
  Como alternativa, você pode primeiro chamar `GetFunctionInfo2` com um buffer de comprimento zero `pcTypeArgs` para obter o tamanho de buffer correto. Em seguida, você pode definir o tamanho do buffer para o valor retornado em `pcTypeArgs` dividido pelo tamanho de um `ClassID` valor e chamar `GetFunctionInfo2` novamente.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

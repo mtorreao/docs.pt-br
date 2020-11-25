@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 7a191c2a-95ea-4d47-83b0-44de2b632d63
 topic_type:
 - apiref
-ms.openlocfilehash: ef7aa164c43751fa39e49d0ab6486a9f29e23c20
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: ecbedfbca37a3630fc6d40c173f8a6cd05b4d3fb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379471"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727634"
 ---
 # <a name="icordebugstepper2-interface"></a>Interface ICorDebugStepper2
+
 Fornece suporte para a depuração apenas do meu código (JMC).  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método SetJMC](icordebugstepper2-setjmc-method.md)|Define um valor que especifica se este ICorDebugStepper etapas somente por meio de código que é criado pelo desenvolvedor de um aplicativo.|  
   
@@ -36,6 +37,7 @@ Fornece suporte para a depuração apenas do meu código (JMC).
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

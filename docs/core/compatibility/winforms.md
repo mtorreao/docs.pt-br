@@ -1,15 +1,15 @@
 ---
 title: Windows Forms alterações significativas
-description: Lista as alterações significativas em Windows Forms para .NET Core e .NET 5.
+description: Lista as alterações significativas em Windows Forms para .NET Core 3,0 e 3,1.
 ms.date: 09/08/2020
-ms.openlocfilehash: c79fd28b5c3b81ae7ddf1ef3f470601108b87705
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: b944f7eea89b61f41feb8eef99e949c2d6017960
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440784"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726425"
 ---
-# <a name="breaking-changes-in-windows-forms"></a>Alterações recentes no Windows Forms
+# <a name="breaking-changes-in-windows-forms-for-net-core-30-and-31"></a>Alterações recentes em Windows Forms para .NET Core 3,0 e 3,1
 
 Windows Forms suporte foi adicionado ao .NET Core na versão 3,0. Este artigo lista as alterações significativas para Windows Forms pela versão do .NET na qual elas foram introduzidas. Se você estiver atualizando um aplicativo Windows Forms de .NET Framework ou de uma versão anterior do .NET Core (3,0 ou posterior), este artigo se aplicará a você.
 
@@ -17,15 +17,6 @@ As seguintes alterações significativas estão documentadas nesta página:
 
 | Alteração significativa | Versão introduzida |
 | - | :-: |
-| [TextFormatFlags. Modifystring é obsoleto](#textformatflagsmodifystring-is-obsolete) | 5.0 |
-| [DataGridView não redefine mais as fontes para estilos de célula personalizados](#datagridview-no-longer-resets-fonts-for-customized-cell-styles) | 5.0 |
-| [OutputType definido como WinExe para aplicativos WPF e WinForms](#outputtype-set-to-winexe-for-wpf-and-winforms-apps) | 5.0 |
-| [APIs relacionadas a DataGridView agora lança InvalidOperationException](#datagridview-related-apis-now-throw-invalidoperationexception) | 5.0 |
-| [Os aplicativos WinForms e WPF usam Microsoft. NET. Sdk](#winforms-and-wpf-apps-use-microsoftnetsdk) | 5.0 |
-| [Controles da barra de status removidos](#removed-status-bar-controls) | 5.0 |
-| [Os métodos WinForms agora lançam ArgumentException](#winforms-methods-now-throw-argumentexception) | 5.0 |
-| [Os métodos WinForms agora lançam ArgumentNullException](#winforms-methods-now-throw-argumentnullexception) | 5.0 |
-| [As propriedades do WinForms agora geram ArgumentOutOfRangeException](#winforms-properties-now-throw-argumentoutofrangeexception) | 5.0 |
 | [Controles removidos](#removed-controls) | 3.1 |
 | [Evento CellFormatting não gerado se ToolTip for mostrado](#cellformatting-event-not-raised-if-tooltip-is-shown) | 3.1 |
 | [Control. DefaultFont alterado para Segoe UI 9 pt](#default-control-font-changed-to-segoe-ui-9-pt) | 3.0 |
@@ -40,53 +31,15 @@ As seguintes alterações significativas estão documentadas nesta página:
 | [Não há suporte para a opção de compatibilidade UseLegacyContextMenuStripSourceControlValue](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported) | 3.0 |
 | [Não há suporte para a opção de compatibilidade UseLegacyImages](#uselegacyimages-compatibility-switch-not-supported) | 3.0 |
 
-## <a name="net-50"></a>.NET 5,0
-
-[!INCLUDE [modifystring-field-of-textformatflags-obsolete](../../../includes/core-changes/windowsforms/5.0/modifystring-field-of-textformatflags-obsolete.md)]
-
-***
-
-[!INCLUDE [datagridview-doesnt-reset-custom-font-settings](../../../includes/core-changes/windowsforms/5.0/datagridview-doesnt-reset-custom-font-settings.md)]
-
-**_
-
-[!INCLUDE [automatically-infer-winexe-output-type](../../../includes/core-changes/windowsforms/5.0/automatically-infer-winexe-output-type.md)]
-
-_*_
-
-[!INCLUDE [null-owner-causes-invalidoperationexception](../../../includes/core-changes/windowsforms/5.0/null-owner-causes-invalidoperationexception.md)]
-
-_*_
-
-[!INCLUDE [sdk-and-target-framework-change](../../../includes/core-changes/windowsforms/5.0/sdk-and-target-framework-change.md)]
-
-_*_
-
-[!INCLUDE [winforms-deprecated-controls](../../../includes/core-changes/windowsforms/5.0/winforms-deprecated-controls.md)]
-
-_*_
-
-[!INCLUDE [invalid-args-cause-argumentexception](../../../includes/core-changes/windowsforms/5.0/invalid-args-cause-argumentexception.md)]
-
-_*_
-
-[!INCLUDE [null-args-cause-argumentnullexception](../../../includes/core-changes/windowsforms/5.0/null-args-cause-argumentnullexception.md)]
-
-_*_
-
-[!INCLUDE [invalid-args-cause-argumentoutofrangeexception](../../../includes/core-changes/windowsforms/5.0/invalid-args-cause-argumentoutofrangeexception.md)]
-
-_*_
-
 ## <a name="net-core-31"></a>.NET Core 3.1
 
 [!INCLUDE[Removed controls](~/includes/core-changes/windowsforms/3.1/remove-controls-3.1.md)]
 
-_*_
+***
 
 [!INCLUDE[CellFormatting event](~/includes/core-changes/windowsforms/3.1/cellformatting-event-not-raised.md)]
 
-_*_
+**_
 
 ## <a name="net-core-30"></a>.NET Core 3.0
 

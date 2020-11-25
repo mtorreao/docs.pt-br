@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5f6c2bcd-8102-4e3b-abc5-86ab0bd62def
 topic_type:
 - apiref
-ms.openlocfilehash: d502b4098016fb14793bccd6feb641e92e3c2611
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 968874a46279b7eac651d45c3890429a326651b2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795632"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726945"
 ---
 # <a name="cordebuguserstate-enumeration"></a>Enumeração CorDebugUserState
+
 Indica o estado do usuário de um thread.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -42,7 +43,7 @@ typedef enum CorDebugUserState {
   
 ## <a name="members"></a>Membros  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |`USER_STOP_REQUESTED`|Foi solicitada uma terminação do thread.|  
 |`USER_SUSPEND_REQUESTED`|Uma suspensão do thread foi solicitada.|  
@@ -55,11 +56,13 @@ typedef enum CorDebugUserState {
 |`USER_THREADPOOL`|O thread é do pool de threads.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O estado do usuário de um thread é o estado que o thread tem quando o depurador o examina. Um thread pode ter uma combinação de Estados do usuário.  
   
  Use o método [ICorDebugThread:: GetUserState](icordebugthread-getuserstate-method.md) para recuperar o estado do usuário de um thread.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -68,6 +71,6 @@ typedef enum CorDebugUserState {
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Declarando enumerações](debugging-enumerations.md)

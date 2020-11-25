@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0bed524e-cc48-4bf0-b9fa-25d665e63ddb
 topic_type:
 - apiref
-ms.openlocfilehash: c6d21f40c260890c9c88dcdfccd7e31161024ba3
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 8f3c83a7a89553ba600f3e0e368eec0ddd0350e9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614858"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727602"
 ---
 # <a name="isymunmanagedscopegetchildren-method"></a>Método ISymUnmanagedScope::GetChildren
+
 Obtém os filhos deste escopo.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,6 +37,7 @@ HRESULT GetChildren(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `cChildren`  
  no Um `ULONG32` que indica o tamanho da `children` matriz.  
   
@@ -45,10 +47,12 @@ HRESULT GetChildren(
  `children`  
  fora A matriz de filhos retornada.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Confira também

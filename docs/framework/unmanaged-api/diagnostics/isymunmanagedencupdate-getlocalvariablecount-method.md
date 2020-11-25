@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9777d8bb-4abc-4be8-aa7c-34f853eceb9c
 topic_type:
 - apiref
-ms.openlocfilehash: d04c9865d8272bf8d04080f6049ddfb1d4c643bb
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 19e07fb181f631335a0c56bd59b6fc8e14e2f36d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614572"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726919"
 ---
 # <a name="isymunmanagedencupdategetlocalvariablecount-method"></a>Método ISymUnmanagedENCUpdate::GetLocalVariableCount
+
 Obtém o número de variáveis locais.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,16 +35,19 @@ HRESULT GetLocalVariableCount(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `mdMethodToken`  
  no O token de metadados dos métodos.  
   
  `pcLocals`  
  fora Um ponteiro para um `ULONG32` que recebe o tamanho, em caracteres, do buffer necessário para conter o número de variáveis locais.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Confira também

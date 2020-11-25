@@ -6,14 +6,15 @@ helpviewer_keywords:
 - type design guidelines, interfaces
 - class library design guidelines [.NET Framework], interfaces
 ms.assetid: a016bd18-6710-4358-9438-9f190a295392
-ms.openlocfilehash: 9f8ff38d5825091d4d5d3716ed6025a8d04c592d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 6f8cbb757ffb42f63903b212fee33cdcbba7ecb2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821002"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727673"
 ---
 # <a name="interface-design"></a>Design de interface
+
 Embora a maioria das APIs seja melhor modelada com classes e estruturas, há casos em que as interfaces são mais apropriadas ou são a única opção.
 
  O CLR não dá suporte a várias heranças (ou seja, classes CLR não podem herdar de mais de uma classe base), mas permite que os tipos implementem uma ou mais interfaces além de herdar de uma classe base. Portanto, as interfaces são geralmente usadas para atingir o efeito de várias heranças. Por exemplo, <xref:System.IDisposable> é uma interface que permite que os tipos ofereçam suporte a Disposability independente de qualquer outra hierarquia de herança na qual desejam participar.

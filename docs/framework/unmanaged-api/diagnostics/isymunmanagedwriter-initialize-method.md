@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e0ebd793-3764-4df0-8f12-0e95f60b9eae
 topic_type:
 - apiref
-ms.openlocfilehash: 1553e616f60b4f05c06b6457d47454dfb4bc2eb7
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: c702aa32e8c8d6d5c137f7968d1578715102180f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614767"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726855"
 ---
 # <a name="isymunmanagedwriterinitialize-method"></a>Método ISymUnmanagedWriter::Initialize
+
 Define a interface do emissor de metadados com a qual esse gravador será associado e define o nome do arquivo de saída para o qual os símbolos de depuração serão gravados.  
   
  Esse método pode ser chamado apenas uma vez e deve ser chamado antes de qualquer outro método de gravador. Alguns gravadores podem exigir um nome de arquivo. No entanto, você sempre pode passar um nome de arquivo para esse método sem nenhum efeito negativo nos gravadores que não usam o nome do arquivo.  
@@ -38,6 +39,7 @@ HRESULT Initialize(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `emitter`  
  no Um ponteiro para a interface do emissor de metadados.  
   
@@ -48,12 +50,14 @@ HRESULT Initialize(
  no Se especificado, o gravador de símbolo emitirá os símbolos para o determinado em <xref:System.Runtime.InteropServices.ComTypes.IStream> vez de para o arquivo especificado no `filename` parâmetro. O `pIStream` é opcional.  
   
  `fFullBuild`  
- [in] `true` Se esta for uma recompilação completa; `false`se esta for uma compilação incremental.  
+ [in] `true` Se esta for uma recompilação completa; `false` se esta for uma compilação incremental.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Confira também

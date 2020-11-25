@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ce8f6aa6-4ebf-4a86-b429-4bbc8af41a8f
 topic_type:
 - apiref
-ms.openlocfilehash: 7f1276e1adeece086ca7b6791eb6e870faf4d010
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 17a6220598010c0bee9c3f0485860aa0b2dc5f3a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502867"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727098"
 ---
 # <a name="icorprofilerinfo2getfunctionfromtokenandtypeargs-method"></a>Método ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs
+
 Obtém o `FunctionID` de uma função usando o token de metadados especificado, que contém a classe e os `ClassID` valores de qualquer argumento de tipo.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -38,6 +39,7 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `moduleID`  
  no A ID do módulo no qual a função reside.  
   
@@ -57,6 +59,7 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
  fora Um ponteiro para o `FunctionID` da função especificada.  
   
 ## <a name="remarks"></a>Comentários  
+
  Chamar o `GetFunctionFromTokenAndTypeArgs` método com `mdMethodRef` metadados em vez de um `mdMethodDef` token de metadados pode ter resultados imprevisíveis. Os chamadores devem resolver o `mdMethodRef` para um `mdMethodDef` ao passá-lo.  
   
  Se a função ainda não estiver carregada, a chamada fará com que o `GetFunctionFromTokenAndTypeArgs` carregamento ocorra, que é uma operação perigosa em muitos contextos. Por exemplo, chamar esse método durante o carregamento de módulos ou tipos pode levar a um loop infinito, pois o tempo de execução tenta carregar as coisas de forma circular.  
@@ -64,6 +67,7 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
  Em geral, o uso de `GetFunctionFromTokenAndTypeArgs` é desencorajado. Se os profileres estiverem interessados em eventos para uma função específica, eles deverão armazenar o `ModuleID` e `mdMethodDef` dessa função e usar [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) para verificar se um determinado `FunctionID` é o da função desejada.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

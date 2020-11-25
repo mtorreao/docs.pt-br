@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: bda75017-739f-4ce5-9000-f3b526e8473c
 topic_type:
 - apiref
-ms.openlocfilehash: 368b8f270797beb525e0745a29990667913f4071
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a1e321e141059ccf1da7292d28e7099418a5134e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497339"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727192"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>Método ICorProfilerInfo2::GetArrayObjectInfo
+
 Obtém informações detalhadas sobre um objeto de matriz.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,6 +38,7 @@ HRESULT GetArrayObjectInfo(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `objectId`  
  no A ID de um objeto de matriz válido.  
   
@@ -53,9 +55,11 @@ HRESULT GetArrayObjectInfo(
  fora Um ponteiro para o endereço do buffer bruto para a matriz, que é disposta de acordo com a Convenção de C++.  
   
 ## <a name="remarks"></a>Comentários  
+
  Os `pDimensionSizes` e `pDimensionLowerBounds` são matrizes paralelas, portanto, os elementos localizados no mesmo índice em cada matriz são características da mesma entidade.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

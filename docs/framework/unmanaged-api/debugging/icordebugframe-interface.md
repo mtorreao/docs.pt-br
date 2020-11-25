@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0c48f764-3c64-4602-b2f4-4ffc60eb2c65
 topic_type:
 - apiref
-ms.openlocfilehash: 9c2771d1338943406921447d96dd9a8748153a36
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: bdc17e2c6c63deae1420fe738eac51153f6b368e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209611"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726334"
 ---
 # <a name="icordebugframe-interface"></a>Interface ICorDebugFrame
 
@@ -27,7 +27,7 @@ Representa um quadro na pilha atual.
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método CreateStepper](icordebugframe-createstepper-method.md)|Obtém um ICorDebugStepper para executar operações de depuração relativas a isso `ICorDebugFrame` .|  
 |[Método GetCallee](icordebugframe-getcallee-method.md)|Obtém um ponteiro para o `ICorDebugFrame` na cadeia atual que este quadro chamou ou retorna NULL se esse for o quadro interno na cadeia.|  
@@ -44,6 +44,7 @@ Representa um quadro na pilha atual.
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <add> element for <schemaImporterExtensions> element
 ms.assetid: c828a558-094b-441e-9065-790b87315fa0
-ms.openlocfilehash: 38d8ebd6e973632b23865ad60e007d9aa21e7da6
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: b8a0775e9d33d59606b1150aa9a1b3b1026d4b0b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281997"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726438"
 ---
 # <a name="add-element-for-schemaimporterextensions"></a>Elemento \<add> para \<schemaImporterExtensions>
 
@@ -22,13 +22,14 @@ Adiciona tipos usados pelo <xref:System.Xml.Serialization.XmlSchemaImporter> par
 \<schemaImporterExtensions>  
 \<add>  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```xml  
 <add name = "typeName" type="fully qualified type [,Version=version number] [,Culture=culture] [,PublicKeyToken= token]"/>  
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -39,15 +40,17 @@ Adiciona tipos usados pelo <xref:System.Xml.Serialization.XmlSchemaImporter> par
 |**tipo**|Obrigatórios. Especifica a classe de extensão de esquema para adicionar. O valor de atributo **type** deve ser uma linha e incluir o nome do tipo totalmente qualificado. Quando o assembly é colocado no GAC (cache de assembly global), ele também deve incluir a versão, cultura e token de chave pública do assembly assinado.|  
   
 ### <a name="child-elements"></a>Elementos filho  
- Nenhum.  
+
+ nenhuma.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
-|Elemento|Descrição|  
+|Elemento|DESCRIÇÃO|  
 |-------------|-----------------|  
 |\<schemaImporterExtensions>|Contém tipos que são usados pela <xref:System.Xml.Serialization.XmlSchemaImporter>.|  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo de código a seguir adiciona um tipo de extensão que o XmlSchemaImporter pode usar ao mapear tipos.  
   
 ```xml  
@@ -62,7 +65,7 @@ Adiciona tipos usados pelo <xref:System.Xml.Serialization.XmlSchemaImporter> par
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
 - [\<system.xml.serialization> Elementos](system-xml-serialization-element.md)

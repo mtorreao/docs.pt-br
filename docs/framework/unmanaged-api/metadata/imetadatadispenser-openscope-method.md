@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 65063ad5-e0d9-4c01-8f8b-9a5950109fa6
 topic_type:
 - apiref
-ms.openlocfilehash: 8d9de753f1c44338a96e990def80643d591f2a8b
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: f2a85bafc3e2f25b2ed6116a46a9938d869dbaae
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007462"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726074"
 ---
 # <a name="imetadatadispenseropenscope-method"></a>Método IMetaDataDispenser::OpenScope
+
 Abre um arquivo existente em disco e mapeia seus metadados na memória.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,6 +38,7 @@ HRESULT OpenScope (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `szScope`  
  no O nome do arquivo a ser aberto. O arquivo deve conter metadados de Common Language Runtime (CLR).  
   
@@ -52,6 +54,7 @@ HRESULT OpenScope (
  fora O ponteiro para a interface retornada.  
   
 ## <a name="remarks"></a>Comentários  
+
  A cópia na memória dos metadados pode ser consultada usando métodos de uma das interfaces "Import" ou adicionadas ao uso de métodos de uma das interfaces "Emit".  
   
  Se o arquivo de destino não contiver metadados CLR, o `OpenScope` método falhará.  
@@ -61,11 +64,12 @@ HRESULT OpenScope (
  No .NET Framework versão 2,0, os escopos abertos com `dwOpenFlags` set como ofRead não são mais compartilhados. Use o valor ofReadOnly para permitir que o escopo seja compartilhado. Quando um escopo é compartilhado, as consultas que usam interfaces de metadados de "leitura/gravação" falharão.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como um recurso em MsCorEE. dll  
+ **Biblioteca:** Usado como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

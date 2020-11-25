@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 866dc96b-bbfc-4c0f-80c2-38ce93072106
 topic_type:
 - apiref
-ms.openlocfilehash: 5a232f30da8812c6f3bd94647d74151312a8593b
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: b8ad159dace734c343297b256092162f17ab829b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84493014"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726477"
 ---
 # <a name="imetadataemit2-interface"></a>Interface IMetaDataEmit2
+
 Estende a interface [IMetaDataEmit](imetadataemit-interface.md) principalmente para fornecer a capacidade de trabalhar com tipos genéricos.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método DefineGenericParam](imetadataemit2-definegenericparam-method.md)|Cria uma definição para um parâmetro de tipo genérico e Obtém um token para esse parâmetro de tipo genérico.|  
 |[Método DefineMethodSpec](imetadataemit2-definemethodspec-method.md)|Cria uma instância genérica de um método e Obtém um token para a definição.|  
@@ -38,11 +39,12 @@ Estende a interface [IMetaDataEmit](imetadataemit-interface.md) principalmente p
 |[Método SetGenericParamProps](imetadataemit2-setgenericparamprops-method.md)|Define valores de propriedade para a definição de parâmetro genérico referenciada pelo token especificado.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como um recurso em MsCorEE. dll  
+ **Biblioteca:** Usado como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

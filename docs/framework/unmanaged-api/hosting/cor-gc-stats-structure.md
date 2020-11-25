@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8d4ff73e-739b-40f6-9349-359fbc99c2f9
 topic_type:
 - apiref
-ms.openlocfilehash: 7a6553de31d4f9627809af7691218c39dc734c6f
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 53a70c53a06ac55a2dab7c646018d63189ee0b36
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501658"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726217"
 ---
 # <a name="cor_gc_stats-structure"></a>Estrutura COR_GC_STATS
+
 Fornece estatísticas sobre o mecanismo de coleta de lixo do Common Language Runtime (CLR).  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -44,7 +45,7 @@ typedef struct _COR_GC_STATS {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |`Flags`|Indica quais valores de campo devem ser calculados e retornados.|  
 |`ExplicitGCCount`|Indica o número de coletas de lixo que foram forçadas por solicitação externa.|  
@@ -59,6 +60,7 @@ typedef struct _COR_GC_STATS {
 |`KBytesPromotedFromGen1`|O tamanho, em quilobytes, dos objetos promovidos da geração um para a geração dois.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O método [ICLRGCManager:: GetStats](iclrgcmanager-getstats-method.md) exige que o `Flags` campo da `COR_GC_STATS` estrutura seja definido como um ou mais valores da enumeração [COR_GC_STAT_TYPES](cor-gc-stat-types-enumeration.md) para especificar quais estatísticas devem ser definidas.  
   
  A tabela a seguir mapeia as estatísticas fornecidas por essa estrutura para os dois [COR_GC_STAT_TYPES](cor-gc-stat-types-enumeration.md) valores de enumeração `COR_GC_COUNTS` e `COR_GC_MEMORYUSAGE` .  
@@ -76,11 +78,12 @@ pCLRGCManager->GetStats(&GCStats);
 ```  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** GCHost. idl  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

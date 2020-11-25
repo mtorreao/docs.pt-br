@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c3bf15b0-3250-4bbe-b9b5-c5d695289b6f
 topic_type:
 - apiref
-ms.openlocfilehash: fdcfb0c4f9c21eb516f4196d0c8f682669468219
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 6413935df86b85a959fa4f354c6233d18baf99d3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615222"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727569"
 ---
 # <a name="isymunmanagedwriterdefinedocument-method"></a>Método ISymUnmanagedWriter::DefineDocument
+
 Define um documento de origem. Os GUIDs são fornecidos para idiomas, fornecedores e tipos de documentos conhecidos.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,6 +38,7 @@ HRESULT DefineDocument(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `url`  
  no Um ponteiro para um `WCHAR` que define o Uniform Resource Locator (URL) que identifica o documento.  
   
@@ -52,10 +54,12 @@ HRESULT DefineDocument(
  `pRetVal`  
  fora Um ponteiro para a interface [ISymUnmanagedWriter](isymunmanagedwriter-interface.md) retornada.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Confira também

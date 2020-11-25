@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0f482454-8517-48de-ba7a-d7aedab13bb5
 topic_type:
 - apiref
-ms.openlocfilehash: d33c8b31473e389e07fb24076dc32272e9dde387
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 11197246662a93f6a8b57c6e61e49505a9999d00
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132395"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727424"
 ---
 # <a name="codechunkinfo-structure"></a>Estrutura CodeChunkInfo
 
@@ -36,24 +36,26 @@ typedef struct _CodeChunkInfo {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
-|`startAddr`|Um valor `CORDB_ADDRESS` que especifica o endereço inicial da parte.|  
+|`startAddr`|Um `CORDB_ADDRESS` valor que especifica o endereço inicial da parte.|  
 |`length`|O tamanho, em bytes, da parte.|  
   
 ## <a name="remarks"></a>Comentários  
+
  A única parte do código é uma região de código nativo que faz parte de um objeto de código, como uma função.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug. idl  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Método GetCodeChunks](icordebugcode2-getcodechunks-method.md)
 - [Estruturas de depuração](debugging-structures.md)

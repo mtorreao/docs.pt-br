@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 624672b5-1189-488a-85d2-3e12b49617c1
 topic_type:
 - apiref
-ms.openlocfilehash: 630b67a64716f26577bbc376970e4f76216f4da5
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: ff39a688132112e88438bc192d7c1ab61f169400
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497340"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727153"
 ---
 # <a name="icorprofilerinfo2getboxclasslayout-method"></a>Método ICorProfilerInfo2::GetBoxClassLayout
+
 Obtém informações sobre onde o tipo de valor especificado está localizado quando ele está em caixa.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,6 +35,7 @@ HRESULT GetBoxClassLayout(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `classId`  
  no A ID da classe que descreve o tipo de valor que está em caixa.  
   
@@ -41,9 +43,11 @@ HRESULT GetBoxClassLayout(
  fora Um inteiro que é o deslocamento, relativo ao ponteiro da ID do objeto em caixa, do tipo de valor.  
   
 ## <a name="remarks"></a>Comentários  
+
  O `pBufferOffset` valor é o local do tipo de valor dentro de uma caixa. Depois `pBufferOffset` que é aplicado a um objeto em caixa, o layout de classe do tipo de valor pode ser usado para interpretar o valor do objeto.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

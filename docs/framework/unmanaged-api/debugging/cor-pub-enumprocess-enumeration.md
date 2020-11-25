@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5d3ada6e-feea-47da-a7ed-b664107c137f
 topic_type:
 - apiref
-ms.openlocfilehash: f789105751ae2d498740ab60f326f9c0597483b2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 30a522fbf96aebaa96f33f4a1dc381683f183871
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73099207"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726412"
 ---
 # <a name="cor_pub_enumprocess-enumeration"></a>Enumeração COR_PUB_ENUMPROCESS
+
 Identifica o tipo de processo que será enumerado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,22 +35,24 @@ typedef enum {
   
 ## <a name="members"></a>Membros  
   
-|Nome do membro|Descrição|  
+|Nome do membro|DESCRIÇÃO|  
 |-----------------|-----------------|  
 |`COR_PUB_MANAGEDONLY`|Um processo gerenciado.|  
   
 ## <a name="remarks"></a>Comentários  
+
  A versão atual da API de depuração não gerenciada enumera somente os processos gerenciados.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorPub. idl, CorPub. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Declarando enumerações](debugging-enumerations.md)

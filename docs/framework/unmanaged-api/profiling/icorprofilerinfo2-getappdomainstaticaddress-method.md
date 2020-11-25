@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2a9e0ea7-a9e2-4817-b1c4-fcf15b215ea9
 topic_type:
 - apiref
-ms.openlocfilehash: 3dc5f04504cca632892c16d31c92a33935b356e0
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 271f9f4fd0d85407aedf088ffb524fa6e0398e37
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497329"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727205"
 ---
 # <a name="icorprofilerinfo2getappdomainstaticaddress-method"></a>Método ICorProfilerInfo2::GetAppDomainStaticAddress
+
 Obtém o endereço do campo de domínio estático do aplicativo especificado que está no escopo do domínio do aplicativo especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,6 +37,7 @@ RESULT GetAppDomainStaticAddress(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `classId`  
  no A ID de classe da classe que contém o campo de domínio de aplicativo solicitado-estático.  
   
@@ -49,6 +51,7 @@ RESULT GetAppDomainStaticAddress(
  fora Um ponteiro para o endereço do campo estático que está dentro do domínio de aplicativo especificado.  
   
 ## <a name="remarks"></a>Comentários  
+
  O `GetAppDomainStaticAddress` método pode retornar um dos seguintes:  
   
 - Um CORPROF_E_DATAINCOMPLETE HRESULT se o campo estático fornecido não tiver sido atribuído um endereço no contexto especificado.  
@@ -58,6 +61,7 @@ RESULT GetAppDomainStaticAddress(
  Antes que o construtor de classe de uma classe seja concluído, o `GetAppDomainStaticAddress` retornará CORPROF_E_DATAINCOMPLETE para todos os seus campos estáticos, embora alguns dos campos estáticos já possam ser inicializados e a raiz dos objetos de coleta de lixo.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
