@@ -4,12 +4,12 @@ description: Saiba mais sobre quais versões do macOS você pode instalar o .NET
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: 983c5d2c04b87759b898f449bc092161b03c8ace
-ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
+ms.openlocfilehash: f926479227f11def5c8bb8c6bf29ad30a04e6ed2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94594450"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715128"
 ---
 # <a name="install-net-on-macos"></a>Instalar o .NET no macOS
 
@@ -94,7 +94,7 @@ Para obter mais informações sobre como o imforced-notarization afeta o .NET (e
 
 Os aplicativos .NET que usam o assembly *System. sorteio. Common* exigem que o libgdiplus seja instalado.
 
-Uma maneira fácil de obter o libgdiplus é usando o Gerenciador de pacotes [homebrew ("Brew")](https://brew.sh/) para MacOS. Depois de instalar o *Brew* , instale o libgdiplus executando os seguintes comandos em um prompt de terminal (comando):
+Uma maneira fácil de obter o libgdiplus é usando o Gerenciador de pacotes [homebrew ("Brew")](https://brew.sh/) para MacOS. Depois de instalar o *Brew*, instale o libgdiplus executando os seguintes comandos em um prompt de terminal (comando):
 
 ```console
 brew update
@@ -124,7 +124,7 @@ Em seguida, extraia o arquivo baixado e use o `export` comando para definir as v
 
 Para extrair o tempo de execução e tornar os comandos da CLI do .NET disponíveis no terminal, primeiro Baixe uma versão binária do .NET. Em seguida, abra um terminal e execute os seguintes comandos no diretório em que o arquivo foi salvo. O nome do arquivo morto pode ser diferente dependendo do que você baixou.
 
-**Use o seguinte comando para extrair o tempo de execução** :
+**Use o seguinte comando para extrair o tempo de execução**:
 
 ```bash
 mkdir -p "$HOME/dotnet" && tar zxf aspnetcore-runtime-5.0.0-osx-x64.tar.gz -C "$HOME/dotnet"
@@ -132,7 +132,7 @@ export DOTNET_ROOT=$HOME/dotnet
 export PATH=$PATH:$HOME/dotnet
 ```
 
-**Use o seguinte comando para extrair o SDK** :
+**Use o seguinte comando para extrair o SDK**:
 
 ```bash
 mkdir -p "$HOME/dotnet" && tar zxf dotnet-sdk-5.0.100-osx-x64.tar.gz -C "$HOME/dotnet"
@@ -145,9 +145,9 @@ export PATH=$PATH:$HOME/dotnet
 >
 > Você pode editar seu perfil de Shell para adicionar os comandos permanentemente. Há vários shells diferentes disponíveis para o Linux e cada um deles tem um perfil diferente. Por exemplo:
 >
-> - **Shell bash** : *~/.bash_profile* , *~/.bashrc*
-> - **Shell Korn** : *~/.Kshrc* ou *. Profile*
-> - **Shell Z** : *~/.zshrc* ou *. zprofile*
+> - **Shell bash**: *~/.bash_profile*, *~/.bashrc*
+> - **Shell Korn**: *~/.Kshrc* ou *. Profile*
+> - **Shell Z**: *~/.zshrc* ou *. zprofile*
 >
 > Edite o arquivo de origem apropriado para o Shell e adicione `:$HOME/dotnet` ao final da `PATH` instrução existente. Se nenhuma `PATH` instrução for incluída, adicione uma nova linha com `export PATH=$PATH:$HOME/dotnet` .
 >
@@ -181,7 +181,7 @@ Embora Visual Studio Code não venha com um instalador .NET automatizado como o 
 
 Os [scripts dotnet-install](../tools/dotnet-install-script.md) são usados para automação e instalações não administrativas do tempo de execução. Você pode baixar o script na [página de referência de script dotnet-install](../tools/dotnet-install-script.md).
 
-O script assume como padrão a instalação da versão mais recente do [LTS (suporte a longo prazo)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) , que é o .net 3,1. Você pode escolher uma versão específica especificando a `current` opção. Inclua a `runtime` opção para instalar um tempo de execução. Caso contrário, o script instalará o [SDK](./windows.md).
+O script assume como padrão a instalação da versão mais recente do [LTS (suporte a longo prazo)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) , que é o .net Core 3,1. Você pode escolher uma versão específica especificando a `current` opção. Inclua a `runtime` opção para instalar um tempo de execução. Caso contrário, o script instalará o [SDK](./windows.md).
 
 ```bash
 ./dotnet-install.sh --channel 5.0 --runtime aspnetcore

@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: c627fcdd-fc4f-4b1c-8e91-df8536f627d8
 topic_type:
 - apiref
-ms.openlocfilehash: bb7c3659930f308328cba121c06a88cb6a95eb26
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 75c8d550e572795a291f4639f9f28bd5214ff188
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504154"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714010"
 ---
 # <a name="iclrmetahost-interface"></a>Interface ICLRMetaHost
+
 Fornece métodos que retornam uma versão específica do Common Language Runtime (CLR) com base em seu número de versão, listar todos os CLRs instalados, listar todos os tempos de execução que são carregados em um processo especificado, descobrir a versão do CLR usada para compilar um assembly, sair de um processo com um desligamento de tempo de execução limpo e consultar Associação de API herdada.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método EnumerateInstalledRuntimes](iclrmetahost-enumerateinstalledruntimes-method.md)|Retorna uma enumeração que contém um ponteiro de interface [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) válido para cada versão do CLR instalada em um computador.|  
 |[Método EnumerateLoadedRuntimes](iclrmetahost-enumerateloadedruntimes-method.md)|Retorna uma enumeração que contém um ponteiro de interface [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) válido para cada CLR que é carregado em um determinado processo. Esse método substitui [GetVersionFromProcess](getversionfromprocess-function.md).|  
@@ -37,6 +38,7 @@ Fornece métodos que retornam uma versão específica do Common Language Runtime
 |[Método RequestRuntimeLoadedNotification](iclrmetahost-requestruntimeloadednotification-method.md)|Garante um retorno de chamada para o ponteiro de função especificado quando uma versão do CLR é carregada pela primeira vez, mas ainda não foi iniciada. Esse método substitui [LockClrVersion](lockclrversion-function.md)|  
   
 ## <a name="remarks"></a>Comentários  
+
  A única maneira de obter uma instância dessa interface é chamando a função [CLRCreateInstance](clrcreateinstance-function.md) da seguinte maneira:  
   
 ```cpp  
@@ -46,11 +48,12 @@ HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHost,
 ```  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MetaHost. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

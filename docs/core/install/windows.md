@@ -4,12 +4,12 @@ description: Saiba mais sobre quais versões do Windows você pode instalar no .
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: fe18cda64e0c9986884486298adf4a83b604f323
-ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
+ms.openlocfilehash: 4d3abde965d9a2ab0f86477feeb7c10f274a4b9a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94594528"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715115"
 ---
 # <a name="install-net-on-windows"></a>Instalar o .NET no Windows
 
@@ -30,7 +30,7 @@ A versão mais recente do .NET é 5,0.
 
 A tabela a seguir é uma lista de versões do .NET com suporte no momento e as versões do Windows nas quais elas têm suporte. Essas versões permanecem com suporte até que a versão do [.net atinja o fim do suporte](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) ou a versão do [Windows alcance o fim da vida útil](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
 
-As datas de fim de serviço das versões do Windows 10 são segmentadas por edição. Somente as edições **Home** , **pro** , **pro Education** e **Pro for Workstations** são consideradas na tabela a seguir. Verifique a [folha de fatos do ciclo de vida do Windows](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet) para obter detalhes específicos.
+As datas de fim de serviço das versões do Windows 10 são segmentadas por edição. Somente as edições **Home**, **pro**, **pro Education** e **Pro for Workstations** são consideradas na tabela a seguir. Verifique a [folha de fatos do ciclo de vida do Windows](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet) para obter detalhes específicos.
 
 - Um ✔️ indica que a versão do Windows ou do .NET Core ainda tem suporte.
 - Um ❌ indica que a versão do Windows ou .NET Core não tem suporte nessa versão do Windows.
@@ -55,7 +55,7 @@ Não há mais suporte para as seguintes versões do .NET ❌ . Os downloads para
 
 - 3.0
 - 2.2
-- 2.0
+- 2,0
 
 ## <a name="runtime-information"></a>Informações de tempo de execução
 
@@ -91,7 +91,7 @@ As seguintes versões do Windows têm suporte com o .NET 5,0:
 > [!NOTE]
 > Um `+` símbolo representa a versão mínima.
 
-| SO                  | Versão       | Arquiteturas   |
+| Sistema operacional                  | Versão       | Arquiteturas   |
 |---------------------|---------------|-----------------|
 | Cliente do Windows 10   | Versão 1607 + | x64, x86, ARM64 |
 | Windows Client      | 7 SP1 +, 8,1   | x64, x86        |
@@ -108,7 +108,7 @@ As seguintes versões do Windows têm suporte com o .NET Core 3,1:
 > [!NOTE]
 > Um `+` símbolo representa a versão mínima.
 
-| SO                            | Versão                        | Arquiteturas   |
+| Sistema operacional                            | Versão                        | Arquiteturas   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Windows Client                | 7 SP1 +, 8,1                    | x64, x86        |
 | Cliente do Windows 10             | Versão 1609 +                  | x64, x86        |
@@ -126,7 +126,7 @@ As seguintes versões do Windows têm suporte com o .NET Core 3,0:
 > [!NOTE]
 > Um `+` símbolo representa a versão mínima.
 
-| SO                            | Versão                        | Arquiteturas   |
+| Sistema operacional                            | Versão                        | Arquiteturas   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Windows Client                | 7 SP1 +, 8,1                    | x64, x86        |
 | Cliente do Windows 10             | Versão 1607 +                  | x64, x86        |
@@ -144,7 +144,7 @@ As seguintes versões do Windows têm suporte com o .NET Core 2,2:
 > [!NOTE]
 > Um `+` símbolo representa a versão mínima.
 
-| SO                            | Versão                        | Arquiteturas   |
+| Sistema operacional                            | Versão                        | Arquiteturas   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Windows Client                | 7 SP1 +, 8,1                    | x64, x86        |
 | Cliente do Windows 10             | Versão 1607 +                  | x64, x86        |
@@ -160,7 +160,7 @@ As seguintes versões do Windows têm suporte com o .NET Core 2,1:
 > [!NOTE]
 > Um `+` símbolo representa a versão mínima.
 
-| SO                            | Versão                        | Arquiteturas   |
+| Sistema operacional                            | Versão                        | Arquiteturas   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Windows Client                | 7 SP1 +, 8,1                    | x64, x86        |
 | Cliente do Windows 10             | Versão 1607 +                  | x64, x86        |
@@ -204,7 +204,7 @@ Os requisitos anteriores também serão necessários se você vir entre um dos s
 
 Os [scripts dotnet-install](../tools/dotnet-install-script.md) são usados para a automação CI e para instalações não administrativas do tempo de execução. Você pode baixar o script na [página de referência de script dotnet-install](../tools/dotnet-install-script.md).
 
-O script assume como padrão a instalação da versão mais recente do [LTS (suporte a longo prazo)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) , que é o .net 3,1. Você pode escolher uma versão específica especificando a `Channel` opção. Inclua a `Runtime` opção para instalar um tempo de execução. Caso contrário, o script instalará o SDK.
+O script assume como padrão a instalação da versão mais recente do [LTS (suporte a longo prazo)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) , que é o .net Core 3,1. Você pode escolher uma versão específica especificando a `Channel` opção. Inclua a `Runtime` opção para instalar um tempo de execução. Caso contrário, o script instalará o SDK.
 
 ```powershell
 dotnet-install.ps1 -Channel 5.0 -Runtime aspnetcore

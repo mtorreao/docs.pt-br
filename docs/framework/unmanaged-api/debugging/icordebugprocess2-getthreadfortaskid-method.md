@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 32d54a5b-8ad3-405b-a1b9-0936a3b49d1e
 topic_type:
 - apiref
-ms.openlocfilehash: 89be29c770098d92ce3c47f7c45b1bb8580f2edb
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 2b18289af460f64085fedd7b32387ebcb8c51715
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213511"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713542"
 ---
 # <a name="icordebugprocess2getthreadfortaskid-method"></a>Método ICorDebugProcess2::GetThreadForTaskID
+
 Obtém o thread no qual a tarefa com o identificador especificado está em execução.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -35,6 +36,7 @@ HRESULT GetThreadForTaskID (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `taskid`  
  no O identificador da tarefa.  
   
@@ -42,9 +44,11 @@ HRESULT GetThreadForTaskID (
  fora Um ponteiro para o endereço de um objeto ICorDebugThread2 que representa o thread a ser recuperado.  
   
 ## <a name="remarks"></a>Comentários  
+
  O host pode definir o identificador de tarefa usando o método [ICLRTask:: SetTaskIdentifier](../hosting/iclrtask-settaskidentifier-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

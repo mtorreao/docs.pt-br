@@ -2,14 +2,15 @@
 title: Método ICorDebugDataTarget3::GetLoadedModules
 ms.date: 03/30/2017
 ms.assetid: 9a48c05b-1949-416e-933c-52549b6fcf5e
-ms.openlocfilehash: c3565f4f9284bc121b0e2d3b0885cbea927acfdd
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: efbada02b7a24e0a7ed613b86b8a4a1a0b5b051a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976415"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713737"
 ---
 # <a name="icordebugdatatarget3getloadedmodules-method"></a>Método ICorDebugDataTarget3::GetLoadedModules
+
 Obtém uma lista dos módulos que foram carregados até agora.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -23,6 +24,7 @@ HRESULT GetLoadedModules(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `cRequestedModules`  
  no O número de módulos para os quais as informações são solicitadas.  
   
@@ -38,6 +40,7 @@ HRESULT GetLoadedModules(
 > Esse método está disponível somente com .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -46,7 +49,7 @@ HRESULT GetLoadedModules(
   
  **.NET Framework versões:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorDebugDataTarget3](icordebugdatatarget3-interface.md)
 - [Depurando interfaces](debugging-interfaces.md)

@@ -4,19 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - garbage collection, forced
 ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
-ms.openlocfilehash: 637ba9b3b73d685ee2263315a08f982d862efb35
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 25e94221355569931a31b566a53434cbed9ea93f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827718"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714231"
 ---
 # <a name="induced-collections"></a>Coletas induzidas
+
 Na maioria dos casos, o coletor de lixo pode determinar o melhor momento para executar uma coleta e você deve permitir que ele seja executado de modo independente. Existem situações raras nas quais uma coleta forçada pode melhorar o desempenho do seu aplicativo. Nesses casos, você poderá induzir a coleta de lixo usando o método <xref:System.GC.Collect%2A?displayProperty=nameWithType> para forçar uma coleta de lixo.  
   
  Use o método <xref:System.GC.Collect%2A?displayProperty=nameWithType> quando houver uma redução significativa na quantidade de memória que está sendo usada em um ponto específico no código do aplicativo. Por exemplo, se o aplicativo usar uma caixa de diálogo complexo que tem vários controles, chamar <xref:System.GC.Collect%2A> quando a caixa de diálogo é fechada poderá melhorar o desempenho, recuperando imediatamente a memória usada pela caixa de diálogo. Certifique-se de que seu aplicativo não está induzindo a coleta de lixo com muita frequência, pois isso poderá diminuir o desempenho se o coletor de lixo estiver tentando recuperar os objetos em horários não ideais. Você pode fornecer um valor de enumeração <xref:System.GCCollectionMode.Optimized?displayProperty=nameWithType> para que o método <xref:System.GC.Collect%2A> faça a coleta somente quando ela for produtiva, conforme discutido na próxima seção.  
   
 ## <a name="gc-collection-mode"></a>Modo de coleta de GC  
+
  Você pode usar uma das sobrecargas do método <xref:System.GC.Collect%2A?displayProperty=nameWithType>, que inclui um valor <xref:System.GCCollectionMode>, para especificar o comportamento de uma coleta forçada do modo a seguir.  
   
 |`GCCollectionMode` valor|Descrição|  
@@ -26,6 +28,7 @@ Na maioria dos casos, o coletor de lixo pode determinar o melhor momento para ex
 |<xref:System.GCCollectionMode.Optimized>|Permite que o coletor de lixo determine se o horário atual é ideal para recuperar objetos.<br /><br /> O coletor de lixo pode determinar que uma coleta não seria suficientemente produtiva para se justificar, caso em que ele retornará sem recuperar objetos.|  
   
 ## <a name="background-or-blocking-collections"></a>Coletas de bloqueio ou em segundo plano  
+
  Você pode chamar a sobrecarga de método <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29?displayProperty=nameWithType> para especificar se uma coleta induzida realiza o bloqueio ou não. O tipo de coleta executada depende de uma combinação dos parâmetros `mode` e `blocking` do método. `mode` é membro da enumeração <xref:System.GCCollectionMode>, e `blocking` é um valor <xref:System.Boolean>. A tabela a seguir resume a interação entre os argumentos `mode` e `blocking`.  
   
 |`mode`|`blocking` = `true`|`blocking` = `false`|  

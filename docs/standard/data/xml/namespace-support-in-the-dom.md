@@ -2,14 +2,15 @@
 title: Suporte do namespace em DOM
 ms.date: 03/30/2017
 ms.assetid: f0548ead-0fed-41ee-b33e-117ba900d3bc
-ms.openlocfilehash: b71817bf8a1b2eb585ccb3b21fb361c651c2bfe9
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b3214d77b069b672e8772ec78db51c9d8ee1bf50
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830149"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714400"
 ---
 # <a name="namespace-support-in-the-dom"></a>Suporte do namespace em DOM
+
 O modelo de objeto (DOM) de documento XML é completamente URL ciente. Somente os documentos XML URL cientes são suportados. World Wide Web Consortium (W3C) especifica que os aplicativos DOM que o nível de implementar 1 pode estar ciente não-namespace-, e os recursos do nível 2 DOM são cientes URL. No entanto, todos os recursos em DOM XML são cientes URL, indiferente se o método é recomendação DOM nível de nível 1 ou 2.  
   
  Por exemplo, em uma configuração não-namespace- ciente, a chamada `setAttribute("A:b", "123")`, conforme especificado na recomendação de nível 1 DOM, não resulta em um atributo com um prefixo de `A` e um nome local de `b`. Resultaria em um atributo com o valor `A:b`.  
