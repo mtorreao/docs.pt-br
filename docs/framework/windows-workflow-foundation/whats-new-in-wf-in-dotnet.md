@@ -1,18 +1,18 @@
 ---
-title: Novidades no Windows Foundation Workflow no .NET 4.5
+title: O que há de novo na Windows Workflow Foundation no .NET Framework 4,5
 description: Windows Workflow Foundation no .NET Framework 4,5 apresenta muitos recursos novos, como novas atividades, recursos de designer e modelos de desenvolvimento de fluxo de trabalho.
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: b115a0a5bb5e425e808270d3daf8bb0aeb942b3c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0d7086fd5ff9bfa410568a74092be3e29f732e23
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556610"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697903"
 ---
-# <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>Novidades no Windows Foundation Workflow no .NET 4.5
+# <a name="whats-new-in-windows-workflow-foundation-in-net-framework-45"></a>O que há de novo na Windows Workflow Foundation no .NET Framework 4,5
 
-O Windows Workflow Foundation (WF) no .NET Framework 4,5 apresenta muitos recursos novos, como novas atividades, recursos de designer e modelos de desenvolvimento de fluxo de trabalho. Muitos, mas nem todos, dos novos recursos de fluxo de trabalho introduzidos no .NET Framework 4,5 têm suporte no designer de fluxo de trabalho hospedado novamente. Para obter mais informações sobre os novos recursos com suporte, consulte [suporte para novos recursos do Workflow Foundation 4,5 no designer de fluxo de trabalho rehospedado](wf-features-in-the-rehosted-workflow-designer.md). Para obter mais informações sobre como migrar aplicativos .NET 3,0 e .NET 3,5 Workflow para usar a versão mais recente, consulte [diretrizes de migração](migration-guidance.md). Este tópico fornece uma visão geral dos novos recursos de fluxo de trabalho introduzidos no .NET Framework 4,5.
+O Windows Workflow Foundation (WF) no .NET Framework 4,5 apresenta muitos recursos novos, como novas atividades, recursos de designer e modelos de desenvolvimento de fluxo de trabalho. Muitos, mas nem todos, dos novos recursos de fluxo de trabalho introduzidos no .NET Framework 4,5 têm suporte no designer de fluxo de trabalho hospedado novamente. Para obter mais informações sobre os novos recursos com suporte, consulte [suporte para novos recursos do Workflow Foundation 4,5 no designer de fluxo de trabalho rehospedado](wf-features-in-the-rehosted-workflow-designer.md). Para obter mais informações sobre como migrar .NET Framework 3,0 e .NET Framework aplicativos de fluxo de trabalho 3,5 para usar a versão mais recente, consulte [diretrizes de migração](migration-guidance.md). Este artigo fornece uma visão geral dos novos recursos de fluxo de trabalho introduzidos no .NET Framework 4,5.
 
 > [!WARNING]
 > Os novos recursos do Windows Workflow Foundation introduzidos no .NET Framework 4,5 não estão disponíveis para projetos destinados a versões anteriores do Framework. Se um projeto que tem como alvo .NET Framework 4,5 for Redirecionado para uma versão anterior do Framework, vários problemas poderão ocorrer.
@@ -151,7 +151,7 @@ Várias seleções de atividade também podem ser arrastadas e soltadas dentro d
 
 ### <a name="outline-view-of-workflow-items"></a><a name="BKMK_DocumentOutline"></a> modo de exibição da Estrutura do Código de itens de fluxo de trabalho
 
-Para facilitar a navegação de fluxos de trabalho hierárquicos, os componentes de um fluxo de trabalho são mostrados em uma exibição de destaque em estilo de árvore. O modo de exibição de estrutura de tópicos é exibido na exibição de **estrutura de tópicos do documento** . Para abrir essa exibição, no menu superior, selecione **exibição**, **outras janelas**, **estrutura de tópicos do documento**ou pressione CTRL +, U. Clicar em um nó na exibição de destaque navegará para a atividade correspondente no designer de fluxo de trabalho, e a exibição da estrutura será atualizada para mostrar as atividades que estão selecionadas no designer.
+Para facilitar a navegação de fluxos de trabalho hierárquicos, os componentes de um fluxo de trabalho são mostrados em uma exibição de destaque em estilo de árvore. O modo de exibição de estrutura de tópicos é exibido na exibição de **estrutura de tópicos do documento** . Para abrir essa exibição, no menu superior, selecione **exibição**, **outras janelas**, **estrutura de tópicos do documento** ou pressione CTRL +, U. Clicar em um nó na exibição de destaque navegará para a atividade correspondente no designer de fluxo de trabalho, e a exibição da estrutura será atualizada para mostrar as atividades que estão selecionadas no designer.
 
 A seguinte captura de tela do fluxo de trabalho concluído do [tutorial de introdução](getting-started-tutorial.md) mostra o modo de exibição de estrutura de tópicos com um fluxo de trabalho Sequencial.
 

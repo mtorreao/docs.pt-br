@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6c116592-134b-4ef2-a319-680e92d013aa
 topic_type:
 - apiref
-ms.openlocfilehash: fa2be894af6e44d09c25a736f45acba56052f9fa
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: bf498a14af3dccc7278155ecfc74132c2b519ed3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895046"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698189"
 ---
 # <a name="icordebugarrayvaluegetdimensions-method"></a>Método ICorDebugArrayValue::GetDimensions
+
 Obtém o número de elementos em cada dimensão dessa matriz.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,6 +37,7 @@ HRESULT GetDimensions (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `cdim`  
  no O número de dimensões deste objeto ICorDebugArrayValue.  
   
@@ -45,6 +47,7 @@ HRESULT GetDimensions (
  fora Uma matriz de inteiros, cada um dos quais Especifica o número de elementos em uma dimensão neste `ICorDebugArrayValue` objeto.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

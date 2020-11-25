@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9f436bca-1b96-494b-a6d2-e102c7551752
-ms.openlocfilehash: 0895154e6932f32ebd3f5d1cf0d59bd557eb1b06
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 265275e3b200ec7bf38df997ace622f2056ad66f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822536"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697617"
 ---
 # <a name="remove-xml-data-using-xpathnavigator"></a>Remova os dados XML usando XPathNavigator
+
 A classe de <xref:System.Xml.XPath.XPathNavigator> fornece um conjunto de métodos usados para remover os nós e valores de um documento XML. Para usar esses métodos, o objeto <xref:System.Xml.XPath.XPathNavigator> deve ser editável, ou seja, sua propriedade <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> deve ser `true`.  
   
  Os objetos <xref:System.Xml.XPath.XPathNavigator> que podem editar um documento XML são criados pelo método <xref:System.Xml.XmlDocument.CreateNavigator%2A> da classe <xref:System.Xml.XmlDocument>. os objetos de<xref:System.Xml.XPath.XPathNavigator> criados pela classe de <xref:System.Xml.XPath.XPathDocument> são somente leitura e qualquer tentativa de usar os métodos de um objeto de <xref:System.Xml.XPath.XPathNavigator> criado por <xref:System.Xml.XPath.XPathDocument> objetos resultados em <xref:System.NotSupportedException>.  
@@ -20,9 +21,11 @@ A classe de <xref:System.Xml.XPath.XPathNavigator> fornece um conjunto de métod
  Para saber mais sobre como criar objetos <xref:System.Xml.XPath.XPathNavigator> editáveis, confira [Leitura de dados XML usando XPathDocument e XmlDocument](reading-xml-data-using-xpathdocument-and-xmldocument.md).  
   
 ## <a name="removing-nodes"></a>Removendo os nós  
+
  A classe de <xref:System.Xml.XPath.XPathNavigator> fornece o método de <xref:System.Xml.XPath.XPathNavigator.DeleteSelf%2A> para remover os nós de um documento XML.  
   
 ### <a name="removing-a-node"></a>Removendo um nó  
+
  A classe de <xref:System.Xml.XPath.XPathNavigator> fornece o método de <xref:System.Xml.XPath.XPathNavigator.DeleteSelf%2A> para excluir o nó atual que um objeto de <xref:System.Xml.XPath.XPathNavigator> é posicionado atualmente de um documento XML.  
   
  Depois que um nó foi excluído usando o método <xref:System.Xml.XPath.XPathNavigator.DeleteSelf%2A> , não é mais alcançável raiz do objeto de <xref:System.Xml.XmlDocument> . Depois que um nó foi excluído, <xref:System.Xml.XPath.XPathNavigator> está localizado no nó pai do nó excluído.  
@@ -69,17 +72,21 @@ Console.WriteLine(navigator.OuterXml);
  [!code-xml[XPathXMLExamples#2](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xml#2)]  
   
 ### <a name="removing-an-attribute-node"></a>Removendo um nó de atributo  
+
  Os nós de atributo são removidos de um documento XML usando o método <xref:System.Xml.XPath.XPathNavigator.DeleteSelf%2A> .  
   
  Depois que um nó de atributo foi excluído, não é mais alcançável do nó raiz de um objeto de <xref:System.Xml.XmlDocument> e o objeto de <xref:System.Xml.XPath.XPathNavigator> é posicionado no elemento pai.  
   
 #### <a name="default-attributes"></a>Atributos padrão  
+
  Independentemente do método usado para remover os atributos, há limitações especiais em remover os atributos que são definidos como atributos padrão no DTD ou no esquema XML para o documento XML. Os atributos padrão não podem ser removidos a menos que o elemento que pertencem a também é removido. Os atributos padrão são sempre atual para elementos que têm atributos padrões declarados, e como resultado, excluindo resultados de um atributo padrão em uma substituição atributo ser inserido no elemento e ser inicializado para o valor padrão que foi declarado.  
   
 ## <a name="removing-values"></a>Removendo os valores  
+
  A classe de <xref:System.Xml.XPath.XPathNavigator> fornece os métodos de <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> e de <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> para remover sem tipo e os valores tipados de um documento XML.  
   
 ### <a name="removing-untyped-values"></a>Removendo os valores sem tipo  
+
  O método <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> simplesmente insere o valor sem tipo de `string` passado como um parâmetro como o valor do nó no qual o objeto <xref:System.Xml.XPath.XPathNavigator> está posicionado no momento. Passando uma cadeia de caracteres vazia para o método de <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> remove o valor do nó atual.  
   
  O exemplo a seguir remove o valor do elemento de `price` do primeiro elemento de `book` no arquivo de `contosoBooks.xml` usando o método <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> .  
@@ -119,6 +126,7 @@ Console.WriteLine(navigator.OuterXml);
  [!code-xml[XPathXMLExamples#2](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xml#2)]  
   
 ### <a name="removing-typed-values"></a>Removendo os valores tipados  
+
  Quando o tipo de um nó é um tipo simples de Esquema XML do W3C, o novo valor inserido pelo método <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> é verificado em relação às facetas do tipo simples antes que o valor seja definido. Se o novo valor não for válido de acordo com o tipo de nó (por exemplo, definir um valor de `-1` em um elemento cujo tipo seja `xs:positiveInteger`), isso resultará em uma exceção. O método de <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> também não pode ser `null` passado como um parâmetro. Como resultado remova o valor de um nó tipado deve seguir com o tipo do nó.  
   
  O exemplo a seguir remove o valor do elemento de `price` do primeiro elemento de `book` no arquivo de `contosoBooks.xml` usando o método <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> definindo o valor a `0`. O valor do nó não é removido, mas o custo de livro foi removido de acordo com seu tipo de dados de `xs:decimal`.  
@@ -166,9 +174,11 @@ Console.WriteLine(navigator.OuterXml);
 ```  
   
 ## <a name="namespace-nodes"></a>Nós de namespace  
+
  Os nós de namespace não podem ser excluídos de um objeto de <xref:System.Xml.XmlDocument> . Tentativas de excluir os nós de namespace usando o método de <xref:System.Xml.XPath.XPathNavigator.DeleteSelf%2A> resultam em uma exceção.  
   
 ## <a name="the-innerxml-and-outerxml-properties"></a>As propriedades de InnerXml e de OuterXml  
+
  As propriedades <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> e <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> da classe <xref:System.Xml.XPath.XPathNavigator> alteram a marcação XML dos nós nos quais um objeto <xref:System.Xml.XPath.XPathNavigator> está posicionado no momento.  
   
  A propriedade <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> altera a marcação XML dos nós filho no qual um objeto <xref:System.Xml.XPath.XPathNavigator> está posicionado no momento com o conteúdo analisado da `string` do XML determinada. Da mesma maneira, a propriedade <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> altera a marcação XML dos nós filho no qual um objeto <xref:System.Xml.XPath.XPathNavigator> está posicionado no momento além do próprio nó atual.  
@@ -176,6 +186,7 @@ Console.WriteLine(navigator.OuterXml);
  Além dos métodos descritos neste tópico, <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> e as propriedades de <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> podem ser usados para remover os nós e valores de um documento XML. Para saber mais sobre como usar as propriedades <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> e <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> para modificar nós, confira o tópico [Modificar dados XML usando XPathNavigator](modify-xml-data-using-xpathnavigator.md).  
   
 ## <a name="saving-an-xml-document"></a>Salvando um documento XML  
+
  Salvando as alterações feitas a um objeto de <xref:System.Xml.XmlDocument> como resultado dos métodos descritos neste tópico é executado usando os métodos da classe <xref:System.Xml.XmlDocument> . Para saber mais sobre como salvar as alterações feitas em um objeto <xref:System.Xml.XmlDocument>, confira [Salvar e gravar um documento](saving-and-writing-a-document.md).  
   
 ## <a name="see-also"></a>Confira também

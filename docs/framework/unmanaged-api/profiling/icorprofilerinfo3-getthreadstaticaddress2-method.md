@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a9608861-ae64-4467-8a73-be05ad34beac
 topic_type:
 - apiref
-ms.openlocfilehash: a27e7ca156ca138078215a65486ac4b965c6a93d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d8f2788d63f27aac30cf239b410eecea31f09212
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496328"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697877"
 ---
 # <a name="icorprofilerinfo3getthreadstaticaddress2-method"></a>Método ICorProfilerInfo3::GetThreadStaticAddress2
+
 Obtém o endereço do campo de thread estático especificado que está no escopo do thread e do domínio do aplicativo especificados.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,6 +38,7 @@ HRESULT GetThreadStaticAddress2(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `classId`  
  no A ID da classe que contém o campo de thread estático solicitado.  
   
@@ -53,6 +55,7 @@ HRESULT GetThreadStaticAddress2(
  fora Um ponteiro para o endereço do campo estático que está dentro do thread especificado.  
   
 ## <a name="remarks"></a>Comentários  
+
  O `GetThreadStaticAddress2` método pode retornar um dos seguintes:  
   
 - Um CORPROF_E_DATAINCOMPLETE HRESULT se o campo estático fornecido não tiver sido atribuído um endereço no contexto especificado.  
@@ -64,6 +67,7 @@ HRESULT GetThreadStaticAddress2(
  O método [ICorProfilerInfo2:: GetThreadStaticAddress](icorprofilerinfo2-getthreadstaticaddress-method.md) é semelhante ao `GetThreadStaticAddress2` método, mas não aceita um argumento de domínio de aplicativo.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

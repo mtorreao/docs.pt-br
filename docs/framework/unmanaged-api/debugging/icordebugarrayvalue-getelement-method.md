@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7ac3cba5-c282-402e-b7ef-b46634f5176b
 topic_type:
 - apiref
-ms.openlocfilehash: 7a52e61f41bd1d7f68523dd16f70010ffbba401e
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 0b6b6f46c7fff8f1d4c2ad555c93423f9ca8ac09
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895030"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698137"
 ---
 # <a name="icordebugarrayvaluegetelement-method"></a>Método ICorDebugArrayValue::GetElement
+
 Obtém o valor do elemento da matriz fornecido.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,13 +38,14 @@ HRESULT GetElement (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `cdim`  
  no O número de dimensões deste `ICorDebugArrayValue` objeto.  
   
  Esse valor também é o tamanho da `indices` matriz porque seu tamanho é igual ao número de dimensões do `ICorDebugArrayValue` objeto.  
   
  `indices`  
- no Uma matriz de valores de índice, cada um deles especifica uma posição dentro de uma dimensão `ICorDebugArrayValue` do objeto.  
+ no Uma matriz de valores de índice, cada um deles especifica uma posição dentro de uma dimensão do `ICorDebugArrayValue` objeto.  
   
  Esse valor não deve ser nulo.  
   
@@ -51,6 +53,7 @@ HRESULT GetElement (
  fora Um ponteiro para o endereço de um objeto ICorDebugValue que representa o valor do elemento especificado.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
