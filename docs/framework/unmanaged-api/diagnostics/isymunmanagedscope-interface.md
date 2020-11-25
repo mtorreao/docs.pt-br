@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 3db7a220-cfe9-4810-8ca8-a094bb8e0f5b
 topic_type:
 - apiref
-ms.openlocfilehash: 1ee406c97fa4ccb7f87098cba2925568d8ce069f
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 9256342ad3a91e6770d6fd19d9d2f94fab267d3e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615339"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725879"
 ---
 # <a name="isymunmanagedscope-interface"></a>Interface ISymUnmanagedScope
+
 Representa um escopo léxico dentro de um método.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método GetChildren](isymunmanagedscope-getchildren-method.md)|Obtém os filhos deste escopo.|  
 |[Método GetEndOffset](isymunmanagedscope-getendoffset-method.md)|Obtém o deslocamento de fim deste escopo.|  
@@ -38,9 +39,10 @@ Representa um escopo léxico dentro de um método.
 |[Método GetStartOffset](isymunmanagedscope-getstartoffset-method.md)|Obtém o deslocamento inicial para este escopo.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interfaces de armazenamento de símbolo de diagnóstico](diagnostics-symbol-store-interfaces.md)
 - [Interface ISymUnmanagedScope2](isymunmanagedscope2-interface.md)

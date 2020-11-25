@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6b5be4fc-2e86-499c-8b09-833160bca767
 topic_type:
 - apiref
-ms.openlocfilehash: ccc4843864f375c167acdb12575c282dbe3a49e1
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 2bc2b983171dc41d5ac37eda0359f1aaee4ebd6e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004797"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725749"
 ---
 # <a name="imetadataemitdefinefield-method"></a>Método IMetaDataEmit::DefineField
+
 Cria uma definição para um campo com a assinatura de metadados especificada e Obtém um token para essa definição de campo.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -42,6 +43,7 @@ HRESULT DefineField (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `td`  
  no O `mdTypeDef` token para a classe ou a interface de circunscrição.  
   
@@ -70,11 +72,12 @@ HRESULT DefineField (
  fora O `mdFieldDef` token atribuído.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como um recurso em MSCorEE. dll  
+ **Biblioteca:** Usado como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -2,14 +2,15 @@
 title: Interface ISymUnmanagedWriter4
 ms.date: 03/30/2017
 ms.assetid: 4af5e8c0-987d-405e-b934-8b9e70fcae6e
-ms.openlocfilehash: 21d6520aae1367368973da1692f6bca3aeb2c129
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c2b57897e4f0e8b23337302f344065d79677e0c4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84493650"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725801"
 ---
 # <a name="isymunmanagedwriter4-interface"></a>Interface ISymUnmanagedWriter4
+
 Interface ISymUnmanagedWriter4.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -19,13 +20,15 @@ Interface ISymUnmanagedWriter4.
 ```  
   
 ## <a name="methods"></a>Métodos  
+
  Essa interface contém os seguintes métodos:  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método GetDebugInfoWithPadding](isymunmanagedwriter4-getdebuginfowithpadding-method.md)|O funciona da mesma forma que o [método GetDebugInfo](isymunmanagedwriter-getdebuginfo-method.md) , exceto pelo fato de que a cadeia de caracteres de caminho é preenchida com zeros após o caractere nulo de terminação para tornar os dados da cadeia de caracteres um tamanho fixo `MAX_PATH` . O preenchimento só será fornecido se o comprimento da cadeia de caracteres do caminho for menor que `MAX_PATH` .<br /><br /> Isso facilita a gravação de ferramentas que diferenciam arquivos PE.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Confira também

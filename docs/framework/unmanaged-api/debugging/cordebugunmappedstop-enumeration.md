@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: a684f7d7-d0c2-4690-b721-639e613f11f8
 topic_type:
 - apiref
-ms.openlocfilehash: 772f1f0dee260ad3752b2f89e5fbe0d6bc27b87b
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: e251bf67adcaf2bbd6565eda068d487eb0d70efd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795645"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725762"
 ---
 # <a name="cordebugunmappedstop-enumeration"></a>Enumeração CorDebugUnmappedStop
+
 Especifica o tipo de código não mapeado que pode disparar uma interrupção na execução do código pelo passador.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -40,7 +41,7 @@ typedef enum CorDebugUnmappedStop {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |`STOP_NONE`|Não pare em nenhum tipo de código não mapeado.|  
 |`STOP_PROLOG`|Parar no código de prólogo.|  
@@ -51,9 +52,11 @@ typedef enum CorDebugUnmappedStop {
 |`STOP_ALL`|Parar em todos os tipos de código não mapeado.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Use o método [ICorDebugStepper:: SetUnmappedStopMask](icordebugstepper-setunmappedstopmask-method.md) para definir os sinalizadores que especificam o código não mapeado no qual o stepper será interrompido.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -62,6 +65,6 @@ typedef enum CorDebugUnmappedStop {
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Declarando enumerações](debugging-enumerations.md)

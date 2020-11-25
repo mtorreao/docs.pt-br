@@ -2,14 +2,15 @@
 title: 'Método ICorDebugVariableSymbol:: GetValue'
 ms.date: 03/30/2017
 ms.assetid: 90abece1-392e-4ade-94a1-30c75b0f7074
-ms.openlocfilehash: f217f7226d53a27363f66eb90a340fd3604a0217
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 0a57b1a31e1ef4b0db317012b25bc65ecbbaf011
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396513"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725957"
 ---
 # <a name="icordebugvariablesymbolgetvalue-method"></a>Método ICorDebugVariableSymbol:: GetValue
+
 Obtém o valor de uma variável como uma matriz de bytes.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -26,6 +27,7 @@ HRESULT GetValue(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `offset`  
  no O deslocamento inicial na variável a partir da qual o valor deve ser lido. Esse parâmetro é usado ao ler campos de membro em um objeto.  
   
@@ -50,6 +52,7 @@ HRESULT GetValue(
 > Esse método está disponível somente com .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -58,7 +61,7 @@ HRESULT GetValue(
   
  **.NET Framework versões:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorDebugVariableSymbol](icordebugvariablesymbol-interface.md)
 - [Depurando interfaces](debugging-interfaces.md)

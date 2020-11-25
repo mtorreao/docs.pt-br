@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c44b0440-04bd-460a-84fb-41afecf44503
 topic_type:
 - apiref
-ms.openlocfilehash: 6f11a69671864ba4627c2bb8c86e0c9beb27eeb1
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 026ba35044bc7573dc54617dcade9cf3918a76ec
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83611114"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725918"
 ---
 # <a name="isymunmanagedscopegetnamespaces-method"></a>Método ISymUnmanagedScope::GetNamespaces
+
 Obtém os namespaces que estão sendo usados nesse escopo.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,6 +38,7 @@ HRESULT GetNamespaces(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `cNameSpaces`  
  no O tamanho da `namespaces` matriz.  
   
@@ -46,10 +48,12 @@ HRESULT GetNamespaces(
  `namespaces`  
  fora A matriz que recebe os namespaces.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Confira também

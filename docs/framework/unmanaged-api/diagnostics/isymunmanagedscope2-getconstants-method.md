@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f241b620-9ec5-42fd-92ef-3b22329db72a
 topic_type:
 - apiref
-ms.openlocfilehash: f558d209d13fae93bd3a6f5e0e653afb91371a6a
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: df42e58a9bb3bf00b3fa4df45086dc2219658e25
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615326"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725840"
 ---
 # <a name="isymunmanagedscope2getconstants-method"></a>Método ISymUnmanagedScope2::GetConstants
+
 Obtém as constantes locais definidas neste escopo.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,6 +38,7 @@ HRESULT GetConstants(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `cConstants`  
  no O comprimento do buffer para o qual o `pcConstants` parâmetro aponta.  
   
@@ -46,10 +48,12 @@ HRESULT GetConstants(
  `constants`  
  fora O buffer que armazena as constantes.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Confira também
