@@ -15,43 +15,46 @@ helpviewer_keywords:
 ms.assetid: 257d6076-06e0-4d93-bb33-651fbb2b92d7
 topic_type:
 - apiref
-ms.openlocfilehash: bcc938ff9322fca4f45366fdc695e0c3901484b5
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a16e77619ec85ebdf47a2b821309bbb3af63282b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499656"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705313"
 ---
-# <a name="icorprofilercallback3profilerattachcomplete-method"></a><span data-ttu-id="9f391-102">Método ICorProfilerCallback3::ProfilerAttachComplete</span><span class="sxs-lookup"><span data-stu-id="9f391-102">ICorProfilerCallback3::ProfilerAttachComplete Method</span></span>
-<span data-ttu-id="9f391-103">Chamado pelo Common Language Runtime (CLR) para indicar que o criador de perfil agora pode chamar os métodos de atualização [ICorProfilerInfo3:: EnumJITedFunctions](icorprofilerinfo3-enumjitedfunctions-method.md) e [ICorProfilerInfo3:: EnumModules](icorprofilerinfo3-enummodules-method.md) .</span><span class="sxs-lookup"><span data-stu-id="9f391-103">Called by the common language runtime (CLR) to indicate that the profiler can now call the [ICorProfilerInfo3::EnumJITedFunctions](icorprofilerinfo3-enumjitedfunctions-method.md) and [ICorProfilerInfo3::EnumModules](icorprofilerinfo3-enummodules-method.md) catch-up methods.</span></span>  
+# <a name="icorprofilercallback3profilerattachcomplete-method"></a><span data-ttu-id="05a28-102">Método ICorProfilerCallback3::ProfilerAttachComplete</span><span class="sxs-lookup"><span data-stu-id="05a28-102">ICorProfilerCallback3::ProfilerAttachComplete Method</span></span>
+
+<span data-ttu-id="05a28-103">Chamado pelo Common Language Runtime (CLR) para indicar que o criador de perfil agora pode chamar os métodos de atualização [ICorProfilerInfo3:: EnumJITedFunctions](icorprofilerinfo3-enumjitedfunctions-method.md) e [ICorProfilerInfo3:: EnumModules](icorprofilerinfo3-enummodules-method.md) .</span><span class="sxs-lookup"><span data-stu-id="05a28-103">Called by the common language runtime (CLR) to indicate that the profiler can now call the [ICorProfilerInfo3::EnumJITedFunctions](icorprofilerinfo3-enumjitedfunctions-method.md) and [ICorProfilerInfo3::EnumModules](icorprofilerinfo3-enummodules-method.md) catch-up methods.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9f391-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="9f391-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="05a28-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="05a28-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ProfilerAttachComplete ();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="9f391-105">Comentários</span><span class="sxs-lookup"><span data-stu-id="9f391-105">Remarks</span></span>  
- <span data-ttu-id="9f391-106">O `ProfilerAttachComplete` retorno de chamada é emitido depois que o método [ICorProfilerCallback3:: InitializeForAttach](icorprofilercallback3-initializeforattach-method.md) é chamado.</span><span class="sxs-lookup"><span data-stu-id="9f391-106">The `ProfilerAttachComplete` callback is issued after the [ICorProfilerCallback3::InitializeForAttach](icorprofilercallback3-initializeforattach-method.md) method is called.</span></span> <span data-ttu-id="9f391-107">Isso indica o seguinte:</span><span class="sxs-lookup"><span data-stu-id="9f391-107">It indicates the following:</span></span>  
-  
-- <span data-ttu-id="9f391-108">Os retornos de chamada que foram solicitados pelo criador de perfil no `InitializeForAttach` foram ativados.</span><span class="sxs-lookup"><span data-stu-id="9f391-108">The callbacks that were requested by the profiler in `InitializeForAttach` have been activated.</span></span>  
-  
-- <span data-ttu-id="9f391-109">O criador de perfil agora pode realizar a atualização nas IDs associadas sem se preocupar com notificações ausentes.</span><span class="sxs-lookup"><span data-stu-id="9f391-109">The profiler can now perform catch-up on the associated IDs without being concerned about missing notifications.</span></span>  
-  
- <span data-ttu-id="9f391-110">O CLR ignora o valor de retorno deste retorno de chamada.</span><span class="sxs-lookup"><span data-stu-id="9f391-110">The CLR ignores the return value from this callback.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="9f391-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9f391-111">Requirements</span></span>  
- <span data-ttu-id="9f391-112">**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9f391-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="9f391-113">**Cabeçalho:** CorProf. idl, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="9f391-113">**Header:** CorProf.idl, CorProf.h</span></span>  
-  
- <span data-ttu-id="9f391-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9f391-114">**Library:** CorGuids.lib</span></span>  
-  
- <span data-ttu-id="9f391-115">**.NET Framework versões:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9f391-115">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="9f391-116">Confira também</span><span class="sxs-lookup"><span data-stu-id="9f391-116">See also</span></span>
+## <a name="remarks"></a><span data-ttu-id="05a28-105">Comentários</span><span class="sxs-lookup"><span data-stu-id="05a28-105">Remarks</span></span>  
 
-- [<span data-ttu-id="9f391-117">Interface ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="9f391-117">ICorProfilerCallback Interface</span></span>](icorprofilercallback-interface.md)
-- [<span data-ttu-id="9f391-118">Interface ICorProfilerInfo3</span><span class="sxs-lookup"><span data-stu-id="9f391-118">ICorProfilerInfo3 Interface</span></span>](icorprofilerinfo3-interface.md)
-- [<span data-ttu-id="9f391-119">Criação de perfil de interfaces</span><span class="sxs-lookup"><span data-stu-id="9f391-119">Profiling Interfaces</span></span>](profiling-interfaces.md)
-- [<span data-ttu-id="9f391-120">Criação de perfil</span><span class="sxs-lookup"><span data-stu-id="9f391-120">Profiling</span></span>](index.md)
+ <span data-ttu-id="05a28-106">O `ProfilerAttachComplete` retorno de chamada é emitido depois que o método [ICorProfilerCallback3:: InitializeForAttach](icorprofilercallback3-initializeforattach-method.md) é chamado.</span><span class="sxs-lookup"><span data-stu-id="05a28-106">The `ProfilerAttachComplete` callback is issued after the [ICorProfilerCallback3::InitializeForAttach](icorprofilercallback3-initializeforattach-method.md) method is called.</span></span> <span data-ttu-id="05a28-107">Isso indica o seguinte:</span><span class="sxs-lookup"><span data-stu-id="05a28-107">It indicates the following:</span></span>  
+  
+- <span data-ttu-id="05a28-108">Os retornos de chamada que foram solicitados pelo criador de perfil no `InitializeForAttach` foram ativados.</span><span class="sxs-lookup"><span data-stu-id="05a28-108">The callbacks that were requested by the profiler in `InitializeForAttach` have been activated.</span></span>  
+  
+- <span data-ttu-id="05a28-109">O criador de perfil agora pode realizar a atualização nas IDs associadas sem se preocupar com notificações ausentes.</span><span class="sxs-lookup"><span data-stu-id="05a28-109">The profiler can now perform catch-up on the associated IDs without being concerned about missing notifications.</span></span>  
+  
+ <span data-ttu-id="05a28-110">O CLR ignora o valor de retorno deste retorno de chamada.</span><span class="sxs-lookup"><span data-stu-id="05a28-110">The CLR ignores the return value from this callback.</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="05a28-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="05a28-111">Requirements</span></span>  
+
+ <span data-ttu-id="05a28-112">**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="05a28-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="05a28-113">**Cabeçalho:** CorProf. idl, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="05a28-113">**Header:** CorProf.idl, CorProf.h</span></span>  
+  
+ <span data-ttu-id="05a28-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="05a28-114">**Library:** CorGuids.lib</span></span>  
+  
+ <span data-ttu-id="05a28-115">**.NET Framework versões:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="05a28-115">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="05a28-116">Confira também</span><span class="sxs-lookup"><span data-stu-id="05a28-116">See also</span></span>
+
+- [<span data-ttu-id="05a28-117">Interface ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="05a28-117">ICorProfilerCallback Interface</span></span>](icorprofilercallback-interface.md)
+- [<span data-ttu-id="05a28-118">Interface ICorProfilerInfo3</span><span class="sxs-lookup"><span data-stu-id="05a28-118">ICorProfilerInfo3 Interface</span></span>](icorprofilerinfo3-interface.md)
+- [<span data-ttu-id="05a28-119">Criação de perfil de interfaces</span><span class="sxs-lookup"><span data-stu-id="05a28-119">Profiling Interfaces</span></span>](profiling-interfaces.md)
+- [<span data-ttu-id="05a28-120">Criação de perfil</span><span class="sxs-lookup"><span data-stu-id="05a28-120">Profiling</span></span>](index.md)
