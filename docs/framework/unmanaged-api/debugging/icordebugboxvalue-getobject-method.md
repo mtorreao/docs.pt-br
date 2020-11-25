@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 3a867a5b-bf94-493f-a4f5-b28685cf5325
 topic_type:
 - apiref
-ms.openlocfilehash: 401f052b881c1a0cfa065ba60c93aca1706f34f4
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: df151e9fc89214d0851ebe60c7ebdb87224f880c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894778"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719067"
 ---
-# <a name="icordebugboxvaluegetobject-method"></a><span data-ttu-id="345ef-102">Método ICorDebugBoxValue::GetObject</span><span class="sxs-lookup"><span data-stu-id="345ef-102">ICorDebugBoxValue::GetObject Method</span></span>
-<span data-ttu-id="345ef-103">Obtém o valor em caixa.</span><span class="sxs-lookup"><span data-stu-id="345ef-103">Gets the boxed value.</span></span>  
+# <a name="icordebugboxvaluegetobject-method"></a><span data-ttu-id="85c23-102">Método ICorDebugBoxValue::GetObject</span><span class="sxs-lookup"><span data-stu-id="85c23-102">ICorDebugBoxValue::GetObject Method</span></span>
+
+<span data-ttu-id="85c23-103">Obtém o valor em caixa.</span><span class="sxs-lookup"><span data-stu-id="85c23-103">Gets the boxed value.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="345ef-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="345ef-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="85c23-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="85c23-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetObject (  
@@ -33,15 +34,17 @@ HRESULT GetObject (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="345ef-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="345ef-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="85c23-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="85c23-105">Parameters</span></span>  
+
  `ppObject`  
- <span data-ttu-id="345ef-106">fora Um ponteiro para o endereço de um objeto ICorDebugObjectValue que representa o valor boxed.</span><span class="sxs-lookup"><span data-stu-id="345ef-106">[out] A pointer to the address of an ICorDebugObjectValue object that represents the boxed value.</span></span>  
+ <span data-ttu-id="85c23-106">fora Um ponteiro para o endereço de um objeto ICorDebugObjectValue que representa o valor boxed.</span><span class="sxs-lookup"><span data-stu-id="85c23-106">[out] A pointer to the address of an ICorDebugObjectValue object that represents the boxed value.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="345ef-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="345ef-107">Requirements</span></span>  
- <span data-ttu-id="345ef-108">**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="345ef-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="85c23-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="85c23-107">Requirements</span></span>  
+
+ <span data-ttu-id="85c23-108">**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="85c23-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="345ef-109">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="345ef-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="85c23-109">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="85c23-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="345ef-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="345ef-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="85c23-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="85c23-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="345ef-111">**.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="345ef-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="85c23-111">**.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="85c23-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
