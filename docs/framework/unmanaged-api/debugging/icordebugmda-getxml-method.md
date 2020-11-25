@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 29746b24-3766-4255-8813-0426c45e73e5
 topic_type:
 - apiref
-ms.openlocfilehash: 219aa27296dffa525bf3e2b836825437a8ce77b0
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 9a088c7e4e9c72c8247ccdd384bc724587210c37
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207651"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710864"
 ---
 # <a name="icordebugmdagetxml-method"></a>Método ICorDebugMDA::GetXML
+
 Obtém o fluxo XML completo associado ao MDA (Assistente de depuração gerenciada) representado por [ICorDebugMDA](icordebugmda-interface.md).  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,6 +38,7 @@ HRESULT GetXML (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `cchName`  
  no O tamanho da `szName` matriz.  
   
@@ -47,9 +49,11 @@ HRESULT GetXML (
  fora Uma matriz na qual armazenar o fluxo XML. A matriz pode estar vazia.  
   
 ## <a name="remarks"></a>Comentários  
+
  O `GetXML` método pode potencialmente afetar o desempenho, dependendo do tamanho do fluxo XML associado.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -61,4 +65,4 @@ HRESULT GetXML (
 ## <a name="see-also"></a>Confira também
 
 - [Interface ICorDebugMDA](icordebugmda-interface.md)
-- [Diagnosticando erros com assistentes para depuração gerenciada](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosticando erros com assistentes de depuração gerenciados](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

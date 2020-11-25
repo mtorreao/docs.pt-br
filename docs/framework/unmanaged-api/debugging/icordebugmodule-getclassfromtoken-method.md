@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 622a4d3c-0425-4c54-a7e4-0735377cdad2
 topic_type:
 - apiref
-ms.openlocfilehash: f8a56dcf03748c6582bce07fc379113c5cdddd11
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 011d763ce244e18c7ba1203e18eb0700a8c8b13a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212588"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710227"
 ---
 # <a name="icordebugmodulegetclassfromtoken-method"></a>Método ICorDebugModule::GetClassFromToken
+
 Obtém a classe especificada pelo token de metadados.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -35,6 +36,7 @@ HRESULT GetClassFromToken(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `typedef`  
  no Um `mdTypeDef` token de metadados que faz referência aos metadados de uma classe.  
   
@@ -42,6 +44,7 @@ HRESULT GetClassFromToken(
  fora Um ponteiro para o endereço de um objeto ICorDebugClass que representa a classe.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

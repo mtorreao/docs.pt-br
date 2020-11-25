@@ -2,14 +2,15 @@
 title: 'Método ICorDebugMergedAssemblyRecord:: getculture'
 ms.date: 03/30/2017
 ms.assetid: 030b2f8c-8c21-40b7-855d-3afa78975a17
-ms.openlocfilehash: f73aac169cc048a87aca3bfc325cf8c6243012e9
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 636d0fd25d345f513e00504b9eb5adb4f0c03b0f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207868"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710643"
 ---
 # <a name="icordebugmergedassemblyrecordgetculture-method"></a>Método ICorDebugMergedAssemblyRecord:: getculture
+
 Obtém a cadeia de caracteres do nome da cultura do assembly.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -23,6 +24,7 @@ HRESULT GetCulture(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `cchCulture`  
  no O número de caracteres no `szCulture` buffer.  
   
@@ -33,12 +35,14 @@ HRESULT GetCulture(
  fora Uma matriz de caracteres que contém o nome da cultura.  
   
 ## <a name="remarks"></a>Comentários  
+
  O nome da cultura é uma cadeia de caracteres exclusiva que identifica uma cultura, como "en-US" (para a cultura em inglês (Estados Unidos)) ou "neutro" (para uma cultura neutra).  
   
 > [!NOTE]
 > Esse método está disponível somente com .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

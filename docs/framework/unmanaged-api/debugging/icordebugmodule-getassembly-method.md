@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 989762c4-3d15-4485-b8ee-69e0fa8ec895
 topic_type:
 - apiref
-ms.openlocfilehash: 86e2b28448caf2a872e44490e8ee4763b056ed44
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: e0ae11ee24a5e25fb439d5c502c4cda5bcb6a80e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206963"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710253"
 ---
 # <a name="icordebugmodulegetassembly-method"></a>Método ICorDebugModule::GetAssembly
+
 Obtém o assembly recipiente para este módulo.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,10 +35,12 @@ HRESULT GetAssembly(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `ppAssembly`  
  fora Um ponteiro para um objeto ICorDebugAssembly que representa o assembly que contém este módulo.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

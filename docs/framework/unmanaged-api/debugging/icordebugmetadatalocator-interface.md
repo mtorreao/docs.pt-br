@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 287f5ecd-863f-4090-a615-077859f0257b
 topic_type:
 - apiref
-ms.openlocfilehash: 7b7b7a42edea775d1aaa850ccfc532ef86749991
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: dbf5c751e84dfd9bf0549e8ce79d07a90fb4a3b2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210015"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710383"
 ---
 # <a name="icordebugmetadatalocator-interface"></a>Interface ICorDebugMetaDataLocator
+
 Fornece informações de metadados ao depurador.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método GetMetaData](icordebugmetadatalocator-getmetadata-method.md)|Solicita que o depurador retorne o caminho completo para um módulo cujos metadados são necessários para concluir uma operação solicitada pelo depurador.|  
   
@@ -36,6 +37,7 @@ Fornece informações de metadados ao depurador.
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

@@ -2,14 +2,15 @@
 title: 'Método ICorDebugMergedAssemblyRecord:: GetIndex'
 ms.date: 03/30/2017
 ms.assetid: 98701444-b9bc-4978-9548-89ac3394147d
-ms.openlocfilehash: b13e589e32b3317b567a4a89a5b48fc1299a1a84
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 3056d22f5ddc1b11b79ee072aba68ce3ad40e8da
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206948"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710630"
 ---
 # <a name="icordebugmergedassemblyrecordgetindex-method"></a>Método ICorDebugMergedAssemblyRecord:: GetIndex
+
 Obtém o índice de prefixo do assembly.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -21,16 +22,19 @@ HRESULT GetIndex(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pIndex`  
  fora Um ponteiro para o índice de prefixo.  
   
 ## <a name="remarks"></a>Comentários  
+
  O índice de prefixo é usado para evitar colisões de nome nos nomes de tipos de metadados mesclados.  
   
 > [!NOTE]
 > Esse método está disponível somente com .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

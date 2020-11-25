@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 26a82815-1982-4eb7-92d1-5c3d318d5be4
 topic_type:
 - apiref
-ms.openlocfilehash: 9270afa1d8c8ddd74cfe6dd05e39c1480f5767e6
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 4562318c87b79fba5f3d99860ee438c0144e9aae
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206941"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710240"
 ---
 # <a name="icordebugmodulegetbaseaddress-method"></a>Método ICorDebugModule::GetBaseAddress
+
 Obtém o endereço base do módulo.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,13 +35,16 @@ HRESULT GetBaseAddress(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pAddress`  
  fora Um `CORDB_ADDRESS` que especifica o endereço base do módulo.  
   
 ## <a name="remarks"></a>Comentários  
- Se o módulo for uma imagem nativa (ou seja, se o módulo foi produzido pelo gerador de imagem nativa, NGen. exe), seu endereço base será zero.  
+
+ Se o módulo for uma imagem nativa (ou seja, se o módulo foi produzido pelo gerador de imagem nativa, NGen.exe), seu endereço base será zero.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

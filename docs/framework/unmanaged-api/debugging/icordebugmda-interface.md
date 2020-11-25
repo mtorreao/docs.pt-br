@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 8ecbb854-295c-4dd4-b9fc-01ebeac46e06
 topic_type:
 - apiref
-ms.openlocfilehash: d711f36b4e2071dac9458a023e1d3cf4743e77b3
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: c4ff28ff1019b5314902a4e71f6d02b5a2fd8d70
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212627"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710825"
 ---
 # <a name="icordebugmda-interface"></a>Interface ICorDebugMDA
+
 Representa uma mensagem do assistente de depuração gerenciado (MDA).  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método GetDescription](icordebugmda-getdescription-method.md)|Obtém uma cadeia de caracteres que contém uma descrição deste MDA.|  
 |[Método GetFlags](icordebugmda-getflags-method.md)|Obtém os sinalizadores associados a este MDA.|  
@@ -40,6 +41,7 @@ Representa uma mensagem do assistente de depuração gerenciado (MDA).
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -51,4 +53,4 @@ Representa uma mensagem do assistente de depuração gerenciado (MDA).
 ## <a name="see-also"></a>Confira também
 
 - [Depurando interfaces](debugging-interfaces.md)
-- [Diagnosticando erros com assistentes para depuração gerenciada](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosticando erros com assistentes de depuração gerenciados](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

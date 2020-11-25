@@ -2,14 +2,15 @@
 title: 'Método ICorDebugMergedAssemblyRecord:: GetPublicKey'
 ms.date: 03/30/2017
 ms.assetid: 6f4e78ba-082b-489d-8b58-4c35fbcc7a5b
-ms.openlocfilehash: 51724aa1ee6101c50c7cdb4b6071fb458814f483
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: e89ecca25edb0d7eae3a7e65f9585d71ad4ace4d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213537"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710591"
 ---
 # <a name="icordebugmergedassemblyrecordgetpublickey-method"></a>Método ICorDebugMergedAssemblyRecord:: GetPublicKey
+
 Obtém a chave pública do assembly.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -22,6 +23,7 @@ HRESULT GetPublicKey(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `cbPublicKey`  
  no O número máximo de bytes na `pbPublicKey` matriz.  
   
@@ -37,6 +39,7 @@ HRESULT GetPublicKey(
 > Esse método está disponível somente com .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

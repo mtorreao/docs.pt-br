@@ -2,14 +2,15 @@
 title: 'Método ICorDebugMergedAssemblyRecord:: getsimplesname'
 ms.date: 03/30/2017
 ms.assetid: bc3410f6-ebca-4bca-9b45-fc38c74fa9cb
-ms.openlocfilehash: f6c6682c8bb23143d308aa4f1a6887b28ea82fcd
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 11e43846f7b119933fb53bdf21423e28bbb792ac
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209702"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710539"
 ---
 # <a name="icordebugmergedassemblyrecordgetsimplename-method"></a>Método ICorDebugMergedAssemblyRecord:: getsimplesname
+
 Obtém o nome simples do assembly.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -23,6 +24,7 @@ HRESULT GetSimpleName(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `cchName`  
  no O número de caracteres no `szName` buffer.  
   
@@ -33,12 +35,14 @@ HRESULT GetSimpleName(
  Um ponteiro para uma matriz de caracteres.  
   
 ## <a name="remarks"></a>Comentários  
+
  Esse método recupera o nome simples de um assembly (como "System. Collections"), sem uma extensão de arquivo, versão, cultura ou token de chave pública. Ele corresponde à <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> propriedade no código gerenciado.  
   
 > [!NOTE]
 > Esse método está disponível somente com .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
