@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 1ee7c434-9681-4fa8-badd-652cb1a9742b
 topic_type:
 - apiref
-ms.openlocfilehash: 8b7edf1cc642228c4a79c855b51727264f31741c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: da4b1d6f2a7079ef33859fce29c9555ac06fcfc2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73107977"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725645"
 ---
-# <a name="identity_attribute-structure"></a><span data-ttu-id="88af8-102">Estrutura IDENTITY_ATTRIBUTE</span><span class="sxs-lookup"><span data-stu-id="88af8-102">IDENTITY_ATTRIBUTE Structure</span></span>
-<span data-ttu-id="88af8-103">Contém informações de atributo de metadados sobre uma instância de [IDefinitionIdentity](idefinitionidentity-interface.md) .</span><span class="sxs-lookup"><span data-stu-id="88af8-103">Contains metadata attribute information about an [IDefinitionIdentity](idefinitionidentity-interface.md) instance.</span></span>  
+# <a name="identity_attribute-structure"></a><span data-ttu-id="553da-102">Estrutura IDENTITY_ATTRIBUTE</span><span class="sxs-lookup"><span data-stu-id="553da-102">IDENTITY_ATTRIBUTE Structure</span></span>
+
+<span data-ttu-id="553da-103">Contém informações de atributo de metadados sobre uma instância de [IDefinitionIdentity](idefinitionidentity-interface.md) .</span><span class="sxs-lookup"><span data-stu-id="553da-103">Contains metadata attribute information about an [IDefinitionIdentity](idefinitionidentity-interface.md) instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="88af8-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="88af8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="553da-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="553da-104">Syntax</span></span>  
   
 ```cpp  
 typedef struct _IDENTITY_ATTRIBUTE {  
@@ -34,28 +35,30 @@ typedef struct _IDENTITY_ATTRIBUTE {
 } IDENTITY_ATTRIBUTE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="88af8-105">Membros</span><span class="sxs-lookup"><span data-stu-id="88af8-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="553da-105">Membros</span><span class="sxs-lookup"><span data-stu-id="553da-105">Members</span></span>  
   
-|<span data-ttu-id="88af8-106">Membro</span><span class="sxs-lookup"><span data-stu-id="88af8-106">Member</span></span>|<span data-ttu-id="88af8-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="88af8-107">Description</span></span>|  
+|<span data-ttu-id="553da-106">Membro</span><span class="sxs-lookup"><span data-stu-id="553da-106">Member</span></span>|<span data-ttu-id="553da-107">DESCRIÇÃO</span><span class="sxs-lookup"><span data-stu-id="553da-107">Description</span></span>|  
 |------------|-----------------|  
-|`pszNamespace`|<span data-ttu-id="88af8-108">Um ponteiro para uma cadeia de caracteres de caractere terminada em nulo que contém o namespace no qual o atributo está.</span><span class="sxs-lookup"><span data-stu-id="88af8-108">A pointer to a null-terminated character string that contains the namespace the attribute is in.</span></span>|  
-|`pszName`|<span data-ttu-id="88af8-109">Um ponteiro para uma cadeia de caracteres de caractere terminada em nulo que contém o nome do atributo.</span><span class="sxs-lookup"><span data-stu-id="88af8-109">A pointer to a null-terminated character string that contains the name of the attribute.</span></span>|  
-|`pszValue`|<span data-ttu-id="88af8-110">Um ponteiro para uma cadeia de caracteres de caractere terminada em nulo que contém o valor do atributo.</span><span class="sxs-lookup"><span data-stu-id="88af8-110">A pointer to a null-terminated character string that contains the value of the attribute.</span></span>|  
+|`pszNamespace`|<span data-ttu-id="553da-108">Um ponteiro para uma cadeia de caracteres de caractere terminada em nulo que contém o namespace no qual o atributo está.</span><span class="sxs-lookup"><span data-stu-id="553da-108">A pointer to a null-terminated character string that contains the namespace the attribute is in.</span></span>|  
+|`pszName`|<span data-ttu-id="553da-109">Um ponteiro para uma cadeia de caracteres de caractere terminada em nulo que contém o nome do atributo.</span><span class="sxs-lookup"><span data-stu-id="553da-109">A pointer to a null-terminated character string that contains the name of the attribute.</span></span>|  
+|`pszValue`|<span data-ttu-id="553da-110">Um ponteiro para uma cadeia de caracteres de caractere terminada em nulo que contém o valor do atributo.</span><span class="sxs-lookup"><span data-stu-id="553da-110">A pointer to a null-terminated character string that contains the value of the attribute.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="88af8-111">Comentários</span><span class="sxs-lookup"><span data-stu-id="88af8-111">Remarks</span></span>  
- <span data-ttu-id="88af8-112">A estrutura de `IDENTITY_ATTRIBUTE` contém três ponteiros para cadeias de caracteres terminadas em nulo.</span><span class="sxs-lookup"><span data-stu-id="88af8-112">The `IDENTITY_ATTRIBUTE` structure contains three pointers to null-terminated character strings.</span></span> <span data-ttu-id="88af8-113">Essas três cadeias de caracteres descrevem um atributo.</span><span class="sxs-lookup"><span data-stu-id="88af8-113">These three strings describe one attribute.</span></span>  
-  
- <span data-ttu-id="88af8-114">Uma instância de uma estrutura de `IDENTITY_ATTRIBUTE` é associada a uma instância de uma estrutura [IDENTITY_ATTRIBUTE_BLOB](identity-attribute-blob-structure.md) .</span><span class="sxs-lookup"><span data-stu-id="88af8-114">An instance of an `IDENTITY_ATTRIBUTE` structure is associated with an instance of an [IDENTITY_ATTRIBUTE_BLOB](identity-attribute-blob-structure.md) structure.</span></span> <span data-ttu-id="88af8-115">A estrutura de `IDENTITY_ATTRIBUTE` contém as cadeias de caracteres reais e a estrutura de `IDENTITY_ATTRIBUTE_BLOB` correspondente lista os deslocamentos para as três cadeias de caracteres listadas na estrutura de `IDENTITY_ATTRIBUTE`.</span><span class="sxs-lookup"><span data-stu-id="88af8-115">The `IDENTITY_ATTRIBUTE` structure contains the actual strings, and the corresponding `IDENTITY_ATTRIBUTE_BLOB` structure lists the offsets to the three strings listed in the `IDENTITY_ATTRIBUTE` structure.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="88af8-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="88af8-116">Requirements</span></span>  
- <span data-ttu-id="88af8-117">**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="88af8-117">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="88af8-118">**Cabeçalho:** Isolamento. h</span><span class="sxs-lookup"><span data-stu-id="88af8-118">**Header:** Isolation.h</span></span>  
-  
- <span data-ttu-id="88af8-119">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="88af8-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="88af8-120">Consulte também</span><span class="sxs-lookup"><span data-stu-id="88af8-120">See also</span></span>
+## <a name="remarks"></a><span data-ttu-id="553da-111">Comentários</span><span class="sxs-lookup"><span data-stu-id="553da-111">Remarks</span></span>  
 
-- [<span data-ttu-id="88af8-121">Interface IDefinitionIdentity</span><span class="sxs-lookup"><span data-stu-id="88af8-121">IDefinitionIdentity Interface</span></span>](idefinitionidentity-interface.md)
-- [<span data-ttu-id="88af8-122">Estrutura IDENTITY_ATTRIBUTE_BLOB</span><span class="sxs-lookup"><span data-stu-id="88af8-122">IDENTITY_ATTRIBUTE_BLOB Structure</span></span>](identity-attribute-blob-structure.md)
-- [<span data-ttu-id="88af8-123">Estruturas de fusão</span><span class="sxs-lookup"><span data-stu-id="88af8-123">Fusion Structures</span></span>](fusion-structures.md)
+ <span data-ttu-id="553da-112">A `IDENTITY_ATTRIBUTE` estrutura contém três ponteiros para cadeias de caracteres terminadas em nulo.</span><span class="sxs-lookup"><span data-stu-id="553da-112">The `IDENTITY_ATTRIBUTE` structure contains three pointers to null-terminated character strings.</span></span> <span data-ttu-id="553da-113">Essas três cadeias de caracteres descrevem um atributo.</span><span class="sxs-lookup"><span data-stu-id="553da-113">These three strings describe one attribute.</span></span>  
+  
+ <span data-ttu-id="553da-114">Uma instância de uma `IDENTITY_ATTRIBUTE` estrutura é associada a uma instância de uma estrutura de [IDENTITY_ATTRIBUTE_BLOB](identity-attribute-blob-structure.md) .</span><span class="sxs-lookup"><span data-stu-id="553da-114">An instance of an `IDENTITY_ATTRIBUTE` structure is associated with an instance of an [IDENTITY_ATTRIBUTE_BLOB](identity-attribute-blob-structure.md) structure.</span></span> <span data-ttu-id="553da-115">A `IDENTITY_ATTRIBUTE` estrutura contém as cadeias de caracteres reais e a `IDENTITY_ATTRIBUTE_BLOB` estrutura correspondente lista os deslocamentos para as três cadeias de caracteres listadas na `IDENTITY_ATTRIBUTE` estrutura.</span><span class="sxs-lookup"><span data-stu-id="553da-115">The `IDENTITY_ATTRIBUTE` structure contains the actual strings, and the corresponding `IDENTITY_ATTRIBUTE_BLOB` structure lists the offsets to the three strings listed in the `IDENTITY_ATTRIBUTE` structure.</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="553da-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="553da-116">Requirements</span></span>  
+
+ <span data-ttu-id="553da-117">**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="553da-117">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="553da-118">**Cabeçalho:** Isolamento. h</span><span class="sxs-lookup"><span data-stu-id="553da-118">**Header:** Isolation.h</span></span>  
+  
+ <span data-ttu-id="553da-119">**.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="553da-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="553da-120">Confira também</span><span class="sxs-lookup"><span data-stu-id="553da-120">See also</span></span>
+
+- [<span data-ttu-id="553da-121">Interface IDefinitionIdentity</span><span class="sxs-lookup"><span data-stu-id="553da-121">IDefinitionIdentity Interface</span></span>](idefinitionidentity-interface.md)
+- [<span data-ttu-id="553da-122">Estrutura IDENTITY_ATTRIBUTE_BLOB</span><span class="sxs-lookup"><span data-stu-id="553da-122">IDENTITY_ATTRIBUTE_BLOB Structure</span></span>](identity-attribute-blob-structure.md)
+- [<span data-ttu-id="553da-123">Estruturas de fusão</span><span class="sxs-lookup"><span data-stu-id="553da-123">Fusion Structures</span></span>](fusion-structures.md)

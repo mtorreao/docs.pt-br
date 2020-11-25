@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 6dcc4a4b-3a78-4369-bcc7-c0be6dde57d4
 topic_type:
 - apiref
-ms.openlocfilehash: afdcb21c755cb3ffbe9f273ff40361d8f8dff631
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: a78e38dd687e169d05cd262752bff64f5a7a01d7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83841419"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724241"
 ---
-# <a name="ihosttaskmanagersetstackguarantee-method"></a><span data-ttu-id="a640e-102">Método IHostTaskManager::SetStackGuarantee</span><span class="sxs-lookup"><span data-stu-id="a640e-102">IHostTaskManager::SetStackGuarantee Method</span></span>
-<span data-ttu-id="a640e-103">Reservado apenas para uso interno.</span><span class="sxs-lookup"><span data-stu-id="a640e-103">Reserved for internal use only.</span></span>  
+# <a name="ihosttaskmanagersetstackguarantee-method"></a><span data-ttu-id="a7779-102">Método IHostTaskManager::SetStackGuarantee</span><span class="sxs-lookup"><span data-stu-id="a7779-102">IHostTaskManager::SetStackGuarantee Method</span></span>
+
+<span data-ttu-id="a7779-103">Reservado apenas para uso interno.</span><span class="sxs-lookup"><span data-stu-id="a7779-103">Reserved for internal use only.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a640e-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="a640e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a7779-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="a7779-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetStackGuarantee(  
@@ -33,16 +34,17 @@ HRESULT SetStackGuarantee(
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="a640e-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a640e-105">Requirements</span></span>  
- <span data-ttu-id="a640e-106">**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a640e-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="a640e-107">**Cabeçalho:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="a640e-107">**Header:** MSCorEE.h</span></span>  
-  
- <span data-ttu-id="a640e-108">**Biblioteca:** Incluído como um recurso em MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="a640e-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
-  
- <span data-ttu-id="a640e-109">**.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a640e-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="a640e-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a640e-110">See also</span></span>
+## <a name="requirements"></a><span data-ttu-id="a7779-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a7779-105">Requirements</span></span>  
 
-- [<span data-ttu-id="a640e-111">Método GetStackGuarantee</span><span class="sxs-lookup"><span data-stu-id="a640e-111">GetStackGuarantee Method</span></span>](ihosttaskmanager-getstackguarantee-method.md)
-- [<span data-ttu-id="a640e-112">Interface IHostTaskManager</span><span class="sxs-lookup"><span data-stu-id="a640e-112">IHostTaskManager Interface</span></span>](ihosttaskmanager-interface.md)
+ <span data-ttu-id="a7779-106">**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a7779-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="a7779-107">**Cabeçalho:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="a7779-107">**Header:** MSCorEE.h</span></span>  
+  
+ <span data-ttu-id="a7779-108">**Biblioteca:** Incluído como um recurso no MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="a7779-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+  
+ <span data-ttu-id="a7779-109">**.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a7779-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="a7779-110">Confira também</span><span class="sxs-lookup"><span data-stu-id="a7779-110">See also</span></span>
+
+- [<span data-ttu-id="a7779-111">Método GetStackGuarantee</span><span class="sxs-lookup"><span data-stu-id="a7779-111">GetStackGuarantee Method</span></span>](ihosttaskmanager-getstackguarantee-method.md)
+- [<span data-ttu-id="a7779-112">Interface IHostTaskManager</span><span class="sxs-lookup"><span data-stu-id="a7779-112">IHostTaskManager Interface</span></span>](ihosttaskmanager-interface.md)
