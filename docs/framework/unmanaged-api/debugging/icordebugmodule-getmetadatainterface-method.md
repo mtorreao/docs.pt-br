@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 30d906f2-cf35-4fa9-9d4c-0c31b58c9f3a
 topic_type:
 - apiref
-ms.openlocfilehash: f5d0dd7a99087b21a5f827e4dce0f6342ae7b25a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 9693014a24c5cbbb0db2d1c9b0a4d41fd3cdf5b5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501762"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710028"
 ---
 # <a name="icordebugmodulegetmetadatainterface-method"></a>Método ICorDebugModule::GetMetaDataInterface
+
 Obtém um objeto de interface de metadados que pode ser usado para examinar os metadados do módulo.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -35,6 +36,7 @@ HRESULT GetMetaDataInterface (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `riid`  
  no A ID de referência que especifica a interface de metadados.  
   
@@ -42,9 +44,11 @@ HRESULT GetMetaDataInterface (
  fora Um ponteiro para o endereço de um `T:IUnknown` objeto que é uma das [interfaces de metadados](../metadata/metadata-interfaces.md).  
   
 ## <a name="remarks"></a>Comentários  
+
  O depurador pode usar o `GetMetaDataInterface` método para fazer uma cópia dos metadados originais de um módulo, o que deve ser feito para editar esse módulo. O depurador chama `GetMetaDataInterface` para obter um objeto de interface [IMetaDataEmit](../metadata/imetadataemit-interface.md) para o módulo e, em seguida, chama [IMetaDataEmit:: SaveToMemory](../metadata/imetadataemit-savetomemory-method.md) para salvar uma cópia dos metadados do módulo na memória.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

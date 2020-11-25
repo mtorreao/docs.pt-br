@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: db499637-7ba9-421e-b8b1-35856995e80b
 topic_type:
 - apiref
-ms.openlocfilehash: 55342c803756aa10c2e7c835d9e1d58b439bb36c
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: c2aecadf8688e763a69bd40ca877e44bc0ce5c29
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212536"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710020"
 ---
 # <a name="icordebugmodulegetname-method"></a>Método ICorDebugModule::GetName
+
 Obtém o nome do arquivo do módulo.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,6 +37,7 @@ HRESULT GetName(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `cchname`  
  no O tamanho da `szName` matriz.  
   
@@ -46,9 +48,11 @@ HRESULT GetName(
  fora Uma matriz que armazena o nome retornado.  
   
 ## <a name="remarks"></a>Comentários  
- O `GetName` método retornará um S_OK HRESULT se o nome do arquivo do módulo corresponder ao nome no disco. `GetName`Retorna um S_FALSE HRESULT se o nome for criei, como para um módulo dinâmico ou na memória.  
+
+ O `GetName` método retornará um S_OK HRESULT se o nome do arquivo do módulo corresponder ao nome no disco. `GetName` Retorna um S_FALSE HRESULT se o nome for criei, como para um módulo dinâmico ou na memória.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

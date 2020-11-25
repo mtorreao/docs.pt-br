@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 32e4d6fa-e5a3-413e-9166-d5e2871d3114
 topic_type:
 - apiref
-ms.openlocfilehash: 105e56f2508eabbb6876a09d35e6abfbfc08950b
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 86e17b48bc491c45f8b46be23ab626dc1f2a6962
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212237"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709837"
 ---
 # <a name="icordebugmodule-interface"></a>Interface ICorDebugModule
 
@@ -27,7 +27,7 @@ Representa um módulo Common Language Runtime (CLR), que é um arquivo executáv
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método CreateBreakpoint](icordebugmodule-createbreakpoint-method.md)|Não implementado.|  
 |[Método EnableClassLoadCallbacks](icordebugmodule-enableclassloadcallbacks-method.md)|Determina se os retornos de chamada [ICorDebugManagedCallback:: LoadClass](icordebugmanagedcallback-loadclass-method.md) e [ICorDebugManagedCallback:: UnloadClass](icordebugmanagedcallback-unloadclass-method.md) são chamados para este módulo.|  
@@ -53,6 +53,7 @@ Representa um módulo Common Language Runtime (CLR), que é um arquivo executáv
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

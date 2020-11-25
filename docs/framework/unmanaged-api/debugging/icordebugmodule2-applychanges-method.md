@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 96fa3406-6a6f-41a1-88c6-d9bc5d1a16d1
 topic_type:
 - apiref
-ms.openlocfilehash: 99824e9a7fd759fb30bfa377156fc28eb934a2b4
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: a6b1a7c9be821890a3f15d8c3297273607f5bedd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212211"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709694"
 ---
 # <a name="icordebugmodule2applychanges-method"></a>Método ICorDebugModule2::ApplyChanges
+
 Aplica as alterações nos metadados e as alterações no código MSIL (Microsoft Intermediate Language) para o processo em execução.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,6 +38,7 @@ HRESULT ApplyChanges (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `cbMetadata`  
  no Tamanho, em bytes, dos metadados delta.  
   
@@ -52,7 +54,8 @@ HRESULT ApplyChanges (
  no Buffer que contém o código MSIL atualizado.  
   
 ## <a name="remarks"></a>Comentários  
- O `pbMetadata` parâmetro está em um formato de metadados delta especial (como a saída de [IMetaDataEmit2:: SaveDeltaToMemory](../metadata/imetadataemit2-savedeltatomemory-method.md)). `pbMetadata`usa os metadados anteriores como base e descreve as alterações individuais a serem aplicadas a essa base.  
+
+ O `pbMetadata` parâmetro está em um formato de metadados delta especial (como a saída de [IMetaDataEmit2:: SaveDeltaToMemory](../metadata/imetadataemit2-savedeltatomemory-method.md)). `pbMetadata` usa os metadados anteriores como base e descreve as alterações individuais a serem aplicadas a essa base.  
   
  Em contraste, o `pbIL[` parâmetro] contém o novo MSIL para o método atualizado e destina-se a substituir completamente o MSIL anterior para esse método  
   
@@ -63,6 +66,7 @@ HRESULT ApplyChanges (
  Se o `ApplyChanges` método falhar, a sessão de depuração estará em um estado inválido e deverá ser reiniciada.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

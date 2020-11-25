@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6fe12194-4ef7-43c1-9570-ade35ccf127a
 topic_type:
 - apiref
-ms.openlocfilehash: a33b6ff308f3444496e5a1cb2e04f28e80305db5
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: bf2acd897c9c45e445b864f85550ed7ed6e00886
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212571"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710149"
 ---
 # <a name="icordebugmodulegetfunctionfromtoken-method"></a>Método ICorDebugModule::GetFunctionFromToken
+
 Obtém a função que é especificada pelo token de metadados.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -35,6 +36,7 @@ HRESULT GetFunctionFromToken(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `methodDef`  
  no Um `mdMethodDef` token de metadados que faz referência aos metadados da função.  
   
@@ -42,9 +44,11 @@ HRESULT GetFunctionFromToken(
  fora Um ponteiro para o endereço de um objeto de interface ICorDebugFunction que representa a função.  
   
 ## <a name="remarks"></a>Comentários  
+
  O `GetFunctionFromToken` método retornará um CORDBG_E_FUNCTION_NOT_IL HRESULT se o valor passado `methodDef` não se referir a um método MSIL (Microsoft Intermediate Language).  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

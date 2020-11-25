@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 99f693f3-d3b9-4fd8-9d09-b8efd03f7b67
 topic_type:
 - apiref
-ms.openlocfilehash: 53576ca938074fb7e5974a96bb53a84cb6ed67ab
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: c9c0598f8e7b3e8654124f50663c912f3cd61659
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213589"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709292"
 ---
 # <a name="icordebugnativeframegetip-method"></a>Método ICorDebugNativeFrame::GetIP
+
 Obtém o local de deslocamento de código nativo para o qual o ponteiro de instrução está definido no momento.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,13 +35,16 @@ HRESULT GetIP (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pnOffset`  
  fora Um ponteiro para o local de deslocamento no código nativo.  
   
 ## <a name="remarks"></a>Comentários  
+
  Se o registro de ativação representado por esse "ICorDebugNativeFrame" estiver ativo, o deslocamento será o endereço da próxima instrução a ser executada. Se esse quadro de pilhas não estiver ativo, o deslocamento será o endereço da próxima instrução a ser executada quando o registro de ativação for reativado.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

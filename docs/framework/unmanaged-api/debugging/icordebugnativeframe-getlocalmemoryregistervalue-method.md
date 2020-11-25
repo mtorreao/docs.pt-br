@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 33a19f6e-1029-4d53-af64-19591c6e58ee
 topic_type:
 - apiref
-ms.openlocfilehash: 91f0a75f127afcff89c2b92bf3ed67466b205081
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 15485ac94ed9074baacc4fd2662a04bdcefcf1e7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213043"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709310"
 ---
 # <a name="icordebugnativeframegetlocalmemoryregistervalue-method"></a>Método ICorDebugNativeFrame::GetLocalMemoryRegisterValue
+
 Obtém o valor de um argumento ou uma variável local, da qual a palavra inferior e a palavra alta são armazenadas no registro especificado e no local da memória, respectivamente, para esse quadro nativo.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -38,6 +39,7 @@ HRESULT GetLocalMemoryRegisterValue (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `highWordAddress`  
  no Um `CORDB_ADDRESS` valor que especifica o local da memória que contém a palavra alta do valor.  
   
@@ -54,6 +56,7 @@ HRESULT GetLocalMemoryRegisterValue (
  fora Um ponteiro para o endereço de um objeto "ICorDebugValue" que representa o valor recuperado que é armazenado no registro especificado e no local da memória.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

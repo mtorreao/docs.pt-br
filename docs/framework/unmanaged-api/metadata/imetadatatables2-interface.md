@@ -14,29 +14,31 @@ helpviewer_keywords:
 ms.assetid: c788bb7c-0212-4b6d-b840-22e8c8829028
 topic_type:
 - apiref
-ms.openlocfilehash: e81055163e5cbd64ecfbb412704e43e7663ccd45
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: ecec104b57a1503bf813a7bb6715ea5c855fb008
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501073"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708706"
 ---
 # <a name="imetadatatables2-interface"></a>Interface IMetaDataTables2
+
 Estende [IMetaDataTables](imetadatatables-interface.md) para incluir métodos para trabalhar com fluxos de metadados.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método GetMetaDataStorage](imetadatatables2-getmetadatastorage-method.md)|Obtém o tamanho e o conteúdo dos metadados armazenados na seção especificada.|  
 |[Método GetMetaDataStreamInfo](imetadatatables2-getmetadatastreaminfo-method.md)|Obtém o nome, o tamanho e o conteúdo do fluxo de metadados no índice especificado.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como um recurso em MsCorEE. dll  
+ **Biblioteca:** Usado como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

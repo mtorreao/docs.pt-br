@@ -2,14 +2,15 @@
 title: 'Método ICorDebugSymbolProvider:: GetAssemblyImageMetadata'
 ms.date: 03/30/2017
 ms.assetid: c3c9de67-b865-4ecf-b887-1f1d0719a0c0
-ms.openlocfilehash: d118f0c984663e0844783ff52859698dd5335058
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 9644d1323660730d210bd0305c2785fce4174455
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83376141"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709135"
 ---
 # <a name="icordebugsymbolprovidergetassemblyimagemetadata-method"></a>Método ICorDebugSymbolProvider:: GetAssemblyImageMetadata
+
 Retorna os metadados de um assembly mesclado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -21,6 +22,7 @@ HRESULT GetAssemblyImageMetadata(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `ppMemoryBuffer`  
  fora Um ponteiro para o endereço de um objeto [ICorDebugMemoryBuffer](icordebugmemorybuffer-interface.md) que contém informações sobre o tamanho e o endereço dos metadados do assembly mesclado.  
   
@@ -30,6 +32,7 @@ HRESULT GetAssemblyImageMetadata(
 > Esse método está disponível somente com .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

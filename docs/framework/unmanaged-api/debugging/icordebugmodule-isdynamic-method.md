@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5eefe716-5025-4a4c-970c-c823cdc7bb87
 topic_type:
 - apiref
-ms.openlocfilehash: 4517f266bbb500223214a6a8fe5881e8b29566c3
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 98c01993a85ed07d961902d8a098a96df4702c76
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206890"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709824"
 ---
 # <a name="icordebugmoduleisdynamic-method"></a>Método ICorDebugModule::IsDynamic
+
 Obtém um valor que indica se este módulo é dinâmico.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,13 +35,16 @@ HRESULT IsDynamic(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pDynamic`  
  [fora] `true` Se esse módulo for dinâmico; caso contrário, `false` .  
   
 ## <a name="remarks"></a>Comentários  
+
  Um módulo dinâmico pode adicionar novas classes e excluir classes existentes mesmo depois que o módulo tiver sido carregado. Os retornos de chamada [ICorDebugManagedCallback:: LoadClass](icordebugmanagedcallback-loadclass-method.md) e [ICorDebugManagedCallback:: UnloadClass](icordebugmanagedcallback-unloadclass-method.md) informam ao depurador quando uma classe foi adicionada ou excluída.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
