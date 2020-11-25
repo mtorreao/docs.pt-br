@@ -15,19 +15,20 @@ helpviewer_keywords:
 ms.assetid: e0ebd793-3764-4df0-8f12-0e95f60b9eae
 topic_type:
 - apiref
-ms.openlocfilehash: 1553e616f60b4f05c06b6457d47454dfb4bc2eb7
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: c702aa32e8c8d6d5c137f7968d1578715102180f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614767"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726855"
 ---
-# <a name="isymunmanagedwriterinitialize-method"></a><span data-ttu-id="318f3-102">Método ISymUnmanagedWriter::Initialize</span><span class="sxs-lookup"><span data-stu-id="318f3-102">ISymUnmanagedWriter::Initialize Method</span></span>
-<span data-ttu-id="318f3-103">Define a interface do emissor de metadados com a qual esse gravador será associado e define o nome do arquivo de saída para o qual os símbolos de depuração serão gravados.</span><span class="sxs-lookup"><span data-stu-id="318f3-103">Sets the metadata emitter interface with which this writer will be associated, and sets the output file name to which the debugging symbols will be written.</span></span>  
+# <a name="isymunmanagedwriterinitialize-method"></a><span data-ttu-id="40610-102">Método ISymUnmanagedWriter::Initialize</span><span class="sxs-lookup"><span data-stu-id="40610-102">ISymUnmanagedWriter::Initialize Method</span></span>
+
+<span data-ttu-id="40610-103">Define a interface do emissor de metadados com a qual esse gravador será associado e define o nome do arquivo de saída para o qual os símbolos de depuração serão gravados.</span><span class="sxs-lookup"><span data-stu-id="40610-103">Sets the metadata emitter interface with which this writer will be associated, and sets the output file name to which the debugging symbols will be written.</span></span>  
   
- <span data-ttu-id="318f3-104">Esse método pode ser chamado apenas uma vez e deve ser chamado antes de qualquer outro método de gravador.</span><span class="sxs-lookup"><span data-stu-id="318f3-104">This method can be called only once, and it must be called before any other writer methods.</span></span> <span data-ttu-id="318f3-105">Alguns gravadores podem exigir um nome de arquivo.</span><span class="sxs-lookup"><span data-stu-id="318f3-105">Some writers may require a file name.</span></span> <span data-ttu-id="318f3-106">No entanto, você sempre pode passar um nome de arquivo para esse método sem nenhum efeito negativo nos gravadores que não usam o nome do arquivo.</span><span class="sxs-lookup"><span data-stu-id="318f3-106">However, you can always pass a file name to this method without any negative effect on writers that do not use the file name.</span></span>  
+ <span data-ttu-id="40610-104">Esse método pode ser chamado apenas uma vez e deve ser chamado antes de qualquer outro método de gravador.</span><span class="sxs-lookup"><span data-stu-id="40610-104">This method can be called only once, and it must be called before any other writer methods.</span></span> <span data-ttu-id="40610-105">Alguns gravadores podem exigir um nome de arquivo.</span><span class="sxs-lookup"><span data-stu-id="40610-105">Some writers may require a file name.</span></span> <span data-ttu-id="40610-106">No entanto, você sempre pode passar um nome de arquivo para esse método sem nenhum efeito negativo nos gravadores que não usam o nome do arquivo.</span><span class="sxs-lookup"><span data-stu-id="40610-106">However, you can always pass a file name to this method without any negative effect on writers that do not use the file name.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="318f3-107">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="318f3-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="40610-107">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="40610-107">Syntax</span></span>  
   
 ```cpp  
 HRESULT Initialize(  
@@ -37,26 +38,29 @@ HRESULT Initialize(
     [in] BOOL         fFullBuild);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="318f3-108">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="318f3-108">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="40610-108">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="40610-108">Parameters</span></span>  
+
  `emitter`  
- <span data-ttu-id="318f3-109">no Um ponteiro para a interface do emissor de metadados.</span><span class="sxs-lookup"><span data-stu-id="318f3-109">[in] A pointer to the metadata emitter interface.</span></span>  
+ <span data-ttu-id="40610-109">no Um ponteiro para a interface do emissor de metadados.</span><span class="sxs-lookup"><span data-stu-id="40610-109">[in] A pointer to the metadata emitter interface.</span></span>  
   
  `filename`  
- <span data-ttu-id="318f3-110">no O nome do arquivo para o qual os símbolos de depuração são gravados.</span><span class="sxs-lookup"><span data-stu-id="318f3-110">[in] The file name to which the debugging symbols are written.</span></span> <span data-ttu-id="318f3-111">Se um nome de arquivo for especificado para um gravador que não use nomes de arquivo, esse parâmetro será ignorado.</span><span class="sxs-lookup"><span data-stu-id="318f3-111">If a file name is specified for a writer that does not use file names, this parameter is ignored.</span></span>  
+ <span data-ttu-id="40610-110">no O nome do arquivo para o qual os símbolos de depuração são gravados.</span><span class="sxs-lookup"><span data-stu-id="40610-110">[in] The file name to which the debugging symbols are written.</span></span> <span data-ttu-id="40610-111">Se um nome de arquivo for especificado para um gravador que não use nomes de arquivo, esse parâmetro será ignorado.</span><span class="sxs-lookup"><span data-stu-id="40610-111">If a file name is specified for a writer that does not use file names, this parameter is ignored.</span></span>  
   
  `pIStream`  
- <span data-ttu-id="318f3-112">no Se especificado, o gravador de símbolo emitirá os símbolos para o determinado em <xref:System.Runtime.InteropServices.ComTypes.IStream> vez de para o arquivo especificado no `filename` parâmetro.</span><span class="sxs-lookup"><span data-stu-id="318f3-112">[in] If specified, the symbol writer will emit the symbols into the given <xref:System.Runtime.InteropServices.ComTypes.IStream> rather than to the file specified in the `filename` parameter.</span></span> <span data-ttu-id="318f3-113">O `pIStream` é opcional.</span><span class="sxs-lookup"><span data-stu-id="318f3-113">The `pIStream` parameter is optional.</span></span>  
+ <span data-ttu-id="40610-112">no Se especificado, o gravador de símbolo emitirá os símbolos para o determinado em <xref:System.Runtime.InteropServices.ComTypes.IStream> vez de para o arquivo especificado no `filename` parâmetro.</span><span class="sxs-lookup"><span data-stu-id="40610-112">[in] If specified, the symbol writer will emit the symbols into the given <xref:System.Runtime.InteropServices.ComTypes.IStream> rather than to the file specified in the `filename` parameter.</span></span> <span data-ttu-id="40610-113">O `pIStream` é opcional.</span><span class="sxs-lookup"><span data-stu-id="40610-113">The `pIStream` parameter is optional.</span></span>  
   
  `fFullBuild`  
- <span data-ttu-id="318f3-114">[in] `true` Se esta for uma recompilação completa; `false`se esta for uma compilação incremental.</span><span class="sxs-lookup"><span data-stu-id="318f3-114">[in] `true` if this is a full rebuild; `false` if this is an incremental compilation.</span></span>  
+ <span data-ttu-id="40610-114">[in] `true` Se esta for uma recompilação completa; `false` se esta for uma compilação incremental.</span><span class="sxs-lookup"><span data-stu-id="40610-114">[in] `true` if this is a full rebuild; `false` if this is an incremental compilation.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="318f3-115">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="318f3-115">Return Value</span></span>  
- <span data-ttu-id="318f3-116">S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.</span><span class="sxs-lookup"><span data-stu-id="318f3-116">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="318f3-117">Requisitos</span><span class="sxs-lookup"><span data-stu-id="318f3-117">Requirements</span></span>  
- <span data-ttu-id="318f3-118">**Cabeçalho:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="318f3-118">**Header:** CorSym.idl, CorSym.h</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="318f3-119">Confira também</span><span class="sxs-lookup"><span data-stu-id="318f3-119">See also</span></span>
+## <a name="return-value"></a><span data-ttu-id="40610-115">Valor Retornado</span><span class="sxs-lookup"><span data-stu-id="40610-115">Return Value</span></span>  
 
-- [<span data-ttu-id="318f3-120">Interface ISymUnmanagedWriter</span><span class="sxs-lookup"><span data-stu-id="318f3-120">ISymUnmanagedWriter Interface</span></span>](isymunmanagedwriter-interface.md)
-- [<span data-ttu-id="318f3-121">Método Initialize2</span><span class="sxs-lookup"><span data-stu-id="318f3-121">Initialize2 Method</span></span>](isymunmanagedwriter-initialize2-method.md)
+ <span data-ttu-id="40610-116">S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.</span><span class="sxs-lookup"><span data-stu-id="40610-116">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="40610-117">Requisitos</span><span class="sxs-lookup"><span data-stu-id="40610-117">Requirements</span></span>  
+
+ <span data-ttu-id="40610-118">**Cabeçalho:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="40610-118">**Header:** CorSym.idl, CorSym.h</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="40610-119">Confira também</span><span class="sxs-lookup"><span data-stu-id="40610-119">See also</span></span>
+
+- [<span data-ttu-id="40610-120">Interface ISymUnmanagedWriter</span><span class="sxs-lookup"><span data-stu-id="40610-120">ISymUnmanagedWriter Interface</span></span>](isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="40610-121">Método Initialize2</span><span class="sxs-lookup"><span data-stu-id="40610-121">Initialize2 Method</span></span>](isymunmanagedwriter-initialize2-method.md)

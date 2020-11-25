@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 162e8179-0cd4-4110-8f06-5f387698bd62
 topic_type:
 - apiref
-ms.openlocfilehash: e22269b76c230f702f4712298fddcd0df1fde50d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb4a8f7ff3ee54474804e3e5620dcce7c9f79fb5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179324"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726607"
 ---
-# <a name="cor_gc_reference-structure"></a><span data-ttu-id="8b531-102">Estrutura COR_GC_REFERENCE</span><span class="sxs-lookup"><span data-stu-id="8b531-102">COR_GC_REFERENCE Structure</span></span>
-<span data-ttu-id="8b531-103">Contém informações sobre um objeto que será coletado como lixo.</span><span class="sxs-lookup"><span data-stu-id="8b531-103">Contains information about an object that is to be garbage-collected.</span></span>  
+# <a name="cor_gc_reference-structure"></a><span data-ttu-id="ecdc2-102">Estrutura COR_GC_REFERENCE</span><span class="sxs-lookup"><span data-stu-id="ecdc2-102">COR_GC_REFERENCE Structure</span></span>
+
+<span data-ttu-id="ecdc2-103">Contém informações sobre um objeto que será coletado como lixo.</span><span class="sxs-lookup"><span data-stu-id="ecdc2-103">Contains information about an object that is to be garbage-collected.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8b531-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="8b531-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ecdc2-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="ecdc2-104">Syntax</span></span>  
   
 ```cpp  
 typedef struct _COR_GC_REFERENCE {  
@@ -35,42 +36,44 @@ typedef struct _COR_GC_REFERENCE {
 } COR_GC_REFERENCE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="8b531-105">Membros</span><span class="sxs-lookup"><span data-stu-id="8b531-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="ecdc2-105">Membros</span><span class="sxs-lookup"><span data-stu-id="ecdc2-105">Members</span></span>  
   
-|<span data-ttu-id="8b531-106">Membro</span><span class="sxs-lookup"><span data-stu-id="8b531-106">Member</span></span>|<span data-ttu-id="8b531-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="8b531-107">Description</span></span>|  
+|<span data-ttu-id="ecdc2-106">Membro</span><span class="sxs-lookup"><span data-stu-id="ecdc2-106">Member</span></span>|<span data-ttu-id="ecdc2-107">DESCRIÇÃO</span><span class="sxs-lookup"><span data-stu-id="ecdc2-107">Description</span></span>|  
 |------------|-----------------|  
-|`domain`|<span data-ttu-id="8b531-108">Um ponteiro para o domínio do aplicativo ao qual a alça ou objeto pertence.</span><span class="sxs-lookup"><span data-stu-id="8b531-108">A pointer to the application domain to which the handle or object belongs.</span></span> <span data-ttu-id="8b531-109">Seu valor `null`pode ser.</span><span class="sxs-lookup"><span data-stu-id="8b531-109">Its value may be `null`.</span></span>|  
-|`location`|<span data-ttu-id="8b531-110">Uma interface ICorDebugValue ou ICorDebugReferenceValue que corresponde ao objeto a ser coletado em lixo.</span><span class="sxs-lookup"><span data-stu-id="8b531-110">Either an ICorDebugValue or an ICorDebugReferenceValue interface that corresponds to the object to be garbage-collected.</span></span>|  
-|`type`|<span data-ttu-id="8b531-111">Um valor de enumeração [CorGCReferenceType](corgcreferencetype-enumeration.md) que indica de onde a raiz veio.</span><span class="sxs-lookup"><span data-stu-id="8b531-111">A [CorGCReferenceType](corgcreferencetype-enumeration.md) enumeration value that indicates where the root came from.</span></span> <span data-ttu-id="8b531-112">Para obter mais informações, consulte a seção Comentários.</span><span class="sxs-lookup"><span data-stu-id="8b531-112">For more information, see the Remarks section.</span></span>|  
-|`extraData`|<span data-ttu-id="8b531-113">Dados adicionais sobre o objeto a ser coletado.</span><span class="sxs-lookup"><span data-stu-id="8b531-113">Additional data about the object to be garbage-collected.</span></span> <span data-ttu-id="8b531-114">Essa informação depende da origem do objeto, conforme `type` indicado pelo campo.</span><span class="sxs-lookup"><span data-stu-id="8b531-114">This information depends on the source of the object, as indicated by the `type` field.</span></span> <span data-ttu-id="8b531-115">Para obter mais informações, consulte a seção Comentários.</span><span class="sxs-lookup"><span data-stu-id="8b531-115">For more information, see the Remarks section.</span></span>|  
+|`domain`|<span data-ttu-id="ecdc2-108">Um ponteiro para o domínio do aplicativo ao qual o identificador ou objeto pertence.</span><span class="sxs-lookup"><span data-stu-id="ecdc2-108">A pointer to the application domain to which the handle or object belongs.</span></span> <span data-ttu-id="ecdc2-109">Seu valor pode ser `null` .</span><span class="sxs-lookup"><span data-stu-id="ecdc2-109">Its value may be `null`.</span></span>|  
+|`location`|<span data-ttu-id="ecdc2-110">Uma interface ICorDebugValue ou ICorDebugReferenceValue que corresponde ao objeto a ser coletado como lixo.</span><span class="sxs-lookup"><span data-stu-id="ecdc2-110">Either an ICorDebugValue or an ICorDebugReferenceValue interface that corresponds to the object to be garbage-collected.</span></span>|  
+|`type`|<span data-ttu-id="ecdc2-111">Um valor de enumeração [CorGCReferenceType](corgcreferencetype-enumeration.md) que indica de onde veio a raiz.</span><span class="sxs-lookup"><span data-stu-id="ecdc2-111">A [CorGCReferenceType](corgcreferencetype-enumeration.md) enumeration value that indicates where the root came from.</span></span> <span data-ttu-id="ecdc2-112">Para obter mais informações, consulte a seção Comentários.</span><span class="sxs-lookup"><span data-stu-id="ecdc2-112">For more information, see the Remarks section.</span></span>|  
+|`extraData`|<span data-ttu-id="ecdc2-113">Dados adicionais sobre o objeto a ser coletado pelo lixo.</span><span class="sxs-lookup"><span data-stu-id="ecdc2-113">Additional data about the object to be garbage-collected.</span></span> <span data-ttu-id="ecdc2-114">Essas informações dependem da origem do objeto, conforme indicado pelo `type` campo.</span><span class="sxs-lookup"><span data-stu-id="ecdc2-114">This information depends on the source of the object, as indicated by the `type` field.</span></span> <span data-ttu-id="ecdc2-115">Para obter mais informações, consulte a seção Comentários.</span><span class="sxs-lookup"><span data-stu-id="ecdc2-115">For more information, see the Remarks section.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="8b531-116">Comentários</span><span class="sxs-lookup"><span data-stu-id="8b531-116">Remarks</span></span>  
- <span data-ttu-id="8b531-117">O `type` campo é um valor de enumeração [CorGCReferenceType](corgcreferencetype-enumeration.md) que indica de onde veio a referência.</span><span class="sxs-lookup"><span data-stu-id="8b531-117">The `type` field is a [CorGCReferenceType](corgcreferencetype-enumeration.md) enumeration value that indicates where the reference came from.</span></span> <span data-ttu-id="8b531-118">Um `COR_GC_REFERENCE` valor específico pode refletir qualquer um dos seguintes tipos de objetos gerenciados:</span><span class="sxs-lookup"><span data-stu-id="8b531-118">A particular `COR_GC_REFERENCE` value can reflect any of the following kinds of managed objects:</span></span>  
-  
-- <span data-ttu-id="8b531-119">Objetos de todas as`CorGCReferenceType.CorReferenceStack`pilhas gerenciadas ().</span><span class="sxs-lookup"><span data-stu-id="8b531-119">Objects from all managed stacks (`CorGCReferenceType.CorReferenceStack`).</span></span> <span data-ttu-id="8b531-120">Isso inclui referências ao vivo em código gerenciado, bem como objetos criados pelo tempo de execução do idioma comum.</span><span class="sxs-lookup"><span data-stu-id="8b531-120">This includes live references in managed code, as well as objects created by the common language runtime.</span></span>  
-  
-- <span data-ttu-id="8b531-121">Objetos da mesa`CorGCReferenceType.CorHandle*`de punho ( ).</span><span class="sxs-lookup"><span data-stu-id="8b531-121">Objects from the handle table (`CorGCReferenceType.CorHandle*`).</span></span> <span data-ttu-id="8b531-122">Isso inclui referências`HNDTYPE_STRONG` fortes `HNDTYPE_REFCOUNT`( e ) e variáveis estáticas em um módulo.</span><span class="sxs-lookup"><span data-stu-id="8b531-122">This includes strong references (`HNDTYPE_STRONG` and `HNDTYPE_REFCOUNT`) and static variables in a module.</span></span>  
-  
-- <span data-ttu-id="8b531-123">Objetos da fila do`CorGCReferenceType.CorReferenceFinalizer`finalizador ( ).</span><span class="sxs-lookup"><span data-stu-id="8b531-123">Objects from the finalizer queue (`CorGCReferenceType.CorReferenceFinalizer`).</span></span> <span data-ttu-id="8b531-124">A fila de finalizador enraiza objetos até que o finalizador seja executado.</span><span class="sxs-lookup"><span data-stu-id="8b531-124">The finalizer queue roots objects until the finalizer has run.</span></span>  
-  
- <span data-ttu-id="8b531-125">O `extraData` campo contém dados extras dependendo da origem (ou tipo) da referência.</span><span class="sxs-lookup"><span data-stu-id="8b531-125">The `extraData` field contains extra data depending on the source (or type) of the reference.</span></span> <span data-ttu-id="8b531-126">Os valores possíveis são:</span><span class="sxs-lookup"><span data-stu-id="8b531-126">Possible values are:</span></span>  
-  
-- <span data-ttu-id="8b531-127">`DependentSource`.</span><span class="sxs-lookup"><span data-stu-id="8b531-127">`DependentSource`.</span></span> <span data-ttu-id="8b531-128">Se `type` o `CorGCREferenceType.CorHandleStrongDependent`é , este campo é o objeto que, se `COR_GC_REFERENCE.Location`vivo, enraiza o objeto a ser coletado lixo em .</span><span class="sxs-lookup"><span data-stu-id="8b531-128">If the `type` is `CorGCREferenceType.CorHandleStrongDependent`, this field is the object that, if alive, roots the object to be garbage-collected at `COR_GC_REFERENCE.Location`.</span></span>  
-  
-- <span data-ttu-id="8b531-129">`RefCount`.</span><span class="sxs-lookup"><span data-stu-id="8b531-129">`RefCount`.</span></span> <span data-ttu-id="8b531-130">Se `type` `CorGCREferenceType.CorHandleStrongRefCount`for, este campo é a contagem de referência da alça.</span><span class="sxs-lookup"><span data-stu-id="8b531-130">If the `type` is `CorGCREferenceType.CorHandleStrongRefCount`, this field is the reference count of the handle.</span></span>  
-  
-- <span data-ttu-id="8b531-131">`Size`.</span><span class="sxs-lookup"><span data-stu-id="8b531-131">`Size`.</span></span> <span data-ttu-id="8b531-132">Se `type` `CorGCREferenceType.CorHandleStrongSizedByref`for, este campo é o último tamanho da árvore de objetos para a qual o coletor de lixo calculou as raízes do objeto.</span><span class="sxs-lookup"><span data-stu-id="8b531-132">If the `type` is `CorGCREferenceType.CorHandleStrongSizedByref`, this field is the last size of the object tree for which the garbage collector calculated the object roots.</span></span> <span data-ttu-id="8b531-133">Observe que este cálculo não está necessariamente atualizado.</span><span class="sxs-lookup"><span data-stu-id="8b531-133">Note that this calculation is not necessarily up to date.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="8b531-134">Requisitos</span><span class="sxs-lookup"><span data-stu-id="8b531-134">Requirements</span></span>  
- <span data-ttu-id="8b531-135">**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8b531-135">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="8b531-136">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8b531-136">**Header:** CorDebug.idl, CorDebug.h</span></span>  
-  
- <span data-ttu-id="8b531-137">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8b531-137">**Library:** CorGuids.lib</span></span>  
-  
- <span data-ttu-id="8b531-138">**.NET Framework Versions:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8b531-138">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="8b531-139">Confira também</span><span class="sxs-lookup"><span data-stu-id="8b531-139">See also</span></span>
+## <a name="remarks"></a><span data-ttu-id="ecdc2-116">Comentários</span><span class="sxs-lookup"><span data-stu-id="ecdc2-116">Remarks</span></span>  
 
-- [<span data-ttu-id="8b531-140">Estruturas de depuração</span><span class="sxs-lookup"><span data-stu-id="8b531-140">Debugging Structures</span></span>](debugging-structures.md)
-- [<span data-ttu-id="8b531-141">Depuração</span><span class="sxs-lookup"><span data-stu-id="8b531-141">Debugging</span></span>](index.md)
+ <span data-ttu-id="ecdc2-117">O `type` campo é um valor de enumeração [CorGCReferenceType](corgcreferencetype-enumeration.md) que indica de onde veio a referência.</span><span class="sxs-lookup"><span data-stu-id="ecdc2-117">The `type` field is a [CorGCReferenceType](corgcreferencetype-enumeration.md) enumeration value that indicates where the reference came from.</span></span> <span data-ttu-id="ecdc2-118">Um `COR_GC_REFERENCE` valor específico pode refletir qualquer um dos seguintes tipos de objetos gerenciados:</span><span class="sxs-lookup"><span data-stu-id="ecdc2-118">A particular `COR_GC_REFERENCE` value can reflect any of the following kinds of managed objects:</span></span>  
+  
+- <span data-ttu-id="ecdc2-119">Objetos de todas as pilhas gerenciadas ( `CorGCReferenceType.CorReferenceStack` ).</span><span class="sxs-lookup"><span data-stu-id="ecdc2-119">Objects from all managed stacks (`CorGCReferenceType.CorReferenceStack`).</span></span> <span data-ttu-id="ecdc2-120">Isso inclui referências dinâmicas em código gerenciado, bem como objetos criados pelo Common Language Runtime.</span><span class="sxs-lookup"><span data-stu-id="ecdc2-120">This includes live references in managed code, as well as objects created by the common language runtime.</span></span>  
+  
+- <span data-ttu-id="ecdc2-121">Objetos da tabela de identificadores ( `CorGCReferenceType.CorHandle*` ).</span><span class="sxs-lookup"><span data-stu-id="ecdc2-121">Objects from the handle table (`CorGCReferenceType.CorHandle*`).</span></span> <span data-ttu-id="ecdc2-122">Isso inclui referências fortes ( `HNDTYPE_STRONG` e `HNDTYPE_REFCOUNT` ) e variáveis estáticas em um módulo.</span><span class="sxs-lookup"><span data-stu-id="ecdc2-122">This includes strong references (`HNDTYPE_STRONG` and `HNDTYPE_REFCOUNT`) and static variables in a module.</span></span>  
+  
+- <span data-ttu-id="ecdc2-123">Objetos da fila do finalizador ( `CorGCReferenceType.CorReferenceFinalizer` ).</span><span class="sxs-lookup"><span data-stu-id="ecdc2-123">Objects from the finalizer queue (`CorGCReferenceType.CorReferenceFinalizer`).</span></span> <span data-ttu-id="ecdc2-124">O finalizador enfileira objetos de raízes até que o finalizador tenha sido executado.</span><span class="sxs-lookup"><span data-stu-id="ecdc2-124">The finalizer queue roots objects until the finalizer has run.</span></span>  
+  
+ <span data-ttu-id="ecdc2-125">O `extraData` campo contém dados extras dependendo da origem (ou tipo) da referência.</span><span class="sxs-lookup"><span data-stu-id="ecdc2-125">The `extraData` field contains extra data depending on the source (or type) of the reference.</span></span> <span data-ttu-id="ecdc2-126">Os valores possíveis são:</span><span class="sxs-lookup"><span data-stu-id="ecdc2-126">Possible values are:</span></span>  
+  
+- <span data-ttu-id="ecdc2-127">`DependentSource`.</span><span class="sxs-lookup"><span data-stu-id="ecdc2-127">`DependentSource`.</span></span> <span data-ttu-id="ecdc2-128">Se `type` for `CorGCREferenceType.CorHandleStrongDependent` , esse campo será o objeto que, se estiver ativo, faz a raiz do objeto a ser coletado como lixo `COR_GC_REFERENCE.Location` .</span><span class="sxs-lookup"><span data-stu-id="ecdc2-128">If the `type` is `CorGCREferenceType.CorHandleStrongDependent`, this field is the object that, if alive, roots the object to be garbage-collected at `COR_GC_REFERENCE.Location`.</span></span>  
+  
+- <span data-ttu-id="ecdc2-129">`RefCount`.</span><span class="sxs-lookup"><span data-stu-id="ecdc2-129">`RefCount`.</span></span> <span data-ttu-id="ecdc2-130">Se `type` for `CorGCREferenceType.CorHandleStrongRefCount` , esse campo será a contagem de referência do identificador.</span><span class="sxs-lookup"><span data-stu-id="ecdc2-130">If the `type` is `CorGCREferenceType.CorHandleStrongRefCount`, this field is the reference count of the handle.</span></span>  
+  
+- <span data-ttu-id="ecdc2-131">`Size`.</span><span class="sxs-lookup"><span data-stu-id="ecdc2-131">`Size`.</span></span> <span data-ttu-id="ecdc2-132">Se `type` for `CorGCREferenceType.CorHandleStrongSizedByref` , esse campo será o último tamanho da árvore de objetos para a qual o coletor de lixo calculou as raízes de objeto.</span><span class="sxs-lookup"><span data-stu-id="ecdc2-132">If the `type` is `CorGCREferenceType.CorHandleStrongSizedByref`, this field is the last size of the object tree for which the garbage collector calculated the object roots.</span></span> <span data-ttu-id="ecdc2-133">Observe que esse cálculo não está necessariamente atualizado.</span><span class="sxs-lookup"><span data-stu-id="ecdc2-133">Note that this calculation is not necessarily up to date.</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="ecdc2-134">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ecdc2-134">Requirements</span></span>  
+
+ <span data-ttu-id="ecdc2-135">**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ecdc2-135">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="ecdc2-136">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ecdc2-136">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+  
+ <span data-ttu-id="ecdc2-137">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ecdc2-137">**Library:** CorGuids.lib</span></span>  
+  
+ <span data-ttu-id="ecdc2-138">**.NET Framework versões:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ecdc2-138">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="ecdc2-139">Confira também</span><span class="sxs-lookup"><span data-stu-id="ecdc2-139">See also</span></span>
+
+- [<span data-ttu-id="ecdc2-140">Estruturas de depuração</span><span class="sxs-lookup"><span data-stu-id="ecdc2-140">Debugging Structures</span></span>](debugging-structures.md)
+- [<span data-ttu-id="ecdc2-141">Depuração</span><span class="sxs-lookup"><span data-stu-id="ecdc2-141">Debugging</span></span>](index.md)
