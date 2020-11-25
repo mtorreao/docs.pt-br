@@ -8,31 +8,33 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-ms.openlocfilehash: 617b27923e96d9abc62ccbf158b076c6e45b20a8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 22a133d02bb69026190428905379323362943d40
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175090"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732379"
 ---
 # <a name="icorprofilercallback8-interface"></a>Interface ICorProfilerCallback8
-[Suportado nas versões .NET Framework 4.7 e posteriores]  
 
- Uma subclasse do [ICorProfilerCallback7](icorprofilercallback7-interface.md) que fornece métodos de retorno de chamada usados pelo tempo de execução do idioma comum para notificar o profiler que a compilação JIT de um método dinâmico foi iniciada e concluída.
+[Com suporte no .NET Framework 4,7 e versões posteriores]  
+
+ Uma subclasse de [ICorProfilerCallback7](icorprofilercallback7-interface.md) que fornece métodos de retorno de chamada usados pelo Common Language Runtime para notificar o criador de perfil de que a compilação JIT de um método dinâmico foi iniciada e concluída.
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
-|[Método DynamicMethodJITCompilationStarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)|Notifica o profiler que a compilação JIT de um método dinâmico começou.|  
-|[Método DynamicMethodJITCompilationFinished](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)|Notifica o profiler que a compilação JIT de um método dinâmico terminou.|  
+|[Método DynamicMethodJITCompilationStarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)|Notifica o criador de perfil de que a compilação JIT de um método dinâmico foi iniciada.|  
+|[Método DynamicMethodJITCompilationFinished](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)|Notifica o criador de perfil de que a compilação JIT de um método dinâmico foi concluída.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
-**.NET Framework Versions:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**.NET Framework versões:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Confira também
 

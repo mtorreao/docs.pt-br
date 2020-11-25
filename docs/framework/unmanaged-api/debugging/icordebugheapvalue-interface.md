@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1bca66db-0359-4ae8-846e-e35f7e547e8b
 topic_type:
 - apiref
-ms.openlocfilehash: 36a485413490045ca49b99fca4fe5d43edc37114
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: ee3ea319360bba1a113c15daf8cf143ea512e5cd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213004"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733315"
 ---
 # <a name="icordebugheapvalue-interface"></a>Interface ICorDebugHeapValue
 
@@ -27,7 +27,7 @@ Uma subclasse de "ICorDebugValue" que representa um objeto que foi coletado pelo
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método CreateRelocBreakpoint](icordebugheapvalue-createrelocbreakpoint-method.md)|Não implementado.|  
 |[Método IsValid](icordebugheapvalue-isvalid-method.md)|Obtém um valor que indica se o objeto representado por ele `ICorDebugHeapValue` é válido ou se foi recuperado pelo coletor de lixo. Esse método foi preterido no .NET Framework versão 2,0.|  
@@ -38,6 +38,7 @@ Uma subclasse de "ICorDebugValue" que representa um objeto que foi coletado pelo
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

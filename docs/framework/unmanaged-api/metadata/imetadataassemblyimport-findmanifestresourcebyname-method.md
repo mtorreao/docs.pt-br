@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7b72fa11-3866-402b-bdea-2b966b77cfe0
 topic_type:
 - apiref
-ms.openlocfilehash: ef6f7a1a6e86b45acce91792385bc3761dfb4c39
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 152f62fddee3eaa7fa14e454e6eb7ea2547265ad
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009074"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731573"
 ---
 # <a name="imetadataassemblyimportfindmanifestresourcebyname-method"></a>Método IMetaDataAssemblyImport::FindManifestResourceByName
+
 Obtém um ponteiro para o recurso de manifesto com o nome especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -35,6 +36,7 @@ HRESULT FindManifestResourceByName (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `szName`  
  no O nome do recurso.  
   
@@ -42,14 +44,16 @@ HRESULT FindManifestResourceByName (
  fora A matriz usada para armazenar os `mdManifestResource` tokens de metadados, cada um representando um recurso de manifesto.  
   
 ## <a name="remarks"></a>Comentários  
+
  O `FindManifestResourceByName` método usa as regras padrão empregadas pelo Common Language Runtime para resolver referências.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataforma:** Consulte [requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como um recurso em MsCorEE. dll  
+ **Biblioteca:** Usado como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

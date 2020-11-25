@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ed16bb7f-4206-43a8-b9e9-c5737b69e3af
 topic_type:
 - apiref
-ms.openlocfilehash: 8f316d91aab4c3862a0ad45b41539a4b80791ab9
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 5f799c140705a5279c996b6bec90ab1f29bd42ef
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762782"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732426"
 ---
 # <a name="iclrtaskmanagersetlocale-method"></a>Método ICLRTaskManager::SetLocale
+
 Notifica o Common Language Runtime (CLR) que o host modificou o valor do identificador de localidade (que é mapeado para a cultura geográfica e idioma) na tarefa em execução no momento.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,12 +35,13 @@ HRESULT SetLocale (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `lcid`  
  no O valor do identificador de localidade que mapeia para a cultura geográfica e a linguagem recém atribuídas.  
   
 ## <a name="return-value"></a>Valor Retornado  
   
-|HRESULT|Description|  
+|HRESULT|Descrição|  
 |-------------|-----------------|  
 |S_OK|O método foi retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O CLR não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
@@ -49,18 +51,20 @@ HRESULT SetLocale (
 |E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retorna E_FAIL, o CLR não é mais utilizável no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
- `SetLocale`Dá ao host uma oportunidade de executar qualquer mecanismo que ele possa ter para a sincronização de localidades.  
+
+ `SetLocale` Dá ao host uma oportunidade de executar qualquer mecanismo que ele possa ter para a sincronização de localidades.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICLRTask](iclrtask-interface.md)
 - [Interface ICLRTaskManager](iclrtaskmanager-interface.md)

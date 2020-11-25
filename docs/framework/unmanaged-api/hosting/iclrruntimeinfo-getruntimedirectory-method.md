@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4401546e-4d48-453f-a1fb-b2ebda54df5c
 topic_type:
 - apiref
-ms.openlocfilehash: d744abf5c502e9b9510cf9fd6479149b6c2177cc
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 24679118e4255282f7da3ff8be2ce9c08250e181
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762208"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732041"
 ---
 # <a name="iclrruntimeinfogetruntimedirectory-method"></a>Método ICLRRuntimeInfo::GetRuntimeDirectory
+
 Obtém o diretório de instalação do Common Language Runtime (CLR) associado a essa interface.  
   
  Esse método substitui a função [GetCORSystemDirectory](getcorsystemdirectory-function.md) fornecida no .NET Framework versões 2,0, 3,0 e 3,5.  
@@ -36,6 +37,7 @@ HRESULT GetRuntimeDirectory(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pwzBuffer`  
  fora Retorna o diretório de instalação do CLR. O caminho de instalação é totalmente qualificado; por exemplo, "c:\Windows\Microsoft.NET\Framework\v1.0.3705 \\ ".  
   
@@ -43,9 +45,10 @@ HRESULT GetRuntimeDirectory(
  [entrada, saída] Especifica o tamanho de `pwzBuffer` para evitar estouros de buffer. Se `pwzBuffer` for NULL, `pchBuffer` retornará o tamanho necessário de `pwzBuffer` .  
   
 ## <a name="return-value"></a>Valor Retornado  
+
  Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
-|HRESULT|Description|  
+|HRESULT|Descrição|  
 |-------------|-----------------|  
 |S_OK|O método foi concluído com êxito.|  
 |E_POINTER|`pwzBuffer` ou `pchBuffer` é nulo.|  
@@ -53,15 +56,16 @@ HRESULT GetRuntimeDirectory(
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MetaHost. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICLRRuntimeInfo](iclrruntimeinfo-interface.md)
-- [Hospedagem](index.md)
+- [Hosting](index.md)

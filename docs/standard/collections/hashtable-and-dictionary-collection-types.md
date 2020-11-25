@@ -9,14 +9,15 @@ ms.date: 03/30/2017
 - hash function
 - collections [.NET], Hashtable collection type
 ms.assetid: bfc20837-3d02-4fc7-8a8f-c5215b6b7913
-ms.openlocfilehash: bb6d0802526db9b6b5673fe7d13b1f12af7acfcf
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 56e8ceff05f8f9777af370301a96cd17d0286f44
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831215"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733523"
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Tipos de coleção Hashtable e Dictionary
+
 A classe <xref:System.Collections.Hashtable?displayProperty=nameWithType>, e as classes genéricas <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> e <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>, implementam a interface <xref:System.Collections.IDictionary?displayProperty=nameWithType>. A classe genérica <xref:System.Collections.Generic.Dictionary%602> também implementa a interface genérica <xref:System.Collections.Generic.IDictionary%602>. Portanto, cada elemento nessas coleções é um par chave-valor.  
   
  Um <xref:System.Collections.Hashtable> objeto consiste em buckets que contêm os elementos da coleção. Um bucket é um subgrupo virtual de elementos dentro de <xref:System.Collections.Hashtable>, o que torna a pesquisa e a recuperação mais fáceis e rápidas do que na maioria das coleções. Cada bucket é associado um código hash, que é gerado usando uma função de hash e tem como base a chave do elemento.  

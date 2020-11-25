@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 17c45f15-8c44-44da-b070-f902077b36e4
 topic_type:
 - apiref
-ms.openlocfilehash: 0acd31d85504688427cace0222a657885035c537
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 3a2045466340f92dd8421090c74a442068e8bfaf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615378"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731404"
 ---
 # <a name="isymunmanagedscopegetlocals-method"></a>Método ISymUnmanagedScope::GetLocals
+
 Obtém as variáveis locais definidas nesse escopo.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,6 +37,7 @@ HRESULT GetLocals(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `cLocals`  
  no Um `ULONG32` que indica o tamanho da `locals` matriz.  
   
@@ -45,12 +47,14 @@ HRESULT GetLocals(
  `locals`  
  fora A matriz que recebe as variáveis locais.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ISymUnmanagedScope](isymunmanagedscope-interface.md)

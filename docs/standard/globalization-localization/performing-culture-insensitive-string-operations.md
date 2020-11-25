@@ -10,12 +10,12 @@ helpviewer_keywords:
 - culture, custom case mappings
 - culture-insensitive string operations, method overloads
 ms.assetid: 579ef891-1f83-4c63-9ebd-2f40406b5b91
-ms.openlocfilehash: 868f36a1025f0b121a8765edf50bb42679736240
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a418432dfaba9ab070ddb6dc862dcbd798c16343
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829759"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732210"
 ---
 # <a name="performing-culture-insensitive-string-operations"></a>Executando operações de cadeia de caracteres que não levam em conta a cultura
 
@@ -24,6 +24,7 @@ A maioria dos métodos .NET que executam operações de cadeia de caracteres de 
  Esta seção fornece os seguintes artigos para demonstrar como executar operações de cadeia de caracteres que não diferenciam culturas usando métodos .NET que são sensíveis à cultura por padrão.  
   
 ## <a name="in-this-section"></a>Nesta seção  
+
  [Executando comparações de cadeias de caracteres que não levam em conta a cultura](performing-culture-insensitive-string-comparisons.md)  
  Descreve como usar os métodos <xref:System.String.Compare%2A?displayProperty=nameWithType> e <xref:System.String.CompareTo%2A?displayProperty=nameWithType> para executar comparações de cadeia de caracteres insensíveis à cultura.  
   
@@ -37,6 +38,7 @@ A maioria dos métodos .NET que executam operações de cadeia de caracteres de 
  Descreve como usar os métodos <xref:System.Array.Sort%2A?displayProperty=nameWithType> e <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> para executar operações insensíveis à cultura em matrizes.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
+
  [Operações de cadeia de caracteres que não levam em conta a cultura](culture-insensitive-string-operations.md)  
  Descreve por que você deve estar ciente da cultura ao executar operações em cadeias de caracteres, e fornece diretrizes para quando executar operações sensíveis à cultura e quando executar operações insensíveis à cultura.
 

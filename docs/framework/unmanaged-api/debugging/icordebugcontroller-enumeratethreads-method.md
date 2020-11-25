@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 73f536f6-4668-4a4a-b3e4-ac7df862d5be
 topic_type:
 - apiref
-ms.openlocfilehash: 4d69f13d4716b43c815148ff0fe4aa087b57c6e5
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: f98118f9206d9ccd7dc9dc9a943500c7b4cd676a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82892750"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732652"
 ---
 # <a name="icordebugcontrollerenumeratethreads-method"></a>Método ICorDebugController::EnumerateThreads
+
 Obtém um enumerador para os threads gerenciados ativos no processo.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,13 +35,16 @@ HRESULT EnumerateThreads (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `ppThreads`  
  fora Um ponteiro para o endereço de um objeto "ICorDebugThreadEnum" que representa um enumerador para todos os threads gerenciados que estão ativos no processo.  
   
 ## <a name="remarks"></a>Comentários  
+
  Um thread é considerado ativo após o retorno de chamada [ICorDebugManagedCallback:: CreateThread](icordebugmanagedcallback-createthread-method.md) ter sido expedido e antes de o retorno de chamada [ICorDebugManagedCallback:: ExitThread](icordebugmanagedcallback-exitthread-method.md) ser expedido. Um thread gerenciado pode não ter necessariamente nenhum quadro gerenciado em sua pilha. Os threads podem ser enumerados mesmo antes do retorno de chamada [ICorDebugManagedCallback:: CreateProcess](icordebugmanagedcallback-createprocess-method.md) . A enumeração estará naturalmente vazia.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

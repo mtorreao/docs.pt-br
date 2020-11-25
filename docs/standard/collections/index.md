@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - collections [.NET]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
-ms.openlocfilehash: 3b92f3aa8c21cc3d171e14100db190d88f2c0284
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7400d460c4d1ebf5c02d8313f33a5a63de1734d4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823843"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733510"
 ---
 # <a name="collections-and-data-structures"></a>Coleções e estruturas de dados
 
@@ -26,6 +26,7 @@ Há dois tipos principais de coleções; coleções genéricas e coleções não
 A partir do .NET Framework 4, as coleções no <xref:System.Collections.Concurrent> namespace fornecem operações eficientes de thread-safe para acessar itens de coleção de vários threads. As classes de coleção imutáveis no <xref:System.Collections.Immutable> namespace ([pacote NuGet](https://www.nuget.org/packages/System.Collections.Immutable)) são inerentemente seguras ao thread porque as operações são executadas em uma cópia da coleção original e a coleção original não pode ser modificada.
 
 <a name="BKMK_Commoncollectionfeatures"></a>
+
 ## <a name="common-collection-features"></a>Recursos comuns de coleção
 
 Todas as coleções fornecem métodos para adicionar, remover ou localizar itens na coleção. Além disso, todas as coleções que direta ou indiretamente implementam a interface <xref:System.Collections.ICollection> ou a interface <xref:System.Collections.Generic.ICollection%601> compartilham estes recursos:
@@ -57,6 +58,7 @@ Além disso, muitas classes de coleção contêm os seguintes recursos:
     Tipos de coleção não genérica no namespace <xref:System.Collections> oferecem algum acesso thread-safe com sincronização; geralmente exposto por meio dos membros <xref:System.Collections.ICollection.SyncRoot%2A> e <xref:System.Collections.ICollection.IsSynchronized%2A>. Essas coleções são não thread-safe por padrão. Se você precisar de acesso com multithread escalável e eficiente para uma coleção, use uma das classes no namespace <xref:System.Collections.Concurrent> ou considere usar uma coleção imutável. Para obter mais informações, veja [Coleções thread-safe](thread-safe/index.md).
 
 <a name="BKMK_Choosingacollection"></a>
+
 ## <a name="choose-a-collection"></a>Escolher uma coleção
 
 Em geral, você deve usar coleções genéricas. A tabela a seguir descreve alguns cenários comuns de coleção e as classes de coleção que você pode usar para esses cenários. Se você for inexperiente com coleções genéricas, esta tabela o ajudará a escolher a coleção genérica adequada para a tarefa.
@@ -94,9 +96,10 @@ Um `List<T>` pode ser enumerado com eficiência usando um `for` loop ou um `fore
 Além disso, `SortedSet<T>` o tem a mesma complexidade que `ImmutableSortedSet<T>` . Isso porque ambos usam árvores binárias. É claro que a diferença significativa é que `ImmutableSortedSet<T>` usa uma árvore binária imutável. Como `ImmutableSortedSet<T>` o também oferece uma <xref:System.Collections.Immutable.ImmutableSortedSet%601.Builder?displayProperty=nameWithType> classe que permite a mutação, você pode ter a imutabilidade e o desempenho.
 
 <a name="BKMK_RelatedTopics"></a>
+
 ## <a name="related-topics"></a>Tópicos Relacionados
 
-|Título|Descrição|
+|Título|DESCRIÇÃO|
 |-----------|-----------------|
 |[Selecionando uma classe de coleção](selecting-a-collection-class.md)|Descreve as diferentes coleções e ajuda a selecionar uma para o seu cenário.|
 |[Tipos de coleção comumente usados](commonly-used-collection-types.md)|Descreve os tipos de coleção genérica e não genérica normalmente usadas, tais como <xref:System.Array?displayProperty=nameWithType>, <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, e <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.|
@@ -104,11 +107,13 @@ Além disso, `SortedSet<T>` o tem a mesma complexidade que `ImmutableSortedSet<T
 |[Comparações e classificações dentro de coleções](comparisons-and-sorts-within-collections.md)|Discute o uso de comparações de igualdade e comparações de classificação em coleções.|
 |[Tipos de coleção classificados](sorted-collection-types.md)|Descreve as características e o desempenho de coleções classificadas|
 |[Tipos de Coleção de Tabela de Hash e Dicionário](hashtable-and-dictionary-collection-types.md)|Descreve os recursos de tipos de dicionário baseado em hash genérico e não genérico.|
-|[Coleções thread-safe](thread-safe/index.md)|Descreve os tipos de coleção, tais como <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> e <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> que dão suporte a acesso simultâneo seguro e eficiente de vários threads.|
+|[Coleções com segurança de thread](thread-safe/index.md)|Descreve os tipos de coleção, tais como <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> e <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> que dão suporte a acesso simultâneo seguro e eficiente de vários threads.|
 |System.Collections.Immutable|Apresenta as coleções imutáveis e fornece links para os tipos de coleção.|
 
 <a name="BKMK_Reference"></a>
+
 ## <a name="reference"></a>Referência
+
 <xref:System.Array?displayProperty=nameWithType>
 <xref:System.Collections?displayProperty=nameWithType>
 <xref:System.Collections.Concurrent?displayProperty=nameWithType>

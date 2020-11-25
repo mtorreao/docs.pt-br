@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: cc7b0e5b-48c3-4509-8ebb-611ddb1f7ec2
 topic_type:
 - apiref
-ms.openlocfilehash: 9cf9d48bf50ffc1fc56270c13215acfef6d9c3af
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 192163ed8af680e39f7f3a03aee3f46546bc7450
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504050"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732067"
 ---
 # <a name="iclrruntimeinfogetinterface-method"></a>Método ICLRRuntimeInfo::GetInterface
+
 Carrega o CLR no processo atual e retorna ponteiros de interface de tempo de execução, como [ICLRRuntimeHost](iclrruntimehost-interface.md), [ICLRStrongName](iclrstrongname-interface.md)e [IMetaDataDispenserEx](../metadata/imetadatadispenser-interface.md).  
   
  Esse método substitui todas as `CorBindTo` funções * na seção [funções de Hospedagem de CLR preteridas](deprecated-clr-hosting-functions.md) .  
@@ -37,6 +38,7 @@ HRESULT GetInterface(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `rclsid`  
  no A interface CLSID para a coclass.  
   
@@ -47,6 +49,7 @@ HRESULT GetInterface(
  fora Um ponteiro para a interface consultada.  
   
 ## <a name="return-value"></a>Valor Retornado  
+
  Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
@@ -57,6 +60,7 @@ HRESULT GetInterface(
 |CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|Um tempo de execução diferente já estava associado à política de ativação do CLR versão 2 herdada.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Esse método faz com que o CLR seja carregado, mas não inicializado.  
   
  A tabela a seguir mostra as combinações com suporte para o `rclsid` e o `riid` .  
@@ -73,11 +77,12 @@ HRESULT GetInterface(
 |CLSID_CLRStrongName|IID_ICLRStrongName|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MetaHost. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

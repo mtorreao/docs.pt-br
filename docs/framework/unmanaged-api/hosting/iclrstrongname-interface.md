@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 2fac66fd-6b3b-4dbd-8baf-86038bd85526
 topic_type:
 - apiref
-ms.openlocfilehash: 0b6efcbe4458977e8e938afabd7ae59171bc065a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 691cc3cf4ec8d036a4de04247f243d99daa887d4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501645"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733627"
 ---
 # <a name="iclrstrongname-interface"></a>Interface ICLRStrongName
+
 Fornece funções estáticas globais básicas para assinar assemblies com nomes fortes. Todos os `ICLRStrongName` métodos retornam o padrão com HResults.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método GetHashFromAssemblyFile](iclrstrongname-gethashfromassemblyfile-method.md)|Obtém um hash do arquivo do assembly especificado, usando o algoritmo de hash especificado.|  
 |[Método GetHashFromAssemblyFileW](iclrstrongname-gethashfromassemblyfilew-method.md)|Obtém um hash do arquivo do assembly especificado como uma cadeia de caracteres Unicode, usando o algoritmo de hash especificado.|  
@@ -55,14 +56,16 @@ Fornece funções estáticas globais básicas para assinar assemblies com nomes 
 |[Método StrongNameTokenFromPublicKey](iclrstrongname-strongnametokenfrompublickey-method.md)|Obtém um token que representa uma chave pública.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Você pode obter uma instância do `ICLRStrongName` chamando o método [ICLRRuntimeInfo:: GetInterface](iclrruntimeinfo-getinterface-method.md) usando `CLSID_CLRStrongName` e `IID_ICLRStrongName` como parâmetros.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MetaHost. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

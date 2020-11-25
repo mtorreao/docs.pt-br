@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5ec8cf76-3deb-4ce6-9a49-77a4c35d80b9
 topic_type:
 - apiref
-ms.openlocfilehash: 7c64823e1a5c519eb74b508af093afeb1132e608
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: cbcee923ecbb1106bb129f05d2e602a0fd17258d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210079"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732475"
 ---
 # <a name="icordebugreferencevaluedereference-method"></a>Método ICorDebugReferenceValue::Dereference
+
 Obtém o objeto que é referenciado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,13 +35,16 @@ HRESULT Dereference (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `ppValue`  
  fora Um ponteiro para o endereço de um ICorDebugValue que representa o objeto ao qual esse objeto ICorDebugReferenceValue aponta.  
   
 ## <a name="remarks"></a>Comentários  
+
  O `ICorDebugValue` objeto é válido somente enquanto sua referência ainda não foi desabilitada.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f74ab4eb-cd1b-407c-a66d-8ec0d85647f3
 topic_type:
 - apiref
-ms.openlocfilehash: 0431b54997c9889e2b3206392e86e4dcde45ffb3
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: e95874447528989af68f5c97825691532195889f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212445"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731794"
 ---
 # <a name="icordebugmanagedcallbackevalcomplete-method"></a>Método ICorDebugManagedCallback::EvalComplete
+
 Notifica o depurador de que uma avaliação foi concluída.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,6 +37,7 @@ HRESULT EvalComplete (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pAppDomain`  
  no Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio do aplicativo no qual a avaliação foi executada.  
   
@@ -46,6 +48,7 @@ HRESULT EvalComplete (
  no Um ponteiro para um objeto ICorDebugEval que representa o código que realizou a avaliação.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

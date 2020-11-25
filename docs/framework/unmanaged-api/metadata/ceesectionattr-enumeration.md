@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0db51881-b869-4677-a715-1726a9216489
 topic_type:
 - apiref
-ms.openlocfilehash: 6da8a111f716906e403d85bc0b1a29eba7238100
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 4b2fb80298f6eef331b5b7ae4a46222ce97ede6f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84006058"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732728"
 ---
 # <a name="ceesectionattr-enumeration"></a>Enumeração CeeSectionAttr
+
 Fornece valores que especificam atributos de uma seção para uso pela interface [ICeeGen](iceegen-interface.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -39,7 +40,7 @@ typedef enum  {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |`sdNone`|A seção não tem atributos.|  
 |`sdReadOnly`|A seção contém dados inicializados que só podem ser lidos, não atualizados.|  
@@ -47,11 +48,12 @@ typedef enum  {
 |`sdExecute`|A seção contém código executável que pode ser lido e executado.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

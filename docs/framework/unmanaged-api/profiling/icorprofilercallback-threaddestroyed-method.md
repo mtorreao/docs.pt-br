@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4c2b66fd-0595-40a3-8931-f9c4fff97ac8
 topic_type:
 - apiref
-ms.openlocfilehash: c63b91c39ded58ed208f6920c2bfaeba410c093c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 0cef868861155d553aba42fe28c3f1f1b86763b0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499851"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731963"
 ---
 # <a name="icorprofilercallbackthreaddestroyed-method"></a>Método ICorProfilerCallback::ThreadDestroyed
+
 Notifica o criador de perfil de que um thread foi destruído.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -33,13 +34,16 @@ HRESULT ThreadDestroyed(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `threadId`  
  no A ID do thread que foi destruído.  
   
 ## <a name="remarks"></a>Comentários  
+
  O `threadId` valor não é mais válido no momento desta chamada.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

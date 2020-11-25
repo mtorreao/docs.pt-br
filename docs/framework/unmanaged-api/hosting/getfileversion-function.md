@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: b3222c85-da88-4485-97d7-3a6ee3e8d358
 topic_type:
 - apiref
-ms.openlocfilehash: 2dd004a44b20d48dafc72711ac23abcb55739224
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 57b30824c7849127f48d4da61872945366e7141e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617194"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733237"
 ---
 # <a name="getfileversion-function"></a>Função GetFileVersion
+
 Obtém as informações de versão do Common Language Runtime (CLR) do arquivo especificado, usando o buffer especificado.  
   
  Essa função foi preterida no .NET Framework 4.  
@@ -38,6 +39,7 @@ HRESULT GetFileVersion (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `szFilename`  
  no O caminho do arquivo a ser examinado.  
   
@@ -51,6 +53,7 @@ HRESULT GetFileVersion (
  fora O tamanho, em bytes, do retornado `szBuffer` .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  

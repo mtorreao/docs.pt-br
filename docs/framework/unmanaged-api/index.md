@@ -7,17 +7,19 @@ helpviewer_keywords:
 - native API reference [.NET Framework]
 - unmanaged API reference [.NET Framework]
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
-ms.openlocfilehash: 0153279608e2359747f1be6b9542d6906c1b3995
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 16b18f4fede11e776e5656843ed9a408dff370eb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559298"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732743"
 ---
 # <a name="unmanaged-api-reference"></a>Referência de API não gerenciada
+
 Esta seção inclui informações sobre APIs não gerenciadas que podem ser usadas por aplicativos relacionados a código gerenciado, como hosts de runtime, compiladores, desmontadores, ofuscadores, depuradores e criadores de perfis.  
   
 ## <a name="in-this-section"></a>Nesta seção  
+
  [Tipos de dados comuns](common-data-types-unmanaged-api-reference.md)  
  Lista os tipos de dados comuns que são usados, especialmente na criação de perfis não gerenciados e APIs de depuração.  
   
@@ -61,4 +63,5 @@ Esta seção inclui informações sobre APIs não gerenciadas que podem ser usad
  Descreve as duas funções auxiliares e a interface usada pelo Exportador da Biblioteca de Tipos (Tlbexp.exe) durante o processo de conversão de assembly para biblioteca de tipos.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
+
  [Guia de desenvolvimento](../development-guide.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1aa7a4b1-636a-4f5e-b834-b406d72f7120
 topic_type:
 - apiref
-ms.openlocfilehash: 1591a055200618f3e4951b5f6cf860dd3e71b44b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 11515bbb5717222a0030c1953b4eab4eb1b83bb2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554339"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731638"
 ---
 # <a name="ihosttaskmanagerenterruntime-method"></a>Método IHostTaskManager::EnterRuntime
+
 Notifica o host de que uma chamada para um método não gerenciado, como um método de invocação de plataforma, está retornando o controle de execução para o Common Language Runtime (CLR).  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -44,12 +45,14 @@ HRESULT EnterRuntime ();
 |E_OUTOFMEMORY|Não havia memória suficiente disponível para concluir a alocação solicitada.|  
   
 ## <a name="remarks"></a>Comentários  
+
  `EnterRuntime` é chamado para notificar o host de que uma função não gerenciada, para a qual uma chamada anterior para o método [LeaveRuntime](ihosttaskmanager-leaveruntime-method.md) foi feita, concluiu a execução e está retornando o controle de execução para o tempo de execução.  
   
 > [!NOTE]
 > [ReverseEnterRuntime](ihosttaskmanager-reverseenterruntime-method.md) é chamado para notificar o host de que uma função não gerenciada, para a qual uma chamada anterior `LeaveRuntime` foi feita, está fazendo uma chamada para código gerenciado.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  

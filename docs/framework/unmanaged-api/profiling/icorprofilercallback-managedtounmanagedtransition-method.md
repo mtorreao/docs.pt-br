@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ef3cd619-912d-40c5-a449-03ba02a39ee7
 topic_type:
 - apiref
-ms.openlocfilehash: 9b53030fe860e02b0afd0dce3055ac3cf29e3491
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: ef65ed908c71bcc2755aaf42070439fd7dab3f6d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499994"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733131"
 ---
 # <a name="icorprofilercallbackmanagedtounmanagedtransition-method"></a>Método ICorProfilerCallback::ManagedToUnmanagedTransition
+
 Notifica o criador de perfil de que uma transição do código gerenciado para o código não gerenciado ocorreu.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,6 +35,7 @@ HRESULT ManagedToUnmanagedTransition(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `functionId`  
  no A ID da função que está sendo chamada.  
   
@@ -41,9 +43,11 @@ HRESULT ManagedToUnmanagedTransition(
  no Um valor da enumeração [COR_PRF_TRANSITION_REASON](cor-prf-transition-reason-enumeration.md) que indica se a transição ocorreu devido a uma chamada em código não gerenciado do código gerenciado ou devido a um retorno de uma função gerenciada chamada por um não gerenciado.  
   
 ## <a name="remarks"></a>Comentários  
+
  Se o valor de `reason` for COR_PRF_TRANSITION_CALL, a ID da função será a da função não gerenciada, que nunca terá sido compilada usando o compilador just-in-time. As funções não gerenciadas têm informações básicas associadas a elas, como um nome e alguns metadados. Se a função não gerenciada for chamada usando o PInvoke (chamada de plataforma implícita), o tempo de execução não poderá determinar o destino da chamada e o valor de `functionId` será NULL. Para obter mais informações sobre o PInvoke implícito, consulte [usando a interoperabilidade C++ (PInvoke implícito)](/cpp/dotnet/using-cpp-interop-implicit-pinvoke).  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9e00337f-b307-4602-9bc3-965a8dbf02cd
 topic_type:
 - apiref
-ms.openlocfilehash: dc241324f5844610d7b86b7cb9668f84d4525395
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 904dcb707e704cfec2dba4e6587f7e3acaf7b538
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140659"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732319"
 ---
 # <a name="gethashfromhandle-function"></a>Função GetHashFromHandle
+
 Gera um hash sobre o conteúdo do arquivo com o identificador de arquivo especificado, usando o algoritmo de hash especificado.  
   
  Esta função foi preterida. Em vez disso, use o método [ICLRStrongName:: GetHashFromHandle](../hosting/iclrstrongname-gethashfromhandle-method.md) .  
@@ -39,6 +40,7 @@ HRESULT GetHashFromHandle (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `hFile`  
  no O identificador do arquivo a ser transformado em hash.  
   
@@ -49,21 +51,22 @@ HRESULT GetHashFromHandle (
  fora O buffer de hash retornado.  
   
  `cchHash`  
- no O tamanho máximo solicitado de `pbHash`.  
+ no O tamanho máximo solicitado de `pbHash` .  
   
  `pchHash`  
- fora O tamanho, em bytes, do `pbHash`retornado.  
+ fora O tamanho, em bytes, do retornado `pbHash` .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** StrongName. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MsCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Método GetHashFromHandle](../hosting/iclrstrongname-gethashfromhandle-method.md)
 - [Interface ICLRStrongName](../hosting/iclrstrongname-interface.md)

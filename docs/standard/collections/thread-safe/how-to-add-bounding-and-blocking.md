@@ -4,17 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - thread-safe collections, custom blocking collections
 ms.assetid: 4c2492de-3876-4873-b5a1-000bb404d770
-ms.openlocfilehash: 52ba264c5a0fc9cfffb00ee30b50f6b89dc1e660
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ba41176d87779fe673fa162d0bf04c10414cdd92
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825033"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733471"
 ---
 # <a name="how-to-add-bounding-and-blocking-functionality-to-a-collection"></a>Como: Adicionar a funcionalidade de delimitação e bloqueio a uma coleção
+
 Este exemplo mostra como adicionar a funcionalidade de delimitação e de bloqueio a uma classe de coleção personalizada por meio da implementação da interface <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType> na classe e do uso de uma instância da classe como o mecanismo de armazenamento interno para um <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>. Para obter mais informações sobre delimitação e bloqueio, veja [Visão geral de BlockingCollection](blockingcollection-overview.md).  
   
 ## <a name="example"></a>Exemplo  
+
  A classe de coleção personalizada é uma fila de prioridade básica na qual os níveis de prioridade são representados como uma matriz de objetos <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType>. Nenhuma solicitação adicional é executada dentro de cada fila.  
   
  No código do cliente, três tarefas são iniciadas. A primeira tarefa apenas monitora a digitação no teclado para permitir o cancelamento a qualquer momento durante a execução. A segunda tarefa é o thread produtor; ele adiciona novos itens na coleção de bloqueio e atribui uma prioridade com base em um valor aleatório a cada item. A terceira tarefa remove itens da coleção assim que eles ficarem disponíveis.  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 44eef087-f21f-4fe2-b481-f8a0ee022e7d
 topic_type:
 - apiref
-ms.openlocfilehash: f025f4c0bc0ec8e11decddcdf64be50f68955266
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 63a8d212a61bd73f44995f0e057eeff96f9a5554
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499799"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731937"
 ---
 # <a name="icorprofilercallback2garbagecollectionstarted-method"></a>Método ICorProfilerCallback2::GarbageCollectionStarted
+
 Notifica o criador de perfil de código que a coleta de lixo foi iniciada.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -35,6 +36,7 @@ HRESULT GarbageCollectionStarted(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `cGenerations`  
  no O número total de entradas na `generationCollected` matriz.  
   
@@ -47,11 +49,13 @@ HRESULT GarbageCollectionStarted(
  no Um valor da enumeração [COR_PRF_GC_REASON](cor-prf-gc-reason-enumeration.md) que indica o motivo pelo qual a coleta de lixo foi induzida.  
   
 ## <a name="remarks"></a>Comentários  
+
  Todos os retornos de chamada que pertencem a essa coleta de lixo ocorrerão entre o `GarbageCollectionStarted` retorno de chamada e o retorno de chamada [ICorProfilerCallback2:: GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md) correspondente. Esses retornos de chamada não precisam ocorrer no mesmo thread.  
   
  É seguro que o criador de perfil Inspecione objetos em seus locais originais durante o `GarbageCollectionStarted` retorno de chamada. O coletor de lixo começará a mover objetos após o retorno de `GarbageCollectionStarted` . Depois que o criador de perfil for retornado desse retorno de chamada, o criador de perfil deverá considerar que todas as IDs de objeto sejam inválidas até receber um `ICorProfilerCallback2::GarbageCollectionFinished` retorno de chamada.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

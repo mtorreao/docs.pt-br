@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d6a5fa8b-09c6-47a5-b60e-6cf2e355df30
 topic_type:
 - apiref
-ms.openlocfilehash: 320aaf074452fd02cd8ee8e80194a4c35b831eb4
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: bab8d446347646081cee635035e954da58c3550c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503374"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733874"
 ---
 # <a name="icorprofilercallbackfunctionunloadstarted-method"></a>Método ICorProfilerCallback::FunctionUnloadStarted
+
 Notifica o criador de perfil de que o tempo de execução começou a descarregar uma função.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -39,9 +40,11 @@ HRESULT FunctionUnloadStarted(
   \[in] a ID da função que está sendo descarregada.
 
 ## <a name="remarks"></a>Comentários  
+
  O valor do `functionId` parâmetro não é mais válido depois que esse método retorna ao chamador.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

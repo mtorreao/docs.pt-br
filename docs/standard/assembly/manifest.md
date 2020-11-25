@@ -9,16 +9,16 @@ helpviewer_keywords:
 - culture, assembly manifest
 - assemblies [.NET], metadata
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
-ms.openlocfilehash: 4b3bf6f7f6b8cf459a13dd0aca45069f82d01130
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 365c21c6ea35683d7d3fad777cab3527103903c3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687584"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731508"
 ---
 # <a name="assembly-manifest"></a>Manifesto do assembly
 
-Cada assembly, seja estático ou dinâmico, contém uma coleção de dados que descreve como os elementos do assembly se relacionam. O manifesto do assembly contém esses metadados do assembly. O manifesto de um assembly contém todos os metadados necessários para especificar os requisitos de versão e a identidade de segurança, além de todos os metadados necessários para definir o escopo do assembly e resolver referências a recursos e classes. O manifesto do assembly pode ser armazenado em um arquivo PE (um *. exe* ou *. dll* ) com o código MSIL (Microsoft Intermediate Language) ou em um arquivo PE autônomo que contém apenas informações de manifesto do assembly.  
+Cada assembly, seja estático ou dinâmico, contém uma coleção de dados que descreve como os elementos do assembly se relacionam. O manifesto do assembly contém esses metadados do assembly. O manifesto de um assembly contém todos os metadados necessários para especificar os requisitos de versão e a identidade de segurança, além de todos os metadados necessários para definir o escopo do assembly e resolver referências a recursos e classes. O manifesto do assembly pode ser armazenado em um arquivo PE (um *. exe* ou *. dll*) com o código MSIL (Microsoft Intermediate Language) ou em um arquivo PE autônomo que contém apenas informações de manifesto do assembly.  
   
  A ilustração a seguir mostra as diferentes maneiras nas quais o manifesto pode se armazenado.  
   
@@ -39,6 +39,7 @@ Cada assembly, seja estático ou dinâmico, contém uma coleção de dados que d
 - Renderiza o assembly autodescritivo.  
   
 ## <a name="assembly-manifest-contents"></a>Conteúdo do manifesto do assembly  
+
  A tabela a seguir mostra as informações contidas no manifesto do assembly. Os quatro primeiros itens: nome do assembly, número de versão, cultura e informações de nome forte compõem a identidade do assembly.  
   
 |Informações|Descrição|  
@@ -53,7 +54,7 @@ Cada assembly, seja estático ou dinâmico, contém uma coleção de dados que d
   
  Você pode adicionar ou alterar informações do manifesto do assembly usando os atributos do assembly em seu código. Você pode alterar informações sobre versão e atributos informativos, incluindo marca comercial, direitos autorais, produto, empresa e versão informativa. Para obter uma lista completa de atributos de assembly, consulte [set Assembly Attributes](set-attributes.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Conteúdos do assembly](contents.md)
 - [Controle de versão do assembly](versioning.md)

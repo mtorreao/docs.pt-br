@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: a3d7cf29-1414-49e6-8aae-9b3283c4f5f0
 topic_type:
 - apiref
-ms.openlocfilehash: 4bfad8b985a8ef059031464e99a8004842b276c0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4b0de5f9759491f1303edc978b1548e91214daf8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445578"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733744"
 ---
 # <a name="setassemblyprops-method"></a>Método SetAssemblyProps
+
 Atribui propriedades no nível do assembly.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,11 +37,12 @@ HRESULT SetAssemblyProps(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `AssemblyID`  
  ID do assembly.  
   
  `FileToken`  
- Arquivo que define a propriedade. Pode ser NULL se `AssemblyID` não indicar um netmodule não associado.  
+ Arquivo que define a propriedade. Pode ser NULL se não `AssemblyID` indicar um netmodule não associado.  
   
  `Option`  
  Indica a opção a ser modificada.  
@@ -48,13 +50,15 @@ HRESULT SetAssemblyProps(
  `Value`  
  Novo valor da opção.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  Retorna S_OK se o método tiver sucesso.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
+
  Requer ALink. h.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IALink](ialink-interface.md)
 - [Interface IALink2](ialink2-interface.md)

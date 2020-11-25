@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a3cea59d-7622-4323-897a-0a464c40f77f
 topic_type:
 - apiref
-ms.openlocfilehash: 7a3ad94a4149d6ebb70e077926771e28d7f82779
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 94c2c159cf386e00dfc0d1df97536d7ade53407e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84494807"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732938"
 ---
 # <a name="icorprofilermoduleenumnext-method"></a>Método ICorProfilerModuleEnum::Next
+
 Obtém o número especificado de módulos contíguos de uma coleção sequencial de módulos, começando na posição atual do enumerador na sequência.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -35,6 +36,7 @@ HRESULT Next([in]  ULONG      celt,
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `celt`  
  no O número de módulos a serem recuperados.  
   
@@ -45,14 +47,16 @@ HRESULT Next([in]  ULONG      celt,
  fora Um ponteiro para o número de elementos realmente retornados na `ids` matriz.  
   
 ## <a name="return-value"></a>Valor Retornado  
+
  Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`celt`elementos foram retornados.|  
+|S_OK|`celt` elementos foram retornados.|  
 |S_FALSE|Menos de `celt` elementos foram retornados, o que indica que a enumeração foi concluída.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

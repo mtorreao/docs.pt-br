@@ -8,14 +8,15 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-ms.openlocfilehash: 2391ad854b17ec117940a3d3568c40d6cf7f4725
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 0e6fe3430696c16405d4ae414436bb12882c08a5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84498967"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732341"
 ---
 # <a name="icorprofilercallback9dynamicmethodunloaded-method"></a>ICorProfilerCallback9: método ynamicMethodUnloaded de:D
+
 [Com suporte no .NET Framework 4.7.2 e versões posteriores]  
   
 Notifica o criador de perfil sempre que um método dinâmico é lixo coletado e subsequentemente descarregado.  
@@ -29,10 +30,12 @@ HRESULT DynamicMethodUnloaded(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
 [in] `functionId`  
 O identificador da função na memória que foi coletada pelo lixo e descarregada.
 
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

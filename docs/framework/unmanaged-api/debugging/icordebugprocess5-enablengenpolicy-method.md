@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b8e15ca-3c72-4685-a937-da4c739cb9e9
 topic_type:
 - apiref
-ms.openlocfilehash: fa3cbfee0359b8477f9efe88fe72837b86611bf7
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: e3dfd3cae83c7891d246ff3a81427c161cc0e2d1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212796"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731382"
 ---
 # <a name="icordebugprocess5enablengenpolicy-method"></a>Método ICorDebugProcess5::EnableNGENPolicy
+
 Define um valor que determina como um aplicativo carrega imagens nativas durante a execução em um depurador gerenciado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,15 +35,18 @@ HRESULT EnableNGENPolicy(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `ePolicy`  
  no Uma constante [CorDebugNGenPolicy](cordebugngenpolicy-enumeration.md) que determina como um aplicativo carrega imagens nativas durante a execução em um depurador gerenciado.  
   
 ## <a name="remarks"></a>Comentários  
- Se a política for definida com êxito, o método retornará `S_OK` . Se `ePolicy` estiver fora do intervalo dos valores enumerados definidos por [CorDebugNGenPolicy](cordebugngenpolicy-enumeration.md), o método retornará `E_INVALIDARG` e a chamada do método não terá nenhum efeito. Se a política do gerador de imagem nativa (NGen. exe) não puder ser atualizada, o método retornará `E_FAIL` .  
+
+ Se a política for definida com êxito, o método retornará `S_OK` . Se `ePolicy` estiver fora do intervalo dos valores enumerados definidos por [CorDebugNGenPolicy](cordebugngenpolicy-enumeration.md), o método retornará `E_INVALIDARG` e a chamada do método não terá nenhum efeito. Se a política do gerador de imagem nativa (Ngen.exe) não puder ser atualizada, o método retornará `E_FAIL` .  
   
  O `ICorDebugProcess5::EnableNGenPolicy` método pode ser chamado a qualquer momento durante o tempo de vida do processo. A política está em vigor para todos os módulos que são carregados depois que a política é definida.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

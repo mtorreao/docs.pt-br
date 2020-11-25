@@ -2,14 +2,15 @@
 title: Visão geral do modelo de objeto de esquema XML
 ms.date: 03/30/2017
 ms.assetid: 896a1e12-5655-42c6-8cdd-89c12862b34b
-ms.openlocfilehash: c54f92ede64e59478a0e9bfd919666caa9481137
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 62560b641c43f2210b052e9880f2d945dbae0c6f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819208"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733094"
 ---
 # <a name="xml-schema-object-model-overview"></a>Visão geral do modelo de objeto de esquema XML
+
 O modelo de objeto (SOM) de esquema no Microsoft.NET Framework é ricos API que permite a você criar, editar, e validar esquemas programaticamente. O SOM opera sobre documentos de esquema XML de forma semelhante à forma como Document Object Model (DOM) opera sobre documentos XML. Documentos de esquema XML são arquivos XML válidos, que carregados uma vez no SOM, transmitem significar sobre a estrutura e a validade de outros documentos XML que estão de acordo com o esquema.  
   
  Um esquema é um documento XML que define uma classe de documentos XML especificando a estrutura ou modelo de documentos XML para um esquema específico. Um esquema identifica as restrições no conteúdo de documentos XML, vocabulários e descreve regras (ou gramática) que documentos XML correspondentes devem seguir para ser considerado válidos esquema- com o esquema específico. Validação de um documento XML é o processo que garante que o documento está de acordo com a gramática especificada pelo esquema.  
@@ -29,6 +30,7 @@ O modelo de objeto (SOM) de esquema no Microsoft.NET Framework é ricos API que 
 - Editar dinamicamente um esquema que pode ser seguido e salvo para uso na validação de instância de documentos XML.  
   
 ## <a name="the-schema-object-model"></a>O modelo de objeto de esquema  
+
  O SOM consiste em um extenso conjunto de classes no namespace de <xref:System.Xml.Schema?displayProperty=nameWithType> que corresponde a elementos em um esquema XML. Por exemplo, os mapeamentos de elemento de `<xsd:schema>...</xsd:schema>` a <xref:System.Xml.Schema.XmlSchema?displayProperty=nameWithType> classe, e qualquer informação que pode ser contido em um elemento de `<xsd:schema/>` pode ser representadas usando a classe de <xref:System.Xml.Schema.XmlSchema> . Da mesma forma, `<xsd:element>...</xsd:element>` e os elementos de `<xsd:attribute>...</xsd:attribute>` a classes de <xref:System.Xml.Schema.XmlSchemaElement?displayProperty=nameWithType> e de <xref:System.Xml.Schema.XmlSchemaAttribute?displayProperty=nameWithType> respectivamente. Esse mapeamento continua para todos os elementos de um esquema XML que cria um modelo de objeto de esquema XML no espaço de <xref:System.Xml.Schema> ilustrada no diagrama a seguir.  
   
  ![Modelo de objeto do System.Xml.Schema](./media/xml-schema-object-model-overview/xml-schema-object-model.gif)  

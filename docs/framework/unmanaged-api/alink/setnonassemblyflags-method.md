@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: f8ba6fc8-f5aa-4066-ac96-56332758f5ec
 topic_type:
 - apiref
-ms.openlocfilehash: 2dcb363a2a84b3c2e0438e45663b96d9a0f83f61
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b7bcf530947c161decc9c01c07df310550d69738
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445544"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733757"
 ---
 # <a name="setnonassemblyflags-method"></a>Método SetNonAssemblyFlags
+
 Define sinalizadores que não são específicos do assembly.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -33,16 +34,19 @@ HRESULT SetNonAssemblyFlags(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `afFlags`  
  Sinalizadores ALink.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  Retorna S_OK se o método tiver sucesso.  
   
 ## <a name="requirements"></a>Requisitos  
+
  Requer ALink. h  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IALink](ialink-interface.md)
 - [Interface IALink2](ialink2-interface.md)

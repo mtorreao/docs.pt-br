@@ -6,12 +6,12 @@ helpviewer_keywords:
 - names [.NET], assemblies
 - assemblies [.NET], names
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
-ms.openlocfilehash: 136c3b7a06ce72be02e00bcc4d2354160178468c
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 9aa94b4ee54c0a663c9f38392d37369af9f27e48
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687577"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731443"
 ---
 # <a name="assembly-names"></a>Nomes de assembly
 
@@ -48,16 +48,17 @@ A versão corresponde ao número da versão de todos os assemblies de .NET Frame
 > O runtime trata nomes de assembly sem diferenciar maiúsculas de minúsculas ao associar a um assembly, mas preserva qualquer caso usado em um nome de assembly. Várias ferramentas no SDK do Windows lidam com nomes de assembly diferenciando maiúsculas de minúsculas. Para obter melhores resultados, gerencie nomes de assembly como se diferenciassem maiúsculas de minúsculas.
 
 ## <a name="name-application-components"></a>Nomear componentes de aplicativos
+
  O runtime não considera o nome do arquivo ao determinar a identidade de um assembly. A identidade do assembly, composta pelo nome, versão, cultura e nome forte do assembly, deve ficar clara para o runtime.
 
- Por exemplo, se você tiver um assembly chamado *myAssembly.exe* que faz referência a um assembly chamado *myAssembly.dll* , a associação ocorrerá corretamente se você executar *myAssembly.exe* . No entanto, se outro aplicativo for executado *myAssembly.exe* usando o método <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> , o tempo de execução determinará que `myAssembly` já está carregado quando *myAssembly.exe* solicitar a associação ao `myAssembly` . Nesse caso, *myAssembly.dll* nunca é carregado. Como *myAssembly.exe* não contém o tipo solicitado, ocorre um <xref:System.TypeLoadException> .
+ Por exemplo, se você tiver um assembly chamado *myAssembly.exe* que faz referência a um assembly chamado *myAssembly.dll*, a associação ocorrerá corretamente se você executar *myAssembly.exe*. No entanto, se outro aplicativo for executado *myAssembly.exe* usando o método <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> , o tempo de execução determinará que `myAssembly` já está carregado quando *myAssembly.exe* solicitar a associação ao `myAssembly` . Nesse caso, *myAssembly.dll* nunca é carregado. Como *myAssembly.exe* não contém o tipo solicitado, ocorre um <xref:System.TypeLoadException> .
 
  Para evitar esse problema, verifique se os assemblies que compõem seu aplicativo não têm o mesmo nome de assembly ou colocam assemblies com o mesmo nome em diretórios diferentes.
 
 > [!NOTE]
-> Em .NET Framework, se você colocar um assembly de nome forte no cache de assembly global, o nome do arquivo do assembly deverá corresponder ao nome do assembly, não incluindo a extensão de nome de arquivo, como *. exe* ou *. dll* . Por exemplo, se o nome de arquivo de um assembly for *myAssembly.dll* , o nome do assembly deverá ser `myAssembly` . Assemblies particulares implantados somente no diretório do aplicativo raiz podem ter um nome de assembly diferente do nome do arquivo.
+> Em .NET Framework, se você colocar um assembly de nome forte no cache de assembly global, o nome do arquivo do assembly deverá corresponder ao nome do assembly, não incluindo a extensão de nome de arquivo, como *. exe* ou *. dll*. Por exemplo, se o nome de arquivo de um assembly for *myAssembly.dll*, o nome do assembly deverá ser `myAssembly` . Assemblies particulares implantados somente no diretório do aplicativo raiz podem ter um nome de assembly diferente do nome do arquivo.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Como determinar o nome totalmente qualificado de um assembly](find-fully-qualified-name.md)
 - [Criar assemblies](create.md)

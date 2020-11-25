@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4a3e43ed-3ee3-4395-ab14-f78b903be13e
 topic_type:
 - apiref
-ms.openlocfilehash: b605419a291f7bee76ecad7e07be9a7a989f9fe9
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 960f8f1fe2315e068d599aa5a31e03f521b235a8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496003"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733861"
 ---
 # <a name="icorprofilerinfo4getobjectsize2-method"></a>Método ICorProfilerInfo4::GetObjectSize2
+
 Retorna o tamanho de um objeto especificado. Substitui o método [ICorProfilerInfo:: Getobjectize](icorprofilerinfo-getobjectsize-method.md) relatando tamanhos de objetos maiores do que o que pode ser expresso em um `ULONG` .  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,6 +35,7 @@ HRESULT GetObjectSize2(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `objectId`  
  no A ID do objeto.  
   
@@ -41,9 +43,11 @@ HRESULT GetObjectSize2(
  fora Um ponteiro para o tamanho do objeto, em bytes.  
   
 ## <a name="remarks"></a>Comentários  
+
  Objetos diferentes dos mesmos tipos geralmente têm o mesmo tamanho. No entanto, alguns tipos, como matrizes ou cadeias de caracteres, podem ter um tamanho diferente para cada objeto.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

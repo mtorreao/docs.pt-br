@@ -5,14 +5,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - I/O, common tasks
 ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
-ms.openlocfilehash: baabfc477ff8df30c9cac4db1b6d47e0e12f2f37
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5f9bc3034ec2ae77578db985240e586dd22bd69f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823388"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732197"
 ---
 # <a name="common-io-tasks"></a>Tarefas comuns de E/S
+
 O namespace <xref:System.IO> fornece várias classes que permitem que várias ações, como leitura e gravação, sejam realizadas em arquivos, diretórios e fluxos. Para obter mais informações, consulte [arquivo e fluxo de e/s](index.md).  
   
 ## <a name="common-file-tasks"></a>Tarefas comuns de arquivos  
@@ -53,6 +54,6 @@ O namespace <xref:System.IO> fornece várias classes que permitem que várias a�
   
 ## <a name="see-also"></a>Confira também
 
-- [E/S de arquivo e de fluxo](index.md)
+- [Arquivo e e/s de fluxo](index.md)
 - [Compor fluxos](composing-streams.md)
 - [E/s de arquivo assíncrono](asynchronous-file-i-o.md)

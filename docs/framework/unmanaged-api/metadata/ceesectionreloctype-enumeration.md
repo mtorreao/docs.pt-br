@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 124656f6-0dad-4ceb-9043-d3869ab65cde
 topic_type:
 - apiref
-ms.openlocfilehash: 78b30f624bd71234e8f1b56600b3a23d15fdf517
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: f7aa9699e9929608c90020c6b2d66c301fc11955
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84006020"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732704"
 ---
 # <a name="ceesectionreloctype-enumeration"></a>Enumeração CeeSectionRelocType
+
 Fornece valores para influenciar o tipo de `reloc` instrução emitido em uma chamada para [ICeeGen:: AddSectionReloc](iceegen-addsectionreloc-method.md).  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -50,7 +51,7 @@ typedef enum  {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |`srRelocAbsolute`|Gera apenas uma seção relativa `reloc` , enviando nada para uma seção. realocação.|  
 |`srRelocHighLow`|Gera um `reloc` para um local de tamanho de ponteiro. Isso é transformado em BASED_HIGHLOW ou BASED_DIR64 dependendo da plataforma.|  
@@ -69,11 +70,12 @@ typedef enum  {
 |`srRelocPtr`|Um valor que indica que o conteúdo de ajuste prévio da memória é um ponteiro em vez de um deslocamento de seção.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
