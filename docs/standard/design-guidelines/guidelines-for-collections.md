@@ -2,14 +2,15 @@
 title: Diretrizes para coleções
 ms.date: 10/22/2008
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
-ms.openlocfilehash: 2306462d933e71d0d23021a0e036e8cc23100c68
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a143e88be01bf2c8f45e25f26498d2d3ccbd98da
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821080"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706665"
 ---
 # <a name="guidelines-for-collections"></a>Diretrizes para coleções
+
 Qualquer tipo projetado especificamente para manipular um grupo de objetos com alguma característica comum pode ser considerado uma coleção. É quase sempre apropriado que tais tipos sejam implementados <xref:System.Collections.IEnumerable> ou <xref:System.Collections.Generic.IEnumerable%601> , portanto, nesta seção, apenas consideramos os tipos que implementam uma ou ambas as interfaces para serem coleções.
 
  ❌ Não use coleções com tipo fraco em APIs públicas.
@@ -31,6 +32,7 @@ Qualquer tipo projetado especificamente para manipular um grupo de objetos com a
  ❌ Não implemente ambos `IEnumerator<T>` e `IEnumerable<T>` no mesmo tipo. O mesmo se aplica às interfaces não genéricas `IEnumerator` e ao `IEnumerable` .
 
 ## <a name="collection-parameters"></a>Parâmetros de coleta
+
  ✔️ usar o tipo menos especializado possível como um tipo de parâmetro. A maioria dos membros que tomam coleções como parâmetros usa a `IEnumerable<T>` interface.
 
  ❌ Evite usar <xref:System.Collections.Generic.ICollection%601> ou <xref:System.Collections.ICollection> como um parâmetro apenas para acessar a `Count` propriedade.
@@ -38,6 +40,7 @@ Qualquer tipo projetado especificamente para manipular um grupo de objetos com a
  Em vez disso, considere usar `IEnumerable<T>` ou `IEnumerable` e verificar dinamicamente se o objeto implementa `ICollection<T>` ou `ICollection` .
 
 ## <a name="collection-properties-and-return-values"></a>Propriedades de coleção e valores de retorno
+
  ❌ Não forneça Propriedades de coleção configurável.
 
  Os usuários podem substituir o conteúdo da coleção limpando a coleção primeiro e, em seguida, adicionando o novo conteúdo. Se substituir a coleção inteira for um cenário comum, considere fornecer o `AddRange` método na coleção.
@@ -69,6 +72,7 @@ Qualquer tipo projetado especificamente para manipular um grupo de objetos com a
  A regra geral é que as coleções e as matrizes NULL e Empty (0 item) devem ser tratadas da mesma.
 
 ### <a name="snapshots-versus-live-collections"></a>Instantâneos versus coleções ao vivo
+
  As coleções que representam um estado em algum momento são chamadas de coleções de instantâneos. Por exemplo, uma coleção que contém linhas retornadas de uma consulta de banco de dados seria um instantâneo. As coleções que sempre representam o estado atual são chamadas de coleções dinâmicas. Por exemplo, uma coleção de `ComboBox` itens é uma coleção dinâmica.
 
  ❌ NÃO retornar coleções de instantâneos das propriedades. As propriedades devem retornar coleções dinâmicas.
@@ -80,6 +84,7 @@ Qualquer tipo projetado especificamente para manipular um grupo de objetos com a
  Em geral, todas as coleções que representam um recurso compartilhado (por exemplo, arquivos em um diretório) são voláteis. Essas coleções são muito difíceis ou impossíveis de implementar como coleções dinâmicas, a menos que a implementação seja simplesmente um enumerador somente de encaminhamento.
 
 ## <a name="choosing-between-arrays-and-collections"></a>Escolhendo entre matrizes e coleções
+
  ✔️ preferir coleções em matrizes.
 
  As coleções fornecem mais controle sobre o conteúdo, podem evoluir ao longo do tempo e são mais utilizáveis. Além disso, o uso de matrizes para cenários somente leitura é desencorajado porque o custo da clonagem da matriz é proibitivo. Estudos de usabilidade mostraram que alguns desenvolvedores se sentem mais confortáveis usando APIs baseadas em coleção.
@@ -93,6 +98,7 @@ Qualquer tipo projetado especificamente para manipular um grupo de objetos com a
  ❌ Não use matrizes para propriedades se a propriedade precisasse retornar uma nova matriz (por exemplo, uma cópia de uma matriz interna) toda vez que o getter da propriedade for chamado.
 
 ## <a name="implementing-custom-collections"></a>Implementando coleções personalizadas
+
  ✔️ Considere a herança de `Collection<T>` , `ReadOnlyCollection<T>` ou `KeyedCollection<TKey,TItem>` ao criar novas coleções.
 
  ✔️ implementar `IEnumerable<T>` ao criar novas coleções. Considere implementar `ICollection<T>` ou até mesmo `IList<T>` onde faz sentido.
@@ -106,6 +112,7 @@ Qualquer tipo projetado especificamente para manipular um grupo de objetos com a
  ❌ NÃO herde de coleções base não genéricas, como `CollectionBase` . Use `Collection<T>` , `ReadOnlyCollection<T>` e `KeyedCollection<TKey,TItem>` em vez disso.
 
 ### <a name="naming-custom-collections"></a>Nomeando coleções personalizadas
+
  Coleções (tipos que implementam `IEnumerable` ) são criadas principalmente por dois motivos: (1) para criar uma nova estrutura de dados com operações específicas da estrutura e, muitas vezes, características de desempenho diferentes das estruturas de dados existentes (por exemplo,,,  <xref:System.Collections.Generic.List%601> <xref:System.Collections.Generic.LinkedList%601> <xref:System.Collections.Generic.Stack%601> ) e (2) para criar uma coleção especializada para manter um conjunto específico de itens (por exemplo,  <xref:System.Collections.Specialized.StringCollection> ). As estruturas de dados são geralmente usadas na implementação interna de aplicativos e bibliotecas. Coleções especializadas são principalmente expostas em APIs (como tipos de propriedade e de parâmetro).
 
  ✔️ usar o sufixo "Dictionary" em nomes de abstrações implementando `IDictionary` ou `IDictionary<TKey,TValue>` .

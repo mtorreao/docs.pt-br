@@ -8,14 +8,15 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], members
 - member design guidelines [.NET Framework]
 ms.assetid: 0ce93180-1d7b-4f8c-9306-f828b2d66b8f
-ms.openlocfilehash: 512fc3b7fde93279995a67be2fc0b285ba235f16
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5070f45beccd89d6f051f1b1d8345390e915d471
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820937"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706587"
 ---
 # <a name="member-design-guidelines"></a>Diretrizes de design de membro
+
 Métodos, propriedades, eventos, construtores e campos são chamados coletivamente de membros. Os membros são, em última instância, o meio pelo qual a funcionalidade de estrutura é exposta aos usuários finais de uma estrutura.  
   
  Os membros podem ser virtuais ou não virtuais, concretos ou abstratos, estáticos ou de instância, e podem ter vários escopos diferentes de acessibilidade. Toda essa variedade fornece uma expressividade incrível, mas, ao mesmo tempo, requer cuidado com a parte do designer de Framework.  
@@ -23,12 +24,13 @@ Métodos, propriedades, eventos, construtores e campos são chamados coletivamen
  Este capítulo oferece diretrizes básicas que devem ser seguidas durante a criação de membros de qualquer tipo.  
   
 ## <a name="in-this-section"></a>Nesta seção  
+
  [Sobrecarga de membros](member-overloading.md)  
  [Design de propriedade](property.md)  
  [Design do Construtor](constructor.md)  
  [Design de eventos](event.md)  
  [Design de campo](field.md)  
- [Métodos de Extensão](extension-methods.md)  
+ [Métodos de extensão](extension-methods.md)  
  [Sobrecargas de operador](operator-overloads.md)  
  [Design de parâmetro](parameter-design.md)  
  *Partes © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  

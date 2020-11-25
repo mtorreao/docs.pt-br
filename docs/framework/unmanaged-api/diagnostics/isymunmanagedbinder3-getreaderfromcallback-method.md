@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4ef83bd2-3d8e-499e-8a12-d9d6fd6ced30
 topic_type:
 - apiref
-ms.openlocfilehash: 4a23e9aa259f430c0d0579657952fc6aba4c307c
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: d48c2bdd55e487038048f432c5586d49f393118c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441650"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706938"
 ---
 # <a name="isymunmanagedbinder3getreaderfromcallback-method"></a>Método ISymUnmanagedBinder3::GetReaderFromCallback
+
 Permite que o usuário implemente ou forneça por meio de um retorno de chamada `IID_IDiaReadExeAtRVACallback` ou `IID_IDiaReadExeAtOffsetCallback` para obter as informações do diretório de depuração da memória.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -38,6 +39,7 @@ HRESULT GetReaderFromCallback(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `importer`  
  no Um ponteiro para a interface de importação de metadados.  
   
@@ -56,10 +58,12 @@ HRESULT GetReaderFromCallback(
  `pRetVal`  
  fora Um ponteiro que é definido para a interface [ISymUnmanagedReader](isymunmanagedreader-interface.md) retornada.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl  
   
 ## <a name="see-also"></a>Confira também

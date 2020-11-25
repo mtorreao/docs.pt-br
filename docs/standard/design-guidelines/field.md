@@ -6,14 +6,15 @@ helpviewer_keywords:
 - read-only fields
 - member design guidelines, fields
 ms.assetid: 7cb4b0f3-7a10-4c93-b84d-733f7134fcf8
-ms.openlocfilehash: 6e58274f32ea129d3271c11e321bdbd454d2406a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4329ca9e74fa02411bd39755a432fc7d4858597d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821106"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706691"
 ---
 # <a name="field-design"></a>Design de campo
+
 O princípio do encapsulamento é uma das noções mais importantes no design orientado a objeto. Esse princípio determina que os dados armazenados dentro de um objeto devem ser acessíveis somente para esse objeto.
 
  Uma maneira útil de interpretar o princípio é dizer que um tipo deve ser projetado de forma que as alterações em campos desse tipo (nome ou alterações de tipo) possam ser feitas sem a quebra de código além dos membros do tipo. Essa interpretação implica imediatamente que todos os campos devem ser privados.

@@ -14,18 +14,19 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 - names [.NET Framework], acronyms
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
-ms.openlocfilehash: ff9efd40b630e8e25963b3d69b026feea2823ece
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 60832e823ed2f51fdd13c467dbbef4378de27885
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821093"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706704"
 ---
 # <a name="general-naming-conventions"></a>Convenções de nomenclatura gerais
 
 Esta seção descreve as convenções de nomenclatura gerais relacionadas à escolha do Word, diretrizes sobre como usar abreviações e acrônimos e recomendações sobre como evitar o uso de nomes específicos à linguagem.
 
 ## <a name="word-choice"></a>Opção de palavra
+
  ✔️ Escolha nomes de identificadores facilmente legíveis.
 
  Por exemplo, uma propriedade chamada `HorizontalAlignment` é mais legível do que `AlignmentHorizontal` .
@@ -43,6 +44,7 @@ Esta seção descreve as convenções de nomenclatura gerais relacionadas à esc
  De acordo com a regra 4 do Common Language Specification (CLS), todos os idiomas compatíveis devem fornecer um mecanismo que permita o acesso a itens nomeados que usam uma palavra-chave desse idioma como um identificador. O C#, por exemplo, usa o sinal @ como um mecanismo de escape nesse caso. No entanto, ainda é uma boa ideia evitar palavras-chave comuns, pois é muito mais difícil usar um método com a sequência de escape de um sem ele.
 
 ## <a name="using-abbreviations-and-acronyms"></a>Usando abreviações e acrônimos
+
  ❌ Não use abreviações ou contratações como parte dos nomes de identificador.
 
  Por exemplo, use `GetWindow` em vez de `GetWin` .
@@ -50,6 +52,7 @@ Esta seção descreve as convenções de nomenclatura gerais relacionadas à esc
  ❌ Não use nenhum acrônimo que não seja amplamente aceito e, mesmo que eles estejam, somente quando necessário.
 
 ## <a name="avoiding-language-specific-names"></a>Evitando nomes de Language-Specific
+
  ✔️ usam nomes semanticamente interessantes em vez de palavras-chave específicas de idioma para nomes de tipos.
 
  Por exemplo, `GetLength` é um nome melhor do que `GetInt` .
@@ -78,6 +81,7 @@ Esta seção descreve as convenções de nomenclatura gerais relacionadas à esc
  ✔️ usar um nome comum, como `value` ou `item` , em vez de repetir o nome do tipo, nos casos raros em que um identificador não tem significado semântico e o tipo do parâmetro não é importante.
 
 ## <a name="naming-new-versions-of-existing-apis"></a>Nomeando novas versões de APIs existentes
+
  ✔️ usar um nome semelhante à antiga API ao criar novas versões de uma API existente.
 
  Isso ajuda a destacar a relação entre as APIs.

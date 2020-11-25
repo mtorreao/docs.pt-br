@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3eb41151-a228-43e3-ba8f-e6dd3ceb8542
 topic_type:
 - apiref
-ms.openlocfilehash: 332d60418c744a9391c7c0afc20248c2239b090c
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 4436e4528c1dc486eb5c443c5a9467ac69a26c7d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441614"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706925"
 ---
 # <a name="isymunmanagedconstantgetsignature-method"></a>Método ISymUnmanagedConstant::GetSignature
+
 Obtém a assinatura da constante.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,6 +37,7 @@ HRESULT GetSignature(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `cSig`  
  no O comprimento do buffer para o qual o `pcSig` parâmetro aponta.  
   
@@ -45,10 +47,12 @@ HRESULT GetSignature(
  `sig`  
  fora O buffer que armazena a assinatura.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Confira também
