@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: be83af41-3dec-4c77-8529-9dd6b8042af6
 topic_type:
 - apiref
-ms.openlocfilehash: db07e2afa64ea2bf80416e6ab8cba5a4dcdc8dcf
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: fd482bfe8e95a53cafd1530c88f09df146a1b150
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499669"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729428"
 ---
 # <a name="icorprofilercallback3-interface"></a>Interface ICorProfilerCallback3
+
 Fornece métodos de retorno de chamada que o Common Language Runtime (CLR) usa para comunicar a anexação e desanexar informações de estado ao criador de perfil.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método InitializeForAttach](icorprofilercallback3-initializeforattach-method.md)|Chamado pelo CLR para dar ao criador de perfil uma oportunidade de inicializar seu estado após uma operação de anexação.|  
 |[Método ProfilerAttachComplete](icorprofilercallback3-profilerattachcomplete-method.md)|Chamado pelo CLR para indicar que o criador de perfil agora pode chamar os métodos de atualização.|  
@@ -35,6 +36,7 @@ Fornece métodos de retorno de chamada que o Common Language Runtime (CLR) usa p
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

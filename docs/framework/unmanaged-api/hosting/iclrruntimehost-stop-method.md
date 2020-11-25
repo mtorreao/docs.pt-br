@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b8fd7daf-8f8d-4ad7-92ae-019db244cec1
 topic_type:
 - apiref
-ms.openlocfilehash: 55cd444ffedc92ba74239421ae548ffd930e6ab7
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 50e777bde34eb0122ca537da4b73a5e507ce7a7b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703935"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728791"
 ---
 # <a name="iclrruntimehoststop-method"></a>Método ICLRRuntimeHost::Stop
+
 Interrompe a execução do código pelo Common Language Runtime (CLR).  
   
 > [!IMPORTANT]
@@ -38,7 +39,7 @@ HRESULT Stop();
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`Stop`retornado com êxito.|  
+|S_OK|`Stop` retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O CLR não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -46,14 +47,15 @@ HRESULT Stop();
 |E_FAIL|Ocorreu uma falha catastrófica desconhecida. Se um método retornar E_FAIL, o CLR não poderá mais ser usado no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICLRRuntimeHost](iclrruntimehost-interface.md)

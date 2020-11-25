@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b8685c1e-b80c-4198-8eb3-748d6f48a99e
 topic_type:
 - apiref
-ms.openlocfilehash: 8409e56b5ec4dbe47035a0555b6b7ce175b517ee
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c34215f48190e60bd1a851f31b8b23f09491f4e1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84490972"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729233"
 ---
 # <a name="imetadataimportgetpinvokemap-method"></a>Método IMetaDataImport::GetPinvokeMap
+
 Obtém um token ModuleRef para representar o assembly de destino de uma chamada PInvoke.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -39,6 +40,7 @@ HRESULT GetPinvokeMap (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `tk`  
  no Um token FieldDef ou MethodDef para obter os metadados de mapeamento do PInvoke.  
   
@@ -58,11 +60,12 @@ HRESULT GetPinvokeMap (
  fora Um ponteiro para um token de ModuleRef que representa a biblioteca de objetos de destino não gerenciado.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 8263e75d-251b-4abc-8a1a-c62884142232
 topic_type:
 - apiref
-ms.openlocfilehash: 09c6431ec885c8b797dc9bb5f5c3ffe21890ccc7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f3872a2b03d3b22d695af1c104e9ae8ba8856990
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73107948"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728999"
 ---
 # <a name="ienumdefinitionidentity-interface"></a>Interface IEnumDefinitionIdentity
-Serve como o enumerador para uma coleção de objetos `IDefinitionIdentity`.  
+
+Serve como o enumerador para uma coleção de `IDefinitionIdentity` objetos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,21 +52,22 @@ IEnumDefinitionIdentity : IUnknown {
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
-|`IEnumDefinitionIdentity::Clone`|Obtém um ponteiro de interface para um novo objeto `IEnumDefinitionIdentity` que contém os mesmos membros que este `IEnumDefinitionIdentity`.|  
-|`IEnumDefinitionIdentity::Next`|Obtém o número especificado de objetos de `IDefinitionIdentity`, começando na posição atual.|  
-|`IEnumDefinitionIdentity::Reset`|Move o ponteiro de instrução para o início deste `IEnumDefinitionIdentity`.|  
+|`IEnumDefinitionIdentity::Clone`|Obtém um ponteiro de interface para um novo `IEnumDefinitionIdentity` objeto que contém os mesmos membros que isso `IEnumDefinitionIdentity` .|  
+|`IEnumDefinitionIdentity::Next`|Obtém o número especificado de `IDefinitionIdentity` objetos, começando na posição atual.|  
+|`IEnumDefinitionIdentity::Reset`|Move o ponteiro de instrução para o início dele `IEnumDefinitionIdentity` .|  
 |`IEnumDefinitionIdentity::Skip`|Move o ponteiro de instrução para frente pelo número especificado de elementos, começando na posição atual.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Isolamento. h  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interfaces de fusão](fusion-interfaces.md)
 - [Interface IDefinitionIdentity](idefinitionidentity-interface.md)

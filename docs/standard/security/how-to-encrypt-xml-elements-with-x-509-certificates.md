@@ -13,12 +13,12 @@ helpviewer_keywords:
 - X.509 certificates
 - certificates, X.509 certificates
 ms.assetid: 761f1c66-631c-47af-aa86-ad9c50cfa453
-ms.openlocfilehash: 5007404c1e6e872c169ce7ce71425f14d20d3a25
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a336997a8cb81f1838d9c5b1ec82bbb04326ed0c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820183"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729324"
 ---
 # <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>Como: criptografar elementos XML com certificados X.509
 
@@ -36,7 +36,7 @@ Este exemplo é apropriado para situações em que vários aplicativos precisam 
 
 Para executar este exemplo, você precisa criar um certificado de teste e salvá-lo em um repositório de certificados. As instruções para essa tarefa são fornecidas somente para a [ferramenta de criação de certificado do Windows (Makecert.exe)](/windows/desktop/SecCrypto/makecert).
 
-1. Use [Makecert.exe](/windows/desktop/SecCrypto/makecert) para gerar um certificado X. 509 de teste e colocá-lo no repositório de usuários local. Você deve gerar uma chave do Exchange e deve tornar a chave exportável. Execute o seguinte comando:  
+1. Use [Makecert.exe](/windows/desktop/SecCrypto/makecert) para gerar um certificado X. 509 de teste e colocá-lo no repositório de usuários local. Você deve gerar uma chave do Exchange e deve tornar a chave exportável. Execute o comando a seguir:  
   
     ```console  
     makecert -r -pe -n "CN=XML_ENC_TEST_CERT" -b 01/01/2020 -e 01/01/2025 -sky exchange -ss my  
@@ -93,6 +93,7 @@ Para executar este exemplo, você precisa criar um certificado de teste e salvá
      [!code-vb[HowToEncryptXMLElementX509#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementX509/vb/sample.vb#11)]  
   
 ## <a name="example"></a>Exemplo  
+
  Este exemplo pressupõe que um arquivo chamado `"test.xml"` existe no mesmo diretório que o programa compilado.  Ele também pressupõe que `"test.xml"` contém um `"creditcard"` elemento.  Você pode inserir o XML a seguir em um arquivo chamado `test.xml` e usá-lo com este exemplo.  
   
 ```xml  

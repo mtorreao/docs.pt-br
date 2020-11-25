@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 25788ed1-0ce3-4b97-96fc-88f8997812a3
 topic_type:
 - apiref
-ms.openlocfilehash: 253fd17178c03bc0c4d8ea031888a404ad56f876
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: e3ea3c0fd65750d52c0cfb10edbe18b1512f724b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615274"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729012"
 ---
 # <a name="isymunmanagedvariablegetaddressfield1-method"></a>Método ISymUnmanagedVariable::GetAddressField1
+
 Obtém o primeiro campo de endereço para essa variável. Seu significado depende do tipo de endereço.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -33,13 +34,16 @@ HRESULT GetAddressField1(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pRetVal`  
  fora Um ponteiro para um `ULONG32` que recebe o primeiro campo de endereço.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Confira também

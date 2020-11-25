@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3d5b642e-7ef2-428b-a5ae-509c35ed461a
 topic_type:
 - apiref
-ms.openlocfilehash: 18a5e337b6026a20a95b1c29f3d7bda5187efc66
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 3d3d4af8e9ee073c0aefec418a3b53c4589adf0d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795853"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729103"
 ---
 # <a name="cordebugintercept-enumeration"></a>Enumeração CorDebugIntercept
+
 Indica os tipos de código que podem ser interceptados (ou seja, percorridos).  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -40,7 +41,7 @@ typedef enum CorDebugIntercept {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |`INTERCEPT_NONE`|Nenhum código pode ser interceptado.|  
 |`INTERCEPT_CLASS_INIT`|Um construtor pode ser interceptado.|  
@@ -51,9 +52,11 @@ typedef enum CorDebugIntercept {
 |`INTERCEPT_ALL`|Todo o código pode ser interceptado.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Use o método [ICorDebugStepper:: SetInterceptMask](icordebugstepper-setinterceptmask-method.md) para estabelecer os tipos de código que podem ser interceptados.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -62,6 +65,6 @@ typedef enum CorDebugIntercept {
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Declarando enumerações](debugging-enumerations.md)

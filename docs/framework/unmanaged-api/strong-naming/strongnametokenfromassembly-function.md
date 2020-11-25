@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0a4b47ee-02f6-4a98-864e-a6f11ca3f2d9
 topic_type:
 - apiref
-ms.openlocfilehash: 6b9eca3f2f0267870866874ea27dc65812795f41
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0feb180befd575dce20a83ddc89ebf13f87f3810
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121126"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728544"
 ---
 # <a name="strongnametokenfromassembly-function"></a>Função StrongNameTokenFromAssembly
+
 Cria um token de nome forte do arquivo do assembly especificado.  
   
  Esta função foi preterida. Em vez disso, use o método [ICLRStrongName:: StrongNameTokenFromAssembly](../hosting/iclrstrongname-strongnametokenfromassembly-method.md) .  
@@ -37,6 +38,7 @@ BOOLEAN StrongNameTokenFromAssembly (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `wszFilePath`  
  no O caminho para o arquivo executável portátil (PE) para o assembly.  
   
@@ -46,26 +48,29 @@ BOOLEAN StrongNameTokenFromAssembly (
  `pcbStrongNameToken`  
  fora O tamanho, em bytes, do token de nome forte.  
   
-## <a name="return-value"></a>Valor retornado  
- `true` após a conclusão bem-sucedida; caso contrário, `false`.  
+## <a name="return-value"></a>Valor Retornado  
+
+ `true` após a conclusão bem-sucedida; caso contrário, `false` .  
   
 ## <a name="remarks"></a>Comentários  
+
  Um token de nome forte é a forma abreviada de uma chave pública. O token é um hash de 64 bits que é criado a partir da chave pública usada para assinar o assembly. O token é uma parte do nome forte para o assembly e pode ser lido nos metadados do assembly.  
   
  Depois que o token é criado, você deve chamar a função [StrongNameFreeBuffer](strongnamefreebuffer-function.md) para liberar a memória alocada.  
   
- Se a função `StrongNameTokenFromAssembly` não for concluída com êxito, chame a função [StrongNameErrorInfo](strongnameerrorinfo-function.md) para recuperar o último erro gerado.  
+ Se a `StrongNameTokenFromAssembly` função não for concluída com êxito, chame a função [StrongNameErrorInfo](strongnameerrorinfo-function.md) para recuperar o último erro gerado.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** StrongName. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso no mscoree.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Método StrongNameTokenFromAssembly](../hosting/iclrstrongname-strongnametokenfromassembly-method.md)
 - [Método StrongNameTokenFromAssemblyEx](../hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)

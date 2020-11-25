@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 56e718b4-fabd-418b-a5b3-3cc33c745683
 topic_type:
 - apiref
-ms.openlocfilehash: d4a254853256e1a1440f5588418b94e39eabcc9a
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: dd1608badf553650b05b7de98d9bbcd76b2f3edf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894104"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728427"
 ---
 # <a name="icordebugclassgetstaticfieldvalue-method"></a>Método ICorDebugClass::GetStaticFieldValue
+
 Obtém o valor do campo estático especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,8 +37,9 @@ HRESULT GetStaticFieldValue (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `fieldDef`  
- no Um token `Def` de campo que faz referência ao campo a ser recuperado.  
+ no Um token de campo `Def` que faz referência ao campo a ser recuperado.  
   
  `pFrame`  
  no Um ponteiro para um objeto ICorDebugFrame que representa o quadro a ser usado para ambiguidade entre os estáticos de thread, contexto ou domínio de aplicativo.  
@@ -48,9 +50,11 @@ HRESULT GetStaticFieldValue (
  fora Um ponteiro para o endereço de um objeto ICorDebugValue que representa o valor do campo estático.  
   
 ## <a name="remarks"></a>Comentários  
- Para tipos com parâmetros, o valor de um campo estático é relativo à instanciação específica. Portanto, se o construtor de classe usar parâmetros do <xref:System.Type>tipo, chame [ICorDebugType:: GetStaticFieldValue](icordebugtype-getstaticfieldvalue-method.md) em `ICorDebugClass::GetStaticFieldValue`vez de.  
+
+ Para tipos com parâmetros, o valor de um campo estático é relativo à instanciação específica. Portanto, se o construtor de classe usar parâmetros do tipo <xref:System.Type> , chame [ICorDebugType:: GetStaticFieldValue](icordebugtype-getstaticfieldvalue-method.md) em vez de `ICorDebugClass::GetStaticFieldValue` .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

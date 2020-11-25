@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5f28cc4e-7176-4e00-aa1f-58ae6ee52fe4
 topic_type:
 - apiref
-ms.openlocfilehash: 924d032c42dca95b253acea167d55dd6e2b811e5
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: ef043dd2308c4b76e975bd2ad1f68725579e8fc9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703341"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728897"
 ---
 # <a name="iclrruntimehostexecuteapplication-method"></a>Método ICLRRuntimeHost::ExecuteApplication
+
 Usado em cenários de implantação ClickOnce baseados em manifesto para especificar o aplicativo a ser ativado em um novo domínio. Para obter mais informações sobre esses cenários, consulte [segurança e implantação do ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment).  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -39,6 +40,7 @@ HRESULT ExecuteApplication(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pwzAppFullName`  
  no O nome completo do aplicativo, conforme definido para <xref:System.ApplicationIdentity> .  
   
@@ -57,11 +59,11 @@ HRESULT ExecuteApplication(
  `pReturnValue`  
  fora O valor retornado do ponto de entrada do aplicativo.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`ExecuteApplication`retornado com êxito.|  
+|S_OK|`ExecuteApplication` retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -69,7 +71,8 @@ HRESULT ExecuteApplication(
 |E_FAIL|Ocorreu uma falha catastrófica desconhecida. Se um método retornar E_FAIL, o CLR não poderá mais ser usado no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
- `ExecuteApplication`é usado para ativar aplicativos ClickOnce em um domínio de aplicativo recém-criado.  
+
+ `ExecuteApplication` é usado para ativar aplicativos ClickOnce em um domínio de aplicativo recém-criado.  
   
  O `pReturnValue` parâmetro de saída é definido como o valor retornado pelo aplicativo. Se você fornecer um valor de NULL para `pReturnValue` , `ExecuteApplication` o não falhará, mas não retornará um valor.  
   
@@ -77,11 +80,12 @@ HRESULT ExecuteApplication(
 > Não chame o método [Start Method](iclrruntimehost-start-method.md) antes de chamar o `ExecuteApplication` método para ativar um aplicativo baseado em manifesto. Se o `Start` método for chamado primeiro, a `ExecuteApplication` chamada do método falhará.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

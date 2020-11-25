@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c8840be-ffea-447f-9c8d-178f1eaf8d06
 topic_type:
 - apiref
-ms.openlocfilehash: 5e5bf097a4b1e366fff807595b22c4696a91cf43
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 9e907450b4ae985ee30d9958eec8baba797b495a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614546"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728596"
 ---
 # <a name="isymunmanagedencupdategetlocalvariables-method"></a>Método ISymUnmanagedENCUpdate::GetLocalVariables
+
 Obtém as variáveis locais.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,6 +38,7 @@ HRESULT GetLocalVariables(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `mdMethodToken`  
  no O token de metadados do método.  
   
@@ -49,10 +51,12 @@ HRESULT GetLocalVariables(
  `pceltFetched`  
  fora Um ponteiro para um `ULONG` que recebe o tamanho do `rgLocals` buffer necessário para conter os locais.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Confira também

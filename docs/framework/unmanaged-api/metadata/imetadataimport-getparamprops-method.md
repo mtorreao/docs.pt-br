@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4d5e5f00-bcab-4f41-b191-176511a186a7
 topic_type:
 - apiref
-ms.openlocfilehash: c2abf2813c6e1a9db4264bded32d9cb9c58a2bcb
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a16621f4c9b06f049239dc4e2335d70a167dd756
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84491050"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729259"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>Método IMetaDataImport::GetParamProps
+
 Obtém valores de metadados para o parâmetro referenciado pelo token ParamDef especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -43,6 +44,7 @@ HRESULT GetParamProps (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `tk`  
  no Um token ParamDef que representa o parâmetro para o qual retornar metadados.  
   
@@ -78,11 +80,12 @@ HRESULT GetParamProps (
 Os valores de sequência em `pulSequence` começam com 1 para parâmetros. Um valor de retorno tem um número de sequência de 0.
 
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

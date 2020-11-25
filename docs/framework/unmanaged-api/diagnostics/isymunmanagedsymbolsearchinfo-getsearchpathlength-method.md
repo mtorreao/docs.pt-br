@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 274e73cf-8333-47ba-ac12-70214e2b0112
 topic_type:
 - apiref
-ms.openlocfilehash: 0be7297fbb71302035e71fbbf2c8b5e2a7faa2da
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 9803094753dee27318af9981bd2e2ad196d434e5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615287"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729064"
 ---
 # <a name="isymunmanagedsymbolsearchinfogetsearchpathlength-method"></a>Método ISymUnmanagedSymbolSearchInfo::GetSearchPathLength
+
 Obtém o comprimento do caminho de pesquisa.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -33,13 +34,16 @@ HRESULT GetSearchPathLength(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pcchPath`  
  fora Um ponteiro para um `ULONG32` que recebe o tamanho, em caracteres, do buffer necessário para conter o comprimento do caminho de pesquisa.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Confira também

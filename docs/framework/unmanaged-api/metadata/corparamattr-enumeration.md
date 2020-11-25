@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: a7ff90ad-dad8-48e8-917d-4aa9a118cbc8
 topic_type:
 - apiref
-ms.openlocfilehash: e8afcb972cab9757458c7032c3678d45c6418fac
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 6f5d022a96fa021cb28dbbb67d0b53e08f77498c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007566"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729273"
 ---
 # <a name="corparamattr-enumeration"></a>Enumeração CorParamAttr
+
 Contém valores que descrevem os metadados de um parâmetro de método.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -44,7 +45,7 @@ typedef enum CorParamAttr {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |`pdIn`|Especifica que o parâmetro é passado para a chamada de método.|  
 |`pdOut`|Especifica que o parâmetro é passado do retorno do método.|  
@@ -55,6 +56,7 @@ typedef enum CorParamAttr {
 |`pdUnused`|Não utilizado.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorHdr. h  

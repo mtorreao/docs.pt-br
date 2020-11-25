@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ee5c848a-eac4-4462-b07a-07ccd76a75df
 topic_type:
 - apiref
-ms.openlocfilehash: 3433f5f69927afb501c2596571f138e3a69fabb6
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 59f450117d1a52ce7b900d9d67330fc98281afa0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894119"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728414"
 ---
 # <a name="icordebugclassgettoken-method"></a>Método ICorDebugClass::GetToken
+
 Obtém o `TypeDef` token de metadados que faz referência à definição dessa classe.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,10 +35,12 @@ HRESULT GetToken (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pTypeDef`  
  fora Um ponteiro para um `mdTypeDef` token que faz referência à definição dessa classe.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -46,6 +49,6 @@ HRESULT GetToken (
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interfaces de metadados](../metadata/metadata-interfaces.md)

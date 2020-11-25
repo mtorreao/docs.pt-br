@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 01837955-ce1e-4068-b338-fd473bd77d1d
 topic_type:
 - apiref
-ms.openlocfilehash: 273922e00c3e5319d5a03652cc77b69f4479ea67
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5d98481d7934b4c96178aaa32fb0f9378eb359fc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503517"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729157"
 ---
 # <a name="imetadataimportgettyperefprops-method"></a>Método IMetaDataImport::GetTypeRefProps
+
 Obtém os metadados associados com o <xref:System.Type> referido pelo token TypeRef especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -38,6 +39,7 @@ HRESULT GetTypeRefProps (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `tr`  
  no O token TypeRef que representa o tipo para o qual retornar metadados.  
   
@@ -54,11 +56,12 @@ HRESULT GetTypeRefProps (
  fora O tamanho retornado em caracteres largos de `szName` .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

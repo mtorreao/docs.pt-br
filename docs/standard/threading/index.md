@@ -6,12 +6,12 @@ helpviewer_keywords:
 - threading [.NET], about threading
 - managed threading
 ms.assetid: 7b46a7d9-c6f1-46d1-a947-ae97471bba87
-ms.openlocfilehash: 568b93fbfb6f757719d44a07b99ac18375ed539a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 28ba05c345d22b14512d280f3855934d727b3142
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826333"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728440"
 ---
 # <a name="managed-threading"></a>Threading gerenciado
 
@@ -21,6 +21,7 @@ Independentemente de você estar desenvolvendo para computadores com um processa
 > A partir do .NET Framework 4, a programação multithread é bastante simplificada com as <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> classes e, o [Parallel LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md), as classes de coleção simultâneas no <xref:System.Collections.Concurrent?displayProperty=nameWithType> namespace e um modelo de programação baseado no conceito de tarefas em vez de threads. Para obter mais informações, consulte [programação paralela](../parallel-programming/index.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
+
  [Noções básicas de threading gerenciado](managed-threading-basics.md)  
  Fornece uma visão geral de threading gerenciado e descreve quando usar vários threads.  
   
@@ -34,6 +35,7 @@ Independentemente de você estar desenvolvendo para computadores com um processa
  Descreve as classes gerenciadas que você pode usar para sincronizar as atividades de threads e os dados de objetos acessados em threads diferentes, bem como fornece uma visão geral dos threads de pool do thread.  
   
 ## <a name="reference"></a>Referência  
+
  <xref:System.Threading>  
  Contém classes para uso e sincronização de threads gerenciados.  
   
@@ -44,6 +46,7 @@ Independentemente de você estar desenvolvendo para computadores com um processa
  Contém classes para criação e agendamento de tarefas de processamento simultâneo.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
+
  [Domínios do aplicativo](../../framework/app-domains/application-domains.md)  
  Fornece uma visão geral de domínios do aplicativo e seu uso pelo Common Language Infrastructure.  
   

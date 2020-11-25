@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e2b0e2db-3fae-4b56-844e-d30a125a660c
 topic_type:
 - apiref
-ms.openlocfilehash: 505c16cb7ead7950b6d2d6d401730cc3368fb6aa
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 4c28c4a5cc64b20c9ac9c57e1aef5e7b90a20e01
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703298"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728882"
 ---
 # <a name="iclrruntimehostexecuteinappdomain-method"></a>Método ICLRRuntimeHost::ExecuteInAppDomain
+
 Especifica o <xref:System.AppDomain> no qual executar o código gerenciado especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,6 +37,7 @@ HRESULT ExecuteInAppDomain(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `AppDomainId`  
  no A ID numérica do <xref:System.AppDomain> na qual executar o método especificado.  
   
@@ -45,11 +47,11 @@ HRESULT ExecuteInAppDomain(
  `cookie`  
  no Um ponteiro para uma memória opaca alocada pelo chamador. Esse parâmetro é passado pelo Common Language Runtime (CLR) para o retorno de chamada do domínio. Não é uma memória heap gerenciada pelo tempo de execução; a alocação e o tempo de vida dessa memória são controlados pelo chamador.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`ExecuteInAppDomain`retornado com êxito.|  
+|S_OK|`ExecuteInAppDomain` retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O CLR não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -57,14 +59,16 @@ HRESULT ExecuteInAppDomain(
 |E_FAIL|Ocorreu uma falha catastrófica desconhecida. Se um método retornar E_FAIL, o CLR não poderá mais ser usado no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
- `ExecuteInAppDomain`permite que o host assuma o controle sobre qual gerenciado <xref:System.AppDomain> o método gerenciado especificado deve ser executado. Você pode obter o valor do identificador de um domínio de aplicativo, que corresponde ao valor da <xref:System.AppDomain.Id%2A> propriedade, chamando o [método GetCurrentAppDomainId](iclrruntimehost-getcurrentappdomainid-method.md).  
+
+ `ExecuteInAppDomain` permite que o host assuma o controle sobre qual gerenciado <xref:System.AppDomain> o método gerenciado especificado deve ser executado. Você pode obter o valor do identificador de um domínio de aplicativo, que corresponde ao valor da <xref:System.AppDomain.Id%2A> propriedade, chamando o [método GetCurrentAppDomainId](iclrruntimehost-getcurrentappdomainid-method.md).  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

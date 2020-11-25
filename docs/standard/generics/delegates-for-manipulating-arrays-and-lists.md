@@ -9,17 +9,19 @@ helpviewer_keywords:
 - lists [.NET], generic delegates
 - generics [.NET], delegates
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
-ms.openlocfilehash: b3b18a2efc4dba432ee241d764c1a81101796baf
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5356671b4f1c48c125e49c35a2f8ddc5ea1ca26b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827276"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728505"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>Delegados genéricos para manipulação de matrizes e listas
+
 Este tópico fornece uma visão geral de delegados genéricos para conversões, predicados de pesquisa e ações a serem tomadas nos elementos de uma matriz ou coleção.  
   
 ## <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>Delegados genéricos para manipulação de matrizes e listas  
+
  O delegado <xref:System.Action%601> genérico representa um método que executa uma ação em um elemento do tipo especificado. Você pode criar um método que executa a ação desejada no elemento, criar uma instância do delegado <xref:System.Action%601> para representar esse método e, em seguida, passar a matriz e o delegado para o método <xref:System.Array.ForEach%2A?displayProperty=nameWithType> genérico estático. O método é chamado para cada elemento da matriz.  
   
  A classe genérica <xref:System.Collections.Generic.List%601> também fornece um método <xref:System.Collections.Generic.List%601.ForEach%2A> que usa o delegado <xref:System.Action%601>. Este método não é genérico.  
@@ -36,6 +38,7 @@ Este tópico fornece uma visão geral de delegados genéricos para conversões, 
  O delegado <xref:System.Converter%602> genérico permite que você defina uma conversão entre dois tipos e para converter uma matriz de um tipo em uma matriz do outro ou para converter uma lista de um tipo em uma lista do outro. Crie um método que converte os elementos de uma lista existente para um novo tipo, crie uma instância delegada para representar o método e usar o método <xref:System.Array.ConvertAll%2A?displayProperty=nameWithType> estático genérico para produzir uma matriz do novo tipo da matriz original, ou o método de instância <xref:System.Collections.Generic.List%601.ConvertAll%60%601%28System.Converter%7B%600%2C%60%600%7D%29?displayProperty=nameWithType> genérico para produzir uma lista do novo tipo da lista original.  
   
 ### <a name="chaining-delegates"></a>Encadeando delegados  
+
  Muitos dos métodos que usam esses delegados retornam uma matriz ou lista, que pode ser passada para outro método. Por exemplo, se você quiser selecionar determinados elementos de uma matriz, converta esses elementos em um novo tipo e salve-os em uma nova matriz, você pode passar a matriz retornada pelo método <xref:System.Array.FindAll%2A> genérico para o método <xref:System.Array.ConvertAll%2A> genérico. Se o novo tipo de elemento não tiver uma ordem de classificação natural, você poderá passar a matriz retornada pelo método <xref:System.Array.ConvertAll%2A> genérico para o método <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Comparison%7B%60%600%7D%29> genérico.  
   
 ## <a name="see-also"></a>Confira também

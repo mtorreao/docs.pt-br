@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55a2f907-d216-42eb-8f2f-e5d59c2eebd6
 topic_type:
 - apiref
-ms.openlocfilehash: 2ce58113f40c8eb67a89b6ab6c9bb8f755975bd5
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 9e53e7bcecd900bb6c71d0a822e9b63ff6726e58
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499747"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729506"
 ---
 # <a name="icorprofilercallback2rootreferences2-method"></a>Método ICorProfilerCallback2::RootReferences2
+
 Notifica o criador de perfil sobre referências de raiz após a ocorrência de uma coleta de lixo. Esse método é uma extensão do método [ICorProfilerCallback:: RootReferences](icorprofilercallback-rootreferences-method.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,6 +38,7 @@ HRESULT RootReferences2(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `cRootRefs`  
  no O número de elementos nas `rootRefIds` `rootKinds` `rootFlags` matrizes,, e `rootIds` .  
   
@@ -55,6 +57,7 @@ HRESULT RootReferences2(
  Se o tipo da raiz for uma pilha, a ID raiz será para a função que contém a variável. Se essa ID raiz for 0, a função será uma função sem nome que é interna ao CLR. Se o tipo da raiz for um identificador, a ID raiz será para o identificador de coleta de lixo. Para os outros tipos de raiz, a ID é um valor opaco e deve ser ignorada.  
   
 ## <a name="remarks"></a>Comentários  
+
  As `rootRefIds` `rootKinds` matrizes,, e `rootFlags` `rootIds` são matrizes paralelas. Ou seja,,, `rootRefIds[i]` `rootKinds[i]` `rootFlags[i]` e `rootIds[i]` todas as preocupações com a mesma raiz.  
   
  Ambos `RootReferences` e `RootReferences2` são chamados para notificar o criador de perfil. Os profileres normalmente implementarão um método ou o outro, mas não ambos, porque as informações transmitidas `RootReferences2` são um superconjunto do passado `RootReferences` .  
@@ -64,6 +67,7 @@ HRESULT RootReferences2(
  As IDs de objeto retornadas por `RootReferences2` não são válidas durante o próprio retorno de chamada, pois a coleta de lixo pode estar no meio da movimentação de objetos de endereços antigos para novos endereços. Portanto, os criadores de perfis não devem tentar inspecionar objetos durante uma chamada `RootReferences2`. Quando [ICorProfilerCallback2:: GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md) é chamado, todos os objetos foram movidos para seus novos locais e podem ser inspecionados com segurança.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

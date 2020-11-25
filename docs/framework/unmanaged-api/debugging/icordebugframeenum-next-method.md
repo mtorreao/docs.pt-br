@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0bc96acb-6179-4328-a447-cda562ce9e98
 topic_type:
 - apiref
-ms.openlocfilehash: 4652e4b34d614ad3b7b852925fcc63309bdd1498
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 76b96dfd9d22c7e770671dcc01cb421430df729f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209455"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728180"
 ---
 # <a name="icordebugframeenumnext-method"></a>Método ICorDebugFrameEnum::Next
+
 Obtém o número especificado de instâncias de ICorDebugFrame, começando na posição atual.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,6 +38,7 @@ HRESULT Next (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `celt`  
  no O número de `ICorDebugFrame` instâncias a serem recuperadas.  
   
@@ -47,6 +49,7 @@ HRESULT Next (
  fora Um ponteiro para o número de `ICorDebugFrame` instâncias retornadas de fato. Esse valor pode ser nulo se `celt` for um.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

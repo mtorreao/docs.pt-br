@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: 57dbccd9-b16d-4da3-ae25-7a2cf9adf679
 topic_type:
 - apiref
-ms.openlocfilehash: b855a53c9e4303138d7605bdf108d37bb345b917
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 859853521b741f42f1de7921de813941d2501173
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789339"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729090"
 ---
 # <a name="cordebugguidtotypemapping-structure"></a>Estrutura CorDebugGuidToTypeMapping
+
 Mapeia um GUID de Windows Runtime para seu objeto ICorDebugType correspondente.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,21 +38,22 @@ typedef struct CorDebugGuidToTypeMapping {
   
 ## <a name="members"></a>Membros  
   
-|{1&gt;Membro&lt;1}|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |`iid`|O GUID do tipo de Windows Runtime em cache.|  
 |`pType`|Um ponteiro para um objeto ICorDebugType que fornece informações sobre o tipo armazenado em cache.|  
   
-## <a name="requirements"></a>Requisitos do  
+## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Windows Runtime.  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Estruturas de depuração](debugging-structures.md)
 - [Depuração](index.md)

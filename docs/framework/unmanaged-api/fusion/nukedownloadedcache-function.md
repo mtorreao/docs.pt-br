@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: fac2b1c6-6fa3-4818-805b-b63972024c86
 topic_type:
 - apiref
-ms.openlocfilehash: 8f97614412eb2d49b202e86bdabc727159deb5d6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5ae0a887d666a150b717d495848c8a411d030a09
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131691"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728570"
 ---
 # <a name="nukedownloadedcache-function"></a>Função NukeDownloadedCache
+
 Exclui o cache de download do Common Language Runtime (CLR).  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -33,21 +34,24 @@ HRESULT NukeDownloadedCache();
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
+
  Esse método retorna códigos de erro COM padrão, conforme definido em WinError. h.  
   
 ## <a name="remarks"></a>Comentários  
+
  O cache de download do CLR é a área em que os assemblies de nome forte baixados de uma URL são armazenados para possível reutilização.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Fusion. h  
   
- **Biblioteca:** Fusion. dll e mscorwks. dll. Use Fusion. dll em vez de mscorwks. dll para garantir que você direcione a versão correta do .NET Framework.  
+ **Biblioteca:** Fusion.dll e Mscorwks.dll. Use Fusion.dll em vez de Mscorwks.dll para garantir que você direcione a versão correta do .NET Framework.  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Função CreateHistoryReader](createhistoryreader-function.md)
 - [Função GetHistoryFileDirectory](gethistoryfiledirectory-function.md)

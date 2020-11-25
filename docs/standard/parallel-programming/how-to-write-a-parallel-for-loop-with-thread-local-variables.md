@@ -8,17 +8,19 @@ dev_langs:
 helpviewer_keywords:
 - parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
-ms.openlocfilehash: 1e2dd0d554cdece23ac6d0e6b255ad70533236dc
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f3adcfa98f4004f283b24bcd31dc243c18c2644c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826652"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729363"
 ---
 # <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Como: Gravar um loop Parallel.For com variáveis locais de thread
+
 Este exemplo mostra como usar variáveis de thread local para armazenar e recuperar o estado em cada tarefa separada criada por um loop <xref:System.Threading.Tasks.Parallel.For%2A>. Usando dados de thread local, você pode evitar a sobrecarga de sincronizar um grande número de acessos com estado compartilhado. Em vez de gravar em um recurso compartilhado em cada iteração, você computa e armazena o valor até todas as iterações da tarefas serem concluídas. Em seguida, é possível gravar o resultado final uma vez no recurso compartilhado ou passá-lo para outro método.  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir chama o método <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29> para calcular a soma dos valores em uma matriz com um milhão de elementos. O valor de cada elemento é igual a seu índice.  
   
  [!code-csharp[TPL_Parallel#05](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/forandforeach_simple.cs#05)]

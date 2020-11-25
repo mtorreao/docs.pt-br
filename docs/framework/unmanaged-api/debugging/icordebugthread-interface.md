@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 3930fd9b-2bc3-4b72-80a0-b6eeb94d60c6
 topic_type:
 - apiref
-ms.openlocfilehash: edcc0ebcadc1bd95574b0276bfd0e2d42e5474fd
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 5165ef081aad849c11747807d8cc76b2df0a6c74
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379815"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729311"
 ---
 # <a name="icordebugthread-interface"></a>Interface ICorDebugThread
+
 Representa um thread em um processo. O tempo de vida de uma instância `ICorDebugThread` é igual ao tempo de vida do thread que ela representa.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método ClearCurrentException](icordebugthread-clearcurrentexception-method.md)|Este método não está implementado. Não o use.|  
 |[Método CreateEval](icordebugthread-createeval-method.md)|Cria um objeto ICorDebugEval que opera sobre isso `ICorDebugThread` .|  
@@ -51,6 +52,7 @@ Representa um thread em um processo. O tempo de vida de uma instância `ICorDebu
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

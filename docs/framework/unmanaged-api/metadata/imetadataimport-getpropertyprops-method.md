@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: dc0ff3e6-7e7d-4f6c-948d-52b28f5cb78c
 topic_type:
 - apiref
-ms.openlocfilehash: cac5aaa7ed13b6a48b36ad550da8b73d0deb2ee7
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: aded23e190de18d76bb2b9e2ffbae51cf2325419
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84491037"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729220"
 ---
 # <a name="imetadataimportgetpropertyprops-method"></a>Método IMetaDataImport::GetPropertyProps
+
 Obtém os metadados para a propriedade representada pelo token especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -49,6 +50,7 @@ HRESULT GetPropertyProps (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `prop`  
  no Um token que representa a propriedade para a qual retornar metadados.  
   
@@ -98,11 +100,12 @@ HRESULT GetPropertyProps (
  fora O número de tokens MethodDef retornados em `rmdOtherMethod` .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6d23ac54-15ea-4027-a172-9ebef43e8f56
 topic_type:
 - apiref
-ms.openlocfilehash: fcfd3e79bbb52837a333b5ffacf5c13ae60f2490
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 31c0c5e23d1a985c2005693e25ca91379037482a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445619"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728674"
 ---
 # <a name="precloseassembly-method"></a>Método PreCloseAssembly
+
 Fecha o arquivo do assembly. Chame esse método depois de fechar todos os outros arquivos, mas antes de fechar o arquivo do assembly. Não chame esse método para módulos não associados.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -33,16 +34,19 @@ HRESULT PreCloseAssembly(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `AssemblyID`  
  ID do assembly.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  Retorna S_OK se o método tiver sucesso.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
+
  Requer ALink. h.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IALink](ialink-interface.md)
 - [Interface IALink2](ialink2-interface.md)

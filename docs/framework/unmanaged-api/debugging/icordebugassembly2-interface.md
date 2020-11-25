@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0766e29-e573-4f9a-a928-167d1de5aa7e
 topic_type:
 - apiref
-ms.openlocfilehash: 23b38f86cd81fb0161e50b60b40bed0ba0b423b2
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 5add8f18a91f2ea1a2833ffa2cf3dc4bf3b644bd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894878"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728463"
 ---
 # <a name="icordebugassembly2-interface"></a>Interface ICorDebugAssembly2
 
@@ -27,7 +27,7 @@ Representa um assembly. Essa interface é uma extensão da interface ICorDebugAs
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método IsFullyTrusted](icordebugassembly2-isfullytrusted-method.md)|Obtém um valor que indica se o assembly recebeu confiança total pelo sistema de segurança de tempo de execução.|  
   
@@ -37,6 +37,7 @@ Representa um assembly. Essa interface é uma extensão da interface ICorDebugAs
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -45,6 +46,6 @@ Representa um assembly. Essa interface é uma extensão da interface ICorDebugAs
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Depurando interfaces](debugging-interfaces.md)

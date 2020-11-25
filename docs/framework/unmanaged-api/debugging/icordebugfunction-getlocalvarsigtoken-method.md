@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 31e53494-bcc9-4981-91a4-f7e0f02cad48
 topic_type:
 - apiref
-ms.openlocfilehash: a923701b05f7d283c4fd464d470fb0c9243c1bd5
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 3ad9697cf94a3dd89fbb00bdaa703632ddfcd6fd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213602"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728128"
 ---
 # <a name="icordebugfunctiongetlocalvarsigtoken-method"></a>Método ICorDebugFunction::GetLocalVarSigToken
+
 Obtém o token de metadados para a assinatura de variável local da função que é representada por essa instância de ICorDebugFunction.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,10 +35,12 @@ HRESULT GetLocalVarSigToken (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pmdSig`  
  fora Um ponteiro para o `mdSignature` token para a assinatura de variável local dessa função ou `mdSignatureNil` , se essa função não tiver nenhuma variável local.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

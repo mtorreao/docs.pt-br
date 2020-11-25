@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ffd0f708-0d21-4fae-a395-63b6c45828fa
 topic_type:
 - apiref
-ms.openlocfilehash: 5d7e83c6aa494f2363698d0220bbfe724b54e612
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 2d1846acae51f416471404389dd1dbcfb2383760
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209429"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728167"
 ---
 # <a name="icordebugfunctioncreatebreakpoint-method"></a>Método ICorDebugFunction::CreateBreakpoint
+
 Cria um ponto de interrupção no início desta função.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,10 +35,12 @@ HRESULT CreateBreakpoint (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `ppBreakpoint`  
  fora Um ponteiro para o endereço de um objeto ICorDebugFunctionBreakpoint que representa o novo ponto de interrupção para a função.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

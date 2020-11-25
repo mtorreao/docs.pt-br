@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 34fb03cc-2285-4a45-ac48-ad993b7a921a
 topic_type:
 - apiref
-ms.openlocfilehash: 807e1ee831a43a4ef1e7b0a269ee38131f24081e
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 5d8bc54a94e1571ff8335c934407bbf235179ecc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008112"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728284"
 ---
 # <a name="imetadataassemblyemit-interface"></a>Interface IMetaDataAssemblyEmit
+
 Fornece métodos que dão suporte ao modelo de autodescrição usado pelo Common Language Runtime para resolver e consumir recursos.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método DefineAssembly](imetadataassemblyemit-defineassembly-method.md)|Cria uma estrutura de dados de assembly contendo metadados para o assembly especificado e retorna o token de metadados associado.|  
 |[Método DefineAssemblyRef](imetadataassemblyemit-defineassemblyref-method.md)|Cria uma `AssemblyRef` estrutura que contém metadados para o assembly ao qual este assembly faz referência e retorna o token de metadados associado.|  
@@ -42,11 +43,12 @@ Fornece métodos que dão suporte ao modelo de autodescrição usado pelo Common
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como um recurso em MsCorEE. dll  
+ **Biblioteca:** Usado como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
