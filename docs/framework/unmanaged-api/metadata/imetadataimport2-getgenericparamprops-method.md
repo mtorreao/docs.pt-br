@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: dbb21e67-712b-49e7-a27c-a1e73ffd46c5
 topic_type:
 - apiref
-ms.openlocfilehash: 7e97b2d4ad1fec4675d1484959b115a4d4b87e90
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 16f69d571ffed87a2e848124ce16ac942d319c37
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84490608"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95702674"
 ---
 # <a name="imetadataimport2getgenericparamprops-method"></a>Método IMetaDataImport2::GetGenericParamProps
+
 Obtém os metadados associados ao parâmetro genérico representado pelo token especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -41,6 +42,7 @@ HRESULT GetGenericParamProps (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `gp`  
  no O token que representa o parâmetro genérico para o qual retornar metadados.  
   
@@ -66,11 +68,12 @@ HRESULT GetGenericParamProps (
  fora O tamanho retornado do nome, em caracteres largos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como um recurso em MsCorEE. dll  
+ **Biblioteca:** Usado como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

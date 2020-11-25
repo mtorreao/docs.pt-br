@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: da3769eb-1828-4aa1-b9ed-db4842136a43
 topic_type:
 - apiref
-ms.openlocfilehash: e285df37d83ff73fe29fe293380a4053cb5a9eea
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 3455397345451cc0c39cc98a0ea4374eab8350a8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860559"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703363"
 ---
 # <a name="iclrdatatargetreadvirtual-method"></a>Método ICLRDataTarget::ReadVirtual
+
 Lê dados do endereço de memória virtual especificado no buffer especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -38,6 +39,7 @@ HRESULT ReadVirtual (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `address`  
  no Um CLRDATA_ADDRESS que armazena o endereço de memória virtual.  
   
@@ -51,6 +53,7 @@ HRESULT ReadVirtual (
  fora Um ponteiro para o número de bytes retornados.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** ClrData. idl, ClrData. h  

@@ -13,14 +13,15 @@ helpviewer_keywords:
 - SetAppDomainManagerType method, ICLRDomainManager interface [.NET Framework hosting]
 - ICLRDomainManager::SetAppDomainManagerType method [.NET Framework hosting]
 ms.assetid: ee91abb0-cb74-41dd-927b-e117fb8ffdf4
-ms.openlocfilehash: 89b3f9f248a445cc0568236d6a1df14269de4187
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 7c6b328793e6437682ad8d642e611be30e7b0fe6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615690"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95702141"
 ---
 # <a name="iclrdomainmanagersetappdomainmanagertype-method"></a>Método ICLRDomainManager::SetAppDomainManagerType
+
 Especifica o tipo, derivado da <xref:System.AppDomainManager?displayProperty=nameWithType> classe, do Gerenciador de domínio de aplicativo que será usado para inicializar o domínio de aplicativo padrão.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,6 +35,7 @@ HRESULT SetAppDomainManagerType(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `wszAppDomainManagerAssembly`  
  no O nome de exibição do assembly que contém o tipo de Gerenciador de domínio do aplicativo; por exemplo: "AdMgrExample, Version = 1.0.0.0, Culture = neutral, PublicKeyToken = 6856bccf150f00b3".  
   
@@ -43,7 +45,8 @@ HRESULT SetAppDomainManagerType(
  `dwInitializeDomainFlags`  
  no Uma combinação de valores de enumeração [EInitializeNewDomainFlags](einitializenewdomainflags-enumeration.md) que fornecem informações sobre o Gerenciador de domínio do aplicativo.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
@@ -52,6 +55,7 @@ HRESULT SetAppDomainManagerType(
 |HOST_E_CLRNOTAVAILABLE|O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Atualmente, o único valor definido para `dwInitializeDomainFlags` é `eInitializeNewDomainFlags_NoSecurityChanges` , que informa ao Common Language Runtime (CLR) que o Gerenciador de domínio do aplicativo não modificará as configurações de segurança durante a execução do <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> método. Isso permite que o CLR Otimize o carregamento de assemblies que têm o <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atributo condicional (APTCA). Isso pode resultar em uma melhoria significativa no tempo de inicialização se o fechamento transitivo desse conjunto de assemblies for grande.  
   
 > [!IMPORTANT]
@@ -60,16 +64,17 @@ HRESULT SetAppDomainManagerType(
  Chamar o método [ICLRControl:: SetAppDomainManagerType](iclrcontrol-setappdomainmanagertype-method.md)é equivalente a chamar `ICLRDomainManager::SetAppDomainManagerType` with `eInitializeNewDomainFlags_None` .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MetaHost. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Hospedagem](index.md)
+- [Hosting](index.md)
 - [Interface ICLRDomainManager](iclrdomainmanager-interface.md)
 - [Enumeração EInitializeNewDomainFlags](einitializenewdomainflags-enumeration.md)

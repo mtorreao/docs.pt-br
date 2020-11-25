@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 166b0761-ed80-4ccd-9973-dc20e61bf8fa
 topic_type:
 - apiref
-ms.openlocfilehash: 4c867a9e263f022fc6f8d90a883562e2560ad1b2
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a0777797870a707c0d0f00bc0b4c986448118231
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84494651"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95702388"
 ---
 # <a name="icorprofilerobjectenumgetcount-method"></a>Método ICorProfilerObjectEnum::GetCount
+
 Obtém o número total de objetos congelados na coleção.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,12 +35,14 @@ HRESULT GetCount (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pcelt`  
  fora Um ponteiro para o número de objetos congelados na coleção.  
   
  Esse método sempre retornará zero no .NET Framework versão 3,5 Service Pack 1 (SP1) e versões posteriores.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4e2fd423-f643-4c27-ba5f-41b5ebc3b416
 topic_type:
 - apiref
-ms.openlocfilehash: d715f5842bb7f75da5311d34bf7d4596f0801a92
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: d17179dbeb9564b16c0c95a43502a53a67d3b9b8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210274"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703155"
 ---
 # <a name="icordebugilframegetargument-method"></a>Método ICorDebugILFrame::GetArgument
+
 Obtém o valor do argumento especificado neste quadro de ativação da MSIL (Microsoft Intermediate Language).  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -35,6 +36,7 @@ HRESULT GetArgument (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `dwIndex`  
  no O índice do argumento neste quadro de pilha MSIL.  
   
@@ -42,9 +44,11 @@ HRESULT GetArgument (
  [out] Um ponteiro para o endereço de um objeto ICorDebugValue que representa o valor recuperado.  
   
 ## <a name="remarks"></a>Comentários  
+
  O `GetArgument` método pode ser usado em um quadro de pilha MSIL ou em um quadro compilado JIT (just-in-time).  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

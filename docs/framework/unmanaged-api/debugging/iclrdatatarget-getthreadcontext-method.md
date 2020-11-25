@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b9d8c3b5-3a2e-4225-95d4-dd052c4532c3
 topic_type:
 - apiref
-ms.openlocfilehash: 5c0fb023dd355f3a9c1ed846913f86b354592ed5
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 35b7bff5d4d778a429ddc1dcd0206e6e8970ee4f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860610"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703493"
 ---
 # <a name="iclrdatatargetgetthreadcontext-method"></a>Método ICLRDataTarget::GetThreadContext
+
 Obtém o contexto de execução atual para o thread determinado no processo de destino. Esse método é chamado pelo Common Language Runtime Data Access Services.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -38,6 +39,7 @@ HRESULT GetThreadContext (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `threadID`  
  no O identificador do sistema operacional de um thread no processo de destino.  
   
@@ -50,12 +52,14 @@ HRESULT GetThreadContext (
  `context`  
  fora Ponteiro para um buffer no qual o contexto será colocado.  
   
- Os dados no `context` buffer devem estar no formato da estrutura do Win32 `CONTEXT` . O contexto especifica dados de registro específicos do processador, de modo que a definição `CONTEXT` da estrutura do Win32 depende da arquitetura do processador. Consulte o arquivo de cabeçalho WinNT. h para obter a definição da estrutura `CONTEXT` do Win32.  
+ Os dados no `context` buffer devem estar no formato da estrutura do Win32 `CONTEXT` . O contexto especifica dados de registro específicos do processador, de modo que a definição da estrutura do Win32 `CONTEXT` depende da arquitetura do processador. Consulte o arquivo de cabeçalho WinNT. h para obter a definição da estrutura do Win32 `CONTEXT` .  
   
 ## <a name="remarks"></a>Comentários  
+
  Este método é implementado pelo autor do aplicativo de depuração.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** ClrData. idl, ClrData. h  

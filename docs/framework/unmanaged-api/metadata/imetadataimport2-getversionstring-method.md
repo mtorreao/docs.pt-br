@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 308183ee-fd44-4432-9d86-ef00d181b49b
 topic_type:
 - apiref
-ms.openlocfilehash: 84cf5ac9eab5749d3bdc63670fe5c31bfb62abcd
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 3e62b1177c0161883ad03086723cc43b71292df5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84490395"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95702554"
 ---
 # <a name="imetadataimport2getversionstring-method"></a>Método IMetaDataImport2::GetVersionString
+
 Obtém o número de versão do tempo de execução que foi usado para compilar o assembly.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,6 +37,7 @@ HRESULT GetVersionString (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pwzBuf`  
  fora Uma matriz para armazenar a cadeia de caracteres que especifica a versão.  
   
@@ -46,14 +48,16 @@ HRESULT GetVersionString (
  fora O número de caracteres largos, incluindo um terminador nulo, retornado na `pwzBuf` matriz.  
   
 ## <a name="remarks"></a>Comentários  
+
  O `GetVersionString` método obtém a versão interna do escopo de metadados atual. Se o escopo nunca tiver sido salvo, ele não terá uma versão interna e uma cadeia de caracteres vazia será retornada.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como um recurso em MsCorEE. dll  
+ **Biblioteca:** Usado como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

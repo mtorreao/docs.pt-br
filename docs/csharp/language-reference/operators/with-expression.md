@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - with expression [C#]
 - with operator [C#]
-ms.openlocfilehash: 8412dfe8663703d3b201fe98b5f4752da1b344cf
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: d7d3758c8c5da7859974b5b50b63d2a5ca16b24d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94556706"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95702219"
 ---
 # <a name="with-expression-c-reference"></a>expressão with (referência C#)
 
@@ -41,7 +41,7 @@ Para obter mais informações, consulte as seções a seguir da [proposta de rec
 - [`with` expressão](~/_csharplang/proposals/csharp-9.0/records.md#with-expression)
 - [Copiar e clonar Membros](~/_csharplang/proposals/csharp-9.0/records.md#copy-and-clone-members)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Referência de C#](../index.md)
 - [Operadores e expressões C#](index.md)

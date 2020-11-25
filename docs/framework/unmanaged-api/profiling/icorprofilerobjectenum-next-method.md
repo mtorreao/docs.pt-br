@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b420433c-5ebe-4986-bba1-97902e6db819
 topic_type:
 - apiref
-ms.openlocfilehash: 850f05520e4146b5016bb574f02aa800dfcaaf32
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e0c10549ab9075c2e7604a9adb18cae8b9a3b32b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84494573"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95702362"
 ---
 # <a name="icorprofilerobjectenumnext-method"></a>Método ICorProfilerObjectEnum::Next
+
 Obtém o número especificado de objetos contíguos de uma coleção sequencial de objetos, começando na posição atual do enumerador na sequência.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,6 +38,7 @@ HRESULT Next (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `celt`  
  no O número de objetos a serem recuperados.  
   
@@ -47,6 +49,7 @@ HRESULT Next (
  fora Um ponteiro para o número de elementos realmente retornados na `objects` matriz.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

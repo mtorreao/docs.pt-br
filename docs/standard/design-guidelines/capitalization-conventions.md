@@ -9,17 +9,19 @@ helpviewer_keywords:
 - case sensitivity, capitalization conventions
 - names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
-ms.openlocfilehash: 8df136fb57ad61ddfd87f4dec1f6490c63c3d977
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e416a8346952a41d9c89f526bfce990dfc277fc1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821522"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701257"
 ---
 # <a name="capitalization-conventions"></a>Convenções de maiúsculas e minúsculas
+
 As diretrizes neste capítulo destacam um método simples para usar o caso, quando aplicado de forma consistente, tornar os identificadores para tipos, membros e parâmetros fáceis de ler.
 
 ## <a name="capitalization-rules-for-identifiers"></a>Regras de capitalização para identificadores
+
  Para diferenciar palavras em um identificador, coloque em maiúscula a primeira letra de cada palavra no identificador. Não use sublinhados para diferenciar palavras, ou para esse assunto, em qualquer lugar nos identificadores. Há duas maneiras apropriadas de colocar identificadores em maiúsculas, dependendo do uso do identificador:
 
 - PascalCasing
@@ -60,6 +62,7 @@ As diretrizes neste capítulo destacam um método simples para usar o caso, quan
 |Parâmetro|Camel|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|
 
 ## <a name="capitalizing-compound-words-and-common-terms"></a>Capitalização de palavras compostas e termos comuns
+
  A maioria dos termos compostos é tratada como palavras únicas para fins de capitalização.
 
  ❌ Não coloque todas as palavras em maiúsculas nas chamadas de palavras compostas de forma fechada.
@@ -95,6 +98,7 @@ As diretrizes neste capítulo destacam um método simples para usar o caso, quan
 |`Writable`|`writable`|`Writeable`|
 
 ## <a name="case-sensitivity"></a>Diferenciação de maiúsculas e minúsculas
+
  Os idiomas que podem ser executados no CLR não precisam dar suporte à diferenciação de maiúsculas e minúsculas, embora alguns façam. Mesmo que seu idioma dê suporte a isso, outras linguagens que podem acessar sua estrutura não têm. As APIs que são acessíveis externamente, portanto, não podem depender apenas de maiúsculas e minúsculas para distinguir entre dois nomes no mesmo contexto.
 
  ❌ Não presuma que todas as linguagens de programação diferenciam maiúsculas de minúsculas. Eles não são. Os nomes não podem diferir apenas por maiúsculas e minúsculas.

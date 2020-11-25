@@ -6,14 +6,15 @@ helpviewer_keywords:
 - arrays [.NET Framework], usage guidelines
 - empty arrays
 ms.assetid: 66a1b3d8-6f3f-4715-b235-e1ff95e32d8e
-ms.openlocfilehash: c3545c609b6544e6528bbae08889d0ef20473802
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 11c1d23af4cf599ba632144634947520a1647ae7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821600"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701387"
 ---
 # <a name="arrays"></a>Matrizes
+
 ✔️ preferir usar coleções em matrizes em APIs públicas. A seção [coleções](guidelines-for-collections.md) fornece detalhes sobre como escolher entre coleções e matrizes.
 
  ❌ Não use campos de matriz somente leitura. O próprio campo é somente leitura e não pode ser alterado, mas os elementos na matriz podem ser alterados.

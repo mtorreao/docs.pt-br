@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: aeb0fc63-9eff-4384-9284-cb9900572d74
 topic_type:
 - apiref
-ms.openlocfilehash: 9190d021b801be951d214406dde7e6d76da15608
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: b4dc1e60f3d29e2671882d1900a1c49e56969601
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503431"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95702851"
 ---
 # <a name="imetadataimportisvalidtoken-method"></a>Método IMetaDataImport::IsValidToken
+
 Obtém um valor que indica se o token especificado contém uma referência válida a um objeto de código.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,18 +35,21 @@ BOOL IsValidToken (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `tk`  
  no O token para verificar a validade de referência.  
   
 ## <a name="return-value"></a>Valor Retornado  
- `true`Se `tk` é um token de metadados válido dentro do escopo atual. Caso contrário, `false`.  
+
+ `true` Se `tk` é um token de metadados válido dentro do escopo atual. Caso contrário, `false`.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

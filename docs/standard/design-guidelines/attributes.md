@@ -5,14 +5,15 @@ helpviewer_keywords:
 - attributes [.NET Framework], about
 - class library design guidelines [.NET Framework], attributes
 ms.assetid: ee0038ef-b247-4747-a650-3c5c5cd58d8b
-ms.openlocfilehash: cc4752066124a0ea8081390bfb5f3791d21ec96d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c02c41244fa74b686277c2f3c3940405fe2d95ba
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821613"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701361"
 ---
 # <a name="attributes"></a>Atributos
+
 <xref:System.Attribute?displayProperty=nameWithType> é uma classe base usada para definir atributos personalizados.
 
  Atributos são anotações que podem ser adicionadas a elementos de programação, como assemblies, tipos, membros e parâmetros. Eles são armazenados nos metadados do assembly e podem ser acessados em tempo de execução usando as APIs de reflexão. Por exemplo, a estrutura define o <xref:System.ObsoleteAttribute> , que pode ser aplicado a um tipo ou um membro para indicar que o tipo ou o membro foi preterido.

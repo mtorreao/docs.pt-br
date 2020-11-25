@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 727819d5-1dab-4ebb-ac25-950b4111dc72
 topic_type:
 - apiref
-ms.openlocfilehash: 5de62db4180a6a9160193053fe42e39cebc34d0e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: f418b48f1b62ae8093197d64ca44b2ef659990a3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84492467"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701712"
 ---
 # <a name="imetadataimportcloseenum-method"></a>Método IMetaDataImport::CloseEnum
+
 Fecha o enumerador que é identificado pelo identificador especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,18 +35,21 @@ void CloseEnum (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `hEnum`  
  no O identificador do enumerador a ser fechado.  
   
 ## <a name="remarks"></a>Comentários  
+
  O identificador especificado por `hEnum` é obtido de uma chamada de `Enum` *nome* anterior (por exemplo, [IMetaDataImport:: EnumTypeDefs](imetadataimport-enumtypedefs-method.md)).  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

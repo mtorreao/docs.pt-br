@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
-ms.openlocfilehash: 2eee3ff905473d8fd520929c0fe5abfb5d5c42da
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 0cee7481f9c002f860bff7f12b8be0bb763dadb1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830955"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701465"
 ---
 # <a name="convert-strings-to-net-data-types"></a>Converter cadeias de caracteres em tipos de dados .NET
 
@@ -22,7 +22,7 @@ Se você quiser converter uma cadeia de caracteres em um tipo de dados .NET, use
   
 |Tipo .NET|Cadeia de caracteres retornada|  
 |-------------------------|---------------------|  
-|Booliano|"true", "false"|  
+|Boolean|"true", "false"|  
 |Single.PositiveInfinity|"INF"|  
 |Single.NegativeInfinity|"-INF"|  
 |Double.PositiveInfinity|"INF"|  
@@ -72,6 +72,7 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
  No entanto, se você estiver convertendo uma cadeia de caracteres em **booliano**, **única** ou **dupla**, o tipo do .net retornado não será o mesmo que o tipo retornado ao usar a classe **System. Convert** .  
   
 ## <a name="string-to-boolean"></a>String para Boolean  
+
  A tabela a seguir mostra qual o tipo gerado para cadeias de caracteres de entradas consideradas, ao converter uma cadeia de caracteres para **Boolean** usando o método **ToBoolean**.  
   
 |Parâmetro de entrada válida de cadeia de caracteres|Tipo de saída do .NET|  
@@ -104,6 +105,7 @@ Console.WriteLine(bvalue);
 ```  
   
 ## <a name="string-to-single"></a>String para Single  
+
  A tabela a seguir mostra qual o tipo gerado para cadeias de caracteres de entradas consideradas, ao converter uma cadeia de caracteres para **Single** usando o método **ToSingle**.  
   
 |Parâmetro de entrada válida de cadeia de caracteres|Tipo de saída do .NET|  
@@ -112,6 +114,7 @@ Console.WriteLine(bvalue);
 |"-INF"|Single.NegativeInfinity|  
   
 ## <a name="string-to-double"></a>String para Double  
+
  A tabela a seguir mostra qual o tipo gerado para cadeias de caracteres de entradas consideradas, ao converter uma cadeia de caracteres para **Single** usando o método **ToDouble**.  
   
 |Parâmetro de entrada válida de cadeia de caracteres|Tipo de saída do .NET|  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8a7d4e40-28fe-4e14-b801-4049880130e7
 topic_type:
 - apiref
-ms.openlocfilehash: af226f9317b67b23e03d06614ed5b9c956939c22
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 27c3ec349cf6c83f6783e252e6c5af5e99fa4b37
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503413"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95702828"
 ---
 # <a name="imetadataimport2enumgenericparamconstraints-method"></a>Método IMetaDataImport2::EnumGenericParamConstraints
+
 Obtém um enumerador para uma matriz de restrições de parâmetro genérico associadas ao parâmetro genérico representado pelo token especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -38,6 +39,7 @@ HRESULT EnumGenericParamConstraints (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `phEnum`  
  [entrada, saída] Um ponteiro para o enumerador.  
   
@@ -55,17 +57,18 @@ HRESULT EnumGenericParamConstraints (
   
 ## <a name="return-value"></a>Valor Retornado  
   
-|HRESULT|Descrição|  
+|HRESULT|DESCRIÇÃO|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParameterConstraints`retornado com êxito.|  
-|`S_FALSE`|`phEnum`Não tem elementos de membro. Nesse caso, `pcGenericParameterConstraints` é definido como 0 (zero).|  
+|`S_OK`|`EnumGenericParameterConstraints` retornado com êxito.|  
+|`S_FALSE`|`phEnum` Não tem elementos de membro. Nesse caso, `pcGenericParameterConstraints` é definido como 0 (zero).|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como um recurso em MsCorEE. dll  
+ **Biblioteca:** Usado como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

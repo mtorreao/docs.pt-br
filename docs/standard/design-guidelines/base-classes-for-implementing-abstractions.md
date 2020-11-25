@@ -5,14 +5,15 @@ helpviewer_keywords:
 - abstractions [.NET Framework]
 - base classes, abstractions
 ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
-ms.openlocfilehash: 314fcd0e1e91d1fc869453dd442ecaa72f91955d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9e49b79609a2d16a79a80727295d53bb36ec5943
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821587"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701309"
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>Classes base para implementar abstrações
+
 Estritamente falando, uma classe se torna uma classe base quando outra classe é derivada dela. No entanto, para a finalidade desta seção, uma classe base é uma classe projetada principalmente para fornecer uma abstração comum ou para outras classes reutilizarem algumas implementações padrão por meio de herança. As classes base geralmente ficam no meio das hierarquias de herança, entre uma abstração na raiz de uma hierarquia e várias implementações personalizadas na parte inferior.
 
  Eles servem como auxiliares de implementação para implementar abstrações. Por exemplo, uma das abstrações da estrutura para coleções ordenadas de itens é a <xref:System.Collections.Generic.IList%601> interface. <xref:System.Collections.Generic.IList%601>A implementação não é trivial e, portanto, a estrutura fornece várias classes base, como <xref:System.Collections.ObjectModel.Collection%601> e <xref:System.Collections.ObjectModel.KeyedCollection%602> , que servem como auxiliares para implementar coleções personalizadas.

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 51d9f4a4-81a7-4527-8537-5212bdb05c70
 topic_type:
 - apiref
-ms.openlocfilehash: e6c4d5f8cc911198add176cab9c4b9b89128068e
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 077aa50465d99c9098f26e67b3852feb0d399142
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860617"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703506"
 ---
 # <a name="iclrdatatargetgetpointersize-method"></a>Método ICLRDataTarget::GetPointerSize
+
 Obtém o tamanho, em bytes, do tipo de ponteiro usado pelo processo de destino. Esse método é chamado pelo Common Language Runtime Data Access Services.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,13 +35,16 @@ HRESULT GetPointerSize (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pointerSize`  
  fora Um ponteiro para um valor inteiro que especifica o tamanho, em bytes, de um ponteiro no processo de destino.  
   
 ## <a name="remarks"></a>Comentários  
+
  Este método é implementado pelo autor do aplicativo de depuração.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** ClrData. idl, ClrData. h  

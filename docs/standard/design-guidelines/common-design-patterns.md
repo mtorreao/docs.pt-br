@@ -6,17 +6,19 @@ helpviewer_keywords:
 - design patterns in class libraries
 - class library design guidelines [.NET Framework], design patterns
 ms.assetid: f7bd1361-4ab2-4132-972d-a044b8f197e1
-ms.openlocfilehash: ed580365f7d7bb3c91f1aa4065413f64e0e965db
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 06c12352d50bf8091071b41c974618320ce0b2b1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821457"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701218"
 ---
 # <a name="common-design-patterns"></a>Padrões comuns de Design
+
 Há vários livros sobre padrões de software, linguagens de padrão e antipadrões que abordam o assunto muito amplo dos padrões. Portanto, este capítulo fornece diretrizes e discussões relacionadas a um conjunto muito limitado de padrões que são usados com frequência no design das APIs de .NET Framework.  
   
 ## <a name="in-this-section"></a>Nesta seção  
+
  [Propriedades de dependência](dependency-properties.md)  
  [Padrão de descarte](../garbage-collection/implementing-dispose.md)  
  *Partes © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  

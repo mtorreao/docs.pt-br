@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 50e04026-4d4a-47d9-96c1-f4677d6d938b
 topic_type:
 - apiref
-ms.openlocfilehash: 44439eda62f85c32893b73f17bd057195cf6b2e1
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d44ad493a786aaa35150515b7c254965490bd714
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503543"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701667"
 ---
 # <a name="imetadataimportgetnativecallconvfromsig-method"></a>Método IMetaDataImport::GetNativeCallConvFromSig
+
 Obtém a Convenção de chamada nativa para o método representado pelo ponteiro de assinatura especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,6 +37,7 @@ HRESULT GetNativeCallConvFromSig (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pvSig`  
  no Um ponteiro para a assinatura de metadados do método para o qual retornar a Convenção de chamada.  
   
@@ -46,11 +48,12 @@ HRESULT GetNativeCallConvFromSig (
  fora Um ponteiro para a Convenção de chamada nativa.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

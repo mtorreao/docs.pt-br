@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 556bccfb-61bc-4761-b1d5-de4b1c18a38f
 topic_type:
 - apiref
-ms.openlocfilehash: f55af87e21b48430807166cb03e1d41271e830a1
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 76c5519a6cd1b8994e2f869281f13d8269e89fde
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503426"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95702817"
 ---
 # <a name="imetadataimportresolvetyperef-method"></a>Método IMetaDataImport::ResolveTypeRef
+
 Resolve uma <xref:System.Type> referência representada pelo token TypeRef especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,6 +38,7 @@ HRESULT ResolveTypeRef (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `tr`  
  no O token de metadados TypeRef para retornar as informações de tipo referenciadas.  
   
@@ -59,11 +61,12 @@ HRESULT ResolveTypeRef (
  Se a referência de tipo a ser resolvida tiver um escopo de resolução de AssemblyRef, o `ResolveTypeRef` método procurará uma correspondência somente nos escopos de metadados que já foram abertos com chamadas para o método [IMetaDataDispenser:: OpenScope](imetadatadispenser-openscope-method.md) ou para o método [IMetaDataDispenser:: OpenScopeOnMemory](imetadatadispenser-openscopeonmemory-method.md) . Isso ocorre porque o `ResolveTypeRef` não pode determinar apenas o escopo de AssemblyRef em que no disco ou no cache de assembly global o assembly está armazenado.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

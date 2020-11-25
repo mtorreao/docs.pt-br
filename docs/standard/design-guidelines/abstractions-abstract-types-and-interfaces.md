@@ -7,14 +7,15 @@ helpviewer_keywords:
 - abstract types [.NET Framework]
 - types [.NET Framework], abstract
 ms.assetid: 0a632bc7-9b03-44ee-8842-c82f88672a45
-ms.openlocfilehash: 6acefa2d4a2aed8fca5d0b7db634d393baac6b58
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f5169cf730dc987526765c9538978901d424814b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821626"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701400"
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>Abstrações (tipos e interfaces abstratos)
+
 Uma abstração é um tipo que descreve um contrato, mas não fornece uma implementação completa do contrato. As abstrações geralmente são implementadas como classes ou interfaces abstratas e são fornecidas com um conjunto bem definido de documentação de referência que descreve a semântica necessária dos tipos que implementam o contrato. Algumas das abstrações mais importantes no .NET Framework incluem <xref:System.IO.Stream> , <xref:System.Collections.Generic.IEnumerable%601> e <xref:System.Object> .
 
  Você pode estender estruturas implementando um tipo concreto que dá suporte ao contrato de uma abstração e usando esse tipo concreto com APIs de estrutura consumindo (operando em) a abstração.
