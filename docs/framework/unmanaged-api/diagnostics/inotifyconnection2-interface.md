@@ -14,24 +14,26 @@ helpviewer_keywords:
 ms.assetid: 9868cfb3-dd51-4812-bca9-171d7829afe9
 topic_type:
 - apiref
-ms.openlocfilehash: 08daa26f60ca5935fed73494660426d58f398154
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 5a8cece5ad72588b564890c8f21dabb6792a5641
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442079"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720055"
 ---
 # <a name="inotifyconnection2-interface"></a>Interface INotifyConnection2
+
 Declara métodos para registrar e cancelar o registro de uma fonte de notificação de conexão.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método RegisterNotifySource](inotifyconnection2-registernotifysource-method.md)|Instala um objeto de origem de notificação especificado.|  
 |[Método UnregisterNotifySource](inotifyconnection2-unregisternotifysource-method.md)|Remove um objeto de origem de notificação especificado da conexão.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** ProtocolNotify2. idl  
   
 ## <a name="see-also"></a>Confira também

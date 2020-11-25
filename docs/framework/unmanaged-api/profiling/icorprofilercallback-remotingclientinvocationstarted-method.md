@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 796b63f3-c809-47f1-89cc-b23ad8eb5e79
 topic_type:
 - apiref
-ms.openlocfilehash: 8a042e71690b5ae77c1e4cda7be394a163ab2774
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 22b9970556dd9d8b5070f38a7712462aa5a4aae2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503257"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720159"
 ---
 # <a name="icorprofilercallbackremotingclientinvocationstarted-method"></a>Método ICorProfilerCallback::RemotingClientInvocationStarted
+
 Notifica o criador de perfil de que uma chamada de comunicação remota foi iniciada.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -32,11 +33,12 @@ HRESULT RemotingClientInvocationStarted();
 ```  
   
 ## <a name="remarks"></a>Comentários  
+
  Esse evento é o mesmo para chamadas síncronas e assíncronas.  
   
  Cada um dos seguintes pares de retornos de chamada ocorrerá no mesmo thread:  
   
-- `RemotingClientInvocationStarted`e [ICorProfilerCallback:: RemotingClientSendingMessage](icorprofilercallback-remotingclientsendingmessage-method.md)  
+- `RemotingClientInvocationStarted` e [ICorProfilerCallback:: RemotingClientSendingMessage](icorprofilercallback-remotingclientsendingmessage-method.md)  
   
 - [ICorProfilerCallback:: RemotingClientReceivingReply](icorprofilercallback-remotingclientreceivingreply-method.md) e [ICorProfilerCallback:: RemotingClientInvocationFinished](icorprofilercallback-remotingclientinvocationfinished-method.md)  
   
@@ -49,6 +51,7 @@ HRESULT RemotingClientInvocationStarted();
 - O criador de perfil não recebe notificações precisas para eventos de comunicação remota assíncrona.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

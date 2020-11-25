@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 51f848be-84c5-4036-9839-c762c576bbf5
 topic_type:
 - apiref
-ms.openlocfilehash: e8dda83df8a320733f45dbcc13599cdf37d26492
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 31640ada28af8e35554b91d5931d427fbaa8dcbe
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617146"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721849"
 ---
 # <a name="host_type-enumeration"></a>Enumeração HOST_TYPE
+
 Contém valores que especificam o tipo de host que está iniciando um aplicativo.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,18 +37,19 @@ typedef enum {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
-|`HOST_TYPE_APPLAUNCH`|Inicie o aplicativo em AppLaunch. exe.<br /><br /> Use esse valor para aplicativos parcialmente confiáveis.|  
+|`HOST_TYPE_APPLAUNCH`|Inicie o aplicativo a partir de AppLaunch.exe.<br /><br /> Use esse valor para aplicativos parcialmente confiáveis.|  
 |`HOST_TYPE_CORFLAG`|Inicie o aplicativo diretamente. Ou seja, inicie o aplicativo a partir de seu próprio arquivo. exe.<br /><br /> Use esse valor para aplicativos totalmente confiáveis.|  
 |`HOST_TYPE_DEFAULT`|O mesmo que HOST_TYPE_APPLAUNCH.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE. dll  
+ **Biblioteca:** MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

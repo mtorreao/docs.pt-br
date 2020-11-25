@@ -2,19 +2,21 @@
 title: Navegação do namespace XPath
 ms.date: 03/30/2017
 ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
-ms.openlocfilehash: 4d2ef71a41d19fd5bb573afab66dc8a15e19c393
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: d5350f0c8f73c5efb0f7d9e4c492a841b4978c36
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831202"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720887"
 ---
 # <a name="xpath-namespace-navigation"></a>Navegação do namespace XPath
+
 Para usar consultas XPath com documentos XML, você precisará endereçar corretamente namespaces XML e os elementos contidos por espaços. Namespaces impedem ambiguidades que podem ocorrer quando os nomes são usados em mais de um contexto; por exemplo, o nome `ID` pode referir-se a mais de um identificador associado com os diferentes elementos de um documento XML. A sintaxe do namespace especifica URIs, nomes, e prefixos que distinguiem os elementos de um documento XML.  
   
  O exemplo neste tópico demonstra o uso dos prefixos em navegar em um documento XML com <xref:System.Xml.XPath.XPathNavigator>. Para obter mais informações sobre namespaces e sintaxe, consulte [arquivos XML: Noções básicas sobre namespaces XML](/previous-versions/dotnet/articles/bb986013(v=msdn.10)).  
   
 ## <a name="namespace-declarations"></a>Declarações de namespace  
+
  As declarações namespace tornam os elementos de um documento XML distinguíveis e endereçáveis ao usar uma instância de <xref:System.Xml.XPath.XPathNavigator>. Prefixos de namespace fornece uma breve sintaxe para namespaces de resolução.  
   
  Os prefixos são definidos pelo formulário: `<e:Envelope xmlns:e=http://schemas.xmlsoap.org/soap/envelope/>.` nesta sintaxe o prefixo “`e`” é uma abreviação para o URI formal de namespace. Você pode identificar o elemento de `Body` como um membro de namespace de `Envelope` usando a sintaxe: `e:Body`.  
@@ -35,6 +37,7 @@ Para usar consultas XPath com documentos XML, você precisará endereçar corret
 ```  
   
 ## <a name="navigation-by-namespace-prefix"></a>Navegação pelo prefixo de namespace  
+
  O código nesta seção usa <xref:System.Xml.XPath.XPathNavigator> e objetos de <xref:System.Xml.XmlNamespaceManager> para selecionar o elemento de `Search` de documento XML na seção anterior. A consulta `xpath` inclui prefixos de namespace em cada elemento no caminho. Especificando a identidade precisa namespaces que contêm cada elemento garante a navegação correta para o elemento de `Search` pelo método de <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> .  
   
 ```csharp  

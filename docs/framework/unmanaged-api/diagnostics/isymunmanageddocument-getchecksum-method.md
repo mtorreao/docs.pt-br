@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9bc881b3-e2ce-48a7-ad69-17eaaa304120
 topic_type:
 - apiref
-ms.openlocfilehash: 543bd208e5492460435663c32f276472a763f613
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 4030da31400b7075952d146e5d6740306863e9ad
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441091"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721082"
 ---
 # <a name="isymunmanageddocumentgetchecksum-method"></a>Método ISymUnmanagedDocument::GetCheckSum
+
 Obtém a soma de verificação.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -35,6 +36,7 @@ HRESULT GetCheckSum(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `cData`  
  no O comprimento do buffer fornecido pelo `data` parâmetro  
   
@@ -44,9 +46,10 @@ HRESULT GetCheckSum(
  `data`  
  fora O buffer que recebe a soma de verificação.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  S_OK se o método tiver sucesso; caso contrário, um código de erro.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ISymUnmanagedDocument](isymunmanageddocument-interface.md)

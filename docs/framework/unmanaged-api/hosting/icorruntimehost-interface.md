@@ -14,21 +14,22 @@ helpviewer_keywords:
 ms.assetid: 4369533d-7834-4497-bc37-bfea0ad737b1
 topic_type:
 - apiref
-ms.openlocfilehash: 420f22a242a20f8bdf5d5b84f47a297a2f503db0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9fcb5e189af9f72de7635aad550a5e8ab5522dbd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546015"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720614"
 ---
 # <a name="icorruntimehost-interface"></a>Interface ICorRuntimeHost
+
 Fornece métodos que permitem ao host iniciar e parar explicitamente o Common Language Runtime (CLR), criar e configurar domínios de aplicativo, acessar o domínio padrão e enumerar todos os domínios em execução no processo.  
   
  Na versão .NET Framework 2,0, essa interface é substituída por [ICLRRuntimeHost](iclrruntimehost-interface.md).  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método CloseEnum](icorruntimehost-closeenum-method.md)|Redefine um enumerador de domínio de volta para o início da lista de domínios.|  
 |[Método CreateDomain](icorruntimehost-createdomain-method.md)|Cria um domínio de aplicativo. O chamador recebe um ponteiro de interface do tipo <xref:System._AppDomain> para uma instância do tipo <xref:System.AppDomain?displayProperty=nameWithType> .|  
@@ -51,6 +52,7 @@ Fornece métodos que permitem ao host iniciar e parar explicitamente o Common La
 |[Método UnloadDomain](icorruntimehost-unloaddomain-method.md)|Descarrega o domínio de aplicativo especificado do processo atual.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  

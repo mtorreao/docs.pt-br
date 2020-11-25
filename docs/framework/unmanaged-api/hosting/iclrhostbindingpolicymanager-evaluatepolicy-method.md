@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3a3a9446-7a4e-4836-9b27-5c536c15993d
 topic_type:
 - apiref
-ms.openlocfilehash: f72a66354bfc907dab7ebc24de515bdfb20ddfb2
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 9840217abdf8b3e1d0917b7447572b6860c181c8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703599"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720302"
 ---
 # <a name="iclrhostbindingpolicymanagerevaluatepolicy-method"></a>Método ICLRHostBindingPolicyManager::EvaluatePolicy
+
 Avalia a política de associação em nome do host.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -39,6 +40,7 @@ HRESULT EvaluatePolicy (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pwzReferenceIdentity`  
  no Uma referência ao assembly antes da avaliação da política.  
   
@@ -57,7 +59,7 @@ HRESULT EvaluatePolicy (
  `pdwPoliciesApplied`  
  fora Um ponteiro para uma combinação lógica ou de valores [EBindPolicyLevels](ebindpolicylevels-enumeration.md) , indicando quais políticas foram aplicadas.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
@@ -71,14 +73,16 @@ HRESULT EvaluatePolicy (
 |E_FAIL|Ocorreu uma falha catastrófica desconhecida. Depois que um método retorna E_FAIL, o CLR não pode mais ser usado no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O `EvaluatePolicy` método permite que o host influencie a diretiva de associação para manter os requisitos de controle de versão de assembly específicos do host. O próprio mecanismo de política permanece dentro do CLR.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

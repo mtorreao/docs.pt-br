@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2cffcc52-19e0-4ced-a440-fc7375078ac9
 topic_type:
 - apiref
-ms.openlocfilehash: 20919bd9889408821cf57817082e3c7d5cebc240
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 37156b03b184d06e0c7b03d7d7a9a018793bbb98
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503907"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721628"
 ---
 # <a name="ihosttaskjoin-method"></a>Método IHostTask::Join
+
 Bloqueia a tarefa de chamada até que a tarefa representada pela instância [IHostTask](ihosttask-interface.md) atual seja concluída, o intervalo de tempo especificado decorre ou [IHostTask:: Alert](ihosttask-alert-method.md) seja chamado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -35,6 +36,7 @@ HRESULT Join (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `milliseconds`  
  no O intervalo de tempo, em milissegundos, para aguardar até que a tarefa seja encerrada. Se esse intervalo expirar antes da tarefa ser encerrada, a tarefa de chamada desbloqueará.  
   
@@ -45,7 +47,7 @@ HRESULT Join (
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`Join`retornado com êxito.|  
+|S_OK|`Join` retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -53,11 +55,12 @@ HRESULT Join (
 |E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retorna E_FAIL, o CLR não é mais utilizável no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

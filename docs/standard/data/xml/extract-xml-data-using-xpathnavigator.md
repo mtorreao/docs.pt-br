@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 095b0987-ee4b-4595-a160-da1c956ad576
-ms.openlocfilehash: 5cf132c302650a0069c6cc497248d1d0b50c779d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 0d327738f818c40d8baa9e0fb8bd0092b94c6e07
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828901"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721498"
 ---
 # <a name="extract-xml-data-using-xpathnavigator"></a>Extrair dados XML usando XPathNavigator
+
 Há várias maneiras diferentes de representar um documento XML no Microsoft .NET Framework. Isso inclui usar um <xref:System.String> ou usar as classes <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, <xref:System.Xml.XmlDocument> ou <xref:System.Xml.XPath.XPathDocument>. Para facilitar a movimentação entre essas diferentes representações de um documento XML, a classe <xref:System.Xml.XPath.XPathNavigator> fornece alguns métodos e propriedades para extrair XML como um objeto <xref:System.String>, <xref:System.Xml.XmlReader> ou <xref:System.Xml.XmlWriter>.  
   
 ## <a name="convert-an-xpathnavigator-to-a-string"></a>Converter um XPathNavigator em uma cadeia de caracteres  
+
  A propriedade <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> da classe <xref:System.Xml.XPath.XPathNavigator> é usada para obter a marcação do documento XML inteiro ou apenas a marcação de um único nó e seus nós filho.  
   
 > [!NOTE]
@@ -48,6 +50,7 @@ string root = navigator.OuterXml;
 ```  
   
 ## <a name="convert-an-xpathnavigator-to-an-xmlreader"></a>Converter um XPathNavigator em um XmlReader  
+
  O método <xref:System.Xml.XPath.XPathNavigator.ReadSubtree%2A> é usado para transmitir o conteúdo inteiro de um documento XML ou apenas um único nó e seus nós filho para um objeto <xref:System.Xml.XmlReader>.  
   
  Quando o objeto <xref:System.Xml.XmlReader> é criado com o nó atual e seus nós filho, a propriedade <xref:System.Xml.XmlReader> do objeto <xref:System.Xml.XmlReader.ReadState%2A> é definida como <xref:System.Xml.ReadState.Initial>. Quando o método <xref:System.Xml.XmlReader> do objeto <xref:System.Xml.XmlReader.Read%2A> é chamado pela primeira vez, o <xref:System.Xml.XmlReader> é movido para o nó atual <xref:System.Xml.XPath.XPathNavigator>. O novo objeto <xref:System.Xml.XmlReader> continua a leitura até o final da árvore XML. Neste ponto, o método <xref:System.Xml.XmlReader.Read%2A> retorna `false` e a propriedade <xref:System.Xml.XmlReader> do objeto <xref:System.Xml.XmlReader.ReadState%2A> é definida como <xref:System.Xml.ReadState.EndOfFile>.  
@@ -115,6 +118,7 @@ book.Close();
  [!code-xml[XPathXMLExamples#1](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/books.xml#1)]  
   
 ## <a name="converting-an-xpathnavigator-to-an-xmlwriter"></a>Convertendo um XPathNavigator em um XmlWriter  
+
  O método <xref:System.Xml.XPath.XPathNavigator.WriteSubtree%2A> é usado para transmitir o conteúdo inteiro de um documento XML ou apenas um único nó e seus nós filho para um objeto <xref:System.Xml.XmlWriter>.  
   
  A posição do objeto <xref:System.Xml.XPath.XPathNavigator> é inalterada pela criação do objeto <xref:System.Xml.XmlWriter>.  

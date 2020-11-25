@@ -13,12 +13,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 16f2f61a2a36e4189e98c85b3d3ce706a52e2938
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: edd101e57793668d71d44db08f191ae412c6d998
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687279"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720900"
 ---
 # <a name="resolve-assembly-loads"></a>Resolver carregamentos de assembly
 
@@ -28,6 +28,7 @@ O .NET fornece o <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWith
 > Para resolver carregamentos de assembly no contexto de somente reflexão, use o evento <xref:System.AppDomain.ReflectionOnlyAssemblyResolve?displayProperty=nameWithType> em vez disso.  
   
 ## <a name="how-the-assemblyresolve-event-works"></a>Como o evento AssemblyResolve funciona  
+
  Quando você registra um manipulador para o evento <xref:System.AppDomain.AssemblyResolve>, o manipulador é invocado sempre que o runtime falha ao se associar a um assembly por nome. Por exemplo, chamar os seguintes métodos usando o código do usuário pode fazer com que o evento <xref:System.AppDomain.AssemblyResolve> seja gerado:  
   
 - Uma sobrecarga de método <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> ou uma sobrecarga de método <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> cujo primeiro argumento é uma cadeia de caracteres que representa o nome de exibição do assembly a ser carregado (ou seja, a cadeia de caracteres retornada pela propriedade <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType>).  
@@ -39,6 +40,7 @@ O .NET fornece o <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWith
 - Uma sobrecarga de método <xref:System.AppDomain.CreateInstance%2A?displayProperty=nameWithType> ou <xref:System.AppDomain.CreateInstanceAndUnwrap%2A?displayProperty=nameWithType> que cria uma instância de um objeto em outro domínio de aplicativo.  
   
 ### <a name="what-the-event-handler-does"></a>O que o manipulador de eventos faz  
+
  O manipulador do evento <xref:System.AppDomain.AssemblyResolve> recebe o nome de exibição do assembly a ser carregado na propriedade <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType>. Se o manipulador não reconhecer o nome do assembly, ele retornará `null` (C#), `Nothing` (Visual Basic) ou `nullptr` (Visual C++).  
   
  Se o manipulador reconhecer o nome do assembly, ele poderá carregar e retornar um assembly que atende à solicitação. A lista a seguir descreve alguns cenários de exemplo.  
@@ -69,6 +71,7 @@ O .NET fornece o <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWith
  Várias versões do mesmo assembly podem ser carregadas no mesmo domínio do aplicativo. Essa prática não é recomendada, pois ela pode levar a problemas de atribuição de tipo. Consulte [práticas recomendadas para o carregamento de assembly](../../framework/deployment/best-practices-for-assembly-loading.md).  
   
 ### <a name="what-the-event-handler-should-not-do"></a>O que o manipulador de eventos não deve fazer  
+
 A regra principal para tratamento do evento <xref:System.AppDomain.AssemblyResolve> é que você não deve tentar retornar um assembly que não reconhece. Ao escrever o manipulador, você deve saber quais assemblies podem fazer com que o evento seja acionado. O manipulador deve retornar nulo para outros assemblies.  
 
 > [!IMPORTANT]
@@ -198,7 +201,7 @@ End Class
 'Process is terminated due to StackOverflowException.
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Práticas recomendadas para o carregamento de assembly](../../framework/deployment/best-practices-for-assembly-loading.md)
 - [Usar domínios de aplicativo](../../framework/app-domains/use.md)

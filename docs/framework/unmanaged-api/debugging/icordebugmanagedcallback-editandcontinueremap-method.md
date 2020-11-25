@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 24a8fcce-317e-48ff-aefc-d86123ada935
 topic_type:
 - apiref
-ms.openlocfilehash: 78b87b5c566b0d760a205757430123665fb2fcd3
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 1d8aa2cca9dbbeaa9e03813b177ca59125770803
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213693"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721277"
 ---
 # <a name="icordebugmanagedcallbackeditandcontinueremap-method"></a>Método ICorDebugManagedCallback::EditAndContinueRemap
+
 Esse método foi substituído. Ele notifica o depurador de que um evento de remapeamento foi enviado para o ambiente de desenvolvimento integrado (IDE).  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,9 +38,11 @@ HRESULT EditAndContinueRemap (
 ```  
   
 ## <a name="remarks"></a>Comentários  
+
  O `EditAndContinueRemap` método é chamado quando a execução do código em uma versão antiga de uma função atualizada foi tentada. O Common Language Runtime chama o `EditAndContinueRemap` método para enviar um evento de remapeamento para o IDE.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

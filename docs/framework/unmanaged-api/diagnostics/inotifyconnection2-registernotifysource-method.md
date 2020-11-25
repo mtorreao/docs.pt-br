@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2632da80-6e4b-4429-8dee-b382745a5f81
 topic_type:
 - apiref
-ms.openlocfilehash: b7fa777466e2c7edd7b3110dd91e776785c63c58
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 1286dd970e437af0a8b607ed050ab4838f73a41f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442066"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720042"
 ---
 # <a name="inotifyconnection2registernotifysource-method"></a>Método INotifyConnection2::RegisterNotifySource
+
 Instala uma fonte de notificação especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,16 +37,19 @@ HRESULT RegisterNotifySource
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `in_pNotifySource`  
  no Especifica o objeto a ser usado como a fonte de notificação.  
   
  `out_ppNotifySink`  
  fora Recebe o objeto a ser usado como o coletor de notificação.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  S_OK se o método tiver sucesso.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** ProtocolNotify2. idl  
   
 ## <a name="see-also"></a>Confira também

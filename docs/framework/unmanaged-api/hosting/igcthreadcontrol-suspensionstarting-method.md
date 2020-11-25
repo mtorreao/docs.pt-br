@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0af312af-98e9-415e-b182-42e80a1aee51
 topic_type:
 - apiref
-ms.openlocfilehash: 2acabe66e3b6b5652df20e31a9d2294c2396b54b
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 9d39ee79f7734f7dd099a07640ecb06f4f8dcbb3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805097"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721654"
 ---
 # <a name="igcthreadcontrolsuspensionstarting-method"></a>Método IGCThreadControl::SuspensionStarting
+
 Notifica o host de que o tempo de execução está começando uma suspensão de thread para uma coleta de lixo ou outra suspensão.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -32,14 +33,16 @@ HRESULT SuspensionStarting ( );
 ```  
   
 ## <a name="remarks"></a>Comentários  
+
  Não reagende nenhum thread durante o `SuspensionStarting` retorno de chamada.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

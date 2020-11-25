@@ -2,12 +2,12 @@
 title: Registros
 description: 'Saiba como os registros F # representam agregações simples de valores nomeados, opcionalmente com membros.'
 ms.date: 08/15/2020
-ms.openlocfilehash: a72c0f15b58407e7d759e2fb5a1b35a7fc0d29e3
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 03de96b9c53bc21e7a7723a15d2a8451d100ba76
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812348"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682023"
 ---
 # <a name="records"></a>Registros
 
@@ -26,7 +26,7 @@ type [accessibility-modifier] typename =
 
 ## <a name="remarks"></a>Comentários
 
-Na sintaxe anterior, *TypeName* é o nome do tipo de registro, *Label1* e *Label2* são nomes de valores, chamados de *Labels*e *type1* e *type2* são os tipos desses valores. *lista* de membros é a lista opcional de membros para o tipo.  Você pode usar o `[<Struct>]` atributo para criar um registro de struct em vez de um registro que é um tipo de referência.
+Na sintaxe anterior, *TypeName* é o nome do tipo de registro, *Label1* e *Label2* são nomes de valores, chamados de *Labels* e *type1* e *type2* são os tipos desses valores. *lista* de membros é a lista opcional de membros para o tipo.  Você pode usar o `[<Struct>]` atributo para criar um registro de struct em vez de um registro que é um tipo de referência.
 
 Estes são alguns exemplos:
 
@@ -157,7 +157,7 @@ type Person =
     member this.WeirdToString() =
         this.Name + this.Address + string this.Age
 
-let p = { Name = "a"; Age = 12; Address = "abc123 }
+let p = { Name = "a"; Age = 12; Address = "abc123" }
 let weirdString = p.WeirdToString()
 ```
 
@@ -179,10 +179,10 @@ Se você escrever o mesmo código com classes, os dois objetos de classe seriam 
 
 Se você precisar de igualdade de referência para registros, adicione o atributo `[<ReferenceEquality>]` acima do registro.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Tipos F#](fsharp-types.md)
 - [Classes](classes.md)
 - [Referência de linguagem F #](index.md)
 - [Referência-igualdade](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-referenceequalityattribute.html)
-- [Correspondência de padrões](pattern-matching.md)
+- [Correspondência padrão](pattern-matching.md)

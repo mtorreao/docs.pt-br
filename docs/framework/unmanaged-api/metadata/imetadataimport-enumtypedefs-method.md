@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4e508711-da92-4381-aaf8-6803075cdaa2
 topic_type:
 - apiref
-ms.openlocfilehash: cdfd4e10236d546af2555b125d44233172849a21
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 4545f5f8d78e588c655a72340210a785b0feb619
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503725"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720406"
 ---
 # <a name="imetadataimportenumtypedefs-method"></a>Método IMetaDataImport::EnumTypeDefs
+
 Enumera os tokens de TypeDef que representam todos os tipos no escopo atual.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,6 +38,7 @@ HRESULT EnumTypeDefs (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `phEnum`  
  fora Um ponteiro para o novo enumerador. Isso deve ser nulo para a primeira chamada deste método.  
   
@@ -51,20 +53,22 @@ HRESULT EnumTypeDefs (
   
 ## <a name="return-value"></a>Valor Retornado  
   
-|HRESULT|Descrição|  
+|HRESULT|DESCRIÇÃO|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs`retornado com êxito.|  
+|`S_OK`|`EnumTypeDefs` retornado com êxito.|  
 |`S_FALSE`|Não há tokens para enumerar. Nesse caso, `pcTypeDefs` é zero.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O token TypeDef representa um tipo como uma classe ou uma interface, bem como qualquer tipo adicionado por meio de um mecanismo de extensibilidade.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

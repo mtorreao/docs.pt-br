@@ -6,17 +6,19 @@ helpviewer_keywords:
 - unmanaged coclasses [.NET Framework], hosting
 - coclasses [.NET Framework hosting]
 ms.assetid: e32d8667-58ee-4760-814f-d22963881622
-ms.openlocfilehash: 8eb8702c29b6f9655de7ba9d48e2722674e34fe6
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: ef8ae7144b3dc625b14cf9fc19052f102ee7a1ff
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616132"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721836"
 ---
 # <a name="hosting-coclasses"></a>Hospedando coclasses
+
 Esta seção descreve as coclasses de API não gerenciadas que a API de hospedagem usa.  
   
 ## <a name="in-this-section"></a>Nesta seção  
+
  [Coclass CLRRuntimeHost](clrruntimehost-coclass.md)  
  Fornece interfaces para gerenciar a execução de código pelo tempo de execução.  
   
@@ -30,6 +32,7 @@ Esta seção descreve as coclasses de API não gerenciadas que a API de hospedag
  Fornece uma interface para gerenciar a desconstrução de um nome de tipo.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
+
  [Interfaces de hospedagem](hosting-interfaces.md)  
   
  [Funções de hospedagem CLR reprovadas](deprecated-clr-hosting-functions.md)  

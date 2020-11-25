@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: bca7a5b4-c207-4894-918c-0733926296dd
 topic_type:
 - apiref
-ms.openlocfilehash: d42c86a458661d3559f99235a6d5b208c82d1963
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: df0e66c8563404d7de4f1e11f41483f2f61f519c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502802"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721550"
 ---
 # <a name="icorprofilerinfo4enumthreads-method"></a>Método ICorProfilerInfo4::EnumThreads
+
 Retorna um enumerador que fornece métodos para iterar sequencialmente pela coleção de todos os threads gerenciados no processo de perfil.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -33,12 +34,14 @@ HRESULT EnumThreads([out]
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `ppEnum`  
  fora Um ponteiro para uma interface [ICorProfilerThreadEnum](icorprofilerthreadenum-interface.md) .  
   
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

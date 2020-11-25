@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c35199bf-bc47-4901-b467-4e8a37644bbb
 topic_type:
 - apiref
-ms.openlocfilehash: cf257ab86d27946c861c89dff5e6f09a42013e58
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 397dbbeb0b85cb549a8b5917f977ecb13b3d6539
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804710"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720211"
 ---
 # <a name="ihostiocompletionmanagerinitializehostoverlapped-method"></a>Método IHostIoCompletionManager::InitializeHostOverlapped
+
 Fornece ao host uma oportunidade de inicializar quaisquer dados personalizados para acrescentar a uma estrutura Win32 `OVERLAPPED` que é usada para solicitações de e/s assíncronas.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,6 +35,7 @@ HRESULT InitializeHostOverlapped (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pvOverlapped`  
  no Um ponteiro para a estrutura do Win32 `OVERLAPPED` a ser incluído na solicitação de e/s.  
   
@@ -41,7 +43,7 @@ HRESULT InitializeHostOverlapped (
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`InitializeHostOverlapped`retornado com êxito.|  
+|S_OK|`InitializeHostOverlapped` retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -50,6 +52,7 @@ HRESULT InitializeHostOverlapped (
 |E_OUTOFMEMORY|Não havia memória suficiente disponível para alocar o recurso solicitado.|  
   
 ## <a name="remarks"></a>Comentários  
+
  As funções da plataforma Windows usam a `OVERLAPPED` estrutura para armazenar o estado para solicitações de e/s assíncronas. O CLR chama o `InitializeHostOverlapped` método para dar ao host a oportunidade de acrescentar dados personalizados a uma `OVERLAPPED` instância.  
   
 > [!IMPORTANT]
@@ -58,11 +61,12 @@ HRESULT InitializeHostOverlapped (
  Um valor de retorno de E_OUTOFMEMORY indica que o host falhou ao inicializar seus dados personalizados. Nesse caso, o CLR relata um erro e falha na chamada.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

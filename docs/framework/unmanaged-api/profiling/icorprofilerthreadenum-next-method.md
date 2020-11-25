@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f3535279-3c63-41a2-ab0e-a129dc5a01e8
 topic_type:
 - apiref
-ms.openlocfilehash: 37d1acfa70a1a2b2c18fb34fb5d6024f3b61e2ab
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: dc8e85c5a6047ad5dd99520b57789605333d5bf2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84494339"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721199"
 ---
 # <a name="icorprofilerthreadenumnext-method"></a>Método ICorProfilerThreadEnum::Next
+
 Obtém o número especificado de threads contíguos de uma coleção sequencial de threads, começando na posição atual do enumerador na sequência.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,6 +37,7 @@ HRESULT Next (    [in]  ULONG      celt,
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `celt`  
  no O número de threads a serem recuperados.  
   
@@ -46,14 +48,16 @@ HRESULT Next (    [in]  ULONG      celt,
  fora Um ponteiro para o número de threads realmente retornados na `ids` matriz.  
   
 ## <a name="return-value"></a>Valor Retornado  
+
  Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`celt`elementos foram retornados.|  
+|S_OK|`celt` elementos foram retornados.|  
 |S_FALSE|Menos de `celt` elementos foram retornados, o que indica que a enumeração foi concluída.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

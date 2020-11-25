@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d9d7600e-a8f5-443a-96de-67d26e130f2d
 topic_type:
 - apiref
-ms.openlocfilehash: f81ef3f5959e279b3fbbd94d6c5e8a2d86a38e7f
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 9049cd42e9c10cdcff62b005094b56c9df9ce975
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442014"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719990"
 ---
 # <a name="inotifysink2onsynccallexit-method"></a>Método INotifySink2::OnSyncCallExit
+
 É invocado ao sair de uma chamada.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,6 +38,7 @@ HRESULT OnSyncCallExit
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `in_CallID`  
  no ID da chamada sendo encerrada. Consulte [estrutura de CALL_ID](call-id-structure.md).  
   
@@ -46,10 +48,12 @@ HRESULT OnSyncCallExit
  `out_pBufferSize`  
  fora Tamanho do buffer de chamada, em bytes.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  S_OK se o método tiver sucesso.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** ProtocolNotify2. idl  
   
 ## <a name="see-also"></a>Confira também

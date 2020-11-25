@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5d798088-7992-48a0-ae55-d2a7ee31913f
 topic_type:
 - apiref
-ms.openlocfilehash: 456d9a0e8236948ac69ed069495b1999ebf7e80a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8eaf36579bb82d66ff356aa68afc38c70d7eaca3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500605"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720380"
 ---
 # <a name="functionleave3-function"></a>Função FunctionLeave3
+
 Notifica o criador de perfil que o controle está sendo retornado de uma função.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,6 +38,7 @@ void __stdcall FunctionLeave3(FunctionOrRemappedID functionOrRemappedID);
   \[in] o identificador da função a partir da qual o controle é retornado.
   
 ## <a name="remarks"></a>Comentários  
+
  A `FunctionLeave3` função de retorno de chamada notifica o criador de perfil conforme as funções estão sendo chamadas, mas não oferece suporte à inspeção de valor de retorno. Use o [método ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3](icorprofilerinfo3-setenterleavefunctionhooks3-method.md) para registrar sua implementação dessa função.  
   
  A `FunctionLeave3` função é um retorno de chamada; você deve implementá-la. A implementação deve usar o `__declspec(naked)` atributo de classe de armazenamento.  
@@ -52,6 +54,7 @@ void __stdcall FunctionLeave3(FunctionOrRemappedID functionOrRemappedID);
  A `FunctionLeave3` função não deve chamar código gerenciado ou causar uma alocação de memória gerenciada de qualquer forma.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl  

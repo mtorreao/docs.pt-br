@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2863b33b-a541-462c-bbe8-702a2832898e
 topic_type:
 - apiref
-ms.openlocfilehash: d3f7c24b4bd373924c44dbc0490c890e7f1322bd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f56a9049cd4b503124abe9dd4866dc91779e268e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131727"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721056"
 ---
 # <a name="iinstallreferenceenum-interface"></a>Interface IInstallReferenceEnum
+
 Representa um enumerador para os assemblies referenciados instalados no cache de assembly global.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -38,18 +39,19 @@ interface IInstallReferenceEnum : IUnknown {
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
-|[Método GetNextInstallReferenceItem](iinstallreferenceenum-getnextinstallreferenceitem-method.md)|Obtém um ponteiro para a próxima `IInstallReferenceItem` contida neste `IInstallReferenceEnum`.|  
+|[Método GetNextInstallReferenceItem](iinstallreferenceenum-getnextinstallreferenceitem-method.md)|Obtém um ponteiro para o próximo `IInstallReferenceItem` contido neste `IInstallReferenceEnum` .|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Fusion. h  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interfaces de fusão](fusion-interfaces.md)
 - [Interface IInstallReferenceItem](iinstallreferenceitem-interface.md)

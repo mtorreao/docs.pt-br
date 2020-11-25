@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d6036345-18a3-45c1-a302-b1c6f2dced9b
 topic_type:
 - apiref
-ms.openlocfilehash: 20a841006d51671a491e11c4e40287baf739d191
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 6c59ede004ce02ee3d14a448fc61d1c092bd0d61
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209817"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721264"
 ---
 # <a name="icordebugmanagedcallbackevalexception-method"></a>Método ICorDebugManagedCallback::EvalException
+
 Notifica o depurador de que uma avaliação terminou com uma exceção sem tratamento.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,6 +37,7 @@ HRESULT EvalException (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pAppDomain`  
  no Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio do aplicativo no qual a avaliação foi encerrada.  
   
@@ -46,6 +48,7 @@ HRESULT EvalException (
  no Um ponteiro para um objeto ICorDebugEval que representa o código que realizou a avaliação.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

@@ -6,17 +6,19 @@ helpviewer_keywords:
 - unmanaged structures [.NET Framework], hosting
 - structures [.NET Framework hosting]
 ms.assetid: 492e010f-7493-4134-9505-f7008ccdaae6
-ms.openlocfilehash: fb117352299a93aface6e58837307284ec4b8340
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 9d0349e4801c550731b6d126197003917c4a46e8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616080"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721784"
 ---
 # <a name="hosting-structures"></a>Estruturas de hospedagem
+
 Esta seção descreve as estruturas não gerenciadas que a API de hospedagem usa.  
   
 ## <a name="in-this-section"></a>Nesta seção  
+
  [Estrutura AssemblyBindInfo](assemblybindinfo-structure.md)  
  Fornece informações detalhadas sobre o assembly referenciado.  
   
@@ -42,6 +44,7 @@ Esta seção descreve as estruturas não gerenciadas que a API de hospedagem usa
  Armazena o tipo de estouro que ocorreu e informações sobre a exceção que foi lançada devido ao estouro.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
+
  [Hospedando coclasses](hosting-coclasses.md)  
   
  [Interfaces de hospedagem](hosting-interfaces.md)  

@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e6848c47-ee5d-401a-89a5-50b5eed40f30
-ms.openlocfilehash: e7e9d63ed4b24eb0e594c464038590aa9dc99910
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2d598a4ddfe84eec7288d111fc156dd0c555a10e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822523"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720120"
 ---
 # <a name="matching-nodes-using-xpathnavigator"></a>Nós compatíveis usando XPathNavigator
+
 A classe de <xref:System.Xml.XPath.XPathNavigator> fornece o método de <xref:System.Xml.XPath.XPathNavigator.Matches%2A> para determinar se um nó corresponde uma expressão XPath. O método de <xref:System.Xml.XPath.XPathNavigator.Matches%2A> usa uma expressão XPath como entrada e retorna <xref:System.Boolean> que indica se o nó atual corresponde a expressão XPath determinada ou o objeto compilado dado de <xref:System.Xml.XPath.XPathExpression> .  
   
 ## <a name="matching-nodes"></a>Nós compatíveis  
+
  O método de <xref:System.Xml.XPath.XPathNavigator.Matches%2A> retorna `true` se o nó atual corresponde a expressão XPath especificada. Por exemplo, no exemplo de código que segue, o método de <xref:System.Xml.XPath.XPathNavigator.Matches%2A> retornará `true` se o nó atual é o elemento `b`, e o elemento `b` tem um atributo `c`.  
   
 > [!NOTE]

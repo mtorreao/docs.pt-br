@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6b961728-21c4-4e8d-ae81-197458be62f4
 topic_type:
 - apiref
-ms.openlocfilehash: 5fa3bafd35912a7729833896f7e6f0bb2ff9b121
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 56ec7c56b167c29c9951638c5eee159e1d3c7ffb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212380"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721290"
 ---
 # <a name="icordebugmanagedcallbackcreatethread-method"></a>Método ICorDebugManagedCallback::CreateThread
+
 Notifica o depurador de que um thread iniciou a execução de código gerenciado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -35,6 +36,7 @@ HRESULT CreateThread (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pAppDomain`  
  no Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio do aplicativo que contém o thread.  
   
@@ -42,9 +44,11 @@ HRESULT CreateThread (
  no Um ponteiro para um objeto ICorDebugThread que representa o thread.  
   
 ## <a name="remarks"></a>Comentários  
+
  O thread será posicionado na primeira instrução de código gerenciado a ser executada.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

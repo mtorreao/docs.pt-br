@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b18742b0-d8c4-401c-ae89-e6eccdaa81d0
 topic_type:
 - apiref
-ms.openlocfilehash: a4e8211f091b2a3a4f24d8350f6d7dbe7d7920af
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 4143c3d25dd5262a10b53708a249910cc79f5314
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842381"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720432"
 ---
 # <a name="ihosttaskstart-method"></a>Método IHostTask::Start
+
 Solicita que o host mova a tarefa representada pela instância [IHostTask](ihosttask-interface.md) atual de uma suspensa para um estado ativo, na qual o código pode ser executado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -39,18 +40,20 @@ HRESULT Start ();
 |E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retorna E_FAIL, o Common Language Runtime (CLR) não é mais utilizável no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
- `Start`sempre retorna um valor HRESULT de S_OK, exceto nos casos em que ocorreu uma falha catastrófica.  
+
+ `Start` sempre retorna um valor HRESULT de S_OK, exceto nos casos em que ocorreu uma falha catastrófica.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICLRTask](iclrtask-interface.md)
 - [Interface ICLRTaskManager](iclrtaskmanager-interface.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c675ce7e-76e7-45ff-8273-3b6489a2767c
 topic_type:
 - apiref
-ms.openlocfilehash: b7e2814e56765037b69c6ef7ca0ba610dd7d3c95
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: aa3b742babe4a94a43e4e6168dea67c0a0245eb0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614923"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720575"
 ---
 # <a name="isymunmanagedreadergetsymattribute-method"></a>Método ISymUnmanagedReader::GetSymAttribute
+
 Obtém um atributo personalizado com base no seu nome. Ao contrário dos atributos personalizados de metadados, esses atributos personalizados são mantidos no repositório de símbolos.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -38,6 +39,7 @@ HRESULT GetSymAttribute (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `parent`  
  no O token de metadados para o objeto para o qual o atributo é solicitado.  
   
@@ -53,10 +55,12 @@ HRESULT GetSymAttribute (
  `buffer`  
  fora Um ponteiro para a variável que recebe os dados de atributo.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Confira também

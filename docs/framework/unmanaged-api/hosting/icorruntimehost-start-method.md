@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c66f3ac5-6489-484a-9bed-c31b711cee01
 topic_type:
 - apiref
-ms.openlocfilehash: ccad76e1c8a49222d4f527f8b7b18d4e40ff8cae
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: bc647ad025b5e22187b476383ed0128761cb632f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83760401"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721030"
 ---
 # <a name="icorruntimehoststart-method"></a>Método ICorRuntimeHost::Start
+
 Inicia o Common Language Runtime (CLR).  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -33,7 +34,7 @@ HRESULT Start ();
   
 ## <a name="return-value"></a>Valor retornado  
   
-|HRESULT|Description|  
+|HRESULT|Descrição|  
 |-------------|-----------------|  
 |S_OK|A operação foi bem-sucedida.|  
 |S_FALSE|Falha ao concluir a operação.|  
@@ -41,17 +42,19 @@ HRESULT Start ();
 |HOST_E_CLRNOTAVAILABLE|O CLR não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Normalmente, não é necessário chamar o `Start` método, porque o CLR inicia automaticamente na primeira solicitação para executar código gerenciado.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **Versões do .NET Framework:** 1,0, 1,1  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorRuntimeHost](icorruntimehost-interface.md)

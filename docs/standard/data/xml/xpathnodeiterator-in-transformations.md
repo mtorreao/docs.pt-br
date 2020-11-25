@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2bc6ddc6-674a-4f75-b264-abc35e4e5857
-ms.openlocfilehash: cd8320071f1de15d503c94c138c02cab5742685c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a1542c0800f9042e27a4b0806d717c58d7783c79
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818427"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720835"
 ---
 # <a name="xpathnodeiterator-in-transformations"></a>XPathNodeIterator nas transformações
+
 <xref:System.Xml.XPath.XPathNodeIterator> fornece métodos para iterar sobre um conjunto de nós criados como resultado de uma consulta de idioma do caminho de XML (XPath) ou de um fragmento da árvore de resultado convertida em um nó definido por meio do método nó- definido. <xref:System.Xml.XPath.XPathNodeIterator> permite que você para iterar sobre os nós dentro desse conjunto de nó. Uma vez que um conjunto de nó é recuperado, a classe de <xref:System.Xml.XPath.XPathNodeIterator> fornece um cursor somente leitura, e somente para frente ao dataset selecionado de nós. O nó é criado na ordem de documento, o que move em chamar esse método para o nó seguir na ordem de documento. <xref:System.Xml.XPath.XPathNodeIterator> não cria uma árvore de nós de todos os nós no dataset. Em vez disso, fornece uma janela de único nó nos dados, expõe o nó subjacente que aponta para a medida que você se move ao redor de árvore. Os métodos e propriedades disponíveis de classe de <xref:System.Xml.XPath.XPathNodeIterator> permite que você obtenha informações do nó atual. Para obter uma lista de métodos e propriedades disponíveis, consulte <xref:System.Windows.Forms.ToolBar>.  
   
  Desde que <xref:System.Xml.XPath.XPathNodeIterator> se move sobre um conjunto de nós criados de uma consulta XPath e se avança apenas, a maneira para mover é usando o método <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> . O tipo de retorno desse método é `Boolean`, retornando `true` se move para o nó selecionado seguinte, e `false` se não há mais nó selecionado. Se retorna `true`, a lista a seguir mostra as propriedades disponíveis:  

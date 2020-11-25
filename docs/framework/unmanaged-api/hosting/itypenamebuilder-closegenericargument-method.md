@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c9a8178d-be1f-4ad4-abdb-d38470659b82
 topic_type:
 - apiref
-ms.openlocfilehash: 4b083b5225b500fa19ed40cc6550630e155e8c52
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 22a9bdc014358ac3cda0da166f3f29d1c60d09ee
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008684"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721238"
 ---
 # <a name="itypenamebuilderclosegenericargument-method"></a>Método ITypeNameBuilder::CloseGenericArgument
+
 Esse método oferece suporte a infraestrutura do .NET Framework e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -32,11 +33,12 @@ HRESULT CloseGenericArgument ( );
 ```  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

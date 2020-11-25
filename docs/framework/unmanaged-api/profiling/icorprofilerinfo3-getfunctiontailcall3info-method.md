@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: afdb5ac9-5bf5-4b91-b7cb-f81db23d7da3
 topic_type:
 - apiref
-ms.openlocfilehash: e4d0d9ed07c707e51e5833483b71079f2c330505
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 27bbb1aac376866be7458a3737af9d89bf761411
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496523"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721602"
 ---
 # <a name="icorprofilerinfo3getfunctiontailcall3info-method"></a>Método ICorProfilerInfo3::GetFunctionTailcall3Info
+
 Fornece o quadro de pilha da função que está sendo reportada para o criador de perfil pela função [FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md) . Esse método pode ser chamado somente durante o `FunctionTailcall3WithInfo` retorno de chamada.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -35,6 +36,7 @@ HRESULT GetFunctionTailcall3Info(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `functionId`  
  no O `FunctionID` da função que está retornando.  
   
@@ -47,6 +49,7 @@ HRESULT GetFunctionTailcall3Info(
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

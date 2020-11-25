@@ -2,14 +2,15 @@
 title: Carregando dados de um leitor
 ms.date: 03/30/2017
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
-ms.openlocfilehash: ea125e57dd6251a4fbd401bac8f37826083965b8
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 345b6e35c84fe531e131d27bd09fbd8a87b4521a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822666"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720133"
 ---
 # <a name="load-data-from-a-reader"></a>Carregando dados de um leitor
+
 Se um documento XML é carregado usando o método <xref:System.Xml.XmlDocument.Load%2A> e um parâmetro de <xref:System.Xml.XmlReader>, existem diferenças no comportamento que ocorre quando comparado ao comportamento de dados de carregamento de outro formata. Se o leitor está no estado inicial, <xref:System.Xml.XmlDocument.Load%2A> consome todo o conteúdo do leitor e compila o modelo de objeto (DOM) de documento de todos os dados no leitor.  
   
  Se o leitor já está localizado em um nó em algum lugar no documento, e o leitor é então passado para o método de <xref:System.Xml.XmlDocument.Load%2A> , tentativas de <xref:System.Xml.XmlDocument.Load%2A> de ler o nó atual e todos os seus irmãos, até a marca de fim que fecha a profundidade atual na memória. O sucesso de <xref:System.Xml.XmlDocument.Load%2A> tentado depende do nó que o leitor está na carga quando é tentada, porque <xref:System.Xml.XmlDocument.Load%2A> verifica que XML do leitor seja bem formado. Se XML bem formado, não é <xref:System.Xml.XmlDocument.Load%2A> gerencie uma exceção. Por exemplo, o seguinte conjunto de nós contém dois elementos de nível raiz, não é XML bem formado, e gera de <xref:System.Xml.XmlDocument.Load%2A> uma exceção.  

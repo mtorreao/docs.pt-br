@@ -4,12 +4,12 @@ description: 'Saiba como criar uma sintaxe conveniente para escrever computaçõ
 ms.date: 08/15/2020
 f1_keywords:
 - let!_FS
-ms.openlocfilehash: 1649d8c57ea9e025d40ef6d39d92b96795964150
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: bc3842b6f1075d68d1997e78c8bd8485731fca52
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812153"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705300"
 ---
 # <a name="computation-expressions"></a>Expressões de computação
 
@@ -181,7 +181,7 @@ Ao contrário `yield` de, `yield!` deve ser especificado explicitamente. Seu com
 A `return` palavra-chave encapsula um valor no tipo correspondente à expressão de computação. Além das expressões de computação usando `yield` o, ele é usado para "Concluir" uma expressão de computação:
 
 ```fsharp
-let req = // 'req' is of type is 'Async<data>'
+let req = // 'req' is of type 'Async<data>'
     async {
         let! data = fetch url
         return data
@@ -198,7 +198,7 @@ let result = Async.RunSynchronously req
 A `return!` palavra-chave percebe o valor de uma expressão de computação e encapsulamentos que resultam no tipo correspondente à expressão de computação:
 
 ```fsharp
-let req = // 'req' is of type is 'Async<data>'
+let req = // 'req' is of type 'Async<data>'
     async {
         return! fetch url
     }
@@ -430,7 +430,7 @@ type FSharp.Linq.QueryBuilder with
         Enumerable.Any (source.Source, Func<_,_>(predicate)) |> not
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Referência de linguagem F #](index.md)
 - [Fluxos de trabalho assíncronos](asynchronous-workflows.md)

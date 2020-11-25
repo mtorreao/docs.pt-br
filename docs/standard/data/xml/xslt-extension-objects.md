@@ -2,14 +2,15 @@
 title: Objetos de extensão XSLT
 ms.date: 03/30/2017
 ms.assetid: a4ebdbad-087c-4cfe-acc0-17c48142f81a
-ms.openlocfilehash: fa9c8e0baa11d8c0e2d8099a6ddbe1c43c4d6b7f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 0e874bb7679854b75a07eb452e47eba0d30807a5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818304"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720783"
 ---
 # <a name="xslt-extension-objects"></a>Objetos de extensão XSLT
+
 Os objetos de extensão são usados para estender a funcionalidade de folhas de estilos. Os objetos de extensão são mantidos pela classe de <xref:System.Xml.Xsl.XsltArgumentList> .  
   
  Os seguintes são vantagens de usar um objeto de extensão em vez do script inserido:  

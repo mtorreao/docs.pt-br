@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c1d3d1eb-8370-4f25-8297-3bd262b4740a
 topic_type:
 - apiref
-ms.openlocfilehash: 4a01ccd4e5cb9aadc6a693b2c6ceaff31c114bbc
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 83d3eda0f3c4619ec7a5df91d13ab9f3a58e5f01
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209884"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721342"
 ---
 # <a name="icordebuginternalframe2isclosertoleaf-method"></a>Método ICorDebugInternalFrame2::IsCloserToLeaf
+
 Verifica se o `this` quadro interno está mais próximo da folha do que o objeto ICorDebugFrame especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -33,13 +34,15 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pFrameToCompare`  
  no Um ponteiro para o objeto de comparação `ICorDebugFrame` .  
   
  `pIsCloser`  
  [fora] `true` Se o `this` quadro interno estiver mais próximo da folha do que o quadro especificado por `pFrameToCompare` ; caso contrário, `false` .  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
@@ -49,9 +52,11 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
 |E_INVALIDARG|`pFrameToCompare` ou `pIsCloser` é nulo.|  
   
 ## <a name="remarks"></a>Comentários  
- `IsCloserToLeaf`pode ser usado para implementar uma política para intercalar quadros internos com outros quadros na pilha.  
+
+ `IsCloserToLeaf` pode ser usado para implementar uma política para intercalar quadros internos com outros quadros na pilha.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

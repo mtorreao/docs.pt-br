@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97115892-410a-4657-ab47-1e14dfba73f8
-ms.openlocfilehash: 0afee2d706b95117971c02b57a5570427e0fbd3d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 1c7aa1a9d5c02aaac5a78603bd2397f012d4640d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827549"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721927"
 ---
 # <a name="xmldocument-input-to-xsltransform"></a>XmlDocument inseriu a XslTransform
+
 A classe de <xref:System.Xml.XmlDocument> fornece recursos de edição de um documento XML. Se o XML precisa ser editado ou alterado antes de ser enviado para o método de <xref:System.Xml.Xsl.XslTransform.Transform%2A> , carregar XML em <xref:System.Xml.XmlDocument>, editá-lo, e enviá-lo na <xref:System.Xml.Xsl.XslTransform>.  
   
 > [!NOTE]
@@ -23,6 +24,7 @@ A classe de <xref:System.Xml.XmlDocument> fornece recursos de edição de um doc
  Devido ao recurso de <xref:System.Xml.XmlDocument>, use a classe de <xref:System.Xml.XmlDocument> como entrada uma transformação é mais lento do que usar <xref:System.Xml.XPath.XPathDocument> para o idioma extensível de folha de estilos para transformações de transformações (XSLT), porque <xref:System.Xml.XPath.XPathDocument> é otimizado para consultas de idioma do caminho de XML (XPath) devido ao armazenamento interno.  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo de código a seguir mostra como <xref:System.Xml.XmlDocument> pode ser fornecido para <xref:System.Xml.Xsl.XslTransform>, com a saída enviadas a <xref:System.Xml.XmlReader>.  
   
 ```vb  

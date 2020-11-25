@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d0d65060-6f90-42a2-95cf-6ffb04352996
 topic_type:
 - apiref
-ms.openlocfilehash: 652ebf1be6a58e08da27aaed5b2e84a8f2aee98a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 3021124184ab0491337a07144e6f77b5bfea3681
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503764"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721966"
 ---
 # <a name="imetadataimportenumsignatures-method"></a>Método IMetaDataImport::EnumSignatures
+
 Enumera os tokens de assinatura que representam assinaturas autônomas no escopo atual.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,6 +38,7 @@ HRESULT EnumSignatures (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `phEnum`  
  [entrada, saída] Um ponteiro para o enumerador. Isso deve ser nulo para a primeira chamada deste método.  
   
@@ -51,20 +53,22 @@ HRESULT EnumSignatures (
   
 ## <a name="return-value"></a>Valor Retornado  
   
-|HRESULT|Descrição|  
+|HRESULT|DESCRIÇÃO|  
 |-------------|-----------------|  
-|`S_OK`|`EnumSignatures`retornado com êxito.|  
+|`S_OK`|`EnumSignatures` retornado com êxito.|  
 |`S_FALSE`|Não há tokens para enumerar. Nesse caso, `pcSignatures` é zero.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Os tokens de assinatura são criados pelo método [IMetaDataEmit:: GetTokenFromSig](imetadataemit-gettokenfromsig-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
