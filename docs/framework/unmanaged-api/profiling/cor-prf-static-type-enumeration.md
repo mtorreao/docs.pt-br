@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 441d7809-5b65-41a5-ba64-2910a8008315
 topic_type:
 - apiref
-ms.openlocfilehash: 80d72aefc736054afcee152c55e941c0f8f3c6a8
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2fbcbb6f6115ec48085b533dbf5611054a8235c5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500761"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696733"
 ---
 # <a name="cor_prf_static_type-enumeration"></a>Enumeração COR_PRF_STATIC_TYPE
+
 Indica se um campo é estático e, em caso positivo, a qualidade estática aplicada ao campo. Esses valores podem ser combinados usando-se a operação OR de bits para indicar que o campo tem várias qualidades estáticas diferentes.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -38,7 +39,7 @@ typedef enum {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |`COR_PRF_FIELD_NOT_A_STATIC`|O campo não é estático.|  
 |`COR_PRF_FIELD_APP_DOMAIN_STATIC`|O campo é um domínio de aplicativo estático.|  
@@ -47,6 +48,7 @@ typedef enum {
 |`COR_PRF_FIELD_RVA_STATIC`|O campo é um endereço virtual relativo (RVA)-estático.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

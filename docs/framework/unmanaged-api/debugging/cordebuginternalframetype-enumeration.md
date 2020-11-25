@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: e4412dc2-c338-4cfb-94d8-f682095dd2b1
 topic_type:
 - apiref
-ms.openlocfilehash: 4a65a98ee04c3870dae2f49b3da2a8e72b1ffae4
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 1c94e03aa088d8f48eb7f7a418cebd0492319513
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795822"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696577"
 ---
 # <a name="cordebuginternalframetype-enumeration"></a>Enumeração CorDebugInternalFrameType
+
 Identifica o tipo de quadro de pilha. Essa enumeração é usada pelo método [ICorDebugInternalFrame:: GetFrameType](icordebuginternalframe-getframetype-method.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -45,9 +46,9 @@ typedef enum CorDebugInternalFrameType {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
-|`STUBFRAME_NONE`|Um valor null. O `ICorDebugInternalFrame::GetFrameType` método nunca retorna esse valor.|  
+|`STUBFRAME_NONE`|Um valor nulo. O `ICorDebugInternalFrame::GetFrameType` método nunca retorna esse valor.|  
 |`STUBFRAME_M2U`|Um quadro de stub gerenciado para não gerenciado.|  
 |`STUBFRAME_U2M`|Um quadro de stub não gerenciado para gerenciamento.|  
 |`STUBFRAME_APPDOMAIN_TRANSITION`|Uma transição entre domínios de aplicativo.|  
@@ -60,6 +61,7 @@ typedef enum CorDebugInternalFrameType {
 |`STUBFRAME_JIT_COMPILATION`|O tempo de execução é a compilação JIT de um método.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -68,6 +70,6 @@ typedef enum CorDebugInternalFrameType {
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Declarando enumerações](debugging-enumerations.md)

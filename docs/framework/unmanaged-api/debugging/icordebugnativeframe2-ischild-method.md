@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e2aae09-49cb-4fbd-81e5-e29cd864a88b
 topic_type:
 - apiref
-ms.openlocfilehash: 759ba7bd46f8231143e743aa5ffcabffeb99c3b6
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 0d65849aba08c7d143a6977e7dfb8cff85274a64
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205106"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95695563"
 ---
 # <a name="icordebugnativeframe2ischild-method"></a>Método ICorDebugNativeFrame2::IsChild
+
 Determina se o quadro atual é um quadro filho.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -32,10 +33,12 @@ HRESULT IsChild([out] BOOL * pIsChild);
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pIsChild`  
  fora Um valor booliano que especifica se o quadro atual é um quadro filho.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
@@ -47,9 +50,11 @@ HRESULT IsChild([out] BOOL * pIsChild);
 ## <a name="exceptions"></a>Exceções  
   
 ## <a name="remarks"></a>Comentários  
+
  O `IsChild` método retorna `true` se o objeto de quadro no qual você chama o método é filho de outro quadro. Se esse for o caso, use o método [IsMatchingParentFrame](icordebugnativeframe2-ismatchingparentframe-method.md) para verificar se um quadro é seu pai.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

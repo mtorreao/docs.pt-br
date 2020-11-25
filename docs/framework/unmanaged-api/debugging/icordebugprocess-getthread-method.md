@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a48261ed-700b-41c9-8cb4-18c526546603
 topic_type:
 - apiref
-ms.openlocfilehash: 081852f91f243c4a979e2969220e71bd10c8c56b
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: e70204aa555ed9411d1d2cd5ad8cde7e0c53de2a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212874"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95694990"
 ---
 # <a name="icordebugprocessgetthread-method"></a>Método ICorDebugProcess::GetThread
+
 Obtém o thread deste processo que tem a ID do thread do sistema operacional especificado (SO).  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,6 +35,7 @@ HRESULT GetThread(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `dwThreadId`  
  no A ID de thread do sistema operacional do thread a ser recuperado.  
   
@@ -41,6 +43,7 @@ HRESULT GetThread(
  fora Um ponteiro para o endereço de um objeto ICorDebugThread que representa o thread.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

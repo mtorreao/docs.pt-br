@@ -14,24 +14,26 @@ helpviewer_keywords:
 ms.assetid: 5e7885a6-d17a-4bfc-a4c6-23cbb7337ad5
 topic_type:
 - apiref
-ms.openlocfilehash: 89952a93d5652fcb0c3755e52fb18a1a9f2f9894
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 62e3286c5f0c70d283e78dbb1e502dccd73a5a3a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83397067"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95694263"
 ---
 # <a name="icorpublishappdomain-interface"></a>Interface ICorPublishAppDomain
+
 Representa e fornece informações sobre um domínio de aplicativo.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método GetID](icorpublishappdomain-getid-method.md)|Obtém o identificador exclusivo para isso `ICorPublishAppDomain` .|  
 |[Método GetName](icorpublishappdomain-getname-method.md)|Obtém o nome do domínio do aplicativo referenciado por este `ICorPublishAppDomain` .|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorPub. idl, CorPub. h  
@@ -40,7 +42,7 @@ Representa e fornece informações sobre um domínio de aplicativo.
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Depurando interfaces](debugging-interfaces.md)
 - [Coclass CorpubPublish](corpubpublish-coclass.md)

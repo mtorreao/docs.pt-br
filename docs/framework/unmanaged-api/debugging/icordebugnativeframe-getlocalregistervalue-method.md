@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5ccb74f3-f891-430c-b70a-e370624edde2
 topic_type:
 - apiref
-ms.openlocfilehash: 97d79f70097bef7768316907887cea2c38dd81e1
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: a90bba4a4dc9ca92ccdc4af1636d194f92fd7373
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212822"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95695702"
 ---
 # <a name="icordebugnativeframegetlocalregistervalue-method"></a>Método ICorDebugNativeFrame::GetLocalRegisterValue
+
 Obtém o valor de um argumento ou uma variável local que é armazenada no registro especificado para esse quadro nativo.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,6 +38,7 @@ HRESULT GetLocalRegisterValue (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `reg`  
  no Um valor da enumeração "CorDebugRegister" que especifica o registro que contém o valor.  
   
@@ -50,9 +52,11 @@ HRESULT GetLocalRegisterValue (
  fora Um ponteiro para o endereço de um objeto "ICorDebugValue" que representa o valor recuperado que é armazenado no registro especificado.  
   
 ## <a name="remarks"></a>Comentários  
+
  O `GetLocalRegisterValue` método pode ser usado em um quadro nativo ou em um quadro compilado JIT (just-in-time).  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

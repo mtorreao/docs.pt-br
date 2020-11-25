@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 13258ac6-f4e4-4f66-8fc3-f1244417a3c3
 topic_type:
 - apiref
-ms.openlocfilehash: 21890f8130ec677cb88f2f5d7ef648aa19e67e71
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 194065e53d550c9bbd0486de54462309a4d9ffa1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213056"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95695732"
 ---
 # <a name="icordebugnativeframecansetip-method"></a>Método ICorDebugNativeFrame::CanSetIP
+
 Obtém um HRESULT que indica se é seguro definir o ponteiro de instrução (IP) para o local de deslocamento especificado no código nativo.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,13 +35,16 @@ HRESULT CanSetIP (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `nOffset`  
  no A configuração desejada para o ponteiro de instrução.  
   
 ## <a name="remarks"></a>Comentários  
+
  Use o `CanSetIP` método antes de chamar o método [ICorDebugNativeFrame:: SetIP](icordebugnativeframe-setip-method.md) . Se `CanSetIP` o retornar qualquer HRESULT diferente de S_OK, você ainda poderá invocar `ICorDebugNativeFrame::SetIP` , mas não há nenhuma garantia de que o depurador continuará a execução segura e correta do código que está sendo depurado.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

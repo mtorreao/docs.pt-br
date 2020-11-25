@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9ffb4498-7719-49d3-8890-df2c22248a0c
 topic_type:
 - apiref
-ms.openlocfilehash: 0594caf53a889d51ea78e2ee9d6fff4d30f7cff2
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 9400c4fa3ddcefef923d7bcfaae80e2cef62dc7d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205286"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95695459"
 ---
 # <a name="icordebugobjectenum-interface"></a>Interface ICorDebugObjectEnum
 
@@ -27,7 +27,7 @@ Implementa métodos ICorDebugEnum e enumera matrizes de objetos por seus endere�
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método Next](icordebugobjectenum-next-method.md)|Obtém o RVAs do número especificado de objetos da enumeração, começando na posição atual.|  
   
@@ -37,6 +37,7 @@ Implementa métodos ICorDebugEnum e enumera matrizes de objetos por seus endere�
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

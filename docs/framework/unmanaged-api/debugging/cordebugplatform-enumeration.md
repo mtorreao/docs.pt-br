@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: c5444816-7378-4521-afd3-bf5e4b5303d5
 topic_type:
 - apiref
-ms.openlocfilehash: fdb03b9244d3cb351735f5f2214248a08a399188
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 5435f78b28975a5426fcb2fce94904efc1051c5b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795736"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696395"
 ---
 # <a name="cordebugplatform-enumeration"></a>Enumeração CorDebugPlatform
+
 Fornece valores de plataforma de destino que são usados pelo método [ICorDebugDataTarget:: GetPlatform](icordebugdatatarget-getplatform-method.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -41,7 +42,7 @@ typedef enum CorDebugPlatform
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |CORDB_PLATFORM_WINDOWS_X86|A plataforma de destino é Windows executando em hardware Intel x86.|  
 |CORDB_PLATFORM_WINDOWS_AMD64|A plataforma de destino é Windows de 64 bits executando em hardware AMD64 ou Intel EM64T.|  
@@ -52,6 +53,7 @@ typedef enum CorDebugPlatform
 |CORDB_PLATFORM_MAC_AMD64|A plataforma de destino é o sistema operacional Macintosh em execução no hardware AMD64.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -62,6 +64,6 @@ typedef enum CorDebugPlatform
   
  Os membros `CORDB_PLATFORM_WINDOWS_ARM` e `CORDB_PLATFORM_MAC_AMD64` estão disponíveis no .NET Framework 4.5.2 e em versões posteriores.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Declarando enumerações](debugging-enumerations.md)

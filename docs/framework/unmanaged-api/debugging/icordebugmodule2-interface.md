@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0847e64f-fdbe-4c96-8168-da20fdc84d80
 topic_type:
 - apiref
-ms.openlocfilehash: 7b98302985d9d54599ea8ea2e01dc2503c468d58
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 2b8e6048dd6b8df71ac3dddcc4397f6d512127c7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210222"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95695862"
 ---
 # <a name="icordebugmodule2-interface"></a>Interface ICorDebugModule2
 
@@ -27,7 +27,7 @@ Serve como uma extensão lógica para a interface ICorDebugModule.
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método ApplyChanges](icordebugmodule2-applychanges-method.md)|Aplica as alterações nos metadados e as alterações no código MSIL (Microsoft Intermediate Language) para o processo em execução.|  
 |[Método GetJITCompilerFlags](icordebugmodule2-getjitcompilerflags-method.md)|Obtém os sinalizadores que controlam a compilação JIT (just-in-time) para isso `ICorDebugModule2` .|  
@@ -41,6 +41,7 @@ Serve como uma extensão lógica para a interface ICorDebugModule.
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

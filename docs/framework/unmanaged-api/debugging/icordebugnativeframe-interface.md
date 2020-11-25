@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 04819c58-7246-4b32-befb-680cf1dbc436
 topic_type:
 - apiref
-ms.openlocfilehash: dd87745a29514a2f9f05aa142baae4e05d4b4a7b
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 043dc0fdd5218d7bc6b80428d1eb891b3f01ee8c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206598"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95695511"
 ---
 # <a name="icordebugnativeframe-interface"></a>Interface ICorDebugNativeFrame
 
@@ -27,7 +27,7 @@ Uma implementação especializada de ICorDebugFrame usada para quadros nativos.
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método CanSetIP](icordebugnativeframe-cansetip-method.md)|Obtém um valor que indica se é seguro definir o ponteiro de instrução para o local de deslocamento especificado no código nativo.|  
 |[Método GetIP](icordebugnativeframe-getip-method.md)|Obtém o deslocamento do quadro de pilha no código nativo.|  
@@ -45,6 +45,7 @@ Uma implementação especializada de ICorDebugFrame usada para quadros nativos.
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

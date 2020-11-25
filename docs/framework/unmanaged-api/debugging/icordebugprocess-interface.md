@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: be86f4b5-418a-4c5c-a67c-97148c65ed8c
 topic_type:
 - apiref
-ms.openlocfilehash: ab48efccc88787f099a182627777db95304cdc3e
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 7f9d4ac99234545ef75d9b91e6e84f79a133ffef
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212068"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95694913"
 ---
 # <a name="icordebugprocess-interface"></a>Interface ICorDebugProcess
+
 Representa um processo que está executando o código gerenciado. Essa interface é uma subclasse de ICorDebugController.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método ClearCurrentException](icordebugprocess-clearcurrentexception-method.md)|Limpa a exceção não gerenciada atual no thread determinado.|  
 |[Método EnableLogMessages](icordebugprocess-enablelogmessages-method.md)|Habilita e desabilita o envio de mensagens de log para o depurador.|  
@@ -52,6 +53,7 @@ Representa um processo que está executando o código gerenciado. Essa interface
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
