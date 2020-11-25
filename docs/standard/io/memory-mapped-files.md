@@ -9,12 +9,12 @@ helpviewer_keywords:
 - memory-mapped files
 - inter-process communication
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
-ms.openlocfilehash: dc0da9842df7b0a827293c42d80ccdd418a043b2
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4a179bff7ec7988c5b7410fa99eab346d4add1df
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819195"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734823"
 ---
 # <a name="memory-mapped-files"></a>Arquivos mapeados na memória
 
@@ -31,6 +31,7 @@ Há dois tipos de arquivos mapeados na memória:
      Arquivos não persistentes são arquivos mapeados na memória não associados a um arquivo em disco. Quando o último processo termina de trabalhar com o arquivo, os dados são perdidos e o arquivo é solicitado pela coleta de lixo. Esses arquivos são adequados para a criação de memória compartilhada para comunicações entre processos (IPC).  
   
 ## <a name="processes-views-and-managing-memory"></a>Processos, exibição e gerenciamento de memória  
+
  Os arquivos mapeados na memória podem ser compartilhados entre vários processos. Os processos podem mapear para o mesmo arquivo mapeado na memória usando um nome comum, que é atribuído pelo processo que criou o arquivo.  
   
  Para trabalhar com um arquivo mapeado na memória, você deve criar uma exibição de todo o arquivo mapeado na memória ou de parte dele. Também é possível criar vários modos de exibição para a mesma parte do arquivo mapeado na memória, criando assim memórias simultâneas. Para que dois modos de exibição permaneçam simultâneos, precisam ser criados usando o mesmo arquivo de memória mapeada.  
@@ -48,6 +49,7 @@ Há dois tipos de arquivos mapeados na memória:
  ![Captura de tela que mostra as exibições em um arquivo mapeado em memória.](./media/memory-mapped-files/memory-map-persist-file.png)  
   
 ## <a name="programming-with-memory-mapped-files"></a>Programar com arquivos mapeados na memória  
+
  A tabela a seguir orienta como usar objetos de arquivos mapeados na memória e os membros deles.  
   
 |Tarefa|Métodos ou propriedades a serem usados|  
@@ -61,6 +63,7 @@ Há dois tipos de arquivos mapeados na memória:
 |Para atrasar a alocação de memória até que uma exibição seja criada (somente arquivos não persistentes).<br /><br /> Para determinar o tamanho de página atual do sistema, use a propriedade <xref:System.Environment.SystemPageSize%2A?displayProperty=nameWithType>.|Método <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> com o valor <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions.DelayAllocatePages?displayProperty=nameWithType>.<br /><br /> - ou -<br /><br /> Métodos <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A> que possuem uma enumeração <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions> como parâmetro.|  
   
 ### <a name="security"></a>Segurança  
+
  É possível aplicar os direitos de acesso ao criar um arquivo mapeado na memória usando os seguintes métodos que usam uma enumeração <xref:System.IO.MemoryMappedFiles.MemoryMappedFileAccess> como parâmetro:  
   
 - <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>  
@@ -78,6 +81,7 @@ Há dois tipos de arquivos mapeados na memória:
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="persisted-memory-mapped-files"></a>Arquivos persistentes mapeados na memória  
+
  Os métodos <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A> criam um arquivo mapeado na memória de um arquivo existente no disco.  
   
  O exemplo a seguir cria uma exibição de mapeamento na memória de parte de um arquivo muito grande e manipula uma porção dele.  
@@ -93,6 +97,7 @@ Há dois tipos de arquivos mapeados na memória:
  [!code-vb[MemoryMappedFiles.MemoryMappedFile.OpenExisting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.openexisting/vb/program.vb#1)]  
   
 ### <a name="non-persisted-memory-mapped-files"></a>Arquivos não persistentes mapeados na memória  
+
  Os métodos <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> e <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A> criam um arquivo mapeado na memória que não está mapeado para um arquivo existente no disco.  
   
  O exemplo a seguir consiste de três processos separados (aplicativos de console) que gravam valores booleanos em um arquivo mapeado na memória. Ocorre a seguinte sequência de ações:  
@@ -148,4 +153,4 @@ Process C says: True
   
 ## <a name="see-also"></a>Confira também
 
-- [E/S de arquivo e de fluxo](index.md)
+- [Arquivo e e/s de fluxo](index.md)

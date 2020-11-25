@@ -8,14 +8,15 @@ helpviewer_keywords:
 - exceptions, performance
 - throwing exceptions, performance
 ms.assetid: 3ad6aad9-08e6-4232-b336-0e301f2493e6
-ms.openlocfilehash: 1d9e4ff3cfb02b1db358c19786322622621329fe
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: babe378e0d61357709006e08f71ff578492f116c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821197"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734745"
 ---
 # <a name="exceptions-and-performance"></a>Exceções e desempenho
+
 Uma preocupação comum relacionada às exceções é que, se as exceções forem usadas para o código que falha rotineiramente, o desempenho da implementação será inaceitável. A preocupação é válida. Quando um membro gera uma exceção, seu desempenho pode ser uma ordem de magnitude mais lenta. No entanto, é possível obter um bom desempenho, atendendo estritamente às diretrizes de exceção que não permitem o uso de códigos de erro. Dois padrões descritos nesta seção sugerem maneiras de fazer isso.
 
  ❌ Não use códigos de erro devido a problemas que as exceções podem afetar negativamente o desempenho.
@@ -23,6 +24,7 @@ Uma preocupação comum relacionada às exceções é que, se as exceções fore
  Para melhorar o desempenho, é possível usar o padrão de Tester-Doer ou o padrão de Try-Parse, descrito nas duas próximas seções.
 
 ## <a name="tester-doer-pattern"></a>Padrão de Tester-Doer
+
  Às vezes, o desempenho de um membro de lançamento de exceção pode ser melhorado ao dividir o membro em dois. Vamos examinar o <xref:System.Collections.Generic.ICollection%601.Add%2A> método da <xref:System.Collections.Generic.ICollection%601> interface.
 
 ```csharp
@@ -46,6 +48,7 @@ if (!numbers.IsReadOnly)
  ✔️ Considere o padrão de Tester-Doer para membros que podem gerar exceções em cenários comuns para evitar problemas de desempenho relacionados a exceções.
 
 ## <a name="try-parse-pattern"></a>Padrão de Try-Parse
+
  Para APIs extremamente sensíveis ao desempenho, um padrão ainda mais rápido do que o padrão de Tester-Doer descrito na seção anterior deve ser usado. O padrão chama o ajuste do nome do membro para fazer com que um caso de teste bem definido faça parte da semântica do membro. Por exemplo, <xref:System.DateTime> define um <xref:System.DateTime.Parse%2A> método que gera uma exceção se a análise de uma cadeia de caracteres falhar. Ele também define um <xref:System.DateTime.TryParse%2A> método correspondente que tenta analisar, mas retorna false se a análise não for bem-sucedida e retornar o resultado de uma análise bem-sucedida usando um `out` parâmetro.
 
 ```csharp

@@ -7,14 +7,15 @@ helpviewer_keywords:
 - member design guidelines, operators
 - overloaded operators
 ms.assetid: 37585bf2-4c27-4dee-849a-af70e3338cc1
-ms.openlocfilehash: 40e1c6a4a65bfc20c94223e4012e34928b25a2ab
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7757e6cfdb9ae31f6e94c26a2684f8176174499a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830032"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734810"
 ---
 # <a name="operator-overloads"></a>Sobrecargas de operador
+
 As sobrecargas de operador permitem que os tipos de estrutura apareçam como se fossem primitivos de linguagem internos.
 
  Embora seja permitido e útil em algumas situações, as sobrecargas de operador devem ser usadas com cuidado. Há muitos casos em que o sobrecarga de operador foi feito com abuso, como quando designers de estrutura começaram a usar operadores para operações que devem ser métodos simples. As diretrizes a seguir devem ajudá-lo a decidir quando e como usar a sobrecarga de operador.
@@ -85,9 +86,11 @@ As sobrecargas de operador permitem que os tipos de estrutura apareçam como se 
 |`~`|`op_OnesComplement`|`OnesComplement`|
 
 ### <a name="overloading-operator-"></a>Operador de sobrecarga = =
+
  A sobrecarga `operator ==` é bastante complicada. A semântica do operador precisa ser compatível com vários outros membros, como <xref:System.Object.Equals%2A?displayProperty=nameWithType> .
 
 ### <a name="conversion-operators"></a>Operadores de conversão
+
  Os operadores de conversão são operadores unários que permitem a conversão de um tipo para outro. Os operadores devem ser definidos como membros estáticos no operando ou no tipo de retorno. Há dois tipos de operadores de conversão: implícito e explícito.
 
  ❌ Não forneça um operador de conversão se tal conversão não for claramente esperada pelos usuários finais.

@@ -8,14 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - garbage collection, notifications
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
-ms.openlocfilehash: c91712b9d25221f1ffd9e9e980c420be32e2379a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 70343851ba73af9041014e8654f5df82d8389c39
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831176"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734771"
 ---
 # <a name="garbage-collection-notifications"></a>Notificações sobre a coleta de lixo
+
 Há situações em que uma coleta de lixo completa (ou seja, uma coleta de geração 2) pelo common language runtime pode afetar negativamente o desempenho. Isso pode ser um problema particularmente com servidores que processam grandes volumes de solicitações; Nesse caso, uma longa coleta de lixo pode causar um tempo limite de solicitação. Para evitar que uma coleção completa ocorra durante um período crítico, você pode ser notificado de que uma coleta de lixo completa está se aproximando e, em seguida, tomará medidas para redirecionar a carga de trabalho para outra instância de servidor. Você também pode induzir uma coleta por conta própria, desde que a instância atual do servidor não precise processar solicitações.  
   
  O método <xref:System.GC.RegisterForFullGCNotification%2A> registra uma notificação para ser gerado quando o runtime detectar que uma coleta de lixo completa está se aproximando. Essa notificação é composta por duas partes: quando a coleta de lixo completa está se aproximando e quando a coleta de lixo completa for concluída.  
@@ -32,6 +33,7 @@ Há situações em que uma coleta de lixo completa (ou seja, uma coleta de gera�
  Os métodos <xref:System.GC.WaitForFullGCApproach%2A> e <xref:System.GC.WaitForFullGCComplete%2A> são projetados para trabalhar juntos. Usar um sem o outro pode produzir resultados indeterminados.  
   
 ## <a name="full-garbage-collection"></a>Coleta de lixo completa  
+
  O runtime resultará em uma coleta de lixo completa quando qualquer um dos cenários a seguir for verdadeiro:  
   
 - Foi promovida memória suficiente para a geração 2 para gerar a próxima coleta de geração 2.  
@@ -49,6 +51,7 @@ Há situações em que uma coleta de lixo completa (ou seja, uma coleta de gera�
  O terceiro cenário também contribui para a incerteza de quando você receberá a notificação. Embora não seja uma garantia, essa é uma maneira útil de reduzir os efeitos de uma coleta de lixo completa inoportuna ao redirecionar as solicitações durante esse período ou você mesmo induzir a coleta para quando ela puder ser melhor hospedada.  
   
 ## <a name="notification-threshold-parameters"></a>Parâmetros de limite de notificação  
+
  O método <xref:System.GC.RegisterForFullGCNotification%2A> tem dois parâmetros para especificar os valores de limite do heap de objeto grande e dos objetos de geração 2. Quando esses valores forem atendidos, uma notificação de coleta de lixo deverá ser gerada. A tabela a seguir descreve esses parâmetros.  
   
 |Parâmetro|Descrição|  
@@ -63,6 +66,7 @@ Há situações em que uma coleta de lixo completa (ou seja, uma coleta de gera�
 ## <a name="example"></a>Exemplo  
   
 ### <a name="description"></a>Descrição  
+
  No exemplo a seguir, um grupo de serviço de servidores controla as solicitações da Web recebidas. Para simular a carga de trabalho de processamento de solicitações, matrizes de bytes são adicionadas a uma coleta <xref:System.Collections.Generic.List%601>. Cada servidor registra uma notificação de coleta de lixo e, em seguida, inicia um thread no método de usuário `WaitForFullGCProc` para monitorar continuamente a enumeração <xref:System.GCNotificationStatus> que é retornada pelos métodos <xref:System.GC.WaitForFullGCApproach%2A> e <xref:System.GC.WaitForFullGCComplete%2A>.  
   
  Os métodos <xref:System.GC.WaitForFullGCApproach%2A> e <xref:System.GC.WaitForFullGCComplete%2A> chamam seus respectivos métodos de usuário de manipulação de eventos quando uma notificação é gerada:  

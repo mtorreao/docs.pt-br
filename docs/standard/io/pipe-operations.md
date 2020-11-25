@@ -8,14 +8,15 @@ helpviewer_keywords:
 - interprocess communication [.NET], pipes
 - I/O [.NET], pipes
 ms.assetid: 7b964ebd-7a4f-4d28-8194-7841f9e4c702
-ms.openlocfilehash: 3ec4ee61bfd3a0a82eb0a0884b89c19a9300b078
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: bb8804c32b9f2b54b05298779bddae117c10dcf5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819091"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734797"
 ---
 # <a name="pipe-operations-in-net"></a>Operações básicas de pipe no .NET
+
 Os pipes fornecem um meio de comunicação entre processos. Existem dois tipos de pipes:  
   
 - Pipes anônimos.  
@@ -36,6 +37,6 @@ Os pipes fornecem um meio de comunicação entre processos. Existem dois tipos d
   
 ## <a name="see-also"></a>Confira também
 
-- [E/S de arquivo e de fluxo](index.md)
+- [Arquivo e e/s de fluxo](index.md)
 - [Como: Usar pipes anônimos para comunicação entre processos locais](how-to-use-anonymous-pipes-for-local-interprocess-communication.md)
 - [Como: Usar pipes nomeados para comunicação entre processos na rede](how-to-use-named-pipes-for-network-interprocess-communication.md)
