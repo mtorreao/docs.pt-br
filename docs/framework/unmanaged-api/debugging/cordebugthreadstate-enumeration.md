@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: a3ccdf18-4ec6-494d-9024-48e5c8c724f5
 topic_type:
 - apiref
-ms.openlocfilehash: 9c22ca47a606da0949529cf55655bbcde19cb5c9
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 5eee2aee5873fe512136bc5407e395acdc31af29
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795658"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722603"
 ---
 # <a name="cordebugthreadstate-enumeration"></a>Enumeração CorDebugThreadState
+
 Especifica o estado de um thread para depuração.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -35,17 +36,19 @@ typedef enum CorDebugThreadState {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |`THREAD_RUN`|O thread é executado livremente, a menos que ocorra um evento de depuração.|  
 |`THREAD_SUSPEND`|Não é possível executar o thread.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O depurador usa a `CorDebugThreadState` enumeração para controlar a execução de um thread. O estado de um thread pode ser definido usando o método [ICorDebugThread:: SetDebugState](icordebugthread-setdebugstate-method.md) ou [ICorDebugController:: SetAllThreadsDebugState](icordebugcontroller-setallthreadsdebugstate-method.md) .  
   
  Um retorno de chamada fornecido à [API de hospedagem](../hosting/index.md) permite bombeamento de mensagens, portanto, um estado interrompido não é necessário.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -54,6 +57,6 @@ typedef enum CorDebugThreadState {
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Declarando enumerações](debugging-enumerations.md)

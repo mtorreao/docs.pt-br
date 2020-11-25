@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0d5ccc4d-0193-41f5-af54-45d7b70d5321
 topic_type:
 - apiref
-ms.openlocfilehash: 6813f72f9d27aeff90f797a6ca9370b22e03e6f0
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: ac40e203cf7d32c1fe30c9915bac3171139403e0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703698"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723274"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>Método ICLRMetaHost::RequestRuntimeLoadedNotification
+
 Fornece uma função de retorno de chamada que tem a garantia de ser chamada quando uma versão Common Language Runtime (CLR) é carregada pela primeira vez, mas ainda não foi iniciada. Esse método substitui a função [LockClrVersion](lockclrversion-function.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -33,10 +34,12 @@ HRESULT RequestRuntimeLoadedNotification (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pCallbackFunction`  
  no A função de retorno de chamada que é invocada quando um novo tempo de execução é carregado.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
@@ -45,6 +48,7 @@ HRESULT RequestRuntimeLoadedNotification (
 |E_POINTER|`pCallbackFunction` é nulo.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O retorno de chamada funciona da seguinte maneira:  
   
 - O retorno de chamada é invocado somente quando um tempo de execução é carregado pela primeira vez.  
@@ -78,25 +82,26 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
   
  Se o host pretende carregar ou fazer com que outro tempo de execução seja carregado de maneira reentrante, os `pfnCallbackThreadSet` `pfnCallbackThreadUnset` parâmetros e fornecidos na função de retorno de chamada devem ser usados da seguinte maneira:  
   
-- `pfnCallbackThreadSet`deve ser chamado pelo thread que pode causar uma carga de tempo de execução antes que essa carga seja tentada.  
+- `pfnCallbackThreadSet` deve ser chamado pelo thread que pode causar uma carga de tempo de execução antes que essa carga seja tentada.  
   
-- `pfnCallbackThreadUnset`deve ser chamado quando o thread não causar mais tal carga de tempo de execução (e antes de retornar do retorno de chamada inicial).  
+- `pfnCallbackThreadUnset` deve ser chamado quando o thread não causar mais tal carga de tempo de execução (e antes de retornar do retorno de chamada inicial).  
   
-- `pfnCallbackThreadSet`e `pfnCallbackThreadUnset` que não são reentrante.  
+- `pfnCallbackThreadSet` e `pfnCallbackThreadUnset` que não são reentrante.  
   
 > [!NOTE]
 > Os aplicativos host não devem chamar `pfnCallbackThreadSet` e `pfnCallbackThreadUnset` fora do escopo do `pCallbackFunction` parâmetro.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MetaHost. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
 - [Interface ICLRMetaHost](iclrmetahost-interface.md)
-- [Hospedagem](index.md)
+- [Hosting](index.md)

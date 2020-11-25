@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c7dd94c6-335b-46ff-9dfe-505056db5673
 topic_type:
 - apiref
-ms.openlocfilehash: 2facc63023a20dd6aaac64d7d036324c31658bc8
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 60210bc8f93294c3c3380c36096f3e80e5b26643
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501307"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723253"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>Método IMetaDataEmit::DefineImportMember
+
 Cria uma referência ao membro especificado de um tipo ou módulo que é definido fora do escopo atual e define um token para essa referência.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -41,6 +42,7 @@ HRESULT DefineImportMember (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pAssemImport`  
  no Uma interface [IMetaDataAssemblyImport](imetadataassemblyimport-interface.md) que representa o assembly do qual o membro de destino é importado.  
   
@@ -66,6 +68,7 @@ HRESULT DefineImportMember (
  fora O `mdMemberRef` token que é definido no escopo atual para a referência de membro.  
   
 ## <a name="remarks"></a>Comentários  
+
  O `DefineImportMember` método pesquisa o membro, especificado por `mbMember` , que é definido em outro escopo, especificado por `pImport` e recupera suas propriedades. Ele usa essas informações para chamar o método [IMetaDataEmit::D efinememberref](imetadataemit-definememberref-method.md) no escopo atual para criar a referência de membro.  
   
  Em geral, antes de usar o `DefineImportMember` método, você deve criar, no escopo atual, uma referência de tipo ou referência de módulo para a classe pai, a interface ou o módulo do membro de destino. O token de metadados para essa referência é passado no `tkParent` argumento. Você não precisará criar uma referência para o pai do membro de destino se ele for resolvido posteriormente pelo compilador ou vinculador. Para resumir:  
@@ -77,11 +80,12 @@ HRESULT DefineImportMember (
 - Se o pai do membro de destino for resolvido posteriormente pelo compilador ou vinculador, em seguida, `mdTokenNil` passe `tkParent` . O único cenário no qual isso se aplica é quando uma função global ou uma variável global está sendo importada de um arquivo. obj que, por fim, será vinculado ao módulo atual e aos metadados mesclados.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como um recurso em MSCorEE. dll  
+ **Biblioteca:** Usado como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

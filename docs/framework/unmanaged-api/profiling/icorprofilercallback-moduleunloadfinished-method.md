@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 185e3327-9f9c-44bc-8a5c-febea9a6bb5b
 topic_type:
 - apiref
-ms.openlocfilehash: fd35f47c004d1ffb235cefe1cd2a1eb2c1fffaef
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 514c20455b95ecf74ffaecd349982fd8f8f49816
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503309"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723227"
 ---
 # <a name="icorprofilercallbackmoduleunloadfinished-method"></a>Método ICorProfilerCallback::ModuleUnloadFinished
+
 Notifica o criador de perfil de que um módulo concluiu o descarregamento.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,6 +35,7 @@ HRESULT ModuleUnloadFinished(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `moduleId`  
  no A ID do módulo que foi descarregado.  
   
@@ -41,11 +43,13 @@ HRESULT ModuleUnloadFinished(
  no Um HRESULT que indica se o módulo foi descarregado com êxito.  
   
 ## <a name="remarks"></a>Comentários  
+
  O valor de `moduleId` não é válido para uma solicitação de informações depois que o método [ICorProfilerCallback:: ModuleUnloadStarted](icorprofilercallback-moduleunloadstarted-method.md) retorna.  
   
  Algumas partes do descarregamento da classe podem continuar após o `ModuleUnloadFinished` retorno de chamada. Um HRESULT de falha em `hrStatus` indica uma falha. No entanto, um HRESULT de êxito em `hrStatus` indica apenas que a primeira parte do descarregamento do módulo foi bem-sucedida.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 33f431d7-ab1a-494d-8af2-20ab15aba194
 topic_type:
 - apiref
-ms.openlocfilehash: 66b50bad0e8d2622922da96c213643ac3be83a9e
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 21838bdd8ff45f8f74524dc4da52364fb032b396
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895367"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723396"
 ---
 # <a name="icordebug-interface"></a>Interface ICorDebug
+
 Fornece métodos que permitem aos desenvolvedores depurar aplicativos no ambiente Common Language Runtime (CLR).  
   
 > [!NOTE]
@@ -29,7 +30,7 @@ Fornece métodos que permitem aos desenvolvedores depurar aplicativos no ambient
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método CanLaunchOrAttach](icordebug-canlaunchorattach-method.md)|Determina se é possível iniciar um novo processo ou anexá-lo ao processo fornecido no contexto da máquina atual e da configuração de tempo de execução.|  
 |[Método CreateProcess](icordebug-createprocess-method.md)|Inicia um processo e seu thread principal sob o controle do depurador.|  
@@ -42,14 +43,16 @@ Fornece métodos que permitem aos desenvolvedores depurar aplicativos no ambient
 |[Método Terminate](icordebug-terminate-method.md)|Encerra o `ICorDebug` objeto.|  
   
 ## <a name="remarks"></a>Comentários  
- `ICorDebug`representa um loop de processamento de eventos para um processo do depurador. O depurador deve aguardar o retorno de chamada [ICorDebugManagedCallback:: ExitProcess](icordebugmanagedcallback-exitprocess-method.md) de todos os processos que estão sendo depurados antes de liberar essa interface.  
+
+ `ICorDebug` representa um loop de processamento de eventos para um processo do depurador. O depurador deve aguardar o retorno de chamada [ICorDebugManagedCallback:: ExitProcess](icordebugmanagedcallback-exitprocess-method.md) de todos os processos que estão sendo depurados antes de liberar essa interface.  
   
- O `ICorDebug` objeto é o objeto inicial para controlar toda a depuração gerenciada adicional. No .NET Framework versões 1,0 e 1,1, esse objeto era um objeto `CoClass` criado a partir de com. No .NET Framework versão 2,0, esse objeto não é mais um `CoClass` objeto. Ele deve ser criado pela função [CreateDebuggingInterfaceFromVersion](../hosting/createdebugginginterfacefromversion-function.md) , que tem mais reconhecimento de versão. Essa nova função de criação permite que os clientes obtenham uma `ICorDebug`implementação específica do, que também emula uma versão específica da API de depuração.  
+ O `ICorDebug` objeto é o objeto inicial para controlar toda a depuração gerenciada adicional. No .NET Framework versões 1,0 e 1,1, esse objeto era um `CoClass` objeto criado a partir de com. No .NET Framework versão 2,0, esse objeto não é mais um `CoClass` objeto. Ele deve ser criado pela função [CreateDebuggingInterfaceFromVersion](../hosting/createdebugginginterfacefromversion-function.md) , que tem mais reconhecimento de versão. Essa nova função de criação permite que os clientes obtenham uma implementação específica do `ICorDebug` , que também emula uma versão específica da API de depuração.  
   
 > [!NOTE]
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -58,6 +61,6 @@ Fornece métodos que permitem aos desenvolvedores depurar aplicativos no ambient
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Depurando interfaces](debugging-interfaces.md)

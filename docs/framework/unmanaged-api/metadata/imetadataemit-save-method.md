@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c1de8400-adfe-4a71-b828-a1d0cc1ea505
 topic_type:
 - apiref
-ms.openlocfilehash: 23f6a301c4c11be92e05dbac0d4f69817d857a28
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: cef238239417a0a30cd94eaa8bd60968cfa78859
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84003929"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721992"
 ---
 # <a name="imetadataemitsave-method"></a>Método IMetaDataEmit::Save
+
 Salva todos os metadados no escopo atual para o arquivo no endereço especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -35,6 +36,7 @@ HRESULT Save (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `wzFile`  
  no O nome do arquivo para salvar. Se esse valor for nulo, a cópia na memória será salva no último local que foi usado.  
   
@@ -42,11 +44,12 @@ HRESULT Save (
  [in] Reservado. Deve ser zero.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como um recurso em MSCorEE. dll  
+ **Biblioteca:** Usado como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -11,14 +11,15 @@ helpviewer_keywords:
 - stopping asynchronous operations
 - asynchronous programming, beginning operations
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
-ms.openlocfilehash: 7b976cf48214fb623563b09aab8a991a5a05d3ca
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a6e2ed06e92adffa6c8a61b27bbff994370e8b34
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824435"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722733"
 ---
 # <a name="asynchronous-programming-model-apm"></a>Modelo de programação assíncrona (APM)
+
 Uma operação assíncrona que utiliza o padrão de design <xref:System.IAsyncResult> é implementada como dois métodos chamados `BeginOperationName` e `EndOperationName` que começam e terminam a operação assíncrona *OperationName*, respectivamente. Por exemplo, a classe <xref:System.IO.FileStream> fornece os métodos <xref:System.IO.FileStream.BeginRead%2A> e <xref:System.IO.FileStream.EndRead%2A> para ler os bytes de um arquivo de forma assíncrona. Esses métodos implementam a versão assíncrona do método <xref:System.IO.FileStream.Read%2A>.  
   
 > [!NOTE]
@@ -27,6 +28,7 @@ Uma operação assíncrona que utiliza o padrão de design <xref:System.IAsyncRe
  Depois de chamar `BeginOperationName`, um aplicativo pode continuar a executar as instruções no thread de chamada, enquanto a operação assíncrona ocorre em um thread diferente. Cada chamada para `BeginOperationName`, o aplicativo também deve chamar `EndOperationName` para obter os resultados da operação.  
   
 ## <a name="beginning-an-asynchronous-operation"></a>Começando uma operação assíncrona  
+
  O método `BeginOperationName` inicia a operação assíncrona *OperationName* e retorna um objeto que implementa a interface <xref:System.IAsyncResult>. Os objetos <xref:System.IAsyncResult> armazenam as informações sobre uma operação assíncrona. A tabela a seguir mostra informações sobre uma operação assíncrona.  
   
 |Membro|DESCRIÇÃO|  
@@ -41,6 +43,7 @@ Uma operação assíncrona que utiliza o padrão de design <xref:System.IAsyncRe
  `BeginOperationName` retorna o controle para o thread de chamada imediatamente. Se o método `BeginOperationName` gerar exceções, as exceções serão geradas antes de a operação assíncrona ser iniciada. Se o método `BeginOperationName` gerar exceções, o método de retorno de chamada não será invocado.  
   
 ## <a name="ending-an-asynchronous-operation"></a>Encerrando uma operação assíncrona  
+
  O método `EndOperationName` termina a operação assíncrona *OperationName*. O valor retornado do método `EndOperationName` é do mesmo tipo retornado pela sua contraparte síncrona e é específico para a operação assíncrona. Por exemplo, o método <xref:System.IO.FileStream.EndRead%2A> retorna o número de bytes lidos de um <xref:System.IO.FileStream> e o método <xref:System.Net.Dns.EndGetHostByName%2A> retorna um objeto <xref:System.Net.IPHostEntry> que contém informações sobre um computador host. O método `EndOperationName` usa qualquer parâmetro declarado de referência na assinatura da versão síncrona do método. Além dos parâmetros do método síncrono, o método `EndOperationName` também inclui um parâmetro <xref:System.IAsyncResult>. Os chamadores devem passar a instância retornada pela chamada correspondente para `BeginOperationName`.  
   
  Se a operação assíncrona representada pelo objeto <xref:System.IAsyncResult> não tiver sido concluída quando `EndOperationName` for chamado, `EndOperationName` bloqueará o thread de chamada até que a operação assíncrona seja concluída. As exceções geradas pela operação assíncrona são geradas do método `EndOperationName`. O efeito da chamada para o método `EndOperationName` várias vezes com o mesmo <xref:System.IAsyncResult> não é definido. Da mesma forma, chamar o método `EndOperationName` com um <xref:System.IAsyncResult> que não foi retornado pelo método Begin relacionado também não será definido.  

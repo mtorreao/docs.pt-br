@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7f230961-23a6-4d56-ad2d-7a876d65705f
 topic_type:
 - apiref
-ms.openlocfilehash: 2a3f5bb0c54935e524cc955a5e11aac75b0c0923
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2608f91a7c5baa935e48fbe58ad4d14aaaad1f0d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497550"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722499"
 ---
 # <a name="icorprofilerinfoisarrayclass-method"></a>Método ICorProfilerInfo::IsArrayClass
+
 Determina se a classe especificada é uma classe de matriz.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,6 +37,7 @@ HRESULT IsArrayClass(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `classId`  
  no A ID da classe a ser examinada.  
   
@@ -49,9 +51,11 @@ HRESULT IsArrayClass(
  fora Um ponteiro para um inteiro que indica a classificação (ou seja, o número de dimensões) da matriz.  
   
 ## <a name="remarks"></a>Comentários  
+
  Se a classe especificada for uma classe de matriz, o `IsArrayClass` método retornará um S_OK HRESULT e valores para quaisquer parâmetros de saída não nulos. Caso contrário, ele retornará S_FALSE.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: d623fe862eaf5902fd89d0e512dd07f73a03246f
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: dcf01c00a106c131646a16597dca4092a06c5983
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860809"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723058"
 ---
 # <a name="dacpmethoddescdata-structure"></a>Estrutura DacpMethodDescData
 
@@ -54,7 +54,7 @@ struct DacpMethodDescData
 
 ## <a name="members"></a>Membros
 
-| Membro                       | Descrição                                                                                     |
+| Membro                       | DESCRIÇÃO                                                                                     |
 | ---------------------------- | ----------------------------------------------------------------------------------------------- |
 | `bHasNativeCode`             | Indica se o tempo de execução tem código nativo disponível para a instanciação fornecida do método. |
 | `bIsDynamic`                 | Indica se o método é gerado dinamicamente por meio da geração de código leve.           |
@@ -78,6 +78,7 @@ struct DacpMethodDescData
 Essa estrutura reside dentro do tempo de execução e não é exposta por nenhum cabeçalho ou arquivo de biblioteca. Para usá-lo, defina a estrutura conforme especificado acima.
 
 ## <a name="requirements"></a>Requisitos
+
 **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
 **Cabeçalho:** None  
 **Biblioteca:** None  

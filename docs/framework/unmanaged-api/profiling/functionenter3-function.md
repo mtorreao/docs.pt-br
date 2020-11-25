@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: ef782c53-dae7-4990-b4ad-fddb1e690d4e
 topic_type:
 - apiref
-ms.openlocfilehash: b435e1a3504dd623421f977ffc48264f8b0dcb5a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 98a821eabb393d8b5042647e6ef6ffce7ab10783
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500696"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722876"
 ---
 # <a name="functionenter3-function"></a>Função FunctionEnter3
+
 Notifica o criador de perfil que o controle está sendo passado para uma função.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,6 +38,7 @@ void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);
   \[in] o identificador da função à qual o controle é passado.
 
 ## <a name="remarks"></a>Comentários  
+
  A `FunctionEnter3` função de retorno de chamada notifica o criador de perfil conforme as funções estão sendo chamadas, mas não dá suporte à inspeção de argumento. Use o [método ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3](icorprofilerinfo3-setenterleavefunctionhooks3-method.md) para registrar sua implementação dessa função.  
   
  A `FunctionEnter3` função é um retorno de chamada; você deve implementá-la. A implementação deve usar o `__declspec(naked)` atributo de classe de armazenamento.  
@@ -48,6 +50,7 @@ void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);
 - Ao sair, você deve restaurar a pilha removendo todos os parâmetros que foram enviados por Push por seu chamador.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl  

@@ -2,14 +2,15 @@
 title: Copiando nós existentes de um documento para outro
 ms.date: 03/30/2017
 ms.assetid: 3caa78c1-3448-4b7b-b83c-228ee857635e
-ms.openlocfilehash: f4d58fa5aafdd48feff1a768ab0463ac09315476
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2e66d6eb83692e8e6541ce869062e2ce67c3c1df
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829603"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722200"
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>Copiando nós existentes de um documento para outro
+
 O método **ImportNode** é o mecanismo pelo qual um nó ou uma subárvore inteira do nó são copiados de um **XmlDocument** para outro. O nó retornado de chamada é uma cópia do nó do documento de origem, incluindo valores de atributo, nome de nó, tipo de nó, e todos os atributos URL relacionados como o prefixo, o nome local, e namespace Uniform Resource Identifier (URI). O documento de origem não é alterado. Depois que você importou o nó, você ainda precisará adicioná-lo à árvore usando um dos métodos usados para nós de inserção.  
   
  Quando o nó é anexado ao novo documento, o novo documento possui o nó. O motivo é que cada nó, quando criado, tem um documento proprietário, mesmo se os nós são criados em partes separados do documento. Esse é um requisito do DOM (Modelo de Objeto do Documento) e é imposto pelo design de criação de fábrica na classe **XmlDocument**. Por exemplo, **CreateElement** é a única maneira de criar novos nós.  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - generics [.NET], interfaces
 - ordering comparisons [.NET]
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
-ms.openlocfilehash: 429aa3c4d48fa6805b498206bcb699b56f522409
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f8cdd7ea71e68f73871a606c6f9b754d675ca7eb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827185"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722629"
 ---
 # <a name="generic-interfaces"></a>Interfaces genéricas
 
@@ -24,6 +24,7 @@ As interfaces genéricas fornecem contrapartes fortemente tipadas para interface
 > Os parâmetros de tipo de várias interfaces genéricas são marcados como covariant ou contravariant, fornecendo maior flexibilidade na atribuição e no uso de tipos que implementam essas interfaces. Consulte [Covariância e contravariância](covariance-and-contravariance.md).  
   
 ## <a name="equality-and-ordering-comparisons"></a>Comparações de ordem e igualdade  
+
  No namespace <xref:System>, as interfaces genéricas <xref:System.IComparable%601?displayProperty=nameWithType> e <xref:System.IEquatable%601?displayProperty=nameWithType>, assim como suas contrapartes não genéricas, definem métodos para comparações de classificação e de igualdade, respectivamente. Os tipos implementam essas interfaces para permitir a execução dessas comparações.  
   
  No namespace <xref:System.Collections.Generic>, as interfaces genéricas <xref:System.Collections.Generic.IComparer%601> e <xref:System.Collections.Generic.IEqualityComparer%601> oferecem uma maneira de definir uma comparação de classificação ou de igualdade para tipos que não implementam a interface genérica <xref:System.IComparable%601?displayProperty=nameWithType> ou <xref:System.IEquatable%601?displayProperty=nameWithType>, e fornecem uma maneira de redefinir esses relacionamentos para tipos que implementam. Essas interfaces são usadas pelos métodos e construtores de muitas classes de coleção genérica. Por exemplo, você pode passar um objeto <xref:System.Collections.Generic.IComparer%601> genérico para o construtor da classe <xref:System.Collections.Generic.SortedDictionary%602>, a fim de especificar uma ordem de classificação para um tipo que não implementa um <xref:System.IComparable%601?displayProperty=nameWithType> genérico. Há sobrecargas do método estático genérico <xref:System.Array.Sort%2A?displayProperty=nameWithType> e do método de instância <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> para classificar matrizes e listas usando implementações <xref:System.Collections.Generic.IComparer%601> genéricas.  
@@ -31,6 +32,7 @@ As interfaces genéricas fornecem contrapartes fortemente tipadas para interface
  As classes genéricas <xref:System.Collections.Generic.Comparer%601> e <xref:System.Collections.Generic.EqualityComparer%601> fornecem classes base para implementações das interfaces genéricas <xref:System.Collections.Generic.IComparer%601> e <xref:System.Collections.Generic.IEqualityComparer%601>, e também fornecem comparações padrão de ordem e de igualdade por meio de suas respectivas propriedades <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType> e <xref:System.Collections.Generic.EqualityComparer%601.Default%2A?displayProperty=nameWithType>.  
   
 ## <a name="collection-functionality"></a>Funcionalidade de coleção  
+
  A interface genérica <xref:System.Collections.Generic.ICollection%601> é a interface básica para tipos de coleção genérica. Ela fornece a funcionalidade básica para adicionar, remover, copiar e enumerar elementos. <xref:System.Collections.Generic.ICollection%601> herda da <xref:System.Collections.Generic.IEnumerable%601> genérica e da <xref:System.Collections.IEnumerable> não genérica.  
   
  A interface genérica <xref:System.Collections.Generic.IList%601> estende a interface genérica <xref:System.Collections.Generic.ICollection%601> com métodos para recuperação indexada.  

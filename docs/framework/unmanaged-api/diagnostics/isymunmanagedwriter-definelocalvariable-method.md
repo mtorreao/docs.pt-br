@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6fab8a58-3883-490f-8b27-64042c90f104
 topic_type:
 - apiref
-ms.openlocfilehash: 5730cdd910257d762230f5e54576d5e0a7ac1adb
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: b8b9f8e63a0b52dde0e814f53cfc75e6f6d48e78
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614819"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723019"
 ---
 # <a name="isymunmanagedwriterdefinelocalvariable-method"></a>Método ISymUnmanagedWriter::DefineLocalVariable
+
 Define uma única variável no escopo léxico atual. Esse método pode ser chamado várias vezes para uma variável do mesmo nome que tem várias casas em um escopo. Nesse caso, no entanto, os valores dos `startOffset` `endOffset` parâmetros e não devem se sobrepor.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -42,6 +43,7 @@ HRESULT DefineLocalVariable(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `name`  
  no Um ponteiro para um `WCHAR` que define o nome da variável local.  
   
@@ -72,10 +74,12 @@ HRESULT DefineLocalVariable(
  `endOffset`  
  no O deslocamento de fim da variável. Esse parâmetro é opcional. Se for 0, esse parâmetro será ignorado e a variável será definida em todo o escopo. Se for um valor diferente de zero, a variável se enquadrará dentro dos deslocamentos do escopo atual.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Confira também

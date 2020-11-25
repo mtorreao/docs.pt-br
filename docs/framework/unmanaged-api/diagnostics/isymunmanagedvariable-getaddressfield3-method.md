@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4d834721-ad8d-439d-b356-c6b4aef022fc
 topic_type:
 - apiref
-ms.openlocfilehash: ff888d3e2b86efeea3f4e3d33528f731d85886bf
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 13746c4ac6322a401e547c1c7acc99c0eda9accf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615261"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723331"
 ---
 # <a name="isymunmanagedvariablegetaddressfield3-method"></a>Método ISymUnmanagedVariable::GetAddressField3
+
 Obtém o terceiro campo de endereço para essa variável. Seu significado depende do tipo de endereço.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -33,13 +34,16 @@ HRESULT GetAddressField3(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pRetVal`  
  fora Um ponteiro para um `ULONG32` que recebe o terceiro campo de endereço.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Confira também

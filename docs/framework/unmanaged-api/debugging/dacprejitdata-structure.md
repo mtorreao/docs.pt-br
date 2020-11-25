@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 4436ece72b0a6a405fc41cba5413093fc42ce750
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 46708acc77dad00727ee35e7d06e4228eacbd502
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860770"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723032"
 ---
 # <a name="dacprejitdata-structure"></a>Estrutura DacpReJitData
 
@@ -49,7 +49,7 @@ struct MSLAYOUT DacpReJitData
 
 ## <a name="members"></a>Membros
 
-| Membro           | Descrição                                                                                      |
+| Membro           | DESCRIÇÃO                                                                                      |
 | ---------------- | ------------------------------------------------------------------------------------------------ |
 | `rejitID`        | O número de revisão de ReJit para um método.                                                          |
 | `flags`          | Um sinalizador que indica o estado atual da instrumentação ReJit do método para a versão fornecida. |
@@ -60,6 +60,7 @@ struct MSLAYOUT DacpReJitData
 Essa estrutura reside dentro do tempo de execução e não é exposta por nenhum cabeçalho ou arquivo de biblioteca. Para usá-lo, defina a estrutura conforme especificado acima. A estrutura também deve ser definida usando `ms_struct` a embalagem se não estiver usando os compiladores da Microsoft.
 
 ## <a name="requirements"></a>Requisitos
+
 **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
 **Cabeçalho:** None  
 **Biblioteca:** None  

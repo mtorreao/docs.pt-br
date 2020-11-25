@@ -9,12 +9,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: 32d71aba5d8a650293a4d8653fb2a2e383b8a800
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 110efce0bd7fae1a4f39f5d879496bf541ffe667
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282382"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722148"
 ---
 # <a name="serialization-guidelines"></a>Diretrizes de serialização
 
@@ -39,6 +39,7 @@ Este artigo lista as diretrizes a serem consideradas ao criar uma API para ser s
   A serialização é uma questão de design importante a ser considerada para qualquer tipo, pois os programas talvez precisem persistir ou transmitir instâncias do tipo.
 
 ### <a name="choosing-the-right-serialization-technology-to-support"></a>Escolhendo a tecnologia de serialização correta que receberá suporte
+
  Qualquer tipo específico pode oferecer suporte a nenhuma, uma ou mais tecnologias de serialização.
 
 - CONSIDERE dar suporte à *serialização de contrato de dados* se houver possibilidade de que as instâncias do seu tipo precisem ser persistentes ou usadas nos Serviços Web.
@@ -52,6 +53,7 @@ Este artigo lista as diretrizes a serem consideradas ao criar uma API para ser s
 - EVITE o suporte à serialização em runtime ou à serialização XML apenas por motivos gerais de persistência. Prefira a serialização do contrato de dados em vez disso
 
 #### <a name="data-contract-serialization"></a>Serialização de contrato de dados
+
  Os tipos podem dar suporte à serialização do contrato de dados aplicando o <xref:System.Runtime.Serialization.DataContractAttribute> ao tipo e o <xref:System.Runtime.Serialization.DataMemberAttribute> aos membros (campos e propriedades) do tipo.
 
  [!code-csharp[SerializationGuidelines#1](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#1)]
@@ -96,6 +98,7 @@ Este artigo lista as diretrizes a serem consideradas ao criar uma API para ser s
      Para obter mais informações, consulte [Contratos de dados compatíveis por encaminhamento](../../framework/wcf/feature-details/forward-compatible-data-contracts.md).
 
 #### <a name="xml-serialization"></a>Serialização XML
+
  A serialização de contrato de dados é a tecnologia de serialização principal (padrão) no .NET Framework, mas há cenários de serialização para os quais a serialização de contrato de dados não oferece suporte. Por exemplo, ela não fornece controle total sobre o formato XML gerado ou consumido pelo serializador. Se esse controle fino for necessário, a *serialização XML* precisará ser usada e você precisará criar seus tipos para oferecer suporte essa tecnologia de serialização.
 
 1. EVITE criar os tipos especificamente para a Serialização XML, a menos que você tenha um motivo muito forte para controlar o formato do XML gerado Essa tecnologia de serialização foi substituída pela serialização do contrato de dados abordada na seção anterior.
@@ -108,6 +111,7 @@ Este artigo lista as diretrizes a serem consideradas ao criar uma API para ser s
 2. Considere a implementação da <xref:System.Xml.Serialization.IXmlSerializable> interface se você quiser ter ainda mais controle sobre a forma do XML serializado do que a oferecida aplicando os atributos de SERIALIZAÇÃO XML. Dois métodos da interface <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> e <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> permitem controlar totalmente o fluxo XML serializado. Você também pode controlar o esquema XML gerado para o tipo aplicando o atributo <xref:System.Xml.Serialization.XmlSchemaProviderAttribute>.
 
 #### <a name="runtime-serialization"></a>Serialização de tempo de execução
+
  A *serialização em runtime* é uma tecnologia usada pelo .NET Remoting. Se você considerar que seus tipos serão transportados usando a comunicação remota do .NET, verifique se eles oferecem suporte à serialização de tempo de execução.
 
  O suporte básico da *serialização em runtime* pode ser fornecido aplicando o atributo <xref:System.SerializableAttribute> e os cenários mais avançados envolvem a implementação de um *padrão serializável de runtime* simples (implemente –<xref:System.Runtime.Serialization.ISerializable> e forneça um construtor de serialização).
@@ -139,7 +143,7 @@ Este artigo lista as diretrizes a serem consideradas ao criar uma API para ser s
      [!code-csharp[SerializationGuidelines#11](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#11)]
      [!code-vb[SerializationGuidelines#11](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#11)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Usando contratos de dados](../../framework/wcf/feature-details/using-data-contracts.md)
 - [Serializador de contrato de dados](../../framework/wcf/feature-details/data-contract-serializer.md)

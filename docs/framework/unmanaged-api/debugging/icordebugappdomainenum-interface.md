@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e9226e6e-ca2c-428e-bb38-0c099210f507
 topic_type:
 - apiref
-ms.openlocfilehash: 38603fb53b9cd6548595437b05c1e99ef208d940
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 37b6bcb48681704e3db47f81a51a9d21f00dfb37
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895092"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723188"
 ---
 # <a name="icordebugappdomainenum-interface"></a>Interface ICorDebugAppDomainEnum
 
@@ -27,7 +27,7 @@ Fornece o `Next` método, que retorna um número especificado de `ICorDebugAppDo
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método Next](icordebugappdomainenum-next-method.md)|Obtém o número especificado de domínios de aplicativo da coleção, começando na posição atual do cursor.|  
   
@@ -37,6 +37,7 @@ Fornece o `Next` método, que retorna um número especificado de `ICorDebugAppDo
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -45,7 +46,7 @@ Fornece o `Next` método, que retorna um número especificado de `ICorDebugAppDo
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorDebug](icordebug-interface.md)
 - [Depurando interfaces](debugging-interfaces.md)

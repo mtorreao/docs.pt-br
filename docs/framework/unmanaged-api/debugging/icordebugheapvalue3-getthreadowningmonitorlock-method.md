@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e06fc19d-2cf4-4cad-81a3-137a68af8969
 topic_type:
 - apiref
-ms.openlocfilehash: 9cc68e39dfef096b8ab6a8ba743f7a516cc349be
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: fef0902aedbcd8572d2dc67fae7927f754af4489
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210404"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723305"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>Método ICorDebugHeapValue3::GetThreadOwningMonitorLock
+
 Retorna o thread gerenciado que possui o bloqueio de monitor neste objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -35,13 +36,15 @@ HRESULT GetThreadOwningMonitorLock (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `ppThread`  
  fora O thread gerenciado que possui o bloqueio de monitor neste objeto.  
   
  `pAcquisitionCount`  
  fora O número de vezes que esse thread teria que liberar o bloqueio antes que ele retorne sem proprietário.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
@@ -52,6 +55,7 @@ HRESULT GetThreadOwningMonitorLock (
 ## <a name="exceptions"></a>Exceções  
   
 ## <a name="remarks"></a>Comentários  
+
  Se um thread gerenciado possuir o bloqueio de monitor neste objeto:  
   
 - O método retorna S_OK.  
@@ -65,6 +69,7 @@ HRESULT GetThreadOwningMonitorLock (
  Se ocorrer um erro de modo que não possa ser determinado que, se houver, thread possui o bloqueio de monitor nesse objeto, o método retornará um HRESULT que indica falha.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

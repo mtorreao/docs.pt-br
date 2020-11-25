@@ -14,27 +14,30 @@ helpviewer_keywords:
 ms.assetid: 429d8fce-b1b1-49d7-895c-28c1c1aa2dbd
 topic_type:
 - apiref
-ms.openlocfilehash: a3d4297e3b16dd1637e6293dbf7f04d4fbeda50f
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 6eea7f6c222b8e30376ec72ee0c193a68c23f0d0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860388"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723552"
 ---
 # <a name="iclrdebugging-interface"></a>Interface ICLRDebugging
+
 Fornece métodos que manipulam os módulos de carregamento e descarregamento para depuração.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método OpenVirtualProcess](iclrdebugging-openvirtualprocess-method.md)|Obtém a interface "ICorDebugProcess" que corresponde a um módulo Common Language Runtime (CLR) carregado no processo.|  
 |[Método CanUnloadNow](iclrdebugging-canunloadnow-method.md)|Determina se uma biblioteca fornecida por uma interface [ICLRDebuggingLibraryProvider](iclrdebugginglibraryprovider-interface.md) ainda está em uso ou pode ser descarregada.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Você pode obter uma instância da `ICLRDebugging` interface usando a função [CLRCreateInstance](../hosting/clrcreateinstance-function.md) .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

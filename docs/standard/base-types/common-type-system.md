@@ -15,12 +15,12 @@ helpviewer_keywords:
 - namespaces [.NET], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.openlocfilehash: d9ee7020c7ec06f079b7f0a05d5fea67ff1c1a90
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 0f80be2d1da43341f8e2af6f32580be2e01289dc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823180"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723214"
 ---
 # <a name="common-type-system"></a>Common Type System
 
@@ -170,14 +170,16 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
 - Definições para cada um dos membros do tipo.  
   
 ### <a name="attributes"></a>Atributos  
+
  Atributos fornecem metadados adicionais definidos pelo usuário. Com frequência, eles são usados para armazenar informações adicionais sobre um tipo em seu assembly ou para modificar o comportamento de um membro de tipo no ambiente do tempo de design ou do tempo de execução.  
   
  Os atributos são as próprias classe herdadas de <xref:System.Attribute?displayProperty=nameWithType>. Linguagens que dão suporte ao uso de atributos têm sua própria sintaxe para aplicar atributos a um elemento de linguagem. Os atributos podem ser aplicados a praticamente qualquer elemento de linguagem; os elementos específicos para os quais um atributo pode ser aplicado são definidos pelo <xref:System.AttributeUsageAttribute> aplicado à classe de atributo.  
   
 ### <a name="type-accessibility"></a>Acessibilidade de tipo  
+
  Todos os tipos têm um modificador que rege sua acessibilidade de outros tipos. A tabela a seguir descreve as acessibilidades de tipo que o runtime dá suporte.  
   
-|Acessibilidade|Descrição|  
+|Acessibilidade|DESCRIÇÃO|  
 |-------------------|-----------------|  
 |públicos|O tipo é acessível por todos os assemblies.|  
 |assembly|O tipo é acessível somente dentro do assembly.|  
@@ -197,6 +199,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
 - Se a acessibilidade declarada de `M` for `private`, o domínio de acessibilidade de `M` será o texto de programa de `T`.  
   
 ### <a name="type-names"></a>Nomes de tipo  
+
  O Common Type System impõe apenas duas restrições de nomes:  
   
 - Todos os nomes são codificados como cadeias de caracteres Unicode (16 bits).  
@@ -208,6 +211,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
  Embora um tipo possa referenciar tipos de outros módulos e assemblies, um tipo deve ser totalmente definido em um módulo do .NET. (Dependendo do suporte do compilador, no entanto, ele pode ser dividido em vários arquivos de código-fonte.) Os nomes de tipo precisam ser exclusivos somente dentro de um namespace. Para identificar totalmente um tipo, o nome de tipo deve ser qualificado pelo namespace que contém a implementação do tipo.  
   
 ### <a name="base-types-and-interfaces"></a>Tipos de base e interfaces  
+
  Um tipo pode herdar valores e comportamentos de outro tipo. O Common Type System não permite que tipos sejam herdados de mais de um tipo de base.  
   
  Um tipo pode implementar um número qualquer de interfaces. Para implementar uma interface, um tipo deve implementar todos os membros virtuais dessa interface. Um método virtual pode ser implementado por um tipo derivado e pode ser invocado estática ou dinamicamente.  
@@ -278,25 +282,27 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
 
  O Common Type System permite que os membros de tipo tenham várias características. No entanto, as linguagens não necessariamente dão suporte a todas elas. A tabela a seguir descreve as características de um membro.  
   
-|Característica|Pode ser aplicado a|Descrição|  
+|Característica|Pode ser aplicado a|DESCRIÇÃO|  
 |--------------------|------------------|-----------------|  
 |abstract|Métodos, propriedades e eventos|O tipo não fornece a implementação do método. Tipos que herdam ou implementam métodos abstratos devem fornecer uma implementação para o método. A única exceção é quando o tipo derivado é um tipo abstrato. Todos os métodos abstratos são virtuais.|  
-|privado, família, assembly, família e assembly, família ou assembly ou público|Tudo|Define a acessibilidade de um membro:<br /><br /> particulares<br /> Acessível somente dentro do mesmo tipo que o membro ou de um tipo aninhado.<br /><br /> família<br /> Acessível dentro do mesmo tipo que o membro e de tipos derivados herdados dele.<br /><br /> assembly<br /> Acessível somente no assembly no qual o tipo é definido.<br /><br /> família e assembly<br /> Acessíveis somente em tipos qualificados para acesso de família e assembly.<br /><br /> família ou assembly<br /> Acessíveis somente dentro de tipos qualificados para acesso de família ou assembly.<br /><br /> públicos<br /> Acessíveis dentro de qualquer tipo.|  
+|privado, família, assembly, família e assembly, família ou assembly ou público|Todos|Define a acessibilidade de um membro:<br /><br /> particulares<br /> Acessível somente dentro do mesmo tipo que o membro ou de um tipo aninhado.<br /><br /> família<br /> Acessível dentro do mesmo tipo que o membro e de tipos derivados herdados dele.<br /><br /> assembly<br /> Acessível somente no assembly no qual o tipo é definido.<br /><br /> família e assembly<br /> Acessíveis somente em tipos qualificados para acesso de família e assembly.<br /><br /> família ou assembly<br /> Acessíveis somente dentro de tipos qualificados para acesso de família ou assembly.<br /><br /> públicos<br /> Acessíveis dentro de qualquer tipo.|  
 |final|Métodos, propriedades e eventos|Um método virtual não pode ser substituído em um tipo derivado.|  
 |initialize-only|Campos|O valor pode apenas ser inicializado e não pode ser gravado após a inicialização.|  
 |instance|Campos, métodos, propriedades e eventos|Se um membro não estiver marcado como `static` (C# e C++), `Shared` (Visual Basic), `virtual` (C# e C++) ou `Overridable` (Visual Basic), ele será um membro de instância (não há palavra-chave de instância). Haverá tantas cópias desses membros na memória quanto objetos que as usam.|  
 |literal|Campos|O valor atribuído ao campo é um valor fixo, conhecido no tempo de compilação, de um tipo de valor interno. Às vezes, campos literais são conhecidos como constantes.|  
-|newslot ou override|Tudo|Define como o membro interage com os membros herdados que possuam a mesma assinatura:<br /><br /> newslot<br /> Oculta os membros herdados que possuam a mesma assinatura.<br /><br /> override<br /> Substitui a definição de um método virtual herdado.<br /><br /> O padrão é newslot.|  
+|newslot ou override|Todos|Define como o membro interage com os membros herdados que possuam a mesma assinatura:<br /><br /> newslot<br /> Oculta os membros herdados que possuam a mesma assinatura.<br /><br /> override<br /> Substitui a definição de um método virtual herdado.<br /><br /> O padrão é newslot.|  
 |static|Campos, métodos, propriedades e eventos|O membro pertence ao tipo no qual está definido e não a uma instância particular do tipo; o membro existirá mesmo se uma instância do tipo não tiver sido criada e será compartilhado entre todas as instâncias do tipo.|  
 |virtual|Métodos, propriedades e eventos|O método pode ser implementado por um tipo derivado e pode ser invocado estática ou dinamicamente. Se a invocação dinâmica for usada, o tipo da instância que faz a chamada no tempo de execução (em vez do tipo conhecido no tempo de compilação) determinará qual implementação do método será chamada. Para invocar um método virtual estaticamente, a variável precisará ser convertida em um tipo que usa a versão desejada do método.|  
   
 ### <a name="overloading"></a>Sobrecarga  
+
  Cada membro de tipo tem uma assinatura exclusiva. Assinaturas de método consistem no nome de método e em uma lista de parâmetros (a ordem e os tipos dos argumentos do método). Os vários métodos com o mesmo nome podem ser definidos em um tipo desde que suas assinaturas sejam diferentes. Quando dois ou mais métodos com o mesmo nome forem definidos, diz-se que o método está sobrecarregado. Por exemplo, em <xref:System.Char?displayProperty=nameWithType>, o método <xref:System.Char.IsDigit%2A> está sobrecarregado. Um método utiliza um <xref:System.Char>. O outro método utiliza um <xref:System.String> e um <xref:System.Int32>.  
   
 > [!NOTE]
 > O tipo de retorno não é considerado parte da assinatura do método. Ou seja, os métodos não poderão ser sobrecarregados se diferirem somente pelo tipo de retorno.  
   
 ### <a name="inherit-override-and-hide-members"></a>Herdar, substituir e ocultar membros  
+
  Um tipo derivado herda todos os membros de seu tipo de base; ou seja, esses membros são definidos e disponibilizados para o tipo derivado. O comportamento, ou qualidades, de membros herdados pode ser modificado de duas maneiras:  
   
 - Um tipo derivado pode ocultar um membro herdado definindo um novo membro com a mesma assinatura. Isso pode ser feito para fazer um membro privado anteriormente público ou para definir o novo comportamento de um método herdado marcado como `final`.  

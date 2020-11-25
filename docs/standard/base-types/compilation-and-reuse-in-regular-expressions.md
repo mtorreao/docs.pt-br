@@ -11,17 +11,19 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, compilation
 - regular expressions, engines
 ms.assetid: 182ec76d-5a01-4d73-996c-0b0d14fcea18
-ms.openlocfilehash: f0da4a226feb6bafc7e17c7333cbc507701311af
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b0d3ac619e8d9548fffcb41b23d2ebd6663915e9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823102"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723201"
 ---
 # <a name="compilation-and-reuse-in-regular-expressions"></a>Compilação e reutilização em expressões regulares
+
 Você pode otimizar o desempenho de aplicativos que fazem uso intensivo de expressões regulares compreendendo como o mecanismo de expressões regulares compila expressões e como as expressões regulares são armazenadas em cache. Este tópico discute a compilação e o cache.  
   
 ## <a name="compiled-regular-expressions"></a>Expressões regulares compiladas  
+
  Por padrão, o mecanismo de expressões regulares compila uma expressão regular para uma sequência de instruções internas (esses são códigos de alto nível que são diferentes da Microsoft Intermediate Language ou MSIL). Quando o mecanismo executa uma expressão regular, ele interpreta os códigos internos.  
   
  Se um objeto <xref:System.Text.RegularExpressions.Regex> for construído com a opção <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType>, ele compilará a expressão regular para o código explícito em MSIL, em vez de instruções internas de expressões regulares de alto nível. Isso permite que o compilador JIT (just-in-time) do .NET converta a expressão para um código de computador nativo para um melhor desempenho.  O custo da construção do <xref:System.Text.RegularExpressions.Regex> objeto pode ser maior, mas o custo da execução de correspondências com ele provavelmente será muito menor.
@@ -29,6 +31,7 @@ Você pode otimizar o desempenho de aplicativos que fazem uso intensivo de expre
  Uma alternativa é usar expressões regulares pré-compiladas. Você pode compilar todas as suas expressões em uma DLL reutilizável usando o método <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A>. Isso evita a necessidade de Compilar em tempo de execução enquanto ainda se beneficia da velocidade das expressões regulares compiladas.  
   
 ## <a name="the-regular-expressions-cache"></a>Cache de expressões regulares  
+
  Para melhorar o desempenho, o mecanismo de expressões regulares mantém um cache em todo o aplicativo com as expressões regulares compiladas. O cache armazena padrões de expressões regulares que são usados somente em chamadas de método estático. (Padrões de expressão regular fornecidos para métodos de instância não são armazenados em cache.) Isso evita a necessidade de analisar novamente uma expressão em um código de byte de alto nível sempre que ela for usada.  
   
  O número máximo de expressões regulares em cache é determinado pelo valor da propriedade `static` (`Shared` no Visual Basic) <xref:System.Text.RegularExpressions.Regex.CacheSize%2A?displayProperty=nameWithType>. Por padrão, o mecanismo de expressões regulares armazena em cache até 15 expressões regulares compiladas. Se o número de expressões regulares compiladas ultrapassar o tamanho do cache, a expressão regular menos utilizada recentemente será descartada e a nova expressão regular será armazenada em cache.  

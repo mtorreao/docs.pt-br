@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 18e89f45-e068-426a-be16-9f53a4346860
 topic_type:
 - apiref
-ms.openlocfilehash: 836e4843ead940bc9f76ff6bdd0433e21e400afd
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 13636da9c3e8ac4aa9e8dc1fa02b2e33afef4717
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500631"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722252"
 ---
 # <a name="functionleave-function"></a>Função FunctionLeave
+
 Notifica o criador de perfil de que uma função está prestes a retornar ao chamador.  
   
 > [!NOTE]
@@ -42,6 +43,7 @@ void __stdcall FunctionLeave (
   \[in] o identificador da função que está retornando.
 
 ## <a name="remarks"></a>Comentários  
+
  A `FunctionLeave` função é um retorno de chamada; você deve implementá-la. A implementação deve usar o `__declspec` `naked` atributo de classe de armazenamento ().  
   
  O mecanismo de execução não salva nenhum registro antes de chamar essa função.  
@@ -55,6 +57,7 @@ void __stdcall FunctionLeave (
  Além disso, a `FunctionLeave` função não deve chamar um código gerenciado ou, de qualquer forma, causar uma alocação de memória gerenciada.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 154b2460-59ce-4874-a9f2-1b3353486ac5
 topic_type:
 - apiref
-ms.openlocfilehash: 0cf7b15392c90694db659f6faff6feecbef65466
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 4ef3992d840f539ca07c411c2d740fa32b14edbc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008312"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722941"
 ---
 # <a name="iceegengetsectioncreate-method"></a>Método ICeeGen::GetSectionCreate
+
 Gera e obtém uma seção de código usando os valores de nome e sinalizador especificados.  
   
  Este método é obsoleto e não deve ser usado.  
@@ -38,6 +39,7 @@ HRESULT GetSectionCreate (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `name`  
  no Um ponteiro para uma cadeia de caracteres que especifica o nome da seção a ser criada.  
   
@@ -48,14 +50,16 @@ HRESULT GetSectionCreate (
  fora Um ponteiro para a seção de código recém-criada.  
   
 ## <a name="remarks"></a>Comentários  
+
  Chame `GetSectionCreate` somente se você tiver requisitos de seção especiais que não são tratados por outros métodos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como um recurso em MsCorEE. dll  
+ **Biblioteca:** Usado como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

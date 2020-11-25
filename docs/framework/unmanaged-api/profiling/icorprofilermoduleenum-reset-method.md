@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c9110b49-823c-4ba9-9a4c-198afeb7780e
 topic_type:
 - apiref
-ms.openlocfilehash: a2d4a2d7bf1db987c7d52bc12e2b71e7df4c5230
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5dca8c1b2f34de63e7779535190d0a8c34082038
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84494794"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722785"
 ---
 # <a name="icorprofilermoduleenumreset-method"></a>Método ICorProfilerModuleEnum::Reset
+
 Move o cursor deste enumerador para a posição inicial da sequência.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,6 +35,7 @@ HRESULT Reset();
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

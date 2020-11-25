@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c6b7fb4-cbca-4479-b650-ab9a99732ea0
 topic_type:
 - apiref
-ms.openlocfilehash: 2858e924ab6effe192955ce53dad9d333d2d244d
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 25aefff46f7557f89f27d1eccab58c9c70d2d13e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009059"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722109"
 ---
 # <a name="imetadataassemblyimportgetassemblyrefprops-method"></a>Método IMetaDataAssemblyImport::GetAssemblyRefProps
+
 Obtém o conjunto de propriedades para a referência de assembly com a assinatura de metadados especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -43,6 +44,7 @@ HRESULT GetAssemblyRefProps (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `mdar`  
  no O `mdAssemblyRef` token de metadados que representa a referência de assembly para a qual obter as propriedades.  
   
@@ -74,14 +76,16 @@ HRESULT GetAssemblyRefProps (
  fora Um ponteiro para sinalizadores que descrevem os metadados aplicados a um assembly. O valor de flags é uma combinação de um ou mais valores de [CorAssemblyFlags](corassemblyflags-enumeration.md) .  
   
 ## <a name="return-value"></a>Valor Retornado  
+
  Esse método retornará S_OK se tiver sucesso; caso contrário, ele retorna um dos códigos de erro definidos no arquivo de cabeçalho Winerror. h.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como um recurso em MsCorEE. dll  
+ **Biblioteca:** Usado como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
