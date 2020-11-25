@@ -3,16 +3,16 @@ title: Descartes – Guia do C#
 description: Descreve o suporte do C# a descartes, que são variáveis descartáveis não atribuídas, além das maneiras em que descartes podem ser usados.
 ms.technology: csharp-fundamentals
 ms.date: 09/22/2020
-ms.openlocfilehash: 4de48aebaeb896b198b2e9f2431c6a38ba11469e
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: baa7c559095460cf747cb5c8f7ad581270893bd7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869325"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698800"
 ---
 # <a name="discards---c-guide"></a>Descartes – Guia do C#
 
-Começando com o C# 7.0, o C# é compatível com descartes, que são variáveis temporárias e fictícias, não utilizadas intencionalmente no código do aplicativo. Descartes são equivalentes a variáveis não atribuídas; eles não têm um valor. Já que há apenas uma variável de descarte e essa variável pode nem mesmo ser de armazenamento alocado, descartes podem reduzir as alocações de memória. Por deixarem clara a intenção do seu código, eles melhoram a sua legibilidade e a facilidade de manutenção.
+A partir do C# 7,0, o C# dá suporte a Descartes, que são variáveis de espaço reservado que são intencionalmente não usadas no código do aplicativo. Descartes são equivalentes a variáveis não atribuídas; eles não têm um valor. Já que há apenas uma variável de descarte e essa variável pode nem mesmo ser de armazenamento alocado, descartes podem reduzir as alocações de memória. Por deixarem clara a intenção do seu código, eles melhoram a sua legibilidade e a facilidade de manutenção.
 
 Você indica que uma variável é um descarte atribuindo a ela o sublinhado (`_`) como seu nome. Por exemplo, a chamada de método a seguir retorna uma tupla de 3 na qual o primeiro e o segundo valores são descartes, e *area* é uma variável declarada anteriormente para ser definida para o terceiro componente correspondente retornado por *GetCityInformation*:
 

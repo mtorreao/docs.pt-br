@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 35991289-f389-495d-8caa-a6384fb1d557
 topic_type:
 - apiref
-ms.openlocfilehash: 7ce9ac95c7183a7d47c367914d80f77c57dde0d7
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 0cc84893c4937bf6b23eae0d63b92b3b871901dd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005759"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95700564"
 ---
 # <a name="imetadataemitapplyeditandcontinue-method"></a>Método IMetaDataEmit::ApplyEditAndContinue
+
 Atualiza o escopo do assembly atual com as alterações feitas nos metadados especificados.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,17 +35,19 @@ HRESULT ApplyEditAndContinue (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pImport`  
  \[no \] ponteiro para um objeto [IUnknown](/cpp/atl/iunknown) que representa os metadados delta do arquivo executável portátil (PE).
   
  Os metadados delta são o bloco de metadados que inclui as alterações feitas na cópia dos metadados reais do módulo.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como um recurso em MSCorEE. dll  
+ **Biblioteca:** Usado como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

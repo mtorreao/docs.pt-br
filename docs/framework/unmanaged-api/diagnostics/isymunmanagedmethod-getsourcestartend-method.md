@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2a420900-01f1-4461-8777-3a34a6dc1426
 topic_type:
 - apiref
-ms.openlocfilehash: 25e797fdf563a01ab727f16e7173eec2552eeb27
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: f53afa5f87f1502f287b25e3d9756f9a54ad6869
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614416"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699281"
 ---
 # <a name="isymunmanagedmethodgetsourcestartend-method"></a>Método ISymUnmanagedMethod::GetSourceStartEnd
+
 Obtém as posições do documento inicial e final da origem deste método. A primeira posição da matriz é o início e a segunda posição da matriz é o final.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,6 +37,7 @@ HRESULT GetSourceStartEnd(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `docs`  
  no Os documentos de origem inicial e final.  
   
@@ -48,12 +50,14 @@ HRESULT GetSourceStartEnd(
  `pRetVal`  
  [fora] `true` Se as posições foram definidas; caso contrário, `false` .  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ISymUnmanagedMethod](isymunmanagedmethod-interface.md)

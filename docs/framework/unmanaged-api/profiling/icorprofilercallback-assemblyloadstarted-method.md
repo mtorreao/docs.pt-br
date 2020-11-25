@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 67e8209d-a0ca-4118-a6e6-c1ee0abc2221
 topic_type:
 - apiref
-ms.openlocfilehash: df172edb97a82ae3bf2d46c8be6ea05d5445a09a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c2fbc0ae8cdeb79b65cbad9a055a8051acf67e50
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500423"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95700412"
 ---
 # <a name="icorprofilercallbackassemblyloadstarted-method"></a>Método ICorProfilerCallback::AssemblyLoadStarted
+
 Notifica o criador de perfil de que um assembly está sendo carregado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -39,9 +40,11 @@ HRESULT AssemblyLoadStarted(
   \[in] identifica o assembly que está sendo carregado.
 
 ## <a name="remarks"></a>Comentários  
+
  O valor de `assemblyId` não é válido para uma solicitação de informações até que o método [ICorProfilerCallback:: AssemblyLoadFinished](icorprofilercallback-assemblyloadfinished-method.md) seja chamado.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

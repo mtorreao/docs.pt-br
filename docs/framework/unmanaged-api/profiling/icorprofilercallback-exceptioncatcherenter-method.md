@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 41462329-a648-46f0-ae6d-728b94c31aa9
 topic_type:
 - apiref
-ms.openlocfilehash: 9d0ef4da4ba6c8db49bcb0b40911756f7d9db66d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 97b9f517a24a7d82b7697cd0723628ede073b537
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500306"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95700139"
 ---
 # <a name="icorprofilercallbackexceptioncatcherenter-method"></a>Método ICorProfilerCallback::ExceptionCatcherEnter
+
 Notifica o criador de perfil que o controle está sendo passado para o `catch` bloco apropriado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -44,6 +45,7 @@ HRESULT ExceptionCatcherEnter(
   \[in] o identificador da exceção que está sendo manipulada.
 
 ## <a name="remarks"></a>Comentários  
+
  O `ExceptionCatcherEnter` método será chamado somente se o ponto de captura estiver no código compilado com o compilador JIT (just-in-time). Uma exceção que é capturada no código não gerenciado ou no código interno do tempo de execução não chamará essa notificação. O `objectId` valor é passado novamente, pois uma coleta de lixo pode ter movido o objeto desde a `ExceptionThrown` notificação.  
   
  O criador de perfil não deve bloquear em sua implementação desse método porque a pilha pode não estar em um estado que permita a coleta de lixo e, portanto, a coleta de lixo preemptiva não pode ser habilitada. Se o criador de perfil for bloqueado aqui e a coleta de lixo for tentada, o tempo de execução será bloqueado até que esse retorno de chamada seja retornado.  
@@ -51,6 +53,7 @@ HRESULT ExceptionCatcherEnter(
  A implementação do criador de perfil desse método não deve chamar o código gerenciado ou, de qualquer forma, causar uma alocação de memória gerenciada.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

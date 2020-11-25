@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6e1834ab-c359-498a-b10b-984ae23cdda4
 topic_type:
 - apiref
-ms.openlocfilehash: 6c9ec6af90cc47c3c01621563a9813789c25aa1d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c4d1f2467927e64ae08c0e7d8067c2ce96b95522
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500332"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95700191"
 ---
 # <a name="icorprofilercallbackcomclassicvtablecreated-method"></a>Método ICorProfilerCallback::COMClassicVTableCreated
+
 Notifica o criador de perfil de que uma interoperabilidade COM vtable para o IID e a classe especificados foram criados.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -54,11 +55,13 @@ HRESULT COMClassicVTableCreated(
   \[in] o número de slots que estão no vtable.
 
 ## <a name="remarks"></a>Comentários  
+
  O criador de perfil não deve bloquear em sua implementação desse método porque a pilha pode não estar em um estado que permita a coleta de lixo e, portanto, a coleta de lixo preemptiva não pode ser habilitada. Se o criador de perfil for bloqueado aqui e a coleta de lixo for tentada, o tempo de execução será bloqueado até que esse retorno de chamada seja retornado.  
   
  A implementação do criador de perfil desse método não deve chamar o código gerenciado ou, de qualquer forma, causar uma alocação de memória gerenciada.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

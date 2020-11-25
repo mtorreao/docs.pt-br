@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: a71dbbd5-64b8-47eb-9f03-8e8c85fbe2bc
 topic_type:
 - apiref
-ms.openlocfilehash: 1b7209a36f8e9d6f02bd4cc1882adeef8af30c3d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 10efe853c9a7ad7676058bc01b07063c557623d8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503910"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699216"
 ---
 # <a name="ihosttask-interface"></a>Interface IHostTask
+
 Fornece métodos que permitem que o Common Language Runtime (CLR) se comunique com o host para gerenciar tarefas.  
   
 ## <a name="methods"></a>Métodos  
@@ -36,14 +37,16 @@ Fornece métodos que permitem que o Common Language Runtime (CLR) se comunique c
 |[Método de início](ihosttask-start-method.md)|Solicita que o host mova a tarefa representada pela instância atual `IHostTask` de um estado suspenso para um estado ativo, no qual o código pode ser executado.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O CLR chama os métodos definidos pelo `IHostTask` para iniciar uma tarefa, definir seu nível de prioridade de thread e assim por diante.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 80be7efe-2c32-4b9f-8c52-40c6f6268219
 topic_type:
 - apiref
-ms.openlocfilehash: 7575be3f5074243b251c80b8dd5bdbb12e5d50fd
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: b208444de3b427329988f27b9d252b54143b7240
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976312"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698787"
 ---
 # <a name="icordebugenum-interface"></a>Interface ICorDebugEnum
 
@@ -27,7 +27,7 @@ Serve como a interface base abstrata para os enumeradores que são usados por um
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método Clone](icordebugenum-clone-method.md)|Cria uma cópia deste objeto `ICorDebugEnum`.|  
 |[Método GetCount](icordebugenum-getcount-method.md)|Obtém o número de itens na enumeração.|  
@@ -35,7 +35,8 @@ Serve como a interface base abstrata para os enumeradores que são usados por um
 |[Método Skip](icordebugenum-skip-method.md)|Move o cursor para a frente na enumeração pelo número especificado de itens.|  
   
 ## <a name="remarks"></a>Comentários  
- Os seguintes enumeradores derivam `ICorDebugEnum`de:  
+
+ Os seguintes enumeradores derivam de `ICorDebugEnum` :  
   
 - "ICorDebugAppDomainEnum"  
   
@@ -83,6 +84,7 @@ Serve como a interface base abstrata para os enumeradores que são usados por um
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -91,6 +93,6 @@ Serve como a interface base abstrata para os enumeradores que são usados por um
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Depurando interfaces](debugging-interfaces.md)

@@ -8,14 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, data
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
-ms.openlocfilehash: 9d0fe1afef126a9c4f73a74d969d36df27182be9
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ce034260fd3e6746bb7d516483b5e6872dfdc172
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829369"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699021"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>Paralelismo de dados (biblioteca de tarefas paralelas)
+
 *Paralelismo de dados* refere-se a cenários em que a mesma operação é realizada simultaneamente (ou seja, em paralelo) em elementos em uma matriz ou coleção de origem. Nas operações paralelas de dados, a coleção de origem é particionada de modo que múltiplos threads possam operar em segmentos diferentes simultaneamente.  
   
  A biblioteca de paralelismo de tarefas (TPL) suporta paralelismo de dados por meio da classe <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>. Essa classe fornece implementações paralelas baseadas em métodos dos loops [for](../../csharp/language-reference/keywords/for.md) e [foreach](../../csharp/language-reference/keywords/foreach-in.md) (`For` e `For Each` no Visual Basic). Você grava a lógica do loop para um loop <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> ou <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> tanto quanto você gravaria um loop sequencial. Você não precisa criar threads ou listar itens de trabalho. Nos loops básicos, você não precisa usar bloqueios. A TPL manipula todo o trabalho de nível baixo para você. Para obter informações detalhadas sobre o uso do <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> e do <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>, baixe o documento [Padrões da programação paralela: Noções básicas e aplicação de padrões paralelos, com o .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222). O exemplo de código a seguir mostra um loop `foreach` simples e seu equivalente paralelo.  

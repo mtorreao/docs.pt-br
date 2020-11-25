@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 657bf91d-005a-4ea4-9298-04d1291c0bc3
 topic_type:
 - apiref
-ms.openlocfilehash: 84b2f1226c84713483499c7ff777838058cb0f95
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: eca1137fb607d64e8645de5b0afc7ca391eac763
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615105"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699255"
 ---
 # <a name="isymunmanagednamespacegetname-method"></a>Método ISymUnmanagedNamespace::GetName
+
 Obtém o nome deste namespace.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,6 +37,7 @@ HRESULT GetName(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `cchName`  
  no Um `ULONG32` que indica o tamanho do `szName` buffer.  
   
@@ -45,10 +47,12 @@ HRESULT GetName(
  `szName`  
  fora Um ponteiro para um buffer que contém o nome do namespace.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Confira também

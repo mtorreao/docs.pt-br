@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7d58caac-2e75-4dfa-9249-32d8a624b247
 topic_type:
 - apiref
-ms.openlocfilehash: 650a64e72b410cddfbee7dce676ddbb5a3b8b3d3
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 071738c8fb9b40457215e21172240aa7e77198cd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614442"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699463"
 ---
 # <a name="isymunmanagedmethodgetrootscope-method"></a>Método ISymUnmanagedMethod::GetRootScope
+
 Obtém o escopo léxico raiz dentro deste método. Esse escopo abrange todo o método.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -33,13 +34,16 @@ HRESULT GetRootScope(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pRetVal`  
  fora Um ponteiro que é definido para a interface [ISymUnmanagedScope](isymunmanagedscope-interface.md) retornada.  
   
 ## <a name="return-value"></a>Valor Retornado  
+
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Confira também

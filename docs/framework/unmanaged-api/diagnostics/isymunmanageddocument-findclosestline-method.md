@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 628f2a04-e529-407d-841e-3b3da219a9cb
 topic_type:
 - apiref
-ms.openlocfilehash: 9e6134d39096c4ab157aa545646d83339f92a0b8
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 5ec67758e3174493cbd5cec1de0dcce30013ac43
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441026"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698579"
 ---
 # <a name="isymunmanageddocumentfindclosestline-method"></a>Método ISymUnmanagedDocument::FindClosestLine
+
 Retorna a linha mais próxima que é um ponto de sequência, dada uma linha neste documento que pode ou não ser um ponto de sequência.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,13 +35,15 @@ HRESULT FindClosestLine(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `line`  
  no Uma linha neste documento.  
   
  `pRetVal`  
  fora Um ponteiro para uma variável que recebe a linha.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  S_OK se o método tiver sucesso; caso contrário, um código de erro.  
   
 ## <a name="see-also"></a>Confira também

@@ -4,23 +4,24 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data structures, multi-threading
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
-ms.openlocfilehash: c7f974c5626cf1efc6bf62c423043089d5c32e7c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4e0214afe4dba7f838f420907374f1472d6d3911
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829525"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699008"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Estruturas de dados para programação paralela
 
 O .NET fornece vários tipos úteis em programação paralela, incluindo um conjunto de classes de coleção simultâneas, primitivos de sincronização leves e tipos de inicialização lenta. Você pode usar esses tipos com qualquer código de aplicativo multithread, incluindo PLINQ e biblioteca de paralelismo de tarefas.  
   
 ## <a name="concurrent-collection-classes"></a>Classes de coleção simultâneas  
+
  As classes de coleção no namespace <xref:System.Collections.Concurrent?displayProperty=nameWithType> fornecem operações de adição e remoção thread-safe que, sempre que possível, evitam bloqueios e usam o bloqueio refinado quando os bloqueios forem necessários. Uma classe de coleção simultânea não exige que o código do usuário assuma nenhum bloqueio ao acessar itens. As classes de coleção simultânea podem melhorar consideravelmente o desempenho em tipos como <xref:System.Collections.ArrayList?displayProperty=nameWithType> e <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> (com bloqueio implementado pelo usuário) em cenários nos quais vários threads adicionam e removem itens de uma coleção.  
   
  A tabela a seguir lista as classes de coleção simultâneas:  
   
-|Type|Descrição|  
+|Type|DESCRIÇÃO|  
 |----------|-----------------|  
 |<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>|Fornece funcionalidades de bloqueio e delimitação para coleções thread-safe que implementam <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType>. Os threads de produtor são bloqueados se nenhum slot estiver disponível, ou se a coleção estiver cheia. Threads de consumidor são bloqueados se a coleção estiver vazia. Esse tipo também oferece suporte ao acesso sem bloqueio de produtores e consumidores. <xref:System.Collections.Concurrent.BlockingCollection%601> pode ser usado como uma classe base ou repositório de backup para fornecer bloqueio e limitação a qualquer classe de coleção que ofereça suporte a <xref:System.Collections.Generic.IEnumerable%601>.|  
 |<xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>|Uma implementação de recipiente thread-safe que fornece operações de adição e get escalonáveis.|  
@@ -31,11 +32,12 @@ O .NET fornece vários tipos úteis em programação paralela, incluindo um conj
  Para obter mais informações, veja [Coleções thread-safe](../collections/thread-safe/index.md).  
   
 ## <a name="synchronization-primitives"></a>Primitivos de sincronização  
+
  Os primitivos de sincronização no <xref:System.Threading?displayProperty=nameWithType> namespace permitem uma simultaneidade refinada e desempenho mais rápido, evitando mecanismos de bloqueio caros encontrados no código multithread herdado.
   
  A tabela a seguir lista os tipos de sincronização:  
   
-|Type|Descrição|  
+|Type|DESCRIÇÃO|  
 |----------|-----------------|  
 |<xref:System.Threading.Barrier?displayProperty=nameWithType>|Permite que vários threads funcionem em um algoritmo em paralelo fornecendo um ponto em que cada tarefa pode sinalizar sua chegada e, depois, gerar um bloqueio até que algumas ou todas as tarefas tenham chegado. Para saber mais, consulte [Barreira](../threading/barrier.md).|  
 |<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|Simplifica cenários de bifurcação e junção fornecendo um mecanismo fácil de encontro. Para saber mais, confira [CountdownEvent](../threading/countdownevent.md).|  
@@ -51,11 +53,12 @@ O .NET fornece vários tipos úteis em programação paralela, incluindo um conj
 - [Como sincronizar operações simultâneas com uma barreira](../threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
   
 ## <a name="lazy-initialization-classes"></a>Classes de inicialização lenta  
+
  Com a inicialização lenta, a memória de um objeto não é alocada até que seja necessário. A inicialização lenta pode melhorar o desempenho distribuindo as alocações de objeto uniformemente entre o tempo de vida de um programa. Você pode habilitar a inicialização lenta para qualquer tipo personalizado encapsulando o tipo <xref:System.Lazy%601>.  
   
  A tabela a seguir lista os tipos de inicialização lenta:  
   
-|Type|Descrição|  
+|Type|DESCRIÇÃO|  
 |----------|-----------------|  
 |<xref:System.Lazy%601?displayProperty=nameWithType>|Fornece inicialização lenta, leve e thread-safe.|  
 |<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>|Fornece um valor com inicialização lenta em uma base por thread, com cada thread invocando lentamente a função de inicialização.|  
@@ -64,6 +67,7 @@ O .NET fornece vários tipos úteis em programação paralela, incluindo um conj
  Para obter mais informações, veja [Inicialização lenta](../../framework/performance/lazy-initialization.md).  
   
 ## <a name="aggregate-exceptions"></a>Agregar exceções  
+
  O tipo <xref:System.AggregateException?displayProperty=nameWithType> pode ser usado para capturar várias exceções lançadas simultaneamente em threads separados e retorná-las para o thread associado como uma única exceção. Os tipos <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> e o PLINQ usam <xref:System.AggregateException> extensivamente para essa finalidade. Para saber mais, veja [Tratamento de exceções](exception-handling-task-parallel-library.md) e [Como tratar exceções em uma consulta PLINQ](how-to-handle-exceptions-in-a-plinq-query.md).  
   
 ## <a name="see-also"></a>Confira também

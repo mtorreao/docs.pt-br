@@ -4,12 +4,12 @@ description: Uma visão geral das ferramentas adicionais que você pode instalar
 author: mlacouture
 ms.date: 02/13/2020
 ms.custom: mvc
-ms.openlocfilehash: f7bfa660f7521adf4950d5bbdd59628bb88cca4d
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: f563dff312442cbf068d52d08992621e3d6f1460
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557926"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698995"
 ---
 # <a name="net-core-additional-tools-overview"></a>Visão geral das ferramentas adicionais do .NET Core
 
@@ -46,3 +46,7 @@ No .NET Framework, é possível gerar previamente um assembly de serialização 
 ## <a name="xml-serializer-generator"></a>Gerador de serializador de XML
 
 Como o [XML Serializer Generator (sgen.exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md) para o .NET Framework, o [pacote NuGet Microsoft.XmlSerializer.Generator](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator) é a solução para bibliotecas .NET Core e .NET Standard. Ele cria um assembly de serialização de XML para tipos contidos em um assembly a fim de melhorar o desempenho de inicialização da serialização de XML ao serializar ou desserializar objetos desses tipos usando <xref:System.Xml.Serialization.XmlSerializer>.
+
+## <a name="generating-self-signed-certificates"></a>Gerando certificados Self-Signed
+
+Você pode usar o [dotnet dev-certs](self-signed-certificates-guide.md) para criar certificados autoassinados para cenários de desenvolvimento e teste.

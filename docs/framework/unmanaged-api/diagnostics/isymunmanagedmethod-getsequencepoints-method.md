@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f909ac48-3d8f-49fb-a369-e3d9959151cd
 topic_type:
 - apiref
-ms.openlocfilehash: 451cfecde7e14fad9d3fed3367112e1fb59796e5
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 38763e687c66dcb038a874c9c17cb0d67e547816
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615138"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699346"
 ---
 # <a name="isymunmanagedmethodgetsequencepoints-method"></a>Método ISymUnmanagedMethod::GetSequencePoints
+
 Obtém todos os pontos de sequência dentro deste método.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -40,6 +41,7 @@ HRESULT GetSequencePoints(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `cPoints`  
  no Um `ULONG32` que recebe o tamanho das `offsets` `documents` matrizes,, `lines` ,, `columns` `endLines` e `endColumns` .  
   
@@ -64,10 +66,12 @@ HRESULT GetSequencePoints(
  `endColumns`  
  no A matriz de colunas nos documentos em que os pontos de sequência terminam.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Confira também
