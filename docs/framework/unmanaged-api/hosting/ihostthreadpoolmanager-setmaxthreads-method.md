@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 77cfd347-95c2-4425-b807-4ecc2a8d4578
 topic_type:
 - apiref
-ms.openlocfilehash: 53d42afda6668acc6462c419fcefd6bc1435a34c
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 68e806daa63d13ad6c1f3b5de634c20ca02e8eb4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842446"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730703"
 ---
 # <a name="ihostthreadpoolmanagersetmaxthreads-method"></a>Método IHostThreadPoolManager::SetMaxThreads
+
 Define o número máximo de threads que o host pode manter no pool de threads.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,6 +35,7 @@ HRESULT SetMaxThreads (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `MaxThreads`  
  O número máximo de threads de trabalho no pool de threads.  
   
@@ -41,7 +43,7 @@ HRESULT SetMaxThreads (
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`SetMaxThreads`retornado com êxito.|  
+|S_OK|`SetMaxThreads` retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -50,18 +52,20 @@ HRESULT SetMaxThreads (
 |E_NOTIMPL|O host não fornece uma implementação de `SetMaxThreads` .|  
   
 ## <a name="remarks"></a>Comentários  
+
  Não é necessário um host para permitir que o CLR configure o tamanho do pool de threads. Alguns hosts podem querer um controle exclusivo sobre o pool de threads, por motivos como implementação, desempenho ou escalabilidade. Nesse caso, um host deve retornar um valor HRESULT de E_NOTIMPL.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Threading.ThreadPool.SetMaxThreads%2A>
 - <xref:System.Threading.ThreadPool>

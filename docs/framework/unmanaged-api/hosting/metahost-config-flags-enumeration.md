@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6f1e389f-ed99-4d6a-a0ba-72d7d869a01d
 topic_type:
 - apiref
-ms.openlocfilehash: 6b37fcfc04e3ec880c67f102ec12d7f3e4b06a43
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 01e55659bf2a348ec763f51112cbdcd706f27c84
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84493156"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730000"
 ---
 # <a name="metahost_config_flags-enumeration"></a>Enumeração METAHOST_CONFIG_FLAGS
+
 Descreve os possíveis sinalizadores retornados no `pdwConfigFlags` parâmetro do método [ICLRMetaHostPolicy:: GetRequestedRuntime](iclrmetahostpolicy-getrequestedruntime-method.md) , indicando a presença e a configuração do `useLegacyV2RuntimeActivationPolicy` atributo no [ \<startup> elemento](../../configure-apps/file-schema/startup/startup-element.md) do arquivo de configuração.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,7 +38,7 @@ typedef enum {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |`METAHOST_CONFIG_FLAGS_LEGACY_V2_ACTIVATION_POLICY_UNSET`|O `useLegacyV2RuntimeActivationPolicy` atributo não estava presente no [ \<startup> elemento](../../configure-apps/file-schema/startup/startup-element.md).|  
 |`METAHOST_CONFIG_FLAGS_LEGACY_V2_ACTIVATION_POLICY_TRUE`|O `useLegacyV2RuntimeActivationPolicy` atributo estava presente e definido como `true` .|  
@@ -47,11 +48,12 @@ typedef enum {
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MetaHost. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
@@ -59,4 +61,4 @@ typedef enum {
 
 - [Hospedando enumerações](hosting-enumerations.md)
 - [Método GetRequestedRuntime](iclrmetahostpolicy-getrequestedruntime-method.md)
-- [\<startup>Elementos](../../configure-apps/file-schema/startup/startup-element.md)
+- [\<startup> Elementos](../../configure-apps/file-schema/startup/startup-element.md)

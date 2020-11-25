@@ -5,14 +5,15 @@ helpviewer_keywords:
 - member design guidelines, properties
 - properties [.NET Framework], design guidelines
 ms.assetid: 127cbc0c-cbed-48fd-9c89-7c5d4f98f163
-ms.openlocfilehash: 1cf41a08c641e9251084e5dcac6c46bc54857717
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ed287b98c012622caa5f8f1cc90fced90dda3e62
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828732"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730962"
 ---
 # <a name="property-design"></a>Design de propriedade
+
 Embora as propriedades sejam tecnicamente muito semelhantes aos métodos, elas são muito diferentes em termos de seus cenários de uso. Eles devem ser vistos como campos inteligentes. Eles têm a sintaxe de chamada de campos e a flexibilidade dos métodos.
 
  ✔️ criar propriedades somente obtenção se o chamador não puder alterar o valor da propriedade.
@@ -38,6 +39,7 @@ Embora as propriedades sejam tecnicamente muito semelhantes aos métodos, elas s
  Os getters de propriedade devem ser operações simples e não devem ter nenhuma condição. Se um getter puder gerar uma exceção, ele provavelmente deve ser reprojetado para ser um método. Observe que essa regra não se aplica aos indexadores, onde podemos esperar exceções como resultado da validação dos argumentos.
 
 ### <a name="indexed-property-design"></a>Design de propriedade indexada
+
  Uma propriedade indexada é uma propriedade especial que pode ter parâmetros e pode ser chamada com sintaxe especial semelhante à indexação de matriz.
 
  As propriedades indexadas são conhecidas como indexadores. Os indexadores devem ser usados somente em APIs que fornecem acesso a itens em uma coleção lógica. Por exemplo, uma string é uma coleção de caracteres e o indexador em <xref:System.String?displayProperty=nameWithType> foi adicionado para acessar seus caracteres.
@@ -69,6 +71,7 @@ Embora as propriedades sejam tecnicamente muito semelhantes aos métodos, elas s
  Isso é imposto pelo compilador C#.
 
 ### <a name="property-change-notification-events"></a>Eventos de notificação de alteração de propriedade
+
  Às vezes, é útil fornecer um evento notificando o usuário sobre as alterações em um valor de propriedade. Por exemplo, `System.Windows.Forms.Control` gera um `TextChanged` evento depois que o valor de sua `Text` propriedade é alterado.
 
  ✔️ Considere gerar eventos de notificação de alteração quando os valores de propriedade em APIs de alto nível (geralmente componentes do designer) forem modificados.

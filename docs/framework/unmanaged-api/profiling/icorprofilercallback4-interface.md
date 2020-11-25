@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 665f3cfc-cd6f-4880-906c-ea65ad384783
 topic_type:
 - apiref
-ms.openlocfilehash: 295d3d440529623f4569fd6c5f4debe7e4558990
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 942ee8234b79c6579acc009960f4571801fc3185
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499435"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730286"
 ---
 # <a name="icorprofilercallback4-interface"></a>Interface ICorProfilerCallback4
+
 Fornece métodos de retorno de chamada que o Common Language Runtime (CLR) usa para comunicar informações ao criador de perfil.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método GetReJITParameters](icorprofilercallback4-getrejitparameters-method.md)|Permite que o criador de perfil de código defina sinalizadores de geração de código alternativos para um novo corpo de método recompilado.|  
 |[Método MovedReferences2](icorprofilercallback4-movedreferences2-method.md)|Relata o novo layout de objetos no heap como resultado de uma coleta de lixo de compactação.|  
@@ -38,6 +39,7 @@ Fornece métodos de retorno de chamada que o Common Language Runtime (CLR) usa p
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

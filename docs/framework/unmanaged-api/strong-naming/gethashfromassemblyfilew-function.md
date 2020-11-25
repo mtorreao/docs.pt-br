@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: d1b2b172-5353-42af-a877-cf653c68ece0
 topic_type:
 - apiref
-ms.openlocfilehash: cf7667f0f2a0f77cd793e00a5de8b030b0c53ec8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b895c77850c0457fd2a152c1128c016093599f76
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140705"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730975"
 ---
 # <a name="gethashfromassemblyfilew-function"></a>Função GetHashFromAssemblyFileW
+
 Obtém um hash do arquivo do assembly especificado, usando o algoritmo de hash especificado. O caminho para o arquivo de assembly deve ser especificado como uma cadeia de caracteres Unicode.  
   
  Esta função foi preterida. Em vez disso, use o método [ICLRStrongName:: GetHashFromAssemblyFileW](../hosting/iclrstrongname-gethashfromassemblyfilew-method.md) .  
@@ -39,6 +40,7 @@ HRESULT GetHashFromAssemblyFileW (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `wszFilePath`  
  no O caminho para o arquivo a ser transformado em hash. Esse parâmetro deve ser uma cadeia de caracteres Unicode.  
   
@@ -49,21 +51,22 @@ HRESULT GetHashFromAssemblyFileW (
  fora O buffer de hash retornado.  
   
  `cchHash`  
- no O tamanho máximo solicitado de `pbHash`.  
+ no O tamanho máximo solicitado de `pbHash` .  
   
  `pchHash`  
- fora O tamanho retornado, em bytes, de `pbHash`.  
+ fora O tamanho retornado, em bytes, de `pbHash` .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** StrongName. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MsCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Método GetHashFromAssemblyFileW](../hosting/iclrstrongname-gethashfromassemblyfilew-method.md)
 - [Método GetHashFromAssemblyFile](../hosting/iclrstrongname-gethashfromassemblyfile-method.md)

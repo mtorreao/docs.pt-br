@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, merge options
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
-ms.openlocfilehash: e6690a600b7b00272471362bc087633d52a98f25
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e6212abbc0d9f64765b03c3dd2e9132e9ca96ab7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824838"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730611"
 ---
 # <a name="merge-options-in-plinq"></a>Opções de mesclagem em PLINQ
+
 Quando uma consulta está sendo executada como paralela, o PLINQ faz a partição da sequência de origem para que várias threads possam funcionar em diferentes partes simultaneamente, normalmente em threads separados. Se os resultados forem consumidos em um thread, por exemplo, em um loop `foreach` (`For Each` em Visual Basic), os resultados de cada thread precisarão ser mesclados novamente em uma sequência. O tipo de mesclagem executado pelo PLINQ depende dos operadores que estão presentes na consulta. Por exemplo, os operadores que impõem uma nova ordem aos resultados devem armazenar em buffer todos os elementos em todos os threads. Do ponto de vista do thread de consumo (que também é o thread do usuário do aplicativo), uma consulta totalmente armazenada em buffer pode ser executada por um período significativo de tempo antes de produzir seu primeiro resultado. Por padrão, outros operadores são parcialmente armazenados em buffer e geram seus resultados em lotes. Um operador <xref:System.Linq.ParallelEnumerable.ForAll%2A> não é armazenado em buffer por padrão. Ele gera todos os elementos de todos os threads imediatamente.  
   
  Usando o método <xref:System.Linq.ParallelEnumerable.WithMergeOptions%2A>, conforme mostrado no exemplo a seguir, você pode fornecer uma dica ao PLINQ indicando o tipo de mesclagem que deverá ser executada.  
@@ -27,6 +28,7 @@ Quando uma consulta está sendo executada como paralela, o PLINQ faz a partiçã
  Se a consulta em questão não oferecer suporte à opção solicitada, a opção será ignorada. Na maioria dos casos, você não precisa especificar uma opção de mesclagem para uma consulta PLINQ. No entanto, em alguns casos você pode achar, ao testar e medir, que uma consulta terá uma melhor execução em um modo diferente do padrão. Uma forma comum de usar essa opção é forçando um operador de mesclagem de blocos a transmitir os resultados para fornecer uma interface de usuário mais ágil na resposta.  
   
 ## <a name="parallelmergeoptions"></a>ParallelMergeOptions  
+
  A enumeração <xref:System.Linq.ParallelMergeOptions> inclui as seguintes opções que especificam, para formas de consulta com suporte, como a saída final da consulta será produzida quando os resultados forem consumidos em um thread:  
   
 - `Not Buffered`  
@@ -42,6 +44,7 @@ Quando uma consulta está sendo executada como paralela, o PLINQ faz a partiçã
      A opção <xref:System.Linq.ParallelMergeOptions.FullyBuffered> faz com que a saída de toda a consulta seja armazenada em buffer antes que qualquer um dos elementos seja gerado. Quando você usa essa opção, pode demorar mais tempo para que o primeiro elemento fique disponível no thread de consumo, mas os resultados completos podem ainda ser produzidos mais rapidamente em comparação com as outras opções.  
   
 ## <a name="query-operators-that-support-merge-options"></a>Operadores de consulta que dão suporte a opções de mesclagem  
+
  A tabela a seguir lista os operadores que dão suporte a todos os modos de opções de mesclagem sujeitos às restrições especificadas.  
   
 |Operador|Restrições|  

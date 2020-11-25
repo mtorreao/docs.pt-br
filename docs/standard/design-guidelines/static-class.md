@@ -9,14 +9,15 @@ helpviewer_keywords:
 - classes [.NET Framework], design guidelines
 - type design guidelines, classes
 ms.assetid: d67c14d8-c4dd-443f-affb-4ccae677c9b6
-ms.openlocfilehash: efa5ca6e7b5e7b7d03cbe1d55471a388f3faab37
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2ae541898435773ca51dbc425c09a533dbef4e9e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828654"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730910"
 ---
 # <a name="static-class-design"></a>Design de classe estática
+
 Uma classe estática é definida como uma classe que contém somente membros estáticos (é claro além dos membros da instância herdados de <xref:System.Object?displayProperty=nameWithType> e possivelmente um Construtor privado). Algumas linguagens fornecem suporte interno para classes estáticas. No C# 2,0 e posterior, quando uma classe é declarada como estática, ela é sealed, abstract e nenhum membro de instância pode ser substituído ou declarado.
 
  As classes estáticas são um compromisso entre o design puro orientado a objeto e a simplicidade. Normalmente, eles são usados para fornecer atalhos para outras operações (como <xref:System.IO.File?displayProperty=nameWithType> ), os proprietários de métodos de extensão ou a funcionalidade para a qual um wrapper completo orientado a objeto não é garantido (como <xref:System.Environment?displayProperty=nameWithType> ).

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8e7dbf14-98a2-4384-a950-58a7640e59df
 topic_type:
 - apiref
-ms.openlocfilehash: 3df6e4decf1c4641116dee5fab3ca83189b427c0
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8b9b76fd58d8b3ec5c2d98156b7935051aff074b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496757"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731209"
 ---
 # <a name="icorprofilerinfo2getthreadstaticaddress-method"></a>Método ICorProfilerInfo2::GetThreadStaticAddress
+
 Obtém o endereço do campo de thread estático especificado que está no escopo do thread especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,6 +37,7 @@ HRESULT GetThreadStaticAddress(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `classId`  
  no A ID da classe que contém o campo de thread estático solicitado.  
   
@@ -49,6 +51,7 @@ HRESULT GetThreadStaticAddress(
  fora Um ponteiro para o endereço do campo estático que está dentro do thread especificado.  
   
 ## <a name="remarks"></a>Comentários  
+
  O `GetThreadStaticAddress` método pode retornar um dos seguintes:  
   
 - Um CORPROF_E_DATAINCOMPLETE HRESULT se o campo estático fornecido não tiver sido atribuído um endereço no contexto especificado.  
@@ -58,6 +61,7 @@ HRESULT GetThreadStaticAddress(
  Antes que o construtor de classe de uma classe seja concluído, o `GetThreadStaticAddress` retornará CORPROF_E_DATAINCOMPLETE para todos os seus campos estáticos, embora alguns dos campos estáticos já possam ser inicializados e a raiz dos objetos de coleta de lixo.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

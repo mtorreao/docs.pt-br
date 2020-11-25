@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 542c7c65-dd56-4651-b76f-5db2465e4a15
 topic_type:
 - apiref
-ms.openlocfilehash: 876ae07a432bfa36a7d9f43ae6c32ec03d7d3289
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 4e240743894e0a7076e593b55966307d304ebd28
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496588"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731183"
 ---
 # <a name="icorprofilerinfo3getfunctionenter3info-method"></a>Método ICorProfilerInfo3::GetFunctionEnter3Info
+
 Fornece o quadro de pilha e as informações de argumento da função que está sendo relatada para o criador de perfil pela função [FunctionEnter3WithInfo](functionenter3withinfo-function.md) . Esse método pode ser chamado somente durante o `FunctionEnter3WithInfo` retorno de chamada.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -38,6 +39,7 @@ HRESULT GetFunctionEnter3Info(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `functionId`  
  no A `FunctionID` da função que está sendo inserida.  
   
@@ -54,9 +56,11 @@ HRESULT GetFunctionEnter3Info(
  fora Um ponteiro para uma estrutura de [COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md) que descreve os locais dos argumentos da função na memória, na ordem da esquerda para a direita.  
   
 ## <a name="remarks"></a>Comentários  
+
  O criador de perfil deve alocar espaço suficiente para a `COR_PRF_FUNCTION_ARGUMENT_INFO` estrutura da função que está sendo inspecionada e deve indicar o tamanho no `pcbArgumentInfo` parâmetro.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

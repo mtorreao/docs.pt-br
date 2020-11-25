@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 87277e1a-1595-4729-9e25-d1c3ac18ce5f
 topic_type:
 - apiref
-ms.openlocfilehash: fb198782bb91a8301507fd6cadcffb0378230f0e
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 4d66d09e02b907281f64400b0c605a7b5c44d476
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396577"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731040"
 ---
 # <a name="icordebugvariablehomegetliverange-method"></a>Método IcorDebugVariableHome:: GetLiveRange
+
 Obtém o intervalo nativo no qual essa variável está ativa.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -35,6 +36,7 @@ HRESULT GetLiveRange(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pStartOffset`  
  fora O deslocamento lógico no qual a variável é ativada pela primeira vez.  
   
@@ -42,6 +44,7 @@ HRESULT GetLiveRange(
  fora O deslocamento lógico imediatamente após o ponto em que a variável é o último Live.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -50,6 +53,6 @@ HRESULT GetLiveRange(
   
  **.NET Framework versões:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorDebugVariableHome](icordebugvariablehome-interface.md)

@@ -7,14 +7,15 @@ helpviewer_keywords:
 - preventing customization
 - sealed classes
 ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
-ms.openlocfilehash: 29023ad431f9d05caf44e59f66eccee24bfa0433
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: bf8aad5d79e659ad9a767c2b0992eb9ee05fd531
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828680"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730936"
 ---
 # <a name="sealing"></a>Selar
+
 Um dos recursos das estruturas orientadas a objeto é que os desenvolvedores podem estendê-las e personalizá-las de maneiras inesperadas pelos designers de estrutura. Essa é a potência e o perigo do design extensível. Quando você projeta sua estrutura, é, portanto, muito importante projetar cuidadosamente a extensibilidade quando desejado e limitar a extensibilidade quando for perigoso.
 
  Um mecanismo poderoso que impede a extensibilidade esteja lacrando. Você pode lacrar a classe ou membros individuais. Lacrar uma classe impede que os usuários herdem da classe. Lacrar um membro impede que os usuários substituam um membro específico.

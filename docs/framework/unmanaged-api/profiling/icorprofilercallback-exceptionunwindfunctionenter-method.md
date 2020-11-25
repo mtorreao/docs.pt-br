@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ea3dc625-5650-4bf4-8e67-01e42be065b1
 topic_type:
 - apiref
-ms.openlocfilehash: 5e50255342abae43565fd3556964c24ba4385eb8
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d3a09a6caf3febd04296fce518ade42e8676a4b8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500124"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731001"
 ---
 # <a name="icorprofilercallbackexceptionunwindfunctionenter-method"></a>Método ICorProfilerCallback::ExceptionUnwindFunctionEnter
+
 Notifica o criador de perfil de que a fase de desenrolamento da manipulação de exceções começou a desenrolar uma função.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -39,11 +40,13 @@ HRESULT ExceptionUnwindFunctionEnter(
   \[in] a ID da função que está sendo desbobinada.
 
 ## <a name="remarks"></a>Comentários  
+
  O criador de perfil não deve bloquear em sua implementação desse método porque a pilha pode não estar em um estado que permita a coleta de lixo e, portanto, a coleta de lixo preemptiva não pode ser habilitada. Se o criador de perfil for bloqueado aqui e a coleta de lixo for tentada, o tempo de execução será bloqueado até que esse retorno de chamada seja retornado.  
   
  A implementação do criador de perfil desse método não deve chamar o código gerenciado ou, de qualquer forma, causar uma alocação de memória gerenciada.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

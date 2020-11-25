@@ -9,14 +9,15 @@ helpviewer_keywords:
 - unsealed classes
 - customizing class behavior
 ms.assetid: aa0b58ee-3956-494d-ab48-471ae5db8740
-ms.openlocfilehash: 3cc2ab3e605cfb5382f107dead0c95495858fc6b
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a6f36ac4f994fdc3211cac619cc0b20f7b0335b1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828719"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730949"
 ---
 # <a name="protected-members"></a>Membros protegidos
+
 Os membros protegidos por si só não fornecem nenhuma extensibilidade, mas podem tornar a extensibilidade por meio de subclasses mais poderosas. Eles podem ser usados para expor opções de personalização avançadas sem desnecessariamente complicar a interface pública principal.
 
  Os designers de estrutura precisam ter cuidado com membros protegidos porque o nome "protegido" pode dar um falso aspecto de segurança. Qualquer pessoa pode fazer uma subclasse de uma classe sem lacre e acessar membros protegidos e, portanto, todas as mesmas práticas de codificação defensivas usadas para membros públicos se aplicam a membros protegidos.

@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
-ms.openlocfilehash: 0ecdea3fa56ee2d8902b24006351c6d43e370c97
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: cdbecc0c7483ec189c7c19f19d75ababeb20989f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830565"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730546"
 ---
 # <a name="plinq-data-sample"></a>Exemplo de dados PLINQ
+
 Este exemplo contém dados de exemplo no formato .csv e os métodos que os transformam em coleções na memória de Customers, Products, Orders e Order Details. Para fazer novas experiências com PLINQ, cole os exemplos de código de outros tópicos no código deste tópico e invoque o método `Main`. Você também pode usar esses dados com suas próprias consultas PLINQ.  
   
  Os dados representam um subconjunto do banco de dados da Northwind. São incluídos cinquenta (50) registros de clientes, mas não todos os campos. É incluído um subconjunto das linhas dos dados de Orders e os dados de Order_Detail correspondentes para todos os clientes (Customers). Todos os produtos estão incluídos.  

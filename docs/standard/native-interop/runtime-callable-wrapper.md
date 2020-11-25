@@ -9,14 +9,15 @@ helpviewer_keywords:
 - runtime callable wrappers
 - interoperation with unmanaged code, COM wrappers
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
-ms.openlocfilehash: 9c218fe7a08bd7181d66aa849bcca4cac00dc6fa
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 985f6e5057a06ac9dcadc0e2c1e4d7743d96f035
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90535853"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730221"
 ---
 # <a name="runtime-callable-wrapper"></a>RCW (Runtime Callable Wrapper)
+
 O common language runtime expõe objetos COM através de um proxy chamado RCW (Runtime Callable Wrapper). Embora o RCW pareça ser um objeto comum para clientes .NET, a função principal dele é realizar marshaling de chamadas entre um cliente .NET e um objeto COM.  
   
  O runtime cria exatamente um RCW para cada objeto COM, independentemente do número de referências que existem nesse objeto. O runtime mantém um único RCW por processo para cada objeto.  Se você criar um RCW em um domínio de aplicativo ou apartment e, em seguida, passar uma referência a outro domínio de aplicativo ou apartment, um proxy para o primeiro objeto será usado.  Conforme mostra a ilustração a seguir, qualquer número de clientes pode conter uma referência a objetos COM que expõem interfaces INew e INewer.  
@@ -32,6 +33,7 @@ A seguinte imagem mostra o processo para acessar objetos COM por meio do RCW (Ru
  O wrapper padrão impõe regras de marshaling internas. Por exemplo, quando um cliente .NET passa um tipo de cadeia de caracteres como parte de um argumento para um objeto não gerenciado, o wrapper converte a cadeia de caracteres em um tipo BSTR. Se o objeto COM retornar um BSTR ao chamador gerenciado, o chamador receberá uma cadeia de caracteres. Tanto o cliente quanto o servidor enviam e recebem dados com os quais estão familiarizados. Outros tipos não exigem conversão. Por exemplo, um wrapper padrão sempre passará um inteiro de 4 bytes entre código gerenciado e não gerenciado sem converter o tipo.  
   
 ## <a name="marshaling-selected-interfaces"></a>Marshaling de interfaces selecionadas  
+
  A meta principal do [RCW](runtime-callable-wrapper.md) (Runtime Callable Wrapper) é ocultar as diferenças entre os modelos de programação gerenciado e não gerenciado. Para criar uma transição suave, o RCW consome interfaces COM selecionadas sem expô-las ao cliente .NET, conforme mostrado na ilustração a seguir.
 
  A seguinte imagem mostra as interfaces COM e o RCW (Runtime Callable Wrapper):

@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 13e1651c-9523-40ef-bfd7-87fb94519f8b
 topic_type:
 - apiref
-ms.openlocfilehash: 5ebe99dd8d1d7ec73cd140991a4b13dfa381791d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 73c9f07ff9a7bffc2fb01c0dde390ca8364500b4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84494638"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731170"
 ---
 # <a name="icorprofilerobjectenum-interface"></a>Interface ICorProfilerObjectEnum
-Fornece métodos para iterar em sequência por meio de uma coleção de objetos congelados que são gerados pelo [NGen. exe (gerador de imagem nativa)](../../tools/ngen-exe-native-image-generator.md).  
+
+Fornece métodos para iterar em sequência por meio de uma coleção de objetos congelados que são gerados pelo [Ngen.exe (gerador de imagem nativa)](../../tools/ngen-exe-native-image-generator.md).  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método Clone](icorprofilerobjectenum-clone-method.md)|Obtém um ponteiro de interface para uma cópia desta `ICorProfilerObjectEnum` interface.|  
 |[Método GetCount](icorprofilerobjectenum-getcount-method.md)|Obtém o número total de objetos congelados na coleção.|  
@@ -35,11 +36,13 @@ Fornece métodos para iterar em sequência por meio de uma coleção de objetos 
 |[Método Skip](icorprofilerobjectenum-skip-method.md)|Avança o cursor deste enumerador de sua posição atual para que o número especificado de elementos seja ignorado.|  
   
 ## <a name="remarks"></a>Comentários  
+
  A `ICorProfilerObjectEnum` interface é um enumerador. Ele permite que o destinatário de uma matriz Extraia elementos do remetente a uma taxa apropriada para o destinatário. Em outras palavras, o receptor é capaz de controlar explicitamente o fluxo de elementos de matriz, evitando assim os problemas relacionados à passagem de matrizes grandes como parâmetros de método.  
   
  Use [ICorProfilerInfo2:: EnumModuleFrozenObjects](icorprofilerinfo2-enummodulefrozenobjects-method.md) para obter um ponteiro para a `ICorProfilerObjectEnum` interface.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

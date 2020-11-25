@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 63a9ef45-01a6-46da-b958-5c6dc2dc232c
 topic_type:
 - apiref
-ms.openlocfilehash: 1986d5f91a3dcfa31a43f729ee1f50129e083f5f
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5e3c2ecd1bdd5c1181223c7500eb7473e20fa5d4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501736"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731339"
 ---
 # <a name="isymunmanagedencupdate-interface"></a>Interface ISymUnmanagedENCUpdate
+
 Fornece funções para o recurso Editar e continuar.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método GetLocalVariableCount](isymunmanagedencupdate-getlocalvariablecount-method.md)|Obtém o número de variáveis locais.|  
 |[Método GetLocalVariables](isymunmanagedencupdate-getlocalvariables-method.md)|Obtém as variáveis locais.|  
@@ -35,6 +36,7 @@ Fornece funções para o recurso Editar e continuar.
 |[Método UpdateSymbolStore2](isymunmanagedencupdate-updatesymbolstore2-method.md)|Permite que um compilador omita funções que não foram modificadas do fluxo do banco de dados do programa (PDB), desde que as informações da linha atendam aos requisitos. As informações de linha corretas podem ser determinadas com as informações da linha PDB antiga e um Delta para todas as linhas na função.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Confira também

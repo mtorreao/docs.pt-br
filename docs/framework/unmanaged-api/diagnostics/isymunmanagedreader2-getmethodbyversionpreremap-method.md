@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0d144ed4-bdb0-4cac-960c-cb90f4dca173
 topic_type:
 - apiref
-ms.openlocfilehash: b12ecfdaf7c90589ce2e96b39f7437444cb91b09
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 5484242562deaf463b7435ad4e54735a7abee45e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615417"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730481"
 ---
 # <a name="isymunmanagedreader2getmethodbyversionpreremap-method"></a>Método ISymUnmanagedReader2::GetMethodByVersionPreRemap
+
 Obtém um método de leitor de símbolo, dado um token de método e um número de versão de edição e continuação. Os números de versão começam em 1 e são incrementados cada vez que o método é alterado como resultado de uma operação de edição e continuação.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -35,6 +36,7 @@ HRESULT GetMethodByVersionPreRemap(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `token`  
  no O token de metadados do método.  
   
@@ -44,12 +46,14 @@ HRESULT GetMethodByVersionPreRemap(
  `pRetVal`  
  fora Um ponteiro para a interface [ISymUnmanagedMethod](isymunmanagedmethod-interface.md) retornada.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl. CorSym. h  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ISymUnmanagedReader2](isymunmanagedreader2-interface.md)

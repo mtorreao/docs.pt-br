@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 13be0299-df0d-4951-aabf-0676a30b385f
 topic_type:
 - apiref
-ms.openlocfilehash: 473a52b55f793abc76883b0a5cd5b2a04756d9f7
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 9822e5a1fb09e9d3bce541ff63cf766ae8611789
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804362"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731241"
 ---
 # <a name="ihostmemorymanagervirtualprotect-method"></a>Método IHostMemoryManager::VirtualProtect
+
 Serve como um wrapper lógico para a função Win32 correspondente. A implementação do Win32 de `VirtualProtect` altera a proteção em uma região de páginas confirmadas no espaço de endereço virtual do processo de chamada.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,6 +38,7 @@ HRESULT VirtualProtect (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `lpAddress`  
  no Um ponteiro para o endereço base da memória virtual cujos atributos de proteção devem ser alterados.  
   
@@ -53,7 +55,7 @@ HRESULT VirtualProtect (
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`VirtualProtect`retornado com êxito.|  
+|S_OK|`VirtualProtect` retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -61,14 +63,16 @@ HRESULT VirtualProtect (
 |E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retorna E_FAIL, o CLR não é mais utilizável no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Essa implementação de `VirtualProtect` retorna um valor HRESULT, enquanto a implementação do Win32 retorna um valor diferente de zero para indicar êxito e um valor zero para indicar falha. Para obter mais informações, consulte a documentação da plataforma Windows.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
