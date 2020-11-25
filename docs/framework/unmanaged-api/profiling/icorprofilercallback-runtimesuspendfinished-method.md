@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b7723f58-c55c-4399-9972-1bbf3b866694
 topic_type:
 - apiref
-ms.openlocfilehash: 64611fa7368f05de906b71b08bda8f1e7c460bf3
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 17dd0cc8d26c328bf6128795f02d751b7ae9e471
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503231"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717208"
 ---
 # <a name="icorprofilercallbackruntimesuspendfinished-method"></a>Método ICorProfilerCallback::RuntimeSuspendFinished
+
 Notifica o criador de perfil que o tempo de execução concluiu a suspensão de todos os threads de tempo de execução.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -32,11 +33,13 @@ HRESULT RuntimeSuspendFinished();
 ```  
   
 ## <a name="remarks"></a>Comentários  
+
  Todos os threads de tempo de execução que estão em código não gerenciado têm permissão para continuar em execução até tentarem inserir novamente o tempo de execução. Nesse ponto, eles também serão suspensos até que o tempo de execução seja retomado. Isso também se aplica a novos threads que entram no tempo de execução. Todos os threads no tempo de execução serão suspensos imediatamente se já estiverem no código passível de interrupção ou se forem solicitados a suspender quando acessarem o código passível de interrupção.  
   
  `RuntimeSuspendFinished`É garantido que o retorno de chamada ocorra no mesmo thread que o retorno de chamada [ICorProfilerCallback:: RuntimeSuspendStarted](icorprofilercallback-runtimesuspendstarted-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

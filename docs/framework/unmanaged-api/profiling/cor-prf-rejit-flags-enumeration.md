@@ -15,17 +15,18 @@ topic_type:
 - apiref
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 1b1d6ad5d465d746f4c1a9400c43613591373322
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 09349674e0cf80649cc948e25a1c476c6f8097e4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546940"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716363"
 ---
 # <a name="cor_prf_rejit_flags-enumeration"></a>Enumeração COR_PRF_REJIT_FLAGS
+
 Contém valores que indicam como a API [ICorProfilerInfo10:: RequestReJITWithInliners](icorprofilerinfo10-requestrejitwithinliners-method.md) deve se comportar.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 typedef enum  
@@ -43,6 +44,7 @@ typedef enum
 |`COR_PRF_REJIT_INLINING_CALLBACKS`| Receber `GetFunctionParameters` retornos de chamada para todos os métodos que embutiram os métodos solicitados a serem ReJITteddos. |  
 
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Consulte [sistemas operacionais com suporte do .NET Core](../../../core/install/windows.md?pivots=os-windows).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4ba08ffa-55a2-4662-9d6d-4738f1db60c9
 topic_type:
 - apiref
-ms.openlocfilehash: 74eef0c1ec456d647e5a58e5009d2c77e5002289
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: d28c130e55cbebf29348752780c03b03c1b8f358
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378299"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716987"
 ---
 # <a name="icordebugregistersetgetregistersavailable-method"></a>Método ICorDebugRegisterSet::GetRegistersAvailable
+
 Obtém uma máscara de bits que indica quais registros neste [ICorDebugRegisterSet](icordebugregisterset-interface.md) estão disponíveis no momento.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,15 +35,18 @@ HRESULT GetRegistersAvailable (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pAvailable`  
  fora Uma máscara de bits que indica quais registros estão disponíveis no momento.  
   
 ## <a name="remarks"></a>Comentários  
+
  Um registro pode não estar disponível se seu valor não puder ser determinado para a situação especificada.  
   
  A máscara retornada contém um bit para cada registro (1 << o índice de registro). O valor de bit será 1 se o registro estiver disponível ou 0 se não estiver disponível.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

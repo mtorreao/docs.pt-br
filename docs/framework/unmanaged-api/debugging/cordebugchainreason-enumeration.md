@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: c915da51-50b2-41df-841a-2b971f4d0975
 topic_type:
 - apiref
-ms.openlocfilehash: 2f53e3e938f62e714bf421ee7ba0cbf0a47b9f8e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6185c5dda69a0cf7e9847ddc021448612a426b19
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132275"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716051"
 ---
 # <a name="cordebugchainreason-enumeration"></a>Enumeração CorDebugChainReason
+
 Indica o motivo ou os motivos para o início de uma cadeia de chamadas.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -46,7 +47,7 @@ typedef enum CorDebugChainReason {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |`CHAIN_NONE`|Nenhuma cadeia de chamadas foi iniciada.|  
 |`CHAIN_CLASS_INIT`|A cadeia foi iniciada por um construtor.|  
@@ -63,17 +64,19 @@ typedef enum CorDebugChainReason {
 |`CHAIN_FUNC_EVAL`|A cadeia foi iniciada por uma avaliação de função.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Use o método [ICorDebugChain:: GetReason](icordebugchain-getreason-method.md) para determinar os motivos para a inicialização de uma cadeia de chamadas.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Declarando enumerações](debugging-enumerations.md)

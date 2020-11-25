@@ -3,12 +3,12 @@ title: Específicos de recurso do Windows Workflow Foundation
 description: Este artigo descreve os novos recursos que .NET Framework 4 adiciona a Windows Workflow Foundation e cenários nos quais os recursos podem ser úteis.
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: ae15f3ed536967cb15d1a5913f9ca1eab8a510d9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6c508e184aee0e4aa0634d128de94ac45ef78f45
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554600"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716285"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Específicos de recurso do Windows Workflow Foundation
 
@@ -114,7 +114,7 @@ O esquema de configuração do WCF é complexo e fornece aos usuários muitos re
 
 ## <a name="data-contract-resolver"></a>Resolução do contrato de dados
 
-No .NET 3.5, houve algumas limitações no design de tipos conhecidas:
+No .NET Framework 3,5, havia algumas limitações no design de tipos conhecidos:
 
 - Adicionar tipos conhecidos dinamicamente, durante a serialização desserialização, ou não foi possível.
 
@@ -122,7 +122,7 @@ No .NET 3.5, houve algumas limitações no design de tipos conhecidas:
 
 - Não foi possível que usuários especificar que xsi:type de deseja ou não ter aparecer no fio, por exemplo, faça o tamanho de uma instância de serialização no fio menor.
 
-O [DataContractResolver](../wcf/samples/datacontractresolver.md) resolve esses problemas no .NET 4,5.
+O [DataContractResolver](../wcf/samples/datacontractresolver.md) resolve esses problemas no .NET Framework 4,5.
 
 ### <a name="getting-started"></a>Introdução
 
@@ -144,7 +144,7 @@ O [DataContractResolver](../wcf/samples/datacontractresolver.md) resolve esses p
 
 ## <a name="flowchart"></a>Fluxograma
 
-O fluxograma é um paradigma conhecido para representar visualmente problemas de domínio. É um novo estilo de fluxo de controle que estamos introduzindo no .NET 4. Uma característica principal do fluxograma é que apenas uma atividade é executada em um determinado momento. Os fluxogramas podem expressar loop e resultados alternativos, mas não podem expressar nativo a execução simultânea de vários nós.
+O fluxograma é um paradigma conhecido para representar visualmente problemas de domínio. É um novo estilo de fluxo de controle que estamos introduzindo no .NET Framework 4. Uma característica principal do fluxograma é que apenas uma atividade é executada em um determinado momento. Os fluxogramas podem expressar loop e resultados alternativos, mas não podem expressar nativo a execução simultânea de vários nós.
 
 ### <a name="getting-started"></a>Introdução
 
@@ -264,7 +264,7 @@ Um usuário precisa ser solicitado para a entrada. Em circunstâncias normais, o
 
 ## <a name="wcf-routing-service"></a>WCF que requer o serviço
 
-O serviço de roteamento foi projetado para ser um roteador de software genérico que permite controlar como as mensagens do WCF fluem entre seus clientes e serviços. O serviço de roteamento permite dissociar seus clientes de seus serviços, o que oferece muito mais liberdade em termos das configurações às quais você pode dar suporte e a flexibilidade que você tem ao considerar como hospedar seus serviços. No .NET 3,5, os clientes e os serviços estavam intimamente acoplados; um cliente tinha que saber sobre todos os serviços necessários para falar e onde eles estavam localizados. Além disso, o WCF no .NET Framework 3,5 tinha as seguintes limitações:
+O serviço de roteamento foi projetado para ser um roteador de software genérico que permite controlar como as mensagens do WCF fluem entre seus clientes e serviços. O serviço de roteamento permite dissociar seus clientes de seus serviços, o que oferece muito mais liberdade em termos das configurações às quais você pode dar suporte e a flexibilidade que você tem ao considerar como hospedar seus serviços. No .NET Framework 3,5, os clientes e os serviços foram rigidamente acoplados; um cliente tinha que saber sobre todos os serviços necessários para falar e onde eles estavam localizados. Além disso, o WCF no .NET Framework 3,5 tinha as seguintes limitações:
 
 - Manipulação de erro foi complexo, como essa lógica tinha que ser embutido no cliente.
 

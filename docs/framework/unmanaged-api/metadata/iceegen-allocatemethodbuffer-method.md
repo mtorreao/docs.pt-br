@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 845ab77e-9639-47f5-99fb-f3b619e3e779
 topic_type:
 - apiref
-ms.openlocfilehash: 8dc7f439cac56c2d55916ff8631ec3095c67680d
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: e1849eb95401e3637a1fd1b00715332f9886071e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008879"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715505"
 ---
 # <a name="iceegenallocatemethodbuffer-method"></a>Método ICeeGen::AllocateMethodBuffer
+
 Cria um buffer do tamanho especificado para um método e Obtém o endereço virtual relativo do método.  
   
  Este método é obsoleto e não deve ser usado.  
@@ -38,6 +39,7 @@ HRESULT AllocateMethodBuffer (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `cchBuffer`  
  no O comprimento do buffer a ser criado.  
   
@@ -48,11 +50,12 @@ HRESULT AllocateMethodBuffer (
  fora O endereço virtual relativo do método.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como um recurso em MsCorEE. dll  
+ **Biblioteca:** Usado como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

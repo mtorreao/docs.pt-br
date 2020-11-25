@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: cb5ffae5-287b-4a87-9ca8-7ce3ae0601b7
 topic_type:
 - apiref
-ms.openlocfilehash: 7f09cb2264b21fdfbc892069f2c2f0a963b131f8
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: cfc384a71ac7e91181bdec09f0d385bacbe31753
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615963"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716662"
 ---
 # <a name="iclrassemblyidentitymanagergetclrassemblyreferencelist-method"></a>Método ICLRAssemblyIdentityManager::GetCLRAssemblyReferenceList
+
 Obtém um ponteiro de interface para uma instância de [ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md) da lista fornecida de identidades de assembly parciais.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,6 +37,7 @@ HRESULT  GetCLRAssemblyReferenceList (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `ppwzAssemblyReferences`  
  no Uma matriz de cadeias de caracteres terminadas em nulo no formato "nome, propriedade = valor..." Isso especifica uma lista de identidades de assembly parciais.  
   
@@ -45,7 +47,7 @@ HRESULT  GetCLRAssemblyReferenceList (
  `ppReferenceList`  
  fora Um ponteiro de interface para um `ICLRAssemblyReferenceList` objeto que contém os dados de identidade do assembly para a lista de assemblies especificados em `ppwzAssemblyReferences` .  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
@@ -57,11 +59,12 @@ HRESULT  GetCLRAssemblyReferenceList (
 |E_FAIL|Ocorreu uma falha catastrófica desconhecida. Se um método retornar E_FAIL, o CLR não poderá mais ser usado no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

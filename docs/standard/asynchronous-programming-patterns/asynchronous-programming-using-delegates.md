@@ -11,12 +11,12 @@ helpviewer_keywords:
 - delegates [.NET], asynchronous
 - synchronous calling in asynchronous manner
 ms.assetid: 38a345ca-6963-4436-9608-5c9defef9c64
-ms.openlocfilehash: da468d3b16ee504317c7de2e216a9be2073d1cf3
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 01cdf5acf8f64472c218f35a0b8095aebf8f4571
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830500"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716259"
 ---
 # <a name="asynchronous-programming-using-delegates"></a>Programação assíncrona usando delegados
 
@@ -26,10 +26,12 @@ Os representantes permitem que você chame um método síncrono de maneira assí
 > Os compiladores devem emitir classes de representante com os métodos `Invoke`, `BeginInvoke` e `EndInvoke` usando a assinatura de representante especificada pelo usuário. Os métodos `BeginInvoke` e `EndInvoke` devem ser decorados como nativos. Como esses métodos são marcados como nativos, o CLR fornece automaticamente a implementação no tempo de carregamento da classe. O carregador garante que eles não sejam substituídos.  
   
 ## <a name="in-this-section"></a>Nesta seção  
+
  [Chamando métodos síncronos de forma assíncrona](calling-synchronous-methods-asynchronously.md)  
  Discute o uso de representantes para fazer chamadas assíncronas a métodos comuns e fornece exemplos de código simples que mostram quatro maneiras de aguardar o retorno de uma chamada assíncrona.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
+
  [Padrão assíncrono baseado em evento (EAP)](event-based-asynchronous-pattern-eap.md)  
  Descreve a programação assíncrona no .NET.  
   

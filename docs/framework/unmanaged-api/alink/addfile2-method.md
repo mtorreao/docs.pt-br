@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 03bc49bf-a89b-4fb6-a88d-97482e061195
 topic_type:
 - apiref
-ms.openlocfilehash: 8dadf9ec8f896b03e4918b21f5153c1b747010fd
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: cff6707496c7d9657796deb8bf6fa9165ff295a2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446669"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717078"
 ---
 # <a name="addfile2-method"></a>Método AddFile2
+
 Adiciona arquivos ao assembly. Também pode ser usado para criar módulos desvinculados.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -38,6 +39,7 @@ HRESULT AddFile2(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `AssemblyID`  
  ID do assembly ao qual o arquivo é adicionado.  
   
@@ -45,7 +47,7 @@ HRESULT AddFile2(
  Nome do arquivo a ser adicionado.  
   
  `dwFlags`  
- Sinalizadores de `FileDef` COM+, como `ffContainsNoMetaData` e `ffWriteable`. `dwFlags` é passado para o [método definofile](../metadata/imetadataassemblyemit-definefile-method.md).  
+ `FileDef`Sinalizadores com+, como `ffContainsNoMetaData` e `ffWriteable` . `dwFlags` é passado para o [método definofile](../metadata/imetadataassemblyemit-definefile-method.md).  
   
  `pEmitter`  
  Interface para interface de [interface IMetaDataEmit2](../metadata/imetadataemit2-interface.md) .  
@@ -53,13 +55,15 @@ HRESULT AddFile2(
  `pFileToken`  
  Recebe a ID do arquivo que está sendo adicionado.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  Retorna S_OK se o método tiver sucesso.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
+
  Requer ALink. h.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IALink2](ialink2-interface.md)
 - [Interface IALink](ialink-interface.md)

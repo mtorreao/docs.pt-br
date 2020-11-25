@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7797562d-7b4c-4bd9-8b93-f35e0e2869e4
 topic_type:
 - apiref
-ms.openlocfilehash: 5b537d59014afa783d3f8c5046cc02dad7ea7740
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 443acfa77dc8103008263f19bed116d02e7ea676
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615989"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716712"
 ---
 # <a name="iclrassemblyidentitymanagergetbindingidentityfromfile-method"></a>Método ICLRAssemblyIdentityManager::GetBindingIdentityFromFile
+
 Obtém os dados de associação de identidade do assembly para o assembly no caminho de arquivo especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,6 +38,7 @@ HRESULT GetBindingIdentityFromFile(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pwzFilePath`  
  no O caminho para o arquivo a ser avaliado.  
   
@@ -49,7 +51,7 @@ HRESULT GetBindingIdentityFromFile(
  `pcchBufferSize`  
  [entrada, saída] Um ponteiro para o tamanho de `pwzBuffer` .  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
@@ -63,18 +65,20 @@ HRESULT GetBindingIdentityFromFile(
 |E_FAIL|Ocorreu uma falha catastrófica desconhecida. Se um método retornar E_FAIL, o CLR não poderá mais ser usado no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
- `GetBindingIdentityFromFile`normalmente é chamado duas vezes. A primeira chamada fornece um valor nulo para `pwzBuffer` , e o método retorna o tamanho apropriado em `pcchBufferSize` . A segunda chamada fornece um buffer adequadamente alocado e o método retorna com os dados reais do buffer após a conclusão.  
+
+ `GetBindingIdentityFromFile` normalmente é chamado duas vezes. A primeira chamada fornece um valor nulo para `pwzBuffer` , e o método retorna o tamanho apropriado em `pcchBufferSize` . A segunda chamada fornece um buffer adequadamente alocado e o método retorna com os dados reais do buffer após a conclusão.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICLRAssemblyIdentityManager](iclrassemblyidentitymanager-interface.md)
 - [Interface ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md)

@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 30a39d79-1f10-4328-9c5d-094ed824e2ba
 topic_type:
 - apiref
-ms.openlocfilehash: 1953a3e0492e4cfcdaea761b68ea22cf5a4a8ed7
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: cef69ac7e3572b67dd676ce8408e4210d93accf0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205528"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717572"
 ---
 # <a name="icordebugprocess5-interface"></a>Interface ICorDebugProcess5
+
 Estende a interface ICorDebugProcess para dar suporte ao acesso ao heap gerenciado, para fornecer informações sobre a coleta de lixo de objetos gerenciados e para determinar se um depurador carrega imagens do cache de imagem nativa local do aplicativo.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método EnableNGenPolicy](icordebugprocess5-enablengenpolicy-method.md)|Define um valor que determina como um aplicativo carrega imagens nativas durante a execução em um depurador gerenciado.|  
 |[Método EnumerateGCReferences](icordebugprocess5-enumerategcreferences-method.md)|Obtém um enumerador para todos os objetos que devem ser coletados pelo lixo em um processo.|  
@@ -42,12 +43,14 @@ Estende a interface ICorDebugProcess para dar suporte ao acesso ao heap gerencia
 |[Método GetTypeLayout](icordebugprocess5-gettypelayout-method.md)|Obtém informações sobre o layout de um objeto na memória com base em seu identificador de tipo.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Essa interface estende logicamente as interfaces ICorDebugProcess, ICorDebugProcess2 e [ICorDebugProcess3](icordebugprocess3-interface.md) .  
   
 > [!NOTE]
 > Esta interface não dá suporte a chamadas remotas de outro computador ou de outro processo.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

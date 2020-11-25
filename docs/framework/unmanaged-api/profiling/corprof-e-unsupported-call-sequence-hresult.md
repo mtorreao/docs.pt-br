@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT [.NET Framework profiling]
 ms.assetid: f2fc441f-d62e-4f72-a011-354ea13c8c59
-ms.openlocfilehash: d6cba2ec3e82c07ce60f0f2b2199cc97e31a000b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1a75b51b57bdf2923ca6386f42c19c0b2f44fd39
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555543"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717468"
 ---
 # <a name="corprof_e_unsupported_call_sequence-hresult"></a>CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT
 
@@ -72,6 +72,7 @@ Esses dois cenários são discutidos nas seções a seguir.
  Para obter mais informações, consulte a entrada [por que temos CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](/archive/blogs/davbr/why-we-have-corprof_e_unsupported_call_sequence) no blog da API de criação de perfil do CLR.  
   
 ## <a name="triggering-garbage-collections"></a>Disparando coleções de lixo  
+
  Esse cenário envolve um criador de perfil que está sendo executado dentro de um método de retorno de chamada (por exemplo, um dos `ICorProfilerCallback` métodos) que proíbe a coleta de lixo. Se o criador de perfil tentar chamar um método informativo (por exemplo, um método na `ICorProfilerInfo` interface) que possa disparar uma coleta de lixo, o método informativo falhará com um CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT.  
   
  A tabela a seguir exibe os métodos de retorno de chamada que proíbem coletas de lixo e métodos informativos que podem disparar coletas de lixo. Se o criador de perfil for executado dentro de um dos métodos de retorno de chamada listados e chamar um dos métodos informativos listados, esse método informativo falhará com um CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT.  
