@@ -15,32 +15,34 @@ helpviewer_keywords:
 ms.assetid: c28a2a82-dd11-4385-843f-b509fb61753b
 topic_type:
 - apiref
-ms.openlocfilehash: fbece20701fbde5551e025b4f116f9873abf444d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e9679b75e773ec884905ea773e804e03607a61d5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500202"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699840"
 ---
-# <a name="icorprofilercallbackexceptionsearchfilterleave-method"></a><span data-ttu-id="2532f-102">Método ICorProfilerCallback::ExceptionSearchFilterLeave</span><span class="sxs-lookup"><span data-stu-id="2532f-102">ICorProfilerCallback::ExceptionSearchFilterLeave Method</span></span>
-<span data-ttu-id="2532f-103">Notifica o criador de perfil de que um filtro de usuário acabou de executar a execução.</span><span class="sxs-lookup"><span data-stu-id="2532f-103">Notifies the profiler that a user filter has just finished executing.</span></span>  
+# <a name="icorprofilercallbackexceptionsearchfilterleave-method"></a><span data-ttu-id="1c3ac-102">Método ICorProfilerCallback::ExceptionSearchFilterLeave</span><span class="sxs-lookup"><span data-stu-id="1c3ac-102">ICorProfilerCallback::ExceptionSearchFilterLeave Method</span></span>
+
+<span data-ttu-id="1c3ac-103">Notifica o criador de perfil de que um filtro de usuário acabou de executar a execução.</span><span class="sxs-lookup"><span data-stu-id="1c3ac-103">Notifies the profiler that a user filter has just finished executing.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2532f-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="2532f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1c3ac-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="1c3ac-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ExceptionSearchFilterLeave();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="2532f-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="2532f-105">Requirements</span></span>  
- <span data-ttu-id="2532f-106">**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2532f-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="2532f-107">**Cabeçalho:** CorProf. idl, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="2532f-107">**Header:** CorProf.idl, CorProf.h</span></span>  
-  
- <span data-ttu-id="2532f-108">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2532f-108">**Library:** CorGuids.lib</span></span>  
-  
- <span data-ttu-id="2532f-109">**.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2532f-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="2532f-110">Confira também</span><span class="sxs-lookup"><span data-stu-id="2532f-110">See also</span></span>
+## <a name="requirements"></a><span data-ttu-id="1c3ac-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="1c3ac-105">Requirements</span></span>  
 
-- [<span data-ttu-id="2532f-111">Interface ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="2532f-111">ICorProfilerCallback Interface</span></span>](icorprofilercallback-interface.md)
-- [<span data-ttu-id="2532f-112">Método ExceptionSearchFilterEnter</span><span class="sxs-lookup"><span data-stu-id="2532f-112">ExceptionSearchFilterEnter Method</span></span>](icorprofilercallback-exceptionsearchfilterenter-method.md)
+ <span data-ttu-id="1c3ac-106">**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1c3ac-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="1c3ac-107">**Cabeçalho:** CorProf. idl, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="1c3ac-107">**Header:** CorProf.idl, CorProf.h</span></span>  
+  
+ <span data-ttu-id="1c3ac-108">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1c3ac-108">**Library:** CorGuids.lib</span></span>  
+  
+ <span data-ttu-id="1c3ac-109">**.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1c3ac-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="1c3ac-110">Confira também</span><span class="sxs-lookup"><span data-stu-id="1c3ac-110">See also</span></span>
+
+- [<span data-ttu-id="1c3ac-111">Interface ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="1c3ac-111">ICorProfilerCallback Interface</span></span>](icorprofilercallback-interface.md)
+- [<span data-ttu-id="1c3ac-112">Método ExceptionSearchFilterEnter</span><span class="sxs-lookup"><span data-stu-id="1c3ac-112">ExceptionSearchFilterEnter Method</span></span>](icorprofilercallback-exceptionsearchfilterenter-method.md)
