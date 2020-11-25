@@ -3,11 +3,11 @@ title: Orquestrar microsserviços e aplicativos de vários contêineres para alt
 description: Saiba como implantar um aplicativo usando o Serviço de Kubernetes do Azure.
 ms.date: 08/06/2020
 ms.openlocfilehash: ba9887c0a4837c16a60ebeb006416c0fa8c105e0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91163590"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032197"
 ---
 # <a name="deploy-to-azure-kubernetes-service-aks"></a>Implantar no AKS (Serviço de Kubernetes do Azure)
 

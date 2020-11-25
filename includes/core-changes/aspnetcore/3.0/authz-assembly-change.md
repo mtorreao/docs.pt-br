@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: b91cdc7a0d2e4258662155a840500ce21ab35760
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74100640"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032231"
 ---
 ### <a name="authorization-addauthorization-overload-moved-to-different-assembly"></a>Autorização: sobrecarga de addautoria movida para um assembly diferente
 
@@ -12,7 +12,7 @@ Os `AddAuthorization` métodos principais que costumava residir em `Microsoft.As
 
 #### <a name="version-introduced"></a>Versão introduzida
 
-3,0
+3.0
 
 #### <a name="old-behavior"></a>Comportamento antigo
 `AddAuthorization` os métodos existiam no `Microsoft.AspNetCore.Authorization` .

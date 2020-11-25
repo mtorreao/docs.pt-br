@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4ab2fc0645f76870dead99b5f45eef763643fb27
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 83808f2f3a05333ed5d9e3809cbc2fd6e230d02c
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506890"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031744"
 ---
 
 [O .NET Core está disponível no repositório de snap.](https://snapcraft.io/dotnet-sdk)
@@ -15,7 +15,7 @@ Somente as versões com suporte do .NET Core estão disponíveis por meio do sna
 
 ### <a name="install-the-sdk"></a>Instalar o SDK
 
-Pacotes snap para SDK do .NET são todos publicados sob o mesmo identificador: `dotnet-sdk` . Uma versão específica do SDK pode ser instalada especificando o canal. O SDK inclui o tempo de execução de coresponder. A tabela a seguir lista os canais:
+Pacotes snap para SDK do .NET são todos publicados sob o mesmo identificador: `dotnet-sdk` . Uma versão específica do SDK pode ser instalada especificando o canal. O SDK inclui o tempo de execução correspondente. A tabela a seguir lista os canais:
 
 | Versão do .NET | Ajustar pacote             |
 |--------------|--------------------------|
@@ -76,7 +76,7 @@ Running 'dotnet restore' on /home/myhome/test/test.csproj...
 /snap/dotnet-sdk/27/sdk/2.2.103/NuGet.targets(114,5): error :   The remote certificate is invalid according to the validation procedure. [/home/myhome/test/test.csproj]
 ```
 
-Para resolver esse problema, defina algumas variáveis ambiente:
+Para resolver esse problema, defina algumas variáveis de ambiente:
 
 ```bash
 export SSL_CERT_FILE=[path-to-certificate-file]

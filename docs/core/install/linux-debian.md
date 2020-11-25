@@ -4,12 +4,12 @@ description: Demonstra as várias maneiras de instalar o SDK do .NET e o tempo d
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: 6dad4e1779600b22b8301e03ffb8fb2c16786ead
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 683d0a9c47edf3cf9c47426d659e778eeb6f84df
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506945"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031885"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-debian"></a>Instalar o SDK do .NET ou o tempo de execução do .NET no Debian
 
@@ -37,7 +37,11 @@ Não há mais suporte para as seguintes versões do .NET. Os downloads para eles
 
 - 3.0
 - 2.2
-- 2.0
+- 2,0
+
+## <a name="remove-preview-versions"></a>Remover versões de visualização
+
+[!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
 
 ## <a name="how-to-install-other-versions"></a>Como instalar outras versões
 

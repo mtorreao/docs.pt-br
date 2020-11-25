@@ -3,12 +3,12 @@ title: Visão geral das ferramentas de diagnóstico – .NET Core
 description: Uma visão geral das ferramentas e das técnicas disponíveis para diagnosticar aplicativos .NET Core.
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: 3274b72363a3df1dbe1bb29492eedcb134a4f9f2
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.openlocfilehash: c43e661ad8c9f665151e0240bf6b54e61b9acfef
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94982303"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031911"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>Quais ferramentas de diagnóstico estão disponíveis no .NET Core?
 
@@ -27,6 +27,10 @@ O [registro em log e o rastreamento](logging-tracing.md) são técnicas relacion
 ## <a name="unit-testing"></a>Teste de unidade
 
 O [teste de unidade](../testing/index.md) é um componente fundamental da integração e da implantação contínuas de software de alta qualidade. Os testes de unidade são projetados para fornecer um aviso antecipado quando você interrompe algo.
+
+## <a name="dumps"></a>Despejos
+
+Um [despejo](./dumps.md) é um arquivo que contém um instantâneo do processo no momento da criação. Eles podem ser úteis para examinar o estado do aplicativo para fins de depuração.
 
 ## <a name="collect-diagnostics-in-containers"></a>Coletar diagnósticos em contêineres
 

@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 771238c53dc97f4cf4068968f3c68500ba9f87da
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73198338"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032232"
 ---
 ### <a name="caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package"></a>Caching: o Microsoft. Extensions. Caching. SqlServer usa o novo pacote SqlClient
 
@@ -12,7 +12,7 @@ O `Microsoft.Extensions.Caching.SqlServer` pacote usará o novo `Microsoft.Data.
 
 #### <a name="version-introduced"></a>Versão introduzida
 
-3,0
+3.0
 
 #### <a name="old-behavior"></a>Comportamento antigo
 

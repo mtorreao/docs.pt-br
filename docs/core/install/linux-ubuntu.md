@@ -4,12 +4,12 @@ description: Demonstra as várias maneiras de instalar o SDK do .NET e o tempo d
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: 419bcf3ccd011cadba8f8c64e195d7dbdbf7e241
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 22ce3379e028f065528e1f507a2d8c1ae598f0e8
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94507008"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031834"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-ubuntu"></a>Instalar o SDK do .NET ou o tempo de execução do .NET no Ubuntu
 
@@ -44,7 +44,11 @@ Não há mais suporte para as seguintes versões do .NET. Os downloads para eles
 
 - 3.0
 - 2.2
-- 2.0
+- 2,0
+
+## <a name="remove-preview-versions"></a>Remover versões de visualização
+
+[!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
 
 ## <a name="how-to-install-other-versions"></a>Como instalar outras versões
 
@@ -52,9 +56,17 @@ Não há mais suporte para as seguintes versões do .NET. Os downloads para eles
 
 ## <a name="2010-"></a>20,10 ✔️
 
-Os feeds de pacote .NET 5 e .NET Core 3,1 para Ubuntu 20,10 atualmente têm um problema. Para obter mais informações sobre o problema, consulte o [problema do GitHub dotnet/Core # 5549](https://github.com/dotnet/core/issues/5549). Este artigo será atualizado quando o problema for resolvido.
+> [!IMPORTANT]
+> O .NET Core 2,1 ainda não está disponível no feed de pacotes.
 
-Para instalar o .NET 5 ou o .NET Core 3,1 no Ubuntu 20,10, siga as instruções para [20, 4](#2004-).
+[!INCLUDE [linux-prep-intro-apt](includes/linux-prep-intro-apt.md)]
+
+```bash
+wget https://packages.microsoft.com/config/ubuntu/20.10/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+```
+
+[!INCLUDE [linux-apt-install-50](includes/linux-install-50-apt.md)]
 
 ## <a name="2004-"></a>20, 4 ✔️
 

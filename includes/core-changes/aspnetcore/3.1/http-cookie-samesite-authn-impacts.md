@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 8b6d334677991382d235fd53cd3c98e3a77d650d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539565"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032224"
 ---
 ### <a name="http-browser-samesite-changes-impact-authentication"></a>HTTP: navegador SameSite alterações de impacto na autenticação
 
@@ -22,7 +22,7 @@ Para obter uma discussão sobre esse problema, consulte [dotnet/aspnetcore # 149
 
 #### <a name="new-behavior"></a>Novo comportamento
 
-O Google propôs um novo padrão de rascunho que não é compatível com versões anteriores. O padrão altera o modo padrão para `Lax` e adiciona uma nova entrada `None` a ser recusada. `Lax` é suficiente para a maioria dos cookies de aplicativo; no entanto, ele quebra cenários entre sites como o OpenID Connect e o logon do WS-Federation. A maioria dos logons OAuth não é afetada devido a diferenças em como a solicitação flui. O novo `None` parâmetro causa problemas de compatibilidade com clientes que implementaram o rascunho padrão anterior (por exemplo, IOS 12). O Chrome 80 incluirá as alterações. Consulte [atualizações do SameSite](https://www.chromium.org/updates/same-site) para a linha do tempo de lançamento do produto Chrome.
+O Google propôs um novo padrão de rascunho que não é compatível com versões anteriores. O padrão altera o modo padrão para `Lax` e adiciona uma nova entrada `None` a ser recusada. `Lax` é suficiente para a maioria dos cookies de aplicativo; no entanto, ele quebra cenários entre sites como o OpenID Connect e WS-Federation logon. A maioria dos logons OAuth não é afetada devido a diferenças em como a solicitação flui. O novo `None` parâmetro causa problemas de compatibilidade com clientes que implementaram o rascunho padrão anterior (por exemplo, IOS 12). O Chrome 80 incluirá as alterações. Consulte [atualizações do SameSite](https://www.chromium.org/updates/same-site) para a linha do tempo de lançamento do produto Chrome.
 
 ASP.NET Core 3,1 foi atualizado para implementar o novo `SameSite` comportamento. A atualização redefine o comportamento de `SameSiteMode.None` para emissão `SameSite=None` e adiciona um novo valor `SameSiteMode.Unspecified` para omitir o `SameSite` atributo. Todas as APIs de cookie agora são padronizadas para `Unspecified` , embora alguns componentes que usam os cookies definam valores mais específicos para seus cenários, como a correlação do OpenID Connect e os cookies de nonce.
 

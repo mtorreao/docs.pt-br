@@ -4,11 +4,11 @@ description: Conheça as ferramentas disponíveis do Docker no Visual Studio 201
 ms.date: 08/06/2020
 ms.custom: vs-dotnet
 ms.openlocfilehash: ae20ebf7c3c27d7f2ebe51c33719b82048f86241
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90678921"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032184"
 ---
 # <a name="use-docker-tools-in-visual-studio-on-windows"></a>Usar ferramentas do Docker no Visual Studio no Windows
 
@@ -65,17 +65,17 @@ No menu principal, escolha **Ferramentas > Opções** e expanda **Ferramentas de
 
 A tabela a seguir pode ajudá-lo a decidir como definir essas opções.
 
-| Página/configuração                                |  Configuração padrão   | Descrição                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Página/configuração                                |  Configuração padrão   | Description                                                                                                                                                                                                                                                                                                                                                                                                           |
 | ------------------------------------------- | :----------------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Página geral**                            |
 | Instalar o Docker desktop, se necessário            |     Avisar-me      |
 | Iniciar o Docker desktop, se necessário              |     Avisar-me      |
 | Confiar ASP.NET Core certificado SSL          |     Avisar-me      | Se o certificado SSL do localhost não tiver sido marcado como confiável (com `dotnet dev-certs https --trust` ), o Visual Studio será notificado sempre que você executar o projeto.                                                                                                                                                                                                                                                    |
 | **Página de projeto único**                     |
-| Efetuar pull de imagens do Docker necessárias no projeto aberto |        Verdadeiro        | Para aumentar o desempenho ao executar o projeto, o Visual Studio iniciará uma operação de pull do Docker em segundo plano para que, quando você estiver pronto para executar seu código, a imagem já esteja baixada ou no processo de download. Se você estiver apenas carregando projetos e procurando código, será possível desativar isso para evitar o download de imagens de contêiner que você não precisa. Isso pode reduzir a experiência do usuário do projeto aberto. |
+| Efetuar pull de imagens do Docker necessárias no projeto aberto |        True        | Para aumentar o desempenho ao executar o projeto, o Visual Studio iniciará uma operação de pull do Docker em segundo plano para que, quando você estiver pronto para executar seu código, a imagem já esteja baixada ou no processo de download. Se você estiver apenas carregando projetos e procurando código, será possível desativar isso para evitar o download de imagens de contêiner que você não precisa. Isso pode reduzir a experiência do usuário do projeto aberto. |
 | Efetuar pull de imagens atualizadas do Docker na carga do projeto  | Projetos do .NET Core | Receba atualizações para imagens existentes para obter as atualizações mais recentes no projeto aberto. Isso pode reduzir a experiência do usuário do projeto aberto.                                                                                                                                                                                                                                                                                          |
-| Remover contêineres no fechamento do projeto          |        Verdadeiro        | Limpeza no fechamento do projeto, isso pode reduzir a experiência do usuário do projeto de fechamento, mas normalmente é rápido mesmo assim.                                                                                                                                                                                                                                                                                                            |
-| Executar contêineres no projeto aberto              |        Verdadeiro        | Para aumentar o desempenho ao executar o projeto, o Visual Studio iniciará todos os contêineres na solução. Isso pode reduzir a experiência do usuário do projeto aberto.                                                                                                                                                                                                                                                        |
+| Remover contêineres no fechamento do projeto          |        True        | Limpeza no fechamento do projeto, isso pode reduzir a experiência do usuário do projeto de fechamento, mas normalmente é rápido mesmo assim.                                                                                                                                                                                                                                                                                                            |
+| Executar contêineres no projeto aberto              |        True        | Para aumentar o desempenho ao executar o projeto, o Visual Studio iniciará todos os contêineres na solução. Isso pode reduzir a experiência do usuário do projeto aberto.                                                                                                                                                                                                                                                        |
 | **Docker Compose**                          |                    | A página de Docker Compose contém as mesmas configurações da página do projeto único, mas elas se aplicam a soluções de vários contêineres.                                                                                                                                                                                                                                                                                           |
 
 > [!WARNING]

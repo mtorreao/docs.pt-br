@@ -11,11 +11,11 @@ helpviewer_keywords:
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 ms.openlocfilehash: 4cf1e5787fe2e430d20208d8e79b610e9126c67c
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622621"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031703"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Como o runtime localiza assemblies
 
@@ -233,7 +233,7 @@ Considerando as seguintes informações:
 
 - Diretório raiz do aplicativo: `http://www.code.microsoft.com`
 
-- [\<probing>](../configure-apps/file-schema/runtime/probing-element.md)o elemento no arquivo de configuração especifica: bin
+- [\<probing>](../configure-apps/file-schema/runtime/probing-element.md) o elemento no arquivo de configuração especifica: bin
 
 - Cultura: de
 
@@ -265,7 +265,7 @@ O local do assembly também pode ser determinado usando o contexto de associaç�
 
 Por exemplo, se o Assembly1 fizer referência ao Assembly2 e o Assembly1 tiver sido baixado de `http://www.code.microsoft.com/utils`, esse local será considerado uma dica sobre onde encontrar o Assembly2.dll. Em seguida, o runtime procura pelo assembly em `http://www.code.microsoft.com/utils/Assembly2.dll` e `http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll`. Se Assembly2 não for encontrado em um desses locais, o runtime de consultará o Windows Installer.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Práticas recomendadas para carregamento de assemblies](best-practices-for-assembly-loading.md)
 - [Implantação](index.md)
