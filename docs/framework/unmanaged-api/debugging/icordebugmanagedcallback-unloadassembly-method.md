@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6734321c-c8a9-401f-a558-cad715ec4a77
 topic_type:
 - apiref
-ms.openlocfilehash: 07996a78d7f559de587c8a3eb2babfc06675169d
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: e89b425afb63de8ef496fe545873ce33e5ff828c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212640"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724007"
 ---
 # <a name="icordebugmanagedcallbackunloadassembly-method"></a>Método ICorDebugManagedCallback::UnloadAssembly
+
 Notifica o depurador de que um assembly Common Language Runtime foi descarregado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -35,6 +36,7 @@ HRESULT UnloadAssembly (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pAppDomain`  
  no Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio do aplicativo que continha o assembly.  
   
@@ -42,9 +44,11 @@ HRESULT UnloadAssembly (
  no Um ponteiro para um objeto ICorDebugAssembly que representa o assembly.  
   
 ## <a name="remarks"></a>Comentários  
+
  O assembly não deve ser usado após este retorno de chamada.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

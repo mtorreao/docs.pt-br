@@ -2,14 +2,15 @@
 title: 'Método ICorDebugInstanceFieldSymbol:: GetName'
 ms.date: 03/30/2017
 ms.assetid: d9c12b1f-9c1d-4943-8e9e-93b55faf085f
-ms.openlocfilehash: 0f1b648f494a2f2676374cfd13db46b70f1f195c
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: e466a62761cc6dd1f1fc0a54f05d54f85c190d07
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209988"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724930"
 ---
 # <a name="icordebuginstancefieldsymbolgetname-method"></a>Método ICorDebugInstanceFieldSymbol:: GetName
+
 Obtém o nome do campo de instância.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -23,6 +24,7 @@ HRESULT GetName(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `cchName`  
  no O número de caracteres no `szName` buffer.  
   
@@ -38,6 +40,7 @@ HRESULT GetName(
 > Esse método está disponível somente com .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 554284e7-3f6c-4d40-8da5-1c9317fbd484
 topic_type:
 - apiref
-ms.openlocfilehash: 40ecc183c32500ad9e88ceb1bfc0528d717430e8
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 841e3ca608d20a4b8618508e69195de0b1da1341
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894461"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724384"
 ---
 # <a name="icordebugchaingetstackrange-method"></a>Método ICorDebugChain::GetStackRange
+
 Obtém o intervalo de endereços do segmento da pilha para esta cadeia.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -35,6 +36,7 @@ HRESULT GetStackRange (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pStart`  
  fora Um ponteiro para um `CORDB_ADDRESS` valor que é o endereço inicial do segmento da pilha.  
   
@@ -42,9 +44,11 @@ HRESULT GetStackRange (
  fora Um ponteiro para um `CORDB_ADDRESS` valor que é o endereço final do segmento da pilha.  
   
 ## <a name="remarks"></a>Comentários  
+
  O intervalo numérico é significativo apenas para comparação de locais de quadros de pilha. Você não pode fazer suposições sobre o que realmente está armazenado na pilha.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

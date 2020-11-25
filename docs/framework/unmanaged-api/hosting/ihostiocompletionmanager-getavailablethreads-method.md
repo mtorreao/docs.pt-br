@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: bab363d1-b859-47a4-9884-5661c611cce7
 topic_type:
 - apiref
-ms.openlocfilehash: 7ea7395bb1f185ba59940d76def562ab5440e560
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 3e9f4e98962532efe4b2e2a779add841b7b3a835
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804759"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724254"
 ---
 # <a name="ihostiocompletionmanagergetavailablethreads-method"></a>Método IHostIoCompletionManager::GetAvailableThreads
+
 Obtém o número de threads de conclusão de e/s do número total de threads gerenciados pelo host, que não estão atendendo às solicitações no momento.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,6 +35,7 @@ HRESULT GetAvailableThreads (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pdwAvailableIoCompletionThreads`  
  fora Um ponteiro para o número de threads de conclusão de e/s gerenciados pelo host que estão disponíveis no momento para solicitações de serviço.  
   
@@ -41,7 +43,7 @@ HRESULT GetAvailableThreads (
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`GetAvailableThreads`retornado com êxito.|  
+|S_OK|`GetAvailableThreads` retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -50,14 +52,16 @@ HRESULT GetAvailableThreads (
 |E_NOTIMPL|O host não fornece uma implementação de `GetAvailableThreads` .|  
   
 ## <a name="remarks"></a>Comentários  
+
  Um host pode querer um controle exclusivo sobre o tamanho do pool de threads de conclusão de e/s, por motivos como implementação, desempenho ou escalabilidade. Portanto, o host não precisa implementar `GetAvailableThreads` . Nesse caso, o host deve retornar E_NOTIMPL desse método.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

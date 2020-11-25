@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e525aa16-c923-4b16-833b-36f1f0dd70fc
 topic_type:
 - apiref
-ms.openlocfilehash: 1cc05f4c10f4a5b042ff14c05f3c85a7b5935184
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8e03eefc3758347389be4af6d53921480ee40263
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497888"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724072"
 ---
 # <a name="icorprofilerinfogettokenandmetadatafromfunction-method"></a>Método ICorProfilerInfo::GetTokenAndMetadataFromFunction
+
 Obtém o token de metadados e uma instância de interface de metadados que podem ser usados em relação ao token para a função especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,6 +37,7 @@ HRESULT GetTokenAndMetaDataFromFunction(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `functionId`  
  no A ID da função para a qual obter o token de metadados e a interface de metadados.  
   
@@ -49,6 +51,7 @@ HRESULT GetTokenAndMetaDataFromFunction(
  fora Um ponteiro para o token de metadados para a função especificada.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

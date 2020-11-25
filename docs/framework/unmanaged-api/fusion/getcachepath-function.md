@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: d977ad29-6619-42e1-b0be-bc25ea950e80
 topic_type:
 - apiref
-ms.openlocfilehash: 13e1468ef5a48f18910c1f8082cdd7c4849da14a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c22f0701cfda4523f595366a97435ef8da08b0cb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132690"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724462"
 ---
 # <a name="getcachepath-function"></a>Função GetCachePath
+
 Obtém o caminho para o assembly armazenado em cache, usando os sinalizadores especificados.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,6 +38,7 @@ HRESULT GetCachePath (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `dwCacheFlags`  
  no Um valor [ASM_CACHE_FLAGS](asm-cache-flags-enumeration.md) que indica a origem do assembly armazenado em cache.  
   
@@ -44,16 +46,17 @@ HRESULT GetCachePath (
  fora O ponteiro retornado para o caminho.  
   
  `pcchPath`  
- [entrada, saída] O comprimento máximo solicitado de `pwzCachePath`e, após o retorno, o comprimento real de `pwzCachePath`.  
+ [entrada, saída] O comprimento máximo solicitado de `pwzCachePath` e, após o retorno, o comprimento real de `pwzCachePath` .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Fusion. h  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Enumeração ASM_CACHE_FLAGS](asm-cache-flags-enumeration.md)
 - [Funções estáticas globais de fusão](fusion-global-static-functions.md)

@@ -7,17 +7,19 @@ helpviewer_keywords:
 - diagnostics symbol store structures [.NET Framework]
 - structures [.NET Framework debugging]
 ms.assetid: 0d423791-d40d-45c6-a82b-1a165768d737
-ms.openlocfilehash: 82813b1b5b591cd9f7cb335a7ab1e5a0124270c2
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: df62ec39f781f24a81a9c768a5920eded99880c3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442157"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725164"
 ---
 # <a name="diagnostics-symbol-store-structures"></a>Estruturas de armazenamento de símbolo de diagnóstico
+
 Este tópico descreve as estruturas não gerenciadas que a API de armazenamento de símbolos de diagnóstico usa.  
   
 ## <a name="in-this-section"></a>Nesta seção  
+
  [Estrutura CALL_ID](call-id-structure.md)  
  Fornece informações para um depurador sobre uma função que está sendo chamada.  
   
@@ -28,6 +30,7 @@ Este tópico descreve as estruturas não gerenciadas que a API de armazenamento 
  Fornece informações para um depurador sobre um thread.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
+
  [Interfaces de armazenamento de símbolo de diagnóstico](diagnostics-symbol-store-interfaces.md)  
   
  [Enumerações de armazenamento de símbolo de diagnóstico](diagnostics-symbol-store-enumerations.md)  

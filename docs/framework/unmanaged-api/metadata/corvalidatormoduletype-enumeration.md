@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 748f1ab2-fbcb-4f55-89ec-8d23d81ebc80
 topic_type:
 - apiref
-ms.openlocfilehash: 038e2ec20e5fd01edf9835080e0f7a15ec862fd9
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 2fb7f11677870f7d53439f1867f167fabe70b22a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008931"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723838"
 ---
 # <a name="corvalidatormoduletype-enumeration"></a>Enumeração CorValidatorModuleType
+
 Especifica o tipo de um módulo.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -41,7 +42,7 @@ typedef enum
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |`ValidatorModuleTypeInvalid`|O módulo é um tipo inválido.|  
 |`ValidatorModuleTypeMin`|O valor mínimo da `CorValidatorModuleType` enumeração.|  
@@ -52,11 +53,12 @@ typedef enum
 |`ValidatorModuleTypeMax`|O valor máximo da `CorValidatorModuleType` enumeração.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

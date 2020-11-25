@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8dcd7537-d0c6-498c-8a56-2c060310ef65
 topic_type:
 - apiref
-ms.openlocfilehash: 0da67f0d4be779cc21481d03a21209620289888e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 98e81d2d02a9495b678d49fb916f99068dd604f8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500047"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725528"
 ---
 # <a name="icorprofilercallbackjitcompilationfinished-method"></a>Método ICorProfilerCallback::JITCompilationFinished
+
 Notifica o criador de perfil de que o compilador JIT (just-in-time) concluiu a compilação de uma função.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -51,6 +52,7 @@ HRESULT JITCompilationFinished(
   Embora um valor de `true` não danifique o tempo de execução, ele pode distorcer os resultados de criação de perfil.
 
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

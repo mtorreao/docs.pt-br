@@ -8,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET],exceptions in managed threads
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-ms.openlocfilehash: e5acda4137d020d35d3144e9cc61e174024e165a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 740cd1b78b96c2fcaecf39a725973d738037f403
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826463"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723747"
 ---
 # <a name="exceptions-in-managed-threads"></a>Exceções em threads gerenciados
 
@@ -35,6 +35,7 @@ O common language runtime fornece uma barreira para certas exceções sem tratam
 > É possível que o runtime lance uma exceção não tratada antes que qualquer código gerenciado tenha a oportunidade de instalar um manipulador de exceção. Mesmo que o código gerenciado não tivesse possibilidade de manipular essa exceção, a exceção recebe a permissão para prosseguir naturalmente.  
   
 ## <a name="exposing-threading-problems-during-development"></a>Exposição de problemas de threading durante o desenvolvimento  
+
  Quando os threads recebem a permissão para falhar em modo silencioso, sem encerrar o aplicativo, problemas graves de programação podem passar sem detecção. Esse é um problema específico para serviços e outros aplicativos que são executados por longos períodos. À medida que os threads falham, o estado do programa se torna cada vez mais corrompido. O desempenho do aplicativo pode piorar ou o aplicativo pode parar de responder.  
   
  Permitir que exceções sem tratamento em threads prossigam naturalmente, até que o sistema operacional encerre o programa, expõe esses problemas durante o desenvolvimento e teste. Relatórios de erros em depuração de suporte de encerramentos do programa.  

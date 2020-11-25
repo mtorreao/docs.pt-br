@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1bfb5d3a-0ffd-4bb4-9bf6-aec00cb675b7
 topic_type:
 - apiref
-ms.openlocfilehash: 15004238ee296e44ae77cd8739b7f62ea2a7a100
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: b87bc026a2cac2d0b913128c43142d56aee03025
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762962"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725190"
 ---
 # <a name="iclrtaskreset-method"></a>Método ICLRTask::Reset
+
 Informa o Common Language Runtime (CLR) que o host concluiu uma tarefa e permite que o CLR reutilize a instância [ICLRTask](iclrtask-interface.md) atual para representar outra tarefa.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,6 +35,7 @@ HRESULT Reset (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `fFull`  
  [in] `true` , se o tempo de execução deve redefinir todos os valores estáticos relacionados ao thread, além das informações de segurança e localidade relacionadas à `ICLRTask` instância atual; caso contrário, `false` .  
   
@@ -41,9 +43,9 @@ HRESULT Reset (
   
 ## <a name="return-value"></a>Valor Retornado  
   
-|HRESULT|Description|  
+|HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`Reset`retornado com êxito.|  
+|S_OK|`Reset` retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O CLR não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada. com êxito|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -51,6 +53,7 @@ HRESULT Reset (
 |E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retorna E_FAIL, o CLR não é mais utilizável no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O CLR pode reciclar instâncias criadas anteriormente `ICLRTask` para evitar a sobrecarga de criar novas instâncias repetidamente toda vez que precisar de uma nova tarefa. O host habilita esse recurso chamando `ICLRTask::Reset` em vez de [ICLRTask:: ExitTask](iclrtask-exittask-method.md) quando concluiu uma tarefa. A lista a seguir resume o ciclo de vida normal de uma `ICLRTask` instância do:  
   
 1. O tempo de execução cria uma nova `ICLRTask` instância.  
@@ -63,20 +66,21 @@ HRESULT Reset (
   
 5. O host destrói a tarefa chamando `ICLRTask::ExitTask` .  
   
- `Reset`altera esse cenário de duas maneiras. Na etapa 5 acima, o host chama `Reset` para redefinir a tarefa para um estado limpo e, em seguida, dissocia a `ICLRTask` instância de sua instância [IHostTask](ihosttask-interface.md) associada. Se desejar, o host também pode armazenar em cache a `IHostTask` instância para reutilização. Na etapa 1 acima, o tempo de execução efetua pull `ICLRTask` de uma reciclagem do cache em vez de criar uma nova instância.  
+ `Reset` altera esse cenário de duas maneiras. Na etapa 5 acima, o host chama `Reset` para redefinir a tarefa para um estado limpo e, em seguida, dissocia a `ICLRTask` instância de sua instância [IHostTask](ihosttask-interface.md) associada. Se desejar, o host também pode armazenar em cache a `IHostTask` instância para reutilização. Na etapa 1 acima, o tempo de execução efetua pull `ICLRTask` de uma reciclagem do cache em vez de criar uma nova instância.  
   
  Essa abordagem funciona bem quando o host também tem um pool de tarefas de trabalho reutilizáveis. Quando o host destrói uma de suas `IHostTask` instâncias, ele destrói o correspondente `ICLRTask` chamando `ExitTask` .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICLRTask](iclrtask-interface.md)
 - [Interface ICLRTaskManager](iclrtaskmanager-interface.md)

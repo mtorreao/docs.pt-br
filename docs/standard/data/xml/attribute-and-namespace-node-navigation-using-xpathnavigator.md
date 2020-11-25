@@ -2,17 +2,19 @@
 title: Navegação do nó de atributo e do namespace usando XPathNavigator
 ms.date: 03/30/2017
 ms.assetid: 23975f88-e0af-4b88-93de-9e20e11880ad
-ms.openlocfilehash: cf29c15463030774b488beed776c9cfe623072d1
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: d561afdc477119a6d9d04eacfcd6a6bdb9d0e2d6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819403"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725385"
 ---
 # <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a>Navegação do nó de atributo e do namespace usando XPathNavigator
+
 A classe <xref:System.Xml.XPath.XPathNavigator> fornece dois conjuntos de métodos de navegação. O primeiro conjunto, encontrado no tópico [Navegação do nó usando XPathNavigator](node-set-navigation-using-xpathnavigator.md), é usado para navegar em *conjuntos de nós* em um objeto <xref:System.Xml.XPath.XPathDocument> ou <xref:System.Xml.XmlDocument>. O segundo conjunto, descrito neste tópico, é usado para navegar em *nós de atributo e namespace* em um objeto <xref:System.Xml.XPath.XPathDocument> ou <xref:System.Xml.XmlDocument>.  
   
 ## <a name="attribute-node-navigation"></a>Navegação do nó de atributo  
+
  Os atributos são propriedades de um elemento, não filhos de um elemento. Essa distinção é importante, devido aos métodos da classe <xref:System.Xml.XPath.XPathNavigator> usada para navegar em irmão, o pai, e os nós filho.  
   
  Por exemplo, <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> e métodos de <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> não são usados para navegar de um elemento a um atributo ou entre atributos. Em vez disso, os atributos possuem métodos distintos de navegação.  
@@ -31,6 +33,7 @@ A classe <xref:System.Xml.XPath.XPathNavigator> fornece dois conjuntos de métod
 > Quando o objeto de <xref:System.Xml.XPath.XPathNavigator> é posicionado em um nó de atributo ou de namespace, em <xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>, em <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>, em <xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>, em <xref:System.Xml.XPath.XPathNavigator.MoveToFollowing%2A>, em <xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>, em <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> e métodos em <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A>sempre de retorno de `false` , e não tem efeito na posição de <xref:System.Xml.XPath.XPathNavigator>. As exceções são <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A>, e métodos de <xref:System.Xml.XPath.XPathNavigator.MoveToRoot%2A> .  
   
 ## <a name="namespace-node-navigation"></a>Navegação do nó de namespace  
+
  Cada elemento tem um conjunto associado de nós de namespace, um para cada prefixo diferente do namespace que é associado ao URI de namespace no escopo para o elemento (incluindo o prefixo XML limite para o espaço de `http://www.w3.org/XML/1998/namespace` , que é declarada implicitamente em cada documento XML) e um para o namespace padrão se uma estiver no escopo para o elemento. O elemento é o pai de cada um desses nós de namespace; no entanto, um nó de namespace não é um filho de seu elemento pai.  
   
  Como com atributos, <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> e métodos de <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> não são usados para navegar de um elemento a um nó de namespace, ou entre nós de namespace. Em vez disso, os nós de namespace possuem métodos distintos de navegação.  
@@ -49,6 +52,7 @@ A classe <xref:System.Xml.XPath.XPathNavigator> fornece dois conjuntos de métod
 > Quando o objeto de <xref:System.Xml.XPath.XPathNavigator> é posicionado em um nó de atributo ou de namespace, em <xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>, em <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>, em <xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>, em <xref:System.Xml.XPath.XPathNavigator.MoveToFollowing%2A>, em <xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>, em <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> e métodos em <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A>sempre de retorno de `false` , e não tem efeito na posição de <xref:System.Xml.XPath.XPathNavigator>. As exceções são <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A>, e métodos de <xref:System.Xml.XPath.XPathNavigator.MoveToRoot%2A> .  
   
 ### <a name="the-xpathnamespacescope-enumeration"></a>A enumeração de XPathNamespaceScope  
+
  Para navegar em nós de namespace os métodos de <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> e de <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> podem ser chamados com um parâmetro de <xref:System.Xml.XPath.XPathNamespaceScope> . Esses métodos se comportam de maneira diferente que suas contrapartes chamadas sem parâmetros. A enumeração de <xref:System.Xml.XPath.XPathNamespaceScope> tem valores de <xref:System.Xml.XPath.XPathNamespaceScope.All>, de <xref:System.Xml.XPath.XPathNamespaceScope.ExcludeXml>, ou de <xref:System.Xml.XPath.XPathNamespaceScope.Local>.  
   
  Aos exemplos a seguir mostram que namespaces são retornadas pelos métodos de <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> e de <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> em vários escopos em um documento XML.  

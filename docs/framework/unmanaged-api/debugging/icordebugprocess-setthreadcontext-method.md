@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a7b50175-2bf1-40be-8f65-64aec7aa1247
 topic_type:
 - apiref
-ms.openlocfilehash: c9e403dc8cbb75a1e93c426a9e0b3a2083f1f10e
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 5b4052485a6d420eb83578d135ce51f8a918aab0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210456"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724514"
 ---
 # <a name="icordebugprocesssetthreadcontext-method"></a>Método ICorDebugProcess::SetThreadContext
+
 Define o contexto para o thread fornecido nesse processo.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,6 +37,7 @@ HRESULT SetThreadContext(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `threadID`  
  no A ID do thread para o qual definir o contexto.  
   
@@ -48,6 +50,7 @@ HRESULT SetThreadContext(
  O contexto especifica a arquitetura do processador no qual o thread está sendo executado.  
   
 ## <a name="remarks"></a>Comentários  
+
  O depurador deve chamar esse método em vez da função do Win32 `SetThreadContext` , pois o thread pode realmente estar em um estado "seqüestrado", no qual seu contexto foi alterado temporariamente. Esse método deve ser usado somente quando um thread estiver em código nativo. Use [ICorDebugRegisterSet](icordebugregisterset-interface.md) para threads em código gerenciado. Nunca é necessário modificar o contexto de um thread durante um evento de depuração OOB (fora de banda).  
   
  Os dados passados devem ser uma estrutura de contexto para a plataforma atual.  
@@ -55,6 +58,7 @@ HRESULT SetThreadContext(
  Esse método pode corromper o tempo de execução se for usado de forma inadequada.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

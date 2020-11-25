@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4723bd1c-eddb-4ed2-897a-010024a47e01
 topic_type:
 - apiref
-ms.openlocfilehash: b913affb4728dc80ba67438384cbeac87265f76d
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 4d0cf22b4b0644d6b25d6b3ef884718cb9ca1e42
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860546"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723773"
 ---
 # <a name="iclrdatatargetrequest-method"></a>Método ICLRDataTarget::Request
+
 Chamado pelos serviços de acesso a dados do Common Language Runtime (CLR) para solicitar uma operação, conforme definido pela implementação.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -40,6 +41,7 @@ HRESULT Request (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `reqCode`  
  no Definido pelo usuário.  
   
@@ -56,11 +58,13 @@ HRESULT Request (
  fora Um buffer que contém a resposta.  
   
 ## <a name="remarks"></a>Comentários  
+
  O `Request` método facilita a adição de operações personalizadas não especificadas. Ou seja, esse método fornece extensibilidade sem exigir a revisão da definição da interface.  
   
  Este método é implementado pelo autor do aplicativo de depuração.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** ClrData. idl, ClrData. h  

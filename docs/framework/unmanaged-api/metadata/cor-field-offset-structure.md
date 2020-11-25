@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: cced5298-277f-4a5a-8ecf-a0050c1096ea
 topic_type:
 - apiref
-ms.openlocfilehash: 8cc803e3cf1442d324bf2eed0a37d0d236acd86d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 1a8ab5aa5909af60089d5e4cc8092e15bc75e8cc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84493052"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724176"
 ---
 # <a name="cor_field_offset-structure"></a>Estrutura COR_FIELD_OFFSET
+
 Armazena o deslocamento, dentro de uma classe, do campo especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -35,15 +36,17 @@ typedef struct COR_FIELD_OFFSET {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |`ridOfField`|Um `mdFieldDef` token de metadados que representa o campo.|  
 |`ulOffset`|O deslocamento do campo dentro de sua classe.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Os métodos [IMetaDataImport:: GetClassLayout](imetadataimport-getclasslayout-method.md) e [IMetaDataEmit:: SetClassLayout](imetadataemit-setclasslayout-method.md) usam um parâmetro do tipo `COR_FIELD_OFFSET` .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorHdr. h, CorProf. idl  

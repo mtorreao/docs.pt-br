@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4ee8d058-ffc8-4967-9133-a5adfef4e518
 topic_type:
 - apiref
-ms.openlocfilehash: 51c8f9a2b66d7b2553949056f7cdbedcf5ea37d6
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 05a9ab58acb3bf5829fd231ae6d8bcc96ae06da6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209910"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724865"
 ---
 # <a name="icordebuginternalframe2getframeaddress-method"></a>Método ICorDebugInternalFrame2::GetFrameAddress
+
 Retorna o endereço da pilha do quadro interno.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -32,10 +33,12 @@ HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pAddress`  
  fora Ponteiro para o `CORDB_ADDRESS` para o quadro interno.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
@@ -45,9 +48,11 @@ HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);
 |E_INVALIDARG|`pAddress` é `null`.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O valor retornado em `pAddress` pode ser usado para determinar o local do quadro interno em relação a outros quadros na pilha. Mesmo em computadores baseados em IA-64, o quadro interno reside somente na pilha e não há nenhum ponteiro correspondente para um repositório de backup.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

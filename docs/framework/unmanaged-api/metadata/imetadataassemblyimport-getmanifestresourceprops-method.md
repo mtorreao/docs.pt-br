@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 00be4789-ac63-4397-b2ec-1629a5c5a585
 topic_type:
 - apiref
-ms.openlocfilehash: c0b6d53ce3be3aed6a577bf6e38a281928499848
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 585a9e39f529294841cd11389f03d763968a0f5e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009022"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723812"
 ---
 # <a name="imetadataassemblyimportgetmanifestresourceprops-method"></a>Método IMetaDataAssemblyImport::GetManifestResourceProps
+
 Obtém o conjunto de propriedades do recurso de manifesto com a assinatura de metadados especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -40,6 +41,7 @@ HRESULT GetManifestResourceProps (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `mdmr`  
  no Um `mdManifestResource` token que representa o recurso para o qual obter as propriedades.  
   
@@ -62,11 +64,12 @@ HRESULT GetManifestResourceProps (
  fora Um ponteiro para sinalizadores que descrevem os metadados aplicados a um recurso. O valor de flags é uma combinação de um ou mais valores de [CorManifestResourceFlags](cormanifestresourceflags-enumeration.md) .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como um recurso em MsCorEE. dll  
+ **Biblioteca:** Usado como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

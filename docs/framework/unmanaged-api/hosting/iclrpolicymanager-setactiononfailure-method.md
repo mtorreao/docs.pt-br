@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4664033f-db97-4388-b988-2ec470796e58
 topic_type:
 - apiref
-ms.openlocfilehash: 727cd82226b9a59c4879ffea5e87f93dd5fe38c9
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8f44247ca7904a40f5ebc092d95c2e08b6048438
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504102"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725567"
 ---
 # <a name="iclrpolicymanagersetactiononfailure-method"></a>Método ICLRPolicyManager::SetActionOnFailure
+
 Especifica a ação de política que o Common Language Runtime (CLR) deve executar quando a falha especificada ocorrer.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -35,6 +36,7 @@ HRESULT SetActionOnFailure (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `failure`  
  no Um dos valores de [EClrFailure](eclrfailure-enumeration.md) , indicando o tipo de falha para a qual executar a ação.  
   
@@ -45,7 +47,7 @@ HRESULT SetActionOnFailure (
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`SetActionOnFailure`retornado com êxito.|  
+|S_OK|`SetActionOnFailure` retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O CLR não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -54,7 +56,8 @@ HRESULT SetActionOnFailure (
 |E_INVALIDARG|Uma ação de política não pode ser definida para a operação especificada ou uma ação de política inválida foi especificada para a operação.|  
   
 ## <a name="remarks"></a>Comentários  
- Por padrão, o CLR gera uma exceção quando ele falha ao alocar um recurso, como memória. `SetActionOnFailure`permite que o host Substitua esse comportamento especificando a ação da política a ser tomada após a falha. A tabela a seguir mostra as combinações de valores [EClrFailure](eclrfailure-enumeration.md) e [EPolicyAction](epolicyaction-enumeration.md) com suporte. (O prefixo de FAIL_ é omitido dos valores de [EClrFailure](eclrfailure-enumeration.md) .)  
+
+ Por padrão, o CLR gera uma exceção quando ele falha ao alocar um recurso, como memória. `SetActionOnFailure` permite que o host Substitua esse comportamento especificando a ação da política a ser tomada após a falha. A tabela a seguir mostra as combinações de valores [EClrFailure](eclrfailure-enumeration.md) e [EPolicyAction](epolicyaction-enumeration.md) com suporte. (O prefixo de FAIL_ é omitido dos valores de [EClrFailure](eclrfailure-enumeration.md) .)  
   
 ||NonCriticalResource|CriticalResource|FatalRuntime|OrphanedLock|StackOverflow|AccessViolation|CodeContract|  
 |-|-------------------------|----------------------|------------------|------------------|-------------------|---------------------|------------------|  
@@ -70,11 +73,12 @@ HRESULT SetActionOnFailure (
 |`eDisableRuntime`|X|X|X|X|X|N/D||  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MSCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

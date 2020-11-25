@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d2ca20db-df22-4528-a0dd-a09ea62c8998
 topic_type:
 - apiref
-ms.openlocfilehash: 5bcced647af6436bd8f5b1f3779d9368b6173d11
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 213bee96531fa0bbc9bf0ae76b2505019833abfc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213030"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724696"
 ---
 # <a name="icordebugnativeframe2ismatchingparentframe-method"></a>Método ICorDebugNativeFrame2::IsMatchingParentFrame
+
 Determina se o quadro especificado é o pai do quadro atual.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,13 +35,15 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pPotentialParentFrame`  
  no Um ponteiro para o objeto de quadro que você deseja avaliar para o status pai.  
   
  `pIsParent`  
  [fora] `true` Se `pPotentialParentFrame` for o pai do quadro atual; caso contrário, `false` .  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
+
  Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
@@ -52,9 +55,11 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
 ## <a name="exceptions"></a>Exceções  
   
 ## <a name="remarks"></a>Comentários  
- `IsMatchingParentFrame`retorna `true` se o objeto frame que você passa para o método é o pai do objeto frame no qual o método foi chamado. Se você chamar o método em um quadro que não seja um filho do quadro especificado, ele retornará um erro.  
+
+ `IsMatchingParentFrame` retorna `true` se o objeto frame que você passa para o método é o pai do objeto frame no qual o método foi chamado. Se você chamar o método em um quadro que não seja um filho do quadro especificado, ele retornará um erro.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

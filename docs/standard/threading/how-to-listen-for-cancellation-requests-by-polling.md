@@ -7,17 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - cancellation, how to poll for requests
 ms.assetid: c7f2f022-d08e-4e00-b4eb-ae84844cb1bc
-ms.openlocfilehash: ae7a2e0269c0c12c4dabe5e561e9bef53100aac1
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a527fb7f0f9e3c78b3161fdfed0f1d9f3d52798b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819858"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723721"
 ---
 # <a name="how-to-listen-for-cancellation-requests-by-polling"></a>Como: ouvir solicitações de cancelamento por meio de sondagem
+
 O exemplo a seguir mostra uma maneira de o código do usuário sondar um token de cancelamento em intervalos regulares para verificar se o thread de chamada solicitou o cancelamento. Este exemplo usa o tipo <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, mas o mesmo padrão se aplica a operações assíncronas criadas diretamente pelo tipo <xref:System.Threading.ThreadPool?displayProperty=nameWithType> ou <xref:System.Threading.Thread?displayProperty=nameWithType>.  
   
 ## <a name="example"></a>Exemplo  
+
  A sondagem requer um tipo de código recursivo ou de loop que possa fazer a leitura periódica do valor da propriedade booliana <xref:System.Threading.CancellationToken.IsCancellationRequested%2A>. Se estiver usando o tipo <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> e estiver aguardando a conclusão da tarefa no thread de chamada, use o método <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> para verificar a propriedade e lançar a exceção. Ao usar esse método, a exceção correta será gerada em resposta a uma solicitação. Se estiver usando um <xref:System.Threading.Tasks.Task>, chamar este método é melhor do que gerar manualmente uma <xref:System.OperationCanceledException>. Se não precisar lançar a exceção, bastará verificar a propriedade e obter um retorno do método se a propriedade for `true`.  
   
  [!code-csharp[Cancellation#11](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex11.cs#11)]

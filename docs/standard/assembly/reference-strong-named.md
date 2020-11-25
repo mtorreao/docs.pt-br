@@ -12,14 +12,15 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 478f786995cfc4b57f0b18b2159775db104e9cfb
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 919e4f4cf467e8fc28c3d007963393dad134ab57
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687698"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724046"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>Como referenciar um assembly de nome forte
+
 O processo para referenciar tipos ou recursos em um assembly de nome forte é normalmente transparente. Você pode fazer a referência no tempo de compilação (vinculação inicial) ou no tempo de execução.  
   
 Uma referência de tempo de compilação ocorre quando você indica ao compilador que o assembly a ser compilado explicitamente referencia outro assembly. Quando você usa a referência no tempo de compilação, o compilador obtém automaticamente a chave pública do assembly com nome forte direcionado e o coloca na referência de assembly do assembly que está sendo compilado.
@@ -35,7 +36,7 @@ Em um prompt de comando, digite o comando a seguir:
 
 Nesse comando, o *comando do compilador* é o comando do compilador para a linguagem que você está usando, e *nome do assembly* é o nome do assembly de nome forte que está sendo referenciado. Você também pode usar outras opções de compilador, como a opção **/t:library** para criar um assembly de biblioteca.  
 
-O exemplo a seguir cria um assembly chamado *myAssembly.dll* que faz referência a um assembly de nome forte chamado *myLibAssembly.dll* de um módulo de código chamado *myAssembly.cs* .  
+O exemplo a seguir cria um assembly chamado *myAssembly.dll* que faz referência a um assembly de nome forte chamado *myLibAssembly.dll* de um módulo de código chamado *myAssembly.cs*.  
 
 ```cmd
 csc /t:library myAssembly.cs /reference:myLibAssembly.dll  
@@ -80,6 +81,6 @@ Se você tiver um arquivo de chave pública, use o comando a seguir (observe a d
 
 **SN-TP \<** *public key file* **>**  
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Criar e usar assemblies com nome forte](create-use-strong-named.md)

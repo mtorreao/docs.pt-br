@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dc437751-7093-44e2-bfdc-191d9ce3c192
 topic_type:
 - apiref
-ms.openlocfilehash: bd1e86b83c43af20604416f158ab9e74f399821b
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 90688132b98f8316a4b08988c08b2f7cc7ce0fd8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894961"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725037"
 ---
 # <a name="icordebugarrayvalue-interface"></a>Interface ICorDebugArrayValue
 
@@ -27,7 +27,7 @@ Uma subclasse de ICorDebugHeapValue que representa uma matriz unidimensional ou 
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método GetBaseIndicies](icordebugarrayvalue-getbaseindicies-method.md)|Obtém o índice base de cada dimensão na matriz.|  
 |[Método GetCount](icordebugarrayvalue-getcount-method.md)|Obtém o número total de elementos na matriz.|  
@@ -39,12 +39,14 @@ Uma subclasse de ICorDebugHeapValue que representa uma matriz unidimensional ou 
 |[Método HasBaseIndicies](icordebugarrayvalue-hasbaseindicies-method.md)|Determina se a matriz tem índices base.|  
   
 ## <a name="remarks"></a>Comentários  
- `ICorDebugArrayValue`dá suporte a matrizes unidimensionais e multidimensionais.  
+
+ `ICorDebugArrayValue` dá suporte a matrizes unidimensionais e multidimensionais.  
   
 > [!NOTE]
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -53,6 +55,6 @@ Uma subclasse de ICorDebugHeapValue que representa uma matriz unidimensional ou 
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Depurando interfaces](debugging-interfaces.md)

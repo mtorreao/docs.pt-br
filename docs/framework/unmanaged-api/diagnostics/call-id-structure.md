@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: bfd46324-afec-4782-9c18-586d81fb4740
 topic_type:
 - apiref
-ms.openlocfilehash: 1c795ee536483a7def9c0339efae66a013898a77
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 3f41dd969e25f7a42308ff0b7b2d617344284b38
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420624"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725242"
 ---
 # <a name="call_id-structure"></a>Estrutura CALL_ID
+
 Fornece informações para um depurador sobre uma função que está sendo chamada. Consulte a interface [INotifySink2](inotifysink2-interface.md) para obter mais informações.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -40,7 +41,7 @@ typedef struct tagCALL_ID
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |`szMachine`|Identifica o computador que está fazendo a chamada.|  
 |`dwPid`|Identifica o processador do computador.|  
@@ -50,9 +51,10 @@ typedef struct tagCALL_ID
 |`szDestinationMachine`|Identifica o computador que executará a chamada.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** ProtocolNotify2. idl  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface INotifySink2](inotifysink2-interface.md)
 - [Estruturas de armazenamento de símbolo de diagnóstico](diagnostics-symbol-store-structures.md)

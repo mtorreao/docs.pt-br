@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 64264238-3b68-4bac-a887-36b552426a6c
 topic_type:
 - apiref
-ms.openlocfilehash: f4d1c2f105abb64bf196d0dd8371c2788c97336e
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 673450bb8209abede15e3cb65dd764b418073bc2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005902"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724189"
 ---
 # <a name="coinitiee-enumeration"></a>Enumeração COINITIEE
+
 Especifica constantes usadas por [CoInitialize](../hosting/coinitializeee-function.md) ao inicializar o Common Language Runtime.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,18 +37,19 @@ typedef enum tagCOINITEE {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|Membro|DESCRIÇÃO|  
 |------------|-----------------|  
 |`COINITEE_DEFAULT`|Modo de inicialização padrão. Isso inicializa o tempo de execução e cria o padrão <xref:System.AppDomain> .|  
 |`COINITEE_DLL`|Inicializa para executar uma DLL gerenciada.|  
 |`COINITEE_MAIN`|Inicializa para executar um EXE gerenciado. Isso inicializa o tempo de execução, mas não cria o padrão <xref:System.AppDomain> , que é criado após a inserção da rotina principal do exe.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso no MsCorEE.dll  
   
  **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

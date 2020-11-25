@@ -14,23 +14,25 @@ helpviewer_keywords:
 ms.assetid: a453f75a-c37b-4013-8f0e-35771fa5d792
 topic_type:
 - apiref
-ms.openlocfilehash: 82162a461fa1dd05e543deb0e23339abb65ce00a
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 8a685da03073a80a0ea931b92f6bee906e026377
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860685"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725268"
 ---
 # <a name="iclrdataenummemoryregions-interface"></a>Interface ICLRDataEnumMemoryRegions
+
 Fornece um método para enumerar as regiões da memória que são especificadas por chamadores.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método EnumMemoryRegions](iclrdataenummemoryregions-enummemoryregions-method.md)|Enumera áreas especificadas de memória.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** ClrData. idl, ClrData. h  

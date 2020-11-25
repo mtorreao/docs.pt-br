@@ -2,14 +2,15 @@
 title: 'Método ICorDebugInstanceFieldSymbol:: GetSize'
 ms.date: 03/30/2017
 ms.assetid: a4af1e3b-6a9f-4855-95ba-5317565c8e2b
-ms.openlocfilehash: 3d3c6881ecd54fc48be92e5ea0dc74a5cfdabd8f
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: c4b193b45e30b0eba3367f18cb1e4c2b4e108fa8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209945"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724904"
 ---
 # <a name="icordebuginstancefieldsymbolgetsize-method"></a>Método ICorDebugInstanceFieldSymbol:: GetSize
+
 Obtém o tamanho em bytes do campo de instância.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -21,6 +22,7 @@ HRESULT GetSize(
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pcbSize`  
  fora Um ponteiro para o comprimento do campo.  
   
@@ -30,6 +32,7 @@ HRESULT GetSize(
 > Esse método está disponível somente com .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

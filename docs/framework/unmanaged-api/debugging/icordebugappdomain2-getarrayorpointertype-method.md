@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 97e493f5-3a62-4ec7-b42f-4af57bf71f57
 topic_type:
 - apiref
-ms.openlocfilehash: bbf43f3936823b9a8e562cb32cfa2eef08840033
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 8b3f6ae92e39f5385bf29f8b29abbb1726136088
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895181"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724761"
 ---
 # <a name="icordebugappdomain2getarrayorpointertype-method"></a>Método ICorDebugAppDomain2::GetArrayOrPointerType
+
 Obtém uma matriz do tipo especificado ou um ponteiro ou uma referência para o tipo especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,6 +38,7 @@ HRESULT GetArrayOrPointerType (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `elementType`  
  no Um valor da enumeração CorElementType que especifica o tipo nativo subjacente (uma matriz, um ponteiro ou uma referência) a ser criado.  
   
@@ -50,6 +52,7 @@ HRESULT GetArrayOrPointerType (
  fora Um ponteiro para o endereço de um `ICorDebugType` objeto que representa a matriz construída, o tipo de ponteiro ou o tipo de referência.  
   
 ## <a name="remarks"></a>Comentários  
+
  O valor de *ElementType* deve ser um dos seguintes:  
   
 - ELEMENT_TYPE_PTR  
@@ -61,6 +64,7 @@ HRESULT GetArrayOrPointerType (
  Se o valor de *ElementType* for ELEMENT_TYPE_PTR ou ELEMENT_TYPE_BYREF, *nRank* deverá ser zero.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

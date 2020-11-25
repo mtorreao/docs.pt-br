@@ -16,15 +16,16 @@ helpviewer_keywords:
 ms.assetid: 2c32da53-76c7-4048-84d0-d05207333004
 topic_type:
 - apiref
-ms.openlocfilehash: 50ec5a23db4d2460480bcc3e463ecd88e7470bde
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9580dd3bc5a7279549e8deadac95d35a33da74f8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134526"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724475"
 ---
 # <a name="getassemblyidentityfromfile-function"></a>Função GetAssemblyIdentityFromFile
-Obtém um ponteiro para um objeto `IUnknown` com o `IID` especificado no assembly no caminho de arquivo especificado.  
+
+Obtém um ponteiro para um `IUnknown` objeto com o especificado `IID` no assembly no caminho do arquivo especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,23 +38,25 @@ HRESULT GetAssemblyIdentityFromFile (
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
+
  `pwzFilePath`  
  no Um caminho válido para o assembly solicitado.  
   
  `riid`  
- no A `IID` da interface a ser retornada.  
+ no O `IID` da interface a ser retornada.  
   
  `ppIdentity`  
  fora O ponteiro de interface retornado.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Fusion. h  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [IUnknown](/cpp/atl/iunknown)
 - [Funções estáticas globais de fusão](fusion-global-static-functions.md)

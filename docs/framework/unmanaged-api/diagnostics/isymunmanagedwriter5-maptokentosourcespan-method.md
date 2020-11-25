@@ -2,14 +2,15 @@
 title: Método ISymUnmanagedWriter5::MapTokenToSourceSpan
 ms.date: 03/30/2017
 ms.assetid: d0fbbf61-71c6-4fb1-8c9f-d619ca5d7d68
-ms.openlocfilehash: 0f00dd34ffbdd58a46260132d8d7ace74ec2f294
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e4b09e6d89b3ba8ba3bf7e149d31a14a74b945b5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501671"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723929"
 ---
 # <a name="isymunmanagedwriter5maptokentosourcespan-method"></a>Método ISymUnmanagedWriter5::MapTokenToSourceSpan
+
 Mapeia o token de metadados fornecido para o span de linha de origem fornecido no arquivo de origem especificado.  
   
  Deve ser chamado entre as chamadas para o [método OpenMapTokensToSourceSpans](isymunmanagedwriter5-openmaptokenstosourcespans-method.md) e o [método CloseMapTokensToSourceSpans](isymunmanagedwriter5-closemaptokenstosourcespans-method.md).  
@@ -22,7 +23,7 @@ HRESULT MapTokenToSourceSpan(    [in] mdToken token,    [in] ISymUnmanagedDocume
   
 ## <a name="parameters"></a>Parâmetros  
   
-|Parâmetro|Descrição|  
+|Parâmetro|DESCRIÇÃO|  
 |---------------|-----------------|  
 |`token`||  
 |`document`||  
@@ -32,9 +33,11 @@ HRESULT MapTokenToSourceSpan(    [in] mdToken token,    [in] ISymUnmanagedDocume
 |`endColumn`||  
   
 ## <a name="return-value"></a>Valor Retornado  
+
  Retorna `HRESULT`.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Confira também

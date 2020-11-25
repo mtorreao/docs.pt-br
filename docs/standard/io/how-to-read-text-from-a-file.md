@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data streams, reading text from files
 - I/O [.NET], reading text from files
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
-ms.openlocfilehash: 7c772ec1de41d0ba2b4ef0d924a252326ee6909e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 48b862ff77bf4ace48a5481fe9bedcf354b5654b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823362"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725333"
 ---
 # <a name="how-to-read-text-from-a-file"></a>Como: ler texto de um arquivo
 
@@ -27,6 +27,7 @@ Os exemplos a seguir mostram como ler de forma síncrona e assíncrona o texto d
 > Esses exemplos de código não se aplicam a aplicativos UWP (Universal Windows), porque o Windows Runtime fornece tipos de fluxo diferentes para leitura e gravação em arquivos. Para obter um exemplo que mostra como ler o texto de um arquivo em um aplicativo UWP, consulte [início rápido: lendo e gravando arquivos](/previous-versions/windows/apps/hh758325(v=win.10)). Para obter exemplos que mostram como converter entre fluxos de .NET Framework e Windows Runtime fluxos, consulte [como converter entre fluxos de .NET Framework e fluxos de Windows Runtime](how-to-convert-between-dotnet-streams-and-winrt-streams.md).  
   
 ## <a name="example-synchronous-read-in-a-console-app"></a>Exemplo: leitura síncrona em um aplicativo de console  
+
 O exemplo a seguir mostra uma operação de leitura síncrona em um aplicativo de console. Esse exemplo abre o arquivo de texto usando um leitor de fluxo, copia o conteúdo para uma cadeia de caracteres e gera a cadeia de caracteres no console.  
   
 > [!IMPORTANT]
@@ -36,6 +37,7 @@ O exemplo a seguir mostra uma operação de leitura síncrona em um aplicativo d
 :::code language="vb" source="snippets/how-to-read-text-from-a-file/vb/sync-console/Program.vb":::
   
 ## <a name="example-asynchronous-read-in-a-wpf-app"></a>Exemplo: leitura assíncrona em um aplicativo WPF
+
  O exemplo a seguir mostra uma operação de leitura assíncrona em um aplicativo WPF (Windows Presentation Foundation).  
   
 > [!IMPORTANT]
@@ -58,4 +60,4 @@ O exemplo a seguir mostra uma operação de leitura síncrona em um aplicativo d
 - [Como: gravar texto em um arquivo](how-to-write-text-to-a-file.md)  
 - [Como: ler caracteres de uma cadeia de caracteres](how-to-read-characters-from-a-string.md)  
 - [Como: gravar caracteres em uma cadeia de caracteres](how-to-write-characters-to-a-string.md)  
-- [Arquivo e e/s de fluxo](index.md)
+- [E/S de arquivo e de fluxo](index.md)

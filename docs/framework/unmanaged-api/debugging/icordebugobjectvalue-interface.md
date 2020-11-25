@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 937de6a0-6fbf-4ddc-80ea-a6217b73e62b
 topic_type:
 - apiref
-ms.openlocfilehash: 603ab20b57dc4ba736b0342797d0be649a5bebc4
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 2a5a618491bf2c624669728d97a690cca315bff8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207487"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724670"
 ---
 # <a name="icordebugobjectvalue-interface"></a>Interface ICorDebugObjectValue
 
@@ -27,7 +27,7 @@ Uma subclasse de "ICorDebugValue" que representa um valor que contém um objeto.
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |[Método GetClass](icordebugobjectvalue-getclass-method.md)|Obtém um ponteiro de interface para o Common Language Runtime (CLR) <xref:System.Type> do objeto ao qual este `ICorDebugObjectValue` faz referência.|  
 |[Método GetContext](icordebugobjectvalue-getcontext-method.md)|Não implementado.|  
@@ -38,12 +38,14 @@ Uma subclasse de "ICorDebugValue" que representa um valor que contém um objeto.
 |[Método SetFromManagedCopy](icordebugobjectvalue-setfrommanagedcopy-method.md)|Obsoleto. Não chame esse método.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Um `ICorDebugObjectValue` permanece válido até que o processo que está sendo depurado seja continuado.  
   
 > [!NOTE]
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

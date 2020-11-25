@@ -17,12 +17,12 @@ helpviewer_keywords:
 - isolated storage, types
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-ms.openlocfilehash: ce6afc6438060b88e8740eab24ace960f3b78fa3
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4e2ba53a285649f8081c4836661ad3d70739aa64
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830526"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725320"
 ---
 # <a name="types-of-isolation"></a>Tipos de isolamento
 
@@ -54,7 +54,9 @@ O acesso ao armazenamento isolado é sempre restrito ao usuário que o criou. Pa
 > O armazenamento isolado não está disponível para aplicativos da loja do Windows 8. x. Em vez disso, use as classes de dados de aplicativos nos namespaces `Windows.Storage` incluídos na API do Windows Runtime para armazenar dados e arquivos locais. Para saber mais, confira [Dados de aplicativo](/previous-versions/windows/apps/hh464917(v=win.10)) no Centro de Desenvolvimento do Windows.  
   
 <a name="UserAssembly"></a>
+
 ## <a name="isolation-by-user-and-assembly"></a>Isolamento por usuário e assembly  
+
  Quando o assembly que usa o repositório de dados precisa ser acessível de qualquer domínio de aplicativo, o isolamento por usuário e assembly é apropriado. Normalmente, nessa situação, o armazenamento isolado é usado para armazenar dados que se aplicam a vários aplicativos e não estão vinculados a um aplicativo específico, como o nome do usuário ou informações de licença. Para acessar o armazenamento isolado por usuário e assembly, o código deve ser confiável para transferir informações entre aplicativos. Normalmente, o isolamento pelo usuário e assembly é permitido em intranets, mas não na Internet. Chamar o método estático <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A?displayProperty=nameWithType> e passar um usuário e um assembly <xref:System.IO.IsolatedStorage.IsolatedStorageScope> retorna um armazenamento com esse tipo de isolamento.  
   
  O exemplo de código a seguir recupera um armazenamento que é isolado por usuário e assembly. O repositório pode ser acessado por meio do objeto `isoFile`.  
@@ -72,7 +74,9 @@ O acesso ao armazenamento isolado é sempre restrito ao usuário que o criou. Pa
  [!code-vb[Conceptual.IsolatedStorage#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source11.vb#18)]  
   
 <a name="UserDomainAssembly"></a>
+
 ## <a name="isolation-by-user-domain-and-assembly"></a>Isolamento por usuário, domínio e assembly  
+
  Se o aplicativo usa um assembly de terceiros que exige um armazenamento de dados privados, você pode usar o armazenamento isolado para armazenar os dados privados. O isolamento por usuário, domínio e assembly garante que somente o código em determinado assembly possa acessar os dados e somente quando o assembly for usado pelo aplicativo que estava em execução quando o assembly criou o repositório e somente quando o usuário para quem o armazenamento foi criado executar o aplicativo. O isolamento por usuário, domínio e assembly impede que o assembly de terceiros vaze dados para outros aplicativos. Esse tipo de isolamento deverá ser a opção padrão, se você souber que deseja usar o armazenamento isolado e não tiver certeza de qual tipo de isolamento usar. Chamar o método estático <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> de <xref:System.IO.IsolatedStorage.IsolatedStorageFile> e passar um usuário, domínio e assembly <xref:System.IO.IsolatedStorage.IsolatedStorageScope> retorna um armazenamento com esse tipo de isolamento.  
   
  O exemplo de código a seguir recupera um armazenamento isolado por usuário, domínio e assembly. O repositório pode ser acessado por meio do objeto `isoFile`.  
@@ -88,7 +92,9 @@ O acesso ao armazenamento isolado é sempre restrito ao usuário que o criou. Pa
  [!code-vb[Conceptual.IsolatedStorage#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source10.vb#15)]  
   
 <a name="Roaming"></a>
+
 ## <a name="isolated-storage-and-roaming"></a>Armazenamento isolado e roaming  
+
  Os perfis de usuário móvel são um recurso do Windows que permite que um usuário configure uma identidade em uma rede e use essa identidade para fazer logon em qualquer computador da rede, mantendo todas as configurações personalizadas. Um assembly que usa o armazenamento isolado pode especificar que o armazenamento isolado do usuário deve migrar com o perfil de usuário móvel. O roaming pode ser usado em conjunto com o isolamento por usuário e assembly ou com o isolamento por usuário, domínio e assembly. Se um escopo móvel não for usado, os repositórios não entrarão em roaming, mesmo que um perfil de usuário móvel seja usado.  
   
  O exemplo de código a seguir recupera um armazenamento móvel isolado por usuário e assembly. O repositório pode ser acessado por meio do objeto `isoFile`.  
