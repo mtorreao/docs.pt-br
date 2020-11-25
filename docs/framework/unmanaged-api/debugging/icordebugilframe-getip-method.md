@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 18217ba1-1776-4297-a3b9-f77e64b0fead
 topic_type:
 - apiref
-ms.openlocfilehash: 3890cb4236f113bc6efc23bfb606d19a525ec234
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 314d2a06c8e246a42b315690dc9fe4b507db285a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210261"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703162"
 ---
-# <a name="icordebugilframegetip-method"></a><span data-ttu-id="1697d-102">Método ICorDebugILFrame::GetIP</span><span class="sxs-lookup"><span data-stu-id="1697d-102">ICorDebugILFrame::GetIP Method</span></span>
-<span data-ttu-id="1697d-103">Obtém o valor do ponteiro de instrução e um valor de combinação de bits que descreve como o valor do ponteiro de instrução foi obtido.</span><span class="sxs-lookup"><span data-stu-id="1697d-103">Gets the value of the instruction pointer and a bitwise combination value that describes how the value of the instruction pointer was obtained.</span></span>  
+# <a name="icordebugilframegetip-method"></a><span data-ttu-id="06bbe-102">Método ICorDebugILFrame::GetIP</span><span class="sxs-lookup"><span data-stu-id="06bbe-102">ICorDebugILFrame::GetIP Method</span></span>
+
+<span data-ttu-id="06bbe-103">Obtém o valor do ponteiro de instrução e um valor de combinação de bits que descreve como o valor do ponteiro de instrução foi obtido.</span><span class="sxs-lookup"><span data-stu-id="06bbe-103">Gets the value of the instruction pointer and a bitwise combination value that describes how the value of the instruction pointer was obtained.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1697d-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="1697d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="06bbe-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="06bbe-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetIP (  
@@ -34,23 +35,26 @@ HRESULT GetIP (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1697d-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="1697d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="06bbe-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="06bbe-105">Parameters</span></span>  
+
  `pnOffset`  
- <span data-ttu-id="1697d-106">fora O valor do ponteiro de instrução.</span><span class="sxs-lookup"><span data-stu-id="1697d-106">[out] The value of the instruction pointer.</span></span>  
+ <span data-ttu-id="06bbe-106">fora O valor do ponteiro de instrução.</span><span class="sxs-lookup"><span data-stu-id="06bbe-106">[out] The value of the instruction pointer.</span></span>  
   
  `pMappingResult`  
- <span data-ttu-id="1697d-107">fora Um ponteiro para uma combinação de bits de bit que descreve os valores de enumeração CorDebugMappingResult que descrevem como o valor do ponteiro de instrução foi obtido.</span><span class="sxs-lookup"><span data-stu-id="1697d-107">[out] A pointer to a bitwise combination of the CorDebugMappingResult enumeration values that describe how the value of the instruction pointer was obtained.</span></span>  
+ <span data-ttu-id="06bbe-107">fora Um ponteiro para uma combinação de bits de bit que descreve os valores de enumeração CorDebugMappingResult que descrevem como o valor do ponteiro de instrução foi obtido.</span><span class="sxs-lookup"><span data-stu-id="06bbe-107">[out] A pointer to a bitwise combination of the CorDebugMappingResult enumeration values that describe how the value of the instruction pointer was obtained.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1697d-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="1697d-108">Remarks</span></span>  
- <span data-ttu-id="1697d-109">O valor do ponteiro de instrução é o deslocamento do registro de ativação no código MSIL (Microsoft Intermediate Language) da função.</span><span class="sxs-lookup"><span data-stu-id="1697d-109">The value of the instruction pointer is the stack frame's offset into the function's Microsoft intermediate language (MSIL) code.</span></span> <span data-ttu-id="1697d-110">Se o registro de ativação estiver ativo, esse endereço será a próxima instrução a ser executada.</span><span class="sxs-lookup"><span data-stu-id="1697d-110">If the stack frame is active, this address is the next instruction to execute.</span></span> <span data-ttu-id="1697d-111">Se o registro de ativação não estiver ativo, esse endereço será a próxima instrução a ser executada quando o quadro de pilha for reativado.</span><span class="sxs-lookup"><span data-stu-id="1697d-111">If the stack frame is not active, this address is the next instruction to execute when the stack frame is reactivated.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="06bbe-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="06bbe-108">Remarks</span></span>  
+
+ <span data-ttu-id="06bbe-109">O valor do ponteiro de instrução é o deslocamento do registro de ativação no código MSIL (Microsoft Intermediate Language) da função.</span><span class="sxs-lookup"><span data-stu-id="06bbe-109">The value of the instruction pointer is the stack frame's offset into the function's Microsoft intermediate language (MSIL) code.</span></span> <span data-ttu-id="06bbe-110">Se o registro de ativação estiver ativo, esse endereço será a próxima instrução a ser executada.</span><span class="sxs-lookup"><span data-stu-id="06bbe-110">If the stack frame is active, this address is the next instruction to execute.</span></span> <span data-ttu-id="06bbe-111">Se o registro de ativação não estiver ativo, esse endereço será a próxima instrução a ser executada quando o quadro de pilha for reativado.</span><span class="sxs-lookup"><span data-stu-id="06bbe-111">If the stack frame is not active, this address is the next instruction to execute when the stack frame is reactivated.</span></span>  
   
- <span data-ttu-id="1697d-112">Se esse quadro for um quadro compilado JIT (just-in-time), o valor do ponteiro de instrução será determinado pelo mapeamento retroativo do ponteiro de instrução nativa real, de modo que o valor pode ser apenas aproximado.</span><span class="sxs-lookup"><span data-stu-id="1697d-112">If this frame is a just-in-time (JIT) compiled frame, the value of the instruction pointer will be determined by mapping backwards from the actual native instruction pointer, so the value may be only approximate.</span></span>  
+ <span data-ttu-id="06bbe-112">Se esse quadro for um quadro compilado JIT (just-in-time), o valor do ponteiro de instrução será determinado pelo mapeamento retroativo do ponteiro de instrução nativa real, de modo que o valor pode ser apenas aproximado.</span><span class="sxs-lookup"><span data-stu-id="06bbe-112">If this frame is a just-in-time (JIT) compiled frame, the value of the instruction pointer will be determined by mapping backwards from the actual native instruction pointer, so the value may be only approximate.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1697d-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="1697d-113">Requirements</span></span>  
- <span data-ttu-id="1697d-114">**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1697d-114">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="06bbe-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="06bbe-113">Requirements</span></span>  
+
+ <span data-ttu-id="06bbe-114">**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="06bbe-114">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1697d-115">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1697d-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="06bbe-115">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="06bbe-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="1697d-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1697d-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="06bbe-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="06bbe-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1697d-117">**.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1697d-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="06bbe-117">**.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="06bbe-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
