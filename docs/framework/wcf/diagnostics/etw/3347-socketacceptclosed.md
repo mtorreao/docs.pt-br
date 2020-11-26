@@ -2,27 +2,30 @@
 title: 3347 - SocketAcceptClosed
 ms.date: 03/30/2017
 ms.assetid: a84ea364-b0e1-4bee-a497-dc2b988cc4c3
-ms.openlocfilehash: 507860333ce254e35e6e1bb32fb64448088631eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f376e63add9deba155ac2cd7f9cea4aafe5b07ed
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971477"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96237138"
 ---
-# <a name="3347---socketacceptclosed"></a><span data-ttu-id="4fd43-102">3347 - SocketAcceptClosed</span><span class="sxs-lookup"><span data-stu-id="4fd43-102">3347 - SocketAcceptClosed</span></span>
-## <a name="properties"></a><span data-ttu-id="4fd43-103">Propriedades</span><span class="sxs-lookup"><span data-stu-id="4fd43-103">Properties</span></span>  
+# <a name="3347---socketacceptclosed"></a><span data-ttu-id="f0e7d-102">3347 - SocketAcceptClosed</span><span class="sxs-lookup"><span data-stu-id="f0e7d-102">3347 - SocketAcceptClosed</span></span>
+
+## <a name="properties"></a><span data-ttu-id="f0e7d-103">Propriedades</span><span class="sxs-lookup"><span data-stu-id="f0e7d-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="4fd43-104">ID</span><span class="sxs-lookup"><span data-stu-id="4fd43-104">ID</span></span>|<span data-ttu-id="4fd43-105">3347</span><span class="sxs-lookup"><span data-stu-id="4fd43-105">3347</span></span>|  
-|<span data-ttu-id="4fd43-106">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="4fd43-106">Keywords</span></span>|<span data-ttu-id="4fd43-107">TCP</span><span class="sxs-lookup"><span data-stu-id="4fd43-107">TCP</span></span>|  
-|<span data-ttu-id="4fd43-108">Nível</span><span class="sxs-lookup"><span data-stu-id="4fd43-108">Level</span></span>|<span data-ttu-id="4fd43-109">Detalhado</span><span class="sxs-lookup"><span data-stu-id="4fd43-109">Verbose</span></span>|  
-|<span data-ttu-id="4fd43-110">Canal</span><span class="sxs-lookup"><span data-stu-id="4fd43-110">Channel</span></span>|<span data-ttu-id="4fd43-111">Os aplicativos de servidor de Microsoft-Windows- aplicativo/depuração</span><span class="sxs-lookup"><span data-stu-id="4fd43-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="f0e7d-104">ID</span><span class="sxs-lookup"><span data-stu-id="f0e7d-104">ID</span></span>|<span data-ttu-id="f0e7d-105">3347</span><span class="sxs-lookup"><span data-stu-id="f0e7d-105">3347</span></span>|  
+|<span data-ttu-id="f0e7d-106">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="f0e7d-106">Keywords</span></span>|<span data-ttu-id="f0e7d-107">TCP</span><span class="sxs-lookup"><span data-stu-id="f0e7d-107">TCP</span></span>|  
+|<span data-ttu-id="f0e7d-108">Nível</span><span class="sxs-lookup"><span data-stu-id="f0e7d-108">Level</span></span>|<span data-ttu-id="f0e7d-109">Detalhado</span><span class="sxs-lookup"><span data-stu-id="f0e7d-109">Verbose</span></span>|  
+|<span data-ttu-id="f0e7d-110">Canal</span><span class="sxs-lookup"><span data-stu-id="f0e7d-110">Channel</span></span>|<span data-ttu-id="f0e7d-111">Os aplicativos de servidor de Microsoft-Windows- aplicativo/depuração</span><span class="sxs-lookup"><span data-stu-id="f0e7d-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="4fd43-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="4fd43-112">Description</span></span>  
- <span data-ttu-id="4fd43-113">Esse evento é emitido quando aceitar o soquete é fechado.</span><span class="sxs-lookup"><span data-stu-id="4fd43-113">This event is emitted when the socket accept is closed.</span></span>  
+## <a name="description"></a><span data-ttu-id="f0e7d-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="f0e7d-112">Description</span></span>  
+
+ <span data-ttu-id="f0e7d-113">Esse evento é emitido quando a aceitação do soquete é fechada.</span><span class="sxs-lookup"><span data-stu-id="f0e7d-113">This event is emitted when the socket accept is closed.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="4fd43-114">Mensagem</span><span class="sxs-lookup"><span data-stu-id="4fd43-114">Message</span></span>  
- <span data-ttu-id="4fd43-115">Aceitação de soquete fechado.</span><span class="sxs-lookup"><span data-stu-id="4fd43-115">Socket accept closed.</span></span>  
+## <a name="message"></a><span data-ttu-id="f0e7d-114">Mensagem</span><span class="sxs-lookup"><span data-stu-id="f0e7d-114">Message</span></span>  
+
+ <span data-ttu-id="f0e7d-115">Aceitação de soquete fechada.</span><span class="sxs-lookup"><span data-stu-id="f0e7d-115">Socket accept closed.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="4fd43-116">Detalhes</span><span class="sxs-lookup"><span data-stu-id="4fd43-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="f0e7d-116">Detalhes</span><span class="sxs-lookup"><span data-stu-id="f0e7d-116">Details</span></span>
