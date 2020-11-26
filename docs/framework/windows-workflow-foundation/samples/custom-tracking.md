@@ -2,17 +2,19 @@
 title: Rastreamento personalizada
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: 87f72359e16b4268d77148ec16a626c2bac5751c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3d125c59196cb2a7d33961e0f271aab8c5663a50
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557026"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96234564"
 ---
 # <a name="custom-tracking"></a>Rastreamento personalizada
+
 Este exemplo demonstra como criar um participante personalizado de rastreamento e gravar o conteúdo dos dados de acompanhamento no console. Além disso, o exemplo demonstra como emitir os objetos de <xref:System.Activities.Tracking.CustomTrackingRecord> preenchido com dados definidos pelo usuário. O participante controlando console- base filtra os objetos de <xref:System.Activities.Tracking.TrackingRecord> emissores pelo fluxo de trabalho usando um objeto de perfil de rastreamento criado em código.
 
 ## <a name="sample-details"></a>Detalhes de exemplo
+
  Windows Workflow Foundation (WF) fornece uma infraestrutura de controle para controlar a execução de uma instância de fluxo de trabalho. O runtime de rastreamento implementa uma instância de fluxo de trabalho para emitir os eventos relacionados ao ciclo de vida de fluxo de trabalho, os eventos de atividades de fluxo de trabalho e eventos personalizados de rastreamento. A tabela a seguir detalha os componentes principais de infraestrutura de rastreamento.
 
 |Componente|Descrição|
@@ -23,7 +25,7 @@ Este exemplo demonstra como criar um participante personalizado de rastreamento 
 
  A tabela a seguir detalha os registros de rastreamento que o runtime de fluxo de trabalho se emite.
 
-|Registro de Rastreamento|Description|
+|Registro de Rastreamento|Descrição|
 |---------------------|-----------------|
 |Registros de rastreamento de instância de fluxo de trabalho.|Descreve o ciclo de vida de instância de fluxo de trabalho. Por exemplo, um registro de instância é emitida quando o fluxo de trabalho inicia ou termina.|
 |Estado da atividade que acompanha registros.|Detalha a execução da atividade. Esses registros indicam o estado de uma atividade de fluxo de trabalho como quando uma atividade é agendada ou quando a atividade completa ou quando uma falha é lançada.|
@@ -33,6 +35,7 @@ Este exemplo demonstra como criar um participante personalizado de rastreamento 
  O participante de rastreamento assinatura para um subconjunto dos objetos emissores de <xref:System.Activities.Tracking.TrackingRecord> usando perfis de rastreamento. Um perfil de rastreamento contém consultas de rastreamento que permitem assinar para um tipo de registro específico de rastreamento. Controlar perfis pode ser especificado no código ou na configuração.
 
 ### <a name="custom-tracking-participant"></a>Participante de rastreamento personalizada
+
  O participante API de rastreamento permite a extensão de rastreamento com um usuário fornecido pelo participante que pode incluir a lógica personalizada para manipular os objetos de <xref:System.Activities.Tracking.TrackingRecord> emissores em runtime de fluxo de trabalho.
 
  Para gravar um participante de rastreamento o usuário deve implementar <xref:System.Activities.Tracking.TrackingParticipant>. Especificamente, o método de <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> precisa ser implementado por participante personalizado. Este método é chamado quando <xref:System.Activities.Tracking.TrackingRecord> é emitida em runtime de fluxo de trabalho.
@@ -108,6 +111,7 @@ invoker.Extensions.Add(customTrackingParticipant);
 ```
 
 ### <a name="emitting-custom-tracking-records"></a>Emitindo registros de rastreamento personalizadas
+
  Este exemplo também demonstra a capacidade de emitir objetos de <xref:System.Activities.Tracking.CustomTrackingRecord> de uma atividade personalizado de fluxo de trabalho:
 
 - Os objetos de <xref:System.Activities.Tracking.CustomTrackingRecord> são criados e preenchido com dados definidos pelo usuário que são desejados ser emitidos com o registro.
@@ -148,6 +152,6 @@ context.Track(customRecord);
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\CustomTracking`  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [AppFabric que monitora Exemplos](/previous-versions/appfabric/ff383407(v=azure.10))

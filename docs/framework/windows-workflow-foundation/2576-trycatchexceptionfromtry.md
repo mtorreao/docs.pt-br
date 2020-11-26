@@ -2,27 +2,30 @@
 title: 2576 - TryCatchExceptionFromTry
 ms.date: 03/30/2017
 ms.assetid: 47e48973-b17c-4a16-8338-c84b54aa0a6e
-ms.openlocfilehash: cdc48a1a08e997f7bc6a0ad6b93aa13640af9ed3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 722d5206322c2a9abacbca554d489ba2f6efe357
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755643"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96235825"
 ---
 # <a name="2576---trycatchexceptionfromtry"></a>2576 - TryCatchExceptionFromTry
+
 ## <a name="properties"></a>Propriedades  
   
 |||  
 |-|-|  
 |ID|2576|  
 |Palavras-chave|WFActivities|  
-|Nível|Informações|  
+|Nível|Informações do|  
 |Canal|Os aplicativos de servidor de Microsoft-Windows- aplicativo/depuração|  
   
 ## <a name="description"></a>Descrição  
+
  Indica que a atividade de TryCatch capturou uma exceção.  
   
 ## <a name="message"></a>Mensagem  
+
  A atividade “%1 " de TryCatch capturou uma exceção “%2 ".  
   
 ## <a name="details"></a>Detalhes  
