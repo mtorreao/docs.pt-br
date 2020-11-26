@@ -2,12 +2,12 @@
 title: Despejos-.NET
 description: Uma introdução a despejos no .NET.
 ms.date: 10/12/2020
-ms.openlocfilehash: a5f12837e81edc82f420f7b325b0248f9f8989a3
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 56cf4085d10658c828bac39be93eed3f774e00d5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96034800"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242767"
 ---
 # <a name="dumps"></a>Despejos
 
@@ -50,17 +50,6 @@ A tabela a seguir mostra todas as opções que podem ser usadas para `COMPlus_Db
 Talvez você queira coletar um despejo quando o aplicativo ainda não tiver falhado. Por exemplo, se você quiser examinar o estado de um aplicativo que parece estar em um deadlock, a configuração das variáveis de ambiente para coletar despejos na falha não será útil porque o aplicativo ainda está em execução.
 
 Para coletar o despejo em sua própria solicitação, você pode usar o `dotnet-dump` , que é uma ferramenta CLI para coletar e analisar despejos. Para obter mais informações sobre como usá-lo para coletar despejos com o `dotnet-dump` , consulte [dump Collection and Analysis Utility](dotnet-dump.md).
-
-### <a name="types-of-dumps-in-net"></a>Tipos de despejos no .NET
-
-Você pode coletar tipos diferentes de despejo, dependendo da finalidade. Isso pode ser configurado com o `COMPlus_DbgMiniDumpType` ao usar a variável de ambiente ou o `--type` sinalizador quando você estiver usando `dotnet-dump` . A tabela a seguir mostra os tipos de despejos que você pode coletar no .NET.
-
-|Valor|Nome|Descrição|
-|-----|----|-----------|
-|1|`MiniDumpNormal`|Inclua apenas as informações necessárias para capturar rastreamentos de pilha para todos os threads existentes em um processo. Memória e informações de heap de GC limitadas.|
-|2|`MiniDumpWithPrivateReadWriteMemory`|Inclui os heaps do GC e as informações necessárias para capturar rastreamentos de pilha para todos os threads existentes em um processo.|
-|3|`MiniDumpFilterTriage`|Inclua apenas as informações necessárias para capturar rastreamentos de pilha para todos os threads existentes em um processo. Memória e informações de heap de GC limitadas.|
-|4|`MiniDumpWithFullMemory`|Inclua toda a memória acessível no processo. Os dados brutos da memória são incluídos no final, para que as estruturas iniciais possam ser mapeadas diretamente sem as informações de memória bruta. Essa opção pode resultar em um arquivo muito grande.|
 
 ## <a name="analyze-dumps"></a>Analisar despejos
 

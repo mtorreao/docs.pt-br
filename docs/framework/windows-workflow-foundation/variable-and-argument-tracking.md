@@ -2,17 +2,19 @@
 title: Rastreamento de variável e argumento
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
-ms.openlocfilehash: af5c21b75f3238546acac0755ec4e6149ee50d95
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 85cecbfaf1db224152d4582325326f1f80e08266
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552486"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242897"
 ---
 # <a name="variable-and-argument-tracking"></a>Rastreamento de variável e argumento
+
 Para controlar a execução de um fluxo de trabalho, geralmente é útil extrair dados. Isso fornece um contexto extra para acessar uma execução de postagem de registro de rastreamento. Em [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], você pode extrair qualquer variável ou argumento visível no escopo de qualquer atividade em um fluxo de trabalho usando o rastreamento. Controlando os perfis facilitam extrair dados.  
   
 ## <a name="variables-and-arguments"></a>Variáveis e argumentos  
+
  Variáveis e os argumentos são extraídos quando uma atividade se emite um ActivityStateRecord.  Uma variável está disponível para a extração somente se está no escopo da atividade. Uma variável para ser extraído dentro de uma atividade é especificado da seguinte maneira:  
   
 - Se uma variável é especificado pelo nome de variável, então o rastreamento para a variável dentro da atividade sendo controlada e em atividades pai. A variável é procurada no escopo da atividade atual e o escopo pai.  
@@ -38,6 +40,7 @@ Para controlar a execução de um fluxo de trabalho, geralmente é útil extrair
 ```  
   
 ## <a name="protecting-information-stored-within-variables-and-arguments"></a>Informações de proteção armazenada em variáveis e os argumentos  
+
  Uma variável ou um argumento controlado por padrão são feitas visível no runtime de WF. Um desenvolvedor de fluxo de trabalho de protegê-lo pode ser acessado colocando as seguintes etapas:  
   
 1. Criptografar o valor de uma variável.  
@@ -46,7 +49,7 @@ Para controlar a execução de um fluxo de trabalho, geralmente é útil extrair
   
 3. Para participantes personalizados de rastreamento certifique-se de que o código de WF não divulgue informações sigilosas que é armazenada em variáveis ou nos argumentos.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Monitoramento do Windows Server app Fabric](/previous-versions/appfabric/ee677251(v=azure.10))
 - [Monitorando aplicativos com o app Fabric](/previous-versions/appfabric/ee677276(v=azure.10))

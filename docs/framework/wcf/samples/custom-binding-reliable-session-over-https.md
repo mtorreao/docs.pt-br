@@ -2,15 +2,16 @@
 title: Sessão confiável de associação personalizada através de HTTPS
 ms.date: 03/30/2017
 ms.assetid: 16aaa80d-3ffe-47c4-8b16-ec65c4d25f8d
-ms.openlocfilehash: ab2dd4725879ba969afdae8a6423a920a9786125
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: aec9bc11fab71a8e3adfe60e0c19b0ac4a9e3699
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585292"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241883"
 ---
 # <a name="custom-binding-reliable-session-over-https"></a>Sessão confiável de associação personalizada através de HTTPS
-Este exemplo demonstra o uso de segurança de transporte SSL com sessões confiáveis. As sessões confiáveis implementam o protocolo de mensagens WS-Reliable. Você pode ter uma sessão confiável segura, compondo o WS-Security em sessões confiáveis. Mas, às vezes, você pode optar por usar a segurança de transporte HTTP com SSL.  
+
+Este exemplo demonstra o uso de segurança de transporte SSL com sessões confiáveis. As sessões confiáveis implementam o protocolo WS-Reliable mensagens. Você pode ter uma sessão confiável segura, compondo WS-Security em sessões confiáveis. Mas, às vezes, você pode optar por usar a segurança de transporte HTTP com SSL.  
   
 > [!IMPORTANT]
 > Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
@@ -22,7 +23,8 @@ Este exemplo demonstra o uso de segurança de transporte SSL com sessões confi�
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\ReliableSessionOverHttps`  
   
 ## <a name="sample-details"></a>Detalhes de exemplo  
- O SSL garante que os próprios pacotes sejam protegidos. É importante observar que isso é diferente de proteger a sessão confiável usando a conversa WS-Secure.  
+
+ O SSL garante que os próprios pacotes sejam protegidos. É importante observar que isso é diferente de proteger a sessão confiável usando WS-Secure conversa.  
   
  Para usar uma sessão confiável via HTTPS, você deve criar uma associação personalizada. Este exemplo é baseado no [introdução](getting-started-sample.md) que implementa um serviço de calculadora. Uma associação personalizada é criada usando o elemento de associação de sessão confiável e o [\<httpsTransport>](../../configure-apps/file-schema/wcf/httpstransport.md) . A configuração a seguir é da associação personalizada.  
   
@@ -102,7 +104,7 @@ Este exemplo demonstra o uso de segurança de transporte SSL com sessões confi�
   
  O endereço especificado usa o `https://` esquema.  
   
- Como o certificado usado neste exemplo é um certificado de teste criado com MakeCert. exe, um alerta de segurança é exibido quando você tenta acessar um https: address, como `https://localhost/servicemodelsamples/service.svc` , no seu navegador. Para permitir que o cliente do Windows Communication Foundation (WCF) funcione com um certificado de teste em vigor, um código adicional foi adicionado ao cliente para suprimir o alerta de segurança. Esse código e a classe que o acompanham não são necessários ao usar certificados de produção.  
+ Como o certificado usado neste exemplo é um certificado de teste criado com Makecert.exe, um alerta de segurança é exibido quando você tenta acessar um https: address, como `https://localhost/servicemodelsamples/service.svc` , no seu navegador. Para permitir que o cliente do Windows Communication Foundation (WCF) funcione com um certificado de teste em vigor, um código adicional foi adicionado ao cliente para suprimir o alerta de segurança. Esse código e a classe que o acompanham não são necessários ao usar certificados de produção.  
 
 ```csharp
 // This code is required only for test certificates like those created by Makecert.exe.  

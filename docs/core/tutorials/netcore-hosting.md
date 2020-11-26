@@ -4,12 +4,12 @@ description: Saiba como hospedar o runtime do .NET Core a partir do código nati
 author: mjrousos
 ms.topic: how-to
 ms.date: 12/21/2018
-ms.openlocfilehash: 380bfb3aa5e5715fe95e0d7772700bac9ab4a5be
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 79336396de3058e40cf7328e6d92e7e9e54296e9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92160978"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242910"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Escreva um host personalizado do .NET Core para controlar o runtime do .NET a partir de seu código nativo
 
@@ -163,6 +163,7 @@ Por fim, quando o host concluir a execução do código gerenciado, o runtime do
 O CoreCLR não oferece suporte à reinicialização ou descarregamento. Não chame `coreclr_initialize` novamente ou descarregue a biblioteca CoreCLR.
 
 ## <a name="conclusion"></a>Conclusão
+
 Depois que o host for criado, ele poderá ser testado executando-o na linha de comando e passando os argumentos esperados pelo host. Ao especificar o aplicativo .NET Core a ser executado pelo host, lembre-se de usar o arquivo .dll produzido por `dotnet build`. Os executáveis (arquivos .exe) produzidos por `dotnet publish` para aplicativos autossuficientes são, na verdade, o host padrão do .NET Core (para que o aplicativo possa ser iniciado diretamente na linha de comando nos principais cenários). O código de usuário é compilado em uma dll com o mesmo nome.
 
 Se as coisas não funcionarem inicialmente, verifique se *coreclr.dll* está disponível no local esperado pelo host, se todas as bibliotecas de estrutura necessárias estão na lista TPA e se o bit de bits do CoreCLR (32 bits ou 64 bits) corresponde à forma como o host foi criado.
