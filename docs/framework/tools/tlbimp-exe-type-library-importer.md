@@ -11,14 +11,15 @@ helpviewer_keywords:
 - type libraries
 - converting type definitions
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
-ms.openlocfilehash: 4c2cddd78e14d1ae0b04bab07b57fe0ce0f627ca
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6810fc4fbe39fa82a02faa967b1afd8ad9c7a3cc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543362"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244880"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (Importador de Biblioteca de Tipos)
+
 O Importador da Biblioteca de Tipos converte as definições de tipo encontradas dentro de uma biblioteca de tipos COM em definições equivalentes em um assembly do Common Language Runtime. A saída de Tlbimp.exe é um arquivo binário (um assembly) que contém os metadados do runtime para os tipos definidos na biblioteca de tipos original. É possível examinar esse arquivo com ferramentas como [Ildasm.exe](ildasm-exe-il-disassembler.md).  
   
  Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor para Visual Studio (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](developer-command-prompt-for-vs.md).  
@@ -73,6 +74,7 @@ tlbimp tlbFile [options]
 > As opções de linha de comando para Tlbimp.exe não diferenciam maiúsculas de minúsculas e podem ser fornecidas em qualquer ordem. Você só precisa especificar o suficiente da opção para identificá-la com exclusividade. Portanto, **/n** é equivalente a **/nologo** e **/ou:** *outfile.dll* é equivalente a **/out:** *outfile.dll*.  
   
 ## <a name="remarks"></a>Comentários  
+
  Tlbimp.exe realiza conversões em uma biblioteca de tipos ao mesmo tempo. Não é possível usar a ferramenta para gerar informações de tipo para um subconjunto dos tipos definidos dentro de uma única biblioteca de tipos.  
   
  Costuma ser útil ou necessário atribuir [nomes fortes](../../standard/assembly/strong-named.md) a assemblies. Por isso, Tlbimp.exe inclui opções para fornecer as informações necessárias à geração dos assemblies fortemente nomeados. As opções **/keyfile:** e **/keycontainer:** assinam assemblies com nomes fortes. Por isso, é lógico fornecer apenas uma dessas opções por vez.  
@@ -84,6 +86,7 @@ tlbimp tlbFile [options]
  Uma ID de recurso pode ser acrescentada a um arquivo da biblioteca de tipos durante a importação de uma biblioteca de tipos de um módulo que contém várias bibliotecas de tipos. Tlbimp.exe só poderá localizar esse arquivo se estiver no diretório atual ou se você especificar o caminho completo. Consulte o exemplo mais à frente neste tópico.  
   
 ## <a name="examples"></a>Exemplos  
+
  O comando a seguir gera um assembly com o mesmo nome da biblioteca de tipos encontrada em `myTest.tlb` e com a extensão .dll.  
   
 ```console  
@@ -126,14 +129,14 @@ bool SomeMethod();
 void SomeMethod(out bool x);  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Ferramentas](index.md)
-- [Tlbexp.exe (exportador de biblioteca de tipos)](tlbexp-exe-type-library-exporter.md)
+- [Tlbexp.exe (Exportador de Biblioteca de Tipos)](tlbexp-exe-type-library-exporter.md)
 - [Importando uma biblioteca de tipos como um assembly](../interop/importing-a-type-library-as-an-assembly.md)
 - [Resumo da conversão de bibliotecas de tipos em assemblies](/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
 - [Ildasm.exe (desmontador de IL)](ildasm-exe-il-disassembler.md)
 - [Sn.exe (ferramenta de nome forte)](sn-exe-strong-name-tool.md)
-- [Assembly de nome forte](../../standard/assembly/strong-named.md)
+- [Assemblies de nome forte](../../standard/assembly/strong-named.md)
 - [Atributos para importar bibliotecas de tipos para assemblies de interoperabilidade](/previous-versions/dotnet/netframework-4.0/y6a7ak23(v=vs.100))
 - [Prompts de comando](developer-command-prompt-for-vs.md)

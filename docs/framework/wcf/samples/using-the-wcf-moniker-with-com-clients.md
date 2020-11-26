@@ -2,14 +2,15 @@
 title: Usando o WCF Moniker com clientes COM
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: b36b646f650c2a2974c7b0689a9367961075ea14
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: eb2f14db8b58fd182bbe711bf559055659a02652
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553012"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243684"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Usando o WCF Moniker com clientes COM
+
 Este exemplo demonstra como usar o moniker do serviço Windows Communication Foundation (WCF) para integrar serviços Web em ambientes de desenvolvimento baseados em COM, como Microsoft Office Visual Basic for Applications (Office VBA) ou Visual Basic 6,0. Este exemplo consiste em um cliente do Windows Script Host (. vbs), uma biblioteca de cliente de suporte (. dll) e uma biblioteca de serviço (. dll) hospedada pelo Serviços de Informações da Internet (IIS). O serviço é um serviço de calculadora e o cliente COM chama operações matemáticas — adicionar, subtrair, multiplicar e dividir — no serviço. A atividade do cliente fica visível nas janelas da caixa de mensagens.  
   
 > [!NOTE]
@@ -50,6 +51,7 @@ public interface ICalculator
 - Contrato de troca de metadados – o contrato é recuperado em tempo de execução de um ponto de extremidade de intercâmbio de metadados (MEX).  
   
 ## <a name="typed-contract"></a>Contrato digitado  
+
  Para usar o moniker com um uso de contrato tipado, os tipos atribuídos adequadamente para o contrato de serviço devem ser registrados com com. Primeiro, um cliente deve ser gerado usando a [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md). Execute o comando a seguir em um prompt de comando no diretório do cliente para gerar o proxy de tipo.  
   
 ```console  
@@ -77,7 +79,7 @@ gacutil.exe /i client.dll
 > [!NOTE]
 > O moniker do serviço requer apenas o registro do tipo e não usa o proxy para se comunicar com o serviço.  
   
- O aplicativo cliente ComCalcClient. vbs usa a `GetObject` função para construir um proxy para o serviço, usando a sintaxe do moniker do serviço para especificar o endereço, a associação e o contrato para o serviço.  
+ ComCalcClient.vbs aplicativo cliente usa a `GetObject` função para construir um proxy para o serviço, usando a sintaxe do moniker do serviço para especificar o endereço, a associação e o contrato para o serviço.  
   
 ```vbscript
 Set typedServiceMoniker = GetObject(  
@@ -103,9 +105,10 @@ WScript.Echo "Typed service moniker: 100 + 15.99 = " & typedServiceMoniker.Add(1
  Quando você executa o exemplo, a resposta da operação é exibida em uma janela da caixa de mensagem do host de script do Windows. Isso demonstra um cliente COM fazendo chamadas COM usando o moniker tipado para se comunicar com um serviço WCF. Apesar do uso de COM no aplicativo cliente, a comunicação com o serviço consiste apenas em chamadas de serviço Web.  
   
 ## <a name="wsdl-contract"></a>Contrato WSDL  
+
  Para usar o moniker com um contrato WSDL, nenhum registro de biblioteca de cliente é necessário, mas o contrato WSDL para o serviço deve ser recuperado por meio de um mecanismo fora de banda, como usar um navegador para acessar o ponto de extremidade WSDL para o serviço. O moniker pode então acessar esse contrato no momento da execução.  
   
- O aplicativo cliente ComCalcClient. vbs usa o `FileSystemObject` para acessar o arquivo WSDL salvo localmente e, em seguida, usa a `GetObject` função para construir um proxy para o serviço.  
+ O aplicativo cliente ComCalcClient.vbs usa o `FileSystemObject` para acessar o arquivo WSDL salvo localmente e, em seguida, usa a `GetObject` função para construir um proxy para o serviço.  
   
 ```vbscript  
 ' Open the WSDL contract file and read it all into the wsdlContract string  
@@ -148,9 +151,10 @@ WScript.Echo "WSDL service moniker: 145 - 76.54 = " & wsdlServiceMoniker.Subtrac
  Quando você executa o exemplo, a resposta da operação é exibida em uma janela da caixa de mensagem do host de script do Windows. Isso demonstra um cliente COM fazendo chamadas COM usando o moniker com um contrato WSDL para se comunicar com um serviço WCF.  
   
 ## <a name="metadata-exchange-contract"></a>Contrato de troca de metadados  
+
  Para usar o moniker com um contrato MEX, como com o contrato WSDL, nenhum registro de cliente é necessário. O contrato para o serviço é recuperado no momento da execução por meio do uso interno da troca de metadados.  
   
- O aplicativo cliente ComCalcClient. vbs novamente usa a `GetObject` função para construir um proxy para o serviço.  
+ O aplicativo cliente do ComCalcClient.vbs novamente usa a `GetObject` função para construir um proxy para o serviço.  
   
 ```vbscript  
 ' Create a string for the service moniker specifying the address to retrieve the service metadata from  
@@ -203,7 +207,7 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 1. Teste se você pode acessar o serviço usando um navegador digitando o seguinte endereço: `http://localhost/servicemodelsamples/service.svc` . Uma página de confirmação deve ser exibida em resposta.  
   
-2. Execute ComCalcClient. vbs de \Client, de dentro da pasta específica do idioma. A atividade do cliente é exibida nas janelas da caixa de mensagens.  
+2. Execute ComCalcClient.vbs de \Client, a partir da pasta específica do idioma. A atividade do cliente é exibida nas janelas da caixa de mensagens.  
   
 3. Se o cliente e o serviço não puderem se comunicar, consulte [dicas de solução de problemas para exemplos do WCF](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
@@ -231,7 +235,7 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 11. Teste se você pode acessar o serviço do computador cliente usando um navegador.  
   
-12. No computador cliente, inicie o ComCalcClient. vbs.  
+12. No computador cliente, inicie o ComCalcClient.vbs.  
   
 #### <a name="to-clean-up-after-the-sample"></a>Para limpar após o exemplo  
   

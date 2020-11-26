@@ -2,14 +2,15 @@
 title: Validação de cliente
 ms.date: 03/30/2017
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
-ms.openlocfilehash: 6678ef7232b115f2bcb80b5f64621866f82b1f29
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: dee57e039d4510673b7205fd44fa300b24ac1df5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553526"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243307"
 ---
 # <a name="client-validation"></a>Validação de cliente
+
 Os serviços geralmente publicam metadados para habilitar a geração automática e a configuração de tipos de proxy do cliente. Quando o serviço não é confiável, os aplicativos cliente devem validar que os metadados estão em conformidade com a política do aplicativo cliente referente à segurança, às transações, ao tipo de contrato de serviço e assim por diante. O exemplo a seguir demonstra como gravar um comportamento de ponto de extremidade de cliente que valida o ponto de extremidade de serviço para garantir que o ponto de extremidade de serviço seja seguro para uso.  
   
  O serviço expõe quatro pontos de extremidade de serviço. O primeiro ponto de extremidade usa o WSDualHttpBinding, o segundo ponto de extremidade usa a autenticação NTLM, o terceiro ponto de extremidade habilita o fluxo de transações e o quarto ponto de extremidade usa a autenticação baseada em certificado.  
@@ -63,6 +64,6 @@ Os serviços geralmente publicam metadados para habilitar a geração automátic
     > [!NOTE]
     > Esse script não remove certificados de serviço em um cliente ao executar esse exemplo em computadores. Se você tiver executado os exemplos do WCF que usam certificados entre computadores, certifique-se de limpar os certificados de serviço que foram instalados no repositório CurrentUser-TrustedPeople. Para fazer isso, use o seguinte comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>. For example: certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com` .  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Utilizando metadados](../feature-details/using-metadata.md)

@@ -2,14 +2,15 @@
 title: Hospedando um aplicativo de serviço do Windows
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-ms.openlocfilehash: cb952cfcd670a790033fbec70de00a4db2541237
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9f5c78adad34b5fed53a50e85f0361eef469de99
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555842"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243066"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Hospedando um aplicativo de serviço do Windows
+
 Os serviços do Windows (anteriormente conhecidos como serviços do Windows NT) fornecem um modelo de processo especialmente adequado para aplicativos que devem residir em um executável de execução demorada e não exibir nenhuma forma de interface do usuário. O tempo de vida do processo de um aplicativo de serviço do Windows é gerenciado pelo SCM (Gerenciador de controle de serviço), que permite iniciar, parar e pausar aplicativos de serviço do Windows. Você pode configurar um processo de serviço do Windows para iniciar automaticamente quando o computador for iniciado, tornando-o um ambiente de hospedagem adequado para aplicativos "Always on". Para obter mais informações sobre aplicativos de serviço do Windows, consulte [aplicativos de serviço do Windows](https://go.microsoft.com/fwlink/?LinkId=89450).  
   
  Os aplicativos que hospedam serviços de Windows Communication Foundation de longa execução (WCF) compartilham muitas características com os serviços do Windows. Em particular, os serviços WCF são executáveis de servidor de longa execução que não interagem diretamente com o usuário e, portanto, não implementam nenhuma forma de interface do usuário. Dessa forma, hospedar serviços WCF dentro de um aplicativo de serviço do Windows é uma opção para criar aplicativos WCF robustos e de longa execução.  
@@ -36,7 +37,7 @@ Os serviços do Windows (anteriormente conhecidos como serviços do Windows NT) 
   
      Os aplicativos de serviço do Windows que hospedam serviços WCF são implantados e gerenciados da mesma maneira que os aplicativos de serviço do Windows que não usam o WCF.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceProcess>
 - [Passo a passo: criando um aplicativo de Serviço Windows no Designer de componentes](https://go.microsoft.com/fwlink/?LinkId=94875)

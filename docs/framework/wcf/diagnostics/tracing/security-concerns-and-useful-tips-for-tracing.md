@@ -2,22 +2,25 @@
 title: Preocupações de segurança e dicas úteis para rastreamento
 ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
-ms.openlocfilehash: 91a1b4bab3ac47f41821ad69228310c3993cf037
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 415b27f5ac40d097c5bdf7b09d63ce901003f83f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555036"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243871"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>Preocupações de segurança e dicas úteis para rastreamento
+
 Este tópico descreve como você pode proteger informações confidenciais de serem expostas, bem como dicas úteis ao usar o webhost.  
   
 ## <a name="using-a-custom-trace-listener-with-webhost"></a>Usando um ouvinte de rastreamento personalizado com Webhost  
+
  Se estiver escrevendo seu próprio ouvinte de rastreamento, você deve estar ciente da possibilidade de que os rastreamentos possam ser perdidos no caso de um serviço hospedado na Web. Quando o Webhost é reciclado, ele desliga o processo em tempo real enquanto uma duplicata assume. No entanto, os dois processos ainda devem ter acesso ao mesmo recurso por algum tempo, o que depende do tipo de ouvinte. Nesse caso, o `XmlWriterTraceListener` cria um novo arquivo de rastreamento para o segundo processo; enquanto o rastreamento de eventos do Windows gerencia vários processos dentro da mesma sessão e fornece acesso ao mesmo arquivo. Se seu próprio ouvinte não fornecer funcionalidades semelhantes, os rastreamentos poderão ser perdidos quando o arquivo for bloqueado pelos dois processos.  
   
  Você também deve estar ciente de que um ouvinte de rastreamento personalizado pode enviar rastreamentos e mensagens na conexão, por exemplo, para um banco de dados remoto. Como um implantador de aplicativos, você deve configurar ouvintes personalizados com o controle de acesso apropriado. Você também deve aplicar o controle de segurança em qualquer informação pessoal que possa ser exposta no local remoto.  
   
 ## <a name="logging-sensitive-information"></a>Registrando informações confidenciais  
+
  Os rastreamentos contêm cabeçalhos de mensagem quando uma mensagem está no escopo. Quando o rastreamento está habilitado, as informações pessoais em cabeçalhos específicos do aplicativo, como uma cadeia de caracteres de consulta; e as informações de corpo, como um número de cartão de crédito, podem se tornar visíveis nos logs. O implantador de aplicativos é responsável por impor o controle de acesso nos arquivos de configuração e de rastreamento. Se você não quiser que esse tipo de informação fique visível, desabilite o rastreamento ou filtre parte dos dados se desejar compartilhar os logs de rastreamento.  
   
  As dicas a seguir podem ajudá-lo a impedir que o conteúdo de um arquivo de rastreamento seja exposto de forma não intencional:  
@@ -90,6 +93,6 @@ Este tópico descreve como você pode proteger informações confidenciais de se
   
  Além disso, o endereço IP do remetente da mensagem é registrado uma vez por conexão para transportes orientados por conexão e uma vez por mensagem enviada de outra forma. Isso é feito sem o consentimento do remetente. No entanto, esse log só ocorre nas informações ou níveis de rastreamento detalhados, que não são os níveis de rastreamento padrão ou recomendados na produção, exceto para a depuração dinâmica.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Rastreamento](index.md)

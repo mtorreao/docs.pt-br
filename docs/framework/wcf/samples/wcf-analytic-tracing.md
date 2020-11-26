@@ -2,14 +2,15 @@
 title: Rastreamento analítico do WCF
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 13c66fbe1b59158cb9d2ba3829bb12f1180ad576
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 490c67c92407626a67ea8561a378ef3e70266fe2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552973"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243658"
 ---
 # <a name="wcf-analytic-tracing"></a>Rastreamento analítico do WCF
+
 Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no fluxo de rastreamentos analíticos que Windows Communication Foundation (WCF) grava no ETW no [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] . Os rastreamentos analíticos destinam-se a facilitar a visibilidade de seus serviços sem pagar uma penalidade de alto desempenho. Este exemplo mostra como usar as <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> APIs para gravar eventos que se integram aos serviços WCF.  
   
  Para obter mais informações sobre as <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> APIs, consulte <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> .  
@@ -17,9 +18,11 @@ Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no 
  Para saber mais sobre o rastreamento de eventos no Windows, consulte [melhorar a depuração e o ajuste de desempenho com o ETW](/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw).  
   
 ## <a name="disposing-eventprovider"></a>Descartando EventProvider  
+
  Este exemplo usa a <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> classe, que implementa <xref:System.IDisposable?displayProperty=nameWithType> . Ao implementar o rastreamento para um serviço WCF, é provável que você possa usar os <xref:System.Diagnostics.Eventing.EventProvider> recursos do tempo de vida do serviço. Por esse motivo, e para facilitar a leitura, esse exemplo nunca descarta o encapsulado <xref:System.Diagnostics.Eventing.EventProvider> . Se, por algum motivo, seu serviço tiver requisitos diferentes para rastreamento e você precisar descartar esse recurso, você deverá modificar esse exemplo de acordo com as práticas recomendadas para descartar recursos não gerenciados. Para obter mais informações sobre como descartar recursos não gerenciados, consulte [implementando um método Dispose](../../../standard/garbage-collection/implementing-dispose.md).  
   
-## <a name="self-hosting-vs-web-hosting"></a>Hospedagem interna versus hospedagem na Web  
+## <a name="self-hosting-vs-web-hosting"></a>Self-Hosting vs. hospedagem na Web  
+
  Para serviços hospedados na Web, os rastreamentos analíticos do WCF fornecem um campo, chamado "HostReference", que é usado para identificar o serviço que está emitindo os rastreamentos. Os rastreamentos extensível de usuário podem participar desse modelo e este exemplo demonstra as práticas recomendadas para fazer isso. O formato de uma referência de host Web quando o caractere do pipe ' &#124; ' aparece na cadeia de caracteres resultante pode ser qualquer um dos seguintes:  
   
 - Se o aplicativo não estiver na raiz.  
@@ -33,6 +36,7 @@ Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no 
  Para serviços hospedados internamente, os rastreamentos analíticos do WCF não preenchem o campo "HostReference". A `WCFUserEventProvider` classe neste exemplo se comporta de forma consistente quando usada por um serviço hospedado internamente.  
   
 ## <a name="custom-event-details"></a>Detalhes do evento personalizado  
+
  O manifesto do provedor de eventos do ETW do WCF define três eventos que são criados para serem emitidos por autores de serviço do WCF de dentro do código de serviço. A tabela a seguir mostra uma divisão dos três eventos.  
   
 |Evento|Descrição|ID do evento|  
@@ -55,7 +59,7 @@ Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no 
   
      O cliente de teste do WCF (WcfTestClient.exe) está localizado em `\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe` . O dir de instalação padrão do Visual Studio 2012 é `C:\Program Files\Microsoft Visual Studio 10.0` .  
   
-5. No cliente de teste do WCF, adicione o serviço selecionando **arquivo**e, em seguida, **Adicionar serviço**.  
+5. No cliente de teste do WCF, adicione o serviço selecionando **arquivo** e, em seguida, **Adicionar serviço**.  
   
      Adicione o endereço do ponto de extremidade na caixa de entrada.  
   
@@ -67,13 +71,13 @@ Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no 
   
      Antes de invocar o serviço, inicie Visualizador de Eventos e verifique se o log de eventos está escutando eventos emitidos do serviço WCF.  
   
-8. No menu **Iniciar** , selecione **Ferramentas administrativas**e, em seguida, **Visualizador de eventos**. Habilite os logs **analíticos** e de **depuração** .  
+8. No menu **Iniciar** , selecione **Ferramentas administrativas** e, em seguida, **Visualizador de eventos**. Habilite os logs **analíticos** e de **depuração** .  
   
-9. No modo de exibição de árvore no Visualizador de Eventos, navegue até **Visualizador de eventos**, **logs de aplicativos e serviços**, **Microsoft**, **Windows**e, em seguida, **servidor de aplicativos-aplicativos**. Clique com o botão direito do mouse em **servidor de aplicativos**, selecione **Exibir**e, em seguida, **Mostrar logs analíticos e de depuração**.  
+9. No modo de exibição de árvore no Visualizador de Eventos, navegue até **Visualizador de eventos**, **logs de aplicativos e serviços**, **Microsoft**, **Windows** e, em seguida, **servidor de aplicativos-aplicativos**. Clique com o botão direito do mouse em **servidor de aplicativos**, selecione **Exibir** e, em seguida, **Mostrar logs analíticos e de depuração**.  
   
      Verifique se a opção **Mostrar logs analíticos e de depuração** está marcada. Habilite o log **analítico** .  
   
-     No modo de exibição de árvore no Visualizador de Eventos, navegue até **Visualizador de eventos**, **logs de aplicativos e serviços**, **Microsoft**, **Windows**, **servidor de aplicativos-aplicativos**e, em seguida, **análise**. Clique com o botão direito do mouse em **analítica** e selecione **habilitar log**.  
+     No modo de exibição de árvore no Visualizador de Eventos, navegue até **Visualizador de eventos**, **logs de aplicativos e serviços**, **Microsoft**, **Windows**, **servidor de aplicativos-aplicativos** e, em seguida, **análise**. Clique com o botão direito do mouse em **analítica** e selecione **habilitar log**.  
   
 10. Testar o serviço usando a Test usuário.  
   
@@ -99,14 +103,15 @@ Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no 
   
 1. Abra o **Visualizador de Eventos**.  
   
-2. Navegue até **Visualizador de eventos**, **logs de aplicativos e serviços**, **Microsoft**, **Windows**e, em seguida, aplicativos **-Server-** Applications. Clique com o botão direito do mouse em **analítica** e selecione **desabilitar log**.  
+2. Navegue até **Visualizador de eventos**, **logs de aplicativos e serviços**, **Microsoft**, **Windows** e, em seguida, aplicativos **-Server-** Applications. Clique com o botão direito do mouse em **analítica** e selecione **desabilitar log**.  
   
-3. Navegue até **Visualizador de eventos**, **logs de aplicativos e serviços**, **Microsoft**, **Windows**, **Application-Server-Applications**e, em seguida, **análise**. Clique com o botão direito do mouse em **analítica** e selecione **limpar log**.  
+3. Navegue até **Visualizador de eventos**, **logs de aplicativos e serviços**, **Microsoft**, **Windows**, **Application-Server-Applications** e, em seguida, **análise**. Clique com o botão direito do mouse em **analítica** e selecione **limpar log**.  
   
 4. Clique em **limpar** para limpar os eventos.  
   
 ## <a name="known-issue"></a>Problema conhecido  
- Há um problema conhecido no **Visualizador de eventos** em que pode falhar ao decodificar eventos ETW. Você pode ver uma mensagem de erro que diz: "a descrição para a ID \<id> do evento da origem Microsoft-Windows-Application Server – Applications não pode ser encontrada. O componente que gera esse evento não está instalado no computador local ou a instalação está corrompida. Você pode instalar ou reparar o componente no computador local. " Se você encontrar esse erro, selecione **Atualizar** no menu **ações** . O evento deve então ser decodificado corretamente.  
+
+ Há um problema conhecido no **Visualizador de eventos** em que pode falhar ao decodificar eventos ETW. Você pode ver uma mensagem de erro que diz: "a descrição para a ID \<id> de evento da origem Microsoft-Windows-Application Server-Applications não pode ser encontrada. O componente que gera esse evento não está instalado no computador local ou a instalação está corrompida. Você pode instalar ou reparar o componente no computador local. " Se você encontrar esse erro, selecione **Atualizar** no menu **ações** . O evento deve então ser decodificado corretamente.  
   
 > [!IMPORTANT]
 > Os exemplos podem mais ser instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
@@ -117,6 +122,6 @@ Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no 
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTrace`  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [AppFabric que monitora Exemplos](/previous-versions/appfabric/ff383407(v=azure.10))

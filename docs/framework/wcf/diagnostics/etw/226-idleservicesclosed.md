@@ -2,27 +2,30 @@
 title: 226 - IdleServicesClosed
 ms.date: 03/30/2017
 ms.assetid: b5e72de3-33c6-46a2-998a-3809b520bb30
-ms.openlocfilehash: d41cf1b4d4bfd59bfac99afa9a2fe5d5ebbaffac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7563244fead615c0e5fc42cfc341480fab6702f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61596564"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243528"
 ---
 # <a name="226---idleservicesclosed"></a>226 - IdleServicesClosed
+
 ## <a name="properties"></a>Propriedades  
   
 |||  
 |-|-|  
 |ID|226|  
-|Palavras-chave|HealthMonitoring, WebHost|  
+|Palavras-chave|HealthMonitoring, Webhost|  
 |Nível|LogAlways|  
 |Canal|Os aplicativos de servidor de Microsoft-Windows- aplicativo/analítico|  
   
 ## <a name="description"></a>Descrição  
- Esse evento é emitido quando serviços ociosos são fechados.  
+
+ Esse evento é emitido quando os serviços ociosos são fechados.  
   
 ## <a name="message"></a>Mensagem  
- Serviços de ociosidade %1 fora %2 total ativado serviços fechados.  
+
+ %1 serviços ociosos fora do total %2 serviços ativados fechados.  
   
 ## <a name="details"></a>Detalhes
