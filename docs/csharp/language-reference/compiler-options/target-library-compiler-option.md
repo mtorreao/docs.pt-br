@@ -10,10 +10,10 @@ helpviewer_keywords:
 - /target compiler options [C#], /target:library
 ms.assetid: c5670e88-2126-47c1-8d1c-217923837d17
 ms.openlocfilehash: 0f5b1e1bec8fd601bf111e1c2c64adf22d0a064e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91193719"
 ---
 # <a name="-targetlibrary-c-compiler-options"></a>-target:library (opções do compilador C#)
@@ -54,7 +54,7 @@ A opção **-target:library** faz com que o compilador crie uma DLL (biblioteca 
 csc -target:library in.cs  
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [-Target (opções do compilador C#)](./target-compiler-option.md)
 - [Opções do compilador de C#](./index.md)

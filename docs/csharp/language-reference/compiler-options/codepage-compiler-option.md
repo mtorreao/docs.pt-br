@@ -10,10 +10,10 @@ helpviewer_keywords:
 - -codepage compiler option [C#]
 ms.assetid: 75942989-b69a-4308-90a0-840c73d2c478
 ms.openlocfilehash: eda4ce5604beb25ae2d72ac94fbbe7dde9695820
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91196800"
 ---
 # <a name="-codepage-c-compiler-options"></a>-codepage (opções do compilador C#)
@@ -39,7 +39,7 @@ Esta opção especifica qual página de código deve ser usada durante a compila
   
  Essa opção do compilador não está disponível no Visual Studio e não pode ser alterada programaticamente.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Opções do compilador de C#](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

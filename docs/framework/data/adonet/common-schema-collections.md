@@ -3,10 +3,10 @@ title: Coleções de esquema comuns
 ms.date: 03/30/2017
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
 ms.openlocfilehash: f822de27e53554aba4011a701f59a8feda847c67
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91203807"
 ---
 # <a name="common-schema-collections"></a>Coleções de esquema comuns
@@ -79,7 +79,7 @@ As coleções de esquema comuns são as coleções de esquema que são implement
 |IsLiteralSupported|bool|true – o tipo de dados pode ser expresso como um literal<br /><br /> false – o tipo de dados não pode ser expresso como um literal|  
 |LiteralPrefix|string|O prefixo aplicado a um literal específico.|  
 |LiteralSuffix|string|O sufixo aplicado a um literal específico.|  
-|NativeDataType|String|NativeDataType é um OLE DB coluna específica para expor o tipo de OLE DB do tipo de dados.|  
+|NativeDataType|Cadeia de caracteres|NativeDataType é um OLE DB coluna específica para expor o tipo de OLE DB do tipo de dados.|  
   
 ## <a name="restrictions"></a>Restrições  
 
@@ -100,7 +100,7 @@ As coleções de esquema comuns são as coleções de esquema que são implement
 |----------------|--------------|-----------------|  
 |ReservedWord|string|Palavra reservada específica do provedor.|  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Recuperando informações de esquema de banco de dados](retrieving-database-schema-information.md)
 - [GetSchema e coleções de esquema](getschema-and-schema-collections.md)

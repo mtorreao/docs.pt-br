@@ -4,10 +4,10 @@ description: Descreve o suporte do C# a descartes, que são variáveis descartá
 ms.technology: csharp-fundamentals
 ms.date: 09/22/2020
 ms.openlocfilehash: baa7c559095460cf747cb5c8f7ad581270893bd7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "95698800"
 ---
 # <a name="discards---c-guide"></a>Descartes – Guia do C#

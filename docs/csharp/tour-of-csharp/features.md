@@ -3,10 +3,10 @@ title: Um tour pelo C# – áreas de linguagem principal
 description: Novato em C#? Conheça os fundamentos da linguagem.
 ms.date: 08/06/2020
 ms.openlocfilehash: a73399643ada05a4bfb17fadd17bf3267514e99d
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "93400742"
 ---
 # <a name="major-language-areas"></a>Principais áreas de linguagem
@@ -36,7 +36,7 @@ O tipo do elemento de uma matriz pode ser qualquer tipo, incluindo um tipo de ma
 
 A primeira linha cria uma matriz com três elementos, cada um do tipo `int[]`, e cada um com um valor inicial de `null`. Em seguida, as linhas seguintes inicializam os três elementos com referências a instâncias de matriz individuais de comprimentos variáveis.
 
-O `new` operador permite que os valores iniciais dos elementos da matriz sejam especificados usando um _*_inicializador de matriz_*_ , que é uma lista de expressões gravadas entre os delimitadores `{` e `}` . O exemplo a seguir aloca e inicializa um `int[]` com três elementos.
+O `new` operador permite que os valores iniciais dos elementos da matriz sejam especificados usando um _*_inicializador de matriz_*_, que é uma lista de expressões gravadas entre os delimitadores `{` e `}` . O exemplo a seguir aloca e inicializa um `int[]` com três elementos.
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="InitializeArray":::
 

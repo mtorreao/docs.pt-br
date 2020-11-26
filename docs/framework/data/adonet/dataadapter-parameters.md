@@ -7,10 +7,10 @@ dev_langs:
 - vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
 ms.openlocfilehash: 1264d678b4823149498150f13d8783a82890f6a0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91177704"
 ---
 # <a name="dataadapter-parameters"></a>Parâmetros DataAdapter
@@ -51,7 +51,7 @@ parameter.SourceVersion = DataRowVersion.Original
   
 |Enumeração DataRowVersion|Descrição|  
 |--------------------------------|-----------------|  
-|`Current`|O parâmetro usa o valor atual da coluna. Esse é o padrão.|  
+|`Current`|O parâmetro usa o valor atual da coluna. Este é o padrão.|  
 |`Default`|O parâmetro usa o `DefaultValue` da coluna.|  
 |`Original`|O parâmetro usa o valor original da coluna.|  
 |`Proposed`|O parâmetro usa um valor proposto.|  
@@ -167,9 +167,9 @@ adapter.Fill(customers, "Customers");
 ```  
   
 > [!NOTE]
-> Se um nome de parâmetro não for fornecido para um parâmetro, o parâmetro receberá um nome padrão incremental do parâmetro*N* *,* começando com "parâmetro1". Recomendamos que você evite o parâmetro*N* Convenção de nomenclatura ao fornecer um nome de parâmetro, pois o nome que você fornece pode entrar em conflito com um nome de parâmetro padrão existente no `ParameterCollection` . Se o nome fornecido já existir, será gerada uma exceção.  
+> Se um nome de parâmetro não for fornecido para um parâmetro, o parâmetro receberá um nome padrão incremental do parâmetro *N* *,* começando com "parâmetro1". Recomendamos que você evite o parâmetro *N* Convenção de nomenclatura ao fornecer um nome de parâmetro, pois o nome que você fornece pode entrar em conflito com um nome de parâmetro padrão existente no `ParameterCollection` . Se o nome fornecido já existir, será gerada uma exceção.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [DataAdapters e DataReaders](dataadapters-and-datareaders.md)
 - [Comandos e parâmetros](commands-and-parameters.md)

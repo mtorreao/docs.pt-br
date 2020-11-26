@@ -3,10 +3,10 @@ title: Métricas do ML.NET
 description: Entenda as métricas que são usadas para avaliar o desempenho de um modelo do ML.NET
 ms.date: 12/17/2019
 ms.openlocfilehash: 046e0a3feea2da702dfef5ca9ce4f498fce5fb26
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91804816"
 ---
 # <a name="evaluate-your-mlnet-model-with-metrics"></a>Avaliar seu modelo ML.NET com métricas
@@ -23,7 +23,7 @@ Por exemplo, para a tarefa de classificação, o modelo é avaliado medindo o qu
 |-----------|-----------------------|-----------|
 | **Precisão** |  [Precisão](https://en.wikipedia.org/wiki/Accuracy_and_precision#In_binary_classification) é a proporção de previsões corretas com um conjunto de dados de teste. É a taxa do número de previsões corretas para o número total de amostras de entrada. Ele funciona bem se houver um número semelhante de amostras que pertencem a cada classe.| **Quanto mais próximo de 1,00, melhor**. Mas exatamente 1,00 indica um problema (geralmente: vazamento de rótulo/destino, ajuste excessivo ou teste com os dados de treinamento). Quando os dados de teste são desequilibrados (em que a maioria das instâncias pertencem a uma das classes), o conjunto é pequeno ou a abordagem de pontuações 0, 0 ou 1, 0, a precisão não captura realmente a eficácia de um classificador e você precisa verificar métricas adicionais. |
 | **AUC** |    [aucROC](https://en.wikipedia.org/wiki/Receiver_operating_characteristic) ou *Area sob a curva* mede a área sob a curva criada examinando a taxa real positiva versus a taxa de falsos positivos.  |   **Quanto mais próximo de 1,00, melhor**. Deve ser maior que 0,50 para que um modelo seja aceitável. Um modelo com AUC de 0,50 ou menos é inúteis. |
-| **AUCPR** | aucPR ou *área sob a curva de uma curva de recall de precisão*: medida útil do sucesso da previsão quando as classes são desbalanceadas (conjuntos de valores altamente distorcidos). |  **Quanto mais próximo de 1,00, melhor**. Pontuações elevadas próximas de 1,00 mostram que o classificador retorna resultados precisos (precisão alta), além de retornar uma maioria de todos os resultados positivos (recall alto). |
+| **AUCPR** | aucPR ou *área sob a curva de uma curva de Precision-Recall*: medida útil do sucesso da previsão quando as classes são desbalanceadas (conjuntos de valores altamente distorcidos). |  **Quanto mais próximo de 1,00, melhor**. Pontuações elevadas próximas de 1,00 mostram que o classificador retorna resultados precisos (precisão alta), além de retornar uma maioria de todos os resultados positivos (recall alto). |
 | **Pontuação F1** | A [pontuação F1](https://en.wikipedia.org/wiki/F1_score), também conhecida como *pontuação F balanceada ou medida F*. É a média harmônica da precisão e do recall. A pontuação F1 é útil quando você deseja buscar um equilíbrio entre a precisão e o recall.| **Quanto mais próximo de 1,00, melhor**.  Uma pontuação F1 atinge seu melhor valor em 1,00 e o pior em 0,00. Ela informa o nível de precisão do classificador. |
 
 Para obter mais detalhes sobre as métricas de classificação binária, leia os artigos a seguir:
@@ -59,7 +59,7 @@ Para obter mais detalhes sobre métricas de classificação multiclasse, leia os
 
 As tarefas de regressão e de recomendação preveem um número. No caso de regressão, o número pode ser qualquer propriedade de saída influenciada pelas propriedades de entrada. Para recomendação, o número geralmente é um valor de classificação (entre 1 e 5, por exemplo) ou uma recomendação Sim/não (representada por 1 e 0, respectivamente).
 
-| Métrica   |      Descrição      |  Procurar |
+| Metric   |      Descrição      |  Procurar |
 |----------|-----------------------|-----------|
 | **R quadrado** |  O [R2 (R quadrado)](https://en.wikipedia.org/wiki/Coefficient_of_determination) ou *coeficiente de determinação* representa a capacidade de previsão do modelo como um valor entre -inf e 1,00. 1,00 significa que há um ajuste perfeito e o ajuste pode ser arbitrariamente ruim. Portanto, as pontuações podem ser negativas. Uma pontuação de 0,00 significa quo modelo está adivinhando o valor esperado para o rótulo. R2 mede o quão próximos os valores de dados de teste reais são dos valores previstos. | **Quanto mais próximo de 1,00, melhor a qualidade**. No entanto, às vezes, valores de R quadrado baixos (por exemplo, 0,50) podem ser totalmente normais suficientemente bons para seu cenário, enquanto valores de R quadrado altos nem sempre são bons. Convém sempre suspeitar. |
 | **Perda absoluta** |  A [perda absoluta](https://en.wikipedia.org/wiki/Mean_absolute_error) ou *MAE (erro de média absoluta)* mede o quão próximas as previsões são dos resultados reais. É a média de todos os erros do modelo, em que o erro do modelo é a distância absoluta entre o valor de rótulo previsto e o valor de rótulo correto. Esse erro de previsão é calculado para cada registro do conjunto de dados de teste. Por fim, o valor médio é calculado para todos os erros absolutos gravados.| **Quanto mais próximo de 0,00, melhor a qualidade.** O erro de média absoluta usa a mesma escala que os dados que estão sendo medidos (não é normalizado para um intervalo específico). Perda absoluta, perda quadrática e perda de RMS somente podem ser usadas para fazer comparações entre modelos para o mesmo conjunto de dados ou com um conjunto de dados com uma distribuição de valor de rótulo similar. |
@@ -76,7 +76,7 @@ Para obter mais detalhes sobre as métricas de regressão, leia os artigos a seg
 
 ## <a name="evaluation-metrics-for-clustering"></a>Métricas de avaliação para clustering
 
-| Métrica   |      Descrição      |  Procurar |
+| Metric   |      Descrição      |  Procurar |
 |----------|-----------------------|-----------|
 |**Distância média**|Média da distância entre os pontos de dados e o centro do seu cluster atribuído. A distância média é uma medida de proximidade dos pontos de dados para o cluster de centróides. É uma medida de quão ' rígida ' o cluster é.|Os valores mais próximos de **0** são melhores. Quanto mais próximo de zero for a distância média, mais clusterizado os dados serão. No entanto, observe que essa métrica diminuirá se o número de clusters for aumentado e, no caso extremo (em que cada ponto de dados distinto for seu próprio cluster), ele será igual a zero.
 |**Davies índice Bouldin**|A taxa média de distâncias dentro do cluster para distâncias entre clusters. Quanto mais estreita for o cluster, e mais distantes os clusters forem, menor será o valor.|Os valores mais próximos de **0** são melhores. Os clusters que estão mais distantes e menos dispersos resultarão em uma pontuação melhor.|
@@ -84,14 +84,14 @@ Para obter mais detalhes sobre as métricas de regressão, leia os artigos a seg
 
 ## <a name="evaluation-metrics-for-ranking"></a>Métricas de avaliação para classificação
 
-| Métrica   |      Descrição      |  Procurar |
+| Metric   |      Descrição      |  Procurar |
 |----------|-----------------------|-----------|
-|**Ganhos cumulativos com desconto**|O DCG (lucro cumulativo com desconto) é uma medida de qualidade de classificação. Ele é derivado de duas suposições. Um: itens altamente relevantes são mais úteis quando aparecem acima na ordem de classificação. Dois: a utilidade controla a relevância, quanto maior a relevância, mais útil é um item. O lucro cumulativo com desconto é calculado para uma determinada posição na ordem de classificação. Ele soma a importância da relevância dividida pelo logaritmo do índice de classificação até a posição de interesse. Ele é calculado usando $ \ sum_ {i = 0} ^ {p} \frac {rel_i} {\ log_ {e} {i + 1}} $ relevância as gradações são fornecidas a um algoritmo de treinamento de classificação como rótulos de verdade de terra. Um valor de DCG é fornecido para cada posição na tabela de classificação, portanto, o nome **obtém ganhos**cumulativos. |**Valores mais altos são melhores**|
+|**Ganhos cumulativos com desconto**|O DCG (lucro cumulativo com desconto) é uma medida de qualidade de classificação. Ele é derivado de duas suposições. Um: itens altamente relevantes são mais úteis quando aparecem acima na ordem de classificação. Dois: a utilidade controla a relevância, quanto maior a relevância, mais útil é um item. O lucro cumulativo com desconto é calculado para uma determinada posição na ordem de classificação. Ele soma a importância da relevância dividida pelo logaritmo do índice de classificação até a posição de interesse. Ele é calculado usando $ \ sum_ {i = 0} ^ {p} \frac {rel_i} {\ log_ {e} {i + 1}} $ relevância as gradações são fornecidas a um algoritmo de treinamento de classificação como rótulos de verdade de terra. Um valor de DCG é fornecido para cada posição na tabela de classificação, portanto, o nome **obtém ganhos** cumulativos. |**Valores mais altos são melhores**|
 |**Ganhos cumulativos descontados normalizados**|Normalizar DCG permite que a métrica seja comparada para listas de classificação de diferentes comprimentos|**Valores mais próximos de 1 são melhores**|
 
 ## <a name="evaluation-metrics-for-anomaly-detection"></a>Métricas de avaliação para detecção de anomalias
 
-| Métrica   |      Descrição      |  Procurar |
+| Metric   |      Descrição      |  Procurar |
 |----------|-----------------------|-----------|
 |**Área sob curva ROC**|A área sob a curva operador de receptor mede o quão bem o modelo separa os pontos de dados anormais e usuais.|**Os valores mais próximos de 1 são melhores**. Somente valores maiores que 0,5 demonstram a eficácia do modelo. Os valores de 0,5 ou abaixo indicam que o modelo não é melhor que alocar aleatoriamente as entradas para categorias anormais e usuais|
 |**Taxa de detecção em contagem de falsos positivos**|Taxa de detecção em falso positivo contagem é a taxa do número de anomalias identificadas corretamente para o número total de anomalias em um conjunto de teste, indexadas por cada falso positivo. Ou seja, há um valor para taxa de detecção na contagem de falsos positivos para cada item falso positivo.|**Os valores mais próximos de 1 são melhores**. Se não houver nenhum positivo falso, esse valor será 1|
