@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 6a6def8fc10f04b89aa8d8c735025b01f9b6ddfb
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 376ec2b840bc17c79ed1f27c17a8ddd22c37a0f4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420754"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96245335"
 ---
 # <a name="ixclrdataprocess-interface"></a>Interface IXCLRDataProcess
 
@@ -32,6 +32,7 @@ Fornece métodos para consultar informações sobre um processo.
 
 | Método                                                                                                                                               | Descrição                                                                                     |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| [GetRuntimeNameByAddress](ixclrdataprocess-getruntimenamebyaddress-method.md)                     | Obtém um nome para o endereço fornecido.                                                               |
 | [GetAppDomainByUniqueId](ixclrdataprocess-getappdomainbyuniqueid-method.md)                       | Obtém um `AppDomain` em um processo por sua ID exclusiva.                                              |
 | [StartEnumModules](ixclrdataprocess-startenummodules-method.md)                                   | Fornece um identificador para enumerar os módulos de um processo.                                        |
 | [EnumModule](ixclrdataprocess-enummodule-method.md)                                               | Enumera os módulos desse processo.                                                         |

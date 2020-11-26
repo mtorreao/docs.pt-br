@@ -2,17 +2,19 @@
 title: Esquema de base de dados de persistência
 ms.date: 03/30/2017
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
-ms.openlocfilehash: 04b57789e7c1ab6bfebd9c9b345ee0fb7dfb3e66
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f0ee076aa327f298007dfb18af324fb81c309067
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558232"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96246089"
 ---
 # <a name="persistence-database-schema"></a>Esquema de base de dados de persistência
+
 Este tópico descreve as visualizações públicas suportadas por instância Store de fluxo de trabalho SQL.  
   
 ## <a name="instances-view"></a>O modo de instâncias  
+
  A exibição **instâncias** contém informações gerais sobre todas as instâncias de fluxo de trabalho no banco de dados.  
   
 |Nome da coluna|Tipo de coluna|Descrição|  
@@ -28,9 +30,9 @@ Este tópico descreve as visualizações públicas suportadas por instância Sto
 |CurrentMachine|Nvarchar (128)|Indica que o nome do computador atualmente tem a instância de fluxo de trabalho carregado na memória.|  
 |LastMachine|Nvarchar (450)|Indica o computador o último que carregou a instância de fluxo de trabalho.|  
 |ExecutionStatus|Nvarchar (450)|Indica o estado atual de execução de fluxo de trabalho. Os Estados possíveis incluem **execuções**, **ociosas**, **fechadas**.|  
-|IsInitialized|bit|Indica se a instância de fluxo de trabalho foi inicializada. Uma instância inicializada de fluxo de trabalho é uma instância de fluxo de trabalho que é mantido pelo menos uma vez.|  
-|IsSuspended|bit|Indica se a instância de fluxo de trabalho foi suspendida.|  
-|IsCompleted|bit|Indica se a instância de fluxo de trabalho terminou de executar. **Observação:**  IIf a propriedade **InstanceCompletionAction** é definida como **DeleteAll**, as instâncias são removidas da exibição após a conclusão.|  
+|IsInitialized|Bit|Indica se a instância de fluxo de trabalho foi inicializada. Uma instância inicializada de fluxo de trabalho é uma instância de fluxo de trabalho que é mantido pelo menos uma vez.|  
+|IsSuspended|Bit|Indica se a instância de fluxo de trabalho foi suspendida.|  
+|IsCompleted|Bit|Indica se a instância de fluxo de trabalho terminou de executar. **Observação:**  IIf a propriedade **InstanceCompletionAction** é definida como **DeleteAll**, as instâncias são removidas da exibição após a conclusão.|  
 |EncodingOption|TinyInt|Descreve a codificação usada para serializar as propriedades de dados.<br /><br /> -0 – sem codificação<br />-1 – GzipStream|  
 |ReadWritePrimitiveDataProperties|Varbinary (máximo)|Contém serializou as propriedades de dados de instância que serão fornecidos de volta para o runtime de fluxo de trabalho que a instância é carregada.<br /><br /> Cada propriedade primitiva é um tipo nativo de CLR, o que significa que qualquer conjunto especial é necessário para desserializar a operação.|  
 |WriteOnlyPrimitiveDataProperties|Varbinary (máximo)|Contém serializou as propriedades de dados de instância que não são fornecidas de volta para o runtime de fluxo de trabalho que a instância é carregada.<br /><br /> Cada propriedade primitiva é um tipo nativo de CLR, o que significa que qualquer conjunto especial é necessário para desserializar a operação.|  
@@ -38,7 +40,7 @@ Este tópico descreve as visualizações públicas suportadas por instância Sto
 |WriteOnlyComplexDataProperties|Varbinary (máximo)|Contém serializou as propriedades de dados de instância que não são fornecidas de volta para o runtime de fluxo de trabalho que a instância é carregada.<br /><br /> Desserialização um exigiria conhecimento de todos os tipos de objeto armazenados nesta operação.|  
 |IdentityName|Nvarchar(max)|O nome da definição de fluxo de trabalho.|  
 |IdentityPackage|Nvarchar(max)|Informações de pacote fornecida quando o fluxo de trabalho foi criado (como o nome assembly).|  
-|Build|BigInt|O número de compilação de versão de fluxo de trabalho.|  
+|Compilação|BigInt|O número de compilação de versão de fluxo de trabalho.|  
 |Principal|BigInt|O número de versão principal de fluxo de trabalho.|  
 |Secundária|BigInt|O menor número de versão de fluxo de trabalho.|  
 |Revisão|BigInt|O número de revisão de versão de fluxo de trabalho.|  
@@ -47,6 +49,7 @@ Este tópico descreve as visualizações públicas suportadas por instância Sto
 > A exibição **instâncias** também contém um gatilho DELETE. Os usuários com as permissões apropriadas podem executar instruções de exclusão nesta exibição que removerá vigorosa as instâncias de fluxo de trabalho de base de dados. Recomendamos excluir diretamente de exibição somente como um recurso o último como excluir uma instância sob o runtime de fluxo de trabalho pode levar a consequências não intencionais. Em vez disso, use o ponto final de gerenciamento de instância de fluxo de trabalho para que o runtime de fluxo de trabalho finalizar a instância. Se você deseja excluir um grande número de instâncias de exibição, certifique-se de que não há nenhum runtime ativa que pode operar nessas instâncias.  
   
 ## <a name="servicedeployments-view"></a>O modo de ServiceDeployments  
+
  A exibição de **implantações** contém informações de implantação para todos os serviços de fluxo de trabalho hospedados na Web (IIS/WAS). Cada instância de fluxo de trabalho hospedada na Web conterá um **serviceInstance que se** refere a uma linha nessa exibição.  
   
 |Nome da coluna|Tipo de coluna|Descrição|  
@@ -65,6 +68,7 @@ Este tópico descreve as visualizações públicas suportadas por instância Sto
 2. Qualquer tentativa de excluir uma linha de imdeployment que é referenciada por entradas no modo de exibição de **instâncias** resultará em uma operação não operacional. Você só pode excluir linhas de ServiceDeployment com referências zero.  
   
 ## <a name="instancepromotedproperties-view"></a>O modo de InstancePromotedProperties  
+
  A exibição **InstancePromotedProperties** contém informações para todas as propriedades promovidas que são especificadas pelo usuário. Uma propriedade promovida funciona como uma propriedade de primeira classe, que um usuário possa usar em consultas para recuperar instâncias.  Por exemplo, um usuário poderia adicionar uma promoção PurchaseOrder que sempre armazena o custo de um pedido na coluna **value1** . Isso deve permitir um usuário para consultar todos os pedidos de compra cujos custo exceder qualquer valor.  
   
 |Tipo de coluna|Tipo de coluna|Descrição|  
