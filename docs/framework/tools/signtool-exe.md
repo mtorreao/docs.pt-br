@@ -6,14 +6,15 @@ helpviewer_keywords:
 - Sign tool
 - SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
-ms.openlocfilehash: ff330691483b56740ee72e280c1471af4282c638
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 46a7453ff7de0329d9cd7f671dcaa0a3e3e0e54c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282250"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238464"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (Ferramenta de Assinatura)
+
 A Ferramenta de Assinatura é uma ferramenta de linha de comando que assina digitalmente arquivos, verifica assinaturas em arquivos e em arquivos de carimbo de data/hora.  
   
  Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor para Visual Studio (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](developer-command-prompt-for-vs.md).
@@ -55,18 +56,22 @@ signtool [command] [options] [file_name | ...]
 |**/debug**|Exibe informações de depuração.|  
   
 <a name="catdb"></a>
+
 ## <a name="catdb-command-options"></a>Opções do Comando catdb  
+
  A tabela a seguir lista as opções que podem ser usadas com o comando `catdb`.  
   
 |Opção Catdb|Descrição|  
 |------------------|-----------------|  
 |`/d`|Especifica se o banco de dados do catálogo padrão está atualizado. Se as opções `/d` ou `/g` não forem usadas, a Ferramenta de Assinatura atualizará o banco de dados do driver e do componente do sistema.|  
-|`/g` *GUID*|Especifica se o banco de dados do catálogo identificado pelo identificador global exclusivo *GUID* está atualizado.|  
+|`/g`*GUID* do|Especifica se o banco de dados do catálogo identificado pelo identificador global exclusivo *GUID* está atualizado.|  
 |`/r`|Remove os catálogos especificados do banco de dados do catálogo. Se essa opção não for especificada, a Ferramenta de Assinatura adicionará os catálogos especificados ao banco de dados do catálogo.|  
 |`/u`|Especifica se um nome exclusivo é gerado automaticamente para os arquivos de catálogo adicionados. Se necessário, os arquivos do catálogo são renomeados para evitar conflitos de nome com os arquivos de catálogo existentes. Se essa opção não for especificada, a Ferramenta de Assinatura substituirá qualquer catálogo existente que tenha o mesmo nome do catálogo que está sendo adicionado.|  
   
 <a name="sign"></a>
+
 ## <a name="sign-command-options"></a>Opções do Comando sign  
+
  A tabela a seguir lista as opções que podem ser usadas com o comando `sign`.  
   
 |Opções do comando de entrada|Descrição|  
@@ -85,7 +90,7 @@ signtool [command] [options] [file_name | ...]
 |`/kc`  *PrivKeyContainerName*|Especifica o nome do contêiner de chave privada.|  
 |`/n`  *SubjectName*|Especifica o nome do assunto do certificado de assinatura. Esse valor pode ser uma subcadeia de caracteres do nome da entidade inteiro.|  
 |`/nph`|Se compatível, suprime hashes de página para arquivos executáveis. O padrão é determinado pela variável de ambiente SIGNTOOL_PAGE_HASHES e pela versão de wintrust.dll. Essa opção é ignorada para arquivos não PE.|  
-|`/p`  *La*|Especifica a senha a ser usada durante a abertura de um arquivo PFX. (Use a opção `/f` para especificar um arquivo PFX).|  
+|`/p`  *Senha*|Especifica a senha a ser usada durante a abertura de um arquivo PFX. (Use a opção `/f` para especificar um arquivo PFX).|  
 |`/p7` *Caminho*|Especifica se um arquivo PKCS (Public Key Cryptography Standards) #7 é produzido para cada arquivo de conteúdo especificado. Arquivos de #7 PKCS são nomeados *path* \\ *filename*. P7.|  
 |`/p7ce` *Valor*|Especifica opções para o conteúdo de PKCS #7 assinado. Defina *Value* como “Embedded” para inserir o conteúdo assinado no arquivo PKCS #7 ou como “DetachedSignedData” para produzir a parte de dados assinada de um arquivo PKCS #7 desanexado. Se a opção `/p7ce` não for usada, o conteúdo assinado será inserido por padrão.|  
 |`/p7co` *\<OID>*|Especifica o OID (identificador de objeto) que identifica o conteúdo assinado de PKCS #7.|  
@@ -103,7 +108,9 @@ signtool [command] [options] [file_name | ...]
  Para obter exemplos de uso, consulte [Using SignTool to Sign a File](/windows/desktop/SecCrypto/using-signtool-to-sign-a-file) (Usando a SignTool para assinar um arquivo).  
   
 <a name="TimeStamp"></a>
+
 ## <a name="timestamp-command-options"></a>Opções de Comando TimeStamp  
+
  A tabela a seguir lista as opções que podem ser usadas com o comando `TimeStamp`.  
   
 |Opção do carimbo de data/hora|Descrição|  
@@ -117,6 +124,7 @@ signtool [command] [options] [file_name | ...]
  Para obter um exemplo de uso, consulte [Adding Time Stamps to Previously Signed Files](/windows/desktop/SecCrypto/adding-time-stamps-to-previously-signed-files) (Adicionar carimbos de data/hora aos arquivos assinados anteriormente).  
   
 <a name="Verify"></a>
+
 ## <a name="verify-command-options"></a>Verificar Opções de Comando  
   
 |Opção Verificar|Descrição|  
@@ -132,7 +140,7 @@ signtool [command] [options] [file_name | ...]
 |`/hash` (`SHA1`&#124;`SHA256`)|Especifica um algoritmo de hash opcional a ser usado durante a procura de um arquivo em um catálogo.|  
 |`/kp`|Especifica se a verificação deve ser realizada com a política de assinatura do driver do modo kernel.|  
 |`/ms`|Usa várias semânticas de verificação. Esse é o comportamento padrão de uma chamada [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust) no Windows 8 e versões posteriores.|  
-|`/o` *Versão*|Verifica o arquivo pela versão do sistema operacional. *Version* tem o seguinte formato: *PlatformID* : *VerMajor*. *VerMinor*. *BuildNumber*. *PlatformID* representa o valor subjacente de um membro de enumeração <xref:System.PlatformID>. **Importante:** o uso da opção `/o` é recomendado. Se `/o` não for especificado, SignTool.exe poderá retornar resultados inesperados. Por exemplo, se você não incluir a opção `/o`, os catálogos do sistema validados corretamente em um sistema operacional anterior poderá não ser validado corretamente em um sistema operacional mais novo.|  
+|`/o` *Versão*|Verifica o arquivo pela versão do sistema operacional. *Version* tem o seguinte formato: *PlatformID*:*VerMajor*.*VerMinor*.*BuildNumber*. *PlatformID* representa o valor subjacente de um membro de enumeração <xref:System.PlatformID>. **Importante:** o uso da opção `/o` é recomendado. Se `/o` não for especificado, SignTool.exe poderá retornar resultados inesperados. Por exemplo, se você não incluir a opção `/o`, os catálogos do sistema validados corretamente em um sistema operacional anterior poderá não ser validado corretamente em um sistema operacional mais novo.|  
 |`/p7`|Verifica arquivos PKCS #7. Nenhuma política existente é usada na validação de PKCS #7. A assinatura é verificada e uma cadeia é compilada para o certificado de assinatura.|  
 |`/pa`|Especifica se a Política de Verificação de Authenticode Padrão deve ser usada. Se a opção `/pa` não for especificada, a Ferramenta de Assinatura usará a Política de Verificação de Driver do Windows. Essa opção não pode ser usada com as opções `catdb`.|  
 |`/pg` *PolicyGUID*|Especifica uma política de verificação por GUID. O *PolicyGUID* corresponde à ActionID da política de verificação. Essa opção não pode ser usada com as opções `catdb`.|  
@@ -143,6 +151,7 @@ signtool [command] [options] [file_name | ...]
  Para obter exemplos de uso, consulte [Using SignTool to Verify a File Signature](/windows/desktop/SecCrypto/using-signtool-to-verify-a-file-signature) (Usando SignTool para verificar a assinatura de um arquivo).  
   
 ## <a name="return-value"></a>Valor Retornado  
+
  A Ferramenta de Assinatura retorna um dos códigos de saída a seguir quando é encerrada.  
   
 |Código de saída|Descrição|  
@@ -152,6 +161,7 @@ signtool [command] [options] [file_name | ...]
 |2|A execução foi concluída com avisos.|  
 
 ## <a name="examples"></a>Exemplos  
+
  O comando a seguir adiciona o arquivo de catálogo MyCatalogFileName.cat aos bancos de dados do componente e de driver do sistema. A opção `/u` gera um nome exclusivo, se necessário, para evitar a substituição de um arquivo de catálogo existente chamado `MyCatalogFileName.cat`.  
   
 ```console  

@@ -2,17 +2,19 @@
 title: 'Serviço: falhas de autenticação e validação de segurança por segundo'
 ms.date: 03/30/2017
 ms.assetid: 4af18009-e778-490b-9ba6-e76485285830
-ms.openlocfilehash: f6dbf7f6da208bde3a9a380d50fd6caf68576f25
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f66e6b90622cf181229938bc4fd877a98cd23a48
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90535905"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236878"
 ---
 # <a name="service-security-validation-and-authentication-failures-per-second"></a>Serviço: falhas de autenticação e validação de segurança por segundo
+
 Nome do contador: falhas de validação e autenticação de segurança por segundo.  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrição  
+
  Esse contador é incrementado sempre que uma mensagem é rejeitada devido a um problema de segurança não coberto pelo contador "chamadas de segurança não autorizadas". Esses problemas incluem:  
   
 - O token do cliente não pode ser lido a partir da mensagem.  

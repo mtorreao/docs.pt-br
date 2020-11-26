@@ -5,19 +5,21 @@ helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-ms.openlocfilehash: bab29d738c7562753a826b47c03867eeebac4372
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 185be9f6e33fcf107226e98d96d6be5c562384d8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558973"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238321"
 ---
 # <a name="working-with-nats-and-firewalls"></a>Trabalhando com NATs e firewalls
+
 O cliente e o servidor de uma conexão de rede geralmente não têm um caminho direto e aberto para comunicação. Os pacotes são filtrados, roteados, analisados e transformados nos computadores do ponto de extremidade e por máquinas intermediárias na rede. As NATs (conversões de endereço de rede) e os firewalls são exemplos comuns de aplicativos intermediários que podem participar da comunicação de rede.  
   
  Os transportes Windows Communication Foundation (WCF) e os padrões de troca de mensagens (MEPs) reagem de forma diferente ao, à presença de NATs e firewalls. Este tópico descreve como os NATs e os firewalls funcionam em topologias de rede comuns. As recomendações para combinações específicas de transportes do WCF e MEPs são dadas para ajudar a tornar seus aplicativos mais robustos para NATs e firewalls na rede.  
   
 ## <a name="how-nats-affect-communication"></a>Como os NATs afetam a comunicação  
+
  O NAT foi criado para permitir que vários computadores compartilhem um único endereço IP externo. Um NAT de remapeamento de porta mapeia um endereço IP interno e uma porta para uma conexão com um endereço IP externo com um novo número de porta. O novo número de porta permite que o NAT Correlacione o tráfego de retorno com a comunicação original. Muitos usuários domésticos agora têm um endereço IP que só é roteável de forma privada e contam com um NAT para fornecer roteamento global de pacotes.  
   
  Um NAT não fornece um limite de segurança. No entanto, as configurações comuns de NAT impedem que as máquinas internas sejam endereçadas diretamente. Isso protege as máquinas internas de algumas conexões indesejadas e dificulta a gravação de aplicativos de servidor que devem enviar dados de forma assíncrona de volta ao cliente. O NAT reescreve os endereços nos pacotes para que pareçam que as conexões se originam no computador NAT. Isso faz com que o servidor falhe ao tentar abrir uma conexão de volta ao cliente. Se o servidor usar o endereço percebido do cliente, ele falhará porque o endereço do cliente não pode ser roteado publicamente. Se o servidor usar o endereço NAT, ele não se conectará porque nenhum aplicativo está escutando nesse computador.  
@@ -25,6 +27,7 @@ O cliente e o servidor de uma conexão de rede geralmente não têm um caminho d
  Alguns NATs dão suporte à configuração de regras de encaminhamento para permitir que computadores externos se conectem a um determinado computador interno. As instruções para configurar regras de encaminhamento variam entre NATs diferentes, e solicitar que os usuários finais alterem sua configuração NAT não é recomendável para a maioria dos aplicativos. Muitos usuários finais não podem ou não querem alterar a configuração de NAT para um aplicativo específico.  
   
 ## <a name="how-firewalls-affect-communication"></a>Como os firewalls afetam a comunicação  
+
  Um *Firewall* é um dispositivo de software ou hardware que aplica regras ao tráfego que passa para decidir se deseja permitir ou negar a passagem. Você pode configurar firewalls para examinar fluxos de entrada e/ou saída de tráfego. O firewall fornece um limite de segurança para a rede na borda da rede ou no host do ponto de extremidade. Os usuários empresariais tradicionalmente mantiveram seus servidores atrás de um firewall para evitar ataques mal-intencionados. Desde a introdução do firewall pessoal no Windows XP SP2, o número de usuários domésticos atrás de um firewall também aumentou consideravelmente. Isso torna provável que uma ou ambas as extremidades de uma conexão tenham um firewall examinando os pacotes.  
   
  Os firewalls variam muito em termos de complexidade e capacidade para examinar os pacotes. Firewalls simples aplicam regras com base nos endereços de origem e de destino e portas em pacotes. Os firewalls inteligentes também podem examinar o conteúdo dos pacotes para tomar decisões. Esses firewalls vêm em muitas configurações diferentes e geralmente são usados para aplicativos especializados.  
@@ -36,6 +39,7 @@ O cliente e o servidor de uma conexão de rede geralmente não têm um caminho d
  O Teredo é uma tecnologia de transição IPv6 que permite a endereçamento direto de computadores por trás de um NAT. O Teredo conta com o uso de um servidor que pode ser roteado de forma pública e global para anunciar possíveis conexões. O servidor Teredo fornece ao cliente de aplicativo e ao servidor um ponto de reunião comum no qual eles podem trocar informações de conexão. Em seguida, os computadores solicitam um endereço Teredo temporário e os pacotes são encapsulados por meio da rede existente. O suporte a Teredo no WCF requer a habilitação do suporte a IPv6 e Teredo no sistema operacional. Os sistemas operacionais Windows XP e posteriores dão suporte a Teredo. O Windows Vista e sistemas operacionais posteriores dão suporte a IPv6 por padrão e só exigem que o usuário habilite o Teredo. O Windows XP SP2 e o Windows Server 2003 exigem que o usuário habilite o IPv6 e o Teredo. Para obter mais informações, consulte a [visão geral do Teredo](/previous-versions/windows/it-pro/windows-xp/bb457011(v=technet.10)).  
   
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>Escolhendo um padrão de troca de mensagens e transporte  
+
  Selecionar um transporte e MEP é um processo de três etapas:  
   
 1. Analise a Endereçabilidade dos computadores do ponto de extremidade. Os servidores corporativos normalmente têm endereçamento direto, enquanto os usuários finais normalmente têm sua Endereçabilidade bloqueada por NATs. Se ambos os pontos de extremidade estiverem atrás de um NAT, como em cenários ponto a ponto entre os usuários finais, talvez você precise de uma tecnologia como o Teredo para fornecer Endereçabilidade.  

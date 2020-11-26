@@ -12,19 +12,20 @@ helpviewer_keywords:
 - marshaling, platform invoke
 - sample applications [.NET Framework], marshaling strings
 ms.assetid: e21b078b-70fb-4905-be26-c097ab2433ff
-ms.openlocfilehash: 11925e3e126620788bb09e90e4d2528dbaf56581
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2b7038a57ee0a8186288c7388fcd000daad70ed0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547760"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238035"
 ---
 # <a name="marshaling-strings"></a>Realizando marshaling de cadeias de caracteres
+
 A invocação de plataforma copia parâmetros de cadeia de caracteres, convertendo-os do formato do .NET Framework (Unicode) para o formato não gerenciado (ANSI), se necessário. Já que as cadeias de caracteres gerenciadas são imutáveis, a invocação de plataforma não as copia de volta da memória não gerenciada para a memória gerenciada quando a função retorna.  
   
  A tabela a seguir lista as opções de marshaling para cadeias de caracteres, descreve o uso delas e fornece um link para a amostra de .NET Framework correspondente.  
   
-|String|Description|Amostra|  
+|Cadeia de caracteres|Descrição|Amostra|  
 |------------|-----------------|------------|  
 |Por valor.|Passa cadeias de caracteres como parâmetros In.|[MsgBox](msgbox-sample.md)|  
 |Como resultado.|Retorna cadeias de caracteres de código não gerenciado.|[Cadeias de caracteres](/previous-versions/dotnet/netframework-4.0/e765dyyy(v=vs.100))|  
@@ -37,7 +38,7 @@ A invocação de plataforma copia parâmetros de cadeia de caracteres, converten
 |Como uma matriz de cadeias de caracteres por valor.|Cria uma matriz de cadeias de caracteres que é passada por valor.|[matrizes](marshaling-different-types-of-arrays.md)|  
 |Como uma matriz de estruturas que contêm cadeias de caracteres por valor.|Cria uma matriz de estruturas que contêm cadeias de caracteres e a matriz é transmitida por valor.|[matrizes](marshaling-different-types-of-arrays.md)|  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Marshaling padrão para cadeias de caracteres](default-marshaling-for-strings.md)
 - [Marshaling de dados com invocação de plataforma](marshaling-data-with-platform-invoke.md)

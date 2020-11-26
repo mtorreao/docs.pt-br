@@ -6,14 +6,15 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 5b9d22062d273404c7451beb44e56d3fa5c4aa1d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 950ff048a918a52e6c64d8cc15e1ef0f80233b88
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558739"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238646"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Guia de implantação do .NET Framework para desenvolvedores
+
 Este tópico fornece informações para desenvolvedores que querem instalar qualquer versão do .NET Framework a partir do .NET Framework 4.5 até o [!INCLUDE[net_current](../../../includes/net-current-version.md)] com seus aplicativos.
 
 Você pode baixar os pacotes redistribuíveis e os pacotes de idiomas para .NET Framework nas páginas de download:
@@ -21,7 +22,7 @@ Você pode baixar os pacotes redistribuíveis e os pacotes de idiomas para .NET 
 - [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 - [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
 - [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471)
-- [.NET Framework 4,7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
+- [.NET Framework 4.7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
 - [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462)
 - [.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)
 - [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
@@ -260,8 +261,8 @@ Por exemplo, para detectar se o pacote de idioma japonês completo (LCID = 1041)
 
 | | |
 |-|-|
-| Chave | HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
-| Name | Versão |
+| Chave | HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
+| Nome | Versão |
 | Tipo | DWORD |
 
 Para determinar se a versão de lançamento final de um pacote de idiomas está instalada para uma versão específica do .NET Framework do 4.5 ao 4.7.2, verifique o valor DWORD da chave RELEASE descrito na seção anterior, [Detectando o .NET Framework](#detect_net).
@@ -275,7 +276,7 @@ O .NET Framework oferece um conjunto de arquivos executáveis de pacotes de idio
 - [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 - [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
 - [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471)
-- [.NET Framework 4,7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
+- [.NET Framework 4.7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
 - [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462)
 - [.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)
 - [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
@@ -390,7 +391,7 @@ A tabela a seguir lista .NET Framework pacotes de idiomas que estão disponívei
 |2070|Português – Portugal|pt-PT|
 |3082|Espanhol - Espanha (Moderno)|es|
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Guia de implantação para administradores](guide-for-administrators.md)
 - [Requisitos do sistema](../get-started/system-requirements.md)

@@ -5,17 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-ms.openlocfilehash: bbe99b133e7edda191d17e9fe8a1dea89d3f0eb7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 521b2a887792d41dd28342ca4bfe7be71ceba4b7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556519"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96237372"
 ---
 # <a name="message-security-with-mutual-certificates"></a>Segurança de mensagem com certificados mútuos
+
 O cenário a seguir mostra um serviço de Windows Communication Foundation (WCF) e o cliente protegidos usando o modo de segurança da mensagem. O cliente e o serviço são autenticados com certificados.  
   
- Esse cenário é interoperável porque usa o WS-Security com o perfil de token de certificado X. 509.  
+ Esse cenário é interoperável porque usa WS-Security com o perfil de token de certificado X. 509.  
   
 > [!NOTE]
 > Esse cenário não realiza a negociação do certificado de serviço. O certificado de serviço deve ser fornecido ao cliente antes de qualquer comunicação. O certificado do servidor pode ser distribuído com o aplicativo ou fornecido em uma comunicação fora de banda.  
@@ -25,27 +26,30 @@ O cenário a seguir mostra um serviço de Windows Communication Foundation (WCF)
 |Característica|Descrição|  
 |--------------------|-----------------|  
 |Modo de segurança|Mensagem|  
-|Interoperabilidade|Sim, com serviços e clientes compatíveis com o perfil de token de certificado do WS-Security e X. 509.|  
+|Interoperabilidade|Sim, com os serviços e clientes compatíveis com o perfil de token de certificado WS-Security e X. 509.|  
 |Autenticação|Autenticação mútua do servidor e do cliente.|  
-|Integridade|Yes|  
+|Integridade|Sim|  
 |Confidencialidade|Yes|  
 |Transport|HTTP|  
 |Associação|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>Serviço  
- O código e a configuração a seguir devem ser executados de forma independente. Realize um dos seguintes procedimentos:  
+
+ O código e a configuração a seguir devem ser executados de forma independente. Realize uma destas ações:  
   
 - Crie um serviço autônomo usando o código sem configuração.  
   
 - Crie um serviço usando a configuração fornecida, mas não defina nenhum ponto de extremidade.  
   
 ### <a name="code"></a>Código  
+
  O código a seguir mostra como criar um ponto de extremidade de serviço que usa a segurança de mensagem. O serviço requer um certificado para se autenticar.  
   
  [!code-csharp[C_SecurityScenarios#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#13)]
  [!code-vb[C_SecurityScenarios#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#13)]  
   
 ### <a name="configuration"></a>Configuração  
+
  A configuração a seguir pode ser usada em vez do código para criar o mesmo serviço.  
   
 ```xml  
@@ -91,7 +95,8 @@ O cenário a seguir mostra um serviço de Windows Communication Foundation (WCF)
 ```  
   
 ## <a name="client"></a>Cliente  
- O código e a configuração a seguir devem ser executados de forma independente. Realize um dos seguintes procedimentos:  
+
+ O código e a configuração a seguir devem ser executados de forma independente. Realize uma destas ações:  
   
 - Crie um cliente autônomo usando o código (e o código do cliente).  
   
@@ -101,12 +106,14 @@ O cenário a seguir mostra um serviço de Windows Communication Foundation (WCF)
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Código  
+
  O código a seguir cria o cliente. O modo de segurança é definido como mensagem e o tipo de credencial do cliente é definido como certificado.  
   
  [!code-csharp[C_SecurityScenarios#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#20)]
  [!code-vb[C_SecurityScenarios#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#20)]  
   
 ### <a name="configuration"></a>Configuração  
+
  O seguinte configura o cliente. Um certificado de cliente deve ser especificado usando o [\<clientCertificate>](../../configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md) . Além disso, o certificado de serviço é especificado usando o [\<defaultCertificate>](../../configure-apps/file-schema/wcf/defaultcertificate-element.md) .  
   
 ```xml  
@@ -158,7 +165,7 @@ O cenário a seguir mostra um serviço de Windows Communication Foundation (WCF)
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Visão geral de segurança](security-overview.md)
 - [Modelo de segurança para o Windows Server app Fabric](/previous-versions/appfabric/ee677202(v=azure.10))

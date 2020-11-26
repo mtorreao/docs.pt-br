@@ -2,20 +2,22 @@
 title: Controlando registros
 ms.date: 03/30/2017
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
-ms.openlocfilehash: 498d62fb1d3cc1386ea3bf57de431c57b18b7dda
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0344c802ef779d1f13f58c35c2f0e4fa67a37578
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551295"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238100"
 ---
 # <a name="tracking-records"></a>Controlando registros
+
 O runtime de fluxo de trabalho é instrumentado para emitir registros de controle para siga a execução de uma instância de fluxo de trabalho.  
   
 ## <a name="tracking-records"></a>Controlando registros  
+
  A tabela a seguir detalha os registros de rastreamento que o runtime de fluxo de trabalho se emite.  
   
-|Controlando o registro|Description|  
+|Controlando o registro|Descrição|  
 |---------------------|-----------------|  
 |Registros de ciclo de vida de fluxo de trabalho|Emitido durante vários estágios do ciclo de vida de instância de fluxo de trabalho. Por exemplo, um registro é emitida quando o fluxo de trabalho inicia ou termina.|  
 |Registros de ciclo de vida de atividades|Detalha a execução da atividade. Esses registros indicam o estado de uma atividade de fluxo de trabalho como quando uma atividade é agendada, quando a atividade concluir, ou quando ocorre uma falha.|  
@@ -60,7 +62,7 @@ O runtime de fluxo de trabalho é instrumentado para emitir registros de control
   
 5. <xref:System.Activities.Tracking.WorkflowInstanceRecord> indica que o fluxo de trabalho está concluir.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Monitoramento do Windows Server app Fabric](/previous-versions/appfabric/ee677251(v=azure.10))
 - [Monitorando aplicativos com o app Fabric](/previous-versions/appfabric/ee677276(v=azure.10))

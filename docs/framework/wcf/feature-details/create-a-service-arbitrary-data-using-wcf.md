@@ -1,15 +1,16 @@
 ---
-title: Como criar um serviço que aceita dados arbitrários usando o modelo de programação WCF REST
+title: 'Como: criar um serviço que aceita dados arbitrários usando o modelo de programação WCF REST'
 ms.date: 03/30/2017
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-ms.openlocfilehash: d908651f7815c102b45ea106f5bec4c07d869950
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9c9899705861cc1cf2cda2559c30a0a60d8cc635
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601329"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96237826"
 ---
-# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Como criar um serviço que aceita dados arbitrários usando o modelo de programação WCF REST
+# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Como: criar um serviço que aceita dados arbitrários usando o modelo de programação WCF REST
+
 Às vezes, os desenvolvedores devem ter controle total de como os dados são retornados de uma operação de serviço. Esse é o caso quando uma operação de serviço deve retornar dados em um formato sem suporte byWCF. Este tópico discute o uso do modelo de programação REST do WCF para criar um serviço que recebe dados arbitrários.  
   
 ### <a name="to-implement-the-service-contract"></a>Para implementar o contrato de serviço  
@@ -124,6 +125,7 @@ ms.locfileid: "84601329"
     ```  
   
 ## <a name="example"></a>Exemplo  
+
  A seguir está uma lista completa do código para este exemplo.  
   
 ```csharp  
@@ -191,10 +193,10 @@ namespace ReceiveRawData
   
 ## <a name="compiling-the-code"></a>Compilando o código  
   
-- Ao compilar a referência de código System. ServiceModel. dll e System. ServiceModel. Web. dll  
+- Ao compilar a referência de código System.ServiceModel.dll e System.ServiceModel.Web.dll  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [UriTemplate and UriTemplateTable](uritemplate-and-uritemplatetable.md)
 - [Modelo de programação WCF Web HTTP](wcf-web-http-programming-model.md)
-- [Visão geral do modelo de programação HTTP Web do WCF](wcf-web-http-programming-model-overview.md)
+- [Visão geral de modelo de programação HTTP Web do WCF](wcf-web-http-programming-model-overview.md)
