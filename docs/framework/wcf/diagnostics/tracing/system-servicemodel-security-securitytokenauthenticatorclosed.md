@@ -2,20 +2,22 @@
 title: System.ServiceModel.Security.SecurityTokenAuthenticatorClosed
 ms.date: 03/30/2017
 ms.assetid: a05b9c68-b83b-4526-b0ef-226f5991569e
-ms.openlocfilehash: 9af5a7017192257d758066ac1aff9b409bda5328
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 577b7a378c5a992898b9e6f74b6ccc38f0b4dd3d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593666"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96248299"
 ---
 # <a name="systemservicemodelsecuritysecuritytokenauthenticatorclosed"></a>System.ServiceModel.Security.SecurityTokenAuthenticatorClosed
+
 System.ServiceModel.Security.SecurityTokenAuthenticatorClosed  
   
 ## <a name="description"></a>Descrição  
+
  Um autenticador de token de segurança foi fechado.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Rastreamento](index.md)
 - [Utilizando o rastreamento para solucionar problemas em seu aplicativo](using-tracing-to-troubleshoot-your-application.md)

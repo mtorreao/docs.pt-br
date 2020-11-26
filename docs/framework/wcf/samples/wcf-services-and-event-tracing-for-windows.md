@@ -2,14 +2,15 @@
 title: Serviços e rastreamento de eventos WCF para Windows
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: 38e26c369d17f4aa9ccb39d2ae649facffe65418
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b5fcfb34843d1168511141b4ce2b4f956559290a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552960"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247831"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>Serviços e rastreamento de eventos WCF para Windows
+
 Este exemplo demonstra como usar o rastreamento analítico no Windows Communication Foundation (WCF) para emitir eventos no ETW (rastreamento de eventos para Windows). Os rastreamentos analíticos são eventos emitidos em pontos-chave na pilha do WCF que permitem a solução de problemas de serviços WCF no ambiente de produção.
 
  O rastreamento analítico nos serviços WCF é o rastreamento que pode ser ativado em um ambiente de produção com impacto mínimo sobre o desempenho. Esses rastreamentos são emitidos como eventos para uma sessão do ETW.
@@ -32,7 +33,7 @@ Este exemplo demonstra como usar o rastreamento analítico no Windows Communicat
 
      O cliente de teste do WCF (WcfTestClient.exe) está localizado em `\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe` .  O dir de instalação padrão do Visual Studio 2012 é `C:\Program Files\Microsoft Visual Studio 10.0` .
 
-5. No cliente de teste do WCF, adicione o serviço selecionando **arquivo**e, em seguida, **Adicionar serviço**.
+5. No cliente de teste do WCF, adicione o serviço selecionando **arquivo** e, em seguida, **Adicionar serviço**.
 
      Adicione o endereço do ponto de extremidade na caixa de entrada. O padrão é `http://localhost:1378/Calculator.svc`.
 
@@ -40,15 +41,15 @@ Este exemplo demonstra como usar o rastreamento analítico no Windows Communicat
 
      Antes de invocar o serviço, inicie Visualizador de Eventos e verifique se o log de eventos está escutando eventos emitidos do serviço WCF.
 
-7. No menu **Iniciar** , selecione **Ferramentas administrativas**e, em seguida, **Visualizador de eventos**.  Habilite os logs **analíticos** e de **depuração** .
+7. No menu **Iniciar** , selecione **Ferramentas administrativas** e, em seguida, **Visualizador de eventos**.  Habilite os logs **analíticos** e de **depuração** .
 
-8. No modo de exibição de árvore no Visualizador de Eventos, navegue até **Visualizador de eventos**, **logs de aplicativos e serviços**, **Microsoft**, **Windows**e, em seguida, **servidor de aplicativos-aplicativos**. Clique com o botão direito do mouse em **servidor de aplicativos**, selecione **Exibir**e, em seguida, **Mostrar logs analíticos e de depuração**.
+8. No modo de exibição de árvore no Visualizador de Eventos, navegue até **Visualizador de eventos**, **logs de aplicativos e serviços**, **Microsoft**, **Windows** e, em seguida, **servidor de aplicativos-aplicativos**. Clique com o botão direito do mouse em **servidor de aplicativos**, selecione **Exibir** e, em seguida, **Mostrar logs analíticos e de depuração**.
 
      Verifique se a opção **Mostrar logs analíticos e de depuração** está marcada.
 
 9. Habilite o log **analítico** .
 
-     No modo de exibição de árvore no Visualizador de Eventos, navegue até **Visualizador de eventos**, **logs de aplicativos e serviços**, **Microsoft**, **Windows**e, em seguida, **servidor de aplicativos-aplicativos**. Clique com o botão direito do mouse em **analítica** e selecione **habilitar log**.
+     No modo de exibição de árvore no Visualizador de Eventos, navegue até **Visualizador de eventos**, **logs de aplicativos e serviços**, **Microsoft**, **Windows** e, em seguida, **servidor de aplicativos-aplicativos**. Clique com o botão direito do mouse em **analítica** e selecione **habilitar log**.
 
 #### <a name="to-test-the-service"></a>Para testar o serviço
 
@@ -58,7 +59,7 @@ Este exemplo demonstra como usar o rastreamento analítico no Windows Communicat
 
 2. Observe os eventos emitidos do serviço.
 
-     Volte para Visualizador de Eventos e navegue até **Visualizador de eventos**, **logs de aplicativos e serviços**, **Microsoft**, **Windows**e, em seguida, **aplicativos de servidor de aplicativos**. Clique com o botão direito do mouse em **analítica** e selecione **Atualizar**.
+     Volte para Visualizador de Eventos e navegue até **Visualizador de eventos**, **logs de aplicativos e serviços**, **Microsoft**, **Windows** e, em seguida, **aplicativos de servidor de aplicativos**. Clique com o botão direito do mouse em **analítica** e selecione **Atualizar**.
 
      Os eventos de rastreamento analítico do WCF são exibidos no Visualizador de eventos. Observe que, como uma falha foi gerada pelo serviço, um evento de rastreamento de erro é exibido no Visualizador de eventos.
 
@@ -72,9 +73,9 @@ Este exemplo demonstra como usar o rastreamento analítico no Windows Communicat
 
 1. Visualizador de EventosAberto.
 
-2. Navegue até **Visualizador de eventos**, **logs de aplicativos e serviços**, **Microsoft**, **Windows**e, em seguida, aplicativos **-Server-** Applications. Clique com o botão direito do mouse em **analítica** e selecione **desabilitar log**.
+2. Navegue até **Visualizador de eventos**, **logs de aplicativos e serviços**, **Microsoft**, **Windows** e, em seguida, aplicativos **-Server-** Applications. Clique com o botão direito do mouse em **analítica** e selecione **desabilitar log**.
 
-3. Navegue até **Visualizador de eventos**, **logs de aplicativos e serviços**, **Microsoft**, **Windows**e, em seguida, aplicativos **-Server-** Applications. Clique com o botão direito do mouse em **analítica** e selecione **limpar log**.
+3. Navegue até **Visualizador de eventos**, **logs de aplicativos e serviços**, **Microsoft**, **Windows** e, em seguida, aplicativos **-Server-** Applications. Clique com o botão direito do mouse em **analítica** e selecione **limpar log**.
 
 4. Escolha a opção **limpar** para limpar os eventos.
 
@@ -87,6 +88,6 @@ Este exemplo demonstra como usar o rastreamento analítico no Windows Communicat
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTracing`  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [AppFabric que monitora Exemplos](/previous-versions/appfabric/ff383407(v=azure.10))

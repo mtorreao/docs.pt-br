@@ -5,17 +5,19 @@ helpviewer_keywords:
 - authorization [WCF]
 - security [WCF], authorization
 ms.assetid: 8ea0b552-af65-45b0-a157-c6c111b8ce5e
-ms.openlocfilehash: c86a07b96b15963af9f078b52bc0d28e9a38187a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 67da01508fbb8f14b6405b79445bdef297e63288
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556252"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247480"
 ---
 # <a name="authorization-in-wcf"></a>Autorização no WCF
+
 A autorização é o processo de controle de acesso e direitos a recursos, como serviços ou arquivos. Os tópicos nesta seção mostram como executar essa tarefa básica no Windows Communication Foundation (WCF) de várias maneiras.  
   
 ## <a name="in-this-section"></a>Nesta seção  
+
  [Mecanismos de controle de acesso](access-control-mechanisms.md)  
  Fornece uma breve descrição dos mecanismos de autorização no WCF e usos sugeridos.  
   
@@ -35,6 +37,7 @@ A autorização é o processo de controle de acesso e direitos a recursos, como 
  Explica a diferença entre delegação e representação.  
   
 ## <a name="reference"></a>Referência  
+
  <xref:System.ServiceModel.Security>  
   
  <xref:System.ServiceModel.Description.PrincipalPermissionMode>  
@@ -44,9 +47,10 @@ A autorização é o processo de controle de acesso e direitos a recursos, como 
  <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
+
  [Autenticação](authentication-in-wcf.md)  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Visão geral de segurança](security-overview.md)
 - [Modelo de segurança para o Windows Server app Fabric](/previous-versions/appfabric/ee677202(v=azure.10))

@@ -6,17 +6,19 @@ helpviewer_keywords:
 - authentication [WCF]
 - security [WCF], authentication
 ms.assetid: 9254d873-843d-4c6e-bea4-8184ac3e44f4
-ms.openlocfilehash: 414353b360992abea69d47de9efb22c3c77f4bf6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e2334a8c024238f38e1c927a278a4e25e7dabd9d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558271"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247532"
 ---
 # <a name="authentication-in-wcf"></a>Autenticação no WCF
+
 Os tópicos a seguir mostram vários mecanismos diferentes no Windows Communication Foundation (WCF) que fornecem autenticação, por exemplo, autenticação do Windows, certificados X. 509 e nome de usuário e senhas.  
   
 ## <a name="in-this-section"></a>Nesta seção  
+
  [Como: usar o provedor de associação do ASP.NET](how-to-use-the-aspnet-membership-provider.md)  
  Os recursos do ASP.NET incluem uma associação e um provedor de função, um banco de dados para armazenar pares de nome de usuário/senha para autenticação e funções de usuário para autorização. Este tópico explica como os serviços WCF podem usar o mesmo banco de dados para autenticar e autorizar usuários.  
   
@@ -33,12 +35,14 @@ Os tópicos a seguir mostram vários mecanismos diferentes no Windows Communicat
  Concentra-se em problemas comuns encontrados ao usar a autenticação do Windows.  
   
 ## <a name="reference"></a>Referência  
+
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
+
  [Cenários comuns de segurança](common-security-scenarios.md)  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Visão geral de segurança](security-overview.md)
 - [Modelo de segurança para o Windows Server app Fabric](/previous-versions/appfabric/ee677202(v=azure.10))
