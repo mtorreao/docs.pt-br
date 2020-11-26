@@ -2,14 +2,15 @@
 title: 1040 - InArgumentBound
 ms.date: 03/30/2017
 ms.assetid: 7dfaad1b-36c0-4575-84c1-31d63b0eaf5d
-ms.openlocfilehash: 984372c07ccfb11f2f05d5488fa5ffc95075db41
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 04a61892ea817d5168ccbfccf68c0b74ee43e983
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009741"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238945"
 ---
 # <a name="1040---inargumentbound"></a>1040 - InArgumentBound
+
 ## <a name="properties"></a>Propriedades  
   
 |||  
@@ -20,9 +21,11 @@ ms.locfileid: "62009741"
 |Canal|Os aplicativos de servidor de Microsoft-Windows- aplicativo/depuração|  
   
 ## <a name="description"></a>Descrição  
+
  Indica que o argumento foi associado.  
   
 ## <a name="message"></a>Mensagem  
+
  O argumento “%1 " na atividade “%2 ", DisplayName: “%3", InstanceId: “%4" foram associados com valor: %5.  
   
 ## <a name="details"></a>Detalhes  

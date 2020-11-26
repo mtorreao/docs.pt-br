@@ -2,14 +2,15 @@
 title: TransactedBatchingBehavior
 ms.date: 03/30/2017
 ms.assetid: 2d03e6ae-f06c-4ada-b279-e01838b2ecdc
-ms.openlocfilehash: 0b083e46b3f53a0080308deccc0e37768af40fe3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 152886180842d3da301f74286b0d41a98c39da54
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641717"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239140"
 ---
 # <a name="transactedbatchingbehavior"></a>TransactedBatchingBehavior
+
 TransactedBatchingBehavior  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -22,24 +23,27 @@ class TransactedBatchingBehavior : Behavior
 ```  
   
 ## <a name="methods"></a>Métodos  
- A classe TransactedBatchingBehavior não define quaisquer métodos.  
+
+ A classe TransactedBatchingBehavior não define nenhum método.  
   
 ## <a name="properties"></a>Propriedades  
+
  A classe TransactedBatchingBehavior tem a seguinte propriedade:  
   
 ### <a name="maxbatchsize"></a>MaxBatchSize  
+
  Tipo de dados: sint32  
   
  Tipo de acesso: Somente leitura  
   
- O tamanho de lote máximo para o envio em lote transacionado.  
+ O tamanho máximo do lote para o envio em lote transacionado.  
   
 ## <a name="requirements"></a>Requisitos  
   
-|MOF|Declarado em Servicemodel.mof.|  
+|MOF|Declarado em ServiceModel. mof.|  
 |---------|-----------------------------------|  
-|Namespace|Definido no root\ServiceModel|  
+|Namespace|Definido em root\ServiceModel|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Description.TransactedBatchingBehavior>

@@ -6,27 +6,29 @@ helpviewer_keywords:
 - POX
 - REST
 ms.assetid: 2312a8d3-b66e-4623-ba42-978434300c7f
-ms.openlocfilehash: dd9cc282750e59e5ccbfec428c7252ab9689395f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 644bcba9f8ced965ff962962bd83e1ae170159a7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84589845"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238997"
 ---
 # <a name="wcf-web-http-programming-model"></a>Modelo de programação WCF Web HTTP
+
 O modelo de programação HTTP Web do Windows Communication Foundation (WCF) permite que os desenvolvedores exponham operações de serviço do WCF a pontos de extremidade não SOAP. Os tópicos nesta seção examinam o recurso em detalhes.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Visão geral do modelo de programação HTTP Web do WCF](wcf-web-http-programming-model-overview.md)  
+
+ [Visão geral de modelo de programação HTTP Web do WCF](wcf-web-http-programming-model-overview.md)  
  Fornece uma visão geral do modelo de programação HTTP da Web do Windows Communication Foundation (WCF).  
   
  [Modelo de objeto de programação HTTP Web do WCF](wcf-web-http-programming-object-model.md)  
  Discute o modelo de programação HTTP Web do Windows Communication Foundation (WCF) e como ele funciona.  
   
- [Como criar um serviço Web HTTP WCF básico](how-to-create-a-basic-wcf-web-http-service.md)  
+ [Como: criar um serviço Web HTTP WCF básico](how-to-create-a-basic-wcf-web-http-service.md)  
  Descreve como gravar um serviço básico que expõe um ponto de extremidade de não SOAP.  
   
- [Como expor um contrato para clientes SOAP e da Web](how-to-expose-a-contract-to-soap-and-web-clients.md)  
+ [Como: expor um contrato para clientes SOAP e da Web](how-to-expose-a-contract-to-soap-and-web-clients.md)  
  Descreve como gravar um serviço básico que expõe o mesmo contrato para os clientes SOAP e não SOAP.  
   
  [UriTemplate and UriTemplateTable](uritemplate-and-uritemplatetable.md)  

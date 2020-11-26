@@ -2,14 +2,15 @@
 title: 1013 - CompleteExecuteActivityWorkItem
 ms.date: 03/30/2017
 ms.assetid: 31fc57b3-ef2f-48f0-a5de-b4e2c5c9ded7
-ms.openlocfilehash: c1ff62bb4143bb798ea7adb7c3fee539ef68bc37
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 654f961088c371ab53e4a81f40e3c63335efb1a8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925184"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239582"
 ---
 # <a name="1013---completeexecuteactivityworkitem"></a>1013 - CompleteExecuteActivityWorkItem
+
 ## <a name="properties"></a>Propriedades  
   
 |||  
@@ -20,9 +21,11 @@ ms.locfileid: "61925184"
 |Canal|Os aplicativos de servidor de Microsoft-Windows- aplicativo/depuração|  
   
 ## <a name="description"></a>Descrição  
+
  Indica que um ExecuteActivityWorkItem concluiu  
   
 ## <a name="message"></a>Mensagem  
+
  Um ExecuteActivityWorkItem concluiu para atividades “%1 ", DisplayName: “%2", InstanceId: “%3".  
   
 ## <a name="details"></a>Detalhes  

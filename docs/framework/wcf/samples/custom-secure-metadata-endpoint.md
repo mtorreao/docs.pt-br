@@ -2,20 +2,22 @@
 title: Ponto de extremidade de metadados seguros personalizados
 ms.date: 03/30/2017
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
-ms.openlocfilehash: 75f271fdbb5db34dc59918da16d014daf32a368f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d699c8dedfec3068bf0fc1504b47d78fde1988dc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555556"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240895"
 ---
 # <a name="custom-secure-metadata-endpoint"></a>Ponto de extremidade de metadados seguros personalizados
+
 Este exemplo demonstra como implementar um serviço com um ponto de extremidade de metadados seguro que usa uma das associações de troca de não-metadados e como configurar a [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) ou clientes para buscar os metadados desse ponto de extremidade de metadados. Há duas associações fornecidas pelo sistema disponíveis para expor pontos de extremidade de metadados: mexHttpBinding e mexHttpsBinding. mexHttpBinding é usado para expor um ponto de extremidade de metadados por HTTP de maneira não segura. mexHttpsBinding é usado para expor um ponto de extremidade de metadados por HTTPS de maneira segura. Este exemplo ilustra como expor um ponto de extremidade de metadados seguro usando o <xref:System.ServiceModel.WSHttpBinding> . Você desejaria fazer isso quando quiser alterar as configurações de segurança na associação, mas não quiser usar HTTPS. Se você usar o mexHttpsBinding, seu ponto de extremidade de metadados será seguro, mas não há como modificar as configurações de associação.  
   
 > [!NOTE]
 > O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
 ## <a name="service"></a>Serviço  
+
  O serviço neste exemplo tem dois pontos de extremidade. O ponto de extremidade do aplicativo serve o `ICalculator` contrato em um `WSHttpBinding` com `ReliableSession` habilitado e `Message` segurança usando certificados. O ponto de extremidade de metadados também usa `WSHttpBinding` , com as mesmas configurações de segurança, mas sem `ReliableSession` . Aqui está a configuração relevante:  
   
 ```xml  
@@ -57,6 +59,7 @@ Este exemplo demonstra como implementar um serviço com um ponto de extremidade 
  O segundo cliente usa o `MetadataResolver` para buscar dinamicamente os metadados de um contrato conhecido e, em seguida, invocar operações no cliente gerado dinamicamente.  
   
 ## <a name="svcutil-client"></a>Cliente svcutil  
+
  Ao usar a associação padrão para hospedar seu `IMetadataExchange` ponto de extremidade, você pode executar Svcutil.exe com o endereço desse ponto de extremidade:  
   
 ```console  
@@ -92,6 +95,7 @@ svcutil http://localhost/servicemodelsamples/service.svc/mex
  O ". \\ " líder garante que a cópia de Svcutil.exe nesse diretório (aquela que tem um Svcutil.exe.config correspondente) seja executada.  
   
 ## <a name="metadataresolver-client"></a>Cliente MetadataResolver  
+
  Se o cliente souber o contrato e como se comunicar com os metadados em tempo de design, o cliente poderá descobrir dinamicamente a ligação e o endereço dos pontos de extremidade do aplicativo usando o `MetadataResolver` . Este cliente de exemplo demonstra isso, mostrando como configurar a associação e as credenciais usadas pelo `MetadataResolver` criando e configurando um `MetadataExchangeClient` .  
   
  As mesmas informações de associação e certificado exibidas no Svcutil.exe.config podem ser especificadas de forma imperativa no `MetadataExchangeClient` :  

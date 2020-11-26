@@ -2,12 +2,12 @@
 title: Padrão de gateway de API versus comunicação direta de cliente com microsserviço
 description: Entenda as diferenças e os usos do padrão de gateway de API e da comunicação direta de cliente com microsserviço.
 ms.date: 01/07/2019
-ms.openlocfilehash: 90761605dde197e44658e3ba0b0a3a2c06b5942c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 88cea3b7c2fdd09bec605431308df8783c343332
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152696"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240596"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Padrão de gateway de API versus comunicação direta de cliente com microsserviço
 
@@ -59,7 +59,7 @@ Portanto, ter um nível intermediário ou indireto (Gateway) pode ser muito conv
 
 - **Problemas de segurança**: sem um gateway, todos os microsserviços precisam ser expostos ao "mundo externo", tornando a superfície de ataque maior do que se você ocultar microsserviços internos que não são usados ​​diretamente pelos aplicativos cliente. Quanto menor a superfície de ataque, mais segura sua aplicação pode ser.
 
-- **Preocupações**abrangentes: cada microserviço publicado publicamente deve lidar com questões como autorização e SSL. Em muitas situações, esses interessas podem ser tratados em uma única camada para que os microsserviços internos sejam simplificados.
+- **Preocupações** abrangentes: cada microserviço publicado publicamente deve lidar com questões como autorização e SSL. Em muitas situações, esses interessas podem ser tratados em uma única camada para que os microsserviços internos sejam simplificados.
 
 ## <a name="what-is-the-api-gateway-pattern"></a>Por que o padrão de Gateway de API?
 
@@ -113,7 +113,7 @@ Para saber mais, confira o [Padrão de agregação de Gateway](/azure/architectu
 - Balanceamento de carga
 - Registrando em log, rastreamento, correlação
 - Cabeçalhos, cadeias de caracteres de consulta e transformação de declarações
-- Lista de permissões de IP
+- Allowlisting IP
 
 Para saber mais, confira o [Padrão de descarregamento de Gateway](/azure/architecture/patterns/gateway-offloading).
 
