@@ -2,27 +2,30 @@
 title: 226 - IdleServicesClosed
 ms.date: 03/30/2017
 ms.assetid: b5e72de3-33c6-46a2-998a-3809b520bb30
-ms.openlocfilehash: d41cf1b4d4bfd59bfac99afa9a2fe5d5ebbaffac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7563244fead615c0e5fc42cfc341480fab6702f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61596564"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243528"
 ---
-# <a name="226---idleservicesclosed"></a><span data-ttu-id="69609-102">226 - IdleServicesClosed</span><span class="sxs-lookup"><span data-stu-id="69609-102">226 - IdleServicesClosed</span></span>
-## <a name="properties"></a><span data-ttu-id="69609-103">Propriedades</span><span class="sxs-lookup"><span data-stu-id="69609-103">Properties</span></span>  
+# <a name="226---idleservicesclosed"></a><span data-ttu-id="eba8c-102">226 - IdleServicesClosed</span><span class="sxs-lookup"><span data-stu-id="eba8c-102">226 - IdleServicesClosed</span></span>
+
+## <a name="properties"></a><span data-ttu-id="eba8c-103">Propriedades</span><span class="sxs-lookup"><span data-stu-id="eba8c-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="69609-104">ID</span><span class="sxs-lookup"><span data-stu-id="69609-104">ID</span></span>|<span data-ttu-id="69609-105">226</span><span class="sxs-lookup"><span data-stu-id="69609-105">226</span></span>|  
-|<span data-ttu-id="69609-106">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="69609-106">Keywords</span></span>|<span data-ttu-id="69609-107">HealthMonitoring, WebHost</span><span class="sxs-lookup"><span data-stu-id="69609-107">HealthMonitoring, WebHost</span></span>|  
-|<span data-ttu-id="69609-108">Nível</span><span class="sxs-lookup"><span data-stu-id="69609-108">Level</span></span>|<span data-ttu-id="69609-109">LogAlways</span><span class="sxs-lookup"><span data-stu-id="69609-109">LogAlways</span></span>|  
-|<span data-ttu-id="69609-110">Canal</span><span class="sxs-lookup"><span data-stu-id="69609-110">Channel</span></span>|<span data-ttu-id="69609-111">Os aplicativos de servidor de Microsoft-Windows- aplicativo/analítico</span><span class="sxs-lookup"><span data-stu-id="69609-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="eba8c-104">ID</span><span class="sxs-lookup"><span data-stu-id="eba8c-104">ID</span></span>|<span data-ttu-id="eba8c-105">226</span><span class="sxs-lookup"><span data-stu-id="eba8c-105">226</span></span>|  
+|<span data-ttu-id="eba8c-106">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="eba8c-106">Keywords</span></span>|<span data-ttu-id="eba8c-107">HealthMonitoring, Webhost</span><span class="sxs-lookup"><span data-stu-id="eba8c-107">HealthMonitoring, WebHost</span></span>|  
+|<span data-ttu-id="eba8c-108">Nível</span><span class="sxs-lookup"><span data-stu-id="eba8c-108">Level</span></span>|<span data-ttu-id="eba8c-109">LogAlways</span><span class="sxs-lookup"><span data-stu-id="eba8c-109">LogAlways</span></span>|  
+|<span data-ttu-id="eba8c-110">Canal</span><span class="sxs-lookup"><span data-stu-id="eba8c-110">Channel</span></span>|<span data-ttu-id="eba8c-111">Os aplicativos de servidor de Microsoft-Windows- aplicativo/analítico</span><span class="sxs-lookup"><span data-stu-id="eba8c-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="69609-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="69609-112">Description</span></span>  
- <span data-ttu-id="69609-113">Esse evento é emitido quando serviços ociosos são fechados.</span><span class="sxs-lookup"><span data-stu-id="69609-113">This event is emitted when idle services are closed.</span></span>  
+## <a name="description"></a><span data-ttu-id="eba8c-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="eba8c-112">Description</span></span>  
+
+ <span data-ttu-id="eba8c-113">Esse evento é emitido quando os serviços ociosos são fechados.</span><span class="sxs-lookup"><span data-stu-id="eba8c-113">This event is emitted when idle services are closed.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="69609-114">Mensagem</span><span class="sxs-lookup"><span data-stu-id="69609-114">Message</span></span>  
- <span data-ttu-id="69609-115">Serviços de ociosidade %1 fora %2 total ativado serviços fechados.</span><span class="sxs-lookup"><span data-stu-id="69609-115">%1 idle services out of total %2 activated services closed.</span></span>  
+## <a name="message"></a><span data-ttu-id="eba8c-114">Mensagem</span><span class="sxs-lookup"><span data-stu-id="eba8c-114">Message</span></span>  
+
+ <span data-ttu-id="eba8c-115">%1 serviços ociosos fora do total %2 serviços ativados fechados.</span><span class="sxs-lookup"><span data-stu-id="eba8c-115">%1 idle services out of total %2 activated services closed.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="69609-116">Detalhes</span><span class="sxs-lookup"><span data-stu-id="69609-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="eba8c-116">Detalhes</span><span class="sxs-lookup"><span data-stu-id="eba8c-116">Details</span></span>
