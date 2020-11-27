@@ -2,17 +2,18 @@
 title: WSAT_TraceRecord
 ms.date: 03/30/2017
 ms.assetid: 99bc7f66-1335-40d8-aa68-e754d569dc0d
-ms.openlocfilehash: 907e764cf032e595c7aba455fd4808a640f68016
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0409277821a7cca3f97fcec1bb383aba9583a1f6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923403"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262210"
 ---
-# <a name="wsattracerecord"></a><span data-ttu-id="4a162-102">WSAT_TraceRecord</span><span class="sxs-lookup"><span data-stu-id="4a162-102">WSAT_TraceRecord</span></span>
-<span data-ttu-id="4a162-103">WSAT_TraceRecord</span><span class="sxs-lookup"><span data-stu-id="4a162-103">WSAT_TraceRecord</span></span>  
+# <a name="wsat_tracerecord"></a><span data-ttu-id="d1fa7-102">WSAT_TraceRecord</span><span class="sxs-lookup"><span data-stu-id="d1fa7-102">WSAT_TraceRecord</span></span>
+
+<span data-ttu-id="d1fa7-103">WSAT_TraceRecord</span><span class="sxs-lookup"><span data-stu-id="d1fa7-103">WSAT_TraceRecord</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4a162-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="4a162-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d1fa7-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="d1fa7-104">Syntax</span></span>  
   
 ```csharp
 class WSAT_TraceRecord : WSAT_TraceEvent  
@@ -23,32 +24,37 @@ class WSAT_TraceRecord : WSAT_TraceEvent
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="4a162-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="4a162-105">Methods</span></span>  
- <span data-ttu-id="4a162-106">A classe WSAT_TraceRecord não define quaisquer métodos.</span><span class="sxs-lookup"><span data-stu-id="4a162-106">The WSAT_TraceRecord class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="d1fa7-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="d1fa7-105">Methods</span></span>  
+
+ <span data-ttu-id="d1fa7-106">A classe WSAT_TraceRecord não define nenhum método.</span><span class="sxs-lookup"><span data-stu-id="d1fa7-106">The WSAT_TraceRecord class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="4a162-107">Propriedades</span><span class="sxs-lookup"><span data-stu-id="4a162-107">Properties</span></span>  
- <span data-ttu-id="4a162-108">A classe WSAT_TraceRecord tem as seguintes propriedades:</span><span class="sxs-lookup"><span data-stu-id="4a162-108">The WSAT_TraceRecord class has the following properties:</span></span>  
+## <a name="properties"></a><span data-ttu-id="d1fa7-107">Propriedades</span><span class="sxs-lookup"><span data-stu-id="d1fa7-107">Properties</span></span>  
+
+ <span data-ttu-id="d1fa7-108">A classe WSAT_TraceRecord tem as seguintes propriedades:</span><span class="sxs-lookup"><span data-stu-id="d1fa7-108">The WSAT_TraceRecord class has the following properties:</span></span>  
   
-### <a name="activityid"></a><span data-ttu-id="4a162-109">ActivityID</span><span class="sxs-lookup"><span data-stu-id="4a162-109">ActivityID</span></span>  
- <span data-ttu-id="4a162-110">Tipo de dados: objeto</span><span class="sxs-lookup"><span data-stu-id="4a162-110">Data type: object</span></span>  
-<span data-ttu-id="4a162-111">Tipo de acesso: Somente leitura</span><span class="sxs-lookup"><span data-stu-id="4a162-111">Access type: Read-only</span></span>  
+### <a name="activityid"></a><span data-ttu-id="d1fa7-109">ActivityID</span><span class="sxs-lookup"><span data-stu-id="d1fa7-109">ActivityID</span></span>  
+
+ <span data-ttu-id="d1fa7-110">Tipo de dados: objeto</span><span class="sxs-lookup"><span data-stu-id="d1fa7-110">Data type: object</span></span>  
+<span data-ttu-id="d1fa7-111">Tipo de acesso: Somente leitura</span><span class="sxs-lookup"><span data-stu-id="d1fa7-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="4a162-112">A ID de atividade de registro de rastreamento.</span><span class="sxs-lookup"><span data-stu-id="4a162-112">The activity ID of the trace record.</span></span>  
+ <span data-ttu-id="d1fa7-112">A ID da atividade do registro de rastreamento.</span><span class="sxs-lookup"><span data-stu-id="d1fa7-112">The activity ID of the trace record.</span></span>  
   
-### <a name="eventid"></a><span data-ttu-id="4a162-113">EventID</span><span class="sxs-lookup"><span data-stu-id="4a162-113">EventID</span></span>  
- <span data-ttu-id="4a162-114">Tipo de dados: sint32</span><span class="sxs-lookup"><span data-stu-id="4a162-114">Data type: sint32</span></span>  
-<span data-ttu-id="4a162-115">Tipo de acesso: Somente leitura</span><span class="sxs-lookup"><span data-stu-id="4a162-115">Access type: Read-only</span></span>  
+### <a name="eventid"></a><span data-ttu-id="d1fa7-113">EventID</span><span class="sxs-lookup"><span data-stu-id="d1fa7-113">EventID</span></span>  
+
+ <span data-ttu-id="d1fa7-114">Tipo de dados: sint32</span><span class="sxs-lookup"><span data-stu-id="d1fa7-114">Data type: sint32</span></span>  
+<span data-ttu-id="d1fa7-115">Tipo de acesso: Somente leitura</span><span class="sxs-lookup"><span data-stu-id="d1fa7-115">Access type: Read-only</span></span>  
   
- <span data-ttu-id="4a162-116">A ID do evento de registro de rastreamento.</span><span class="sxs-lookup"><span data-stu-id="4a162-116">The event ID of the trace record.</span></span>  
+ <span data-ttu-id="d1fa7-116">A ID de evento do registro de rastreamento.</span><span class="sxs-lookup"><span data-stu-id="d1fa7-116">The event ID of the trace record.</span></span>  
   
-### <a name="tracerecord"></a><span data-ttu-id="4a162-117">TraceRecord</span><span class="sxs-lookup"><span data-stu-id="4a162-117">TraceRecord</span></span>  
- <span data-ttu-id="4a162-118">Tipo de dados: cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="4a162-118">Data type: string</span></span>  
-<span data-ttu-id="4a162-119">Tipo de acesso: Somente leitura</span><span class="sxs-lookup"><span data-stu-id="4a162-119">Access type: Read-only</span></span>  
+### <a name="tracerecord"></a><span data-ttu-id="d1fa7-117">TraceRecord</span><span class="sxs-lookup"><span data-stu-id="d1fa7-117">TraceRecord</span></span>  
+
+ <span data-ttu-id="d1fa7-118">Tipo de dados: cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="d1fa7-118">Data type: string</span></span>  
+<span data-ttu-id="d1fa7-119">Tipo de acesso: Somente leitura</span><span class="sxs-lookup"><span data-stu-id="d1fa7-119">Access type: Read-only</span></span>  
   
- <span data-ttu-id="4a162-120">Registro de rastreamento</span><span class="sxs-lookup"><span data-stu-id="4a162-120">Trace Record</span></span>  
+ <span data-ttu-id="d1fa7-120">Registro de rastreamento</span><span class="sxs-lookup"><span data-stu-id="d1fa7-120">Trace Record</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4a162-121">Requisitos</span><span class="sxs-lookup"><span data-stu-id="4a162-121">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d1fa7-121">Requisitos</span><span class="sxs-lookup"><span data-stu-id="d1fa7-121">Requirements</span></span>  
   
-|<span data-ttu-id="4a162-122">MOF</span><span class="sxs-lookup"><span data-stu-id="4a162-122">MOF</span></span>|<span data-ttu-id="4a162-123">Declarado em Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="4a162-123">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="d1fa7-122">MOF</span><span class="sxs-lookup"><span data-stu-id="d1fa7-122">MOF</span></span>|<span data-ttu-id="d1fa7-123">Declarado em ServiceModel. mof.</span><span class="sxs-lookup"><span data-stu-id="d1fa7-123">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="4a162-124">Namespace</span><span class="sxs-lookup"><span data-stu-id="4a162-124">Namespace</span></span>|<span data-ttu-id="4a162-125">Definido no root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="4a162-125">Defined in root\ServiceModel</span></span>|
+|<span data-ttu-id="d1fa7-124">Namespace</span><span class="sxs-lookup"><span data-stu-id="d1fa7-124">Namespace</span></span>|<span data-ttu-id="d1fa7-125">Definido em root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="d1fa7-125">Defined in root\ServiceModel</span></span>|
