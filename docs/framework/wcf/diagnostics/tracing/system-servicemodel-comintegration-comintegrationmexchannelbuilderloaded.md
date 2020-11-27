@@ -2,21 +2,23 @@
 title: System.ServiceModel.ComIntegration.ComIntegrationMexChannelBuilderLoaded
 ms.date: 03/30/2017
 ms.assetid: 107160a1-1f19-4c5d-9a74-fe1f398aa8c4
-ms.openlocfilehash: 9100cbe64a1d1187839cb18175d0e8254b8baa41
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3ac54c57b601874081b613ab2aa8f5907fe13a6a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593770"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283361"
 ---
-# <a name="systemservicemodelcomintegrationcomintegrationmexchannelbuilderloaded"></a><span data-ttu-id="6c8ba-102">System.ServiceModel.ComIntegration.ComIntegrationMexChannelBuilderLoaded</span><span class="sxs-lookup"><span data-stu-id="6c8ba-102">System.ServiceModel.ComIntegration.ComIntegrationMexChannelBuilderLoaded</span></span>
-<span data-ttu-id="6c8ba-103">System.ServiceModel.ComIntegration.ComIntegrationMexChannelBuilderLoaded</span><span class="sxs-lookup"><span data-stu-id="6c8ba-103">System.ServiceModel.ComIntegration.ComIntegrationMexChannelBuilderLoaded</span></span>  
-  
-## <a name="description"></a><span data-ttu-id="6c8ba-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="6c8ba-104">Description</span></span>  
- <span data-ttu-id="6c8ba-105">ComPlus: o carregador de canal MEX é carregado.</span><span class="sxs-lookup"><span data-stu-id="6c8ba-105">Complus: Mex channel loader is loaded.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="6c8ba-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6c8ba-106">See also</span></span>
+# <a name="systemservicemodelcomintegrationcomintegrationmexchannelbuilderloaded"></a><span data-ttu-id="e2438-102">System.ServiceModel.ComIntegration.ComIntegrationMexChannelBuilderLoaded</span><span class="sxs-lookup"><span data-stu-id="e2438-102">System.ServiceModel.ComIntegration.ComIntegrationMexChannelBuilderLoaded</span></span>
 
-- [<span data-ttu-id="6c8ba-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="6c8ba-107">Tracing</span></span>](index.md)
-- [<span data-ttu-id="6c8ba-108">Utilizando o rastreamento para solucionar problemas em seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="6c8ba-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="6c8ba-109">Administração e diagnóstico</span><span class="sxs-lookup"><span data-stu-id="6c8ba-109">Administration and Diagnostics</span></span>](../index.md)
+<span data-ttu-id="e2438-103">System.ServiceModel.ComIntegration.ComIntegrationMexChannelBuilderLoaded</span><span class="sxs-lookup"><span data-stu-id="e2438-103">System.ServiceModel.ComIntegration.ComIntegrationMexChannelBuilderLoaded</span></span>  
+  
+## <a name="description"></a><span data-ttu-id="e2438-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="e2438-104">Description</span></span>  
+
+ <span data-ttu-id="e2438-105">ComPlus: o carregador de canal MEX é carregado.</span><span class="sxs-lookup"><span data-stu-id="e2438-105">Complus: Mex channel loader is loaded.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="e2438-106">Veja também</span><span class="sxs-lookup"><span data-stu-id="e2438-106">See also</span></span>
+
+- [<span data-ttu-id="e2438-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="e2438-107">Tracing</span></span>](index.md)
+- [<span data-ttu-id="e2438-108">Utilizando o rastreamento para solucionar problemas em seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="e2438-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="e2438-109">Administração e diagnóstico</span><span class="sxs-lookup"><span data-stu-id="e2438-109">Administration and Diagnostics</span></span>](../index.md)
