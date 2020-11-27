@@ -2,17 +2,19 @@
 title: Associação de MSMQ de rede
 ms.date: 03/30/2017
 ms.assetid: fe4bb696-f57c-4cb3-9b7e-9d95fe6b8323
-ms.openlocfilehash: 622341ef00f5d8950fa0c013e427f20e02187893
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 22b82e9335f3bf5861000a62374ab9e8dccce8cf
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602421"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96259974"
 ---
 # <a name="net-msmq-binding"></a>Associação de MSMQ de rede
+
 Esta seção contém exemplos que demonstram o uso de atributos de associação MSMQ de um elemento de ponto de extremidade.  
   
 ## <a name="in-this-section"></a>Nesta seção  
+
  [Associação transacionada do MSMQ](transacted-msmq-binding.md)  
  Demonstra como executar a comunicação em fila transacionada usando o MSMQ (enfileiramento de mensagens).  
   
@@ -35,4 +37,4 @@ Esta seção contém exemplos que demonstram o uso de atributos de associação 
  Demonstra como executar a comunicação em fila transacionada usando o MSMQ (enfileiramento de mensagens) via HTTP.  
   
  [Segurança de mensagem através do enfileiramento de mensagem](message-security-over-message-queuing.md)  
- Demonstra como implementar um aplicativo que usa o WS-Security com autenticação de certificado X. 509v3 para o cliente e requer autenticação de servidor usando o certificado X. 509v3 do servidor no MSMQ.
+ Demonstra como implementar um aplicativo que usa WS-Security com autenticação de certificado X. 509v3 para o cliente e requer autenticação de servidor usando o certificado X. 509v3 do servidor no MSMQ.

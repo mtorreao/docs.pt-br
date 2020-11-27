@@ -2,14 +2,15 @@
 title: Bloqueio de segurança PII
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 62e1495927cad669771c560603919e8f6b94d863
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0b4ec820cd57e3dfaff035dc8e5ce1ef4b463df5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559357"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96259987"
 ---
 # <a name="pii-security-lockdown"></a>Bloqueio de segurança PII
+
 Este exemplo demonstra como controlar vários recursos relacionados à segurança de um serviço Windows Communication Foundation (WCF) da seguinte maneira:  
   
 - Criptografia de informações confidenciais no arquivo de configuração de um serviço.  
@@ -28,6 +29,7 @@ Este exemplo demonstra como controlar vários recursos relacionados à seguranç
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
   
 ## <a name="discussion"></a>Discussão  
+
  Cada um desses recursos pode ser usado separadamente ou em conjunto para controlar aspectos da segurança de um serviço. Esse não é um guia definitivo para proteger um serviço WCF.  
   
  Os arquivos de configuração de .NET Framework podem conter informações confidenciais, como cadeias de conexão para se conectar a bancos de dados. Em cenários hospedados na Web, pode ser desejável criptografar essas informações no arquivo de configuração para um serviço para que os dados contidos no arquivo de configuração sejam resistentes à exibição casual. .NET Framework 2,0 e posteriores têm a capacidade de criptografar partes do arquivo de configuração usando a interface de programação de aplicativo de proteção de dados do Windows (DPAPI) ou o provedor de criptografia RSA. O aspnet_regiis.exe usando o DPAPI ou RSA pode criptografar partes selecionadas de um arquivo de configuração.  
@@ -37,6 +39,7 @@ Este exemplo demonstra como controlar vários recursos relacionados à seguranç
  Este exemplo demonstra como controlar o log de PII (informações de identificação pessoal) conhecidas em logs de rastreamento e de mensagens, como nome de usuário e senha. Por padrão, o log de PII conhecidas é desabilitado no entanto, em determinadas situações, o registro em log de PII pode ser importante na depuração de um aplicativo. Este exemplo é baseado na [introdução](getting-started-sample.md). Além disso, este exemplo usa rastreamento e log de mensagens. Para obter mais informações, consulte o exemplo de [rastreamento e log de mensagens](tracing-and-message-logging.md) .  
   
 ## <a name="encrypting-configuration-file-elements"></a>Criptografando elementos do arquivo de configuração  
+
  Para fins de segurança em um ambiente de hospedagem na Web compartilhado, pode ser desejável criptografar determinados elementos de configuração, como cadeias de conexão de banco de dados que podem conter informações confidenciais. Um elemento de configuração pode ser criptografado usando a ferramenta de aspnet_regiis.exe encontrada na pasta .NET Framework, por exemplo,%WINDIR%\Microsoft.NET\Framework\v4.0.20728.  
   
 #### <a name="to-encrypt-the-values-in-the-appsettings-section-in-webconfig-for-the-sample"></a>Para criptografar os valores na seção appSettings em Web.config para o exemplo  
@@ -50,6 +53,7 @@ Este exemplo demonstra como controlar vários recursos relacionados à seguranç
  Mais informações sobre como criptografar seções de arquivos de configuração podem ser encontradas lendo um instruções sobre DPAPI na configuração do ASP.NET ([compilando aplicativos seguros do ASP.net: autenticação, autorização e comunicação segura](/previous-versions/msp-n-p/ff649248(v=pandp.10))) e um "como" na configuração do ASP.net ([como: criptografar seções de configuração no ASP.NET 2,0 usando RSA](/previous-versions/msp-n-p/ff650304(v=pandp.10))).  
   
 ## <a name="locking-configuration-file-elements"></a>Elementos do arquivo de configuração de bloqueio  
+
  Em cenários hospedados na Web, é possível ter serviços em subdiretórios de serviços. Nessas situações, os valores de configuração para o serviço no subdiretório são calculados examinando valores em Machine.config e mesclando sucessivamente com qualquer Web.config arquivos em diretórios pai que se movem para baixo na árvore de diretórios e, por fim, mesclam o arquivo de Web.config no diretório que contém o serviço. O comportamento padrão para a maioria dos elementos de configuração é permitir que os arquivos de configuração em subdiretórios substituam os valores definidos em diretórios pai. Em determinadas situações, pode ser desejável impedir que arquivos de configuração em subdiretórios substituam valores definidos na configuração de diretório pai.  
   
  O .NET Framework fornece uma maneira de Bloquear elementos do arquivo de configuração para que as configurações que substituem elementos de configuração bloqueados lancem exceções em tempo de execução.  
@@ -74,6 +78,7 @@ Este exemplo demonstra como controlar vários recursos relacionados à seguranç
  O bloqueio de elementos de configuração pode ser mais específico. Uma lista de elementos pode ser especificada como o valor para `lockElements` para bloquear um conjunto de elementos dentro de uma coleção de subelementos. Uma lista de atributos pode ser especificada como o valor para `lockAttributes` para bloquear um conjunto de atributos dentro de um elemento. Uma coleção inteira de elementos ou atributos pode ser bloqueada, exceto por uma lista especificada, especificando os `lockAllElementsExcept` `lockAllAttributesExcept` atributos ou em um nó.  
   
 ## <a name="pii-logging-configuration"></a>Configuração de log de PII  
+
  O registro em log de PII é controlado por duas opções: uma configuração em todo o computador foi encontrada em Machine.config que permite que um administrador de computador permita ou negue o registro em log de PII e uma configuração de aplicativo que permite que um administrador de aplicativo Alterne o registro de PII para cada fonte em um arquivo Web.config ou App.config.  
   
  A configuração em todo o computador é controlada pela configuração `enableLoggingKnownPii` de `true` ou `false` , no `machineSettings` elemento no Machine.config. Por exemplo, o seguinte permite que os aplicativos ativem o registro em log de PII.  
@@ -142,6 +147,6 @@ Este exemplo demonstra como controlar vários recursos relacionados à seguranç
   
 1. Edite Machine.config para definir o `enableLoggingKnownPii` atributo como `false` .  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [AppFabric que monitora Exemplos](/previous-versions/appfabric/ff383407(v=azure.10))
