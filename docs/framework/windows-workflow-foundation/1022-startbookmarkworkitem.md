@@ -2,14 +2,15 @@
 title: 1022 - StartBookmarkWorkItem
 ms.date: 03/30/2017
 ms.assetid: 4415fbdb-0329-4019-803f-aea66e75f3da
-ms.openlocfilehash: 93d906b32b51effaa709da6763f535708cd6f821
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ca1f4244fb1a5144cb2d86eaacb9b31137d317c2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61924716"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275330"
 ---
 # <a name="1022---startbookmarkworkitem"></a>1022 - StartBookmarkWorkItem
+
 ## <a name="properties"></a>Propriedades  
   
 |||  
@@ -20,10 +21,12 @@ ms.locfileid: "61924716"
 |Canal|Os aplicativos de servidor de Microsoft-Windows- aplicativo/depuração|  
   
 ## <a name="description"></a>Descrição  
+
  Indica que um BookmarkWorkItem está sendo a execução.  
   
 ## <a name="message"></a>Mensagem  
- Iniciar a execução de um BookmarkWorkItem para atividades "%1", DisplayName: "%2", InstanceId: '%3'.  BookmarkName: %4, BookmarkScope: %5.  
+
+ Iniciando a execução de um BookmarkWorkItem para a atividade ' %1 ', DisplayName: ' %2 ', InstanceId: ' %3 '.  BookmarkName: %4, BookmarkScope: %5.  
   
 ## <a name="details"></a>Detalhes  
   

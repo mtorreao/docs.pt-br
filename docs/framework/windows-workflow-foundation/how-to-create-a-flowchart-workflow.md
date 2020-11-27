@@ -1,19 +1,20 @@
 ---
-title: Como criar um fluxo de trabalho de fluxograma
+title: 'Como: criar um fluxo de trabalho de fluxograma'
 description: Este artigo descreve como criar um fluxo de trabalho que usa atividades internas e as atividades personalizadas do artigo anterior.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: 6b3fa423200f5c5cfece60f07372ce9678fc0072
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: f8e0703591629a72e0a8f6eeb05dd9d19c8c4c91
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419701"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275821"
 ---
-# <a name="how-to-create-a-flowchart-workflow"></a>Como criar um fluxo de trabalho de fluxograma
+# <a name="how-to-create-a-flowchart-workflow"></a>Como: criar um fluxo de trabalho de fluxograma
+
 Os fluxos de trabalho podem ser construídos a partir de atividades internas assim como as atividades personalizadas. Este tópico percorre a criação de um fluxo de trabalho que usa atividades internas, como a <xref:System.Activities.Statements.Flowchart> atividade, e as atividades personalizadas do tópico [como criar uma atividade](how-to-create-an-activity.md) anterior. O fluxo de trabalho modela um jogo de palpite de número.  
   
 > [!NOTE]
@@ -100,7 +101,7 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
   
 5. Arraste uma atividade **atribuir** da seção **primitivos** da caixa de **ferramentas** e conecte-a usando um dos métodos descritos na etapa anterior para que ela esteja abaixo da atividade de **prompt** .  
   
-6. Digite `Turns` na caixa **para** e `Turns + 1` na caixa **Inserir uma expressão C#** ou **Inserir uma expressão VB** .  
+6. Digite `Turns` na caixa **para** e `Turns + 1` na caixa **Inserir uma expressão C#**  ou **Inserir uma expressão VB** .  
   
 7. Arraste um **FlowDecision** da seção **fluxograma** da caixa de **ferramentas** e conecte-o abaixo da atividade **atribuir** . Na **janela Propriedades**, digite a expressão a seguir na caixa valor da propriedade de **condição** .  
   
@@ -157,6 +158,6 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
 - <xref:System.Activities.Statements.FlowDecision>
 - [Programação do Windows Workflow Foundation](programming.md)
 - [Criando fluxos de trabalho](designing-workflows.md)
-- [Tutorial de Introdução](getting-started-tutorial.md)
-- [Como criar uma atividade](how-to-create-an-activity.md)
-- [Como executar um fluxo de trabalho](how-to-run-a-workflow.md)
+- [Guia de introdução ao tutorial](getting-started-tutorial.md)
+- [Como: criar uma atividade](how-to-create-an-activity.md)
+- [Como: executar um fluxo de trabalho](how-to-run-a-workflow.md)

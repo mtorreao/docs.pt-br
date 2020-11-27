@@ -2,14 +2,15 @@
 title: Escolhendo um filtro
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-ms.openlocfilehash: 2f96e7001a41682ef595d003e87daa06d0244f3b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f783b6416f2330d272c4c756a3ca0cd332f3c6e7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559383"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276094"
 ---
 # <a name="choosing-a-filter"></a>Escolhendo um filtro
+
 Ao configurar o serviço de roteamento, é importante selecionar os filtros de mensagem corretos e configurá-los para permitir que você faça correspondências exatas com as mensagens recebidas. Se os filtros selecionados forem excessivamente amplos em suas correspondências ou estiverem configurados incorretamente, as mensagens serão roteadas incorretamente. Se os filtros forem muito restritivos, talvez você não tenha nenhuma rota válida disponível para algumas de suas mensagens.
 
 ## <a name="filter-types"></a>Tipos de filtro
@@ -144,7 +145,7 @@ Como as consultas XPath geralmente contêm namespaces exclusivos, que geralmente
 
 Para obter mais informações sobre como criar consultas XPath, consulte [Sintaxe XPath](/previous-versions/dotnet/netframework-4.0/ms256471(v=vs.100)).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Filtros de mensagem](message-filters.md)
 - [Como: usar filtros](how-to-use-filters.md)

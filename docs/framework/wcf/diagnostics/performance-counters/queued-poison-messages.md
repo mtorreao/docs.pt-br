@@ -2,17 +2,19 @@
 title: Mensagens Suspeitas em Fila
 ms.date: 03/30/2017
 ms.assetid: 8257ba45-08ac-4301-93c3-c93b4b78737a
-ms.openlocfilehash: 4592d3a292e4a3e4e9165af58a9d9dcd5bfc431e
-ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
+ms.openlocfilehash: 9936417c3c88ea92aeec9f2d937aae2f5c643120
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78674900"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276211"
 ---
 # <a name="queued-poison-messages"></a>Mensagens Suspeitas em Fila
-Contador Nome: Mensagens venenosas enfileiradas.  
+
+Nome do contador: mensagens suspeitas enfileiradas.  
   
 ## <a name="description"></a>Descrição  
- Número de mensagens que são marcadas envenenadas pelo transporte enfileirado neste serviço.  
+
+ Número de mensagens marcadas como inviabilizada pelo transporte em fila neste serviço.  
   
- Para obter mais informações sobre quando as mensagens são marcadas envenenadas, consulte [Manipulação de mensagens venenosas](../../feature-details/poison-message-handling.md).
+ Para obter mais informações sobre quando as mensagens são marcadas como inviabilizada, consulte [manipulação de mensagens suspeitas](../../feature-details/poison-message-handling.md).

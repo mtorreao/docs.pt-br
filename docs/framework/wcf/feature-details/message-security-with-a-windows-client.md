@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
-ms.openlocfilehash: c87583bec908c3465dedf7c542e30ce264cd7b47
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1fe50f711c65871b811837a7f48cf6f45f4455b4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553773"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275600"
 ---
 # <a name="message-security-with-a-windows-client"></a>Segurança de mensagem com um cliente do Windows
+
 Esse cenário mostra um cliente Windows Communication Foundation (WCF) e um servidor protegido pelo modo de segurança da mensagem. O cliente e o serviço são autenticados usando as credenciais do Windows.  
   
  ![Segurança de mensagem com um cliente Windows](media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
@@ -29,19 +30,22 @@ Esse cenário mostra um cliente Windows Communication Foundation (WCF) e um serv
 |Associação|<xref:System.ServiceModel.NetTcpBinding>|  
   
 ## <a name="service"></a>Serviço  
- O código e a configuração a seguir devem ser executados de forma independente. Realize um dos seguintes procedimentos:  
+
+ O código e a configuração a seguir devem ser executados de forma independente. Realize uma destas ações:  
   
 - Crie um serviço autônomo usando o código sem configuração.  
   
 - Crie um serviço usando a configuração fornecida, mas não defina nenhum ponto de extremidade.  
   
 ### <a name="code"></a>Código  
+
  O código a seguir mostra como criar um ponto de extremidade de serviço que usa segurança de mensagem para estabelecer um contexto seguro com um computador Windows.  
   
  [!code-csharp[C_SecurityScenarios#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#11)]
  [!code-vb[C_SecurityScenarios#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#11)]  
   
 ### <a name="configuration"></a>Configuração  
+
  A configuração a seguir pode ser usada em vez do código para configurar o serviço:  
   
 ```xml  
@@ -73,7 +77,8 @@ Esse cenário mostra um cliente Windows Communication Foundation (WCF) e um serv
 ```  
   
 ## <a name="client"></a>Cliente  
- O código e a configuração a seguir devem ser executados de forma independente. Realize um dos seguintes procedimentos:  
+
+ O código e a configuração a seguir devem ser executados de forma independente. Realize uma destas ações:  
   
 - Crie um cliente autônomo usando o código (e o código do cliente).  
   
@@ -83,12 +88,14 @@ Esse cenário mostra um cliente Windows Communication Foundation (WCF) e um serv
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Código  
+
  O código a seguir cria um cliente. A associação é a segurança do modo de mensagem e o tipo de credencial do cliente é definido como `Windows` .  
   
  [!code-csharp[C_SecurityScenarios#18](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#18)]
  [!code-vb[C_SecurityScenarios#18](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#18)]  
   
 ### <a name="configuration"></a>Configuração  
+
  A configuração a seguir é usada para definir as propriedades do cliente.  
   
 ```xml  
@@ -116,7 +123,7 @@ Esse cenário mostra um cliente Windows Communication Foundation (WCF) e um serv
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Visão geral de segurança](security-overview.md)
 - [Modelo de segurança para o Windows Server app Fabric](/previous-versions/appfabric/ee677202(v=azure.10))
