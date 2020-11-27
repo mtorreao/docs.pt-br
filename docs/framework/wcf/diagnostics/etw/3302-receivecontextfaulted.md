@@ -2,14 +2,15 @@
 title: 3302 - ReceiveContextFaulted
 ms.date: 03/30/2017
 ms.assetid: af3d1fc2-40e9-4466-b756-51a582505f3d
-ms.openlocfilehash: e5961aa6ba55b42c8577bd3cd09f14d132971e9f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b186be1471c2dffbccea342da73a2d4393a68345
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61595979"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293267"
 ---
 # <a name="3302---receivecontextfaulted"></a>3302 - ReceiveContextFaulted
+
 ## <a name="properties"></a>Propriedades  
   
 |||  
@@ -20,9 +21,11 @@ ms.locfileid: "61595979"
 |Canal|Os aplicativos de servidor de Microsoft-Windows- aplicativo/analítico|  
   
 ## <a name="description"></a>Descrição  
- Esse evento é emitido quando as falhas de contexto de recebimento.  
+
+ Esse evento é emitido quando o contexto de recebimento falha.  
   
 ## <a name="message"></a>Mensagem  
- Contexto de recebimento com defeito.  
+
+ Falha no contexto de recebimento.  
   
 ## <a name="details"></a>Detalhes

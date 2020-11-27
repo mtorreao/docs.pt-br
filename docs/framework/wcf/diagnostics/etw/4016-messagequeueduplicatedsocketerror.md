@@ -2,27 +2,30 @@
 title: 4016 - MessageQueueDuplicatedSocketError
 ms.date: 03/30/2017
 ms.assetid: 4c35cf2c-e6fc-48e2-bc40-3af01cb5d31e
-ms.openlocfilehash: 6da0e22fd7b5bf8f5e345589fcf266af9c758773
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0869bba55a92d6ca555ea4f4ee2fc4b2bcc4ec66
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703472"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96292422"
 ---
 # <a name="4016---messagequeueduplicatedsocketerror"></a>4016 - MessageQueueDuplicatedSocketError
+
 ## <a name="properties"></a>Propriedades  
   
 |||  
 |-|-|  
 |ID|4016|  
-|Palavras-chave|ActivationServices|  
-|Nível|Erro|  
+|Palavras-chave|Ativaçãoservices|  
+|Nível|Erro do|  
 |Canal|Os aplicativos de servidor de Microsoft-Windows- aplicativo/analítico|  
   
 ## <a name="description"></a>Descrição  
- Esse evento é emitido quando a fila de mensagens Falha na duplicação do soquete.  
+
+ Esse evento é emitido quando a fila de mensagens falha ao duplicar o soquete.  
   
 ## <a name="message"></a>Mensagem  
- Fila de mensagens Falha na duplicação do soquete.  
+
+ A fila de mensagens falhou ao duplicar o soquete.  
   
 ## <a name="details"></a>Detalhes

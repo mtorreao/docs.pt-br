@@ -5,14 +5,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], tracking and tracing
 ms.assetid: b965ded6-370a-483d-8790-f794f65b137e
-ms.openlocfilehash: ce7fa6582bb280bd050dd5609e1041452338fedd
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 45b1474b125a194498e5f7beddecbfeed5ce6ced
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548573"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293579"
 ---
 # <a name="workflow-tracking-and-tracing"></a>Rastreamento e rastreamento de fluxo de trabalho
+
 O rastreamento de fluxo de trabalho do Windows é um recurso de [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] projetado para fornecer a visibilidade no fluxo de trabalho. Fornece uma infraestrutura de rastreamento para controlar a execução de uma instância de fluxo de trabalho. De WF de rastreamento de infraestrutura os implementa transparente um fluxo de trabalho para emitir os registros que refletem eventos chave durante a execução. Essa funcionalidade está disponível por padrão para qualquer fluxo de trabalho [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] . Nenhuma alteração é necessária para ser feita a um fluxo de trabalho para acompanhar [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] que ocorra. É apenas uma questão de decidir quanto dados de acompanhamento você deseja receber. Quando inicia de uma instância de fluxo de trabalho ou tiver terminado, seus registros de acompanhamento de processamento são emitidas. O rastreamento também pode extrair os dados negócio- relevantes associados com variáveis de fluxo de trabalho. Por exemplo, se o fluxo de trabalho representa um sistema de processamento de aplicativos, a identificação do pedido pode ser extraído juntamente com o objeto de <xref:System.Activities.Tracking.TrackingRecord> . Geralmente, ative o rastreamento de WF facilita diagnóstico ou dados de análise de negócio a ser acessados de uma execução de fluxo de trabalho.  
   
  Esses componentes de acompanhamento são equivalentes ao serviço de rastreamento no WinFX. Em [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], o desempenho foi aprimorado e o modelo de programação foi simplificado para o recurso de rastreamento de WF. Os implementa de rastreamento uma instância de fluxo de trabalho para emitir eventos relacionados ao ciclo de vida de trabalho, para atividades de trabalho e eventos personalizados.  
@@ -30,6 +31,7 @@ O rastreamento de fluxo de trabalho do Windows é um recurso de [!INCLUDE[netfx_
 - os registros de acompanhamento de filtro de objetos de<xref:System.Activities.Tracking.TrackingProfile> emissores de um fluxo de trabalho instância. Para obter mais informações, consulte [perfis de rastreamento](tracking-profiles.md).  
   
 ## <a name="workflow-tracking-infrastructure"></a>Infraestrutura de rastreamento de fluxo de trabalho  
+
  A infraestrutura de acompanhamento de fluxo de trabalho segue um paradigma publicar-e- assinatura. A instância de fluxo de trabalho é o editor de registros de rastreamento, quando os assinantes de registros de rastreamento são registrados como extensões para o fluxo de trabalho. Essas extensões que assina a <xref:System.Activities.Tracking.TrackingRecord> objetos são chamadas controlar participantes. Os participantes de rastreamento são os pontos de extensibilidade no qual acessar objetos de <xref:System.Activities.Tracking.TrackingRecord> e os processar o que são escritos maneira para fazer isso. A infraestrutura de rastreamento permite o aplicativo de um filtro os registros de saída do rastreamento permitir que um participante assine a um subconjunto de registros. Esse mecanismo de filtragem é feito através de um arquivo de perfil de rastreamento.  
   
  Uma exibição de alto nível da infraestrutura de rastreamento é mostrada na ilustração a seguir:  
@@ -37,6 +39,7 @@ O rastreamento de fluxo de trabalho do Windows é um recurso de [!INCLUDE[netfx_
  ![Captura de tela que mostra a infraestrutura de rastreamento de fluxo de trabalho.](./media/workflow-tracking-and-tracing/workflow-tracking-infrastructure.gif "WV")  
   
 ## <a name="in-this-section"></a>Nesta seção  
+
  [Controlando registros](tracking-records.md)  
  Descreve os registros de rastreamento que o runtime de fluxo de trabalho se emite.  
   
@@ -52,6 +55,6 @@ O rastreamento de fluxo de trabalho do Windows é um recurso de [!INCLUDE[netfx_
  [Rastreamento de fluxo de trabalho](workflow-tracing.md)  
  Descreve as duas maneiras para ativar o rastreamento de depuração para um fluxo de trabalho.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Rastreamento de SQL](./samples/sql-tracking.md)

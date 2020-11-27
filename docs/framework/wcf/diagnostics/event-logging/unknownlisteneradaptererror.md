@@ -2,24 +2,26 @@
 title: UnknownListenerAdapterError
 ms.date: 03/30/2017
 ms.assetid: f454773d-a208-4ce0-8675-b6dd7ebd5a5a
-ms.openlocfilehash: 49e7e0de21a7e44a62d7efe9b59b618bd37f9168
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 76ddc67a3c016bc07d3c87a2b8a9735bd0887544
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797460"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293241"
 ---
 # <a name="unknownlisteneradaptererror"></a>UnknownListenerAdapterError
-Sessão 161  
+
+ID: 161  
   
- Severity Erro  
+ Gravidade: Erro  
   
- Categorias SMSvcHost  
+ Categoria: SMSvcHost  
   
 ## <a name="description"></a>Descrição  
+
  Esse evento indica que ocorreu um erro inesperado no adaptador do ouvinte ao manipular uma notificação do WAS (serviço de ativação de processos do Windows). O processo é encerrado. O evento lista o protocolo, exceção, nome do processo e ID do processo.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Registro de eventos em log](index.md)
+- [Log de eventos](index.md)
 - [Referência geral de eventos](events-general-reference.md)

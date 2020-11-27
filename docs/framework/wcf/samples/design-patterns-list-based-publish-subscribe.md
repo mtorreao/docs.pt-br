@@ -2,22 +2,23 @@
 title: 'Padrões de design: publicação-assinatura baseada em lista'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 02668962afff5f760fc02692a92e72e765089545
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4e679980df8a720eb4aa22741bbdd067940c7723
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545573"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96292669"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Padrões de design: publicação-assinatura baseada em lista
-Este exemplo ilustra o padrão de publicação-assinatura baseado em lista implementado como um programa Windows Communication Foundation (WCF).  
+
+Este exemplo ilustra o padrão de Publish-Subscribe baseado em lista implementado como um programa de Windows Communication Foundation (WCF).  
   
 > [!NOTE]
 > O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
- O padrão de design de publicação-assinatura com base em lista é descrito na publicação de práticas de & de padrões da Microsoft, [padrões de integração](/previous-versions/msp-n-p/ff647309(v=pandp.10)). O padrão de publicação/assinatura passa informações para uma coleção de destinatários que assinaram um tópico de informações. Publicação com base em lista-assinatura mantém uma lista de assinantes. Quando há informações a serem compartilhadas, uma cópia é enviada para cada Assinante na lista. Este exemplo demonstra um padrão de publicação-assinatura com base em lista dinâmica, em que os clientes podem assinar ou cancelar a assinatura com a frequência necessária.  
+ O padrão de design de Publish-Subscribe baseado em lista é descrito na publicação de práticas de & de padrões da Microsoft, [padrões de integração](/previous-versions/msp-n-p/ff647309(v=pandp.10)). O padrão de Publish-Subscribe passa informações para uma coleção de destinatários que assinaram um tópico de informações. Publicação com base em lista-assinatura mantém uma lista de assinantes. Quando há informações a serem compartilhadas, uma cópia é enviada para cada Assinante na lista. Este exemplo demonstra um padrão de publicação-assinatura com base em lista dinâmica, em que os clientes podem assinar ou cancelar a assinatura com a frequência necessária.  
   
- O exemplo de publicação-assinatura com base em lista consiste em um cliente, um serviço e um programa de fonte de dados. Pode haver mais de um cliente e mais de um programa de fonte de dados em execução. Os clientes assinam o serviço, recebem notificações e cancelam a assinatura. Os programas de fonte de dados enviam informações para o serviço a serem compartilhados com todos os assinantes atuais.  
+ O exemplo de Publish-Subscribe baseado em lista consiste em um cliente, um serviço e um programa de fonte de dados. Pode haver mais de um cliente e mais de um programa de fonte de dados em execução. Os clientes assinam o serviço, recebem notificações e cancelam a assinatura. Os programas de fonte de dados enviam informações para o serviço a serem compartilhados com todos os assinantes atuais.  
   
  Neste exemplo, o cliente e a fonte de dados são programas de console (arquivos. exe) e o serviço é uma biblioteca (. dll) hospedada no Serviços de Informações da Internet (IIS). A atividade cliente e fonte de dados fica visível na área de trabalho.  
   

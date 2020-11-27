@@ -2,17 +2,19 @@
 title: Usando o controle para solucionar problemas de aplicativos
 ms.date: 03/30/2017
 ms.assetid: 8851adde-c3c2-4391-9523-d8eb831490af
-ms.openlocfilehash: fc9427d0c06ed67ea69669cab2aae64f39f7c10c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 62f2240831dd33bdaf78655199aad75b7e29c59c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551282"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293566"
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>Usando o controle para solucionar problemas de aplicativos
+
 Windows Workflow Foundation (WF) permite que você acompanhe informações relacionadas ao fluxo de trabalho para fornecer detalhes sobre a execução de um aplicativo ou serviço Windows Workflow Foundation. Windows Workflow Foundation hosts são capazes de capturar eventos de fluxo de trabalho durante a execução de uma instância de fluxo de trabalho. Se o fluxo de trabalho gerar falhas ou exceções, você poderá usar os detalhes de rastreamento de Windows Workflow Foundation para solucionar problemas de processamento.  
   
 ## <a name="troubleshooting-a-wf-using-wf-tracking"></a>Solução de problemas um WF usando o rastreamento de WF  
+
  Para detectar falhas no processamento de uma atividade de Windows Workflow Foundation, você pode habilitar o acompanhamento com um perfil de controle que consulta um <xref:System.Activities.Tracking.ActivityStateRecord> com o estado de falha. A consulta correspondente é especificada no código a seguir.  
   
 ```xml  
@@ -51,7 +53,7 @@ Windows Workflow Foundation (WF) permite que você acompanhe informações relac
   
  Se você estiver ativado usando o participante de rastreamento de ETW, os eventos de falha são emitidas a uma sessão de ETW. Eventos podem ser exibidos usando o visualizador de eventos do visualizador de eventos. Isso pode ser encontrado no nó **Visualizador de eventos->logs de aplicativos e serviços->Microsoft->Windows->Application Server – Applications** no canal analítico.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Monitoramento do Windows Server app Fabric](/previous-versions/appfabric/ee677251(v=azure.10))
 - [Monitorando aplicativos com o app Fabric](/previous-versions/appfabric/ee677276(v=azure.10))

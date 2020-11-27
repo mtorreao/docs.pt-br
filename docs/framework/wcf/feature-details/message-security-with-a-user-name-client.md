@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-ms.openlocfilehash: 9bcac0e45d44270d27a4cf04677e967a80e94b90
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 7168b393bde626c8c413cda3c7422e0eee4ce267
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550196"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96292864"
 ---
 # <a name="message-security-with-a-user-name-client"></a>Segurança de mensagem com um nome de usuário cliente
+
 A ilustração a seguir mostra um serviço de Windows Communication Foundation (WCF) e o cliente protegidos usando a segurança em nível de mensagem. O serviço é autenticado com um certificado X. 509. O cliente é autenticado usando um nome de usuário e senha.  
   
  Para um aplicativo de exemplo, consulte [segurança da mensagem nome de usuário](../samples/message-security-user-name.md).  
@@ -31,19 +32,22 @@ A ilustração a seguir mostra um serviço de Windows Communication Foundation (
 |Associação|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>Serviço  
- O código e a configuração a seguir devem ser executados de forma independente. Realize um dos seguintes procedimentos:  
+
+ O código e a configuração a seguir devem ser executados de forma independente. Realize uma destas ações:  
   
 - Crie um serviço autônomo usando o código sem configuração.  
   
 - Crie um serviço usando a configuração fornecida, mas não defina nenhum ponto de extremidade.  
   
 ### <a name="code"></a>Código  
+
  O código a seguir mostra como criar um ponto de extremidade de serviço que usa a segurança de mensagem.  
   
  [!code-csharp[C_SecurityScenarios#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#9)]
  [!code-vb[C_SecurityScenarios#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#9)]  
   
 ### <a name="configuration"></a>Configuração  
+
  A configuração a seguir pode ser usada em vez do código:  
   
 ```xml  
@@ -89,12 +93,14 @@ A ilustração a seguir mostra um serviço de Windows Communication Foundation (
 ## <a name="client"></a>Cliente  
   
 ### <a name="code"></a>Código  
+
  O código a seguir cria o cliente. A associação é a segurança do modo de mensagem e o tipo de credencial do cliente é definido como `UserName` . O nome de usuário e a senha só podem ser especificados usando código (não é configurável). O código para retornar o nome de usuário e a senha não é mostrado aqui porque ele deve ser feito no nível do aplicativo. Por exemplo, use uma caixa de diálogo Windows Forms para consultar o usuário para os dados.  
   
  [!code-csharp[C_SecurityScenarios#16](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#16)]
  [!code-vb[C_SecurityScenarios#16](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#16)]  
   
 ### <a name="configuration"></a>Configuração  
+
  O código a seguir configura o cliente. A associação é a segurança do modo de mensagem e o tipo de credencial do cliente é definido como `UserName` . O nome de usuário e a senha só podem ser especificados usando código (não é configurável).  
   
 ```xml  
@@ -125,7 +131,7 @@ A ilustração a seguir mostra um serviço de Windows Communication Foundation (
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Visão geral de segurança](security-overview.md)
 - [Message Security User Name](../samples/message-security-user-name.md)
