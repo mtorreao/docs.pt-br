@@ -2,14 +2,15 @@
 title: 3320 - SocketAccepted
 ms.date: 03/30/2017
 ms.assetid: b98b0066-b78c-4c11-9567-43dbbbd254ce
-ms.openlocfilehash: 5cab6d3ea93dec7c79eedb53a1a01ce89ce67eda
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b985737a19e0e9ced1e7d77a8cb74a3ab3af63c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61595778"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96248754"
 ---
 # <a name="3320---socketaccepted"></a>3320 - SocketAccepted
+
 ## <a name="properties"></a>Propriedades  
   
 |||  
@@ -20,9 +21,11 @@ ms.locfileid: "61595778"
 |Canal|Os aplicativos de servidor de Microsoft-Windows- aplicativo/depuração|  
   
 ## <a name="description"></a>Descrição  
+
  Esse evento é emitido quando o soquete é aceito.  
   
 ## <a name="message"></a>Mensagem  
- ListenerId:% 1 aceito SocketId:% 2.  
+
+ Listenerid: %1 aceitou Socketid: %2.  
   
 ## <a name="details"></a>Detalhes

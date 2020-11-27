@@ -1,19 +1,20 @@
 ---
-title: Como criar um fluxo de trabalho de máquina de estado
+title: 'Como: criar um fluxo de trabalho da máquina de estado'
 description: Este artigo cria um fluxo de trabalho que usa atividades internas, como a atividade StateMachine e atividades personalizadas.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
-ms.openlocfilehash: 8a9342c07c15d65df0310c0cb35b4b2c6f2ba686
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 9df911779422ca2710686963a040a95258db8891
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419649"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96248913"
 ---
-# <a name="how-to-create-a-state-machine-workflow"></a>Como criar um fluxo de trabalho de máquina de estado
+# <a name="how-to-create-a-state-machine-workflow"></a>Como: criar um fluxo de trabalho da máquina de estado
+
 Os fluxos de trabalho podem ser construídos a partir de atividades internas assim como as atividades personalizadas. Este tópico percorre a criação de um fluxo de trabalho que usa atividades internas, como a <xref:System.Activities.Statements.StateMachine> atividade, e as atividades personalizadas do tópico [como criar uma atividade](how-to-create-an-activity.md) anterior. O fluxo de trabalho modela um jogo de palpite de número.  
   
 > [!NOTE]
@@ -111,7 +112,7 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
   
 12. Arraste uma atividade **FinalState** da seção **máquina de estado** da **caixa de ferramentas**, passe o mouse sobre o estado de **adivinhação Enter** e solte-o no triângulo que aparece à direita do estado de **estimativa Enter** para que uma transição seja criada entre **Enter estimativa** e **FinalState**.  
   
-13. O nome padrão da transição é **T2**. Clique na transição no designer de fluxo de trabalho para selecioná-la e defina seu **DisplayName** como **palpite correto**. Em seguida, clique e selecione o **FinalState**e arraste-o para a direita para que haja espaço para que o nome de transição completo seja exibido sem sobreposição de qualquer um dos dois Estados. Isso facilitará a conclusão das etapas restantes no tutorial.  
+13. O nome padrão da transição é **T2**. Clique na transição no designer de fluxo de trabalho para selecioná-la e defina seu **DisplayName** como **palpite correto**. Em seguida, clique e selecione o **FinalState** e arraste-o para a direita para que haja espaço para que o nome de transição completo seja exibido sem sobreposição de qualquer um dos dois Estados. Isso facilitará a conclusão das etapas restantes no tutorial.  
   
 14. Clique duas vezes na transição **correta de adivinhação** renomeada no designer de fluxo de trabalho para expandi-la.  
   
@@ -194,6 +195,6 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
 - <xref:System.Activities.Statements.FlowDecision>
 - [Programação do Windows Workflow Foundation](programming.md)
 - [Criando fluxos de trabalho](designing-workflows.md)
-- [Tutorial de Introdução](getting-started-tutorial.md)
-- [Como criar uma atividade](how-to-create-an-activity.md)
-- [Como executar um fluxo de trabalho](how-to-run-a-workflow.md)
+- [Guia de introdução ao tutorial](getting-started-tutorial.md)
+- [Como: criar uma atividade](how-to-create-an-activity.md)
+- [Como: executar um fluxo de trabalho](how-to-run-a-workflow.md)

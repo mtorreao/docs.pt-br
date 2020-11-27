@@ -2,15 +2,16 @@
 title: Segurança de mensagem através do enfileiramento de mensagem
 ms.date: 03/30/2017
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
-ms.openlocfilehash: 1733cea17c82f85751b810f4a6033caefd828e29
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1b262a5f4343e07aecf5eebda32cc995f86ec77b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558635"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96248910"
 ---
 # <a name="message-security-over-message-queuing"></a>Segurança de mensagem através do enfileiramento de mensagem
-Este exemplo demonstra como implementar um aplicativo que usa o WS-Security com autenticação de certificado X. 509v3 para o cliente e requer autenticação de servidor usando o certificado X. 509v3 do servidor no MSMQ. Às vezes, a segurança de mensagem é mais desejável garantir que as mensagens no armazenamento MSMQ permaneçam criptografadas e o aplicativo possa executar sua própria autenticação da mensagem.
+
+Este exemplo demonstra como implementar um aplicativo que usa WS-Security com autenticação de certificado X. 509v3 para o cliente e requer autenticação de servidor usando o certificado X. 509v3 do servidor no MSMQ. Às vezes, a segurança de mensagem é mais desejável garantir que as mensagens no armazenamento MSMQ permaneçam criptografadas e o aplicativo possa executar sua própria autenticação da mensagem.
 
  Este exemplo é baseado no exemplo de [associação MSMQ transacionado](transacted-msmq-binding.md) . As mensagens são criptografadas e assinadas.
 
@@ -24,7 +25,7 @@ Este exemplo demonstra como implementar um aplicativo que usa o WS-Security com 
 
     2. Expanda a guia **recursos** .
 
-    3. Clique com o botão direito do mouse em **filas de mensagens particulares**e selecione **nova** **fila privada**.
+    3. Clique com o botão direito do mouse em **filas de mensagens particulares** e selecione **nova** **fila privada**.
 
     4. Marque a caixa **transacional** .
 
@@ -83,16 +84,19 @@ Este exemplo demonstra como implementar um aplicativo que usa o WS-Security com 
     > Esse script não remove certificados de serviço em um cliente ao executar esse exemplo em computadores. Se você tiver executado Windows Communication Foundation (WCF) exemplos que usam certificados entre computadores, certifique-se de limpar os certificados de serviço que foram instalados no repositório CurrentUser-TrustedPeople. Para fazer isso, use o seguinte comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` por exemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com` .
 
 ## <a name="requirements"></a>Requisitos
+
  Este exemplo requer que o MSMQ esteja instalado e em execução.
 
 ## <a name="demonstrates"></a>Demonstra
+
  O cliente criptografa a mensagem usando a chave pública do serviço e assina a mensagem usando seu próprio certificado. O serviço que lê a mensagem da fila autentica o certificado do cliente com o certificado em seu repositório de pessoas confiáveis. Em seguida, ele descriptografa a mensagem e envia a mensagem para a operação de serviço.
 
  Como a mensagem de Windows Communication Foundation (WCF) é transportada como uma carga no corpo da mensagem MSMQ, o corpo permanece criptografado no armazenamento MSMQ. Isso protege a mensagem contra a divulgação indesejada da mensagem. Observe que o MSMQ em si não reconhece se a mensagem que está carregando é criptografada.
 
  O exemplo demonstra como a autenticação mútua no nível da mensagem pode ser usada com o MSMQ. Os certificados são trocados fora de banda. Esse é sempre o caso com o aplicativo enfileirado porque o serviço e o cliente não precisam estar em funcionamento ao mesmo tempo.
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descrição
+
  O exemplo de código de cliente e serviço é o mesmo que o exemplo de [associação MSMQ transacionado](transacted-msmq-binding.md) com uma diferença. O contrato de operação é anotado com o nível de proteção, o que sugere que a mensagem deve ser assinada e criptografada.
 
 ```csharp
