@@ -2,24 +2,26 @@
 title: WmiExecMethodFailed
 ms.date: 03/30/2017
 ms.assetid: 8cb52fa8-0c36-4761-bf8e-2d7e1b73372e
-ms.openlocfilehash: 3b81ce8305b4cec87b8fcfaeb26da669766ca2b0
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c74845aa856e7aed910f8c8a62553dcaa03e79ec
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797401"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96277758"
 ---
 # <a name="wmiexecmethodfailed"></a>WmiExecMethodFailed
-Sessão 125  
+
+ID: 125  
   
- Severity Erro  
+ Gravidade: Erro  
   
- Categorias ServiceModel  
+ Categoria: ServiceModel  
   
 ## <a name="description"></a>Descrição  
+
  Esse evento indica que a solicitação de ExecMethod WMI não foi processada. O evento lista exceção, nome do processo e ID do processo.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Registro de eventos em log](index.md)
+- [Log de eventos](index.md)
 - [Referência geral de eventos](events-general-reference.md)

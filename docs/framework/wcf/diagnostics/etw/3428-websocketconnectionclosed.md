@@ -2,14 +2,15 @@
 title: 3428 - WebSocketConnectionClosed
 ms.date: 03/30/2017
 ms.assetid: cb16c9da-37b3-4cbd-800e-0d1691eb0bb2
-ms.openlocfilehash: 89eeed45c4906856b780d7af26a9f28d2b9e1919
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9e970fc5b8d1b98665319dc9cf60ff44e2c6a43
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61762938"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96278824"
 ---
 # <a name="3428---websocketconnectionclosed"></a>3428 - WebSocketConnectionClosed
+
 ## <a name="properties"></a>Propriedades  
   
 |||  
@@ -20,9 +21,11 @@ ms.locfileid: "61762938"
 |Canal|Os aplicativos de servidor de Microsoft-Windows- aplicativo/depuração|  
   
 ## <a name="description"></a>Descrição  
- Esse evento é emitido quando a conexão WebSocket é fechado.  
+
+ Esse evento é emitido quando a conexão WebSocket é fechada.  
   
 ## <a name="message"></a>Mensagem  
- WebSocketId:% 1 conexão é fechada.  
+
+ Websocketid: %1 conexão fechada.  
   
 ## <a name="details"></a>Detalhes
