@@ -7,18 +7,19 @@ helpviewer_keywords:
 - performance counters
 - performance monitoring, counters
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
-ms.openlocfilehash: c5ee2fae9167dd508332d8e97a589a8ddb0394ac
-ms.sourcegitcommit: d66641bc7c14ad7d02300316e9e7e84a875a0a72
+ms.openlocfilehash: c9e073ef088595d3ee5cd9e1af70140f12022179
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91712623"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96271467"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>Contadores de desempenho no .NET Framework
 
 Este tópico fornece uma lista de contadores de desempenho que você pode encontrar no [Monitor de desempenho do Windows](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249(v=ws.11)).  
 
 ## <a name="exception-performance-counters"></a>Contadores de desempenho de exceção  
+
  A categoria Exceções do .NET CLR do Console de desempenho inclui contadores que fornecem informações sobre as exceções geradas por um aplicativo. A tabela a seguir descreve esses contadores de desempenho.  
   
 |Contador de desempenho|Descrição|  
@@ -30,6 +31,7 @@ Este tópico fornece uma lista de contadores de desempenho que você pode encont
 |**Extensão do início ao tratamento/s**|Exibe o número de registros ativação desviados, do quadro que gerou a exceção até o quadro que tratou a exceção, por segundo. Esse contador é reiniciado para zero quando um manipulador de exceção é inserido, de modo que as exceções aninhadas mostram a profundidade da pilha de manipulador a manipulador.<br /><br /> Esse contador não consiste numa média temporal; ele apresenta a diferença entre os valores observados nos dois últimos exemplos divididos pela duração do intervalo de amostragem.|  
 
 ## <a name="interop-performance-counters"></a>Contadores de desempenho de interoperabilidade  
+
  A categoria de interoperabilidade do .NET CLR do Console de desempenho inclui contadores que fornecem informações sobre a interação de um aplicativo com componentes COM, serviços COM+ e bibliotecas de tipos externo. A tabela a seguir descreve esses contadores de desempenho.  
   
 |Contador de desempenho|Descrição|  
@@ -41,6 +43,7 @@ Este tópico fornece uma lista de contadores de desempenho que você pode encont
 |**N. de importações de TLB/s**|Reservado para uso futuro.|  
 
 ## <a name="jit-performance-counters"></a>contadores de desempenho JIT  
+
  A categoria JIT do .NET CLR do Console de desempenho inclui contadores que fornecem informações sobre o código com compilação JIT. A tabela a seguir descreve esses contadores de desempenho.  
   
 |Contador de desempenho|Descrição|  
@@ -53,6 +56,7 @@ Este tópico fornece uma lista de contadores de desempenho que você pode encont
 |**N. de bytes de IL com compilação JIT total**|Exibe o total de bytes MSIL com compilação JIT desde que o aplicativo foi iniciado. Este contador é equivalente ao contador **N. de bytes de IL com compilação JIT**.|  
 
 ## <a name="loading-performance-counters"></a>Carregando contadores de desempenho  
+
  A categoria Carregamento do .NET CLR do Console de desempenho inclui contadores que fornecem informações sobre os assemblies, as classes e os domínios de aplicativos que são carregados. A tabela a seguir descreve esses contadores de desempenho.  
   
 |Contador de desempenho|Descrição|  
@@ -75,6 +79,7 @@ Este tópico fornece uma lista de contadores de desempenho que você pode encont
 |**Total de Classes carregadas**|Exibe o número cumulativo de classes carregadas em todos os assemblies desde que o aplicativo foi iniciado.|  
 
 ## <a name="lock-and-thread-performance-counters"></a>Contadores de desempenho de bloqueio e thread  
+
  A categoria LocksAndThreads do .NET CLR do Console de desempenho inclui contadores que fornecem informações sobre bloqueios e threads gerenciados e usos de aplicativo. A tabela a seguir descreve esses contadores de desempenho.  
   
 |Contador de desempenho|Descrição|  
@@ -91,6 +96,7 @@ Este tópico fornece uma lista de contadores de desempenho que você pode encont
 |**N. total de contenções**|Exibe o número total de vezes que os threads em runtime tentaram adquirir um bloqueio gerenciado sem êxito.|  
 
 ## <a name="memory-performance-counters"></a>Contadores de desempenho da memória  
+
  A categoria Memória do .NET CLR do Console de desempenho inclui contadores que fornecem informações sobre o coletor de lixo. A tabela a seguir descreve esses contadores de desempenho.  
   
 |Contador de desempenho|Descrição|  
@@ -218,6 +224,7 @@ for (int i = 0; i < Array.Length; i++)
  Para obter mais informações sobre como acessar e gerenciar os contadores de desempenho em um aplicativo, consulte [Contadores de desempenho](performance-counters.md).  
 
 ## <a name="security-performance-counters"></a>Contadores de desempenho de segurança  
+
  A categoria de Segurança do .NET CLR do Console de desempenho inclui contadores que fornecem informações sobre as verificações de segurança que o Common Language Runtime executa para um aplicativo. A tabela a seguir descreve esses contadores de desempenho.  
   
 |Contador de desempenho|Descrição|  

@@ -6,14 +6,15 @@ helpviewer_keywords:
 - Windows Service applications, creating
 - templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
-ms.openlocfilehash: 35d78acd4fae7bf98a2b3f4ce6ac8a32393c35d4
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 9b171fa54cf65a482625c276c26185b12075c753
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608589"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96270700"
 ---
 # <a name="how-to-create-windows-services"></a>Como: Criar serviços Windows
+
 Ao criar um serviço, você pode usar um modelo de projeto Visual Studio chamado **Serviço Windows**. Esse modelo realiza automaticamente muito do trabalho para você referenciando as classes e namespaces apropriados, configurando a herança de classe base para serviços, e substituindo muitos dos métodos que você provavelmente desejará substituir.  
   
 > [!WARNING]
@@ -43,7 +44,7 @@ Ao criar um serviço, você pode usar um modelo de projeto Visual Studio chamado
   
 3. Defina qualquer uma das propriedades a seguir para determinar como seu serviço funcionará.  
   
-    |Propriedade|Configuração|  
+    |Propriedade|Setting|  
     |--------------|-------------|  
     |<xref:System.ServiceProcess.ServiceBase.CanStop%2A>|`True` para indicar que o serviço aceitará solicitações para parar a execução; `false` para impedir que o serviço seja interrompido.|  
     |<xref:System.ServiceProcess.ServiceBase.CanShutdown%2A>|`True` para indicar que o serviço deseja receber uma notificação quando o computador no qual ele está for desligado, permitindo que a ele chamar o procedimento <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A>.|  
@@ -67,7 +68,7 @@ Ao criar um serviço, você pode usar um modelo de projeto Visual Studio chamado
   
 8. Instale o serviço. Para obter mais informações, confira [Como instalar e desinstalar serviços](how-to-install-and-uninstall-services.md).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Introdução a aplicativos do Serviço Windows](introduction-to-windows-service-applications.md)
 - [Como: Escrever serviços de forma programática](how-to-write-services-programmatically.md)

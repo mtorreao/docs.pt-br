@@ -2,14 +2,15 @@
 title: 1433 - OutboundConnectionsPerEndpointRatio
 ms.date: 03/30/2017
 ms.assetid: 5f17f20d-7035-45f7-85a6-a6743f77fe70
-ms.openlocfilehash: 630bbdc8d4bb99e17fbd8dec2407b9ea660002ba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: df23ce662ceb7a0bc2dca1ed4f602ae648b3e93b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782116"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96271051"
 ---
 # <a name="1433---outboundconnectionsperendpointratio"></a>1433 - OutboundConnectionsPerEndpointRatio
+
 ## <a name="properties"></a>Propriedades  
   
 |||  
@@ -20,9 +21,11 @@ ms.locfileid: "61782116"
 |Canal|Os aplicativos de servidor de Microsoft-Windows- aplicativo/analítico|  
   
 ## <a name="description"></a>Descrição  
- Esse evento é emitido para fornecer as conexões de saída por informações de taxa de ponto de extremidade.  
+
+ Esse evento é emitido para fornecer as informações de taxa de conexões de saída por ponto de extremidade.  
   
 ## <a name="message"></a>Mensagem  
- Conexões de saída por taxa de ponto de extremidade: %1 / %2  
+
+ Taxa de conexões de saída por ponto de extremidade: %1/%2  
   
 ## <a name="details"></a>Detalhes
