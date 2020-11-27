@@ -2,27 +2,30 @@
 title: 3810 - RoutingServiceConfigurationApplied
 ms.date: 03/30/2017
 ms.assetid: 1bef4b66-6a63-4f42-8396-6e21510fa4fb
-ms.openlocfilehash: 61a69b7a0ec7c432b9d20f6a86bf73b7fae75d43
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 22af1aec09a4ba98a7282f58cbd5b0eb7211d158
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767436"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96284765"
 ---
 # <a name="3810---routingserviceconfigurationapplied"></a>3810 - RoutingServiceConfigurationApplied
+
 ## <a name="properties"></a>Propriedades  
   
 |||  
 |-|-|  
 |ID|3810|  
-|Palavras-chave|RoutingServices|  
-|Nível|Informações|  
+|Palavras-chave|Roteamentoservices|  
+|Nível|Informações do|  
 |Canal|Os aplicativos de servidor de Microsoft-Windows- aplicativo/depuração|  
   
 ## <a name="description"></a>Descrição  
- Esse evento é emitido quando a configuração de roteamento foi aplicada ao serviço de roteamento.  
+
+ Esse evento é emitido quando a configuração de roteamento tiver sido aplicada ao serviço de roteamento.  
   
 ## <a name="message"></a>Mensagem  
- Um novo RoutingConfiguration foi aplicada ao serviço de roteamento.  
+
+ Um novo RoutingConfiguration foi aplicado ao serviço de roteamento.  
   
 ## <a name="details"></a>Detalhes
