@@ -16,12 +16,12 @@ helpviewer_keywords:
 - user authentication, code access security
 - code access security
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
-ms.openlocfilehash: 528824e2d1b5d854f9eef816d3f7b20ba0f2b7db
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 1119965f971e00b1b795378d9af3977074a696f3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224356"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288314"
 ---
 # <a name="code-access-security"></a>Segurança de Acesso do Código
 
@@ -44,7 +44,9 @@ ms.locfileid: "92224356"
  Todo o código gerenciado que tem como alvo o Common Language Runtime recebe os benefícios da segurança de acesso ao código, mesmo que esse código não faça uma chamada de segurança de acesso de código única. Para obter mais informações, consulte [Noções Básicas da Segurança de Acesso do Código](code-access-security-basics.md).  
   
 <a name="key_functions"></a>
+
 ## <a name="key-functions-of-code-access-security"></a>Principais funções de segurança de acesso a código  
+
  A segurança de acesso ao código ajuda a limitar o acesso que o código tem a recursos e operações protegidos. No .NET Framework, a segurança de acesso ao código executa as seguintes funções:  
   
 - Define permissões e conjuntos de permissões que representam o direito de acessar vários recursos do sistema.  
@@ -56,7 +58,9 @@ ms.locfileid: "92224356"
 - Impõe restrições no código em tempo de execução, comparando as permissões concedidas de cada chamador na pilha de chamadas para as permissões que os chamadores devem ter.  
   
 <a name="walking_the_call_stack"></a>
+
 ## <a name="walking-the-call-stack"></a>Percorrendo a pilha de chamadas  
+
  Para determinar se o código está autorizado a acessar um recurso ou executar uma operação, o sistema de segurança do tempo de execução percorre a pilha de chamadas, comparando as permissões concedidas de cada chamador à permissão que está sendo solicitada. Se qualquer chamador na pilha de chamadas não tiver a permissão exigida, uma exceção de segurança será gerada e o acesso será recusado. A movimentação de pilha foi projetada para ajudar a evitar ataques chamariz, em que código menos confiável chama código altamente confiável e o utiliza para executar ações não autorizadas. As permissões exigentes de todos os chamadores em tempo de execução afetam o desempenho, mas é essencial ajudar a proteger o código contra ataques chamariz por código menos confiável. Para otimizar o desempenho, você pode fazer com que seu código execute menos movimentações de pilha. No entanto, certifique-se de não expor um ponto fraco de segurança sempre que fizer isso.  
   
  A ilustração a seguir mostra a movimentação de pilha que resulta quando um método no assembly A4 exige que seus chamadores tenham a permissão P.  
@@ -64,6 +68,7 @@ ms.locfileid: "92224356"
  ![Movimentação de pilha de segurança de acesso ao código](media/slide-10a.gif "slide_10a")
   
 <a name="related_topics"></a>
+
 ## <a name="related-articles"></a>Artigos relacionados
   
 |Título|Descrição|  

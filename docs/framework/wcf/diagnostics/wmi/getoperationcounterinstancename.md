@@ -2,15 +2,16 @@
 title: GetOperationCounterInstanceName
 ms.date: 03/30/2017
 ms.assetid: ac42e20f-63c1-4bdb-8660-736980936811
-ms.openlocfilehash: f82065947879098295995b6e54a493e23764f374
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b073cd5aea930dec0491f8fe87e578bd190027ab
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963651"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288847"
 ---
 # <a name="getoperationcounterinstancename"></a>GetOperationCounterInstanceName
-Recupera o nome de instância do contador de desempenho de operação.  
+
+Recupera o nome da instância do contador de desempenho da operação.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -23,10 +24,11 @@ string GetOperationCounterInstanceName(
 ## <a name="parameters"></a>Parâmetros  
   
 ### <a name="operation"></a>Operação  
- [in] cadeia de caracteres  
+
+ Cadeia de caracteres [in]  
   
 ## <a name="requirements"></a>Requisitos  
   
-|MOF|Declarado em Servicemodel.mof.|  
+|MOF|Declarado em ServiceModel. mof.|  
 |---------|-----------------------------------|  
-|Namespace|Definido no root\ServiceModel|
+|Namespace|Definido em root\ServiceModel|

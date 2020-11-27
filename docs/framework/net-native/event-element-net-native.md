@@ -2,14 +2,15 @@
 title: <Event> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: e53b029c-9d6d-4c0a-9cdc-5cfca8a5ca47
-ms.openlocfilehash: 60da48d5872d7ce61afcffa7977411bc6e1efc7f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b1cf2239e58839c5026bc375ba04568227881bdd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79181032"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288093"
 ---
 # <a name="event-element-net-native"></a>\<Event> (.NET Nativo)
+
 Aplica a política de reflexão de runtime a um evento.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -21,6 +22,7 @@ Aplica a política de reflexão de runtime a um evento.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -44,7 +46,8 @@ Aplica a política de reflexão de runtime a um evento.
 |*policy_setting*|A configuração a ser aplicada a este tipo de política para o evento. Os valores possíveis são `Auto`, `Excluded`, `Included` e `Required`. Para obter mais informações, consulte [Configurações da política da diretiva de runtime](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Elementos filho  
- Nenhum.  
+
+ nenhuma.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -54,9 +57,10 @@ Aplica a política de reflexão de runtime a um evento.
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Aplica a política de reflexão a um tipo genérico construído e todos os seus membros.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Se uma política do evento não for definida explicitamente, ele herdará a política de runtime do seu elemento pai.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Referência do arquivo de configuração de diretivas do runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementos da diretiva de runtime](runtime-directive-elements.md)

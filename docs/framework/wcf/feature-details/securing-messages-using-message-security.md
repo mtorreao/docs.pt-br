@@ -2,14 +2,15 @@
 title: Protegendo as mensagens com a segurança de mensagens
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: b5f7679d5e5ec82e63b588cebd90ce873c055088
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6aae16b766889f402f774451338ae2cd30162437
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558297"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288588"
 ---
 # <a name="securing-messages-using-message-security"></a>Protegendo as mensagens com a segurança de mensagens
+
 Esta seção aborda a segurança de mensagens do WCF ao usar o <xref:System.ServiceModel.NetMsmqBinding> .  
   
 > [!NOTE]
@@ -28,6 +29,7 @@ Esta seção aborda a segurança de mensagens do WCF ao usar o <xref:System.Serv
  A segurança de mensagens do WCF adiciona cabeçalhos de segurança à mensagem do WCF que se integram a infraestruturas de segurança existentes, como um certificado ou o protocolo Kerberos.  
   
 ## <a name="message-credential-type"></a>Tipo de credencial da mensagem  
+
  Usando a segurança da mensagem, o serviço e o cliente podem apresentar credenciais para autenticar um ao outro. Você pode selecionar segurança de mensagem definindo o <xref:System.ServiceModel.NetMsmqBinding.Security%2A> modo como `Message` ou `Both` (ou seja, usar segurança de transporte e segurança de mensagem).  
   
  O serviço pode usar a <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> propriedade para inspecionar a credencial usada para autenticar o cliente. Isso também pode ser usado para outras verificações de autorização que o serviço opta por implementar.  
@@ -35,6 +37,7 @@ Esta seção aborda a segurança de mensagens do WCF ao usar o <xref:System.Serv
  Esta seção explica os diferentes tipos de credenciais e como usá-los com filas do.  
   
 ### <a name="certificate"></a>Certificado  
+
  O tipo de credencial do certificado usa um certificado X. 509 para identificar o serviço e o cliente.  
   
  Em um cenário típico, o cliente e o serviço são emitidos um certificado válido por uma autoridade de certificação confiável. Em seguida, a conexão é estabelecida, o cliente autentica a validade do serviço usando o certificado do serviço para decidir se ele pode confiar no serviço. Da mesma forma, o serviço usa o certificado do cliente para validar a relação de confiança do cliente.  
@@ -44,6 +47,7 @@ Esta seção aborda a segurança de mensagens do WCF ao usar o <xref:System.Serv
  Em um computador que executa o Windows, os certificados são mantidos em vários tipos de armazenamentos. Para obter mais informações sobre os diferentes repositórios, consulte [repositórios de certificados](/previous-versions/windows/it-pro/windows-server-2003/cc757138(v=ws.10)).  
   
 ### <a name="windows"></a>Windows  
+
  O tipo de credencial de mensagem do Windows usa o protocolo Kerberos.  
   
  O protocolo Kerberos é um mecanismo de segurança que autentica os usuários em um domínio e permite que os usuários autenticados estabeleçam contextos seguros com outras entidades em um domínio.  
@@ -55,15 +59,18 @@ Esta seção aborda a segurança de mensagens do WCF ao usar o <xref:System.Serv
  O protocolo Kerberos é usado por padrão ao escolher a credencial da mensagem.
   
 ### <a name="username-password"></a>Senha do nome de usuário  
+
  Usando essa propriedade, o cliente pode se autenticar no servidor usando uma senha de nome de usuário no cabeçalho de segurança da mensagem.  
   
 ### <a name="issuedtoken"></a>IssuedToken  
+
  O cliente pode usar o serviço de token de segurança para emitir um token que pode ser anexado à mensagem para que o serviço autentique o cliente.  
   
 ## <a name="using-transport-and-message-security"></a>Usando segurança de mensagens e transporte  
+
  Ao usar a segurança de transporte e a segurança de mensagem, o certificado usado para proteger a mensagem no transporte e o nível de mensagem SOAP deve ser o mesmo.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Mensagens de segurança que usam a segurança de transporte](securing-messages-using-transport-security.md)
 - [Segurança de mensagem através do enfileiramento de mensagem](../samples/message-security-over-message-queuing.md)

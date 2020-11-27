@@ -2,14 +2,15 @@
 title: <ImpliesType> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
-ms.openlocfilehash: 57f4208233cd5e8544b4f1c254e3b0e0eaacd508
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 04c3a9498a5c9c24d67dedd02fb4c9d68d9efbdd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79181009"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287950"
 ---
 # <a name="impliestype-element-net-native"></a>\<ImpliesType> (.NET Nativo)
+
 Aplica a política a um tipo, se ela foi aplicada ao tipo recipiente ou do método.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -29,6 +30,7 @@ Aplica a política a um tipo, se ela foi aplicada ao tipo recipiente ou do méto
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -60,7 +62,8 @@ Aplica a política a um tipo, se ela foi aplicada ao tipo recipiente ou do méto
 |*policy_setting*|A configuração a ser aplicada a este tipo de política. Os valores possíveis são `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Para obter mais informações, consulte [Configurações da política da diretiva de runtime](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Elementos filho  
- Nenhum.  
+
+ nenhuma.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -71,6 +74,7 @@ Aplica a política a um tipo, se ela foi aplicada ao tipo recipiente ou do méto
 |[\<Method>](method-element-net-native.md)|Aplica a política de reflexão a um método.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O elemento `<ImpliesType>` destina-se principalmente para uso por bibliotecas. Ele aborda o cenário a seguir:  
   
 - Se uma rotina precisa refletir em um tipo, ela necessariamente precisa refletir no segundo tipo.  
@@ -108,7 +112,7 @@ Aplica a política a um tipo, se ela foi aplicada ao tipo recipiente ou do méto
 </Type>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Referência do arquivo de configuração de diretivas do runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementos da diretiva de runtime](runtime-directive-elements.md)
