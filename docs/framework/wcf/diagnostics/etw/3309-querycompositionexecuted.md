@@ -2,27 +2,30 @@
 title: 3309 - QueryCompositionExecuted
 ms.date: 03/30/2017
 ms.assetid: a7ae2267-b478-4115-8317-a89ce4ced65d
-ms.openlocfilehash: 292864b47a36084cfb215535d59bd5f38ef5180c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e11e03fdbe29efb6b55974b1d4f0a9428a2f9346
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61595842"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279578"
 ---
 # <a name="3309---querycompositionexecuted"></a>3309 - QueryCompositionExecuted
+
 ## <a name="properties"></a>Propriedades  
   
 |||  
 |-|-|  
 |ID|3309|  
 |Palavras-chave|ServiceModel|  
-|Nível|Informações|  
+|Nível|Informações do|  
 |Canal|Os aplicativos de servidor de Microsoft-Windows- aplicativo/depuração|  
   
 ## <a name="description"></a>Descrição  
+
  Esse evento é emitido quando a composição de consulta é executada.  
   
 ## <a name="message"></a>Mensagem  
- Composição de consulta usando '%1' foi executada no Uri de solicitação: '%2'.  
+
+ A composição de consulta usando ' %1 ' foi executada no URI de solicitação: ' %2 '.  
   
 ## <a name="details"></a>Detalhes
