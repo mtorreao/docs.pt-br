@@ -10,14 +10,15 @@ helpviewer_keywords:
 - WCF, custom bindings
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
-ms.openlocfilehash: c99500a3d4dc0bd8abe7062f23e064d395cadf36
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4a4d304a1316fe534e09f02ac1cd2900bf798011
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557873"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265525"
 ---
 # <a name="how-to-enable-message-replay-detection"></a>Como: habilitar a detecção de reprodução de mensagem
+
 Um ataque de reprodução ocorre quando um invasor copia um fluxo de mensagens entre duas partes e repete o fluxo para uma ou mais das partes. A menos que seja atenuado, os computadores sujeitos ao ataque processarão o fluxo como mensagens legítimas, resultando em uma variedade de consequências inadequadas, como ordens redundantes de um item.  
   
  Para obter mais informações sobre a detecção de reprodução de mensagem, consulte [detecção de reprodução de mensagem](/previous-versions/msp-n-p/ff649371(v=pandp.10)).  
@@ -75,15 +76,18 @@ Um ataque de reprodução ocorre quando um invasor copia um fluxo de mensagens e
     ```  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo a seguir cria um <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> usando o <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> método e define as propriedades de reprodução da associação.  
   
  [!code-csharp[c_ReplayDetection#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_replaydetection/cs/source.cs#1)]
  [!code-vb[c_ReplayDetection#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_replaydetection/vb/source.vb#1)]  
   
 ## <a name="scope-of-replay-message-security-only"></a>Escopo da reprodução: somente segurança da mensagem  
+
  Observe que os procedimentos a seguir se aplicam somente ao modo de segurança da mensagem. Para transporte e transporte com modos de credenciais de mensagem, os mecanismos de transporte detectam repetições.  
   
 ## <a name="secure-conversation-notes"></a>Proteger anotações de conversa  
+
  Para associações que habilitam conversas seguras, você pode ajustar essas configurações para o canal de aplicativo, bem como para a associação de inicialização de conversa segura. Por exemplo, você pode desativar as repetições para o canal de aplicativo, mas habilitá-las para o canal de bootstrap que estabelece a conversa segura.  
   
  Se você não usar sessões de conversa seguras, a detecção de repetição não garantirá a detecção de repetições em cenários de farm de servidores e quando o processo for reciclado. Isso se aplica às seguintes associações fornecidas pelo sistema:  
@@ -102,7 +106,7 @@ Um ataque de reprodução ocorre quando um invasor copia um fluxo de mensagens e
   
 - <xref:System.ServiceModel.Channels>  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
