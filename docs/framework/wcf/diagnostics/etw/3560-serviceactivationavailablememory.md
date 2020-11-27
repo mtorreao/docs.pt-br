@@ -2,14 +2,15 @@
 title: 3560 - ServiceActivationAvailableMemory
 ms.date: 03/30/2017
 ms.assetid: b9360acf-53e6-422f-bacf-12918088c824
-ms.openlocfilehash: 22963c030fcf5169c51d3b4314ff29a3351cf8f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ed65d6247295ad922dcdff0400f85d761d0c062b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999850"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254864"
 ---
 # <a name="3560---serviceactivationavailablememory"></a>3560 - ServiceActivationAvailableMemory
+
 ## <a name="properties"></a>Propriedades  
   
 |||  
@@ -20,9 +21,11 @@ ms.locfileid: "61999850"
 |Canal|Os aplicativos de servidor de Microsoft-Windows- aplicativo/analítico|  
   
 ## <a name="description"></a>Descrição  
- Esse evento é emitido para recuperar o tamanho da memória disponível para ativação do serviço.  
+
+ Esse evento é emitido para recuperar o tamanho da memória disponível para a ativação do serviço.  
   
 ## <a name="message"></a>Mensagem  
+
  Memória disponível (bytes): %1  
   
 ## <a name="details"></a>Detalhes

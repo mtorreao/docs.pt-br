@@ -2,18 +2,19 @@
 title: Solucionando problemas de instalação
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: fb687e9975ab9ac763030f10d54c7744dc02c9e0
-ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
+ms.openlocfilehash: 596aae345061796535895a091c59d50a5bffe0d8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90720446"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255111"
 ---
 # <a name="troubleshoot-setup-issues"></a>Solucionar problemas de instalação
 
 Este artigo descreve como solucionar problemas de instalação do Windows Communication Foundation (WCF).  
   
 ## <a name="some-windows-communication-foundation-registry-keys-are-not-repaired-by-performing-an-msi-repair-operation-on-the-net-framework-30"></a>Algumas chaves do Registro do Windows Communication Foundation não são reparadas executando uma operação de reparo do MSI no .NET Framework 3.0  
+
  Se você excluir algumas das seguintes chaves do Registro:  
   
 - HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ServiceModelService 3.0.0.0  
@@ -56,7 +57,7 @@ Este artigo descreve como solucionar problemas de instalação do Windows Commun
   
 1. Execute o Utilitário de Diagnóstico WMI para reparar o serviço WMI. Para obter mais informações sobre como usar essa ferramenta, consulte [Utilitário de diagnóstico WMI](/previous-versions/tn-archive/ff404265(v%3dmsdn.10)).  
   
- Repare a instalação do .NET Framework 3,0 usando o miniaplicativo **Adicionar/remover programas** localizado no **painel de controle**ou desinstale/reinstale o .NET Framework 3,0.  
+ Repare a instalação do .NET Framework 3,0 usando o miniaplicativo **Adicionar/remover programas** localizado no **painel de controle** ou desinstale/reinstale o .NET Framework 3,0.  
   
 ## <a name="repair-net-framework-30-after-net-framework-35-installation"></a>Reparar o .NET Framework 3,0 após a instalação do .NET Framework 3,5
 
@@ -65,6 +66,7 @@ Este artigo descreve como solucionar problemas de instalação do Windows Commun
  A [ferramenta de registro de serviço de fluxo de trabalho (WFServicesReg.exe)](workflow-service-registration-tool-wfservicesreg-exe.md) pode ser encontrada em%windir%\Microsoft.NET\framework\v3.5\ ou%windir%\Microsoft.NET\framework64\v3.5\  
   
 ## <a name="configure-iis-properly-for-wcfwf-webhost-after-installing-net-framework-35"></a>Configure o IIS corretamente para WCF/WF Webhost após instalar o .NET Framework 3.5  
+
  Quando .NET Framework instalação do 3,5 falha ao definir definições adicionais de configuração do IIS relacionadas ao WCF, ele registra um erro no log de instalação e continua. Qualquer tentativa de executar aplicativos do WorkflowServices falhará, porque os parâmetros de configuração necessários estão faltando. Por exemplo, carregar xoml ou o serviço de regras pode falhar.  
   
  Para solucionar esse problema, use a [ferramenta de registro do serviço de fluxo de trabalho (WFServicesReg.exe)](workflow-service-registration-tool-wfservicesreg-exe.md) com o `/c` comutador para configurar corretamente os mapas de script do IIS no computador. A [ferramenta de registro de serviço de fluxo de trabalho (WFServicesReg.exe)](workflow-service-registration-tool-wfservicesreg-exe.md) pode ser encontrada em%windir%\Microsoft.NET\framework\v3.5\ ou%windir%\Microsoft.NET\framework64\v3.5\  
@@ -79,6 +81,6 @@ Este artigo descreve como solucionar problemas de instalação do Windows Commun
 aspnet_regiis.exe -i -enable  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Instruções de configuração](./samples/set-up-instructions.md)

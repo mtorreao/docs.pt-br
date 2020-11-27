@@ -6,17 +6,19 @@ helpviewer_keywords:
 - issued tokens [WCF]
 - federation [WCF], issued tokens
 ms.assetid: 4c31ee7d-a820-4067-8b84-a83049021bb6
-ms.openlocfilehash: dffba51c1bf1aaffbed8725aafc96fd747cb31c6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0ab3d6bad717e71901b4d94c99f1c48f99d8675e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559246"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255514"
 ---
 # <a name="federation-and-issued-tokens"></a>Federação e tokens emitidos
+
 Com o Windows Communication Foundation (WCF), você pode criar clientes que se comunicam de forma segura com os serviços que implementam as especificações de WS-Federation e WS-Trust. As especificações usam XML, SOAP e WSDL (Web Services Description Language) para fornecer mecanismos que habilitam a autenticação e a autorização entre territórios de confiança diferentes.  
   
 ## <a name="in-this-section"></a>Nesta seção  
+
  [Federação](federation.md)  
  Fornece uma visão geral da Federação.  
   
@@ -45,6 +47,7 @@ Com o Windows Communication Foundation (WCF), você pode criar clientes que se c
  Descreve como desabilitar sessões seguras em um `WSFederationHttpBinding` . A desabilitação de sessões seguras é necessária ao criar um Web farm que requer uma sessão para cada cliente.  
   
 ## <a name="reference"></a>Referência  
+
  <xref:System.IdentityModel.Claims>  
   
  <xref:System.ServiceModel.ServiceAuthorizationManager>  
@@ -61,7 +64,7 @@ Com o Windows Communication Foundation (WCF), você pode criar clientes que se c
   
  <xref:System.ServiceModel.WSFederationHttpBinding>  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Autorização](authorization-in-wcf.md)
 - [Tokens personalizados](../extending/custom-tokens.md)

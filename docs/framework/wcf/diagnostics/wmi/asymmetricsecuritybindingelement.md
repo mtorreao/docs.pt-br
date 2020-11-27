@@ -2,14 +2,15 @@
 title: AsymmetricSecurityBindingElement
 ms.date: 03/30/2017
 ms.assetid: 7bd3b6be-8f77-4927-93ae-6fa371893cca
-ms.openlocfilehash: 0f86fc1b410753b5ec100f0a7d43de9badd1401b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00485ff80a0064e700d99203de3aa581d3761f30
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61964197"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255722"
 ---
 # <a name="asymmetricsecuritybindingelement"></a>AsymmetricSecurityBindingElement
+
 AsymmetricSecurityBindingElement  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -23,20 +24,24 @@ class AsymmetricSecurityBindingElement : SecurityBindingElement
 ```  
   
 ## <a name="methods"></a>Métodos  
- A classe AsymmetricSecurityBindingElement não define quaisquer métodos.  
+
+ A classe AsymmetricSecurityBindingElement não define nenhum método.  
   
 ## <a name="properties"></a>Propriedades  
+
  A classe AsymmetricSecurityBindingElement tem as seguintes propriedades:  
   
 ### <a name="messageprotectionorder"></a>MessageProtectionOrder  
+
  Tipo de dados: cadeia de caracteres  
   
  Tipo de acesso: Somente leitura  
   
- A ordem de criptografia de mensagens e a assinatura para esta associação.  
+ A ordem de criptografia e assinatura de mensagem para esta associação.  
   
 ### <a name="requiresignatureconfirmation"></a>RequireSignatureConfirmation  
- Tipo de dados: boolean  
+
+ Tipo de dados: booliano  
   
  Tipo de acesso: Somente leitura  
   
@@ -44,10 +49,10 @@ class AsymmetricSecurityBindingElement : SecurityBindingElement
   
 ## <a name="requirements"></a>Requisitos  
   
-|MOF|Declarado em Servicemodel.mof.|  
+|MOF|Declarado em ServiceModel. mof.|  
 |---------|-----------------------------------|  
-|Namespace|Definido no root\ServiceModel|  
+|Namespace|Definido em root\ServiceModel|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>
