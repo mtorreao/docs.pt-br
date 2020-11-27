@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Workflow, compilation
 - Workflow, XOML files
 - Workflow, wcf
-ms.openlocfilehash: cf89962014584adf098118044b063b38b29160b7
-ms.sourcegitcommit: a6bd4cad438fe479cbd112eae10f2cd449f06e40
+ms.openlocfilehash: 01cbfeb72e19f727a3a470059047a2192228c394
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91844596"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293852"
 ---
 # <a name="wfcexe-workflow-command-line-compiler-tool"></a>wfc.exe (ferramenta de compilador de linha de comando do fluxo de trabalho)
+
 > [!NOTE]
 > Este material discute tipos e namespaces obsoletos.
 
@@ -95,6 +96,7 @@ Esta seção mostra as opções para o compilador de linha de comando wfc.exe fl
 ```
 
 ## <a name="remarks"></a>Comentários
+
 > [!NOTE]
 > Este material discute tipos e namespaces obsoletos.
 
@@ -119,6 +121,6 @@ O uso de uma lista de tipos autorizados é controlado pela <xref:System.Workflow
 > [!WARNING]
 > Quando o `Type="System.*"` tipo está presente, é possível incluir outros tipos não pretendidos, como `Type="System.Configuration"` , para compilação. Você deve ter cuidado e examinar cada um deles. Para qualquer tipo que deva ser restringido, certifique-se de definir `Authorized` como `False` .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Classe AuthorizedType](xref:System.Workflow.ComponentModel.Compiler.AuthorizedType)

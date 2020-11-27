@@ -2,14 +2,15 @@
 title: Exemplo de tabela de UriTemplate
 ms.date: 03/30/2017
 ms.assetid: 5dd1d38f-1989-4c64-820d-821f5a02216a
-ms.openlocfilehash: ff88bdfe0c8c32da6f07f2b22de54af437376c51
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: caa8e2aab82283b8ca41dd650cd299485d922305
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596429"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294931"
 ---
 # <a name="uritemplate-table-sample"></a>Exemplo de tabela de UriTemplate
+
 A <xref:System.UriTemplateTable> classe fornece uma estrutura de tabela associativa semelhante a um dicionário para trabalhar com um conjunto de `UriTemplate` instâncias. Identificadores de recursos uniformes (URIs) específicos podem ser correspondidos com eficiência em todos os modelos na tabela, e os dados associados ao modelo correspondente podem ser recuperados.  
   
  Este exemplo demonstra os seguintes conceitos principais relacionados à `UriTemplateTable` classe:  
@@ -35,7 +36,7 @@ A <xref:System.UriTemplateTable> classe fornece uma estrutura de tabela associat
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\UriTemplateTable`  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Dispatcher de tabela de UriTemplate](uritemplate-table-dispatcher-sample.md)
 - [UriTemplate](uritemplate-sample.md)

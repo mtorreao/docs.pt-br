@@ -2,17 +2,19 @@
 title: Tokens com suporte
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-ms.openlocfilehash: ff46a2f5289bc72244ea586f01ea05504d628f69
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d7e2a824060f4be05e0b0e9d1765fcf271eacbd3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555192"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293657"
 ---
 # <a name="supporting-tokens"></a>Tokens com suporte
-O exemplo de tokens de suporte demonstra como adicionar tokens adicionais a uma mensagem que usa o WS-Security. O exemplo adiciona um token de segurança binário X. 509, além de um token de segurança de nome de usuário. O token é passado em um cabeçalho de mensagem do WS-Security do cliente para o serviço e parte da mensagem é assinada com a chave privada associada ao token de segurança X. 509 para provar a posse do certificado X. 509 para o receptor. Isso é útil no caso em que há um requisito para ter várias declarações associadas a uma mensagem para autenticar ou autorizar o remetente. O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta.
+
+O exemplo de tokens de suporte demonstra como adicionar tokens adicionais a uma mensagem que usa o WS-Security. O exemplo adiciona um token de segurança binário X. 509, além de um token de segurança de nome de usuário. O token é passado em um cabeçalho de mensagem WS-Security do cliente para o serviço e parte da mensagem é assinada com a chave privada associada ao token de segurança X. 509 para provar a posse do certificado X. 509 para o receptor. Isso é útil no caso em que há um requisito para ter várias declarações associadas a uma mensagem para autenticar ou autorizar o remetente. O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta.
 
 ## <a name="demonstrates"></a>Demonstra
+
  O exemplo demonstra:
 
 - Como um cliente pode passar tokens de segurança adicionais para um serviço.
@@ -25,7 +27,8 @@ O exemplo de tokens de suporte demonstra como adicionar tokens adicionais a uma 
 > O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.
 
 ## <a name="client-authenticates-with-username-token-and-supporting-x509-security-token"></a>O cliente autentica com o token de nome de usuário e dá suporte ao token de segurança X. 509
- O serviço expõe um único ponto de extremidade para comunicação que é criada programaticamente usando as `BindingHelper` `EchoServiceHost` classes e. O ponto de extremidade consiste em um endereço, uma associação e um contrato. A associação é configurada com uma associação personalizada usando `SymmetricSecurityBindingElement` e `HttpTransportBindingElement` . Este exemplo define o `SymmetricSecurityBindingElement` para usar um certificado de serviço X. 509 para proteger a chave simétrica durante a transmissão e passar um `UserNameToken` junto com o suporte `X509SecurityToken` em um cabeçalho de mensagem do WS-Security. A chave simétrica é usada para criptografar o corpo da mensagem e o token de segurança do nome de usuário. O token de suporte é passado como um token de segurança binário adicional no cabeçalho da mensagem WS-Security. A autenticidade do token de suporte é comprovada pela assinatura de parte da mensagem com a chave privada associada ao token de segurança X. 509 com suporte.
+
+ O serviço expõe um único ponto de extremidade para comunicação que é criada programaticamente usando as `BindingHelper` `EchoServiceHost` classes e. O ponto de extremidade consiste em um endereço, uma associação e um contrato. A associação é configurada com uma associação personalizada usando `SymmetricSecurityBindingElement` e `HttpTransportBindingElement` . Este exemplo define o `SymmetricSecurityBindingElement` para usar um certificado de serviço X. 509 para proteger a chave simétrica durante a transmissão e passar um `UserNameToken` junto com o suporte `X509SecurityToken` em um cabeçalho de mensagem WS-Security. A chave simétrica é usada para criptografar o corpo da mensagem e o token de segurança do nome de usuário. O token de suporte é passado como um token de segurança binário adicional no cabeçalho da mensagem de WS-Security. A autenticidade do token de suporte é comprovada pela assinatura de parte da mensagem com a chave privada associada ao token de segurança X. 509 com suporte.
 
 ```csharp
 public static Binding CreateMultiFactorAuthenticationBinding()
@@ -282,6 +285,7 @@ public class EchoService : IEchoService
 ```
 
 ## <a name="displaying-callers-information"></a>Exibindo informações de chamadores
+
  Para exibir as informações do chamador, você pode usar o `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` conforme mostrado no código a seguir. O `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` contém declarações de autorização associadas ao chamador atual. Essas declarações são fornecidas automaticamente pelo Windows Communication Foundation (WCF) para cada token recebido na mensagem.
 
 ```csharp
@@ -345,14 +349,17 @@ void GetCallerIdentities(ServiceSecurityContext callerSecurityContext, out strin
 ```
 
 ## <a name="running-the-sample"></a>Executando o exemplo
+
  Quando você executa o exemplo, o cliente solicita primeiro que você forneça o nome de usuário e a senha para o token de nome de usuário. Certifique-se de fornecer valores corretos para sua conta do sistema, pois o WCF no serviço mapeia os valores fornecidos no token de nome de usuário para a identidade fornecida pelo sistema. Depois disso, o cliente exibe a resposta do serviço. Pressione ENTER na janela do cliente para desligar o cliente.
 
 ## <a name="setup-batch-file"></a>Arquivo em lotes de instalação
+
  O arquivo em lote Setup.bat incluído com este exemplo permite que você configure o servidor com certificados relevantes para executar o aplicativo hospedado Serviços de Informações da Internet (IIS) que requer segurança baseada em certificado do servidor. Esse arquivo em lotes deve ser modificado para funcionar em computadores ou para funcionar em um caso não hospedado.
 
  Veja a seguir uma breve visão geral das diferentes seções dos arquivos em lotes para que eles possam ser modificados para serem executados na configuração apropriada.
 
 ### <a name="creating-the-client-certificate"></a>Criando o certificado do cliente
+
  As linhas a seguir do arquivo de Setup.bat lote criam o certificado do cliente a ser usado. A `%CLIENT_NAME%` variável especifica o assunto do certificado do cliente. Este exemplo usa "client.com" como o nome da entidade.
 
  O certificado é armazenado no meu repositório (pessoal) no `CurrentUser` local do repositório.
@@ -365,6 +372,7 @@ makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -p
 ```
 
 ### <a name="installing-the-client-certificate-into-the-servers-trusted-store"></a>Instalando o certificado do cliente no repositório confiável do servidor
+
  A linha a seguir no arquivo de Setup.bat lote copia o certificado do cliente no repositório de pessoas confiáveis do servidor. Essa etapa é necessária porque os certificados gerados por Makecert.exe não são implicitamente confiáveis pelo sistema do servidor. Se você já tiver um certificado com raiz em um certificado raiz confiável do cliente — por exemplo, um certificado emitido pela Microsoft — esta etapa de popular o repositório de certificados do cliente com o certificado do servidor não será necessária.
 
 ```console
@@ -375,6 +383,7 @@ certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s Tru
 ```
 
 ### <a name="creating-the-server-certificate"></a>Criando o certificado do servidor
+
  As linhas a seguir do arquivo de Setup.bat lote criam o certificado do servidor a ser usado. A `%SERVER_NAME%` variável especifica o nome do servidor. Altere essa variável para especificar seu próprio nome de servidor. O padrão neste arquivo em lotes é localhost.
 
  O certificado é armazenado no meu repositório (pessoal) no local de armazenamento de LocalMachine. O certificado é armazenado no armazenamento LocalMachine para os serviços hospedados pelo IIS. Para serviços hospedados internamente, você deve modificar o arquivo em lotes para armazenar o certificado do servidor no local do repositório CurrentUser, substituindo a cadeia de caracteres LocalMachine por CurrentUser.
@@ -390,6 +399,7 @@ makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -
 ```
 
 ### <a name="installing-server-certificate-into-clients-trusted-certificate-store"></a>Instalando o certificado do servidor no repositório de certificados confiáveis do cliente
+
  As linhas a seguir no arquivo de Setup.bat lote copiam o certificado do servidor no repositório de pessoas confiáveis do cliente. Essa etapa é necessária porque os certificados gerados por Makecert.exe não são implicitamente confiáveis pelo sistema cliente. Se você já tiver um certificado com raiz em um certificado raiz confiável do cliente — por exemplo, um certificado emitido pela Microsoft — esta etapa de popular o repositório de certificados do cliente com o certificado do servidor não será necessária.
 
 ```console
@@ -399,6 +409,7 @@ echo ************certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r C
 ```
 
 ### <a name="enabling-access-to-the-certificates-private-key"></a>Habilitando o acesso à chave privada do certificado
+
  Para habilitar o acesso à chave privada do certificado do serviço hospedado pelo IIS, a conta de usuário sob a qual o processo hospedado pelo IIS está em execução deve receber as permissões apropriadas para a chave privada. Isso é feito pelas últimas etapas do script de Setup.bat.
 
 ```console

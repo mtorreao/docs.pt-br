@@ -2,14 +2,15 @@
 title: Validador de senha e nome de usuário
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: 4ad365061e6a0f3178650699febd6c18cdd14205
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: bf20c9baaec44ebdfed351b35c54ab14448c7644
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553107"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294918"
 ---
 # <a name="user-name-password-validator"></a>Validador de senha e nome de usuário
+
 Este exemplo demonstra como implementar um validador UserNamePassword personalizado. Isso é útil em casos em que nenhum dos modos de validação internos do UserNamePassword é apropriado para os requisitos do aplicativo; por exemplo, quando os pares de nome de usuário/senha são armazenados em algum repositório externo, como um banco de dados. Este exemplo mostra um serviço que tem um validador personalizado que verifica dois pares de nome de usuário/senha específicos. O cliente usa um par de nome de usuário/senha para se autenticar no serviço.
 
 > [!IMPORTANT]
@@ -32,7 +33,7 @@ Este exemplo demonstra como implementar um validador UserNamePassword personaliz
 
 - O servidor é autenticado usando o certificado X. 509 do servidor.
 
- O serviço expõe um único ponto de extremidade para se comunicar com o serviço, definido usando o arquivo de configuração, App.config. O ponto de extremidade consiste em um endereço, uma associação e um contrato. A associação é configurada com um padrão `wsHttpBinding` que usa o WS-Security e a autenticação de nome de usuário. O comportamento do serviço especifica o `Custom` modo para validar pares de nome de usuário/senha do cliente junto com o tipo da classe do validador. O comportamento também especifica o certificado do servidor usando o `serviceCertificate` elemento. O certificado do servidor deve conter o mesmo valor para o as `SubjectName` `findValue` no [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) .
+ O serviço expõe um único ponto de extremidade para se comunicar com o serviço, definido usando o arquivo de configuração, App.config. O ponto de extremidade consiste em um endereço, uma associação e um contrato. A associação é configurada com um padrão `wsHttpBinding` que usa WS-Security e a autenticação de nome de usuário. O comportamento do serviço especifica o `Custom` modo para validar pares de nome de usuário/senha do cliente junto com o tipo da classe do validador. O comportamento também especifica o certificado do servidor usando o `serviceCertificate` elemento. O certificado do servidor deve conter o mesmo valor para o as `SubjectName` `findValue` no [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) .
 
 ```xml
 <system.serviceModel>
@@ -251,6 +252,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
  Quando você executa o exemplo, as solicitações de operação e as respostas são exibidas na janela do console do cliente. O cliente deve chamar com êxito todos os métodos. Pressione ENTER na janela do cliente para desligar o cliente.
 
 ## <a name="setup-batch-file"></a>Arquivo em lotes de instalação
+
  O arquivo em lotes Setup.bat incluído com este exemplo permite que você configure o servidor com certificados relevantes para executar um aplicativo auto-hospedado que requer segurança baseada em certificado do servidor. Esse arquivo em lotes deve ser modificado para funcionar entre computadores ou para funcionar em um caso não hospedado automaticamente.
 
  Veja a seguir uma breve visão geral das diferentes seções dos arquivos em lotes para que eles possam ser modificados para serem executados na configuração apropriada.
@@ -304,7 +306,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
   
 3. Você precisa de um certificado de servidor com o nome da entidade que contém o nome de domínio totalmente qualificado do computador. O arquivo de configuração do servidor deve ser atualizado para refletir esse novo nome de certificado.  
   
-4. Copie o certificado do servidor no repositório CurrentUser-TrustedPeople do cliente. Você precisará fazer isso somente se o certificado do servidor não for emitido por um emissor confiável.  
+4. Copie o certificado do servidor no repositório de CurrentUser-TrustedPeople do cliente. Você precisará fazer isso somente se o certificado do servidor não for emitido por um emissor confiável.  
   
 5. No arquivo de App.config no computador de serviço, altere o valor do endereço base para especificar um nome de computador totalmente qualificado em vez de localhost.  
   

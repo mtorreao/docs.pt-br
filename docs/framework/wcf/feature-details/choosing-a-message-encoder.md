@@ -2,12 +2,12 @@
 title: Escolhendo um codificador de mensagem
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: fd5bc2270f2e4095ef6ad2b1d89af3560fb8d312
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8b53c17cccc74153e652494ec9753302cda8679b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559364"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295152"
 ---
 # <a name="choose-a-message-encoder"></a>Escolher um codificador de mensagem
 
@@ -19,7 +19,8 @@ Este artigo discute os critérios para escolher entre os codificadores de mensag
   
  Ao se conectar a um cliente ou servidor pré-existente, talvez você não tenha a opção de usar uma codificação de mensagem específica, já que precisa codificar suas mensagens de uma forma que o outro lado esteja esperando. No entanto, se você estiver escrevendo um serviço WCF, poderá expor seu serviço por meio de vários pontos de extremidade, cada um usando uma codificação de mensagem diferente. Isso permite que os clientes escolham a melhor codificação para conversar com seu serviço sobre o ponto de extremidade que é melhor para eles, além de dar aos seus clientes a flexibilidade de escolher a codificação mais adequada para eles. O uso de vários pontos de extremidade também permite combinar as vantagens de diferentes codificações de mensagens com outros elementos de ligação.  
   
-## <a name="system-provided-encoders"></a>Codificadores fornecidos pelo sistema  
+## <a name="system-provided-encoders"></a>Codificadores de System-Provided  
+
  O WCF inclui três codificadores de mensagens, que são representados pelas três classes a seguir:  
   
 - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>, o codificador de mensagem de texto oferece suporte tanto à codificação XML simples quanto à codificação SOAP. O modo de codificação XML sem formatação do codificador de mensagem de texto é chamado de "XML antigo" (POX) para distingui-lo da codificação SOAP baseada em texto. Para habilitar POX, defina a <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement.MessageVersion%2A> propriedade como <xref:System.ServiceModel.Channels.MessageVersion.None%2A> . Use o codificador de mensagem de texto para interoperar com pontos de extremidade não WCF.  
@@ -29,9 +30,10 @@ Este artigo discute os critérios para escolher entre os codificadores de mensag
 - <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, o elemento Binding, especifica a codificação de caracteres e o controle de versão de mensagem para mensagens usando a codificação MTOM. O MTOM é uma tecnologia eficiente para transmitir dados binários em mensagens do WCF. O codificador MTOM tenta criar um equilíbrio entre eficiência e interoperabilidade. A codificação MTOM transmite a maioria dos XML na forma textual, mas otimiza grandes blocos de dados binários transmitindo-os como estão, sem conversão em texto. Em termos de eficiência, entre os codificadores que o WCF fornece, o MTOM está entre o texto (o mais lento) e o binário (o mais rápido).  
   
 ## <a name="how-to-choose-a-message-encoder"></a>Como escolher um codificador de mensagem  
+
  A tabela a seguir descreve os fatores comuns usados para escolher um codificador de mensagem. Priorize os fatores que são importantes para seu aplicativo e, em seguida, escolha os codificadores de mensagem que funcionam melhor com esses fatores. Certifique-se de considerar quaisquer fatores adicionais não listados nesta tabela e quaisquer codificadores de mensagem personalizados que possam ser necessários em seu aplicativo.  
   
-|Fator|Description|Codificadores que dão suporte a esse fator|  
+|Fator|Descrição|Codificadores que dão suporte a esse fator|  
 |------------|-----------------|---------------------------------------|  
 |Conjuntos de caracteres com suporte|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> e <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> dão suporte apenas às codificações UTF8 e UTF16 Unicode (*big-endian* e *little-endian*). Se outras codificações forem necessárias, como UTF7 ou ASCII, um codificador personalizado deverá ser usado. Para obter um codificador personalizado de exemplo, consulte [codificador de mensagem personalizada](../samples/custom-message-encoder-custom-text-encoder.md).|Texto|  
 |Inspeção|A inspeção é a capacidade de examinar as mensagens durante a transmissão. Codificações de texto, com ou sem o uso de SOAP, permitem que as mensagens sejam inspecionadas e analisadas por muitos aplicativos sem o uso de ferramentas especializadas. O uso da segurança de transferência, no nível de mensagem ou de transporte, afeta sua capacidade de inspecionar mensagens. A confidencialidade protege uma mensagem de ser examinada e a integridade protege a modificação de uma mensagem.|Texto|  
@@ -83,6 +85,6 @@ Como essa propriedade só é exposta no binaryMessageEncodingBindingElement, voc
 
 O cliente e o serviço precisam concordar em enviar e receber mensagens compactadas e, portanto, a propriedade compressionFormat deve ser configurada no elemento binaryMessageEncoding no cliente e no serviço. Uma ProtocolException será gerada se o serviço ou o cliente não estiver configurado para compactação, mas o outro lado for. A habilitação da compactação deve ser cuidadosamente considerada. A compactação será útil principalmente se a largura de banda da rede for um afunilamento. No caso em que a CPU é o afunilamento, a compactação diminuirá a taxa de transferência. Os testes apropriados devem ser feitos em um ambiente simulado para descobrir se isso beneficia o aplicativo  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Associações](bindings.md)

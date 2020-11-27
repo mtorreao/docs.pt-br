@@ -2,14 +2,15 @@
 title: Opções de hospedagem de fluxo de trabalho
 ms.date: 03/30/2017
 ms.assetid: 37bcd668-9c5c-4e7c-81da-a1f1b3a16514
-ms.openlocfilehash: 4eaed147f312f3963aa1ca1d4f5dbe010c4189ad
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 8ddb83f068eab8480bacc8b80bc5d44b7755fa59
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70037831"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293774"
 ---
 # <a name="workflow-hosting-options"></a>Opções de hospedagem de fluxo de trabalho
+
 A maioria dos exemplos de Windows Workflow Foundation (WF) usam fluxos de trabalho hospedados em um aplicativo de console, mas esse não é um cenário realista para fluxos de trabalho do mundo real. Os fluxos de trabalho em aplicativos de negócios reais serão hospedados em processos persistentes – um serviço do Windows criado pelo desenvolvedor ou um aplicativo de servidor como o IIS 7,0 ou AppFabric. As diferenças entre essas abordagens são as seguintes.
 
 ## <a name="hosting-workflows-in-iis-with-windows-appfabric"></a>Fluxos de trabalho de hospedagem no IIS com o Windows AppFabric

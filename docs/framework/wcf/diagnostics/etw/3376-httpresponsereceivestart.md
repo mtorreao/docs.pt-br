@@ -2,14 +2,15 @@
 title: 3376 - HttpResponseReceiveStart
 ms.date: 03/30/2017
 ms.assetid: 37cdd555-b28d-42d8-ab35-085417309503
-ms.openlocfilehash: 83e30914a368538d1719e6983d7a657a7c59a190
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 10fc38e61997e17f7c2a203e34aa169985ed96d1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61943332"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294775"
 ---
 # <a name="3376---httpresponsereceivestart"></a>3376 - HttpResponseReceiveStart
+
 ## <a name="properties"></a>Propriedades  
   
 |||  
@@ -20,9 +21,11 @@ ms.locfileid: "61943332"
 |Canal|Os aplicativos de servidor de Microsoft-Windows- aplicativo/depuração|  
   
 ## <a name="description"></a>Descrição  
- Esse evento é emitido quando o transporte Http ao receber uma mensagem.  
+
+ Esse evento é emitido quando o transporte http começou a receber uma mensagem.  
   
 ## <a name="message"></a>Mensagem  
- Transporte de HTTP ao receber uma mensagem.  
+
+ O transporte http iniciou o recebimento de uma mensagem.  
   
 ## <a name="details"></a>Detalhes

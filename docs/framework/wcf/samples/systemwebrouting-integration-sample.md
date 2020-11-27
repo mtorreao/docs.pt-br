@@ -2,14 +2,15 @@
 title: Exemplo de integração de SystemWebRouting
 ms.date: 03/30/2017
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-ms.openlocfilehash: 58d720f164c4c35f3de4c282e9aa983d11e4040b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 04c3093097c5bf11e1d4dd5d3124c9fbae4b3665
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555205"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293904"
 ---
 # <a name="systemwebrouting-integration-sample"></a>Exemplo de integração de SystemWebRouting
+
 Este exemplo demonstra a integração da camada de hospedagem com as classes no <xref:System.Web.Routing> namespace. As classes no <xref:System.Web.Routing> namespace permitem que um aplicativo use URLs que não correspondem diretamente a um recurso físico. Usar o roteamento da Web permite que o desenvolvedor crie endereços virtuais para HTTP que são então mapeados de volta para os serviços reais do WCF. Isso é útil quando um serviço WCF deve ser hospedado sem a necessidade de um arquivo ou recurso físico, ou quando os serviços devem ser acessados com URLs que não contêm arquivos como. html ou. aspx. Este exemplo demonstra como utilizar a <xref:System.Web.Routing.RouteTable> classe para criar URIs virtuais que mapeiam para serviços em execução definidos em global. asax.
 
 > [!NOTE]
@@ -83,6 +84,6 @@ Este exemplo pode já estar instalado em seu computador. Verifique o seguinte di
 > [!NOTE]
 > Você deve atualizar a versão padrão do pool de aplicativos para .NET Framework 4 se ela estiver definida para a versão 2.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Hospedagem de AppFabric e persistência Exemplos](/previous-versions/appfabric/ff383418(v=azure.10))

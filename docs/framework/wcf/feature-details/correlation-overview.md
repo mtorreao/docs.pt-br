@@ -2,22 +2,24 @@
 title: Visão geral de correlação
 ms.date: 03/30/2017
 ms.assetid: edcc0315-5d26-44d6-a36d-ea554c418e9f
-ms.openlocfilehash: 8d33022524a4619a57b04e7774918fd73d0bdef3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3cc0bc49ad464401ccff769fd5873d5b7e19dccc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552551"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293709"
 ---
 # <a name="correlation-overview"></a>Visão geral de correlação
+
 A correlação é o mecanismo para relacionar mensagens do serviço de fluxo de trabalho entre si ou com o estado de instância do aplicativo, como uma resposta a uma solicitação inicial ou uma ID de ordem específica para o estado persistente de um fluxo de trabalho de processamento de pedidos. Este tópico fornece uma visão geral da correlação. Os outros tópicos nesta seção fornecem informações adicionais para cada tipo de correlação.  
   
 ## <a name="types-of-correlation"></a>Tipos de correlação  
+
  A correlação pode ser baseada em protocolo ou em conteúdo. As correlações baseadas em protocolo usam dados fornecidos pela infraestrutura de entrega de mensagens para fornecer o mapeamento entre as mensagens. As mensagens correlacionadas usando a correlação baseada em protocolo estão relacionadas entre si usando um objeto na memória, como um <xref:System.ServiceModel.Channels.RequestContext> , ou por um token fornecido pelo protocolo de transporte. Correlações com base em conteúdo relacionam mensagens entre si usando dados especificados pelo aplicativo. As mensagens correlacionadas usando a correlação baseada em conteúdo estão relacionadas entre si por alguns dados definidos pelo aplicativo na mensagem, como um número de cliente.  
   
  As atividades que participam da correlação usam um <xref:System.ServiceModel.Activities.CorrelationHandle> para ligar as atividades de mensagens juntas. Por exemplo, um <xref:System.ServiceModel.Activities.Send> que é usado para chamar um serviço e um subseqüente <xref:System.ServiceModel.Activities.Receive> usado para receber um retorno de chamada do serviço, compartilha o mesmo <xref:System.ServiceModel.Activities.CorrelationHandle> . Esse padrão básico é usado se a correlação é baseada em conteúdo ou com base em protocolo. O identificador de correlação pode ser definido explicitamente em cada atividade ou as atividades podem estar contidas em uma <xref:System.ServiceModel.Activities.CorrelationScope> atividade. As atividades contidas em um <xref:System.ServiceModel.Activities.CorrelationScope> têm seus identificadores de correlação gerenciados pelo <xref:System.ServiceModel.Activities.CorrelationScope> e não exigem que o seja <xref:System.ServiceModel.Activities.CorrelationHandle> definido explicitamente. Um <xref:System.ServiceModel.Activities.CorrelationScope> escopo fornece <xref:System.ServiceModel.Activities.CorrelationHandle> Gerenciamento para uma correlação de solicitação-resposta e um tipo de correlação adicional. Os serviços de fluxo de trabalho hospedados com <xref:System.ServiceModel.Activities.WorkflowServiceHost> o têm o mesmo gerenciamento de correlação padrão que a <xref:System.ServiceModel.Activities.CorrelationScope> atividade. Esse gerenciamento de correlação padrão geralmente significa que, em muitos cenários, as atividades de mensagens em um <xref:System.ServiceModel.Activities.CorrelationScope> ou em um serviço de fluxo de trabalho não exigem seu <xref:System.ServiceModel.Activities.CorrelationHandle> conjunto, a menos que várias atividades de mensagens estejam em paralelo ou sobreponham, como duas <xref:System.ServiceModel.Activities.Receive> atividades em paralelo ou duas <xref:System.ServiceModel.Activities.Send> atividades seguidas por duas <xref:System.ServiceModel.Activities.Receive> atividades. Mais informações sobre correlação padrão são fornecidas nos tópicos desta seção que abrangem cada tipo específico de correlação. Para obter mais informações sobre as atividades de mensagens, consulte [atividades de mensagens](messaging-activities.md) e [como: criar um serviço de fluxo de trabalho com atividades de mensagens](how-to-create-a-workflow-service-with-messaging-activities.md).  
   
-## <a name="protocol-based-correlation"></a>Correlação baseada em protocolo
+## <a name="protocol-based-correlation"></a>Correlação de Protocol-Based
 
 A correlação baseada em protocolo usa o mecanismo de transporte para relacionar mensagens entre si e a instância apropriada. Algumas correlações de protocolo fornecidas pelo sistema incluem correlação de solicitação-resposta e correlação baseada em contexto. Uma correlação de solicitação-resposta é usada para correlacionar um único par de atividades de mensagens para formar uma operação bidirecional, como um <xref:System.ServiceModel.Activities.Send> emparelhado com um <xref:System.ServiceModel.Activities.ReceiveReply> ou um <xref:System.ServiceModel.Activities.Receive> emparelhado com um <xref:System.ServiceModel.Activities.SendReply> . O Designer de Fluxo de Trabalho do Visual Studio também fornece um conjunto de modelos de atividade para implementar rapidamente esse padrão. Uma correlação baseada em contexto é baseada no mecanismo de troca de contexto descrito na [especificação de protocolo do Exchange de contexto do .net](/openspecs/windows_protocols/mc-netcex/a7f26280-491f-465b-9914-c5eb5322dbb4). Para usar a correlação baseada em contexto, uma associação baseada em contexto, como <xref:System.ServiceModel.BasicHttpContextBinding> , <xref:System.ServiceModel.WSHttpContextBinding> ou <xref:System.ServiceModel.NetTcpContextBinding> deve ser usada no ponto de extremidade.  
   
@@ -27,6 +29,6 @@ Para obter mais informações sobre correlação de protocolo, consulte [duplex 
 
 A correlação baseada em conteúdo usa alguma informação na mensagem para associá-la a uma instância específica. Diferentemente da correlação baseada em protocolo, a correlação baseada em conteúdo exige que o autor do aplicativo declare explicitamente onde esses dados podem ser encontrados em cada mensagem relacionada. As atividades que usam a correlação baseada em conteúdo especificam esses dados de mensagem usando um <xref:System.ServiceModel.MessageQuerySet> . A correlação baseada em conteúdo é útil ao se comunicar com serviços que não usam uma das associações de contexto, como <xref:System.ServiceModel.BasicHttpContextBinding> .
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [NetContextExchangeCorrelation](/previous-versions/dotnet/netframework-4.0/ee662963(v=vs.100))

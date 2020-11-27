@@ -4,17 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], scenarios
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
-ms.openlocfilehash: cfd29f8cae8ac362a5fa1709864dce4ae11b5af6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 21c8279890d1d1cf746e98f875efb6b1ff869c73
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558882"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295074"
 ---
 # <a name="common-security-scenarios"></a>Cenários comuns de segurança
+
 Os tópicos nesta seção catalogam várias configurações de segurança de cliente e serviço possíveis. As configurações variam de acordo com uma série de fatores. Por exemplo, se um serviço ou cliente está em uma intranet ou se a segurança é fornecida pelo Windows ou pelo transporte (como o HTTPS).  
   
 ## <a name="in-this-section"></a>Nesta seção  
+
  [Serviço e cliente de internet desprotegido](internet-unsecured-client-and-service.md)  
  Um exemplo de um cliente e serviço públicos e desprotegidos.  
   
@@ -58,9 +60,11 @@ Os tópicos nesta seção catalogam várias configurações de segurança de cli
  Um cliente acessa um ou mais serviços Web que são distribuídos em uma rede. Os serviços Web acessam recursos adicionais (como bancos de dados ou outros serviços Web) que devem ser protegidos.  
   
 ## <a name="reference"></a>Referência  
+
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
+
  [Autorização](authorization-in-wcf.md)  
   
  [Visão geral de segurança](security-overview.md)  
@@ -79,7 +83,7 @@ Os tópicos nesta seção catalogam várias configurações de segurança de cli
   
  [Auditoria](auditing-security-events.md)  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Orientação de segurança e práticas recomendadas](security-guidance-and-best-practices.md)
 - [Modelo de segurança para o Windows Server app Fabric](/previous-versions/appfabric/ee677202(v=azure.10))

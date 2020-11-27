@@ -2,14 +2,15 @@
 title: Serviço de fachada confiável
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-ms.openlocfilehash: e9459b4cc26ef85adcc59c308d92491fd2d3acba
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 80f139ace43d5f8d2136528681386711bea7a1e5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544174"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295048"
 ---
 # <a name="trusted-facade-service"></a>Serviço de fachada confiável
+
 Este exemplo de cenário demonstra como fluir informações de identidade do chamador de um serviço para outro usando a infraestrutura de segurança do Windows Communication Foundation (WCF).  
   
  É um padrão de design comum expor a funcionalidade fornecida por um serviço para a rede pública usando um serviço de fachada. O serviço de fachada normalmente reside na rede de perímetro (também conhecida como DMZ, zona desmilitarizada e sub-rede filtrada) e se comunica com um serviço de back-end que implementa a lógica de negócios e tem acesso a dados internos. O canal de comunicação entre o serviço de fachada e o serviço de back-end passa por um firewall e geralmente é limitado apenas para uma única finalidade.  
@@ -28,9 +29,11 @@ Este exemplo de cenário demonstra como fluir informações de identidade do cha
 > O serviço de back-end confia no serviço de fachada para autenticar o chamador. Por isso, o serviço de back-end não autentica o chamador novamente; Ele usa as informações de identidade fornecidas pelo serviço de fachada na solicitação encaminhada. Devido a essa relação de confiança, o serviço de back-end deve autenticar o serviço de fachada para garantir que a mensagem encaminhada venha de uma fonte confiável – nesse caso, o serviço de fachada.  
   
 ## <a name="implementation"></a>Implementação  
+
  Há dois caminhos de comunicação neste exemplo. O primeiro é entre o cliente e o serviço de fachada, o segundo é entre o serviço de fachada e o serviço de back-end.  
   
 ### <a name="communication-path-between-client-and-faade-service"></a>Caminho de comunicação entre o cliente e o serviço de fachada  
+
  O cliente para o caminho de comunicação do serviço de fachada usa `wsHttpBinding` com um `UserName` tipo de credencial de cliente. Isso significa que o cliente usa o nome de usuário e a senha para autenticar o serviço de fachada e o serviço de fachada usa o certificado X. 509 para autenticar o cliente. A configuração de associação é semelhante ao exemplo a seguir.  
   
 ```xml  
@@ -93,6 +96,7 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
 ```  
   
 ### <a name="communication-path-between-faade-service-and-backend-service"></a>Caminho de comunicação entre o serviço de fachada e de back-end  
+
  O serviço de fachada para o caminho de comunicação do serviço de back-end usa um `customBinding` que consiste em vários elementos de ligação. Essa associação realiza duas coisas. Ele autentica o serviço de fachada e o serviço de back-end para garantir que a comunicação seja segura e proveniente de uma fonte confiável. Além disso, ele também transmite a identidade do chamador inicial dentro do `Username` token de segurança. Nesse caso, somente o nome de usuário do chamador inicial é transmitido para o serviço de back-end, a senha não é incluída na mensagem. Isso ocorre porque o serviço de back-end confia no serviço de fachada para autenticar o chamador antes de encaminhar a solicitação para ele. Como o serviço de fachada se autentica no serviço de back-end, o serviço de back-end pode confiar nas informações contidas na solicitação encaminhada.  
   
  A seguir está a configuração de associação para este caminho de comunicação.  
@@ -212,6 +216,7 @@ public string GetCallerIdentity()
  As informações da conta do serviço de fachada são extraídas usando a `ServiceSecurityContext.Current.WindowsIdentity` propriedade. Para acessar as informações sobre o chamador inicial, o serviço de back-end usa a `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` propriedade. Ele procura uma `Identity` declaração com um tipo `Name` . Essa declaração é gerada automaticamente pela infraestrutura de segurança do WCF por meio das informações contidas no `Username` token de segurança.  
   
 ## <a name="running-the-sample"></a>Executando o exemplo  
+
  Quando você executa o exemplo, as solicitações de operação e as respostas são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente. Você pode pressionar ENTER nas janelas do console do serviço de back-end e de fachada para desligar os serviços.  
   
 ```console  

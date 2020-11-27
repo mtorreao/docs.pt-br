@@ -2,14 +2,15 @@
 title: 3335 - GetServiceInstanceStart
 ms.date: 03/30/2017
 ms.assetid: c35025d1-b2a1-454d-a6a1-784fc03e2670
-ms.openlocfilehash: 332018c24c86b822f3c21b4a3bf133c32206ae88
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f6640c9b9fc363884f09bd95e93d7b74ee2e844
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62040112"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295412"
 ---
 # <a name="3335---getserviceinstancestart"></a>3335 - GetServiceInstanceStart
+
 ## <a name="properties"></a>Propriedades  
   
 |||  
@@ -20,9 +21,11 @@ ms.locfileid: "62040112"
 |Canal|Os aplicativos de servidor de Microsoft-Windows- aplicativo/depuração|  
   
 ## <a name="description"></a>Descrição  
- Esse evento é emitido quando a recuperação de instância de serviço é iniciado.  
+
+ Esse evento é emitido quando a recuperação da instância de serviço é iniciada.  
   
 ## <a name="message"></a>Mensagem  
- Recuperação de instância de serviço é iniciado.  
+
+ Recuperação da instância de serviço iniciada.  
   
 ## <a name="details"></a>Detalhes
