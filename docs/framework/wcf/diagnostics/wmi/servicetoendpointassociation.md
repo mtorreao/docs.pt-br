@@ -2,14 +2,15 @@
 title: ServiceToEndpointAssociation
 ms.date: 03/30/2017
 ms.assetid: 03c3cd15-e1b2-4dc2-bdc2-59fdccdae110
-ms.openlocfilehash: 3d23a3ee10c47e04ea7bdba202ea5063c0d84fac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6e20556541b1aa48e7dfc6a8cde97e1bc477457e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62048225"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273939"
 ---
 # <a name="servicetoendpointassociation"></a>ServiceToEndpointAssociation
+
 Mapeia um serviço para um ponto de extremidade.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -23,21 +24,25 @@ class ServiceToEndpointAssociation
 ```  
   
 ## <a name="methods"></a>Métodos  
- A classe ServiceToEndpointAssociation não define quaisquer métodos.  
+
+ A classe ServiceToEndpointAssociation não define nenhum método.  
   
 ## <a name="properties"></a>Propriedades  
+
  A classe ServiceToEndpointAssociation tem as seguintes propriedades:  
   
 ### <a name="ref"></a>ref  
- Tipo de dados: Serviço  
+
+ Tipo de dados: serviço  
   
  Tipo de acesso: Somente leitura  
 Qualificadores: Chave  
   
- O serviço associado com o ponto de extremidade.  
+ O serviço associado ao ponto de extremidade.  
   
 ### <a name="ref"></a>ref  
- Tipo de dados: Ponto de extremidade  
+
+ Tipo de dados: ponto de extremidade  
   
  Tipo de acesso: Somente leitura  
 Qualificadores: Chave  
@@ -46,6 +51,6 @@ Qualificadores: Chave
   
 ## <a name="requirements"></a>Requisitos  
   
-|MOF|Declarado em Servicemodel.mof.|  
+|MOF|Declarado em ServiceModel. mof.|  
 |---------|-----------------------------------|  
-|Namespace|Definido no root\ServiceModel|
+|Namespace|Definido em root\ServiceModel|

@@ -2,17 +2,19 @@
 title: Rastreamento de fluxo de trabalho
 ms.date: 03/30/2017
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
-ms.openlocfilehash: fc27be295cbf0a83b65ff03e36f2aeffeda12db9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b5a8f650edfdade4a18999c5e7af38ca72112122
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557496"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273874"
 ---
 # <a name="workflow-tracing"></a>Rastreamento de fluxo de trabalho
+
 Oferece de rastreamento de fluxo de trabalho uma maneira para capturar informações de diagnóstico usando os ouvintes de rastreamento do .NET Framework. O rastreamento podem ser ativado se é um problema detectado com o aplicativo e desativado novamente o problema é resolvido uma vez. Há duas maneiras que você pode ativar o rastreamento de depuração para fluxos de trabalho. Você poderá configurá-lo usando o visualizador de rastreamento do evento ou você pode usar <xref:System.Diagnostics> para enviar os eventos de rastreamento em um arquivo.  
   
 ## <a name="enabling-debug-tracing-in-etw"></a>Ativar o rastreamento de depuração em ETW  
+
  Para ativar o rastreamento usando ETW, ative o canal de depuração no visualizador de eventos:  
   
 1. Navegue para o nó analítico e de depuração dos logs no visualizador de eventos.  
@@ -41,6 +43,7 @@ Oferece de rastreamento de fluxo de trabalho uma maneira para capturar informaç
 > Se você estiver usando o perfil de cliente .NET Framework 4, deverá primeiro registrar o manifesto do ETW executando o seguinte comando no diretório .NET Framework 4: `ServiceModelReg.exe –i –c:etw`  
   
 ## <a name="enabling-debug-tracing-using-systemdiagnostics"></a>Ativar o rastreamento de depuração usando System.Diagnostics  
+
  Essas ouvintes podem ser configuradas no arquivo App.config do aplicativo de fluxo de trabalho, ou no Web.config para um serviço de fluxo de trabalho. Neste exemplo, um <xref:System.Diagnostics.TextWriterTraceListener> é configurado para salvar informações de rastreamento no arquivo de MyTraceLog.txt no diretório atual.  
   
 ```xml  
@@ -69,7 +72,7 @@ Oferece de rastreamento de fluxo de trabalho uma maneira para capturar informaç
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Monitoramento do Windows Server app Fabric](/previous-versions/appfabric/ee677251(v=azure.10))
 - [Monitorando aplicativos com o app Fabric](/previous-versions/appfabric/ee677276(v=azure.10))
