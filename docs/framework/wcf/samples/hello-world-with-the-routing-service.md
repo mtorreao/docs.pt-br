@@ -2,14 +2,15 @@
 title: Olá Mundo com o serviço de roteamento
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
-ms.openlocfilehash: 63cfb32a5f5d0cae7635d39d5df594a5bb07e411
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3d91634d72481427f04e958f6dc2734829b6158b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554782"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253850"
 ---
 # <a name="hello-world-with-the-routing-service"></a>Olá Mundo com o serviço de roteamento
+
 Este exemplo demonstra o serviço de roteamento do Windows Communication Foundation (WCF). O serviço de roteamento é um componente WCF que torna mais fácil incluir um roteador baseado em conteúdo em seu aplicativo. Este exemplo adapta a amostra de calculadora padrão do WCF para se comunicar usando o serviço de roteamento. Neste exemplo, o cliente da calculadora está configurado para enviar mensagens para um ponto de extremidade exposto pelo roteador. O serviço de roteamento é configurado para aceitar todas as mensagens enviadas a ele e encaminhá-las a um ponto de extremidade que corresponde ao serviço de calculadora. Portanto, as mensagens enviadas do cliente são recebidas pelo roteador e roteadas novamente para o serviço de calculadora real. As mensagens do serviço de calculadora são enviadas de volta para o roteador, que, por sua vez, passa-as de volta para o cliente da calculadora.
 
 ### <a name="to-use-this-sample"></a>Para usar este exemplo
@@ -40,12 +41,15 @@ Este exemplo demonstra o serviço de roteamento do Windows Communication Foundat
     ```
 
 ## <a name="configurable-via-code-or-appconfig"></a>Configurável por meio de código ou App.Config
+
  O exemplo é fornecido configurado para usar um arquivo de App.config para definir o comportamento do roteador. Você também pode alterar o nome do arquivo de App.config para algo diferente para que ele não seja reconhecido e remova o comentário da chamada de método para ConfigureRouterViaCode (). O método resulta no mesmo comportamento do roteador.
 
 ### <a name="scenario"></a>Cenário
+
  Este exemplo demonstra o roteador que atua como uma bomba básica de mensagem. O serviço de roteamento atua como um nó de proxy transparente configurado para passar mensagens diretamente para um conjunto pré-configurado de pontos de extremidade de destino.
 
 ### <a name="real-world-scenario"></a>Cenário do mundo real
+
  A contoso deseja aumentar a flexibilidade que tem na nomenclatura, no endereçamento, na configuração e na segurança de seus serviços. Para fazer isso, eles colocam uma bomba básica de mensagens na frente de seus serviços para atuar como um ponto de extremidade voltado para o público. Isso permite que eles coloquem segurança adicional na frente de seus serviços reais e facilitam a implementação de soluções expandidas ou controle de versão de serviço em uma data posterior.
 
 > [!IMPORTANT]
@@ -57,6 +61,6 @@ Este exemplo demonstra o serviço de roteamento do Windows Communication Foundat
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\HelloRoutingService`  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Hospedagem de AppFabric e persistência Exemplos](/previous-versions/appfabric/ff383418(v=azure.10))

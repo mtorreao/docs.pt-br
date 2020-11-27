@@ -6,19 +6,21 @@ helpviewer_keywords:
 - security [WCF]
 - Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
-ms.openlocfilehash: 9498358dd480487afcd3b746d14266e486c62d71
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b92f1ad8bb00e9df8daf55da4d7a808420d909cf
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546309"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253993"
 ---
 # <a name="windows-communication-foundation-security"></a>Segurança do Windows Communication Foundation
+
 Os tópicos nesta seção descrevem os recursos de segurança do Windows Communication Foundation (WCF) e como usá-los para ajudar a proteger mensagens.  
   
  Para obter mais informações sobre o Windows Server AppFabric e a segurança, consulte [modelo de segurança para Windows Server AppFabric](/previous-versions/appfabric/ee677202(v=azure.10))  
   
 ## <a name="in-this-section"></a>Nesta seção  
+
  [Visão geral de segurança](security-overview.md)  
  Descreve os recursos de segurança no WCF.  
   
@@ -56,11 +58,13 @@ Os tópicos nesta seção descrevem os recursos de segurança do Windows Communi
  Diretrizes para criar aplicativos WCF seguros.  
   
 ## <a name="reference"></a>Referência  
+
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Security>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
+
  [Detalhes do recurso WCF](index.md)  
   
  [Programação de WCF básica](../basic-wcf-programming.md)  
@@ -69,6 +73,6 @@ Os tópicos nesta seção descrevem os recursos de segurança do Windows Communi
   
  [Visão geral conceitual](../conceptual-overview.md)  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Configurando seu aplicativo](../diagnostics/configuring-your-application.md)
