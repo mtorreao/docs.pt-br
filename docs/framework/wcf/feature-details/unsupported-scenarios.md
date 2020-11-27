@@ -2,12 +2,12 @@
 title: Cenários sem suporte
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: a3ee91e5232926b4ea7db80db35d9a309ca8105b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2d779b49a8201b3ad53507af7710f7aef5e9321c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557808"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289640"
 ---
 # <a name="unsupported-scenarios"></a>Cenários sem suporte
 
@@ -16,6 +16,7 @@ Por vários motivos, Windows Communication Foundation (WCF) não oferece suporte
 ## <a name="impersonation-scenarios"></a>Cenários de representação
 
 ### <a name="impersonated-identity-might-not-flow-when-clients-make-asynchronous-calls"></a>A identidade representada pode não fluir quando os clientes fizerem chamadas assíncronas
+
  Quando um cliente WCF faz chamadas assíncronas para um serviço WCF usando a autenticação do Windows em representação, a autenticação pode ocorrer com a identidade do processo do cliente em vez da identidade representada.
 
 ### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a>Windows XP e cookie de token de contexto seguro habilitado
@@ -122,7 +123,7 @@ O WCF perde o controle dos atributos em um `<wst:Claims>` elemento em um `RST` m
 
  A correção é modificar a associação diretamente no cliente depois de fazer a importação.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Considerações sobre segurança](security-considerations-in-wcf.md)
 - [Divulgação de Informações Confidenciais](information-disclosure.md)

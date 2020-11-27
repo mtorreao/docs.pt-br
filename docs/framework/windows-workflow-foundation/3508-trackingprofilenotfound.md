@@ -2,14 +2,15 @@
 title: 3508 - TrackingProfileNotFound
 ms.date: 03/30/2017
 ms.assetid: 4cee3c4a-0490-4c94-aa19-ef7ce7287c02
-ms.openlocfilehash: 94c7ce231df241778f7c6ec5fe5998eae364750d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 23262427c3da730eaf930a8b483c7c4d4ec3a3a4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755565"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289835"
 ---
 # <a name="3508---trackingprofilenotfound"></a>3508 - TrackingProfileNotFound
+
 ## <a name="properties"></a>Propriedades  
   
 |||  
@@ -20,9 +21,11 @@ ms.locfileid: "61755565"
 |Canal|Os aplicativos de servidor de Microsoft-Windows- aplicativo/analítico|  
   
 ## <a name="description"></a>Descrição  
+
  Indica que um ou TrackingProfile não está localizado no arquivo de configuração ou o ActivityDefinitionId não corresponde ao perfil.  
   
 ## <a name="message"></a>Mensagem  
+
  TrackingProfile “%1 " para o ActivityDefinitionId “%2 " não encontrado. O TrackingProfile não é encontrado no arquivo de configuração ou a ActivityDefinitionId não é correspondente.  
   
 ## <a name="details"></a>Detalhes  

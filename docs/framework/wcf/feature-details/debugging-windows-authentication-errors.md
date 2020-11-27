@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 7a896b12f9e877c00688ade176c1e0c730d9591b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c8aa87bdbf9488bce8e1a62f6d1a3898f923d349
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557600"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96291655"
 ---
 # <a name="debug-windows-authentication-errors"></a>Depurar erros de autenticação do Windows
 
@@ -24,6 +24,7 @@ Ao usar a autenticação do Windows como um mecanismo de segurança, a interface
  Para a autenticação do Windows, o WCF normalmente usa o SSP ( *Negotiate* Security Support Provider), que executa a autenticação mútua do Kerberos entre o cliente e o serviço. Se o protocolo Kerberos não estiver disponível, por padrão, o WCF retornará ao NT LAN Manager (NTLM). No entanto, você pode configurar o WCF para usar apenas o protocolo Kerberos (e para gerar uma exceção se o Kerberos não estiver disponível). Você também pode configurar o WCF para usar formulários restritos do protocolo Kerberos.  
   
 ## <a name="debugging-methodology"></a>Metodologia de depuração  
+
  O método básico é o seguinte:  
   
 1. Determine se você está usando a autenticação do Windows. Se você estiver usando qualquer outro esquema, este tópico não se aplicará.  
@@ -33,6 +34,7 @@ Ao usar a autenticação do Windows como um mecanismo de segurança, a interface
 3. Depois de determinar se sua configuração está usando o protocolo Kerberos ou NTLM, você pode entender as mensagens de erro no contexto correto.  
   
 ### <a name="availability-of-the-kerberos-protocol-and-ntlm"></a>Disponibilidade do protocolo Kerberos e NTLM  
+
  O SSP do Kerberos requer um controlador de domínio para atuar como o centro de distribuição de chaves do Kerberos (KDC). O protocolo Kerberos está disponível somente quando o cliente e o serviço estão usando identidades de domínio. Em outras combinações de conta, o NTLM é usado, conforme resumido na tabela a seguir.  
   
  Os cabeçalhos de tabela mostram possíveis tipos de conta usados pelo servidor. A coluna à esquerda mostra os possíveis tipos de conta usados pelo cliente.  
@@ -58,11 +60,13 @@ Ao usar a autenticação do Windows como um mecanismo de segurança, a interface
 > A credencial de serviço é capturada quando o <xref:System.ServiceModel.ICommunicationObject.Open%2A> método da <xref:System.ServiceModel.ServiceHost> classe é chamado. A credencial do cliente é lida sempre que o cliente envia uma mensagem.  
   
 ## <a name="common-windows-authentication-problems"></a>Problemas comuns de autenticação do Windows  
+
  Esta seção aborda alguns problemas comuns de autenticação do Windows e possíveis soluções.  
   
 ### <a name="kerberos-protocol"></a>Protocolo Kerberos  
   
 #### <a name="spnupn-problems-with-the-kerberos-protocol"></a>Problemas de SPN/UPN com o protocolo Kerberos  
+
  Ao usar a autenticação do Windows e o protocolo Kerberos é usado ou negociado por SSPI, a URL usada pelo ponto de extremidade do cliente deve incluir o nome de domínio totalmente qualificado do host do serviço dentro da URL do serviço. Isso pressupõe que a conta sob a qual o serviço está sendo executado tenha acesso à chave SPN (nome da entidade de serviço) do computador que é criada quando o computador é adicionado ao domínio de Active Directory, que é mais comumente feito pela execução do serviço na conta de serviço de rede. Se o serviço não tiver acesso à chave de SPN do computador, você deverá fornecer o SPN ou nome UPN correto da conta sob a qual o serviço está sendo executado na identidade do ponto de extremidade do cliente. Para obter mais informações sobre como o WCF funciona com o SPN e o UPN, consulte [identidade de serviço e autenticação](service-identity-and-authentication.md).  
   
  Em cenários de balanceamento de carga, como Web farms ou ambientes Web, uma prática comum é definir uma conta exclusiva para cada aplicativo, atribuir um SPN a essa conta e garantir que todos os serviços do aplicativo sejam executados nessa conta.  
@@ -70,6 +74,7 @@ Ao usar a autenticação do Windows como um mecanismo de segurança, a interface
  Para obter um SPN para a conta de seu serviço, você precisa ser um administrador de domínio Active Directory. Para obter mais informações, consulte [complemento técnico do Kerberos para Windows](/previous-versions/msp-n-p/ff649429(v=pandp.10)).  
   
 #### <a name="kerberos-protocol-direct-requires-the-service-to-run-under-a-domain-machine-account"></a>O protocolo Kerberos direto requer que o serviço seja executado em uma conta de computador de domínio  
+
  Isso ocorre quando a `ClientCredentialType` propriedade é definida como `Windows` e a <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> propriedade é definida como `false` , conforme mostrado no código a seguir.  
   
  [!code-csharp[C_DebuggingWindowsAuth#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_debuggingwindowsauth/cs/source.cs#1)]
@@ -78,6 +83,7 @@ Ao usar a autenticação do Windows como um mecanismo de segurança, a interface
  Para corrigir, execute o serviço usando uma conta de computador de domínio, como serviço de rede, em um computador ingressado no domínio.  
   
 ### <a name="delegation-requires-credential-negotiation"></a>A delegação requer negociação de credencial  
+
  Para usar o protocolo de autenticação Kerberos com delegação, você deve implementar o protocolo Kerberos com a negociação de credencial (às vezes chamada de "multilocação" ou "multietapa" Kerberos). Se você implementar a autenticação Kerberos sem negociação de credencial (às vezes chamada de Kerberos "One-shot" ou "single-perna"), uma exceção será lançada.  
   
  Para implementar o Kerberos com a negociação de credencial, execute as seguintes etapas:  
@@ -99,6 +105,7 @@ Ao usar a autenticação do Windows como um mecanismo de segurança, a interface
 ### <a name="ntlm-protocol"></a>Protocolo NTLM  
   
 #### <a name="negotiate-ssp-falls-back-to-ntlm-but-ntlm-is-disabled"></a>Negociar o SSP volta para o NTLM, mas o NTLM está desabilitado  
+
  A <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> propriedade é definida como `false` , o que faz com que Windows Communication Foundation (WCF) faça um melhor esforço para gerar uma exceção se o NTLM for usado. Definir essa propriedade como `false` não pode impedir que credenciais NTLM sejam enviadas pela conexão.  
   
  O seguinte mostra como desabilitar o fallback para NTLM.  
@@ -107,9 +114,11 @@ Ao usar a autenticação do Windows como um mecanismo de segurança, a interface
  [!code-vb[C_DebuggingWindowsAuth#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#4)]  
   
 #### <a name="ntlm-logon-fails"></a>Falha no logon NTLM  
+
  As credenciais do cliente não são válidas no serviço. Verifique se o nome de usuário e a senha estão definidos corretamente e correspondem a uma conta que é conhecida pelo computador em que o serviço está sendo executado. O NTLM usa as credenciais especificadas para fazer logon no computador do serviço. Embora as credenciais possam ser válidas no computador em que o cliente está em execução, esse logon falhará se as credenciais não forem válidas no computador do serviço.  
   
 #### <a name="anonymous-ntlm-logon-occurs-but-anonymous-logons-are-disabled-by-default"></a>O logon anônimo do NTLM ocorre, mas logons anônimos são desabilitados por padrão  
+
  Ao criar um cliente, a <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> propriedade é definida <xref:System.Security.Principal.TokenImpersonationLevel.Anonymous> como, conforme mostrado no exemplo a seguir, mas, por padrão, o servidor não permite logons anônimos. Isso ocorre porque o valor padrão da <xref:System.ServiceModel.Security.WindowsServiceCredential.AllowAnonymousLogons%2A> propriedade da <xref:System.ServiceModel.Security.WindowsServiceCredential> classe é `false` .  
   
  O seguinte código de cliente tenta habilitar logons anônimos (Observe que a propriedade padrão é `Identification` ).  
@@ -129,6 +138,7 @@ Ao usar a autenticação do Windows como um mecanismo de segurança, a interface
 ### <a name="other-problems"></a>Outros Problemas  
   
 #### <a name="client-credentials-are-not-set-correctly"></a>As credenciais do cliente não estão definidas corretamente  
+
  A autenticação do Windows usa a <xref:System.ServiceModel.Security.WindowsClientCredential> instância retornada pela <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> propriedade da <xref:System.ServiceModel.ClientBase%601> classe, não o <xref:System.ServiceModel.Security.UserNamePasswordClientCredential> . Veja a seguir um exemplo incorreto.  
   
  [!code-csharp[C_DebuggingWindowsAuth#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_debuggingwindowsauth/cs/source.cs#2)]
@@ -140,12 +150,14 @@ Ao usar a autenticação do Windows como um mecanismo de segurança, a interface
  [!code-vb[C_DebuggingWindowsAuth#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#3)]  
   
 #### <a name="sspi-is-not-available"></a>SSPI não está disponível  
+
  Os seguintes sistemas operacionais não dão suporte à autenticação do Windows quando usados como um servidor: Windows XP Home Edition, Windows XP Media Center Edition e Windows Vista Home edições.  
   
 #### <a name="developing-and-deploying-with-different-identities"></a>Desenvolvendo e implantando com identidades diferentes  
+
  Se você desenvolver seu aplicativo em um computador e implantá-lo em outro e usar tipos de conta diferentes para autenticar em cada computador, poderá ocorrer um comportamento diferente. Por exemplo, suponha que você desenvolva seu aplicativo em um computador Windows XP Pro usando o `SSPI Negotiated` modo de autenticação. Se você usar uma conta de usuário local para autenticar com o, o protocolo NTLM será usado. Depois que o aplicativo é desenvolvido, você implanta o serviço em um computador com Windows Server 2003 em que ele é executado em uma conta de domínio. Neste ponto, o cliente não poderá autenticar o serviço, pois ele usará o Kerberos e um controlador de domínio.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
 - <xref:System.ServiceModel.Security.WindowsServiceCredential>

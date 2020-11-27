@@ -3,14 +3,15 @@ title: Configuração simplificada para serviços do WCF
 description: Saiba como implementar e configurar um serviço e cliente típicos usando o WCF. O serviço se comunica usando um ponto de extremidade especificado em um arquivo de configuração.
 ms.date: 03/30/2017
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
-ms.openlocfilehash: dd05754dcfe36cb2e9c28ce20a5927585f85478f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 087618d603ea1c7df75ab5383f6c95b781dca847
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554261"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96290017"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>Configuração simplificada para serviços do WCF
+
 Este exemplo demonstra como implementar e configurar um serviço e cliente típicos usando o Windows Communication Foundation (WCF). Este exemplo é a base para todos os outros exemplos de tecnologia básica.  
   
  Esse serviço, que expõe um ponto de extremidade para se comunicar com o serviço, usa a configuração simplificada no .NET Framework 4. Antes do .NET Framework 4, o ponto de extremidade normalmente é definido em um arquivo de configuração (Web.config), conforme mostrado no código de configuração de exemplo a seguir.  
@@ -64,11 +65,11 @@ Este exemplo demonstra como implementar e configurar um serviço e cliente típi
   
 3. Execute o exemplo seguindo estas etapas:  
   
-    1. Clique com o botão direito do mouse no projeto de **serviço** e selecione **definir como projeto de inicialização**e pressione **Ctrl + F5**.  
+    1. Clique com o botão direito do mouse no projeto de **serviço** e selecione **definir como projeto de inicialização** e pressione **Ctrl + F5**.  
   
     2. Aguarde a saída do console confirmando se o serviço está em execução.  
   
-    3. Clique com o botão direito do mouse no projeto **cliente** e selecione **definir como projeto de inicialização**e pressione **Ctrl + F5**.  
+    3. Clique com o botão direito do mouse no projeto **cliente** e selecione **definir como projeto de inicialização** e pressione **Ctrl + F5**.  
   
 > [!IMPORTANT]
 > Os exemplos podem mais ser instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
@@ -79,7 +80,7 @@ Este exemplo demonstra como implementar e configurar um serviço e cliente típi
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigSimplificationIn40`  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Exemplos de gerenciamento do AppFabric](/previous-versions/appfabric/ff383405(v=azure.10))
 - [Configuração simplificada](../simplified-configuration.md)

@@ -2,17 +2,19 @@
 title: Contratos de dados
 ms.date: 03/30/2017
 ms.assetid: 941049b6-8e98-497f-ab3f-19848241699f
-ms.openlocfilehash: 496e6c96330988974be19ebd1d804367467b4562
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ad50572d21a00afd202340743e843ee786fac77e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602551"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96291551"
 ---
 # <a name="data-contracts"></a>Contratos de dados
+
 Esta seção contém exemplos que demonstram os contratos de dados no Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>Nesta seção  
+
  [Contrato de dados básicos](basic-data-contract.md)  
  Demonstra como implementar um contrato de dados.  
   
