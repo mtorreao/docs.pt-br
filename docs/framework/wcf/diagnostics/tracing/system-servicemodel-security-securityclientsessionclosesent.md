@@ -2,21 +2,23 @@
 title: System.ServiceModel.Security.SecurityClientSessionCloseSent
 ms.date: 03/30/2017
 ms.assetid: 6933e77d-ac9b-47cc-bc07-95f957d2299f
-ms.openlocfilehash: e996df746721d9e0864b925f53c5e3a527806a15
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a271275d9291567e3570ef971c59f9d3a5aa69d2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601537"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96249534"
 ---
-# <a name="systemservicemodelsecuritysecurityclientsessionclosesent"></a><span data-ttu-id="2e30f-102">System.ServiceModel.Security.SecurityClientSessionCloseSent</span><span class="sxs-lookup"><span data-stu-id="2e30f-102">System.ServiceModel.Security.SecurityClientSessionCloseSent</span></span>
-<span data-ttu-id="2e30f-103">System.ServiceModel.Security.SecurityClientSessionCloseSent</span><span class="sxs-lookup"><span data-stu-id="2e30f-103">System.ServiceModel.Security.SecurityClientSessionCloseSent</span></span>  
-  
-## <a name="description"></a><span data-ttu-id="2e30f-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="2e30f-104">Description</span></span>  
- <span data-ttu-id="2e30f-105">Uma mensagem de fechamento foi enviada pela sessão do Client Security.</span><span class="sxs-lookup"><span data-stu-id="2e30f-105">A Close message was sent by the client security session.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="2e30f-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="2e30f-106">See also</span></span>
+# <a name="systemservicemodelsecuritysecurityclientsessionclosesent"></a><span data-ttu-id="f1c00-102">System.ServiceModel.Security.SecurityClientSessionCloseSent</span><span class="sxs-lookup"><span data-stu-id="f1c00-102">System.ServiceModel.Security.SecurityClientSessionCloseSent</span></span>
 
-- [<span data-ttu-id="2e30f-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="2e30f-107">Tracing</span></span>](index.md)
-- [<span data-ttu-id="2e30f-108">Utilizando o rastreamento para solucionar problemas em seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="2e30f-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="2e30f-109">Administração e diagnóstico</span><span class="sxs-lookup"><span data-stu-id="2e30f-109">Administration and Diagnostics</span></span>](../index.md)
+<span data-ttu-id="f1c00-103">System.ServiceModel.Security.SecurityClientSessionCloseSent</span><span class="sxs-lookup"><span data-stu-id="f1c00-103">System.ServiceModel.Security.SecurityClientSessionCloseSent</span></span>  
+  
+## <a name="description"></a><span data-ttu-id="f1c00-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="f1c00-104">Description</span></span>  
+
+ <span data-ttu-id="f1c00-105">Uma mensagem de fechamento foi enviada pela sessão do Client Security.</span><span class="sxs-lookup"><span data-stu-id="f1c00-105">A Close message was sent by the client security session.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="f1c00-106">Veja também</span><span class="sxs-lookup"><span data-stu-id="f1c00-106">See also</span></span>
+
+- [<span data-ttu-id="f1c00-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="f1c00-107">Tracing</span></span>](index.md)
+- [<span data-ttu-id="f1c00-108">Utilizando o rastreamento para solucionar problemas em seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="f1c00-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="f1c00-109">Administração e diagnóstico</span><span class="sxs-lookup"><span data-stu-id="f1c00-109">Administration and Diagnostics</span></span>](../index.md)

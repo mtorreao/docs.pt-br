@@ -10,26 +10,28 @@ helpviewer_keywords:
 - properties, returned by UI Automation providers
 - UI Automation, providers returning properties
 ms.assetid: 5eba950e-b9e1-48eb-ab8e-b69db76bf589
-ms.openlocfilehash: 14a42c73d1dfb942a7e60ce7a72c3a5aea2b820c
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 8269d7d04a67c2a89a28160c0a8bc82bd627749f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84903826"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250470"
 ---
-# <a name="return-properties-from-a-ui-automation-provider"></a><span data-ttu-id="606e8-103">Retornando Propriedades de um Provedor de Automação de IU</span><span class="sxs-lookup"><span data-stu-id="606e8-103">Return Properties from a UI Automation Provider</span></span>
+# <a name="return-properties-from-a-ui-automation-provider"></a><span data-ttu-id="20be4-103">Retornando Propriedades de um Provedor de Automação de IU</span><span class="sxs-lookup"><span data-stu-id="20be4-103">Return Properties from a UI Automation Provider</span></span>
+
 > [!NOTE]
-> <span data-ttu-id="606e8-104">Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>.</span><span class="sxs-lookup"><span data-stu-id="606e8-104">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="606e8-105">Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32) (API de Automação do Windows: Automação da Interface do Usuário).</span><span class="sxs-lookup"><span data-stu-id="606e8-105">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).</span></span>  
+> <span data-ttu-id="20be4-104">Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>.</span><span class="sxs-lookup"><span data-stu-id="20be4-104">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="20be4-105">Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32) (API de Automação do Windows: Automação da Interface do Usuário).</span><span class="sxs-lookup"><span data-stu-id="20be4-105">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).</span></span>  
   
- <span data-ttu-id="606e8-106">Este tópico contém um código de exemplo que mostra como um provedor de automação de interface do usuário pode retornar propriedades de um elemento para aplicativos cliente.</span><span class="sxs-lookup"><span data-stu-id="606e8-106">This topic contains sample code that shows how a UI Automation provider can return properties of an element to client applications.</span></span>  
+ <span data-ttu-id="20be4-106">Este tópico contém um código de exemplo que mostra como um provedor de automação de interface do usuário pode retornar propriedades de um elemento para aplicativos cliente.</span><span class="sxs-lookup"><span data-stu-id="20be4-106">This topic contains sample code that shows how a UI Automation provider can return properties of an element to client applications.</span></span>  
   
- <span data-ttu-id="606e8-107">Para qualquer propriedade para a qual não há suporte explícito, o provedor deve retornar `null` ( `Nothing` em Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="606e8-107">For any property it does not explicitly support, the provider must return `null` (`Nothing` in Visual Basic).</span></span> <span data-ttu-id="606e8-108">Isso garante que [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] as tentativas de obter a propriedade de outra fonte, como o provedor de janela do host.</span><span class="sxs-lookup"><span data-stu-id="606e8-108">This ensures that [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] attempts to obtain the property from another source, such as the host window provider.</span></span>  
+ <span data-ttu-id="20be4-107">Para qualquer propriedade para a qual não há suporte explícito, o provedor deve retornar `null` ( `Nothing` em Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="20be4-107">For any property it does not explicitly support, the provider must return `null` (`Nothing` in Visual Basic).</span></span> <span data-ttu-id="20be4-108">Isso garante que [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] as tentativas de obter a propriedade de outra fonte, como o provedor de janela do host.</span><span class="sxs-lookup"><span data-stu-id="20be4-108">This ensures that [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] attempts to obtain the property from another source, such as the host window provider.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="606e8-109">Exemplo</span><span class="sxs-lookup"><span data-stu-id="606e8-109">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="20be4-109">Exemplo</span><span class="sxs-lookup"><span data-stu-id="20be4-109">Example</span></span>  
+
  [!code-csharp[UIAFragmentProvider_snip#117](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAFragmentProvider_snip/CSharp/ListFragment.cs#117)]
  [!code-vb[UIAFragmentProvider_snip#117](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListFragment.vb#117)]  
   
-## <a name="see-also"></a><span data-ttu-id="606e8-110">Confira também</span><span class="sxs-lookup"><span data-stu-id="606e8-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="20be4-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="20be4-110">See also</span></span>
 
-- [<span data-ttu-id="606e8-111">Visão Geral dos Provedores de Automação de Interface do Usuário</span><span class="sxs-lookup"><span data-stu-id="606e8-111">UI Automation Providers Overview</span></span>](ui-automation-providers-overview.md)
-- [<span data-ttu-id="606e8-112">Implementação de provedor de Automação da Interface do Usuário no lado do servidor</span><span class="sxs-lookup"><span data-stu-id="606e8-112">Server-Side UI Automation Provider Implementation</span></span>](server-side-ui-automation-provider-implementation.md)
+- [<span data-ttu-id="20be4-111">Visão Geral dos Provedores de Automação de Interface do Usuário</span><span class="sxs-lookup"><span data-stu-id="20be4-111">UI Automation Providers Overview</span></span>](ui-automation-providers-overview.md)
+- [<span data-ttu-id="20be4-112">Implementação do provedor de automação de interface do usuário no lado do servidor</span><span class="sxs-lookup"><span data-stu-id="20be4-112">Server-Side UI Automation Provider Implementation</span></span>](server-side-ui-automation-provider-implementation.md)

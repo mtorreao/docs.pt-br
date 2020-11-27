@@ -1,20 +1,21 @@
 ---
-title: Como obter informações de interface e de protocolo
+title: 'Como: obter informações de interface e de protocolo'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: fd88d26c-4063-495e-a253-736ac3e6b23f
-ms.openlocfilehash: b2b2f4f0bfa8b026bbd5dce8e25919a4a7fc7036
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6e94914ec6312fad9a22cdbb4d145ed131d233da
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180817"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250522"
 ---
-# <a name="how-to-get-interface-and-protocol-information"></a><span data-ttu-id="bb2ac-102">Como obter informações de interface e de protocolo</span><span class="sxs-lookup"><span data-stu-id="bb2ac-102">How to: Get Interface and Protocol Information</span></span>
-<span data-ttu-id="bb2ac-103">Este exemplo mostra como ler as estatísticas de TCP de um adaptador de rede.</span><span class="sxs-lookup"><span data-stu-id="bb2ac-103">This sample shows how to read the TCP statistics of a network interface.</span></span>  
+# <a name="how-to-get-interface-and-protocol-information"></a><span data-ttu-id="9212c-102">Como: obter informações de interface e de protocolo</span><span class="sxs-lookup"><span data-stu-id="9212c-102">How to: Get Interface and Protocol Information</span></span>
+
+<span data-ttu-id="9212c-103">Este exemplo mostra como ler as estatísticas de TCP de um adaptador de rede.</span><span class="sxs-lookup"><span data-stu-id="9212c-103">This sample shows how to read the TCP statistics of a network interface.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="bb2ac-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="bb2ac-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="9212c-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="9212c-104">Example</span></span>  
   
 ```csharp
 public static void ShowTcpStatistics(NetworkInterfaceComponent version)  
@@ -69,7 +70,8 @@ public static void ShowTcpStatistics(NetworkInterfaceComponent version)
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="bb2ac-105">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="bb2ac-105">Compiling the Code</span></span>  
- <span data-ttu-id="bb2ac-106">Este exemplo requer:</span><span class="sxs-lookup"><span data-stu-id="bb2ac-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="9212c-105">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="9212c-105">Compiling the Code</span></span>  
+
+ <span data-ttu-id="9212c-106">Este exemplo requer:</span><span class="sxs-lookup"><span data-stu-id="9212c-106">This example requires:</span></span>  
   
-- <span data-ttu-id="bb2ac-107">Referências ao namespace **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="bb2ac-107">References to the **System.Net** namespace.</span></span>
+- <span data-ttu-id="9212c-107">Referências ao namespace **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="9212c-107">References to the **System.Net** namespace.</span></span>

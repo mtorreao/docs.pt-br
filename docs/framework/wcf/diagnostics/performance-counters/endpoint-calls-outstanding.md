@@ -1,16 +1,18 @@
 ---
-title: 'Ponto de extremidade: Chamadas pendentes'
+title: 'Ponto de extremidade: chamadas pendentes'
 ms.date: 03/30/2017
 ms.assetid: cf1e854a-92bc-4850-81a2-a8134c9fd7d2
-ms.openlocfilehash: 4827d2b4031e4560ad240dd25f3123cbe144fcf1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dc088f5c3813f00c03d6d740ce9ff69c937f8a11
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797235"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250132"
 ---
-# <a name="endpoint-calls-outstanding"></a><span data-ttu-id="567fa-102">Ponto de extremidade: Chamadas pendentes</span><span class="sxs-lookup"><span data-stu-id="567fa-102">Endpoint: Calls Outstanding</span></span>
-<span data-ttu-id="567fa-103">Nome do contador: Chamadas pendentes</span><span class="sxs-lookup"><span data-stu-id="567fa-103">Counter Name: Calls Outstanding</span></span>  
+# <a name="endpoint-calls-outstanding"></a><span data-ttu-id="9dc4e-102">Ponto de extremidade: chamadas pendentes</span><span class="sxs-lookup"><span data-stu-id="9dc4e-102">Endpoint: Calls Outstanding</span></span>
+
+<span data-ttu-id="9dc4e-103">Nome do contador: chamadas pendentes</span><span class="sxs-lookup"><span data-stu-id="9dc4e-103">Counter Name: Calls Outstanding</span></span>  
   
-## <a name="description"></a><span data-ttu-id="567fa-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="567fa-104">Description</span></span>  
- <span data-ttu-id="567fa-105">Número de chamadas em andamento para esse ponto de extremidade.</span><span class="sxs-lookup"><span data-stu-id="567fa-105">Number of in-progress calls to this endpoint.</span></span>
+## <a name="description"></a><span data-ttu-id="9dc4e-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="9dc4e-104">Description</span></span>  
+
+ <span data-ttu-id="9dc4e-105">Número de chamadas em andamento para esse ponto de extremidade.</span><span class="sxs-lookup"><span data-stu-id="9dc4e-105">Number of in-progress calls to this endpoint.</span></span>
