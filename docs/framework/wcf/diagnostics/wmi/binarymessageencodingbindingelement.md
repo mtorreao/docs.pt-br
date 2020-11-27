@@ -2,14 +2,15 @@
 title: BinaryMessageEncodingBindingElement
 ms.date: 03/30/2017
 ms.assetid: e2bb3cdd-3bbd-4bb5-85fe-570457500a66
-ms.openlocfilehash: e0551e7b4b05151490625912742aa6b26ef0216e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eb174d12731d7f1bc78f4d709cf043daf2346bd2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61964088"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96269789"
 ---
 # <a name="binarymessageencodingbindingelement"></a>BinaryMessageEncodingBindingElement
+
 BinaryMessageEncodingBindingElement  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -25,19 +26,23 @@ class BinaryMessageEncodingBindingElement : MessageEncodingBindingElement
 ```  
   
 ## <a name="methods"></a>Métodos  
- A classe BinaryMessageEncodingBindingElement não define quaisquer métodos.  
+
+ A classe BinaryMessageEncodingBindingElement não define nenhum método.  
   
 ## <a name="properties"></a>Propriedades  
- A classe BinaryMessageEncodingBindingElement tem as seguintes propriedades.  
+
+ A classe BinaryMessageEncodingBindingElement tem as propriedades a seguir.  
   
 ## <a name="maxreadpoolsize"></a>MaxReadPoolSize  
+
  Tipo de dados: sint32  
   
  Tipo de acesso: Somente leitura  
   
- Um inteiro que define quantas mensagens pode ser lidas simultaneamente sem alocar novos leitores.  
+ Um inteiro que define quantas mensagens podem ser lidas simultaneamente sem alocar novos leitores.  
   
 ## <a name="maxsessionsize"></a>MaxSessionSize  
+
  Tipo de dados: sint32  
   
  Tipo de acesso: Somente leitura  
@@ -45,13 +50,15 @@ class BinaryMessageEncodingBindingElement : MessageEncodingBindingElement
  Um valor que especifica o tamanho, em bytes, do buffer usado para codificação.  
   
 ## <a name="maxwritepoolsize"></a>MaxWritePoolSize  
+
  Tipo de dados: sint32  
   
  Tipo de acesso: Somente leitura  
   
- Um inteiro que define quantas mensagens pode ser enviado simultaneamente sem alocar novos escritores.  
+ Um inteiro que define quantas mensagens podem ser enviadas simultaneamente sem alocar novos gravadores.  
   
 ## <a name="readerquotas"></a>ReaderQuotas  
+
  Tipo de dados: XmlDictionaryReaderQuotas  
   
  Tipo de acesso: Somente leitura  
@@ -60,10 +67,10 @@ class BinaryMessageEncodingBindingElement : MessageEncodingBindingElement
   
 ## <a name="requirements"></a>Requisitos  
   
-|MOF|Declarado em Servicemodel.mof.|  
+|MOF|Declarado em ServiceModel. mof.|  
 |---------|-----------------------------------|  
-|Namespace|Definido no root\ServiceModel|  
+|Namespace|Definido em root\ServiceModel|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>

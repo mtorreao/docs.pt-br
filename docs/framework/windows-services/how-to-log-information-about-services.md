@@ -13,14 +13,15 @@ helpviewer_keywords:
 - application event logs, service applications
 - logs, service applications
 ms.assetid: c0d8140f-c055-4d8e-a2e0-37358a550116
-ms.openlocfilehash: 0d6c245e3defb7d518093cca904572d3db00fcf8
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 2e5f1fd8ebbbb218e8d6eba9b2d30d05e7c0e62c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608550"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96270570"
 ---
 # <a name="how-to-log-information-about-services"></a>Como: Registrar em log informações sobre serviços
+
 Por padrão, todos os projetos de Serviço Windows têm a capacidade de interagir com o log de eventos do aplicativo e gravar informações e exceções. A propriedade <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> é usada para indicar se você deseja essa funcionalidade em seu aplicativo. Por padrão, o registro em log é habilitado para qualquer serviço criado com o modelo de projeto de Serviço Windows. Você pode usar uma forma estática da classe <xref:System.Diagnostics.EventLog> para gravar informações de serviço em um log sem precisar criar uma instância de um componente <xref:System.Diagnostics.EventLog> nem registrar uma fonte manualmente.  
   
  O instalador do serviço registra automaticamente cada serviço no projeto como uma fonte de eventos válida no log do aplicativo no computador no qual o serviço está instalado, quando o registro em log está habilitado. O serviço registra informações sempre que é iniciado, interrompido, colocado em pausa, retomado, instalado ou desinstalado. Ele também registra as falhas que ocorrem. Você não precisa escrever nenhum código para gravar entradas no log ao usar o comportamento padrão. O serviço faz isso automaticamente.  
@@ -69,6 +70,6 @@ Por padrão, todos os projetos de Serviço Windows têm a capacidade de interagi
     [!code-csharp[VbRadconService#15](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#15)]
     [!code-vb[VbRadconService#15](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#15)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Introdução a aplicativos do Serviço Windows](introduction-to-windows-service-applications.md)

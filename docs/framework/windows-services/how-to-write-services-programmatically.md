@@ -9,14 +9,15 @@ helpviewer_keywords:
 - services, creating
 - Windows Service applications, creating
 ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
-ms.openlocfilehash: cd749d325bec6636243dec1905f79abb5e42f04e
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: ab153b89272323a1a7a71181559f4f4eee082640
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608394"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96270505"
 ---
 # <a name="how-to-write-services-programmatically"></a>Como: Escrever serviços de forma programática
+
 Quando você opta por não usar o modelo de projeto de Serviço Windows, é possível escrever seus próprios serviços configurando a herança e outros elementos de infraestrutura por conta própria. Ao criar um serviço de forma programática, você precisa executar várias etapas que o modelo executaria para você:  
   
 - Você precisa configurar a classe de serviço para ser herdada da classe <xref:System.ServiceProcess.ServiceBase>.  
@@ -70,7 +71,7 @@ Quando você opta por não usar o modelo de projeto de Serviço Windows, é poss
   
 10. Instale o serviço. Para obter mais informações, confira [Como instalar e desinstalar serviços](how-to-install-and-uninstall-services.md).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Introdução a aplicativos do Serviço Windows](introduction-to-windows-service-applications.md)
 - [Como: Criar serviços Windows](how-to-create-windows-services.md)

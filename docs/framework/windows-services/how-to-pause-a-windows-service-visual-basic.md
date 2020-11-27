@@ -10,23 +10,26 @@ helpviewer_keywords:
 - Windows Service applications, pausing
 - pausing Windows Service applications
 ms.assetid: eddb9409-942b-46b6-a2ce-fbd4c65f2790
-ms.openlocfilehash: 19919a8b0a289f0e88eb136d8c010a036e84cbec
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: a8c3074fdbf8d7b948b00def4e6a664310fc6ec2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608498"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96270583"
 ---
 # <a name="how-to-pause-a-windows-service-visual-basic"></a>Como: Pausar um Serviço Windows (Visual Basic)
+
 Este exemplo usa o componente <xref:System.ServiceProcess.ServiceController> para pausar o serviço de administração do IIS no computador local.  
   
 ## <a name="example"></a>Exemplo  
+
  [!code-vb[VbRadconService#11](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#11)]  
 [!code-vb[VbRadconService#12](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#12)]  
   
  Este exemplo de código também está disponível como um snippet de código do IntelliSense. No selecionador de snippet de código, ele está localizado em **Sistema Operacional Windows &gt; Serviços Windows**. Para obter mais informações, consulte [Snippets de Código](/visualstudio/ide/code-snippets).  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
+
  Este exemplo requer:  
   
 - Uma referência do projeto para System.serviceprocess.dll.  
@@ -34,6 +37,7 @@ Este exemplo usa o componente <xref:System.ServiceProcess.ServiceController> par
 - Acesso aos membros do namespace <xref:System.ServiceProcess>. Adicione uma instrução `Imports` se você não está qualificando totalmente os nomes de membros em seu código. Para obter mais informações, consulte [Instrução Imports (tipo e namespace .NET)](../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 ## <a name="robust-programming"></a>Programação robusta  
+
  A propriedade <xref:System.ServiceProcess.ServiceController.MachineName%2A> da classe <xref:System.ServiceProcess.ServiceController> é o computador local por padrão. Para referenciar os Serviços Windows em outro computador, altere a propriedade <xref:System.ServiceProcess.ServiceController.MachineName%2A> para o nome desse computador.  
   
  As seguintes condições podem causar uma exceção:  
@@ -43,11 +47,12 @@ Este exemplo usa o componente <xref:System.ServiceProcess.ServiceController> par
 - Ocorreu um erro ao acessar uma API do sistema. (<xref:System.ComponentModel.Win32Exception>)  
   
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
+
  O controle de serviços no computador pode ser restringido usando o <xref:System.ServiceProcess.ServiceControllerPermissionAccess> para definir permissões no <xref:System.ServiceProcess.ServiceControllerPermission>.  
   
  O acesso a informações de serviço pode ser restringido usando o <xref:System.Security.Permissions.PermissionState> para definir permissões em <xref:System.Security.Permissions.SecurityPermission>.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceProcess.ServiceController>
 - <xref:System.ServiceProcess.ServiceControllerStatus>
