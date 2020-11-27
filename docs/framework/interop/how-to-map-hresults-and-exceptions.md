@@ -12,14 +12,15 @@ helpviewer_keywords:
 - COM interop, HRESULTs
 - COM interop, exceptions
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
-ms.openlocfilehash: a1a43d7ce3fbc678cc9aa047c5110ac8615ea27e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ea5d920ccfa8a91c9fdc9d95c6165c8dfb52c6ff
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554137"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267033"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>Como: Mapear HRESULTs e exceções
+
 Métodos COM relatam erros retornando HRESULTs; métodos .NET os relatam gerando exceções. O runtime manipula a transição entre os dois. Cada classe de exceção do .NET Framework mapeia para um HRESULT.  
   
  Classes de exceção definidas pelo usuário podem especificar qualquer HRESULT apropriado. Essas classes de exceção podem alterar dinamicamente o HRESULT a ser retornado quando a exceção é gerada, definindo o campo **HResult** no objeto de exceção. Informações adicionais sobre a exceção são fornecidas ao cliente por meio da interface **IErrorInfo**, que é implementada no objeto .NET no processo não gerenciado.  
@@ -134,14 +135,14 @@ CMyClass::MethodThatThrows
 |**ErrorCode**|HRESULT retornado da chamada.|  
 |**HelpLink**|Se **IErrorInfo->HelpContext** é diferente de zero, a cadeia de caracteres é formada pela concatenação de **IErrorInfo->GetHelpFile** e "#" e **IErrorInfo->GetHelpContext**. Caso contrário, a cadeia de caracteres é retornada de **IErrorInfo->GetHelpFile**.|  
 |**InnerException**|Sempre uma referência nula (**Nothing** no Visual Basic).|  
-|**Mensagem**|Cadeia de caracteres retornada de **IErrorInfo->GetDescription**.|  
+|**Message**|Cadeia de caracteres retornada de **IErrorInfo->GetDescription**.|  
 |**Origem**|Cadeia de caracteres retornada de **IErrorInfo->GetSource**.|  
 |**Pilha**|O rastreamento de pilha.|  
 |**TargetSite**|O nome do método que retornou o HRESULT com falha.|  
   
  Campos de exceção, tais como **Message**, **Source** e **StackTrace**, não estão disponíveis para o **StackOverflowException**.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Interoperabilidade COM avançada](/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
 - [Exceções](../../standard/exceptions/index.md)

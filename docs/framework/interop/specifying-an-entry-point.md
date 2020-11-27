@@ -7,12 +7,12 @@ helpviewer_keywords:
 - platform invoke, attribute fields
 - attribute fields in platform invoke, EntryPoint
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
-ms.openlocfilehash: 5628c54103410d127c2f9c4f56e1c6f897ada754
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: d5c6b651b3b5f19eea8e61bc17da92158be87957
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86282015"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266357"
 ---
 # <a name="specifying-an-entry-point"></a>Especificando um ponto de entrada
 
@@ -58,6 +58,7 @@ End Class
 ```
   
 ## <a name="renaming-a-function-in-c-and-c"></a>Renomeando uma função no C# e C++  
+
  É possível usar o campo <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> para especificar uma função de DLL por nome ou ordinal. Se o nome da função na definição de método for o mesmo do ponto de entrada na DLL, você não precisará identificar explicitamente a função com o campo **EntryPoint**. Caso contrário, use um dos seguintes formatos de atributo para indicar um nome ou um ordinal:  
   
 ```csharp
@@ -91,7 +92,7 @@ extern "C" int MsgBox(
     HWND hWnd, String* lpText, String* lpCaption, unsigned int uType);
 ```
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - [Criando protótipos em código gerenciado](creating-prototypes-in-managed-code.md)

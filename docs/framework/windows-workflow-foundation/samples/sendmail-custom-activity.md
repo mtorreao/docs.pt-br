@@ -2,25 +2,26 @@
 title: Atividade personalizado de SendMail
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: 4dca15bfd3798b9282960663bea827f9323a1266
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f518beebe336080853e4dec3bca6f8539bbec304
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547721"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267576"
 ---
 # <a name="sendmail-custom-activity"></a>Atividade personalizado de SendMail
+
 Este exemplo demonstra como criar uma atividade personalizada que derive de <xref:System.Activities.AsyncCodeActivity> para enviar email SMTP usando para uso em um aplicativo de fluxo de trabalho. A atividade personalizada usa os recursos do <xref:System.Net.Mail.SmtpClient> para enviar email de forma assíncrona e enviar emails com autenticação. Também fornece alguns recursos de usuário final como o modo de teste, a substituição de token, os modelos de arquivo, e o caminho da operação de teste.  
   
  A tabela a seguir detalha os argumentos para atividades de `SendMail` .  
   
-|Nome|Tipo|Description|  
+|Nome|Tipo|Descrição|  
 |-|-|-|  
-|Host|String|Endereço do host de servidor SMTP.|  
-|Porta|String|Porta de serviço SMTP no host.|  
+|Host|Cadeia de caracteres|Endereço do host de servidor SMTP.|  
+|Porta|Cadeia de caracteres|Porta de serviço SMTP no host.|  
 |EnableSsl|bool|Especifica se <xref:System.Net.Mail.SmtpClient> usar secure sockets (SSL) para criptografar a conexão.|  
-|UserName|String|Nome de usuário para configurar as credenciais para autenticar a propriedade de <xref:System.Net.Mail.SmtpClient.Credentials%2A> de retorno.|  
-|Senha|String|Senha para configurar as credenciais para autenticar a propriedade de <xref:System.Net.Mail.SmtpClient.Credentials%2A> de retorno.|  
+|UserName|Cadeia de caracteres|Nome de usuário para configurar as credenciais para autenticar a propriedade de <xref:System.Net.Mail.SmtpClient.Credentials%2A> de retorno.|  
+|Senha|Cadeia de caracteres|Senha para configurar as credenciais para autenticar a propriedade de <xref:System.Net.Mail.SmtpClient.Credentials%2A> de retorno.|  
 |Assunto|<xref:System.Activities.InArgument%601>\<string>|Assunto de mensagem.|  
 |Corpo|<xref:System.Activities.InArgument%601>\<string>|Corpo da mensagem.|  
 |Anexos|<xref:System.Activities.InArgument%601>\<string>|Coleção de anexos usada para armazenar dados anexados a esta mensagem de email.|  
@@ -29,11 +30,12 @@ Este exemplo demonstra como criar uma atividade personalizada que derive de <xre
 |CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Coleção de endereços que contém destinatários de cópia carbono (CC) para esta mensagem de email.|  
 |BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Coleção de endereços que contém os destinatários da cópia oculta (Cco) desta mensagem de email.|  
 |Tokens|<xref:System.Activities.InArgument%601> IDictionary<\<string, string>>|Tokens a substituição no corpo. Esse recurso permite que os usuários especifiquem alguns valores no corpo do que pode ser substituído pelos tokens fornecidos posteriormente usando essa propriedade.|  
-|BodyTemplateFilePath|String|Caminho de um modelo para o corpo. A atividade de `SendMail` copia o conteúdo do arquivo a sua propriedade body.<br /><br /> O modelo pode conter os tokens que são substituídos pelos conteúdos da propriedade tokens.|  
+|BodyTemplateFilePath|Cadeia de caracteres|Caminho de um modelo para o corpo. A atividade de `SendMail` copia o conteúdo do arquivo a sua propriedade body.<br /><br /> O modelo pode conter os tokens que são substituídos pelos conteúdos da propriedade tokens.|  
 |TestMailTo|<xref:System.Net.Mail.MailAddress>|Quando essa propriedade é definida, todos os emails são enviados para o endereço especificado nele.<br /><br /> Esta propriedade destina-se a ser usada ao testar fluxos de trabalho. Por exemplo, quando você deseja certificar-se de que todos os emails são enviados sem enviá-los aos destinatários reais.|  
-|TestDropPath|String|Quando essa propriedade é definida, todos os emails também são salvos no arquivo especificado.<br /><br /> Essa propriedade deve ser usada quando você estiver testando ou Depurando fluxos de trabalho, para garantir que o formato e o conteúdo dos emails de saída sejam apropriados.|  
+|TestDropPath|Cadeia de caracteres|Quando essa propriedade é definida, todos os emails também são salvos no arquivo especificado.<br /><br /> Essa propriedade deve ser usada quando você estiver testando ou Depurando fluxos de trabalho, para garantir que o formato e o conteúdo dos emails de saída sejam apropriados.|  
   
 ## <a name="solution-contents"></a>Conteúdo de solução  
+
  A solução contém dois projetos.  
   
 |Projeto|Descrição|Arquivos importantes|  
@@ -42,9 +44,11 @@ Este exemplo demonstra como criar uma atividade personalizada que derive de <xre
 |SendMailTestClient|Cliente para testar a atividade de SendMail.  Este projeto mostra duas maneiras para chamar a atividade de SendMail: declarativamente, e programaticamente.|1. Sequence1. XAML: fluxo de trabalho que invoca a atividade SendMail.<br />2. Program.cs: invoca Sequence1 e também cria um fluxo de trabalho programaticamente que usa o SendMail.|  
   
 ## <a name="further-configuration-of-the-sendmail-activity"></a>Configuração adicional de atividade de SendMail  
+
  Embora não mostrado no exemplo, os usuários podem executar a configuração de adição de atividade de SendMail. As três seções a seguir demonstram como este é feita.  
   
 ### <a name="sending-an-email-using-tokens-specified-in-the-body"></a>Enviando um email usando os tokens especificados no corpo  
+
  Este snippet de código demonstra como você pode enviar email com tokens no corpo. Observe como os tokens são fornecidos na propriedade body. Os valores para estes tokens são fornecidos para a propriedade tokens.  
   
 ```csharp  
@@ -67,6 +71,7 @@ new SendMail
 ```  
   
 ### <a name="sending-an-email-using-a-template"></a>Enviando um email usando um modelo  
+
  Este snippet mostra como enviar um email usando tokens de um modelo no corpo. Observe que ao definir a propriedade de `BodyTemplateFilePath` não precisamos de fornecer o valor para a propriedade body (o conteúdo do arquivo de modelo serão copiados para o corpo).  
   
 ```csharp  
@@ -84,6 +89,7 @@ new SendMail
 ```  
   
 ### <a name="sending-mails-in-testing-mode"></a>Enviar email no modo de teste  
+
  Este trecho de código mostra como definir as duas propriedades de teste: ao definir `TestMailTo` como todas as mensagens serão enviadas `john.doe@contoso.con` (sem considerar os valores de para, CC, Cco). Definindo TestDropPath todos os email de saída também serão gravados no caminho fornecido. Essas propriedades podem ser definidas independentes (não são relacionadas).  
   
 ```csharp  
@@ -103,6 +109,7 @@ new SendMail
 ```  
   
 ## <a name="set-up-instructions"></a>Instruções de configuração  
+
  O acesso a um servidor SMTP é necessário para esse exemplo.  
   
  Para obter mais informações sobre como configurar um servidor SMTP, consulte os links a seguir.  

@@ -2,12 +2,12 @@
 title: Integração de componentes transacionais de Enterprise Services
 ms.date: 03/30/2017
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
-ms.openlocfilehash: 3fd8876de53be30f18e4fa9d7f4a1cc07ab5e220
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d235806ba94d68cadca91a17361bfd5bab1e1332
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554098"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265863"
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>Integração de componentes transacionais de Enterprise Services
 
@@ -16,6 +16,7 @@ O Windows Communication Foundation (WCF) fornece um mecanismo automático para a
  Para fornecer o nível desejado de interoperabilidade entre a transação de fluxo de entrada e a transação de contexto COM+, a implementação do serviço deve criar uma <xref:System.Transactions.TransactionScope> instância e usar o valor apropriado da <xref:System.Transactions.EnterpriseServicesInteropOption> enumeração.  
   
 ## <a name="integrating-enterprise-services-with-a-service-operation"></a>Integrando serviços corporativos a uma operação de serviço  
+
  O código a seguir demonstra uma operação, com fluxo de transações permitido, que cria um <xref:System.Transactions.TransactionScope> com a <xref:System.Transactions.EnterpriseServicesInteropOption.Full> opção. As seguintes condições se aplicam neste cenário:  
   
 - Se o cliente fluir uma transação, a operação, incluindo a chamada para o componente Enterprise Services, será executada dentro do escopo dessa transação. O uso de <xref:System.Transactions.EnterpriseServicesInteropOption.Full> garante que a transação seja sincronizada com o <xref:System.EnterpriseServices> contexto, o que significa que a transação de ambiente para <xref:System.Transactions> e a <xref:System.EnterpriseServices> é a mesma.  
@@ -63,6 +64,7 @@ public class CustomerService : ICustomerServiceContract
  Se nenhuma sincronização for necessária entre a transação atual de uma operação e as chamadas para componentes de serviços corporativos transacionais, use a <xref:System.Transactions.EnterpriseServicesInteropOption.None> opção ao instanciar a <xref:System.Transactions.TransactionScope> instância.  
   
 ## <a name="integrating-enterprise-services-with-a-client"></a>Integrando serviços corporativos a um cliente  
+
  O código a seguir demonstra o código do cliente usando uma <xref:System.Transactions.TransactionScope> instância com a <xref:System.Transactions.EnterpriseServicesInteropOption.Full> configuração. Nesse cenário, as chamadas para operações de serviço que dão suporte ao fluxo de transações ocorrem dentro do escopo da mesma transação que as chamadas para componentes de serviços corporativos.  
   
 ```csharp
@@ -93,7 +95,7 @@ static void Main()
 }  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Integração com aplicativos COM+](integrating-with-com-plus-applications.md)
 - [Integração com aplicativos COM](integrating-with-com-applications.md)

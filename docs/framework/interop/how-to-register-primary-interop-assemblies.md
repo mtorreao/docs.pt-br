@@ -6,12 +6,12 @@ helpviewer_keywords:
 - registering primary interop assemblies
 - primary interop assemblies, registering
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
-ms.openlocfilehash: 09b283712a66805669154c720dff5c2c5f910bf4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4961b4bc57d25f9fa83cf40f82b153aa93592b55
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547174"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267007"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>Como: Registrar assemblies de interoperabilidade primários
 
@@ -42,13 +42,14 @@ Use a [Ferramenta de Registro do Assembly (Regasm.exe)](../tools/regasm-exe-asse
      Nesse comando, *nomedoassembly* é o nome do arquivo do assembly que é registrado. Regasm.exe adiciona uma entrada para o assembly de interoperabilidade primário sob a mesma chave do Registro da biblioteca de tipos original.
 
 ## <a name="example"></a>Exemplo
+
  O exemplo a seguir registra o assembly de interoperabilidade primário `CompanyA.UtilLib.dll`.
 
 ```console
 regasm CompanyA.UtilLib.dll
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Programando com assemblies de interoperabilidade primários](/previous-versions/dotnet/netframework-4.0/baxfadst(v=vs.100))
 - [Localizando assemblies de interoperabilidade primários](/previous-versions/dotnet/netframework-4.0/y06sxw56(v=vs.100))

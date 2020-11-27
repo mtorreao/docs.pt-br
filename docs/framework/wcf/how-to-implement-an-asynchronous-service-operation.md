@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4e5d2ea5-d8f8-4712-bd18-ea3c5461702c
-ms.openlocfilehash: 7b30fa21e32acf2a462db4f9f39b7e1c459a2949
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 157311f29b203e0c26be21a89d2d5b560543094b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553539"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267826"
 ---
 # <a name="how-to-implement-an-asynchronous-service-operation"></a>Como: implementar uma operação de serviço assíncrona
+
 Em aplicativos Windows Communication Foundation (WCF), uma operação de serviço pode ser implementada de forma assíncrona ou síncrona, sem ditar ao cliente como chamá-lo. Por exemplo, as operações de serviço assíncronas podem ser chamadas de forma síncrona e as operações de serviço síncronas podem ser chamadas assincronamente. Para obter um exemplo que mostra como chamar uma operação de forma assíncrona em um aplicativo cliente, consulte [como: chamar operações de serviço de forma assíncrona](./feature-details/how-to-call-wcf-service-operations-asynchronously.md). Para obter mais informações sobre operações síncronas e assíncronas, consulte [Criando contratos de serviço](designing-service-contracts.md) e operações síncronas [e assíncronas](synchronous-and-asynchronous-operations.md). Este tópico descreve a estrutura básica de uma operação de serviço assíncrona, o código não está completo. Para obter um exemplo completo dos lados do serviço e do cliente, consulte [assíncrono](/previous-versions/dotnet/netframework-4.0/ms751505(v=vs.100)).  
   
 ### <a name="implement-a-service-operation-asynchronously"></a>Implementar uma operação de serviço de forma assíncrona  
@@ -31,6 +32,7 @@ Em aplicativos Windows Communication Foundation (WCF), uma operação de serviç
      [!code-vb[C_SyncAsyncClient#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_syncasyncclient/vb/services.vb#3)]  
   
 ## <a name="example"></a>Exemplo  
+
  Os exemplos de código a seguir mostram:  
   
 1. Uma interface de contrato de serviço com:  
@@ -46,7 +48,7 @@ Em aplicativos Windows Communication Foundation (WCF), uma operação de serviç
  [!code-csharp[C_SyncAsyncClient#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_syncasyncclient/cs/services.cs#1)]
  [!code-vb[C_SyncAsyncClient#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_syncasyncclient/vb/services.vb#1)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Criando contratos de serviço](designing-service-contracts.md)
 - [Operações síncronas e assíncronas](synchronous-and-asynchronous-operations.md)

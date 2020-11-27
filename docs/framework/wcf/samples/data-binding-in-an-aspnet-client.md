@@ -2,14 +2,15 @@
 title: Associação de dados em um cliente do ASP.NET
 ms.date: 03/30/2017
 ms.assetid: 68b49fa6-94e7-4d4c-a34e-902a2b3770b6
-ms.openlocfilehash: 134e1d7df3ed6bb245a870ad257fa64ad94e4e9c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3e30bcb9852b34eeb919339d57d701e4dda8a644
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602590"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266864"
 ---
 # <a name="data-binding-in-an-aspnet-client"></a>Associação de dados em um cliente do ASP.NET
+
 Este exemplo demonstra como associar dados retornados por um serviço de Windows Communication Foundation típico (WCF) em um aplicativo Web Forms.  
   
 > [!NOTE]
@@ -27,7 +28,7 @@ Este exemplo demonstra como associar dados retornados por um serviço de Windows
   
 2. Para criar a edição C# ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](building-the-samples.md).  
   
-3. O cliente deste exemplo é um site da Web que é executado em um servidor Web de desenvolvimento. Para iniciar o servidor Web de desenvolvimento, digite o seguinte no prompt de comando: `%SystemDrive%\Program Files\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.EXE" /port:8000 /path:<WebFormsSamplePath>\CS\client /vpath:/client` . Em seguida, navegue até `http://localhost:8000/client` . Para executar esse exemplo nos computadores, substitua todas as referências `localhost` no arquivo Web. config do cliente pelo nome do computador do servidor.  
+3. O cliente deste exemplo é um site da Web que é executado em um servidor Web de desenvolvimento. Para iniciar o servidor Web de desenvolvimento, digite o seguinte no prompt de comando: `%SystemDrive%\Program Files\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.EXE" /port:8000 /path:<WebFormsSamplePath>\CS\client /vpath:/client` . Em seguida, navegue até `http://localhost:8000/client` . Para executar esse exemplo entre computadores, substitua todas as referências `localhost` no arquivo de Web.config do cliente pelo nome do computador do servidor.  
   
 > [!IMPORTANT]
 > Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  

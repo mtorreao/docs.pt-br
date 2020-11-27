@@ -2,17 +2,19 @@
 title: Formatação HTTP Web WCF
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-ms.openlocfilehash: 011ff4f2e667268fac1aa2d82c0a2c4ffefc8dde
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e9346cd1bb3798ad0beac5e9e28a8536007d897b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585552"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266903"
 ---
 # <a name="wcf-web-http-formatting"></a>Formatação HTTP Web WCF
+
 O modelo de programação Web HTTP do WCF permite que você determine dinamicamente o melhor formato para uma operação de serviço retornar sua resposta. Dois métodos para determinar um formato apropriado são suportados: Automatic e Explicit.  
   
 ## <a name="automatic-formatting"></a>Formatação automática  
+
  Quando habilitada, a formatação automática escolhe o melhor formato para retornar a resposta. Ele determina o melhor formato verificando o seguinte, na ordem:  
   
 1. Os tipos de mídia no cabeçalho Accept da mensagem de solicitação.  
@@ -91,6 +93,7 @@ try
 ```  
   
 ## <a name="explicit-formatting"></a>Formatação explícita  
+
  Como o nome indica, em formatação explícita, o desenvolvedor determina o melhor formato a ser usado no código de operação. Se o melhor formato for XML ou JSON, o desenvolvedor será definido <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> como <xref:System.ServiceModel.Web.WebMessageFormat.Xml> ou <xref:System.ServiceModel.Web.WebMessageFormat.Json> . Se a <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> propriedade não estiver definida explicitamente, o formato padrão da operação será usado.  
   
  O exemplo a seguir verifica o parâmetro de cadeia de caracteres de consulta de formato para um formato a ser usado. Se ele tiver sido especificado, ele definirá o formato da operação usando <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> .  
@@ -163,11 +166,11 @@ public class Service : IService
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.UriTemplate>
 - <xref:System.UriTemplateMatch>
 - [Modelo de programação WCF Web HTTP](wcf-web-http-programming-model.md)
 - [UriTemplate and UriTemplateTable](uritemplate-and-uritemplatetable.md)
-- [Visão geral do modelo de programação HTTP Web do WCF](wcf-web-http-programming-model-overview.md)
+- [Visão geral de modelo de programação HTTP Web do WCF](wcf-web-http-programming-model-overview.md)
 - [Modelo de objeto de programação HTTP Web do WCF](wcf-web-http-programming-object-model.md)
