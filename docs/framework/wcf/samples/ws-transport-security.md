@@ -2,14 +2,15 @@
 title: Segurança de transporte WS
 ms.date: 03/30/2017
 ms.assetid: 33a20358-5e1b-458a-a6a9-15753bc7b99b
-ms.openlocfilehash: d0f357ddcfc355bac8eeb86d57641add0013a052
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 64059a5a09d49f83c9abda5b2f3d1601acf41a3e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596391"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96252405"
 ---
 # <a name="ws-transport-security"></a>Segurança de transporte WS
+
 Este exemplo demonstra o uso de segurança de transporte SSL com a <xref:System.ServiceModel.WSHttpBinding> associação. Por padrão, a `wsHttpBinding` associação fornece comunicação http. Quando configurado para segurança de transporte, a associação dá suporte à comunicação HTTPS. Este exemplo é baseado no [introdução](getting-started-sample.md) que implementa um serviço de calculadora. O `wsHttpBinding` é especificado e configurado nos arquivos de configuração do aplicativo para o cliente e o serviço.  
   
 > [!NOTE]
@@ -49,9 +50,9 @@ Este exemplo demonstra o uso de segurança de transporte SSL com a <xref:System.
   </system.serviceModel>  
 ```  
   
- O endereço especificado usa o `https://` esquema. A configuração de associação define o modo de segurança como `Transport` . O mesmo modo de segurança deve ser especificado no arquivo Web. config do serviço.  
+ O endereço especificado usa o `https://` esquema. A configuração de associação define o modo de segurança como `Transport` . O mesmo modo de segurança deve ser especificado no arquivo de Web.config do serviço.  
   
- Como o certificado usado neste exemplo é um certificado de teste criado com MakeCert. exe, um alerta de segurança é exibido quando você tenta acessar um https: address, como `https://localhost/servicemodelsamples/service.svc` , no seu navegador. Para permitir que o cliente do Windows Communication Foundation (WCF) funcione com um certificado de teste em vigor, um código adicional foi adicionado ao cliente para suprimir o alerta de segurança. Esse código e a classe que o acompanham não são necessários ao usar certificados de produção.  
+ Como o certificado usado neste exemplo é um certificado de teste criado com Makecert.exe, um alerta de segurança é exibido quando você tenta acessar um https: address, como `https://localhost/servicemodelsamples/service.svc` , no seu navegador. Para permitir que o cliente do Windows Communication Foundation (WCF) funcione com um certificado de teste em vigor, um código adicional foi adicionado ao cliente para suprimir o alerta de segurança. Esse código e a classe que o acompanham não são necessários ao usar certificados de produção.  
 
 ```csharp
 // This code is required only for test certificates like those created by Makecert.exe.  

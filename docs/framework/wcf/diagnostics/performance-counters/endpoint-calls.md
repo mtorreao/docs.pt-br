@@ -1,16 +1,18 @@
 ---
-title: 'Ponto de extremidade: Chamadas'
+title: 'Ponto de extremidade: chamadas'
 ms.date: 03/30/2017
 ms.assetid: 223aefec-3011-4f35-afa7-a34c76708d52
-ms.openlocfilehash: 056b3a571c035c9c0187a3883efdb303cbbc4849
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dce1cb6658222bd90b148fae8409d518bf47d9cc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797248"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253109"
 ---
-# <a name="endpoint-calls"></a>Ponto de extremidade: Chamadas
-Nome do contador: Chamadas.  
+# <a name="endpoint-calls"></a>Ponto de extremidade: chamadas
+
+Nome do contador: chamadas.  
   
 ## <a name="description"></a>Descrição  
- Número de chamadas para esse ponto de extremidade.
+
+ Número de chamadas para este ponto de extremidade.

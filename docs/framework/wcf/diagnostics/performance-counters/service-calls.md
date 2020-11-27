@@ -1,16 +1,18 @@
 ---
-title: 'Serviço: Chamadas'
+title: 'Serviço: chamadas'
 ms.date: 03/30/2017
 ms.assetid: 1e6b161a-3a12-4106-a092-3eeb219fc9bb
-ms.openlocfilehash: c09b0f4fee8ce96d6933bce8f01b61f72282992b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5bd030e2fe7c47423ee613561d301cf26e8c8303
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773304"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96252849"
 ---
-# <a name="service-calls"></a>Serviço: Chamadas
-Nome do contador: Chamadas.  
+# <a name="service-calls"></a>Serviço: chamadas
+
+Nome do contador: chamadas.  
   
 ## <a name="description"></a>Descrição  
- Número de chamadas para esse serviço.
+
+ Número de chamadas para este serviço.
