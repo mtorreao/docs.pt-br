@@ -1,14 +1,16 @@
 ---
-title: Como utilizar a configuração para adicionar um ponto de extremidade AJAX ASP.NET
+title: 'Como: usar a configuração para adicionar um ponto de extremidade AJAX ASP.NET'
 ms.date: 03/30/2017
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
-ms.openlocfilehash: 97f8174161068f2c72b6bd2bc4e8a3044f5bccdd
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: b229173381eed3e821a9ad9e1a6639912521731c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051656"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268424"
 ---
-# <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>Como utilizar a configuração para adicionar um ponto de extremidade AJAX ASP.NET
+# <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>Como: usar a configuração para adicionar um ponto de extremidade AJAX ASP.NET
+
 Windows Communication Foundation (WCF) permite que você crie um serviço que disponibiliza um ponto de extremidade habilitado para AJAX ASP.NET que pode ser chamado do JavaScript em um site de cliente. Para criar esse ponto de extremidade, você pode usar um arquivo de configuração, assim como com todos os outros pontos de extremidade do Windows Communication Foundation (WCF) ou usar um método que não exija nenhum elemento de configuração. Este tópico demonstra a abordagem de configuração.  
   
  A parte do procedimento que permite que o ponto de extremidade de serviço se torne ASP.NET habilitado para AJAX consiste em configurar o ponto de extremidade para usar o <xref:System.ServiceModel.WebHttpBinding> e adicionar o [\<enableWebScript>](../../configure-apps/file-schema/wcf/enablewebscript.md) comportamento do ponto de extremidade. Depois de configurar o ponto de extremidade, as etapas para implementar e hospedar o serviço são semelhantes às usadas por qualquer serviço WCF. Para obter um exemplo funcional, consulte o [serviço AJAX usando http post](../samples/ajax-service-using-http-post.md).  
@@ -103,7 +105,7 @@ Windows Communication Foundation (WCF) permite que você crie um serviço que di
   
 1. O ponto de extremidade é configurado em um endereço vazio relativo ao arquivo. svc, portanto, o serviço agora está disponível e pode ser invocado enviando solicitações para Service. svc/ \<operation> -por exemplo, Service. svc/Add para a `Add` operação. Você pode usá-lo inserindo a URL do ponto de extremidade na coleção de scripts do controle Gerenciador de script do ASP.NET AJAX. Para obter um exemplo, consulte o [serviço AJAX usando http post](../samples/ajax-service-using-http-post.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Criando serviços do WCF para o AJAX ASP.NET](creating-wcf-services-for-aspnet-ajax.md)
-- [Como migrar serviços habilitados para AJAX ASP.NET para o WCF](how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)
+- [Como: migrar serviços Web habilitados para AJAX ASP.NET para o WCF](how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)

@@ -1,15 +1,16 @@
 ---
-title: Como particionar dados de serviço
+title: 'Como: fornecer particionamento de dados'
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-ms.openlocfilehash: 3b2f86ee6a4dea25fb5c972d4cecb1b9ed411b29
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7bb5eb6bda8bb2be3dfaaa88eb4b5ad787f47aa7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601186"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268918"
 ---
-# <a name="how-to-service-data-partitioning"></a>Como particionar dados de serviço
+# <a name="how-to-service-data-partitioning"></a>Como: fornecer particionamento de dados
+
 Este tópico descreve as etapas básicas necessárias para particionar mensagens em várias instâncias do mesmo serviço de destino. O particionamento de dados de serviço normalmente é usado quando você precisa dimensionar um serviço para fornecer melhor qualidade de serviço, ou quando você precisa lidar com solicitações de clientes diferentes de uma maneira específica. Por exemplo, as mensagens de clientes de alto valor ou "ouro" talvez precisem ser processadas em uma prioridade mais alta do que as mensagens de um cliente padrão.  
   
  Neste exemplo, as mensagens são roteadas para uma das duas instâncias do serviço regularCalc. Ambas as instâncias do serviço são idênticas; no entanto, o serviço representado pelo ponto de extremidade Calculator1 processa mensagens recebidas de clientes de alto valor, o ponto de extremidade da calculadora 2 processa mensagens de outros clientes  
@@ -99,6 +100,7 @@ Este tópico descreve as etapas básicas necessárias para particionar mensagens
     ```  
   
 ## <a name="example"></a>Exemplo  
+
  A seguir está uma lista completa do arquivo de configuração.  
   
 ```xml  
@@ -173,6 +175,6 @@ Este tópico descreve as etapas básicas necessárias para particionar mensagens
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Serviços de roteamento](../samples/routing-services.md)

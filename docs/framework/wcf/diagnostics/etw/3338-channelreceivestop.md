@@ -2,14 +2,15 @@
 title: 3338 - ChannelReceiveStop
 ms.date: 03/30/2017
 ms.assetid: e8f0c71e-69e5-4390-aef3-e51c67d0bf0d
-ms.openlocfilehash: 1cec65a537cc3d679ffe2a00ef38959380281092
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8d68553a1ce4b5219203d8d3cc976e0f136c7458
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921937"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268775"
 ---
 # <a name="3338---channelreceivestop"></a>3338 - ChannelReceiveStop
+
 ## <a name="properties"></a>Propriedades  
   
 |||  
@@ -20,9 +21,11 @@ ms.locfileid: "61921937"
 |Canal|Os aplicativos de servidor de Microsoft-Windows- aplicativo/depuração|  
   
 ## <a name="description"></a>Descrição  
- Esse evento é emitido quando o canal receber será interrompido.  
+
+ Esse evento é emitido quando o recebimento do canal para.  
   
 ## <a name="message"></a>Mensagem  
- ChannelHandlerId:% 1 - mensagem receber loop interrompido.  
+
+ ChannelHandlerId: %1-loop de recebimento de mensagem interrompido.  
   
 ## <a name="details"></a>Detalhes
