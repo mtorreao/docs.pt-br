@@ -1,15 +1,16 @@
 ---
-title: Como adicionar um ponto de extremidade de ASP.NET AJAX sem utilizar a configuração
+title: 'Como: adicionar um ponto de extremidade de ASP.NET AJAX sem utilizar a configuração'
 ms.date: 03/30/2017
 ms.assetid: b05c1742-8d0a-4673-9d71-725b18a3008e
-ms.openlocfilehash: 9aab53d6457aa7848fd4acea6317a30da352cc98
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e33f1fed7dd7bf45966815949ac544250f4d1de8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579625"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257620"
 ---
-# <a name="how-to-add-an-aspnet-ajax-endpoint-without-using-configuration"></a>Como adicionar um ponto de extremidade de ASP.NET AJAX sem utilizar a configuração
+# <a name="how-to-add-an-aspnet-ajax-endpoint-without-using-configuration"></a>Como: adicionar um ponto de extremidade de ASP.NET AJAX sem utilizar a configuração
+
 Windows Communication Foundation (WCF) permite que você crie um serviço que expõe um ponto de extremidade habilitado para AJAX ASP.NET que pode ser chamado do JavaScript em um site de cliente. Para criar esse ponto de extremidade, você pode usar um arquivo de configuração, assim como com todos os outros pontos de extremidade do WCF, ou usar um método que não exija nenhum elemento de configuração. Este tópico demonstra a segunda abordagem.  
   
  Para criar serviços com pontos de extremidade do ASP.NET AJAX sem configuração, os serviços devem ser hospedados pelo Serviços de Informações da Internet (IIS). Para ativar um ponto de extremidade ASP.NET AJAX usando essa abordagem, especifique o <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> como o parâmetro Factory na diretiva [ \@ ServiceHost](../../configure-apps/file-schema/wcf-directive/servicehost.md) no arquivo. svc. Essa fábrica personalizada é o componente que configura automaticamente um ponto de extremidade do ASP.NET AJAX para que ele possa ser chamado do JavaScript em um site do cliente.  
@@ -80,7 +81,7 @@ Windows Communication Foundation (WCF) permite que você crie um serviço que ex
   
  O ponto de extremidade configurado automaticamente é criado em um endereço vazio relativo à URL base. Um arquivo de configuração também pode ser adicionado e usado com essa abordagem. Se o arquivo de configuração contiver definições de ponto de extremidade, esses pontos de extremidade serão adicionados ao ponto de extremidades configurado automaticamente.  
   
- Por exemplo, o Service. svc usa o <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> e o diretório de serviço contém um arquivo Web. config que define um ponto de extremidade para o mesmo serviço usando o <xref:System.ServiceModel.BasicHttpBinding> no endereço relativo "SOAP". Nesse caso, o serviço contém dois pontos de extremidade: um no Service. svc (que responde às solicitações do AJAX ASP.NET) e outro em Service. svc/SOAP (que responde às solicitações SOAP).  
+ Por exemplo, o Service. svc usa o <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> e o diretório de serviço contém um arquivo de Web.config que define um ponto de extremidade para o mesmo serviço usando o <xref:System.ServiceModel.BasicHttpBinding> no endereço relativo "SOAP". Nesse caso, o serviço contém dois pontos de extremidade: um no Service. svc (que responde às solicitações do AJAX ASP.NET) e outro em Service. svc/SOAP (que responde às solicitações SOAP).  
   
  Se o arquivo de configuração definir um ponto de extremidade em um endereço relativo vazio e o <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> for usado, uma exceção será lançada e o serviço não será iniciado.  
   
@@ -96,7 +97,7 @@ Windows Communication Foundation (WCF) permite que você crie um serviço que ex
   
  A <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> classe é uma classe derivada de <xref:System.ServiceModel.Activation.ServiceHostFactory> . Para obter uma explicação detalhada do mecanismo de fábrica do host de serviço, consulte o tópico [ampliando a hospedagem usando o ServiceHostFactory](../extending/extending-hosting-using-servicehostfactory.md) .  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Criando serviços do WCF para o AJAX ASP.NET](creating-wcf-services-for-aspnet-ajax.md)
-- [Como migrar serviços habilitados para AJAX ASP.NET para o WCF](how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)
+- [Como: migrar serviços Web habilitados para AJAX ASP.NET para o WCF](how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)

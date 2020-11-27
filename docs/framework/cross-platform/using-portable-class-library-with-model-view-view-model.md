@@ -8,14 +8,15 @@ helpviewer_keywords:
 - Portable Class Library [.NET Framework], and MVVM
 - MVVM, and Portable Class Library
 ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
-ms.openlocfilehash: 3ec8b8387abf0f0271bb9585d8487c98ee6a893f
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: e8bce469fd09de02ef6ab30e21ae20a9b9f71325
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687794"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96259265"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Usando a Biblioteca de Classes Portátil com Modelo MVVM
+
 Você pode usar a .NET Framework [biblioteca de classes portátil](portable-class-library.md) para implementar o padrão MVVM (Model-View-View Model) e compartilhar assemblies em várias plataformas.
 
 [!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
@@ -27,6 +28,7 @@ Você pode usar a .NET Framework [biblioteca de classes portátil](portable-clas
  Este tópico não fornece informações gerais sobre o padrão MVVM. Ele fornece apenas informações sobre como usar a biblioteca de classes portátil para implementar o MVVM. Para obter mais informações sobre o MVVM, consulte o [MVVM QuickStart usando a biblioteca Prism 5,0 para WPF](/previous-versions/msp-n-p/gg430857(v=pandp.40)).
 
 ## <a name="classes-that-support-mvvm"></a>Classes que dão suporte a MVVM
+
  Quando você direciona o .NET Framework 4,5, .NET para aplicativos da loja do Windows 8. x, Silverlight ou Windows Phone 7,5 para seu projeto de biblioteca de classes portátil, as seguintes classes estão disponíveis para implementar o padrão MVVM:
 
 - Classe <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType>
@@ -52,11 +54,13 @@ Você pode usar a .NET Framework [biblioteca de classes portátil](portable-clas
 - Todas as classes no <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType> namespace
 
 ## <a name="implementing-mvvm"></a>Implementando o MVVM
+
  Para implementar o MVVM, você normalmente cria o modelo e o modelo de exibição em um projeto de biblioteca de classes portátil, pois um projeto de biblioteca de classes portátil não pode fazer referência a um projeto não portátil. O modelo e o modelo de exibição podem estar no mesmo projeto ou em projetos separados. Se você usar projetos separados, adicione uma referência do projeto de modelo de exibição ao projeto de modelo.
 
  Depois de compilar o modelo e exibir projetos de modelo, você faz referência a esses assemblies no aplicativo que contém a exibição. Se a exibição interage apenas com o modelo de exibição, você só precisa referenciar o assembly que contém o modelo de exibição.
 
-### <a name="model"></a>Modelo
+### <a name="model"></a>Modelar
+
  O exemplo a seguir mostra uma classe de modelo simplificada que pode residir em um projeto de biblioteca de classes portátil.
 
  [!code-csharp[PortableClassLibraryMVVM#1](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customer.cs#1)]
@@ -68,6 +72,7 @@ Você pode usar a .NET Framework [biblioteca de classes portátil](portable-clas
  [!code-vb[PortableClassLibraryMVVM#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customerrepository.vb#2)]
 
 ### <a name="view-model"></a>Exibir modelo
+
  Uma classe base para modelos de exibição é frequentemente adicionada ao implementar o padrão MVVM. O exemplo a seguir mostra uma classe base.
 
  [!code-csharp[PortableClassLibraryMVVM#3](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/viewmodelbase.cs#3)]
@@ -84,6 +89,7 @@ Você pode usar a .NET Framework [biblioteca de classes portátil](portable-clas
  [!code-vb[PortableClassLibraryMVVM#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customerviewmodel.vb#5)]  
   
 ### <a name="view"></a>Visualizar  
+
  De um aplicativo .NET Framework 4,5, aplicativo da loja do Windows 8. x, aplicativo baseado no Silverlight ou Windows Phone aplicativo 7,5, você pode fazer referência ao assembly que contém os projetos modelo e exibir modelo.  Em seguida, você cria um modo de exibição que interage com o modelo de exibição. O exemplo a seguir mostra um aplicativo de Windows Presentation Foundation simplificado (WPF) que recupera e atualiza dados do modelo de exibição. Você pode criar exibições semelhantes nos aplicativos do Silverlight, Windows Phone ou Windows 8. x da loja.  
   
  [!code-xaml[PortableClassLibraryMVVM#6](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainwindow.xaml#6)]  

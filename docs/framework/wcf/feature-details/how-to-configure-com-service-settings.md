@@ -1,23 +1,25 @@
 ---
-title: Como configurar configurações de serviço de COM+
+title: 'Como: definir configurações de serviço de COM+'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-ms.openlocfilehash: 3fb4b31038845d223248e72d32b3e7413f2aef63
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b75f5c2a64b7184959e929439893b33193aa7bae
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597170"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257464"
 ---
-# <a name="how-to-configure-com-service-settings"></a>Como configurar configurações de serviço de COM+
-Quando uma interface de aplicativo é adicionada ou removida usando a ferramenta de configuração de serviço COM+, a configuração do serviço Web é atualizada no arquivo de configuração do aplicativo. No modo hospedado COM+, o arquivo Application. config é colocado no diretório raiz do aplicativo (%PROGRAMFILES%\ComPlus Applications \\ {AppID} é o padrão). Em qualquer um dos modos hospedados na Web, o arquivo Web. config é colocado no diretório vroot especificado.  
+# <a name="how-to-configure-com-service-settings"></a>Como: definir configurações de serviço de COM+
+
+Quando uma interface de aplicativo é adicionada ou removida usando a ferramenta de configuração de serviço COM+, a configuração do serviço Web é atualizada no arquivo de configuração do aplicativo. No modo hospedado do COM+, o arquivo de Application.config é colocado no diretório raiz do aplicativo (%PROGRAMFILES%\ComPlus Applications \\ {AppID} é o padrão). Em qualquer um dos modos hospedados na Web, o arquivo de Web.config é colocado no diretório vroot especificado.  
   
 > [!NOTE]
 > A assinatura de mensagens deve ser usada para proteger contra violação de mensagens entre um cliente e um servidor. Além disso, a criptografia da camada de transporte ou de mensagem deve ser usada para proteger contra a divulgação de informações de mensagens entre um cliente e um servidor. Assim como acontece com os serviços do Windows Communication Foundation (WCF), você deve usar a limitação para limitar o número de chamadas simultâneas, conexões, instâncias e operações pendentes. Isso ajuda a evitar o excesso de consumo de recursos. O comportamento de limitação é especificado por meio das configurações do arquivo de configuração de serviço.  
   
 ## <a name="example"></a>Exemplo  
+
  Considere um componente que implementa a seguinte interface:  
   
 ```csharp
@@ -96,6 +98,6 @@ public interface IFinancesContract : IDisposable
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Integração com aplicativos COM+](integrating-with-com-plus-applications.md)

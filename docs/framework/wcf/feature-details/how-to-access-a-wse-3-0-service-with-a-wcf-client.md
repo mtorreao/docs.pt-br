@@ -5,17 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
-ms.openlocfilehash: 847146c2025612689f0d69cc0c23d2be14018c0f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c955244c2e6821abda3a1fc5e25f00a73389ff1d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556831"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257763"
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>Como acessar um serviço WSE 3.0 com um cliente do WCF
-Os clientes do Windows Communication Foundation (WCF) são compatíveis de nível de conexão com o WSE (Web Services Enhancements) 3,0 para serviços Microsoft .NET quando os clientes WCF são configurados para usar a versão de agosto de 2004 da especificação WS-Addressing. No entanto, os serviços WSE 3,0 não dão suporte ao protocolo MEX (troca de metadados), portanto, quando você usa a [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) para criar uma classe de cliente WCF, as configurações de segurança não são aplicadas ao cliente WCF gerado. Portanto, você deve especificar as configurações de segurança que o serviço WSE 3,0 exige depois que o cliente WCF é gerado.  
+
+Os clientes do Windows Communication Foundation (WCF) são compatíveis de nível de conexão com o WSE (Web Services Enhancements) 3,0 para serviços de Microsoft .NET quando os clientes WCF são configurados para usar a versão de agosto de 2004 da especificação de WS-Addressing. No entanto, os serviços WSE 3,0 não dão suporte ao protocolo MEX (troca de metadados), portanto, quando você usa a [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) para criar uma classe de cliente WCF, as configurações de segurança não são aplicadas ao cliente WCF gerado. Portanto, você deve especificar as configurações de segurança que o serviço WSE 3,0 exige depois que o cliente WCF é gerado.  
   
- Você pode aplicar essas configurações de segurança usando uma associação personalizada para levar em conta os requisitos do serviço WSE 3,0 e os requisitos interoperáveis entre um serviço WSE 3,0 e um cliente WCF. Esses requisitos de interoperabilidade incluem o uso mencionado anteriormente da especificação WS-Addressing de agosto de 2004 e a proteção de mensagem padrão do WSE 3.0 do <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt> . A proteção de mensagem padrão para WCF é <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature> . Este tópico fornece detalhes sobre como criar uma associação WCF que interopera com um serviço WSE 3,0. O WCF também fornece um exemplo que incorpora essa associação. Para obter mais informações sobre este exemplo, consulte [interoperação com serviços Web ASMX](../samples/interoperating-with-asmx-web-services.md).  
+ Você pode aplicar essas configurações de segurança usando uma associação personalizada para levar em conta os requisitos do serviço WSE 3,0 e os requisitos interoperáveis entre um serviço WSE 3,0 e um cliente WCF. Esses requisitos de interoperabilidade incluem o uso mencionado anteriormente da especificação de WS-Addressing de agosto de 2004 e a proteção de mensagem padrão do WSE 3.0 do <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt> . A proteção de mensagem padrão para WCF é <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature> . Este tópico fornece detalhes sobre como criar uma associação WCF que interopera com um serviço WSE 3,0. O WCF também fornece um exemplo que incorpora essa associação. Para obter mais informações sobre este exemplo, consulte [interoperação com serviços Web ASMX](../samples/interoperating-with-asmx-web-services.md).  
   
 ### <a name="to-access-a-wse-30-web-service-with-a-wcf-client"></a>Para acessar um serviço Web WSE 3,0 com um cliente WCF  
   
@@ -58,9 +59,10 @@ Os clientes do Windows Communication Foundation (WCF) são compatíveis de níve
      [!code-vb[c_WCFClientToWSEService#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/client.vb#4)]  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo de código a seguir define uma associação personalizada que expõe propriedades que correspondem às propriedades de uma declaração de segurança do WSE 3,0 pronto para uso. Essa associação personalizada, que é nomeada `WseHttpBinding` , é usada para especificar as propriedades de associação para um cliente WCF que se comunica com o exemplo de início rápido do WSSECURITYANONYMOUS WSE 3,0.  
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.Channels.Binding>
 - [Interoperação com o WSE](/previous-versions/dotnet/netframework-3.5/ms752257(v=vs.90))

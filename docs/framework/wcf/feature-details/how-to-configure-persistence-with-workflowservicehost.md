@@ -2,14 +2,15 @@
 title: 'Como: configurar a persistência com WorkflowServiceHost'
 ms.date: 03/30/2017
 ms.assetid: e31cd4df-13a3-4a9a-9be8-5243e0055356
-ms.openlocfilehash: 93397923154d780ed3b714bf0bb95c15bc71bbfb
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3d8b7183b11c138b8da1f04d9084f8b94b7dcaa6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556304"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257334"
 ---
 # <a name="how-to-configure-persistence-with-workflowservicehost"></a>Como: configurar a persistência com WorkflowServiceHost
+
 Este tópico descreve como configurar o recurso de repositório de instância do fluxo de trabalho SQL para habilitar a persistência para fluxos de trabalho hospedados no <xref:System.ServiceModel.Activities.WorkflowServiceHost> usando um arquivo de configuração. Antes de usar o recurso de repositório de instância do fluxo de trabalho SQL, você deve criar um banco de dados SQL que é usado para manter instâncias de fluxo de trabalho. Para obter mais informações, consulte [como habilitar a persistência de SQL para fluxos de trabalho e serviços de fluxo de trabalho](../../windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md).  
   
 ### <a name="to-configure-the-sql-workflow-instance-store-in-configuration"></a>Para configurar o repositório de instância do fluxo de trabalho SQL na configuração  
@@ -59,7 +60,7 @@ Este tópico descreve como configurar o recurso de repositório de instância do
   
      Para obter um exemplo de como configurar a persistência programaticamente [, consulte Como habilitar a persistência para fluxos de trabalho e serviços de fluxo de trabalho](../../windows-workflow-foundation/how-to-enable-persistence-for-workflows-and-workflow-services.md).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Serviços de fluxo de trabalho](workflow-services.md)
 - [Persistência de fluxo de trabalho](../../windows-workflow-foundation/workflow-persistence.md)

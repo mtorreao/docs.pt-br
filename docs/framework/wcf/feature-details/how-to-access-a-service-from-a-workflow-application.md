@@ -2,14 +2,15 @@
 title: 'Como: acessar um serviço de um aplicativo de fluxo de trabalho'
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-ms.openlocfilehash: 7375dc4f9af2eb0209b83724cd2ac9b9619b56dd
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 13fae7dec3026e96e3c196467da29fe768a3655f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556870"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257926"
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>Como: acessar um serviço de um aplicativo de fluxo de trabalho
+
 Este tópico descreve como chamar um serviço de fluxo de trabalho de um aplicativo de console de fluxo de trabalho. Depende da conclusão do tópico [como: criar um serviço de fluxo de trabalho com atividades de mensagens](how-to-create-a-workflow-service-with-messaging-activities.md) . Embora este tópico descreva como chamar um serviço de fluxo de trabalho de um aplicativo de fluxo de trabalho, os mesmos métodos podem ser usados para chamar qualquer serviço de Windows Communication Foundation (WCF) de um aplicativo de fluxo de trabalho.
 
 ### <a name="create-a-workflow-console-application-project"></a>Criar um projeto de aplicativo do console de fluxo de trabalho
@@ -62,7 +63,7 @@ Este tópico descreve como chamar um serviço de fluxo de trabalho de um aplicat
 
 12. Pressione CTRL + F5 para iniciar o serviço e o cliente. O ASP.NET Development Server hospeda o serviço, o Internet Explorer exibe a página de ajuda do WCF e o aplicativo de fluxo de trabalho do cliente é iniciado em uma janela do console e exibe a cadeia de caracteres retornada do serviço ("Olá, mundo").
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Serviços de fluxo de trabalho](workflow-services.md)
 - [Como: criar um serviço de fluxo de trabalho com atividades de mensagens](how-to-create-a-workflow-service-with-messaging-activities.md)

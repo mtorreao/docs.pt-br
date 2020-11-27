@@ -3,14 +3,15 @@ title: Rastreamento ETW
 description: Este exemplo demonstra como implementar o rastreamento de ponta a ponta (E2E) usando o ETW (rastreamento de eventos para Windows) e o ETWTraceListener.
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: 6e7526ef05d672b550599e3b12a4b083e9130b96
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6777b2d14786f7a79b3605bec93b4da62ff24616
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547135"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96258472"
 ---
 # <a name="etw-tracing"></a>Rastreamento ETW
+
 Este exemplo demonstra como implementar o rastreamento de ponta a ponta (E2E) usando o ETW (rastreamento de eventos para Windows) e o `ETWTraceListener` que é fornecido com este exemplo. O exemplo é baseado na [introdução](getting-started-sample.md) e inclui o rastreamento ETW.  
   
 > [!NOTE]
@@ -107,6 +108,6 @@ logman stop Wcf
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\AnalyticTrace`  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [AppFabric que monitora Exemplos](/previous-versions/appfabric/ff383407(v=azure.10))

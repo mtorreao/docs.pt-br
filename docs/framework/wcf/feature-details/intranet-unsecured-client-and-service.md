@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-ms.openlocfilehash: 1edbfe2d0d25ea9f2145f879673fc9f0a6ee7f96
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f9cd297b479a07f2330eabbaaf81605a3874ec25
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547187"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257215"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>Cliente e serviço sem segurança na Intranet
+
 A ilustração a seguir descreve um serviço de Windows Communication Foundation simples (WCF) desenvolvido para fornecer informações sobre uma rede privada segura para um aplicativo WCF. A segurança não é necessária porque os dados são de baixa importância, a rede deve ser inerentemente segura ou a segurança é fornecida por uma camada abaixo da infraestrutura do WCF.  
   
  ![Cenário de cliente e serviço desprotegido da intranet.](./media/intranet-unsecured-client-and-service/unsecured-web-client-service.gif)  
@@ -28,19 +29,22 @@ A ilustração a seguir descreve um serviço de Windows Communication Foundation
 |Confidencialidade|Nenhum|  
   
 ## <a name="service"></a>Serviço  
- O código e a configuração a seguir devem ser executados de forma independente. Realize um dos seguintes procedimentos:  
+
+ O código e a configuração a seguir devem ser executados de forma independente. Realize uma destas ações:  
   
 - Crie um serviço autônomo usando o código sem configuração.  
   
 - Crie um serviço usando a configuração fornecida, mas não defina nenhum ponto de extremidade.  
   
 ### <a name="code"></a>Código  
+
  O código a seguir mostra como criar um ponto de extremidade sem segurança:  
   
  [!code-csharp[C_UnsecuredService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredservice/cs/source.cs#2)]
  [!code-vb[C_UnsecuredService#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredservice/vb/source.vb#2)]  
   
 ### <a name="configuration"></a>Configuração  
+
  O código a seguir configura o mesmo ponto de extremidade usando a configuração:  
   
 ```xml  
@@ -71,7 +75,8 @@ A ilustração a seguir descreve um serviço de Windows Communication Foundation
 ```  
   
 ## <a name="client"></a>Cliente  
- O código e a configuração a seguir devem ser executados de forma independente. Realize um dos seguintes procedimentos:  
+
+ O código e a configuração a seguir devem ser executados de forma independente. Realize uma destas ações:  
   
 - Crie um cliente autônomo usando o código (e o código do cliente).  
   
@@ -81,12 +86,14 @@ A ilustração a seguir descreve um serviço de Windows Communication Foundation
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Código  
+
  O código a seguir mostra um cliente WCF básico que acessa um ponto de extremidade desprotegido usando o protocolo TCP.  
   
  [!code-csharp[C_UnsecuredClient#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#2)]
  [!code-vb[C_UnsecuredClient#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#2)]  
   
 ### <a name="configuration"></a>Configuração  
+
  O código de configuração a seguir se aplica ao cliente:  
   
 ```xml  
@@ -112,7 +119,7 @@ A ilustração a seguir descreve um serviço de Windows Communication Foundation
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.NetTcpBinding>
 - [Visão geral de segurança](security-overview.md)
