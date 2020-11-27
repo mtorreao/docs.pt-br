@@ -131,21 +131,37 @@ items:
                 displayName: 'tutorials, visual studio for mac, vs for mac'
           - name: Mais tutoriais
             href: ../core/tutorials/index.md
-  - name: Novidades
+  - name: Novidades do .NET
     items:
-      - name: Novidades do .NET 5.0
-        href: ../core/dotnet-five.md
-      - name: Novidades do .NET Core 3.1
-        href: ../core/whats-new/dotnet-core-3-1.md
-      - name: Novidades do .NET Core 3.0
-        href: ../core/whats-new/dotnet-core-3-0.md
-      - name: Novidades do .NET Core 2.2
+      - name: .NET 5.0
+        items:
+          - name: O que há de novo
+            href: ../core/dotnet-five.md
+          - name: Alterações da falha
+            href: ../core/compatibility/5.0.md
+      - name: .NET Core 3.1
+        items:
+          - name: O que há de novo
+            href: ../core/whats-new/dotnet-core-3-1.md
+          - name: Alterações da falha
+            href: ../core/compatibility/3.1.md?toc=/dotnet/fundamentals/toc.json&bc=/dotnet/breadcrumb/toc.json
+      - name: .NET Core 3.0
+        items:
+          - name: O que há de novo
+            href: ../core/whats-new/dotnet-core-3-0.md
+          - name: Alterações da falha
+            href: ../core/compatibility/3.0.md?toc=/dotnet/fundamentals/toc.json&bc=/dotnet/breadcrumb/toc.json
+      - name: .NET Core 2.2
         href: ../core/whats-new/dotnet-core-2-2.md
-      - name: Novidades do .NET Core 2.1
-        href: ../core/whats-new/dotnet-core-2-1.md
-      - name: Novidades do .NET Core 2.0
+      - name: .NET Core 2.1
+        items:
+          - name: O que há de novo
+            href: ../core/whats-new/dotnet-core-2-1.md
+          - name: Alterações da falha
+            href: ../core/compatibility/2.1.md?toc=/dotnet/fundamentals/toc.json&bc=/dotnet/breadcrumb/toc.json
+      - name: .NET Core 2.0
         href: ../core/whats-new/dotnet-core-2-0.md
-      - name: Novidades no .NET Standard
+      - name: .NET Standard
         href: ../standard/whats-new/whats-new-in-dotnet-standard.md
   - name: Ferramentas e diagnóstico
     items:
@@ -317,9 +333,9 @@ items:
                   - name: Microsoft.NET.Sdk
                     href: ../core/project-sdk/msbuild-props.md
                   - name: Microsoft.NET.Sdk.Web
-                    href: /aspnet/core/razor-pages/web-sdk?toc=/dotnet/core/toc.json&bc=/dotnet/breadcrumb/toc.json
+                    href: /aspnet/core/razor-pages/web-sdk?toc=/dotnet/fundamentals/toc.json&bc=/dotnet/breadcrumb/toc.json
                   - name: Microsoft.NET.Sdk.Razor
-                    href: /aspnet/core/razor-pages/sdk?toc=/dotnet/core/toc.json&bc=/dotnet/breadcrumb/toc.json
+                    href: /aspnet/core/razor-pages/sdk?toc=/dotnet/fundamentals/toc.json&bc=/dotnet/breadcrumb/toc.json
           - name: Frameworks de destino
             href: ../standard/frameworks.md
           - name: Adições ao formato csproj
