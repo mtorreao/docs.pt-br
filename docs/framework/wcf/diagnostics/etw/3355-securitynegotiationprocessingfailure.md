@@ -2,27 +2,30 @@
 title: 3355 - SecurityNegotiationProcessingFailure
 ms.date: 03/30/2017
 ms.assetid: 504f85f0-d11d-4de0-a0ab-ea580a476d18
-ms.openlocfilehash: e03405558045b355dc900a967cda2acb3d2c2854
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8e7156ecf2f25b4736873a69ac8e3ed6a249bb19
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962208"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96282574"
 ---
 # <a name="3355---securitynegotiationprocessingfailure"></a>3355 - SecurityNegotiationProcessingFailure
+
 ## <a name="properties"></a>Propriedades  
   
 |||  
 |-|-|  
 |ID|3355|  
 |Palavras-chave|Segurança|  
-|Nível|Erro|  
+|Nível|Erro do|  
 |Canal|Os aplicativos de servidor de Microsoft-Windows- aplicativo/analítico|  
   
 ## <a name="description"></a>Descrição  
- Esse evento é emitido quando o processamento de negociação de segurança falhou.  
+
+ Esse evento é emitido quando o processamento da negociação de segurança falha.  
   
 ## <a name="message"></a>Mensagem  
- Falha no processamento de negociação de segurança.  
+
+ Falha no processamento da negociação de segurança.  
   
 ## <a name="details"></a>Detalhes

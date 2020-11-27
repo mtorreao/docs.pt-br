@@ -2,14 +2,15 @@
 title: 'Como: usar o provedor de função do gerenciador de autorização ASP.NET com um serviço'
 ms.date: 03/30/2017
 ms.assetid: f21deb81-91ef-49ef-94d6-494785143271
-ms.openlocfilehash: 4a92c9db000b703f4fdab7c34e5359de74b0228d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: bbdafdd96a32b41d7c6892944ed872e3f8702f0e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545598"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280592"
 ---
 # <a name="how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service"></a>Como: usar o provedor de função do gerenciador de autorização ASP.NET com um serviço
+
 Quando o ASP.NET hospeda um serviço Web, você pode integrar o Gerenciador de autorização ao aplicativo para fornecer autorização ao serviço. O Gerenciador de autorização permite que um desenvolvedor de aplicativo defina operações individuais, que podem ser agrupadas para tarefas de formulário. Um administrador pode então autorizar funções para executar tarefas específicas ou operações individuais. O Gerenciador de autorização fornece uma ferramenta de administração como um snap-in do MMC (console de gerenciamento Microsoft) para gerenciar funções, tarefas, operações e usuários. Os administradores configuram um repositório de políticas do Gerenciador de autorização em um arquivo XML, Active Directory ou em um repositório do ADAM (Active Directory Application Mode).  
   
  O Gerenciador de autorização é integrado ao aplicativo Configurando o provedor de função ASP.NET do Gerenciador de autorização para o aplicativo ASP.NET que está hospedando o serviço Web. Assim como outros provedores de função ASP.NET, o provedor de função ASP.NET do Gerenciador de autorização é configurado usando o `providers` elemento <>.  
@@ -31,6 +32,6 @@ Quando o ASP.NET hospeda um serviço Web, você pode integrar o Gerenciador de a
   
  Para obter mais informações sobre como integrar um provedor de função ASP.NET a um aplicativo WCF, consulte [como: usar o provedor de função ASP.NET com um serviço](how-to-use-the-aspnet-role-provider-with-a-service.md). Para obter mais informações sobre como usar o Gerenciador de autorização com ASP.NET, consulte [como: usar o Gerenciador de autorização (AzMan) com o ASP.NET 2,0](/previous-versions/msp-n-p/ff649313(v=pandp.10)).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Como: usar o provedor de função do ASP.NET com um serviço](how-to-use-the-aspnet-role-provider-with-a-service.md)

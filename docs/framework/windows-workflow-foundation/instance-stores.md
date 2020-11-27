@@ -2,14 +2,15 @@
 title: Armazenamentos de instância
 ms.date: 03/30/2017
 ms.assetid: f2629668-0923-4987-b943-67477131c1e0
-ms.openlocfilehash: 26e0c28fe3061306a00e75b0498ef0781b7013c6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0e3cc0c6c635d9c42b4242581ce039b186116113
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555790"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279864"
 ---
 # <a name="instance-stores"></a>Armazenamentos de instância
+
 Um armazenamento de instância é um contêiner lógico instâncias. É o local onde os dados e os metadados de instância são armazenados. Um armazenamento de instância não implica o armazenamento físico dedicado. Um armazenamento de instância pode conter informações durável em uma base de dados SQL Server ou em uma informações de estado não durável na memória. Os vem de [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] com a instância Store de fluxo de trabalho SQL, que é uma implementação concreta de um armazenamento de instância que permite que os fluxos de trabalho persistam dados e metadados de instância em uma base de dados SQL Server 2005 ou SQL Server 2008. Além a tela de aplicativo Windows Server também fornece uma implementação concreta de um armazenamento de instância. Para obter mais informações, consulte [provedores de armazenamento, consulta e controle de instância do Windows Server app Fabric](/previous-versions/appfabric/ff383417(v=azure.10)).  
   
  Persistência API é a interface entre um host e um armazenamento de instância que permite que o host enviar solicitações de comando (por exemplo, <xref:System.Activities.DurableInstancing.LoadWorkflowCommand> e <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>) para o armazenamento de instância. A implementação concreta deste API é chamado um provedor de persistência. O provedor de persistência recebe solicitações de um host e altera o armazenamento de instância.  

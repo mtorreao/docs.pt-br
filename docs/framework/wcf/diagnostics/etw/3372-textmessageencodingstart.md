@@ -2,14 +2,15 @@
 title: 3372 - TextMessageEncodingStart
 ms.date: 03/30/2017
 ms.assetid: c57e3fe3-b12d-415e-925e-b09590722d0c
-ms.openlocfilehash: 4a70255ae3d0d9a50ffe7303f0883f2de3dc8681
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6b6bf2e4a1676f9bf6eb0b48363b0748c2ca5a80
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61964600"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96282373"
 ---
 # <a name="3372---textmessageencodingstart"></a>3372 - TextMessageEncodingStart
+
 ## <a name="properties"></a>Propriedades  
   
 |||  
@@ -20,9 +21,11 @@ ms.locfileid: "61964600"
 |Canal|Os aplicativos de servidor de Microsoft-Windows- aplicativo/depuração|  
   
 ## <a name="description"></a>Descrição  
- Esse evento é emitido quando o TextMessageEncoder zahájil kódování zprávy.  
+
+ Esse evento é emitido quando o TextMessageEncoder iniciou a codificação da mensagem.  
   
 ## <a name="message"></a>Mensagem  
- Kodér TextMessageEncoder zahájil kódování zprávy.  
+
+ TextMessageEncoder iniciou a codificação da mensagem.  
   
 ## <a name="details"></a>Detalhes

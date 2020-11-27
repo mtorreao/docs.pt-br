@@ -2,17 +2,19 @@
 title: Arquitetura de ativação do WAS
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: 77cebede5827016c5c9660663c0491614ba0ef19
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 46f9f9b0e951d363200cf41b5119b13ca921a3b5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545976"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96281632"
 ---
 # <a name="was-activation-architecture"></a>Arquitetura de ativação do WAS
+
 Este tópico relaciona e discute os componentes do serviço de ativação de processos do Windows (também conhecido como WAS).  
   
 ## <a name="activation-components"></a>Componentes de ativação  
+
  O foi composto por vários componentes de arquitetura:  
   
 - Adaptadores de escuta. Os serviços do Windows que recebem mensagens em protocolos de rede específicos e se comunicam com o WAS para rotear mensagens de entrada para o processo de trabalho correto.  
@@ -30,6 +32,7 @@ Este tópico relaciona e discute os componentes do serviço de ativação de pro
  ![Captura de tela que mostra a arquitetura do WAS.](./media/was-activation-architecture/windows-process-application-service-architecture.gif)  
   
 ### <a name="listener-adapters"></a>Adaptadores de escuta  
+
  Os adaptadores de escuta são serviços individuais do Windows que implementam a lógica de comunicação de rede usada para receber mensagens usando o protocolo de rede no qual elas escutam. A tabela a seguir lista os adaptadores de ouvinte para protocolos Windows Communication Foundation (WCF).  
   
 |Nome do serviço do adaptador de ouvinte|Protocolo|Observações|  
@@ -59,6 +62,7 @@ Este tópico relaciona e discute os componentes do serviço de ativação de pro
 ```  
   
 ### <a name="protocol-handlers"></a>Manipuladores de protocolo  
+
  Os manipuladores de protocolo de processo e AppDomain para protocolos específicos são registrados no arquivo de Web.config no nível da máquina.  
   
 ```xml  
@@ -85,7 +89,7 @@ Este tópico relaciona e discute os componentes do serviço de ativação de pro
 </system.web>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Configurar o WAS para uso com o WCF](configuring-the-wpa--service-for-use-with-wcf.md)
 - [Recursos de hospedagem do Windows Server AppFabric](/previous-versions/appfabric/ee677189(v=azure.10))

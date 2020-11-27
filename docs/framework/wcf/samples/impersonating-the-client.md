@@ -6,14 +6,15 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: b5272d8b4dbac60e14fe87accbb08a2073ed65ab
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bc4ff2d4b53b679266978ae5ffdea97e4606a351
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594628"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96281892"
 ---
 # <a name="impersonating-the-client"></a>Representando o cliente
+
 O exemplo de representação demonstra como representar o aplicativo chamador no serviço para que o serviço possa acessar recursos do sistema em nome do chamador.  
   
  Este exemplo é baseado no exemplo de [hospedagem interna](self-host.md) . Os arquivos de configuração do serviço e do cliente são os mesmos do exemplo de [hospedagem interna](self-host.md) .  
@@ -102,10 +103,10 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  Quando você executa o exemplo, as solicitações e respostas da operação são exibidas nas janelas do console do cliente e do serviço. Pressione ENTER em cada janela do console para desligar o serviço e o cliente.  
   
 > [!NOTE]
-> O serviço deve ser executado em uma conta administrativa ou a conta em que ele é executado deve receber direitos para registrar o `http://localhost:8000/ServiceModelSamples` URI com a camada http. Esses direitos podem ser concedidos Configurando uma [reserva de namespace](/windows/win32/http/namespace-reservations-registrations-and-routing) usando a [ferramenta Httpcfg. exe](/windows/win32/http/httpcfg-exe).  
+> O serviço deve ser executado em uma conta administrativa ou a conta em que ele é executado deve receber direitos para registrar o `http://localhost:8000/ServiceModelSamples` URI com a camada http. Esses direitos podem ser concedidos Configurando uma [reserva de namespace](/windows/win32/http/namespace-reservations-registrations-and-routing) usando a [ ferramentaHttpcfg.exe](/windows/win32/http/httpcfg-exe).  
   
 > [!NOTE]
-> Em computadores que executam o Windows Server 2003, haverá suporte para a representação apenas se o aplicativo host. exe tiver o privilégio de representação. (Por padrão, somente os administradores têm essa permissão.) Para adicionar esse privilégio a uma conta em que o serviço está sendo executado, vá para **Ferramentas administrativas**, abra **política de segurança local**, abra **políticas locais**, clique em **atribuição de direitos de usuário**e selecione **representar um cliente após a autenticação** e clique duas vezes em **Propriedades** para adicionar um usuário ou grupo.  
+> Em computadores que executam o Windows Server 2003, haverá suporte para a representação apenas se o aplicativo Host.exe tiver o privilégio de representação. (Por padrão, somente os administradores têm essa permissão.) Para adicionar esse privilégio a uma conta em que o serviço está sendo executado, vá para **Ferramentas administrativas**, abra **política de segurança local**, abra **políticas locais**, clique em **atribuição de direitos de usuário** e selecione **representar um cliente após a autenticação** e clique duas vezes em **Propriedades** para adicionar um usuário ou grupo.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
