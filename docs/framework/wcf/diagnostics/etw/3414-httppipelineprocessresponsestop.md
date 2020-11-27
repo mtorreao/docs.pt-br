@@ -2,14 +2,15 @@
 title: 3414 - HttpPipelineProcessResponseStop
 ms.date: 03/30/2017
 ms.assetid: 71ebd2ee-aedd-47ef-9a2b-00f778f7e225
-ms.openlocfilehash: eac4aa81a796bd02e4faaae14b01358a4d651d64
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f0f9a7049be3f1d043fc456a07d65f866e1bb4e7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61683725"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263965"
 ---
 # <a name="3414---httppipelineprocessresponsestop"></a>3414 - HttpPipelineProcessResponseStop
+
 ## <a name="properties"></a>Propriedades  
   
 |||  
@@ -20,9 +21,11 @@ ms.locfileid: "61683725"
 |Canal|Os aplicativos de servidor de Microsoft-Windows- aplicativo/depuração|  
   
 ## <a name="description"></a>Descrição  
- Esse evento é emitido quando o manipulador de mensagens Http conclui o processamento da resposta.  
+
+ Esse evento é emitido quando o manipulador de mensagens http conclui o processamento da resposta.  
   
 ## <a name="message"></a>Mensagem  
- Manipulador de mensagens HTTP conclui o processamento de resposta.  
+
+ O manipulador de mensagens http concluiu o processamento da resposta.  
   
 ## <a name="details"></a>Detalhes

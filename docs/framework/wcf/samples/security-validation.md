@@ -2,20 +2,22 @@
 title: Validação de segurança
 ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
-ms.openlocfilehash: ec7b7f96c1f6489f677970164f74c176b301f55b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1260aaa756e7be33ce2aa1bcce5fc79be553c990
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557379"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262613"
 ---
 # <a name="security-validation"></a>Validação de segurança
+
 Este exemplo demonstra como usar um comportamento personalizado para validar serviços em um computador para garantir que eles atendam a critérios específicos. Neste exemplo, os serviços são validados pelo comportamento personalizado examinando cada ponto de extremidade no serviço e verificando se eles contêm elementos de associação seguros. Este exemplo é baseado na [introdução](getting-started-sample.md).  
   
 > [!NOTE]
 > O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
 ## <a name="endpoint-validation-custom-behavior"></a>Comportamento personalizado de validação do ponto de extremidade  
+
  Ao adicionar o código de usuário ao `Validate` método contido na <xref:System.ServiceModel.Description.IServiceBehavior> interface, o comportamento personalizado pode ser dado a um serviço ou ponto de extremidade para executar ações definidas pelo usuário. O código a seguir é usado para executar um loop por meio de cada ponto de extremidade contido em um serviço, que pesquisa suas coleções de associação para associações seguras.  
   
 ```csharp
@@ -107,6 +109,6 @@ public void Validate(ServiceDescription serviceDescription,
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ServiceValidation`  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [AppFabric que monitora Exemplos](/previous-versions/appfabric/ff383407(v=azure.10))

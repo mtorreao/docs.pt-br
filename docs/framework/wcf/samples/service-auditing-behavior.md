@@ -2,14 +2,15 @@
 title: Comportamento de auditoria de serviço
 ms.date: 03/30/2017
 ms.assetid: 59bf0cda-e496-4418-a3a1-2f0f6e85f8ce
-ms.openlocfilehash: bfe13146a7f7cdec648a82a34c34077ec5466809
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ae7ed2059b491a71de9c806e78f1fb784da197fa
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599926"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262561"
 ---
 # <a name="service-auditing-behavior"></a>Comportamento de auditoria de serviço
+
 Este exemplo demonstra como usar o <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> para habilitar a auditoria de eventos de segurança durante operações de serviço. Este exemplo é baseado na [introdução](getting-started-sample.md). O serviço e o cliente foram configurados usando o [\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md) . O `mode` atributo de [\<security>](../../configure-apps/file-schema/wcf/security-of-custombinding.md) foi definido como e foi `Message` `clientCredentialType` definido como `Windows` . Neste exemplo, o cliente é um aplicativo de console (. exe) e o serviço é hospedado pelo Serviços de Informações da Internet (IIS).  
   
 > [!NOTE]
@@ -50,7 +51,7 @@ Este exemplo demonstra como usar o <xref:System.ServiceModel.Description.Service
   
 3. Para executar o exemplo em uma configuração de computador único ou entre computadores, siga as instruções em [executando os exemplos de Windows Communication Foundation](running-the-samples.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Auditoria](../feature-details/auditing-security-events.md)
-- [Como fazer auditoria de eventos de segurança](../feature-details/how-to-audit-wcf-security-events.md)
+- [Como: auditar eventos de segurança](../feature-details/how-to-audit-wcf-security-events.md)

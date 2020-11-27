@@ -2,14 +2,15 @@
 title: Rota por corpo
 ms.date: 03/30/2017
 ms.assetid: 07a6fc3b-c360-42e0-b663-3d0f22cf4502
-ms.openlocfilehash: 146baf806f4922f5e3ddd92a762772786e61d443
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: af88d9938098c9aaa6b4b116c196e3b7f563a1e7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594589"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262691"
 ---
 # <a name="route-by-body"></a>Rota por corpo
+
 Este exemplo demonstra como implementar um serviço que aceita objetos de mensagem com qualquer ação SOAP. Este exemplo é baseado no [introdução](getting-started-sample.md) que implementa um serviço de calculadora. O serviço implementa uma única `Calculate` operação que aceita um <xref:System.ServiceModel.Channels.Message> parâmetro de solicitação e retorna uma <xref:System.ServiceModel.Channels.Message> resposta.  
   
  Neste exemplo, o cliente é um aplicativo de console (. exe) e o serviço é hospedado no IIS.  
@@ -35,9 +36,9 @@ Este exemplo demonstra como implementar um serviço que aceita objetos de mensag
     }  
 ```  
   
- Dado um contrato, um serviço requer comportamento de expedição personalizado `DispatchByBodyBehavior` para permitir que as mensagens sejam expedidas entre as operações. Esse comportamento de expedição Inicializa o `DispatchByBodyElementOperationSelector` seletor de operação personalizada com uma tabela dos nomes de operação com chave por QName dos respectivos elementos de wrapper. `DispatchByBodyElementOperationSelector`examina a marca de início do primeiro filho do corpo e seleciona a operação usando a tabela mencionada anteriormente.  
+ Dado um contrato, um serviço requer comportamento de expedição personalizado `DispatchByBodyBehavior` para permitir que as mensagens sejam expedidas entre as operações. Esse comportamento de expedição Inicializa o `DispatchByBodyElementOperationSelector` seletor de operação personalizada com uma tabela dos nomes de operação com chave por QName dos respectivos elementos de wrapper. `DispatchByBodyElementOperationSelector` examina a marca de início do primeiro filho do corpo e seleciona a operação usando a tabela mencionada anteriormente.  
   
- O cliente usa um proxy gerado automaticamente do WSDL exportado pelo serviço usando a [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).  
+ O cliente usa um proxy gerado automaticamente do WSDL exportado pelo serviço usando a [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
 ```console  
 svcutil.exe  /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples /uxs http://localhost/servicemodelsamples/service.svc?wsdl /out:generatedProxy.cs  

@@ -2,14 +2,15 @@
 title: Provedor de função e associação
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: e532f35a2c4cd9f53006c088956eadff616d2005
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: fa2a813c2dc1a891119e922c86f045e7f2df7125
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543583"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264706"
 ---
 # <a name="membership-and-role-provider"></a>Provedor de função e associação
+
 O exemplo de provedor de associação e função demonstra como um serviço pode usar a associação ASP.NET e os provedores de função para autenticar e autorizar clientes.  
   
  Neste exemplo, o cliente é um aplicativo de console (. exe) e o serviço é hospedado pelo Serviços de Informações da Internet (IIS).  
@@ -144,7 +145,7 @@ O exemplo de provedor de associação e função demonstra como um serviço pode
   
 1. Crie um diretório no computador de serviço. Crie um aplicativo virtual chamado servicemodelsamples para esse diretório usando a ferramenta de gerenciamento do Serviços de Informações da Internet (IIS).  
   
-2. Copie os arquivos de programa do serviço do \inetpub\wwwroot\servicemodelsamples para o diretório virtual no computador do serviço. Certifique-se de copiar os arquivos no subdiretório \bin. Copie também os arquivos Setup.bat, GetComputerName. vbs e Cleanup.bat para o computador de serviço.  
+2. Copie os arquivos de programa do serviço do \inetpub\wwwroot\servicemodelsamples para o diretório virtual no computador do serviço. Certifique-se de copiar os arquivos no subdiretório \bin. Copie também os arquivos Setup.bat, GetComputerName.vbs e Cleanup.bat para o computador de serviço.  
   
 3. Crie um diretório no computador cliente para os binários do cliente.  
   
@@ -170,6 +171,7 @@ O exemplo de provedor de associação e função demonstra como um serviço pode
 > Esse script não remove certificados de serviço em um cliente ao executar esse exemplo em computadores. Se você tiver executado Windows Communication Foundation (WCF) exemplos que usam certificados entre computadores, certifique-se de limpar os certificados de serviço que foram instalados no repositório CurrentUser-TrustedPeople. Para fazer isso, use o seguinte comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` por exemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com` .  
   
 ## <a name="the-setup-batch-file"></a>O arquivo em lotes de instalação  
+
  O arquivo em lotes Setup.bat incluído com este exemplo permite que você configure o servidor com certificados relevantes para executar um aplicativo auto-hospedado que requer segurança baseada em certificado do servidor. Esse arquivo em lotes deve ser modificado para funcionar em computadores ou para funcionar em um caso não hospedado.  
   
  Veja a seguir uma breve visão geral das diferentes seções dos arquivos em lotes para que eles possam ser modificados para serem executados na configuração apropriada.  

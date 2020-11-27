@@ -2,17 +2,18 @@
 title: Provedor WMI
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 3fc982bcec563d5e4b90ba3b25989859d7d86281
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9d654527c6897e071f914d4015ba9a225974b0f1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552870"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263763"
 ---
 # <a name="wmi-provider"></a>Provedor WMI
+
 Este exemplo demonstra como coletar dados de serviços Windows Communication Foundation (WCF) em tempo de execução usando o provedor de Instrumentação de Gerenciamento do Windows (WMI) que é incorporado ao WCF. Além disso, este exemplo demonstra como adicionar um objeto WMI definido pelo usuário a um serviço. O exemplo ativa o provedor WMI para o [introdução](getting-started-sample.md) e demonstra como coletar dados do `ICalculator` serviço em tempo de execução.  
   
- O WMI é a implementação do padrão Web-Based Enterprise Management (WBEM) da Microsoft. Para obter mais informações sobre o SDK do WMI, consulte [Instrumentação de gerenciamento do Windows](/windows/desktop/WmiSdk/wmi-start-page). O WBEM é um padrão do setor para a forma como os aplicativos expõem a instrumentação de gerenciamento para ferramentas de gerenciamento externas.  
+ O WMI é a implementação da Microsoft do padrão Web-Based Enterprise Management (WBEM). Para obter mais informações sobre o SDK do WMI, consulte [Instrumentação de gerenciamento do Windows](/windows/desktop/WmiSdk/wmi-start-page). O WBEM é um padrão do setor para a forma como os aplicativos expõem a instrumentação de gerenciamento para ferramentas de gerenciamento externas.  
   
  O WCF implementa um provedor WMI, um componente que expõe a instrumentação em tempo de execução por meio de uma interface compatível com o WBEM. As ferramentas de gerenciamento podem se conectar aos serviços por meio da interface em tempo de execução. O WCF expõe atributos de serviços como endereços, associações, comportamentos e ouvintes.  
   
@@ -29,6 +30,7 @@ Este exemplo demonstra como coletar dados de serviços Windows Communication Fou
  Essa entrada de configuração expõe uma interface WMI. Os aplicativos de gerenciamento agora podem se conectar por meio dessa interface e acessar a instrumentação de gerenciamento do aplicativo.  
   
 ## <a name="custom-wmi-object"></a>Objeto WMI personalizado  
+
  Adicionar objetos WMI a um serviço torna possível revelar informações definidas pelo usuário juntamente com as informações internas do provedor WMI. Isso é feito por meio da publicação do esquema do serviço no WMI usando o aplicativo Installutil.exe. Instruções para fazer isso, juntamente com mais detalhes, podem ser encontradas nas instruções de instalação no final do tópico.  
   
 ## <a name="accessing-wmi-information"></a>Acessando informações do WMI  
@@ -144,6 +146,6 @@ cscript EnumerateCustomObjects.js
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\WMIProvider`  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [AppFabric que monitora Exemplos](/previous-versions/appfabric/ff383407(v=azure.10))

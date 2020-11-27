@@ -2,15 +2,16 @@
 title: Referências de objeto
 ms.date: 03/30/2017
 ms.assetid: 7a93d260-91c3-4448-8f7a-a66fb562fc23
-ms.openlocfilehash: ba4ee3fd0cc16130f66570891ecc295b2d2c50aa
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 55cadc908a3479ee3d104354bcbfd3ea49b15d07
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599978"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262366"
 ---
 # <a name="object-references"></a>Referências de objeto
-Este exemplo demonstra como passar objetos por referências entre servidor e cliente. O exemplo usa *redes sociais*simuladas. Uma rede social consiste em uma `Person` classe que contém uma lista de amigos em que cada amigo é uma instância da `Person` classe, com sua própria lista de amigos. Isso cria um grafo de objetos. O serviço expõe operações nessas redes sociais.  
+
+Este exemplo demonstra como passar objetos por referências entre servidor e cliente. O exemplo usa *redes sociais* simuladas. Uma rede social consiste em uma `Person` classe que contém uma lista de amigos em que cada amigo é uma instância da `Person` classe, com sua própria lista de amigos. Isso cria um grafo de objetos. O serviço expõe operações nessas redes sociais.  
   
  Neste exemplo, o serviço é hospedado pelo Serviços de Informações da Internet (IIS) e o cliente é um aplicativo de console (. exe).  
   
@@ -18,6 +19,7 @@ Este exemplo demonstra como passar objetos por referências entre servidor e cli
 > O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
 ## <a name="service"></a>Serviço  
+
  A `Person` classe tem o <xref:System.Runtime.Serialization.DataContractAttribute> atributo aplicado, com o <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> campo definido como `true` para declará-lo como um tipo de referência. Todas as propriedades têm o <xref:System.Runtime.Serialization.DataMemberAttribute> atributo aplicado.  
   
 ```csharp
@@ -92,6 +94,7 @@ public List<Person> GetCommonFriends(List<Person> people)
 ```  
   
 ## <a name="client"></a>Cliente  
+
  O proxy do cliente é criado usando o recurso **Adicionar referência de serviço** do Visual Studio.  
   
  Uma rede social que consiste em cinco `Person` objetos é criada. O cliente chama cada um dos três métodos no serviço.  
@@ -113,7 +116,7 @@ public List<Person> GetCommonFriends(List<Person> people)
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\ObjectReferences`  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>
 - [Referências de objeto de interoperabilidade](../feature-details/interoperable-object-references.md)

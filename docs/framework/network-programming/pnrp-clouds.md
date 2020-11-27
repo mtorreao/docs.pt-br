@@ -2,14 +2,15 @@
 title: Nuvens PNRP
 ms.date: 03/30/2017
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
-ms.openlocfilehash: dd27e61fe1f648dcaf4ee4dd5f5119d33913c63a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 60b6fb44116fe2d8af50fb0b310615b3b962977b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047368"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263198"
 ---
 # <a name="pnrp-clouds"></a>Nuvens PNRP
+
 A "nuvem" PNRP representa um conjunto de nós que podem se comunicar entre si através da rede. O termo "nuvem" é sinônimo de "malha ponto a ponto" e "grafo ponto a ponto".  
   
  A comunicação entre nós nunca deve cruzar de uma nuvem para outra. Uma instância <xref:System.Net.PeerToPeer.Cloud> é identificada exclusivamente pelo seu nome, que diferencia maiúsculas de minúsculas. Um único par ou nó pode estar conectado a mais de uma nuvem.  
@@ -25,13 +26,14 @@ A "nuvem" PNRP representa um conjunto de nós que podem se comunicar entre si at
  Uma terceira nuvem, a nuvem específica do site, corresponde ao escopo de endereço IPv6 do site e a endereços de site local. Essa nuvem foi preterida, embora ela ainda tenha suporte em PNRP.  
   
 ## <a name="clouds"></a>Nuvens  
+
  Nuvens PNRP são representados por instâncias da classe <xref:System.Net.PeerToPeer.Cloud>. Grupos de nuvens usadas por um par são representados por instâncias da classe enumerável <xref:System.Net.PeerToPeer.CloudCollection>. Coleções de nuvens PNRP conhecidas para o par atual podem ser obtidas chamando o método estático <xref:System.Net.PeerToPeer.Cloud.GetAvailableClouds%2A>.  
   
  Nuvens individuais têm nomes exclusivos, representados como uma cadeia de caracteres Unicode de 256 caracteres. Esses nomes, junto com o escopo mencionado acima, são usados para construir instâncias exclusivas de classe Cloud. Essas instâncias podem ser serializadas e reconstruídas para uso persistente.  
   
  Depois que uma instância de nuvem é criada ou obtida, nomes de par podem ser registrados com ele para criar uma malha de pares conhecidos.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Net.PeerToPeer.Cloud>
 - [Protocolo PNRP](peer-name-resolution-protocol.md)

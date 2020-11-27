@@ -2,14 +2,15 @@
 title: Descrição do Serviço
 ms.date: 03/30/2017
 ms.assetid: 7034b5d6-d608-45f3-b57d-ec135f83ff24
-ms.openlocfilehash: 467d8437ec6b3383974b1faf2a96aacb1524771a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c0fa389e9c894bcfec49ce7538b512c96f176c23
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596572"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262574"
 ---
 # <a name="service-description"></a>Descrição do Serviço
+
 O exemplo de descrição de serviço demonstra como um serviço pode recuperar suas informações de descrição de serviço em tempo de execução. O exemplo é baseado na [introdução](getting-started-sample.md), com uma operação de serviço adicional definida para retornar informações descritivas sobre o serviço. As informações retornadas listam os endereços base e os pontos de extremidade do serviço. O serviço fornece essas informações usando as <xref:System.ServiceModel.OperationContext> <xref:System.ServiceModel.ServiceHost> classes, e <xref:System.ServiceModel.Description.ServiceDescription> .  
   
  Neste exemplo, o cliente é um aplicativo de console (. exe) e o serviço é hospedado pelo Serviços de Informações da Internet (IIS).  

@@ -10,14 +10,15 @@ helpviewer_keywords:
 - reflection emit, dynamic methods
 - dynamic methods
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
-ms.openlocfilehash: d1ccf3d3ac966e35e1708f0639785a2760eb8287
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1ea15149ea72c3c422251abefb5a1008cc496f2c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559181"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263445"
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a>Como: Definir e executar métodos dinâmicos
+
 Os procedimentos a seguir mostram como definir e executar um método dinâmico simples e um método dinâmico ligado a uma instância de uma classe. Para obter mais informações sobre métodos dinâmicos, consulte a classe <xref:System.Reflection.Emit.DynamicMethod> e [Cenários de métodos dinâmicos para a emissão de reflexão](/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100)).  
   
 ### <a name="to-define-and-execute-a-dynamic-method"></a>Para definir e executar um método dinâmico  
@@ -101,6 +102,7 @@ Os procedimentos a seguir mostram como definir e executar um método dinâmico s
      [!code-vb[DynamicMethodHowTo#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#16)]  
   
 ## <a name="example"></a>Exemplo  
+
  O exemplo de código a seguir demonstra um método dinâmico simples e um método dinâmico associado a uma instância de uma classe.  
   
  O método dinâmico simples tem um argumento, um inteiro de 32 bits e retorna o quadrado de 64 bits desse inteiro. Um delegado genérico é usado para invocar o método.  
@@ -113,7 +115,7 @@ Os procedimentos a seguir mostram como definir e executar um método dinâmico s
  [!code-csharp[DynamicMethodHowTo#1](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#1)]
  [!code-vb[DynamicMethodHowTo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#1)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Reflection.Emit.DynamicMethod>
 - [Usando a emissão de reflexão](/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))

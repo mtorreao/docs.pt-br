@@ -2,14 +2,15 @@
 title: Autenticador de token
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: a493ea48d9d339c0bc1a4b191b084374ad5f2dc4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ab3f8486229416465d7eca0b9413475d81318d32
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548586"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264628"
 ---
 # <a name="token-authenticator"></a>Autenticador de token
+
 Este exemplo demonstra como implementar um autenticador de token personalizado. Um autenticador de token no Windows Communication Foundation (WCF) é usado para validar o token usado com a mensagem, verificar se ele é consistente e autenticar a identidade associada ao token.
 
  Os autenticadores de token personalizados são úteis em vários casos, como:
@@ -119,6 +120,7 @@ static void Main()
 ```
 
 ## <a name="custom-token-authenticator"></a>Autenticador de token personalizado
+
  Use as seguintes etapas para criar um autenticador de token personalizado:
 
 1. Escreva um autenticador de token personalizado.
@@ -293,6 +295,7 @@ static void DisplayIdentityInformation()
  Quando você executa o exemplo, as solicitações de operação e as respostas são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente.
 
 ## <a name="setup-batch-file"></a>Arquivo em lotes de instalação
+
  O arquivo em lotes Setup.bat incluído com este exemplo permite que você configure o servidor com certificados relevantes para executar um aplicativo auto-hospedado que requer segurança baseada em certificado do servidor. Esse arquivo em lotes deve ser modificado para funcionar em computadores ou para funcionar em um caso não hospedado.
 
  Veja a seguir uma breve visão geral das diferentes seções dos arquivos em lotes para que eles possam ser modificados para serem executados na configuração apropriada.
@@ -349,7 +352,7 @@ static void DisplayIdentityInformation()
   
 3. Você deve ter um certificado de servidor com o nome da entidade que contém o nome de domínio totalmente qualificado do computador. O arquivo de App.config de serviço deve ser atualizado para refletir esse novo nome de certificado. Você pode criar um usando o Setup.bat se definir a `%SERVER_NAME%` variável como nome de host totalmente qualificado do computador no qual o serviço será executado. Observe que o arquivo de setup.bat deve ser executado de um Prompt de Comando do Desenvolvedor para o Visual Studio aberto com privilégios de administrador.  
   
-4. Copie o certificado do servidor no repositório CurrentUser-TrustedPeople do cliente. Você não precisa fazer isso, exceto quando o certificado do servidor é emitido por um emissor confiável do cliente.  
+4. Copie o certificado do servidor no repositório de CurrentUser-TrustedPeople do cliente. Você não precisa fazer isso, exceto quando o certificado do servidor é emitido por um emissor confiável do cliente.  
   
 5. No arquivo de App.config no computador de serviço, altere o valor do endereço base para especificar um nome de computador totalmente qualificado em vez de localhost.  
   

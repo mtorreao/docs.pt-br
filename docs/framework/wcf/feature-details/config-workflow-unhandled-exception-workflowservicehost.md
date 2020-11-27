@@ -1,15 +1,16 @@
 ---
-title: Como configurar um comportamento de exceção não tratado de fluxo de trabalho com o WorkflowServiceHost
+title: 'Como: configurar um comportamento de exceção sem tratamento de fluxo de trabalho com WorkflowServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 51b25c86-292c-43e4-8d13-273d2badc8ad
-ms.openlocfilehash: 3881d1af21dcc0c211c6738162360e522648d949
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 93eb2f4493b70f54336a5d47957c6913239088e5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593588"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264849"
 ---
-# <a name="how-to-configure-workflow-unhandled-exception-behavior-with-workflowservicehost"></a>Como configurar um comportamento de exceção não tratado de fluxo de trabalho com o WorkflowServiceHost
+# <a name="how-to-configure-workflow-unhandled-exception-behavior-with-workflowservicehost"></a>Como: configurar um comportamento de exceção sem tratamento de fluxo de trabalho com WorkflowServiceHost
+
 O <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> é um comportamento que permite que você especifique a ação a ser tomada se uma exceção sem tratamento ocorrer em um fluxo de trabalho hospedado no <xref:System.ServiceModel.Activities.WorkflowServiceHost> . Este tópico mostra como configurar esse comportamento em um arquivo de configuração.  
   
 ### <a name="to-configure-workflowunhandledexceptionbehavior"></a>Para configurar o WorkflowUnhandledExceptionBehavior  
@@ -51,7 +52,7 @@ O <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBeh
   
      Para obter mais informações sobre o <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> , consulte [extensibilidade do host do serviço de fluxo de trabalho](workflow-service-host-extensibility.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Extensibilidade de host de serviço de fluxo de trabalho](workflow-service-host-extensibility.md)
+- [Extensibilidade de host de serviço do fluxo de trabalho](workflow-service-host-extensibility.md)
 - [Serviços de fluxo de trabalho](workflow-services.md)

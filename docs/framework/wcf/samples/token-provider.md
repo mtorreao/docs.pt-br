@@ -2,14 +2,15 @@
 title: Fornecedor de token
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
-ms.openlocfilehash: 442371d211fe55cab33a87a5cf1b660679d7f94a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e761f32ab26cf620b6ef1dddff2bcba53289af84
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548547"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262327"
 ---
 # <a name="token-provider"></a>Fornecedor de token
+
 Este exemplo demonstra como implementar um provedor de token personalizado. Um provedor de token no Windows Communication Foundation (WCF) é usado para fornecer credenciais para a infraestrutura de segurança. O provedor de token em geral examina o destino e emite as credenciais apropriadas para que a infraestrutura de segurança possa proteger a mensagem. O WCF é fornecido com o provedor de token padrão do Credential Manager. O WCF também é fornecido com um provedor de token do CardSpace. Os provedores de token personalizados são úteis nos seguintes casos:
 
 - Se você tiver um repositório de credenciais para o qual esses provedores de token não podem operar.
@@ -215,6 +216,7 @@ static void DisplayIdentityInformation()
  Quando você executa o exemplo, as solicitações de operação e as respostas são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente.
 
 ## <a name="setup-batch-file"></a>Arquivo em lotes de instalação
+
  O arquivo em lotes Setup.bat incluído com este exemplo permite que você configure o servidor com o certificado relevante para executar um aplicativo auto-hospedado que requer segurança baseada em certificado do servidor. Esse arquivo em lotes deve ser modificado para funcionar em computadores ou para funcionar em um caso não hospedado.
 
  Veja a seguir uma breve visão geral das diferentes seções dos arquivos em lotes para que eles possam ser modificados para serem executados na configuração apropriada:
@@ -275,7 +277,7 @@ static void DisplayIdentityInformation()
   
 3. Você deve ter um certificado de servidor com o nome da entidade que contém o nome de domínio totalmente qualificado do computador. O arquivo de Service.exe.config deve ser atualizado para refletir esse novo nome de certificado. Você pode criar um certificado do servidor modificando o arquivo em lotes Setup.bat. Observe que o arquivo de setup.bat deve ser executado de um Prompt de Comando do Desenvolvedor para o Visual Studio aberto com privilégios de administrador. Você deve definir a `%SERVER_NAME%` variável para o nome de host totalmente qualificado do computador que é usado para hospedar o serviço.  
   
-4. Copie o certificado do servidor no repositório CurrentUser-TrustedPeople do cliente. Você não precisa fazer isso quando o certificado do servidor é emitido por um emissor confiável do cliente.  
+4. Copie o certificado do servidor no repositório de CurrentUser-TrustedPeople do cliente. Você não precisa fazer isso quando o certificado do servidor é emitido por um emissor confiável do cliente.  
   
 5. No arquivo de Service.exe.config no computador de serviço, altere o valor do endereço base para especificar um nome de computador totalmente qualificado em vez de localhost.  
   

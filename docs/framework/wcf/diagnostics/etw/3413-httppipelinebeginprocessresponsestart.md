@@ -2,14 +2,15 @@
 title: 3413 - HttpPipelineBeginProcessResponseStart
 ms.date: 03/30/2017
 ms.assetid: 85c4d51b-f5b0-4bf4-86ce-6296115dc120
-ms.openlocfilehash: 2630e8e6212a3c7988a1de281cfac348f30bbcdc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1fc7288e232d11dbefbb35c756929385cae896c7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61764563"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263978"
 ---
 # <a name="3413---httppipelinebeginprocessresponsestart"></a>3413 - HttpPipelineBeginProcessResponseStart
+
 ## <a name="properties"></a>Propriedades  
   
 |||  
@@ -20,9 +21,11 @@ ms.locfileid: "61764563"
 |Canal|Os aplicativos de servidor de Microsoft-Windows- aplicativo/depuração|  
   
 ## <a name="description"></a>Descrição  
- Esse evento é emitido quando o manipulador de mensagens Http começou a processar a resposta de forma assíncrona.  
+
+ Esse evento é emitido quando o manipulador de mensagens http inicia o processamento da resposta de forma assíncrona.  
   
 ## <a name="message"></a>Mensagem  
- Manipulador de mensagens HTTP ao processar a resposta de forma assíncrona.  
+
+ O manipulador de mensagens http iniciou o processamento da resposta de forma assíncrona.  
   
 ## <a name="details"></a>Detalhes

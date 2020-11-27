@@ -2,14 +2,15 @@
 title: Fornecedor de token SAML
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 4e371d518d7ef25152aba83fa00d79893397b07f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 97c3c89a94882000c529bae77f1a4d707b242d7e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554417"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262652"
 ---
 # <a name="saml-token-provider"></a>Fornecedor de token SAML
+
 Este exemplo demonstra como implementar um provedor de token SAML de cliente personalizado. Um provedor de token no Windows Communication Foundation (WCF) é usado para fornecer credenciais para a infraestrutura de segurança. O provedor de token em geral examina o destino e emite as credenciais apropriadas para que a infraestrutura de segurança possa proteger a mensagem. O WCF é fornecido com o provedor de token padrão do Credential Manager. O WCF também é fornecido com um provedor de token do CardSpace. Os provedores de token personalizados são úteis nos seguintes casos:
 
 - Se você tiver um repositório de credenciais para o qual esses provedores de token não podem operar.
@@ -298,6 +299,7 @@ Este exemplo demonstra como implementar um provedor de token SAML de cliente per
  No serviço, as declarações associadas ao chamador são exibidas. Quando você executa o exemplo, as solicitações de operação e as respostas são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente.
 
 ## <a name="setup-batch-file"></a>Arquivo em lotes de instalação
+
  O arquivo em lotes Setup.bat incluído com este exemplo permite que você configure o servidor com o certificado relevante para executar um aplicativo auto-hospedado que requer segurança baseada em certificado do servidor. Esse arquivo em lotes deve ser modificado para funcionar em computadores ou para funcionar em um caso não hospedado.
 
  Veja a seguir uma breve visão geral das diferentes seções dos arquivos em lotes para que eles possam ser modificados para serem executados na configuração apropriada.
@@ -380,7 +382,7 @@ Este exemplo demonstra como implementar um provedor de token SAML de cliente per
   
 3. Você deve ter um certificado de servidor com o nome da entidade que contém o nome de domínio totalmente qualificado do computador. O arquivo de Service.exe.config deve ser atualizado para refletir esse novo nome de certificado. Você pode criar um certificado do servidor modificando o arquivo em lotes Setup.bat. Observe que o arquivo de setup.bat deve ser executado em um Prompt de Comando do Desenvolvedor para a janela do Visual Studio aberta com privilégios de administrador. Você deve definir a `%SERVER_NAME%` variável para o nome de host totalmente qualificado do computador que é usado para hospedar o serviço.  
   
-4. Copie o certificado do servidor no repositório CurrentUser-TrustedPeople do cliente. Essa etapa não é necessária quando o certificado do servidor é emitido por um emissor confiável do cliente.  
+4. Copie o certificado do servidor no repositório de CurrentUser-TrustedPeople do cliente. Essa etapa não é necessária quando o certificado do servidor é emitido por um emissor confiável do cliente.  
   
 5. No arquivo de Service.exe.config no computador de serviço, altere o valor do endereço base para especificar um nome de computador totalmente qualificado em vez de localhost.  
   

@@ -2,14 +2,15 @@
 title: Exemplo de identidade de serviço
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: e3365b8e17d847e6e1dc42062dc7fd5c1e4de80d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: cc8edcd7bfee73b99225c19f20df8df1e062b7bf
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558128"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262535"
 ---
 # <a name="service-identity-sample"></a>Exemplo de identidade de serviço
+
 Este exemplo de identidade de serviço demonstra como definir a identidade de um serviço. Em tempo de design, um cliente pode recuperar a identidade usando os metadados do serviço e, em seguida, em tempo de execução, o cliente pode autenticar a identidade do serviço. O conceito de identidade de serviço é permitir que um cliente autentique um serviço antes de chamar qualquer uma de suas operações, protegendo assim o cliente contra chamadas não autenticadas. Em uma conexão segura, o serviço também autentica as credenciais de um cliente antes de permitir o acesso, mas esse não é o foco deste exemplo. Consulte os exemplos no [cliente](client.md) que mostram a autenticação do servidor.
 
 > [!NOTE]

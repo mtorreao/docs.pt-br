@@ -2,14 +2,15 @@
 title: ConfigurationCodeGenerator
 ms.date: 03/30/2017
 ms.assetid: 3913aae8-165f-4014-9262-7fe426f90cb2
-ms.openlocfilehash: d64be95f71f840e08ede63e1c1f14ee08e52ce97
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b8496992c7b0694a07ac047ba8537c67fc363c02
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84592470"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264225"
 ---
 # <a name="configurationcodegenerator"></a>ConfigurationCodeGenerator
+
 O ConfigurationCodeGenerator é uma ferramenta que você pode usar para expor suas implementações de canal personalizadas para o sistema de configuração. Isso permite que os usuários do seu canal personalizado configurem seu canal usando um arquivo. config, assim como configurariam uma associação fornecida pelo sistema, como `NetTcpBinding` ou uma ligação personalizada usando o `TcpTransportBindingElement` .  
   
  Quando você escreve um canal personalizado e o expõe para o modelo de programação usando um novo `BindingElement` ou `Binding` , você deve criar um conjunto de classes para tornar o `BindingElement` ou `Binding` configurável usando um arquivo. config. Você pode usar a ferramenta ConfigurationCodeGenerator para gerar essas classes e aprimorar a experiência do cliente.  
@@ -18,7 +19,7 @@ O ConfigurationCodeGenerator é uma ferramenta que você pode usar para expor su
   
 1. Para compilar a solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](building-the-samples.md).  
   
-2. A criação da solução gera um arquivo: ConfigurationCodeGenerator. exe. O arquivo SampleRun. cmd tem uma linha de comando de exemplo que mostra como usar essa ferramenta para gerar as classes para o exemplo de [transporte: UDP](transport-udp.md) .  
+2. A criação da solução gera um arquivo: ConfigurationCodeGenerator.exe. O arquivo SampleRun. cmd tem uma linha de comando de exemplo que mostra como usar essa ferramenta para gerar as classes para o exemplo de [transporte: UDP](transport-udp.md) .  
   
 ### <a name="to-run-the-tool"></a>Para executar a ferramenta  
   
@@ -48,4 +49,4 @@ O ConfigurationCodeGenerator é uma ferramenta que você pode usar para expor su
   
          Se você especificou a opção/SB: o CodeToAddTo \<*YourStdBinding*> . cs tem código que você deve adicionar manualmente à classe que implementa sua associação padrão.  
   
-     O arquivo SampleConfig. xml contém o código de configuração que você deve adicionar ao arquivo de configuração que registra os manipuladores definidos na etapa 1 ou 2 anterior.  
+     O arquivo de SampleConfig.xml contém o código de configuração que você deve adicionar ao arquivo de configuração que registra os manipuladores definidos na etapa 1 ou 2 anterior.  
