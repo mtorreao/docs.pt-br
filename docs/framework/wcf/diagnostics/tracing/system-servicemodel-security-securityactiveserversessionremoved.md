@@ -2,21 +2,23 @@
 title: System.ServiceModel.Security.SecurityActiveServerSessionRemoved
 ms.date: 03/30/2017
 ms.assetid: f62789ea-d455-43f5-ab6c-21588184b528
-ms.openlocfilehash: 0e57f435fd12ca13bfdcd930a76db863e2a70903
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 40464c90322016191cfdff8ee07800fac60f60d7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587866"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276861"
 ---
-# <a name="systemservicemodelsecuritysecurityactiveserversessionremoved"></a><span data-ttu-id="ee319-102">System.ServiceModel.Security.SecurityActiveServerSessionRemoved</span><span class="sxs-lookup"><span data-stu-id="ee319-102">System.ServiceModel.Security.SecurityActiveServerSessionRemoved</span></span>
-<span data-ttu-id="ee319-103">System.ServiceModel.Security.SecurityActiveServerSessionRemoved</span><span class="sxs-lookup"><span data-stu-id="ee319-103">System.ServiceModel.Security.SecurityActiveServerSessionRemoved</span></span>  
-  
-## <a name="description"></a><span data-ttu-id="ee319-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="ee319-104">Description</span></span>  
- <span data-ttu-id="ee319-105">Uma sessão de segurança ativa foi removida pelo servidor.</span><span class="sxs-lookup"><span data-stu-id="ee319-105">An active security session was removed by the server.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="ee319-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ee319-106">See also</span></span>
+# <a name="systemservicemodelsecuritysecurityactiveserversessionremoved"></a><span data-ttu-id="8dc47-102">System.ServiceModel.Security.SecurityActiveServerSessionRemoved</span><span class="sxs-lookup"><span data-stu-id="8dc47-102">System.ServiceModel.Security.SecurityActiveServerSessionRemoved</span></span>
 
-- [<span data-ttu-id="ee319-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="ee319-107">Tracing</span></span>](index.md)
-- [<span data-ttu-id="ee319-108">Utilizando o rastreamento para solucionar problemas em seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="ee319-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="ee319-109">Administração e diagnóstico</span><span class="sxs-lookup"><span data-stu-id="ee319-109">Administration and Diagnostics</span></span>](../index.md)
+<span data-ttu-id="8dc47-103">System.ServiceModel.Security.SecurityActiveServerSessionRemoved</span><span class="sxs-lookup"><span data-stu-id="8dc47-103">System.ServiceModel.Security.SecurityActiveServerSessionRemoved</span></span>  
+  
+## <a name="description"></a><span data-ttu-id="8dc47-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="8dc47-104">Description</span></span>  
+
+ <span data-ttu-id="8dc47-105">Uma sessão de segurança ativa foi removida pelo servidor.</span><span class="sxs-lookup"><span data-stu-id="8dc47-105">An active security session was removed by the server.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="8dc47-106">Veja também</span><span class="sxs-lookup"><span data-stu-id="8dc47-106">See also</span></span>
+
+- [<span data-ttu-id="8dc47-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="8dc47-107">Tracing</span></span>](index.md)
+- [<span data-ttu-id="8dc47-108">Utilizando o rastreamento para solucionar problemas em seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="8dc47-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="8dc47-109">Administração e diagnóstico</span><span class="sxs-lookup"><span data-stu-id="8dc47-109">Administration and Diagnostics</span></span>](../index.md)
