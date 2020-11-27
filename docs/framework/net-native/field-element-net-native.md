@@ -2,14 +2,15 @@
 title: <Field> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: 6a14125f-1a8d-41a1-8a32-659ca0ad12de
-ms.openlocfilehash: 2a63b88c399a999cd00750dee1614352cea10e80
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e63dc293c42aa620b7f7ac15fc0454bc603b9dde
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128416"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251042"
 ---
 # <a name="field-element-net-native"></a>\<Field> (.NET Nativo)
+
 Aplica a política de reflexão do runtime a um campo.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -22,6 +23,7 @@ Aplica a política de reflexão do runtime a um campo.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -46,7 +48,8 @@ Aplica a política de reflexão do runtime a um campo.
 |*policy_setting*|A configuração a ser aplicada a este tipo de política para o campo. Os valores possíveis são `Auto`, `Excluded`, `Included` e `Required`. Para obter mais informações, consulte [Configurações da política da diretiva de runtime](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Elementos filho  
- Nenhum.  
+
+ nenhuma.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -56,9 +59,10 @@ Aplica a política de reflexão do runtime a um campo.
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Aplica a política de reflexão a um tipo genérico construído e todos os seus membros.|  
   
 ## <a name="remarks"></a>Comentários  
+
  Se a política do campo não for definida explicitamente, ele herdará a política de runtime do seu elemento pai.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Elementos da diretiva de runtime](runtime-directive-elements.md)
 - [Referência do arquivo de configuração de diretivas do runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)

@@ -2,17 +2,19 @@
 title: Sobre o namespace System.Net.PeerToPeer.Collaboration
 ms.date: 03/30/2017
 ms.assetid: b5d8c1c1-6844-4947-9759-c7f1b564bded
-ms.openlocfilehash: f0c9ecaacc1d875aac8eed61a85ca7579f5cb8a1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 54eaf1a99aab8b1db61f4b46237d57104c9d1a44
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "64649520"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250704"
 ---
 # <a name="about-the-systemnetpeertopeercollaboration-namespace"></a>Sobre o namespace System.Net.PeerToPeer.Collaboration
+
 O namespace <xref:System.Net.PeerToPeer.Collaboration> fornece classes e APIs que são usadas para implementar as atividades de colaboração de pares usando a infraestrutura de Colaboração Ponto a Ponto.  
   
 ## <a name="classes"></a>Classes  
+
  As principais classes usadas na implementação de uma atividade de Colaboração Ponto a Ponto são:  
   
 - O <xref:System.Net.PeerToPeer.Collaboration.ContactManager>, que pode ser usado para armazenar contatos de pares.  

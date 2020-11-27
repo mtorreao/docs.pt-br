@@ -2,14 +2,15 @@
 title: <MethodInstantiation> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: a3355d78-2a88-4109-8521-830d7cae260a
-ms.openlocfilehash: f19bd3c20088431bcbbafac298398b82a664bee9
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e247db05f8442d4fcfddbf03b5eb8955b8ff425a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128321"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250951"
 ---
 # <a name="methodinstantiation-element-net-native"></a>\<MethodInstantiation> (.NET Nativo)
+
 Aplica a política de reflexão de runtime a um método genérico construído.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -23,6 +24,7 @@ Aplica a política de reflexão de runtime a um método genérico construído.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -60,7 +62,8 @@ Aplica a política de reflexão de runtime a um método genérico construído.
 |*policy_setting*|A configuração a ser aplicada a este tipo de política para o método. Os valores possíveis são `Auto`, `Excluded`, `Included` e `Required`. Para obter mais informações, consulte [Configurações da política da diretiva de runtime](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Elementos filho  
- Nenhum.  
+
+ nenhuma.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -70,11 +73,12 @@ Aplica a política de reflexão de runtime a um método genérico construído.
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Aplica a política de reflexão a um tipo genérico construído e todos os seus membros.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O elemento `<MethodInstantiation>` substitui a política de reflexão de runtime do seu método genérico aberto correspondente.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Referência do arquivo de configuração de diretivas do runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementos da diretiva de runtime](runtime-directive-elements.md)
 - [Configurações da política da diretiva de runtime](runtime-directive-policy-settings.md)
-- [\<Method>Elementos](method-element-net-native.md)
+- [\<Method> Elementos](method-element-net-native.md)

@@ -2,14 +2,15 @@
 title: MustUnderstandBehavior
 ms.date: 03/30/2017
 ms.assetid: 911ed04a-c4b8-4c72-a5c3-fc7b4e3b4348
-ms.openlocfilehash: 7e6a96c217b038e870b4e865315766afa3b3c757
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9cac7192d5c34de55fe0bd6a4921a41387e985f8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963157"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250431"
 ---
 # <a name="mustunderstandbehavior"></a>MustUnderstandBehavior
+
 MustUnderstandBehavior  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -22,24 +23,27 @@ class MustUnderstandBehavior : Behavior
 ```  
   
 ## <a name="methods"></a>Métodos  
- A classe MustUnderstandBehavior não define quaisquer métodos.  
+
+ A classe MustUnderstandBehavior não define nenhum método.  
   
 ## <a name="properties"></a>Propriedades  
+
  A classe MustUnderstandBehavior tem a seguinte propriedade:  
   
 ### <a name="validatemustunderstand"></a>ValidateMustUnderstand  
- Tipo de dados: boolean  
+
+ Tipo de dados: booliano  
   
  Tipo de acesso: Somente leitura  
   
- Quando `true`, todos os cabeçalhos SOAP com o `MustUnderstand` atributo que não são manipuladas provocam esse comportamento lançar uma exceção.  
+ Quando `true` , todos os cabeçalhos SOAP com o `MustUnderstand` atributo que não são tratados fazem com que o comportamento gere uma exceção.  
   
 ## <a name="requirements"></a>Requisitos  
   
-|MOF|Declarado em Servicemodel.mof.|  
+|MOF|Declarado em ServiceModel. mof.|  
 |---------|-----------------------------------|  
-|Namespace|Definido no root\ServiceModel|  
+|Namespace|Definido em root\ServiceModel|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Description.MustUnderstandBehavior>

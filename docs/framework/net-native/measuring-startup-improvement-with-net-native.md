@@ -2,14 +2,15 @@
 title: Medindo o aprimoramento da inicialização com o .NET Nativo
 ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
-ms.openlocfilehash: 5d20fa77ee299065ced406bf8cd531b8c54b6c33
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6d89edaff184692eabb11e928f5211f664ff5afa
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540882"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250964"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>Medindo o aprimoramento da inicialização com o .NET Nativo
+
 .NET Native melhora significativamente o tempo de inicialização dos aplicativos. Esse aprimoramento é particularmente perceptível em dispositivos portáteis, de baixa energia e com aplicativos complexos. Este tópico ajuda você a começar a trabalhar com a instrumentação básica necessária para medir essa melhoria de inicialização.  
   
  Para facilitar a investigações de desempenho, o .NET Framework e o Windows usam uma estrutura de evento chamada ETW (Rastreamento de Eventos para Windows) que permite que seu aplicativo notifique as ferramentas quando eventos ocorrerem. Em seguida, você pode usar uma ferramenta chamada PerfView para exibir e analisar eventos de ETW facilmente. Este tópico explica como:  
@@ -21,6 +22,7 @@ ms.locfileid: "90540882"
 - Usar o PerfView para coletar tais eventos.  
   
 ## <a name="using-eventsource-to-emit-events"></a>Usando o EventSource para emitir eventos  
+
  O <xref:System.Diagnostics.Tracing.EventSource> fornece uma classe base da qual criar um provedor de eventos personalizado. Em geral, você pode criar uma subclasse de <xref:System.Diagnostics.Tracing.EventSource> e os métodos `Write*` com seus próprios métodos de evento. Um padrão singleton geralmente é usado para cada <xref:System.Diagnostics.Tracing.EventSource>.  
   
  Por exemplo, a classe no exemplo a seguir pode ser usada para medir duas características de desempenho:  
@@ -52,6 +54,7 @@ ms.locfileid: "90540882"
  Quando o aplicativo for instrumentado, você estará pronto para coletar os eventos.  
   
 ## <a name="gathering-events-with-perfview"></a>Eventos de coleta com PerfView  
+
  O PerfView usa eventos ETW para ajudar você a executar todos os tipos de investigações de desempenho no seu aplicativo. Ele também inclui uma configuração de GUI que permite ativar ou desativar os diferentes tipos de registro. O PerfView é uma ferramenta gratuita e pode ser baixado do [Centro de Download da Microsoft](https://www.microsoft.com/download/details.aspx?id=28567). Para obter mais informações, assista aos [vídeos de tutorial do PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial).  
   
 > [!NOTE]
@@ -63,7 +66,7 @@ ms.locfileid: "90540882"
 perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFile
 ```  
   
- em que:  
+ onde:  
   
  `-KernelEvents:Process`  
  Indica que você deseja saber quando o processo é iniciado e é interrompido. É necessário que o evento de início/processo para seu aplicativo para pode ser subtraído de outros tempos de eventos.  
@@ -85,6 +88,7 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
  Ao executar o aplicativo para que o PerfView possa coletar eventos emitidos, escolha o botão **Parar Coleta**. Em geral, você deve interromper a coleta antes de fechar o aplicativo para que não ocorram eventos estranhos. No entanto, se você medir o desempenho de desligamento ou suspensão, é recomendável continuar a coleta.  
   
 ## <a name="displaying-the-events"></a>Exibir os eventos  
+
  Para exibir os eventos que já foram coletados, use o PerfView para abrir o arquivo .etl ou .etl.zip criado e escolha **Eventos**. O ETW irá coletar informações sobre um grande número de eventos, incluindo eventos de outros processos. Para restringir sua investigação, preencha as seguintes caixas de texto no modo de exibição de eventos:  
   
 - Na caixa **Filtro do Processo**, especifique o nome do aplicativo (sem ".exe").  

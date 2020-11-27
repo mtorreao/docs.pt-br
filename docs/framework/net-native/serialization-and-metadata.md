@@ -2,12 +2,12 @@
 title: Serialização e metadados
 ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
-ms.openlocfilehash: cc9adf0e6627ef3190e74fea5d4f0f3afd581811
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 739d482330103a2a79d0d640781b5516bbc15c01
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "81389230"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250782"
 ---
 # <a name="serialization-and-metadata"></a>Serialização e metadados
 
@@ -18,6 +18,7 @@ Se seu aplicativo serializa ou desserializa objetos, talvez seja necessário adi
 - Serializadores não baseados em reflexão encontrados na biblioteca de classes de .NET Framework. Eles podem necessitar de modificações no arquivo de diretivas de runtime e são discutidos na seção [Serializadores da Microsoft](#Microsoft).  
   
 <a name="ThirdParty"></a>
+
 ## <a name="third-party-serializers"></a>Serializadores de terceiros
 
  Serializadores de terceiros, incluindo o Newtonsoft.JSON, normalmente são baseadas em reflexão. Dado um BLOB (objeto binário grande) de dados serializados, os campos nos dados são atribuídos a um tipo concreto examinando os campos do tipo de destino por nome. No mínimo, usar essas bibliotecas causa exceções [MissingMetadataException](missingmetadataexception-class-net-native.md) para cada objeto <xref:System.Type> que você tentar serializar ou desserializar em uma coleção `List<Type>`.  
@@ -31,6 +32,7 @@ Se seu aplicativo serializa ou desserializa objetos, talvez seja necessário adi
  Para obter informações sobre a sintaxe usada no exemplo, consulte [ \<Namespace> elemento](namespace-element-net-native.md).  
   
 <a name="Microsoft"></a>
+
 ## <a name="microsoft-serializers"></a>Serializadores da Microsoft
 
  Embora as classes <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> e <xref:System.Xml.Serialization.XmlSerializer> não dependam de reflexão, elas necessitam que o código seja gerado com base no objeto a ser serializado ou desserializado. Os construtores sobrecarregados para cada serializador incluem um parâmetro <xref:System.Type> que especifica o tipo a ser serializado ou desserializado. A maneira como este tipo é especificado no código define a ação que deve ser tomada, conforme discutido nas duas próximas seções.  
@@ -67,9 +69,9 @@ Adicione entradas como as seguintes para cada tipo para o arquivo de diretivas d
   
 Para obter informações sobre a sintaxe usada no exemplo, consulte [ \<Type> elemento](type-element-net-native.md).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Referência do arquivo de configuração de diretivas do runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementos da diretiva de runtime](runtime-directive-elements.md)
-- [\<Type>Elementos](type-element-net-native.md)
-- [\<Namespace>Elementos](namespace-element-net-native.md)
+- [\<Type> Elementos](type-element-net-native.md)
+- [\<Namespace> Elementos](namespace-element-net-native.md)

@@ -2,14 +2,15 @@
 title: <Assembly> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: cfe629eb-1106-4113-86e1-052f402d8d8b
-ms.openlocfilehash: f3cf65b185b1db3289a0dbb785c2b91431951cc2
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9d1556d8d414386d3f350a96396381bd7b66ffc5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79181075"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251120"
 ---
 # <a name="assembly-element-net-native"></a>\<Assembly> (.NET Nativo)
+
 Aplica a política de reflexão de runtime a todos os tipos em um assembly especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -29,6 +30,7 @@ Aplica a política de reflexão de runtime a todos os tipos em um assembly espec
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
+
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
@@ -75,6 +77,7 @@ Aplica a política de reflexão de runtime a todos os tipos em um assembly espec
 |[\<Library>](library-element-net-native.md)|Define o assembly que contém tipos e membros de tipo cujos metadados estão disponíveis para reflexão em tempo de execução. O [\<Library>](library-element-net-native.md) elemento pode ter zero ou um `<Assembly>` elemento.|  
   
 ## <a name="remarks"></a>Comentários  
+
  O elemento `<Assembly>` define a política de runtime para todos os tipos em um assembly. Ele difere do [\<Library>](library-element-net-native.md) elemento, que especifica uma biblioteca, mas depende de seus elementos filho para definir a política de reflexão de tempo de execução. O elemento `<Assembly>` aplica-se a todos os tipos em um assembly, a menos que eles sejam substituídos por um elemento filho.  
   
  O exemplo a seguir mostra como é possível aplicar a política em runtime a todos os tipos em assemblies no pacote do aplicativo atribuindo o atributo `Name` a um valor de “*Application\*”. O `<Assembly>` elemento deve ser um filho do [\<Application>](application-element-net-native.md) elemento.  
@@ -89,7 +92,7 @@ Aplica a política de reflexão de runtime a todos os tipos em um assembly espec
   
  Os atributos `Activate`, `Browse`, `Dynamic` e `Serialize` são todos opcionais. No entanto, o elemento `<Assembly>` deve conter pelo menos um desses atributos.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Configurações da política da diretiva de runtime](runtime-directive-policy-settings.md)
 - [Referência do arquivo de configuração de diretivas do runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)

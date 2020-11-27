@@ -1,17 +1,18 @@
 ---
-title: Como obter informações de interface e de protocolo
+title: 'Como: obter informações de interface e de protocolo'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: fd88d26c-4063-495e-a253-736ac3e6b23f
-ms.openlocfilehash: b2b2f4f0bfa8b026bbd5dce8e25919a4a7fc7036
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6e94914ec6312fad9a22cdbb4d145ed131d233da
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180817"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250522"
 ---
-# <a name="how-to-get-interface-and-protocol-information"></a>Como obter informações de interface e de protocolo
+# <a name="how-to-get-interface-and-protocol-information"></a>Como: obter informações de interface e de protocolo
+
 Este exemplo mostra como ler as estatísticas de TCP de um adaptador de rede.  
   
 ## <a name="example"></a>Exemplo  
@@ -70,6 +71,7 @@ public static void ShowTcpStatistics(NetworkInterfaceComponent version)
 ```  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
+
  Este exemplo requer:  
   
 - Referências ao namespace **System.Net**.

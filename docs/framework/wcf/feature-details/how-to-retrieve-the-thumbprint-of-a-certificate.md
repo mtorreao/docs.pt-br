@@ -5,14 +5,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], retrieving thumbprint
 ms.assetid: da3101aa-78cd-4c34-9652-d1f24777eeab
-ms.openlocfilehash: 0622ff9b990dd9d8fe14c4a4c1d48cc8530d5a61
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 1ecefdfe88426afa8e2d3d8eea758e7decf19ed8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609467"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96249820"
 ---
 # <a name="how-to-retrieve-the-thumbprint-of-a-certificate"></a>Como: recuperar a impressão digital de um certificado
+
 Ao escrever um aplicativo de Windows Communication Foundation (WCF) que usa um certificado X. 509 para autenticação, geralmente é necessário especificar as declarações encontradas no certificado. Por exemplo, você deve fornecer uma declaração de impressão digital ao usar a <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> enumeração no <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> método. Encontrar o valor da declaração requer duas etapas. Primeiro, abra o snap-in MMC (console de gerenciamento Microsoft) para certificados. (Consulte [como exibir certificados com o snap-in do MMC](how-to-view-certificates-with-the-mmc-snap-in.md).) Em segundo lugar, conforme descrito aqui, encontre um certificado apropriado e copie sua impressão digital (ou outros valores de declaração).  
   
  Se você estiver usando um certificado para autenticação de serviço, é importante observar o valor da coluna **emitido para** (a primeira coluna no console). Ao usar protocolo SSL (SSL) como uma segurança de transporte, uma das primeiras verificações feitas é comparar o URI (Uniform Resource Identifier) de endereço base de um serviço com o valor **emitido para** . Os valores devem corresponder ou o processo de autenticação é interrompido.  
@@ -39,7 +40,7 @@ Ao escrever um aplicativo de Windows Communication Foundation (WCF) que usa um c
   
 9. Copie os caracteres hexadecimais da caixa. Se essa impressão digital for usada no código para o `X509FindType` , remova os espaços entre os números hexadecimais. Por exemplo, a impressão digital "a9 09 50 2D D8 2a E4 14 33 E6 F8 38 86 B0 0d 42 77 a3 2a 7B" deve ser especificada como "a909502dd82ae41433e6f83886b00d4277a32a7b" no código.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>
