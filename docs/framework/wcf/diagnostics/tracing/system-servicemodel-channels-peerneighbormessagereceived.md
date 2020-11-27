@@ -2,21 +2,23 @@
 title: System.ServiceModel.Channels.PeerNeighborMessageReceived
 ms.date: 03/30/2017
 ms.assetid: c787b86c-08c9-4d44-80ce-a6d189deb732
-ms.openlocfilehash: 35b1b642de0e3d6d7c487c632f23f0ddb7e60f31
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6e0f873316b0ef558de48534c07455f5f36265dd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598353"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280891"
 ---
-# <a name="systemservicemodelchannelspeerneighbormessagereceived"></a><span data-ttu-id="fa858-102">System.ServiceModel.Channels.PeerNeighborMessageReceived</span><span class="sxs-lookup"><span data-stu-id="fa858-102">System.ServiceModel.Channels.PeerNeighborMessageReceived</span></span>
-<span data-ttu-id="fa858-103">Foi recebida uma mensagem de um vizinho par.</span><span class="sxs-lookup"><span data-stu-id="fa858-103">A message was received from a peer neighbor.</span></span>  
-  
-## <a name="description"></a><span data-ttu-id="fa858-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="fa858-104">Description</span></span>  
- <span data-ttu-id="fa858-105">Esse rastreamento ocorre durante o processamento de uma mensagem de entrada de um nó na lista de vizinhos.</span><span class="sxs-lookup"><span data-stu-id="fa858-105">This trace occurs during the processing of an incoming message from a node in the neighbor list.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="fa858-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="fa858-106">See also</span></span>
+# <a name="systemservicemodelchannelspeerneighbormessagereceived"></a><span data-ttu-id="743d7-102">System.ServiceModel.Channels.PeerNeighborMessageReceived</span><span class="sxs-lookup"><span data-stu-id="743d7-102">System.ServiceModel.Channels.PeerNeighborMessageReceived</span></span>
 
-- [<span data-ttu-id="fa858-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="fa858-107">Tracing</span></span>](index.md)
-- [<span data-ttu-id="fa858-108">Utilizando o rastreamento para solucionar problemas em seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="fa858-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="fa858-109">Administração e diagnóstico</span><span class="sxs-lookup"><span data-stu-id="fa858-109">Administration and Diagnostics</span></span>](../index.md)
+<span data-ttu-id="743d7-103">Foi recebida uma mensagem de um vizinho par.</span><span class="sxs-lookup"><span data-stu-id="743d7-103">A message was received from a peer neighbor.</span></span>  
+  
+## <a name="description"></a><span data-ttu-id="743d7-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="743d7-104">Description</span></span>  
+
+ <span data-ttu-id="743d7-105">Esse rastreamento ocorre durante o processamento de uma mensagem de entrada de um nó na lista de vizinhos.</span><span class="sxs-lookup"><span data-stu-id="743d7-105">This trace occurs during the processing of an incoming message from a node in the neighbor list.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="743d7-106">Veja também</span><span class="sxs-lookup"><span data-stu-id="743d7-106">See also</span></span>
+
+- [<span data-ttu-id="743d7-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="743d7-107">Tracing</span></span>](index.md)
+- [<span data-ttu-id="743d7-108">Utilizando o rastreamento para solucionar problemas em seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="743d7-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="743d7-109">Administração e diagnóstico</span><span class="sxs-lookup"><span data-stu-id="743d7-109">Administration and Diagnostics</span></span>](../index.md)

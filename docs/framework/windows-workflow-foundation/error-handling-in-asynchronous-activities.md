@@ -2,26 +2,28 @@
 title: Tratamento de erro em atividades assíncronos
 ms.date: 03/30/2017
 ms.assetid: e8f8ce2b-50c9-4e44-b187-030e0cf30a5d
-ms.openlocfilehash: c63ce231687b03bdba57edd38c32270eabeff834
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2c214ce1d0f435cda79deb6976ca9196a5d7aee1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182944"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280254"
 ---
-# <a name="error-handling-in-asynchronous-activities"></a><span data-ttu-id="e4016-102">Tratamento de erro em atividades assíncronos</span><span class="sxs-lookup"><span data-stu-id="e4016-102">Error handling in asynchronous activities</span></span>
-<span data-ttu-id="e4016-103">Fornecer manipulação de erro em <xref:System.Activities.AsyncCodeActivity> envolve rotear o erro através do sistema de retorno de chamada da atividade.</span><span class="sxs-lookup"><span data-stu-id="e4016-103">Providing error handling in an <xref:System.Activities.AsyncCodeActivity> involves routing the error through the activity’s callback system.</span></span> <span data-ttu-id="e4016-104">Este tópico descreve como obter um erro que é acionada em uma operação assíncrona de volta para o host, usando o exemplo de atividade de SendMail.</span><span class="sxs-lookup"><span data-stu-id="e4016-104">This topic describes how to get an error that is thrown in an asynchronous operation back to the host, using the SendMail activity sample.</span></span>  
+# <a name="error-handling-in-asynchronous-activities"></a><span data-ttu-id="b9fe6-102">Tratamento de erro em atividades assíncronos</span><span class="sxs-lookup"><span data-stu-id="b9fe6-102">Error handling in asynchronous activities</span></span>
+
+<span data-ttu-id="b9fe6-103">Fornecer manipulação de erro em <xref:System.Activities.AsyncCodeActivity> envolve rotear o erro através do sistema de retorno de chamada da atividade.</span><span class="sxs-lookup"><span data-stu-id="b9fe6-103">Providing error handling in an <xref:System.Activities.AsyncCodeActivity> involves routing the error through the activity’s callback system.</span></span> <span data-ttu-id="b9fe6-104">Este tópico descreve como obter um erro que é acionada em uma operação assíncrona de volta para o host, usando o exemplo de atividade de SendMail.</span><span class="sxs-lookup"><span data-stu-id="b9fe6-104">This topic describes how to get an error that is thrown in an asynchronous operation back to the host, using the SendMail activity sample.</span></span>  
   
-## <a name="returning-an-error-thrown-in-an-asynchronous-activity-back-to-the-host"></a><span data-ttu-id="e4016-105">Retornando um erro gerado em uma atividade assíncrona de volta para o host</span><span class="sxs-lookup"><span data-stu-id="e4016-105">Returning an error thrown in an asynchronous activity back to the host</span></span>  
- <span data-ttu-id="e4016-106">Roteamento um erro em uma operação assíncrona de volta para o host no exemplo de atividade de SendMail envolve as seguintes etapas:</span><span class="sxs-lookup"><span data-stu-id="e4016-106">Routing an error in an asynchronous operation back to the host in the SendMail activity sample involves the following steps:</span></span>  
+## <a name="returning-an-error-thrown-in-an-asynchronous-activity-back-to-the-host"></a><span data-ttu-id="b9fe6-105">Retornando um erro gerado em uma atividade assíncrona de volta para o host</span><span class="sxs-lookup"><span data-stu-id="b9fe6-105">Returning an error thrown in an asynchronous activity back to the host</span></span>  
+
+ <span data-ttu-id="b9fe6-106">Roteamento um erro em uma operação assíncrona de volta para o host no exemplo de atividade de SendMail envolve as seguintes etapas:</span><span class="sxs-lookup"><span data-stu-id="b9fe6-106">Routing an error in an asynchronous operation back to the host in the SendMail activity sample involves the following steps:</span></span>  
   
-- <span data-ttu-id="e4016-107">Adicione uma propriedade de exceção para a classe de `SendMailAsyncResult` .</span><span class="sxs-lookup"><span data-stu-id="e4016-107">Add an Exception property to the `SendMailAsyncResult` class.</span></span>  
+- <span data-ttu-id="b9fe6-107">Adicione uma propriedade de exceção para a classe de `SendMailAsyncResult` .</span><span class="sxs-lookup"><span data-stu-id="b9fe6-107">Add an Exception property to the `SendMailAsyncResult` class.</span></span>  
   
-- <span data-ttu-id="e4016-108">Copie o erro gerado para essa propriedade no manipulador de eventos `SendCompleted` .</span><span class="sxs-lookup"><span data-stu-id="e4016-108">Copy the thrown error to that property in the `SendCompleted` event handler.</span></span>  
+- <span data-ttu-id="b9fe6-108">Copie o erro gerado para essa propriedade no manipulador de eventos `SendCompleted` .</span><span class="sxs-lookup"><span data-stu-id="b9fe6-108">Copy the thrown error to that property in the `SendCompleted` event handler.</span></span>  
   
-- <span data-ttu-id="e4016-109">Lance a exceção no manipulador de eventos `EndExecute` .</span><span class="sxs-lookup"><span data-stu-id="e4016-109">Throw the exception in the `EndExecute` event handler.</span></span>  
+- <span data-ttu-id="b9fe6-109">Lance a exceção no manipulador de eventos `EndExecute` .</span><span class="sxs-lookup"><span data-stu-id="b9fe6-109">Throw the exception in the `EndExecute` event handler.</span></span>  
   
- <span data-ttu-id="e4016-110">O código resultante é da seguinte maneira.</span><span class="sxs-lookup"><span data-stu-id="e4016-110">The resulting code is as follows.</span></span>  
+ <span data-ttu-id="b9fe6-110">O código resultante é da seguinte maneira.</span><span class="sxs-lookup"><span data-stu-id="b9fe6-110">The resulting code is as follows.</span></span>  
   
 ```csharp  
 class SendMailAsyncResult : IAsyncResult  
