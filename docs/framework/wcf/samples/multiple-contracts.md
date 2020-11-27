@@ -2,14 +2,15 @@
 title: Vários contratos
 ms.date: 03/30/2017
 ms.assetid: 2bef319b-fe9c-4d49-ac6c-dfb23eb35099
-ms.openlocfilehash: e8451c49395a1dad55c5afca419f47a8e856b61f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 516867a2fd7d6ba0ca1eb6cc3b51c68769b46aba
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602499"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96260195"
 ---
 # <a name="multiple-contracts"></a>Vários contratos
+
 O exemplo de vários contratos demonstra como implementar mais de um contrato em um serviço e como configurar pontos de extremidade para se comunicar com cada um dos contratos implementados. Este exemplo é baseado na [introdução](getting-started-sample.md). O serviço foi modificado para definir dois contratos, o `ICalculator` contrato e o `ICalculatorSession` contrato.  
   
 > [!NOTE]

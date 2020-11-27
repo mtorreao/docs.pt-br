@@ -2,14 +2,15 @@
 title: 3381 - SequenceAcknowledgementSent
 ms.date: 03/30/2017
 ms.assetid: 42630d32-c24d-41b9-9106-9ca1a3e2f7d8
-ms.openlocfilehash: a9ad623090b617150bba005b7e0109295ff1ad10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 782771f6675cb3b4e6a60d16571bf2550826050e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61943267"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96260819"
 ---
 # <a name="3381---sequenceacknowledgementsent"></a>3381 - SequenceAcknowledgementSent
+
 ## <a name="properties"></a>Propriedades  
   
 |||  
@@ -20,9 +21,11 @@ ms.locfileid: "61943267"
 |Canal|Os aplicativos de servidor de Microsoft-Windows- aplicativo/depuração|  
   
 ## <a name="description"></a>Descrição  
- Esse evento é emitido quando o SequenceAcknowledgement é enviada.  
+
+ Esse evento é emitido quando o SequenceAcknowledgement é enviado.  
   
 ## <a name="message"></a>Mensagem  
- Confirmação de SessionId:% 1 enviada.  
+
+ SessionId: %1 confirmação enviada.  
   
 ## <a name="details"></a>Detalhes

@@ -2,14 +2,15 @@
 title: Exceções esperadas
 ms.date: 03/30/2017
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
-ms.openlocfilehash: d8e3c024eb69fe22ec27f3e3697bc4fc7b4ee121
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 367397f738a2a0219a7bdaf3073b37890506929d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600523"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262028"
 ---
 # <a name="expected-exceptions"></a>Exceções esperadas
+
 Este exemplo demonstra como capturar exceções esperadas ao usar um cliente digitado. Este exemplo é baseado no [introdução](getting-started-sample.md) que implementa um serviço de calculadora. Neste exemplo, o cliente é um aplicativo de console (. exe) e o serviço é hospedado pelo Serviços de Informações da Internet (IIS).  
   
 > [!NOTE]
