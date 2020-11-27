@@ -2,14 +2,15 @@
 title: Controle estendido através de relatórios e tratamento de erro
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
-ms.openlocfilehash: c7ca8d85220d65905bc4d9d220de366c331504a4
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2e9298c6a282b9df8499458ad166e320d41e63a9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600536"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283322"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>Controle estendido através de relatórios e tratamento de erro
+
 Este exemplo demonstra como estender o controle sobre o tratamento de erros e o relatório de erros em um serviço Windows Communication Foundation (WCF) usando a <xref:System.ServiceModel.Dispatcher.IErrorHandler> interface. O exemplo se baseia na [introdução](getting-started-sample.md) com algum código adicional adicionado ao serviço para lidar com erros. O cliente força várias condições de erro. O serviço intercepta os erros e os registra em um arquivo.  
   
 > [!NOTE]
@@ -19,7 +20,7 @@ Este exemplo demonstra como estender o controle sobre o tratamento de erros e o 
   
  Neste exemplo, o `CalculatorErrorHandler` tipo implementa a <xref:System.ServiceModel.Dispatcher.IErrorHandler> interface. No  
   
- <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>, o `CalculatorErrorHandler` grava um log do erro em um arquivo de texto Error. txt em c:\Logs. Observe que o exemplo registra em log a falha e não a suprimi, permitindo que ela seja relatada de volta ao cliente.  
+ <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> , o `CalculatorErrorHandler` grava um log do erro em um arquivo de texto Error.txt no c:\Logs. Observe que o exemplo registra em log a falha e não a suprimi, permitindo que ela seja relatada de volta ao cliente.  
   
 ```csharp
 public class CalculatorErrorHandler : IErrorHandler
@@ -145,7 +146,7 @@ Fault: Reason = Invalid Argument: The argument must be greater than zero.
   
 2. Para compilar a solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](building-the-samples.md).  
   
-3. Verifique se você criou o diretório c:\Logs para o arquivo error. txt. Ou modifique o nome do arquivo usado em `CalculatorErrorHandler.HandleError` .  
+3. Verifique se você criou o diretório c:\Logs para o arquivo de error.txt. Ou modifique o nome do arquivo usado em `CalculatorErrorHandler.HandleError` .  
   
 4. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](running-the-samples.md).  
   

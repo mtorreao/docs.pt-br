@@ -9,14 +9,15 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-ms.openlocfilehash: ad25a79add84e43ba0a8e71a0f48c5ddf65108bd
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ffeb342f286663ee7fe733ee617741e0ab30d0d8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554834"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96282867"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Como: Configurar componentes COM baseados no .NET Framework para ativação sem registro
+
 A ativação sem registro de componentes baseados no .NET Framework é apenas um pouco mais complicada do que para componentes COM. A instalação exige dois manifestos:  
   
 - Os aplicativos COM devem ter um manifesto do aplicativo no estilo Win32 para identificar o componente gerenciado.  
@@ -108,15 +109,15 @@ Você pode instalar um manifesto do aplicativo no mesmo diretório do aplicativo
   
 4. Identifique cada classe no assembly. Use o elemento `<clrClass>` para identificar cada classe exclusivamente no assembly gerenciado. O elemento, que é um subelemento do elemento `<assembly>`, tem os atributos descritos na tabela a seguir.  
   
-    |Atributo|Descrição|Obrigatório|  
+    |Atributo|Descrição|Necessária|  
     |---------------|-----------------|--------------|  
-    |`clsid`|O identificador que especifica a classe a ser ativada.|Yes|  
-    |`description`|Uma cadeia de caracteres que informa o usuário sobre o componente. Uma cadeia de caracteres vazia é o padrão.|No|  
-    |`name`|Uma cadeia de caracteres que representa a classe gerenciada.|Yes|  
-    |`progid`|O identificador a ser usado para a ativação de associação tardia.|No|  
-    |`threadingModel`|O modelo de threading COM. “Ambos” é o valor padrão.|No|  
-    |`runtimeVersion`|Especifica a versão do CLR (Common Language Runtime) a ser usada. Se você não especificar esse atributo e o CLR ainda não estiver carregado, o componente será carregado com o último CLR instalado anterior ao CLR versão 4. Se você especificar v1.0.3705, v1.1.4322 ou v2.0.50727, a versão efetuará roll forward automaticamente até a última versão instalada do CLR anterior ao CLR versão 4 (geralmente, v2.0.50727). Se outra versão do CLR já estiver carregada e a versão especificada puder ser carregada lado a lado no processo, a versão especificada será carregada; caso contrário, o CLR carregado será usado. Isso poderá causar uma falha de carregamento.|No|  
-    |`tlbid`|O identificador da biblioteca de tipos que contém informações sobre a classe.|No|  
+    |`clsid`|O identificador que especifica a classe a ser ativada.|Sim|  
+    |`description`|Uma cadeia de caracteres que informa o usuário sobre o componente. Uma cadeia de caracteres vazia é o padrão.|Não|  
+    |`name`|Uma cadeia de caracteres que representa a classe gerenciada.|Sim|  
+    |`progid`|O identificador a ser usado para a ativação de associação tardia.|Não|  
+    |`threadingModel`|O modelo de threading COM. “Ambos” é o valor padrão.|Não|  
+    |`runtimeVersion`|Especifica a versão do CLR (Common Language Runtime) a ser usada. Se você não especificar esse atributo e o CLR ainda não estiver carregado, o componente será carregado com o último CLR instalado anterior ao CLR versão 4. Se você especificar v1.0.3705, v1.1.4322 ou v2.0.50727, a versão efetuará roll forward automaticamente até a última versão instalada do CLR anterior ao CLR versão 4 (geralmente, v2.0.50727). Se outra versão do CLR já estiver carregada e a versão especificada puder ser carregada lado a lado no processo, a versão especificada será carregada; caso contrário, o CLR carregado será usado. Isso poderá causar uma falha de carregamento.|Não|  
+    |`tlbid`|O identificador da biblioteca de tipos que contém informações sobre a classe.|Não|  
   
      Todas as marcações de atributo diferenciam maiúsculas de minúsculas. É possível obter CLSIDs, ProgIDs, modelos de threading e a versão de runtime exibindo a biblioteca de tipos exportada para o assembly com o ObjectViewer OLE/COM (Oleview.exe).  
   
@@ -173,7 +174,7 @@ Você pode instalar um manifesto do aplicativo no mesmo diretório do aplicativo
   
      Novamente, `myresource.res` é o nome do arquivo de recurso que contém recursos incorporados.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Interoperabilidade COM sem registro](registration-free-com-interop.md)
 - [Requisitos para interoperabilidade COM sem registro](/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))

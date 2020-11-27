@@ -4,15 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
-ms.openlocfilehash: bdebe0db25d796c2debfb905864fd8bf780c8e66
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 164a939fa7ee0112e1ceae24755854b09dc72603
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558648"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283985"
 ---
 # <a name="message-security-certificate"></a>Certificado de mensagem de segurança
-Este exemplo demonstra como implementar um aplicativo que usa o WS-Security com a autenticação de certificado X. 509 v3 para o cliente e requer autenticação de servidor usando o certificado X. 509 v3 do servidor. Este exemplo usa configurações padrão, de modo que todas as mensagens de aplicativo entre o cliente e o servidor sejam assinadas e criptografadas. Este exemplo se baseia na [WSHttpBinding](wshttpbinding.md) e consiste em um programa de console do cliente e uma biblioteca de serviços hospedada pelo serviços de informações da Internet (IIS). O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta.  
+
+Este exemplo demonstra como implementar um aplicativo que usa WS-Security com autenticação de certificado X. 509 v3 para o cliente e requer autenticação de servidor usando o certificado X. 509 v3 do servidor. Este exemplo usa configurações padrão, de modo que todas as mensagens de aplicativo entre o cliente e o servidor sejam assinadas e criptografadas. Este exemplo se baseia na [WSHttpBinding](wshttpbinding.md) e consiste em um programa de console do cliente e uma biblioteca de serviços hospedada pelo serviços de informações da Internet (IIS). O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta.  
   
 > [!NOTE]
 > O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
@@ -269,7 +270,7 @@ Press <ENTER> to terminate client.
     > Se você estiver usando um que não seja U. S. Edição em inglês do Windows, você deve editar o arquivo de Setup.bat e substituir o nome da conta "NT AUTHORITY\NETWORK SERVICE" pelo equivalente regional.  
   
 > [!NOTE]
-> As ferramentas usadas neste arquivo em lotes estão localizadas em C:\Arquivos de Programas\microsoft Visual Studio 8 \ Common7\tools ou C:\Arquivos de Programas\microsoft SDKs\Windows\v6.0\bin. Um desses diretórios deve estar no caminho do sistema. Se você tiver o Visual Studio instalado, a maneira mais fácil de obter esse diretório em seu caminho é abrir o Prompt de Comando do Desenvolvedor para o Visual Studio. Clique em **Iniciar**e selecione **todos os programas**, **Visual Studio 2012**, **ferramentas**. Esse prompt de comando tem os caminhos apropriados já configurados. Caso contrário, você deve adicionar o diretório apropriado ao caminho manualmente.  
+> As ferramentas usadas neste arquivo em lotes estão localizadas em C:\Arquivos de Programas\microsoft Visual Studio 8 \ Common7\tools ou C:\Arquivos de Programas\microsoft SDKs\Windows\v6.0\bin. Um desses diretórios deve estar no caminho do sistema. Se você tiver o Visual Studio instalado, a maneira mais fácil de obter esse diretório em seu caminho é abrir o Prompt de Comando do Desenvolvedor para o Visual Studio. Clique em **Iniciar** e selecione **todos os programas**, **Visual Studio 2012**, **ferramentas**. Esse prompt de comando tem os caminhos apropriados já configurados. Caso contrário, você deve adicionar o diretório apropriado ao caminho manualmente.  
   
 > [!IMPORTANT]
 > Os exemplos podem mais ser instalados no seu computador. Verificar o seguinte diretório (padrão) antes de continuar:  

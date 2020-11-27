@@ -2,19 +2,21 @@
 title: Problemas de segurança de registro em log de mensagens
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: df8a1b4382ce4bce60e3214def10c816ced0f13c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8594329fb27aa1d77a2baffee2a7e37ea0d009c4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550541"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283764"
 ---
 # <a name="security-concerns-for-message-logging"></a>Problemas de segurança de registro em log de mensagens
+
 Este tópico descreve como você pode proteger dados confidenciais de serem expostos em logs de mensagens, bem como eventos gerados pelo log de mensagens.  
   
 ## <a name="security-concerns"></a>Problemas de segurança  
   
 ### <a name="logging-sensitive-information"></a>Registrando informações confidenciais  
+
  Windows Communication Foundation (WCF) não modifica nenhum dado em cabeçalhos e corpo específicos do aplicativo. O WCF também não rastreia informações pessoais em cabeçalhos específicos do aplicativo ou dados de corpo.  
   
  Quando o log de mensagens está habilitado, as informações pessoais em cabeçalhos específicos do aplicativo, como uma cadeia de caracteres de consulta; e as informações de corpo, como um número de cartão de crédito, podem se tornar visíveis nos logs. O implantador de aplicativos é responsável por impor o controle de acesso nos arquivos de configuração e de log. Se você não quiser que esse tipo de informação fique visível, desabilite o registro em log ou filtre parte dos dados se quiser compartilhar os logs.  
@@ -94,9 +96,11 @@ Este tópico descreve como você pode proteger dados confidenciais de serem expo
 > PII não está oculta em mensagens malformadas. Essa mensagem é registrada como está sem qualquer modificação. Os atributos mencionados anteriormente não têm nenhum efeito sobre isso.  
   
 ### <a name="custom-trace-listener"></a>Ouvinte de rastreamento personalizado  
+
  A adição de um ouvinte de rastreamento personalizado na origem do rastreamento de log de mensagens é um privilégio que deve ser restrito ao administrador. Isso ocorre porque os ouvintes personalizados mal-intencionados podem ser configurados para enviar mensagens remotamente, o que leva à divulgação de informações confidenciais. Além disso, se você configurar um ouvinte personalizado para enviar mensagens na conexão, como, para um banco de dados remoto, deverá impor o controle de acesso apropriado nos logs de mensagens no computador remoto.  
   
 ## <a name="events-triggered-by-message-logging"></a>Eventos disparados pelo log de mensagens  
+
  O a seguir lista todos os eventos emitidos pelo log de mensagens.  
   
 - Log de mensagens ativado: esse evento é emitido quando o log de mensagens está habilitado na configuração ou por meio do WMI. O conteúdo do evento é "o log de mensagens foi ativado. As informações confidenciais podem ser registradas em texto não criptografado, mesmo que elas tenham sido criptografadas na conexão, por exemplo, corpos de mensagens. "  
@@ -105,11 +109,11 @@ Este tópico descreve como você pode proteger dados confidenciais de serem expo
   
 - Registrar PII conhecido em: esse evento é emitido quando o log de PII conhecido está habilitado. Isso acontece quando o `enableLoggingKnownPii` atributo no `machineSettings` elemento do arquivo de Machine.config é definido como `true` e o `logKnownPii` atributo do `source` elemento no arquivo de App.config ou Web.config é definido como `true` .  
   
-- PII conhecida de log não permitido: esse evento é emitido quando o log de PII conhecido não é permitido. Isso acontece quando o `logKnownPii` atributo do `source` elemento no arquivo de App.config ou Web.config é definido como `true` , mas o `enableLoggingKnownPii` atributo no `machineSettings` elemento do arquivo de Machine.config é definido como `false` . Nenhuma exceção é gerada.  
+- PII conhecida de log não permitido: esse evento é emitido quando o log de PII conhecido não é permitido. Isso acontece quando o `logKnownPii` atributo do `source` elemento no arquivo de App.config ou Web.config é definido como `true` , mas o `enableLoggingKnownPii` atributo no `machineSettings` elemento do arquivo de Machine.config é definido como `false` . Nenhuma exceção é lançada.  
   
  Esses eventos podem ser exibidos na ferramenta de Visualizador de Eventos que vem com o Windows. Para obter mais informações sobre isso, consulte [log de eventos](./event-logging/index.md).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Registro em log de mensagens](message-logging.md)
 - [Preocupações de segurança e dicas úteis para rastreamento](./tracing/security-concerns-and-useful-tips-for-tracing.md)

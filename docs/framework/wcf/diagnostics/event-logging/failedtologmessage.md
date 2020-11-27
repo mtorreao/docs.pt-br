@@ -2,24 +2,26 @@
 title: FailedToLogMessage
 ms.date: 03/30/2017
 ms.assetid: 589d5af7-685f-4456-bebf-d6d6fa1f8475
-ms.openlocfilehash: 2cbd4b3ca9d9700c9acd5c7fe55a4fbba0e29e08
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a090c739922ea754f5e1b6cfd6e63deed0f5bf89
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797922"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96284518"
 ---
 # <a name="failedtologmessage"></a>FailedToLogMessage
-Sessão 113  
+
+ID: 113  
   
- Severity Erro  
+ Gravidade: Erro  
   
- Categorias ServiceModel  
+ Categoria: ServiceModel  
   
 ## <a name="description"></a>Descrição  
+
  Esse evento indica que uma mensagem não foi registrada em log. O evento lista exceção, nome do processo e ID do processo.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Registro de eventos em log](index.md)
+- [Log de eventos](index.md)
 - [Referência geral de eventos](events-general-reference.md)

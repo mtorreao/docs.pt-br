@@ -2,17 +2,19 @@
 title: Comportamentos
 ms.date: 03/30/2017
 ms.assetid: b0885b65-4e74-4bc9-bbf0-eb7ebe566da1
-ms.openlocfilehash: 79cc9af5a2050ccee4da3239fa89d704b6378d04
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e963da6d151b82b205f6f52b70aeb69b09eae4f4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575558"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283608"
 ---
 # <a name="behaviors"></a>Comportamentos
+
 Esta seção contém exemplos que demonstram comportamentos de serviço do Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>Nesta seção  
+
  [Simultaneidade](concurrency.md)  
  Demonstra o uso do <xref:System.ServiceModel.ServiceBehaviorAttribute> com a <xref:System.ServiceModel.ConcurrencyMode> enumeração, que controla se uma instância de um serviço processa as mensagens em sequência ou simultaneamente.  
   

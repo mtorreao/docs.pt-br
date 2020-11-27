@@ -6,14 +6,15 @@ helpviewer_keywords:
 - interop marshaling, blittable types
 - blittable types, interop marshaling
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
-ms.openlocfilehash: 8bbf9c72143033cec22b38cc26cbe8ceb44f790b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 5f0f6b2f35c184b4df8c93af1c85e7169cb0cc95
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556265"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283140"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Tipos blittable e não blittable
+
 A maioria dos tipos de dados tem uma representação comum na memória gerenciada e não gerenciada e não exige manipulação especial pelo marshaler de interoperabilidade. Esses tipos são chamados *tipos blittable* porque não exigem conversão quando são passados entre o código gerenciado e não gerenciado.  
   
  Estruturas retornadas de chamadas de invocação de plataforma devem ser tipos blittable. A invocação de plataforma não dá suporte a estruturas não blittable como tipos de retorno.  
@@ -58,7 +59,7 @@ A maioria dos tipos de dados tem uma representação comum na memória gerenciad
   
  A tabela a seguir lista tipos não blittable do namespace <xref:System>. [Representantes](default-marshaling-behavior.md#default-marshaling-for-delegates), que são estruturas de dados que se referem a um método estático ou a uma instância de classe, também não são blittable.  
   
-|Tipo não bittable|Description|  
+|Tipo não bittable|Descrição|  
 |-------------------------|-----------------|  
 |[System.Array](default-marshaling-for-arrays.md)|Converte em uma matriz C-style ou em um `SAFEARRAY`.|  
 |[System.Boolean](/previous-versions/dotnet/netframework-4.0/t2t3725f(v=vs.100))|Converte em um valor de 1, 2 ou 4 bytes com `true` como 1 ou -1.|  
@@ -72,6 +73,6 @@ A maioria dos tipos de dados tem uma representação comum na memória gerenciad
   
  Há suporte para tipos de objeto e de classe apenas na interoperabilidade COM. Para tipos correspondentes no Visual Basic, C# e C++, consulte a [Visão geral da biblioteca de classes](../../standard/class-library-overview.md).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Comportamento de marshaling padrão](default-marshaling-behavior.md)
