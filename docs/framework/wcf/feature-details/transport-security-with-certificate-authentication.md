@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 dev_langs:
 - csharp
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-ms.openlocfilehash: 38f7d310be41455dd12460fdfa93d7e624d10c2a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d3f2a10bb6b355e82f94b8cc793c93ce4634c7d2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545214"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251822"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>Segurança de transporte com autenticação de certificado
 
@@ -27,12 +27,13 @@ Este artigo discute o uso de certificados X. 509 para autenticação de servidor
 |Modo de segurança|Transport|  
 |Interoperabilidade|Com serviços e clientes de serviços Web existentes.|  
 |Autenticação (servidor)<br /><br /> Autenticação (cliente)|Sim (usando um certificado SSL)<br /><br /> Sim (usando um certificado X. 509)|  
-|Integridade dos Dados|Yes|  
+|Integridade dos Dados|Sim|  
 |Confidencialidade dos dados|Yes|  
 |Transport|HTTPS|  
 |Associação|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="configure-the-service"></a>Configurar o serviço  
+
  Como o serviço nesse cenário é hospedado no IIS, ele é configurado com um arquivo de web.config. O web.config a seguir mostra como configurar o <xref:System.ServiceModel.WSHttpBinding> para usar a segurança de transporte e as credenciais de cliente X. 509.  
   
 ```xml  
@@ -64,6 +65,7 @@ Este artigo discute o uso de certificados X. 509 para autenticação de servidor
 ```  
   
 ## <a name="configure-the-client"></a>Configurar o cliente  
+
  O cliente pode ser configurado no código ou em um arquivo de app.config. O exemplo a seguir mostra como configurar o cliente no código.  
   
 ```csharp
@@ -139,7 +141,7 @@ cc.Close();
 <startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/></startup></configuration>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Visão geral de segurança](security-overview.md)
 - [Modelo de segurança para o Windows Server app Fabric](/previous-versions/appfabric/ee677202(v=azure.10))

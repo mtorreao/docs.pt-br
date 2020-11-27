@@ -6,19 +6,21 @@ helpviewer_keywords:
 - WCF, transports
 - Windows Communication Foundation, transports
 ms.assetid: 005c894b-af70-48aa-a1c1-c99338083c27
-ms.openlocfilehash: 077d63d8038b245a68083611897c1e6c68971071
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 8623b788b848867f25836a657b07349dd50c2780
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598665"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251679"
 ---
 # <a name="transports-in-windows-communication-foundation"></a>Transportes no Windows Communication Foundation
+
 A camada de transporte está no nível mais baixo da pilha de canais. Os transportes principais usados no Windows Communication Foundation (WCF) são HTTP, HTTPS, TCP e pipes nomeados. Os tópicos nesta seção abordam a escolha entre esses transportes, a configuração do transporte e a definição de propriedades de ajuste.  
   
  O WCF inclui transportes adicionais. Para obter informações sobre o transporte do serviço de enfileiramento de mensagens (também conhecido como MSMQ), consulte [filas e sessões confiáveis](queues-and-reliable-sessions.md). Para obter informações sobre o transporte ponto a ponto, consulte [rede ponto a ponto](peer-to-peer-networking.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
+
  [Selecionando um transporte](choosing-a-transport.md)  
  Descreve os três transportes principais e considerações na seleção de um.  
   
@@ -31,7 +33,7 @@ A camada de transporte está no nível mais baixo da pilha de canais. Os transpo
  [Configurando HTTP e HTTPS](configuring-http-and-https.md)  
  Descreve como configurar os elementos de associação de transporte HTTP e HTTPS.  
   
- [How to: Replace the WCF URL Reservation with a Restricted Reservation](how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation.md)  
+ [Como: substituir a reserva de URL do WCF com uma reserva restrita](how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation.md)  
  Descreve como usar reservas restritas do WCFURL.  
   
  [Cotas de transporte](transport-quotas.md)  
@@ -44,6 +46,7 @@ A camada de transporte está no nível mais baixo da pilha de canais. Os transpo
  Descreve como usar o componente de compartilhamento de porta Net. TCP do WCF.  
   
 ## <a name="reference"></a>Referência  
+
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
   
  <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
@@ -53,6 +56,7 @@ A camada de transporte está no nível mais baixo da pilha de canais. Os transpo
  <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
+
  [Associações](bindings.md)  
   
  [Estendendo associações](../extending/extending-bindings.md)
