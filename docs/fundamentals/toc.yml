@@ -384,6 +384,8 @@ items:
             href: ../core/diagnostics/index.md
           - name: Depuradores gerenciados
             href: ../core/diagnostics/managed-debuggers.md
+          - name: Despejos
+            href: ../core/diagnostics/dumps.md
           - name: Depurar despejos do Linux
             href: ../core/diagnostics/debug-linux-dumps.md
           - name: EventCounters
