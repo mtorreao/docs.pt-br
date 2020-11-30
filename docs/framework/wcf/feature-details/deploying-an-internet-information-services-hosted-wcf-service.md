@@ -4,10 +4,10 @@ description: Saiba mais sobre as tarefas necessárias para desenvolver e implant
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
 ms.openlocfilehash: 5d9a0b80cc75baec2325b778cee7daa68531f2d5
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
+ms.lasthandoff: 11/29/2020
 ms.locfileid: "90557561"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Implantando um Serviço WCF hospedado do Internet Information Services dos Serviços de Informações da Internet
@@ -110,7 +110,7 @@ Os serviços WCF hospedados pelo IIS podem usar a segurança de transporte HTTP 
 
 Por exemplo, um ponto de extremidade WCF configurado para usar a autenticação digest HTTP deve residir em um diretório virtual do IIS que também esteja configurado para permitir a autenticação digest HTTP. As combinações sem correspondência das configurações do IIS e das configurações do ponto de extremidade do WCF resultam em um erro durante a ativação do serviço.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Hospedagem no Internet Information Services](hosting-in-internet-information-services.md)
 - [Práticas recomendadas de hospedagem dos Serviços de Informações da Internet](internet-information-services-hosting-best-practices.md)

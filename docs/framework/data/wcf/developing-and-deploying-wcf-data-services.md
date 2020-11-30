@@ -8,10 +8,10 @@ helpviewer_keywords:
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
 ms.openlocfilehash: 484505406701b52a2b80b95b718a23a2156aa22c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
+ms.lasthandoff: 11/29/2020
 ms.locfileid: "90556083"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Desenvolva e implante WCF Data Services
@@ -98,7 +98,7 @@ O WCF Data Service fornece flexibilidade na escolha do processo que hospeda o se
 
     - [Como: criar um pacote de implantação da Web no Visual Studio](/previous-versions/aspnet/dd465323(v=vs.110))
 
-    - [Como implantar um projeto Web usando a publicação com um clique no Visual Studio](/previous-versions/aspnet/dd465337(v=vs.110))
+    - [Como implantar um projeto Web usando One-Click publicar no Visual Studio](/previous-versions/aspnet/dd465337(v=vs.110))
 
   - **Tecnologias de implantação para sites Web ASP.NET**
 
@@ -125,7 +125,7 @@ Considere o seguinte ao implantar um serviço de dados:
 
 - Como o WCF Data Services inclui uma implementação básica do WCF, você pode usar o Windows Server AppFabric para monitorar um serviço de dados implantado no IIS em execução no Windows Server. Para obter mais informações sobre como usar o Windows Server AppFabric para monitorar um serviço de dados, consulte o WCF Data Services de rastreamento de postagem [com o Windows Server AppFabric](/archive/blogs/rjacobs/tracking-wcf-data-services-with-windows-server-appfabric).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Hospedar o serviço de dados](hosting-the-data-service-wcf-data-services.md)
 - [Protegendo o WCF Data Services](securing-wcf-data-services.md)

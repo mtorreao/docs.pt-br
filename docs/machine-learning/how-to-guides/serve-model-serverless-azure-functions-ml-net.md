@@ -6,10 +6,10 @@ author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
 ms.openlocfilehash: 74a7a5b941596ba9fffc62ef87a01763937d88c0
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2020
+ms.lasthandoff: 11/29/2020
 ms.locfileid: "91608771"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>Implantar um modelo no Azure Functions
@@ -22,7 +22,7 @@ Saiba como implantar um modelo de machine learning do ML.NET pré-treinado para 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 - [Visual studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ou posterior ou visual Studio 2017 versão 15,6 ou posterior com as cargas de trabalho "desenvolvimento de plataforma cruzada do .NET Core" e "desenvolvimento do Azure" instalados.
-- [Ferramentas de Azure Functions](/azure/azure-functions/functions-develop-vs#check-your-tools-version)
+- [Ferramentas do Azure Functions](/azure/azure-functions/functions-develop-vs#check-your-tools-version)
 - PowerShell
 - Modelo previamente treinado. Use o [tutorial de Análise de Sentimento do ML.NET](../tutorials/sentiment-analysis.md) para criar seu próprio modelo ou baixe este [modelo de machine learning de análise de sentimento pré-treinado](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)
 
@@ -50,7 +50,7 @@ Este exemplo é um **gatilho http C# Azure Functions aplicativo** que usa um mod
 
     No Gerenciador de Soluções, clique com o botão direito do mouse no seu projeto e selecione **Gerenciar Pacotes NuGet**. Escolha "nuget.org" como a origem do pacote, selecione a guia procurar, procure **Microsoft.Extensions.ml**, selecione o pacote na lista e selecione o botão **instalar** . Selecione o botão **OK** na caixa de diálogo **Visualizar Alterações** e selecione o botão **Aceito** na caixa de diálogo **Aceitação da Licença**, se concordar com o termos de licença para os pacotes listados.
 
-1. Instale a versão **1.0.31**do **pacote NUGET Microsoft. net. Sdk. Functions** :
+1. Instale a versão **1.0.31** do **pacote NUGET Microsoft. net. Sdk. Functions** :
 
     No Gerenciador de Soluções, clique com o botão direito do mouse no seu projeto e selecione **Gerenciar Pacotes NuGet**. Escolha "nuget.org" como a origem do pacote, selecione a guia instalado, pesquise por **Microsoft. net. Sdk. Functions**, selecione esse pacote na lista, selecione **1.0.31** no menu suspenso versão e selecione o botão **Atualizar** . Selecione o botão **OK** na caixa de diálogo **Visualizar Alterações** e selecione o botão **Aceito** na caixa de diálogo **Aceitação da Licença**, se concordar com o termos de licença para os pacotes listados.
 
