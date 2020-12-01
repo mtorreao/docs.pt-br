@@ -4,12 +4,12 @@ description: Saiba como as bibliotecas fornecem implementações para muitos alg
 author: richlander
 ms.date: 06/20/2016
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: e59f53f2a16dc84709e0b815d3e2b710c903ff60
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4e71f81b0dd72f4569d8b6b319b9e97491533d28
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827926"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438206"
 ---
 # <a name="framework-libraries"></a>Bibliotecas do Framework
 
@@ -39,7 +39,7 @@ O .NET inclui um conjunto de tipos primitivos, que são usados (em graus variáv
 
 O .NET inclui um conjunto de estruturas de dados que são fundamentais para quase todos os aplicativos .NET.  Elas são em sua maioria coleções, mas também incluem outros tipos.
 
-* <xref:System.Array> – representa uma matriz de objetos fortemente tipados que podem ser acessados por índice. Tem um tamanho fixo, de acordo com sua construção.
+* <xref:System.Array> -Representa uma matriz de objetos fortemente tipados que podem ser acessados pelo índice. Tem um tamanho fixo, de acordo com sua construção.
 * <xref:System.Collections.Generic.List%601> – representa uma lista fortemente tipada de objetos que podem ser acessados por índice. É redimensionado automaticamente conforme necessário.
 * <xref:System.Collections.Generic.Dictionary%602> – representa uma coleção de valores que são indexados por uma chave. Os valores podem ser acessados via chave. É redimensionado automaticamente conforme necessário.
 * <xref:System.Uri> – fornece uma representação de objeto de um URI (Uniform Resource Identifier) e fácil acesso às partes do URI.

@@ -3,12 +3,12 @@ title: Depurar alto uso da CPU-.NET Core
 description: Um tutorial que orienta você pela depuração de alto uso da CPU no .NET Core.
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: 71e0b98f7ad38836c6a20c3e0e75a878fb6525c7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 91f31f77b54398d2f9816890338955bc9b0852e4
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538703"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437826"
 ---
 # <a name="debug-high-cpu-usage-in-net-core"></a>Depurar alto uso da CPU no .NET Core
 
@@ -16,7 +16,7 @@ ms.locfileid: "90538703"
 
 Neste tutorial, você aprenderá a depurar um cenário de uso excessivo da CPU. Usando o exemplo fornecido ASP.NET Core repositório de código-fonte do [aplicativo Web](/samples/dotnet/samples/diagnostic-scenarios) , você pode causar um deadlock intencionalmente. O ponto de extremidade passará por uma falha e acumulação de threads. Você aprenderá como é possível usar várias ferramentas para diagnosticar esse cenário com várias partes importantes dos dados de diagnóstico.
 
-Neste tutorial, você irá:
+Neste tutorial, você vai:
 
 > [!div class="checklist"]
 >
@@ -90,7 +90,7 @@ Com o aplicativo Web em execução, imediatamente após a inicialização, a CPU
 Agora, execute novamente o comando [dotnet-Counters](dotnet-counters.md) . Para monitorar apenas o `cpu-usage` , especifique `System.Runtime[cpu-usage]` como parte do comando.
 
 ```dotnetcli
-dotnet-counters monitor System.Runtime[cpu-usage] -p 22884 --refresh-interval 1
+dotnet-counters monitor --counters System.Runtime[cpu-usage] -p 22884 --refresh-interval 1
 ```
 
 Você deve ver um aumento no uso da CPU, conforme mostrado abaixo:

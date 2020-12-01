@@ -3,12 +3,12 @@ title: Propriedades
 description: Saiba mais sobre propriedades C#, que incluem recursos de validação, valores computados, avaliação lenta e notificações de alteração de propriedade.
 ms.technology: csharp-fundamentals
 ms.date: 04/25/2018
-ms.openlocfilehash: 28050a77e1f7b0ac148bba6112aa79ef4d46b710
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 5306650a10a3de0ff208f7c72c0ba520a527e746
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "89358902"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437939"
 ---
 # <a name="properties"></a>Propriedades
 
@@ -129,7 +129,7 @@ Se a versão calculada anteriormente for válida, ela será usada. Se outra alte
 ### <a name="attaching-attributes-to-auto-implemented-properties"></a>Anexando atributos a propriedades autoimplementadas
 
 Do C# 7.3 em diante, atributos de campo podem ser anexados ao campo de suporte gerado pelo compilador em propriedades autoimplementadas. Por exemplo, considere uma revisão da classe `Person` que adiciona uma propriedade `Id` de inteiro exclusivo.
-Você escreve a propriedade `Id` usando uma propriedade autoimplementada, mas o design não exige a persistência da propriedade `Id`. O <xref:System.NonSerializedAttribute> pode ser anexado apenas a campos, não a propriedades. Anexe o <xref:System.NonSerializedAttribute> ao campo de suporte da propriedade `Id` usando o especificador `field:` no atributo, conforme mostrado no seguinte exemplo:
+Você escreve a `Id` propriedade usando uma propriedade implementada automaticamente, mas o design não chama a propriedade de persistência `Id` . O <xref:System.NonSerializedAttribute> pode ser anexado apenas a campos, não a propriedades. Anexe o <xref:System.NonSerializedAttribute> ao campo de suporte da propriedade `Id` usando o especificador `field:` no atributo, conforme mostrado no seguinte exemplo:
 
 [!code-csharp[Attaching attributes to a backing field](../../samples/snippets/csharp/properties/Person.cs#14)]
 

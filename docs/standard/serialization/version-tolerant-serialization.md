@@ -14,12 +14,12 @@ helpviewer_keywords:
 - BinaryFormatter class, samples
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
-ms.openlocfilehash: e7c4d6ca4c72390c3e0803502aa9c1a675e02345
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 26612c5b0591efa61fcd476733aee2b219d67c62
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282418"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438166"
 ---
 # <a name="version-tolerant-serialization"></a>Serialização tolerante a versão
 
@@ -28,7 +28,7 @@ Nas versões mais antigas do .NET Framework, a criação de tipos serializáveis
 - As versões antigas de um aplicativo gerariam exceções quando fossem solicitadas a desserializar novas versões do tipo antigo.
 - As versões recentes de um aplicativo gerariam exceções ao desserializar versões antigas de um tipo com dados ausentes.
 
-A VTS (serialização tolerante à versão) é um conjunto de recursos que torna mais fácil, ao longo do tempo, modificar os tipos serializáveis. Especificamente, os recursos do VTS serão habilitados para classes para as quais o atributo <xref:System.SerializableAttribute> tiver sido aplicado, incluindo tipos genéricos. O VTS possibilita adicionar novos campos a essas classes sem interromper a compatibilidade com outras versões do tipo. Para obter um aplicativo de exemplo funcional, consulte [Amostra de tecnologia de serialização tolerante a versão](basic-serialization-technology-sample.md).
+A VTS (serialização tolerante à versão) é um conjunto de recursos que torna mais fácil, ao longo do tempo, modificar os tipos serializáveis. Especificamente, os recursos do VTS serão habilitados para classes para as quais o atributo <xref:System.SerializableAttribute> tiver sido aplicado, incluindo tipos genéricos. O VTS possibilita adicionar novos campos a essas classes sem interromper a compatibilidade com outras versões do tipo.
 
 Os recursos do VTS são habilitados ao usar o <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Além disso, todos os recursos exceto tolerância a dados desconhecidos também são habilitados ao usar o <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>. Para obter mais informações sobre como usar essas classes para serialização, consulte [Serialização binária](binary-serialization.md).
 
@@ -279,7 +279,7 @@ Para definir que um tipo seja compatível com mecanismos de serialização futur
 - Sempre defina a propriedade **VersionAdded** no atributo **OptionalFieldAttribute** corretamente.
 - Evite controle de versão ramificado.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.SerializableAttribute>
 - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>

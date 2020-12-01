@@ -2,12 +2,12 @@
 title: 'Alteração significativa: atributos OSPlatform renomeados ou removidos'
 description: Saiba mais sobre a alteração significativa do .NET 5,0 em bibliotecas principais do .NET em que os atributos da plataforma do sistema operacional que foram introduzidos em uma versão de visualização foram removidos ou renomeados.
 ms.date: 11/01/2020
-ms.openlocfilehash: 7e709b84005a7b807e390e12d9f36d8b4f73a9df
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 80eba790a607a01e0588c067cdc6105d5f3b20a7
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760372"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437880"
 ---
 # <a name="osplatform-attributes-renamed-or-removed"></a>Atributos OSPlatform renomeados ou removidos
 
@@ -34,7 +34,7 @@ No .NET 5,0 RC1 e posterior, quando um projeto tem como alvo um tipo específico
 
 ## <a name="reason-for-change"></a>Motivo da alteração
 
-O .NET 5,0 Preview 8 introduziu atributos no <xref:System.Runtime.Versioning> para especificar plataformas com suporte para APIs. Os atributos são consumidos pelo [analisador de compatibilidade de plataforma](../../../../core/compatibility/code-analysis.md#ca1416-platform-compatibility) para produzir avisos de compilação quando APIs específicas da plataforma são consumidas em plataformas que não têm suporte para essas APIs.
+O .NET 5,0 Preview 8 introduziu atributos no <xref:System.Runtime.Versioning> para especificar plataformas com suporte para APIs. Os atributos são consumidos pelo [analisador de compatibilidade de plataforma](../../code-analysis/5.0/ca1416-platform-compatibility-analyzer.md) para produzir avisos de compilação quando APIs específicas da plataforma são consumidas em plataformas que não têm suporte para essas APIs.
 
 Para o .NET 5,0 RC1, um recurso adicional foi adicionado ao analisador de compatibilidade de plataforma para exclusão de plataforma. O recurso permite que as APIs sejam marcadas como totalmente sem suporte em plataformas de sistema operacional. Esse recurso solicitou alterações nos atributos, incluindo o uso de nomes mais adequados. O `ObsoletedInOSPlatformAttribute` foi removido porque não era mais necessário.
 

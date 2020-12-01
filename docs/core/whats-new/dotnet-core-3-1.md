@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 42d4f7e8800bf2d13d584084f8a41bad2ada534f
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 9caecdcc3516db2bd71420184fbd21f7837552a7
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608121"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437924"
 ---
 # <a name="whats-new-in-net-core-31"></a>Novidades do .NET Core 3.1
 
@@ -39,7 +39,7 @@ Para obter mais informações, consulte a [política de suporte do .NET Core](ht
 
 ## <a name="macos-apphost-and-notarization"></a>macOS appHost e notarization
 
-*somente macOS*
+*Somente macOS*
 
 A partir do notarized SDK do .NET Core 3,1 para macOS, a configuração appHost é desabilitada por padrão. Para obter mais informações, consulte [o notarization Catalina do MacOS e o impacto sobre os downloads e projetos do .NET Core](../install/macos-notarization-issues.md).
 
@@ -99,5 +99,5 @@ Para adicionar suporte para C++/CLI no Visual Studio 2019 versão 16,4, instale 
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- [Examine as alterações significativas entre o .NET Core 3,0 e 3,1.](../compatibility/3.0-3.1.md)
+- [Examine as alterações significativas entre o .NET Core 3,0 e 3,1.](../compatibility/3.1.md)
 - [Examine as alterações significativas no .NET Core 3,1 para aplicativos Windows Forms.](../compatibility/winforms.md#net-core-31)

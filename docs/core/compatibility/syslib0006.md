@@ -3,12 +3,12 @@ title: Aviso de SYSLIB0006
 description: Saiba mais sobre o obsoletions que gera SYSLIB0006 de aviso de tempo de compilação.
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: 222b669a8a0260713e85721e6031144bb7bda5cc
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: a5ab4fe4576bd336cb7de0a91b889fa48ac5650a
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440654"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437469"
 ---
 # <a name="syslib0006-threadabort-is-not-supported"></a>SYSLIB0006: não há suporte para thread. Abort
 
@@ -40,5 +40,5 @@ void ProcessPendingWorkItemsNew(CancellationToken cancellationToken)
 
 ## <a name="see-also"></a>Confira também
 
-- [Thread. Abort é uma alteração de interrupção obsoleta](3.1-5.0.md#threadabort-is-obsolete)
+- [Thread.Abort está obsoleto](core-libraries/5.0/thread-abort-obsolete.md)
 - [Cancelamento em threads gerenciados](../../standard/threading/cancellation-in-managed-threads.md)

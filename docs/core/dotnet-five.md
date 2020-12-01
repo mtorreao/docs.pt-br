@@ -1,16 +1,16 @@
 ---
 title: Novidades do .NET 5
 description: Saiba mais sobre o .NET 5, uma plataforma de desenvolvimento de plataforma cruzada e de software livre que é a próxima evolução do .NET Core.
-ms.date: 11/18/2020
+ms.date: 11/30/2020
 ms.topic: overview
 ms.author: dapine
 author: IEvangelist
-ms.openlocfilehash: 1101e218f225eed2a2013ed9e19b60f4ece57738
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.openlocfilehash: d0b8533dd63dd7d24f49e11093770b52d7daea89
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94982296"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437867"
 ---
 # <a name="whats-new-in-net-5"></a>Novidades do .NET 5
 
@@ -141,17 +141,17 @@ Para obter mais informações sobre modelos de projeto da CLI do .NET, consulte 
 
 Há novos recursos no e para o [System.Text.Jsem](../standard/serialization/system-text-json-overview.md):
 
-- [Preservar referências e manipular referências circulares](../standard/serialization/system-text-json-how-to.md#preserve-references-and-handle-circular-references)
+- [Preservar referências e manipular referências circulares](../standard/serialization/system-text-json-preserve-references.md)
 - [Métodos de extensão HttpClient e HttpContent](../standard/serialization/system-text-json-how-to.md#httpclient-and-httpcontent-extension-methods)
-- [Permitir ou gravar números entre aspas](../standard/serialization/system-text-json-how-to.md#allow-or-write-numbers-in-quotes)
-- [Suporte a tipos imutáveis e registros C# 9](../standard/serialization/system-text-json-how-to.md#immutable-types-and-records)
-- [Suporte a acessadores de propriedade não públicos](../standard/serialization/system-text-json-how-to.md#non-public-property-accessors)
-- [campos de suporte](../standard/serialization/system-text-json-how-to.md#include-fields)
-- [Ignorar as propriedades condicionalmente](../standard/serialization/system-text-json-how-to.md#ignore-properties)
+- [Permitir ou gravar números entre aspas](../standard/serialization/system-text-json-invalid-json.md#allow-or-write-numbers-in-quotes)
+- [Suporte a tipos imutáveis e registros C# 9](../standard/serialization/system-text-json-immutability.md)
+- [Suporte a acessadores de propriedade não públicos](../standard/serialization/system-text-json-immutability.md)
+- [Campos de suporte](../standard/serialization/system-text-json-how-to.md#include-fields)
+- [Ignorar as propriedades condicionalmente](../standard/serialization/system-text-json-ignore-properties.md)
 - [Suporte a dicionários de chave não cadeia de caracteres](../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md#dictionary-with-non-string-key)
 - [Permitir que conversores personalizados manipulem NULL](../standard/serialization/system-text-json-converters-how-to.md#handle-null-values)
-- [Copiar JsonSerializerOptions](../standard/serialization/system-text-json-how-to.md#copy-jsonserializeroptions)
-- [Criar JsonSerializerOptions com padrões da Web](../standard/serialization/system-text-json-how-to.md#web-defaults-for-jsonserializeroptions)
+- [Copiar JsonSerializerOptions](../standard/serialization/system-text-json-configure-options.md#copy-jsonserializeroptions)
+- [Criar JsonSerializerOptions com padrões da Web](../standard/serialization/system-text-json-configure-options.md#web-defaults-for-jsonserializeroptions)
 
 ## <a name="see-also"></a>Confira também
 

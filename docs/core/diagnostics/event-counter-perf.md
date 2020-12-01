@@ -3,12 +3,12 @@ title: Medir o desempenho usando o EventCounters no .NET Core
 description: Neste tutorial, você aprenderá a medir o desempenho usando o EventCounters.
 ms.date: 08/07/2020
 ms.topic: tutorial
-ms.openlocfilehash: db9a0889d46cc4db02baac60cbed6f6e0ba6856b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 75f6f1469c87eb1fe8a3064a815ec72943771f88
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538560"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437456"
 ---
 # <a name="tutorial-measure-performance-using-eventcounters-in-net-core"></a>Tutorial: medir o desempenho usando o EventCounters no .NET Core
 
@@ -16,7 +16,7 @@ ms.locfileid: "90538560"
 
 Neste tutorial, você aprenderá como um <xref:System.Diagnostics.Tracing.EventCounter> pode ser usado para medir o desempenho com uma alta frequência de eventos. Você pode usar os [contadores disponíveis](event-counters.md#available-counters) publicados por vários pacotes oficiais do .NET Core, provedores de terceiros ou criar suas próprias métricas para monitoramento.
 
-Neste tutorial, você irá:
+Neste tutorial, você vai:
 
 > [!div class="checklist"]
 >
@@ -49,7 +49,7 @@ A <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A?displayProperty=nam
 
 ## <a name="add-an-action-filter"></a>Adicionar um filtro de ação
 
-O código-fonte de exemplo é um projeto ASP.NET Core. Você pode adicionar um [filtro de ação](/aspnet/core/mvc/controllers/filters#action-filters) globalmente, que registrará o tempo total de solicitação. Crie um novo arquivo chamado *LogRequestTimeFilterAttribute.cs*e use o código a seguir:
+O código-fonte de exemplo é um projeto ASP.NET Core. Você pode adicionar um [filtro de ação](/aspnet/core/mvc/controllers/filters#action-filters) globalmente, que registrará o tempo total de solicitação. Crie um novo arquivo chamado *LogRequestTimeFilterAttribute.cs* e use o código a seguir:
 
 ```csharp
 using System.Diagnostics;
@@ -97,7 +97,7 @@ dotnet-counters ps
 Usando o identificador de processo da saída do `dotnet-counters ps` comando, você pode começar a monitorar o contador de eventos com o seguinte `dotnet-counters monitor` comando:
 
 ```console
-dotnet-counters monitor --process-id 2196 Sample.EventCounter.Minimal Microsoft.AspNetCore.Hosting[total-requests,requests-per-second] System.Runtime[cpu-usage]
+dotnet-counters monitor --process-id 2196 --counters Sample.EventCounter.Minimal,Microsoft.AspNetCore.Hosting[total-requests,requests-per-second],System.Runtime[cpu-usage]
 ```
 
 Enquanto o `dotnet-counters monitor` comando estiver em execução, mantenha <kbd>F5</kbd> no navegador para começar a emitir solicitações contínuas para o `https://localhost:5001/api/values` ponto de extremidade. Depois de alguns segundos, pare pressionando <kbd>q</kbd>
@@ -118,7 +118,7 @@ Press p to pause, r to resume, q to quit.
 O `dotnet-counters monitor` comando é ótimo para o monitoramento ativo. No entanto, talvez você queira coletar essas métricas de diagnóstico para o pós-processamento e a análise. Para isso, use o `dotnet-counters collect` comando. O `collect` comando switch é semelhante ao `monitor` comando, mas aceita alguns parâmetros adicionais. Você pode especificar o nome e o formato do arquivo de saída desejado. Para um arquivo JSON chamado *diagnostics.jsem* use o seguinte comando:
 
 ```console
-dotnet-counters collect --process-id 2196 --format json -o diagnostics.json Sample.EventCounter.Minimal Microsoft.AspNetCore.Hosting[total-requests,requests-per-second] System.Runtime[cpu-usage]
+dotnet-counters collect --process-id 2196 --format json -o diagnostics.json --counters Sample.EventCounter.Minimal,Microsoft.AspNetCore.Hosting[total-requests,requests-per-second],System.Runtime[cpu-usage]
 ```
 
 Novamente, enquanto o comando estiver em execução, mantenha <kbd>F5</kbd> no navegador para começar a emitir solicitações contínuas para o `https://localhost:5001/api/values` ponto de extremidade. Depois de alguns segundos, pare pressionando <kbd>q</kbd>. O *diagnostics.jsno* arquivo é gravado. No entanto, o arquivo JSON que é gravado não é recuado; para facilitar a leitura, ele é recuado aqui.

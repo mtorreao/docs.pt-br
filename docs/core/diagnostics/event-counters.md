@@ -2,12 +2,12 @@
 title: EventCounters no .NET Core
 description: Neste artigo, você aprenderá o que é o EventCounters, como implementá-los e como consumi-los.
 ms.date: 08/07/2020
-ms.openlocfilehash: 212cd6b495785dcd091187f97a1b5e44e5597a4a
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 68c831713eed8c49d24ebf93da301ef68d213bf9
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687636"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437817"
 ---
 # <a name="eventcounters-in-net-core"></a>EventCounters no .NET Core
 
@@ -61,10 +61,10 @@ dotnet-counters ps
    1400180 sample-counters C:\sample-counters\bin\Debug\netcoreapp3.1\sample-counters.exe
 ```
 
-Passe o <xref:System.Diagnostics.Tracing.EventSource> nome para o `counter_list` comutador para começar a monitorar seu contador:
+Passe o <xref:System.Diagnostics.Tracing.EventSource> nome para a `--counters` opção de iniciar o monitoramento do seu contador:
 
 ```console
-dotnet-counters monitor --process-id 1400180 Sample.EventCounter.Minimal
+dotnet-counters monitor --process-id 1400180 --counters Sample.EventCounter.Minimal
 ```
 
 O exemplo a seguir mostra a saída do monitor:
@@ -207,7 +207,7 @@ Aqui está uma classe de exemplo <xref:System.Diagnostics.Tracing.EventListener>
 
 Como mostrado acima, você _deve_ verificar se o `"EventCounterIntervalSec"` argumento está definido no `filterPayload` argumento ao chamar <xref:System.Diagnostics.Tracing.EventListener.EnableEvents%2A> . Caso contrário, os contadores não poderão liberar valores, já que ele não sabe em qual intervalo ele deve ser liberado.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [dotnet-counters](dotnet-counters.md)
 - [dotnet-trace](dotnet-trace.md)
