@@ -3,13 +3,13 @@ title: Inicialização do aplicativo
 description: Saiba como definir a lógica de inicialização para seu aplicativo.
 author: csharpfritz
 ms.author: jefritz
-ms.date: 02/25/2020
-ms.openlocfilehash: 883f9a3fbe2d52cb7d0fbc5dfc94ce829a5d2bf3
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 11/20/2020
+ms.openlocfilehash: d812079f84f67409334d07c4c10c5577446503be
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158182"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509696"
 ---
 # <a name="app-startup"></a>Inicialização do aplicativo
 
@@ -28,7 +28,7 @@ Com o ASP.NET Core e o mais claro, esses métodos são simplificados e consolida
 
 ## <a name="blazor-server-startup-structure"></a>Estrutura de inicialização de servidor mais incrivelmente
 
-Os aplicativos de servidor mais recentes residem na parte superior de um aplicativo ASP.NET Core 3,0 ou posterior.  ASP.NET Core aplicativos Web são configurados por meio de um par de métodos na `Startup.cs` classe na pasta raiz do aplicativo.  O conteúdo padrão da classe de inicialização está listado abaixo
+Os aplicativos de servidor mais importantes residem sobre uma versão ASP.NET Core 3,0 ou posterior.  ASP.NET Core aplicativos Web são configurados por meio de um par de métodos na `Startup.cs` classe na pasta raiz do aplicativo.  O conteúdo padrão da classe de inicialização está listado abaixo
 
 ```csharp
 public class Startup
@@ -89,7 +89,7 @@ Em seguida, um método de configuração inesperado é listado para `UseStaticFi
 
 A próxima linha é a primeira que replica uma das opções de configuração do Web Forms: `UseRouting` .  Esse método adiciona o ASP.NET Core roteador ao pipeline e pode ser configurado aqui ou nos arquivos individuais aos quais ele pode considerar o roteamento.  Mais informações sobre a configuração de roteamento podem ser encontradas na [seção roteamento](pages-routing-layouts.md).
 
-A instrução final nesse método define os pontos de extremidade que ASP.NET Core está escutando.  Esses são os locais acessíveis pela Web que você pode acessar no servidor Web e receber algum conteúdo manipulado pelo .NET e retornado a você.  A primeira entrada, `MapBlazorHub` configura um Hub do signalr para uso no fornecimento da conexão em tempo real e persistente ao servidor onde o estado e a renderização de componentes mais fáceis são tratados.  A `MapFallbackToPage` chamada do método indica o local acessível pela Web da página que inicia o aplicativo mais sincero e também configura o aplicativo para lidar com solicitações de vinculação profunda do lado do cliente.  Você verá esse recurso no trabalho se abrir um navegador e navegar diretamente para uma rota manipulada mais incrivelmente em seu aplicativo, como `/counter` no modelo de projeto padrão. A solicitação é manipulada pela página de fallback *_Host. cshtml* , que, em seguida, executa o roteador mais incrivelmente e renderiza a página do contador.
+A instrução final nesse método define os pontos de extremidade que ASP.NET Core está escutando.  Essas rotas são os locais acessíveis pela Web que você pode acessar no servidor Web e receber algum conteúdo manipulado pelo .NET e retornado a você.  A primeira entrada, `MapBlazorHub` configura um Hub do signalr para uso no fornecimento da conexão em tempo real e persistente ao servidor onde o estado e a renderização de componentes mais fáceis são tratados.  A `MapFallbackToPage` chamada do método indica o local acessível pela Web da página que inicia o aplicativo mais sincero e também configura o aplicativo para lidar com solicitações de vinculação profunda do lado do cliente.  Você verá esse recurso no trabalho se abrir um navegador e navegar diretamente para uma rota manipulada mais incrivelmente em seu aplicativo, como `/counter` no modelo de projeto padrão. A solicitação é manipulada pela página de fallback *_Host. cshtml* , que, em seguida, executa o roteador mais incrivelmente e renderiza a página do contador.
 
 ## <a name="upgrading-the-bundleconfig-process"></a>Atualizando o processo BundleConfig
 

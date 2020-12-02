@@ -1,19 +1,19 @@
 ---
 title: Segurança do Azure para aplicativos nativos de nuvem
 description: Arquitetando aplicativos .NET nativos da nuvem para o Azure | Segurança do Azure para aplicativos nativos de nuvem
-ms.date: 05/13/2020
-ms.openlocfilehash: e6f91cc4c240dd3349faed2f87db1ba99b2780a9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 12/01/2020
+ms.openlocfilehash: 5e541606c762ea192ab8767e78e9b7346b3ec9c1
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91160990"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509813"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>Segurança do Azure para aplicativos nativos de nuvem
 
 Os aplicativos nativos de nuvem podem ser mais fáceis e difíceis de proteger do que os aplicativos tradicionais. Na desvantagem, você precisa proteger aplicativos mais menores e dedicar mais energia para criar a infraestrutura de segurança. A natureza heterogênea de linguagens de programação e estilos na maioria das implantações de serviço também significa que você precisa prestar mais atenção aos boletins de segurança de vários provedores diferentes.
 
-No lado do inverso, serviços menores, cada um com seu próprio armazenamento de dados, limitam o escopo de um ataque. Se um invasor comprometer um sistema, provavelmente será mais difícil para o invasor fazer o salto para outro sistema do que ele está em um aplicativo monolítico. Limites de processo são limites fortes. Além disso, se um backup de banco de dados vazar, o dano será mais limitado, pois esse banco de dado contém apenas um subconjunto de informações e é improvável que ele contenha dados pessoais.
+No lado do inverso, serviços menores, cada um com seu próprio armazenamento de dados, limitam o escopo de um ataque. Se um invasor comprometer um sistema, provavelmente será mais difícil para o invasor fazer o salto para outro sistema do que ele está em um aplicativo monolítico. Limites de processo são limites fortes. Além disso, se um backup de banco de dados for exposto, o dano será mais limitado, pois esse banco de dado conterá apenas um subconjunto e provavelmente conterá dados pessoais.
 
 ## <a name="threat-modeling"></a>Modelagem de ameaças
 
@@ -26,7 +26,7 @@ Não importa se as vantagens superam as desvantagens dos aplicativos nativos de 
 
 Todas essas perguntas fazem parte de um processo chamado [modelagem de ameaças](/azure/security/azure-security-threat-modeling-tool). Esse processo tenta responder à pergunta de quais ameaças existem no sistema, quão prováveis são as ameaças e os possíveis danos deles.
 
-Depois que a lista de ameaças tiver sido estabelecida, você precisará decidir se vale a pena mitigar. Às vezes, uma ameaça é tão improvável e dispendiosa de planejar que não vale a pena gastar energia. Por exemplo, algum ator de nível de Estado poderia injetar alterações no design de um processo que é usado por milhões de dispositivos. Agora, em vez de executar um determinado trecho de código no [anel 3](https://en.wikipedia.org/wiki/Protection_ring), esse código é executado no anel 0. Isso permite uma exploração que pode ignorar o hipervisor e executar o código de ataque nos computadores bare-metal, permitindo ataques em todas as máquinas virtuais em execução nesse hardware.
+Depois que a lista de ameaças tiver sido estabelecida, você precisará decidir se vale a pena mitigar. Às vezes, uma ameaça é tão improvável e dispendiosa de planejar que não vale a pena gastar energia. Por exemplo, algum ator de nível de Estado poderia injetar alterações no design de um processo que é usado por milhões de dispositivos. Agora, em vez de executar um determinado trecho de código no [anel 3](https://en.wikipedia.org/wiki/Protection_ring), esse código é executado no anel 0. Esse processo permite uma exploração que pode ignorar o hipervisor e executar o código de ataque nos computadores bare-metal, permitindo ataques em todas as máquinas virtuais em execução nesse hardware.
 
 Os processadores alterados são difíceis de detectar sem uma vigiados e um conhecimento avançado do design de silício do processador. Esse cenário é improvável de ocorrer e caro de atenuar, portanto, provavelmente nenhum modelo de ameaça recomendaria criar proteção de exploração para ele.
 
@@ -42,7 +42,7 @@ Em um sistema de computador, um exemplo fantástico é o direito de um usuário 
 
 Quase todas as partes da criação de um aplicativo nativo de nuvem podem se beneficiar da memorização do princípio de privilégios mínimos. Você pode encontrá-lo em jogo ao configurar firewalls, grupos de segurança de rede, funções e escopos no RBAC (controle de acesso baseado em função).
 
-## <a name="penetration-testing"></a>Testes de penetração
+## <a name="penetration-testing"></a>Teste de penetração
 
 À medida que os aplicativos se tornam mais complicados, o número de vetores de ataque aumenta em uma taxa alarmante. A modelagem de ameaças tem falhas no que tende a ser executada pelas mesmas pessoas que estão compilando o sistema. Da mesma forma que muitos desenvolvedores têm problemas para prever as interações do usuário e, em seguida, criar interfaces de usuário inutilizáveis, a maioria dos desenvolvedores tem dificuldade em ver cada vetor de ataque. Também é possível que os desenvolvedores que criam o sistema não estejam bem familiarizados com metodologias de ataque e percam algo crucial.
 
@@ -58,9 +58,9 @@ Se um invasor tentar penetrar em um aplicativo, deve haver algum aviso. Frequent
 
 Um local em que a segurança é muitas vezes ignorada em relação ao processo de compilação. O Build não só deve executar verificações de segurança, como a verificação de código inseguro ou credenciais com check-in, mas a compilação em si deve ser segura. Se o servidor de compilação estiver comprometido, ele fornecerá um vetor fantástico para introduzir código arbitrário no produto.
 
-Imagine que um invasor esteja procurando roubar as senhas de pessoas que se conectam a um aplicativo Web. Eles poderiam introduzir uma etapa de compilação que modifica o código com check-out para espelhar qualquer solicitação de logon para outro servidor. Na próxima vez que o código passar pela compilação, ele será atualizado silenciosamente. A verificação da vulnerabilidade do código-fonte não detectará isso à medida que ela for executada antes da compilação. Igualmente, ninguém vai capturá-lo em uma revisão de código porque as etapas de compilação residem no servidor de compilação. O código explorado vai para a produção onde ele pode coletar senhas. Provavelmente, não há nenhum log de auditoria das alterações do processo de compilação ou pelo menos ninguém monitorando a auditoria.
+Imagine que um invasor esteja procurando roubar as senhas de pessoas que se conectam a um aplicativo Web. Eles poderiam introduzir uma etapa de compilação que modifica o código com check-out para espelhar qualquer solicitação de logon para outro servidor. Na próxima vez que o código passar pela compilação, ele será atualizado silenciosamente. A verificação de vulnerabilidades do código-fonte não detectará essa vulnerabilidade à medida que ela for executada antes da compilação. Igualmente, ninguém vai capturá-lo em uma revisão de código porque as etapas de compilação residem no servidor de compilação. O código explorado vai para a produção onde ele pode coletar senhas. Provavelmente, não há nenhum log de auditoria das alterações do processo de compilação ou pelo menos ninguém monitorando a auditoria.
 
-Este é um exemplo perfeito de um destino aparentemente pouco baixo que pode ser usado para dividir o sistema. Quando um invasor viola o perímetro do sistema, ele pode começar a trabalhar com a localização de maneiras de elevar suas permissões até o ponto que elas podem causar danos reais em qualquer lugar.
+Esse cenário é um exemplo perfeito de um destino aparentemente de valor baixo que pode ser usado para dividir o sistema. Quando um invasor viola o perímetro do sistema, ele pode começar a trabalhar com a localização de maneiras de elevar suas permissões até o ponto que elas podem causar danos reais em qualquer lugar.
 
 ## <a name="building-secure-code"></a>Compilando código seguro
 
@@ -82,7 +82,7 @@ Em um ambiente de implantação local, uma grande quantidade de energia é dedic
 
 Na caixa, a maioria dos recursos de PaaS do Azure tem apenas a configuração de rede mais básica e permissiva. Por exemplo, qualquer pessoa na Internet pode acessar um serviço de aplicativo. Novas instâncias de SQL Server normalmente vêm restritas, para que as partes externas não possam acessá-las, mas os intervalos de endereços IP usados pelo próprio Azure são permitidos por meio do. Portanto, embora o SQL Server seja protegido contra ameaças externas, um invasor só precisa configurar um bridgehead do Azure do qual eles podem iniciar ataques em todas as instâncias do SQL no Azure.
 
-Felizmente, a maioria dos recursos do Azure pode ser colocada em uma rede virtual do Azure que permite um controle de acesso mais preciso. De forma semelhante à maneira como as redes locais estabelecem redes privadas que são protegidas do mundo mais amplo, as redes virtuais são ilhas de endereços IP privados localizados na rede do Azure.
+Felizmente, a maioria dos recursos do Azure pode ser colocada em uma rede virtual do Azure que permite o controle de acesso refinado. De forma semelhante à maneira como as redes locais estabelecem redes privadas que são protegidas do mundo mais amplo, as redes virtuais são ilhas de endereços IP privados localizados na rede do Azure.
 
 ![Figura 9-1 uma rede virtual no Azure](./media/virtual-network.png)
 
@@ -90,7 +90,7 @@ Felizmente, a maioria dos recursos do Azure pode ser colocada em uma rede virtua
 
 Da mesma forma que as redes locais têm um firewall que rege o acesso à rede, você pode estabelecer um firewall semelhante no limite da rede virtual. Por padrão, todos os recursos em uma rede virtual ainda podem se comunicar com a Internet. São apenas conexões de entrada que exigem alguma forma de exceção de firewall explícita.
 
-Com a rede estabelecida, recursos internos, como contas de armazenamento, podem ser configurados para permitir apenas o acesso por recursos que também estão na rede virtual. Esse firewall fornece um nível extra de segurança, caso as chaves dessa conta de armazenamento sejam vazadas, os invasores não conseguirão se conectar a ela para explorar as chaves vazadas. Este é outro exemplo do princípio de privilégios mínimos.
+Com a rede estabelecida, recursos internos, como contas de armazenamento, podem ser configurados para permitir apenas o acesso por recursos que também estão na rede virtual. Esse firewall fornece um nível extra de segurança, caso as chaves dessa conta de armazenamento sejam vazadas, os invasores não conseguirão se conectar a ela para explorar as chaves vazadas. Esse cenário é outro exemplo do princípio de privilégios mínimos.
 
 Os nós em um cluster kubernetes do Azure podem participar de uma rede virtual, assim como outros recursos mais nativos do Azure. Essa funcionalidade é chamada de [interface de rede de contêiner do Azure](https://github.com/Azure/azure-container-networking/blob/master/docs/cni.md). Na verdade, ele aloca uma sub-rede dentro da rede virtual na qual as máquinas virtuais e as imagens de contêiner são distribuídas.
 
@@ -98,7 +98,7 @@ Continuando o caminho para ilustrar o princípio de menos privilégios, nem todo
 
 Uma política de negação de comunicação entre recursos pode ser irritante de ser implementada, especialmente proveniente de uma experiência de uso do Azure sem restrições de tráfego. Em algumas outras nuvens, o conceito de grupos de segurança de rede é muito mais predominante. Por exemplo, a política padrão em AWS é que os recursos não podem se comunicar entre si até serem habilitados por regras em um NSG. Embora seja mais lento para desenvolver isso, um ambiente mais restritivo fornece um padrão mais seguro. Fazer uso de práticas DevOps adequadas, especialmente usando [Azure Resource Manager ou Terraform](infrastructure-as-code.md) para gerenciar permissões pode facilitar o controle das regras.
 
-As redes virtuais também podem ser úteis ao configurar a comunicação entre recursos locais e na nuvem. Uma rede virtual privada pode ser usada para conectar diretamente as duas redes. Isso permite a execução de uma rede virtual sem qualquer tipo de gateway para cenários em que todos os usuários estejam no local. Há várias tecnologias que podem ser usadas para estabelecer essa rede. A mais simples é usar uma [VPN site a site](/azure/vpn-gateway/vpn-gateway-about-vpngateways?toc=%252fazure%252fvirtual-network%252ftoc.json#s2smulti) que possa ser estabelecida entre vários roteadores e o Azure. O tráfego é criptografado e encapsulado pela Internet no mesmo custo por byte que qualquer outro tráfego. Para cenários em que mais largura de banda ou mais segurança são desejáveis, o Azure oferece um serviço chamado [rota expressa](/azure/vpn-gateway/vpn-gateway-about-vpngateways?toc=%252fazure%252fvirtual-network%252ftoc.json#ExpressRoute) que usa um circuito privado entre uma rede local e o Azure. É mais dispendioso e difícil de estabelecer, mas também mais seguro.
+As redes virtuais também podem ser úteis ao configurar a comunicação entre recursos locais e na nuvem. Uma rede virtual privada pode ser usada para conectar diretamente as duas redes. Essa abordagem permite a execução de uma rede virtual sem qualquer tipo de gateway para cenários em que todos os usuários estejam no local. Há várias tecnologias que podem ser usadas para estabelecer essa rede. A mais simples é usar uma [VPN site a site](/azure/vpn-gateway/vpn-gateway-about-vpngateways?toc=%252fazure%252fvirtual-network%252ftoc.json#s2smulti) que possa ser estabelecida entre vários roteadores e o Azure. O tráfego é criptografado e encapsulado pela Internet no mesmo custo por byte que qualquer outro tráfego. Para cenários em que mais largura de banda ou mais segurança são desejáveis, o Azure oferece um serviço chamado [rota expressa](/azure/vpn-gateway/vpn-gateway-about-vpngateways?toc=%252fazure%252fvirtual-network%252ftoc.json#ExpressRoute) que usa um circuito privado entre uma rede local e o Azure. É mais dispendioso e difícil de estabelecer, mas também mais seguro.
 
 ## <a name="role-based-access-control-for-restricting-access-to-azure-resources"></a>Controle de acesso baseado em função para restringir o acesso aos recursos do Azure
 
@@ -121,7 +121,7 @@ A entidade de segurança pode ser aplicada à maioria dos recursos. Isso signifi
 
 ## <a name="roles"></a>Funções
 
-Uma entidade de segurança pode assumir muitas funções ou, usando uma analogia mais sartorial, ter muitas chapéus. Cada função define uma série de permissões, como "ler mensagens do ponto de extremidade do barramento de serviço do Azure". O conjunto de permissões efetivas de uma entidade de segurança é a combinação de todas as permissões atribuídas a todas as funções que a entidade de segurança tem. O Azure tem um grande número de funções internas e os usuários podem definir suas próprias funções.
+Uma entidade de segurança pode assumir muitas funções ou, usando uma analogia mais sartorial, ter muitas chapéus. Cada função define uma série de permissões, como "ler mensagens do ponto de extremidade do barramento de serviço do Azure". O conjunto de permissões efetivas de uma entidade de segurança é a combinação de todas as permissões atribuídas a todas as funções que uma entidade de segurança tem. O Azure tem um grande número de funções internas e os usuários podem definir suas próprias funções.
 
 ![Figura 9-3 definições de função do RBAC](./media/rbac-role-definition.png)
 
@@ -137,7 +137,7 @@ As funções podem ser aplicadas a um conjunto restrito de recursos no Azure. Po
 
 O escopo pode ser tão estreito quanto um único recurso ou pode ser aplicado a um grupo de recursos, assinatura ou até mesmo grupo de gerenciamento inteiro.
 
-Ao testar se uma entidade de segurança tem uma determinada permissão, a combinação de função e escopo é levada em conta. Essa combinação fornece um poderoso mecanismo de autorização.
+Ao testar se uma entidade de segurança tem determinada permissão, a combinação de função e escopo é levada em conta. Essa combinação fornece um poderoso mecanismo de autorização.
 
 ## <a name="deny"></a>Negar
 
@@ -147,7 +147,7 @@ As regras de negação têm precedência sobre regras de permissão. Agora que r
 
 ## <a name="checking-access"></a>Verificando o acesso
 
-Como você pode imaginar, ter um grande número de funções e escopos pode tornar a descoberta da permissão efetiva de uma entidade de serviço muito difícil. Empilhando regras de negação além disso, serve apenas para aumentar a complexidade. Felizmente, há uma [calculadora de permissões](/azure/role-based-access-control/check-access) que pode mostrar as permissões efetivas para qualquer entidade de serviço. Normalmente, ele é encontrado na guia IAM no portal, como mostra a Figura 10-3.
+Como você pode imaginar, ter um grande número de funções e escopos pode tornar a descoberta da permissão efetiva de uma entidade de serviço muito difícil. Empilhando regras de negação além disso, serve apenas para aumentar a complexidade. Felizmente, há uma [calculadora de permissões](/azure/role-based-access-control/check-access) que pode mostrar as permissões efetivas para qualquer entidade de serviço. Normalmente, ele é encontrado na guia IAM no portal, como mostra a Figura 9-3.
 
 ![Figura 9-4 calculadora de permissão para um serviço de aplicativo](./media/check-rbac.png)
 
@@ -159,7 +159,7 @@ Senhas e certificados são um vetor de ataque comum para invasores. O hardware d
 
 Muitos especialistas em segurança [sugerem](https://www.troyhunt.com/password-managers-dont-have-to-be-perfect-they-just-have-to-be-better-than-not-having-one/) que usar um Gerenciador de senhas para manter suas próprias senhas é a melhor abordagem. Embora centralize suas senhas em um único local, ela também permite o uso de senhas altamente complexas e a garantia de que são exclusivas para cada conta. O mesmo sistema existe no Azure: um repositório central para segredos.
 
-## <a name="azure-key-vault"></a>Cofre de Chave do Azure
+## <a name="azure-key-vault"></a>Azure Key Vault
 
 Azure Key Vault fornece um local centralizado para armazenar senhas para coisas como bancos de dados, chaves de API e certificados. Depois que um segredo é inserido no cofre, ele nunca é mostrado novamente e os comandos para extraí-los e exibi-los são propositadamente complicados. As informações no seguro são protegidas usando os módulos de segurança de hardware validados por criptografia de software ou FIPS 140-2 nível 2.
 
@@ -225,17 +225,17 @@ Embora esse nível de criptografia não seja suficiente para todo o tempo, deve 
 
 ### <a name="at-rest"></a>Em repouso
 
-Em qualquer aplicativo, há vários locais em que os dados são colocados no disco. O código do aplicativo em si é carregado de algum mecanismo de armazenamento. A maioria dos aplicativos também usa algum tipo de banco de dados, como SQL Server, Cosmos DB ou até mesmo o enorme armazenamento de tabelas eficiente em termos de preço. Todos esses bancos de dados usam armazenamento com criptografia intensa para garantir que ninguém diferente dos aplicativos com as permissões adequadas possa ler seus dados. Até mesmo os operadores do sistema não podem ler dados que foram criptografados. Assim, os clientes podem permanecer confiantes de que suas informações secretas permanecem secretas.
+Em qualquer aplicativo, há vários locais em que os dados são REST no disco. O código do aplicativo em si é carregado de algum mecanismo de armazenamento. A maioria dos aplicativos também usa algum tipo de banco de dados, como SQL Server, Cosmos DB ou até mesmo o enorme armazenamento de tabelas eficiente em termos de preço. Todos esses bancos de dados usam armazenamento com criptografia intensa para garantir que ninguém diferente dos aplicativos com as permissões adequadas possa ler seus dados. Até mesmo os operadores do sistema não podem ler dados que foram criptografados. Assim, os clientes podem permanecer confiantes de que suas informações secretas permanecem secretas.
 
 ### <a name="storage"></a>Armazenamento
 
-A base de grande parte do Azure é o mecanismo de armazenamento do Azure. Os discos de máquina virtual são montados sobre o armazenamento do Azure. Os serviços Kubernetess do Azure são executados em máquinas virtuais que, por sua conta, são hospedadas no armazenamento do Azure. Mesmo as tecnologias sem servidor, como Azure Functions aplicativos e instâncias de contêiner do Azure, ficam fora do disco que faz parte do armazenamento do Azure.
+A base de grande parte do Azure é o mecanismo de armazenamento do Azure. Os discos de máquina virtual são montados sobre o armazenamento do Azure. O serviço kubernetes do Azure é executado em máquinas virtuais que, por sua conta, estão hospedadas no armazenamento do Azure. Mesmo as tecnologias sem servidor, como Azure Functions aplicativos e instâncias de contêiner do Azure, ficam fora do disco que faz parte do armazenamento do Azure.
 
 Se o armazenamento do Azure estiver bem criptografado, ele fornecerá uma base para que a maioria das outras coisas também seja criptografada. O armazenamento do Azure [é criptografado](/azure/storage/common/storage-service-encryption) com o [AES de 256 bits](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)compatível com [FIPS 140-2](https://en.wikipedia.org/wiki/FIPS_140) . Essa é uma tecnologia de criptografia bem considerada que tem sido o assunto de uma ampla investigação acadêmica nos últimos 20 anos. No momento, não há nenhum ataque prático conhecido que permitisse alguém sem conhecimento da chave para ler os dados criptografados pelo AES.
 
 Por padrão, as chaves usadas para criptografar o armazenamento do Azure são gerenciadas pela Microsoft. Há proteções extensivas em vigor para garantir o acesso mal-intencionado a essas chaves. No entanto, os usuários com requisitos de criptografia específicos também podem [fornecer suas próprias chaves de armazenamento](/azure/storage/common/storage-encryption-keys-powershell) que são gerenciadas em Azure Key Vault. Essas chaves podem ser revogadas a qualquer momento, o que efetivamente renderizaria o conteúdo da conta de armazenamento usando-os inacessíveis.
 
-As máquinas virtuais usam o armazenamento criptografado, mas é possível fornecer outra camada de criptografia usando tecnologias como BitLocker no Windows ou DM-cript no Linux. Essas tecnologias significam que, mesmo que a imagem do disco tenha sido vazada fora do armazenamento, ela permaneceria quase impossível de ler.
+As máquinas virtuais usam o armazenamento criptografado, mas é possível fornecer outra camada de criptografia usando tecnologias como o BitLocker no Windows ou DM-Crypt no Linux. Essas tecnologias significam que, mesmo que a imagem do disco tenha sido vazada fora do armazenamento, ela permaneceria quase impossível de ler.
 
 ### <a name="azure-sql"></a>SQL do Azure
 
