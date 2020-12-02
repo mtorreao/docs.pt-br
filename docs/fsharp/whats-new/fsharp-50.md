@@ -2,12 +2,12 @@
 title: 'O que há de novo no guia F # 5,0-F #'
 description: 'Obtenha uma visão geral dos novos recursos disponíveis em F # 5,0.'
 ms.date: 11/06/2020
-ms.openlocfilehash: 29b5b110379dec476d7c0aa51540984acb25f26e
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: dd954fac31b008beab37cd6c1f06b1d41c5d5004
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95098691"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438011"
 ---
 # <a name="whats-new-in-f-50"></a>O que há de novo no F # 5,0
 
@@ -56,7 +56,7 @@ let test p str =
 test pfloat "1.234"
 ```
 
-Esse recurso implementa a [ferramenta F # do RFC FST-1027](https://github.com/fsharp/fslang-design/blob/master/tooling/FST-1027-fsi-references.md). Para obter mais informações sobre referências de pacote, consulte o tutorial de [F# interativo](../tutorials/fsharp-interactive/index.md) .
+Esse recurso implementa a [ferramenta F # do RFC FST-1027](https://github.com/fsharp/fslang-design/blob/master/tooling/FST-1027-fsi-references.md). Para obter mais informações sobre referências de pacote, consulte o tutorial de [F# interativo](../tools/fsharp-interactive/index.md) .
 
 ## <a name="string-interpolation"></a>Interpolação de cadeia de caracteres
 
@@ -272,7 +272,7 @@ Esse recurso implementa o [F # RFC FS-1077b](https://github.com/fsharp/fslang-de
 
 ## <a name="f-quotations-improvements"></a>Melhorias de Cotações de F #
 
-As [Cotações de código](../language-reference/code-quotations.md) F # agora têm a capacidade de reter informações de restrição de tipo. Considere o exemplo a seguir:
+As [Cotações de código](../language-reference/code-quotations.md) F # agora têm a capacidade de reter informações de restrição de tipo. Considere o seguinte exemplo:
 
 ```fsharp
 open FSharp.Linq.RuntimeHelpers

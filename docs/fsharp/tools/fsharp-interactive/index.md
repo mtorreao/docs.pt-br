@@ -1,15 +1,15 @@
 ---
 title: Referência de F# Interativo (dotnet)
 description: 'Saiba como F# Interativo (dotNet FSI) é usado para executar o código F # interativamente no console ou para executar scripts em F #.'
-ms.date: 10/31/2020
+ms.date: 11/29/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: b535cb03d76909043ca192ed5a9d2078f9343795
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: 92177c41dc6b31d9186bae8176f85787e2fb89e0
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95099470"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438043"
 ---
 # <a name="interactive-programming-with-f"></a>Programação interativa com F\#
 
@@ -118,6 +118,17 @@ let f (x: Tensor) = sin (sqrt x)
 printfn "%A" (f (dsharp.tensor 1.2))
 ```
 
+### <a name="specifying-a-package-source"></a>Especificando uma origem de pacote
+
+Você também pode especificar uma origem de pacote com o `#i` comando. O exemplo a seguir especifica uma fonte remota e local:
+
+```fsharp
+#i "nuget:https://my-remote-package-source/index.json
+#i @"path-to-my-local-source"
+```
+
+Isso fará com que o mecanismo de resolução nos bastidores também leve em consideração as fontes remotas e/ou locais adicionadas a um script.
+
 Você pode especificar quantas referências de pacote desejar em um script.
 
 > [!NOTE]
@@ -210,7 +221,7 @@ Você também pode usar `System.Environment.GetCommandLineArgs()` o para acessar
 
 As `#r` `#load` diretivas e vistas anteriormente só estão disponíveis no F# interativo. Há várias diretivas disponíveis somente no F# Interativo:
 
-|Diretiva|Description|
+|Diretiva|Descrição|
 |---------|-----------|
 |`#r "nuget:..."`|Referencia um pacote do NuGet|
 |`#r "assembly-name.dll"`|Faz referência a um assembly no disco|
