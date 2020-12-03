@@ -2,12 +2,12 @@
 title: dotnet-ferramenta de diagnóstico de rastreamento-CLI do .NET
 description: Saiba como instalar e usar a ferramenta de CLI de rastreamento dotnet para coletar rastreamentos do .NET de um processo em execução sem o criador de perfil nativo, usando o .NET EventPipe.
 ms.date: 11/17/2020
-ms.openlocfilehash: d0798e4f703c18c48db47193ac24ec0d13b66ae5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 6bc5ad449f62ed0080ff6b1f401f1871d90cf5ec
+ms.sourcegitcommit: c6de55556add9f92af17e0f8d1da8f356a19a03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829304"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96549326"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-utilitário de análise de desempenho de rastreamento
 
@@ -115,7 +115,13 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
 
 - **`--profile <profile-name>`**
 
-  Um conjunto nomeado predefinido de configurações de provedor que permite que cenários de rastreamento comuns sejam especificados de forma sucinta.
+  Um conjunto nomeado predefinido de configurações de provedor que permite que cenários de rastreamento comuns sejam especificados de forma sucinta. Os seguintes perfis estão disponíveis:
+
+ | Perfil | Descrição |
+ |---------|-------------|
+ |`cpu-sampling`|Útil para controlar o uso da CPU e informações gerais de tempo de execução do .NET. Essa será a opção padrão se nenhum perfil ou provedor for especificado.|
+ |`gc-verbose`|Rastreia coleções de GC e as alocações de objeto de exemplos.|
+ |`gc-collect`|Rastreia coleções de GC somente em sobrecarga muito baixa.|
 
 - **`--providers <list-of-comma-separated-providers>`**
 
@@ -190,7 +196,7 @@ Para coletar rastreamentos usando `dotnet-trace` :
   - No Linux, por exemplo, o `ps` comando.
   - [dotnet-rastrear PS](#dotnet-trace-ps)
 
-- Execute o seguinte comando:
+- Execute o comando a seguir:
 
   ```console
   dotnet-trace collect --process-id <PID>
