@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 6fb33ad2eb3f6a5e8f6506527f3807f31bf33fdc
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 64c9e9eba2495531cfef8a603d53fb21c95c87a4
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "92471645"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599389"
 ---
 # <a name="value-types-c-reference"></a>Tipos de valor (referência C#)
 
@@ -31,7 +31,7 @@ Se um tipo de valor contiver um membro de dados de um tipo de referência, somen
 > [!NOTE]
 > Para tornar seu código menos propenso a erros e mais robusto, defina e use tipos de valor imutável. Este artigo usa tipos de valores mutáveis somente para fins de demonstração.
 
-## <a name="kinds-of-value-types"></a>Tipos de tipos de valor
+## <a name="kinds-of-value-types-and-type-constraints"></a>Tipos de tipos de valor e restrições de tipo
 
 Um tipo de valor pode ser um dos dois tipos a seguir:
 
@@ -39,6 +39,8 @@ Um tipo de valor pode ser um dos dois tipos a seguir:
 - um [tipo de enumeração](enum.md), que é definido por um conjunto de constantes nomeadas e representa uma opção ou uma combinação de opções
 
 Um [tipo de valor anulável](nullable-value-types.md) `T?` representa todos os valores de seu tipo de valor subjacente `T` e um valor [nulo](../keywords/null.md) adicional. Não é possível atribuir `null` a uma variável de um tipo de valor, a menos que seja um tipo de valor anulável.
+
+Você pode usar a [ `struct` restrição](../../programming-guide/generics/constraints-on-type-parameters.md) para especificar que um parâmetro de tipo é um tipo de valor não anulável. Os tipos de estrutura e enumeração atendem à `struct` restrição. A partir do C# 7,3, você pode usar `System.Enum` em uma restrição de classe base (que é conhecida como [restrição de enumeração](../../programming-guide/generics/constraints-on-type-parameters.md#enum-constraints)) para especificar que um parâmetro de tipo é um tipo de enumeração.
 
 ## <a name="built-in-value-types"></a>Tipos de valores internos
 

@@ -4,12 +4,12 @@ description: Uma visão geral das ferramentas adicionais que você pode instalar
 author: mlacouture
 ms.date: 02/13/2020
 ms.custom: mvc
-ms.openlocfilehash: f563dff312442cbf068d52d08992621e3d6f1460
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6aa8b62f02c4325664ffeccc0c0d4a0635a96f2d
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95698995"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599213"
 ---
 # <a name="net-core-additional-tools-overview"></a>Visão geral das ferramentas adicionais do .NET Core
 
@@ -28,6 +28,10 @@ A [ferramenta de desinstalação do .NET Core](https://github.com/dotnet/cli-lab
 [dotnet-gcdump](../diagnostics/dotnet-gcdump.md) fornece uma maneira de coletar despejos de GC (coletor de lixo) de processos do .net em tempo real.
 
 [dotnet-Trace](../diagnostics/dotnet-trace.md) coleta dados de criação de perfil de seu aplicativo que podem ajudar em cenários em que você precisa descobrir o que faz com que um aplicativo seja executado lentamente.
+
+## <a name="net-install-tool-for-extension-authors"></a>Ferramenta de instalação do .NET para autores de extensão
+
+A [ferramenta de instalação do .net para autores de extensão](https://github.com/dotnet/vscode-dotnet-runtime) é uma extensão Visual Studio Code que permite a aquisição do tempo de execução do .NET Core especificamente para autores de extensão vs Code. Essa ferramenta deve ser utilizada em extensões que são escritas em .NET e exigem que o .NET inicialize as partes da extensão (por exemplo, um servidor de idioma). A extensão não deve ser usada diretamente pelos usuários para instalar o .NET para desenvolvimento.
 
 ## <a name="wcf-web-service-reference-tool"></a>Ferramenta de referência do serviço Web WCF
 

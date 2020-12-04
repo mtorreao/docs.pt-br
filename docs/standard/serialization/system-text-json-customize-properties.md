@@ -10,19 +10,19 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 28f7d03ae9f794f6e5ea34a95082a059451daec6
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: c754d41071e886bc1efcc3a30e249bf9e554ab5b
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96439895"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599584"
 ---
 # <a name="how-to-customize-property-names-and-values-with-no-locsystemtextjson"></a>Como personalizar nomes de propriedade e valores com System.Text.Json
 
 Por padrão, os nomes de propriedade e as chaves de dicionário são inalterados na saída JSON, incluindo maiúsculas e minúsculas. Os valores de enumeração são representados como números. Neste artigo, você aprenderá a:
 
 > [!NOTE]
-> Os [padrões da Web](system-text-json-configure-options.md#web-defaults-for-jsonserializeroptions) são camel case.
+> O [padrão da Web](system-text-json-configure-options.md#web-defaults-for-jsonserializeroptions) é o camel case.
 
 * [Personalizar nomes de propriedade individuais](#customize-individual-property-names)
 * [Converter todos os nomes de propriedade em camel case](#use-camel-case-for-all-json-property-names)
@@ -167,11 +167,11 @@ Os nomes de cadeias de caracteres de enumeração também podem ser desserializa
 ## <a name="see-also"></a>Confira também
 
 * [System.Text.Json sobre](system-text-json-overview.md)
-* [Criar instância de JsonSerializerOptions](system-text-json-configure-options.md)
-* [Habilitar correspondência que não diferencia maiúsculas de minúsculas](system-text-json-character-casing.md)
-* [Ignorar Propriedades](system-text-json-ignore-properties.md)
+* [Criar uma instância de JsonSerializerOptions](system-text-json-configure-options.md)
+* [Habilitar a correspondência sem diferenciação de maiúsculas e minúsculas](system-text-json-character-casing.md)
+* [Ignorar propriedades](system-text-json-ignore-properties.md)
 * [Permitir JSON inválido](system-text-json-invalid-json.md)
-* [Processar JSON de estouro](system-text-json-handle-overflow.md)
+* [Manipular JSON de estouro](system-text-json-handle-overflow.md)
 * [Preservar referências circulares](system-text-json-preserve-references.md)
 * [Tipos imutáveis e acessadores não públicos](system-text-json-immutability.md)
 * [Serialização polimórfica](system-text-json-polymorphism.md)

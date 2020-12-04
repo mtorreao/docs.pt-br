@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 4bd57d32120f51ffd1ff09c9817edbafa28a3f19
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 2d663ac8c1c15d61959a62c40d9a3b0993484032
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96439882"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599070"
 ---
 # <a name="how-to-enable-case-insensitive-property-name-matching-with-no-locsystemtextjson"></a>Como habilitar a correspondência de nome de propriedade que não diferencia maiúsculas de minúsculas com System.Text.Json
 
@@ -26,7 +26,7 @@ Neste artigo, você aprenderá a habilitar a correspondência de nome de proprie
 Por padrão, a desserialização procura as correspondências de nome de propriedade que diferenciam maiúsculas de minúsculas entre JSON e as propriedades do objeto de destino. Para alterar esse comportamento, defina <xref:System.Text.Json.JsonSerializerOptions.PropertyNameCaseInsensitive?displayProperty=nameWithType> como `true` :
 
 > [!NOTE]
-> Os [padrões da Web](system-text-json-configure-options.md#web-defaults-for-jsonserializeroptions) não diferenciam maiúsculas de minúsculas.
+> O [padrão da Web](system-text-json-configure-options.md#web-defaults-for-jsonserializeroptions) não diferencia maiúsculas de minúsculas.
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/DeserializeCaseInsensitive.cs" id="Deserialize":::
 
@@ -45,11 +45,11 @@ Aqui está um exemplo de JSON com nomes de Propriedade do camel case. Ele pode s
 ## <a name="see-also"></a>Confira também
 
 * [System.Text.Json sobre](system-text-json-overview.md)
-* [Criar instância de JsonSerializerOptions](system-text-json-configure-options.md)
-* [Personalizar nomes e valores de propriedade](system-text-json-customize-properties.md)
-* [Ignorar Propriedades](system-text-json-ignore-properties.md)
+* [Criar uma instância de JsonSerializerOptions](system-text-json-configure-options.md)
+* [Personalizar nomes e valores da propriedade](system-text-json-customize-properties.md)
+* [Ignorar propriedades](system-text-json-ignore-properties.md)
 * [Permitir JSON inválido](system-text-json-invalid-json.md)
-* [Processar JSON de estouro](system-text-json-handle-overflow.md)
+* [Manipular JSON de estouro](system-text-json-handle-overflow.md)
 * [Preservar referências circulares](system-text-json-preserve-references.md)
 * [Tipos imutáveis e acessadores não públicos](system-text-json-immutability.md)
 * [Serialização polimórfica](system-text-json-polymorphism.md)

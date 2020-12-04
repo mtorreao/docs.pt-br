@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 71c853b38e56c56d0077d7eb20e36cd83d3cd23c
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 8230dfed11bb4ba21e922827cc1a525ce45ba3e5
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224318"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599109"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Restrições a parâmetros de tipo (Guia de Programação em C#)
 
@@ -20,7 +20,7 @@ Restrições informam o compilador sobre as funcionalidades que um argumento de 
 
 |Constraint|Descrição|
 |----------------|-----------------|
-|`where T : struct`|O argumento de tipo deve ser um tipo de valor não anulável. Para obter informações sobre tipos de valor anulável, consulte [tipos de valor anulável](../../language-reference/builtin-types/nullable-value-types.md). Como todos os tipos de valor têm um construtor acessível sem parâmetros, a `struct` restrição implica a `new()` restrição e não pode ser combinada com a `new()` restrição. Não é possível combinar a `struct` restrição com a `unmanaged` restrição.|
+|`where T : struct`|O argumento de tipo deve ser um tipo de [valor](../../language-reference/builtin-types/value-types.md)não anulável. Para obter informações sobre tipos de valor anulável, consulte [tipos de valor anulável](../../language-reference/builtin-types/nullable-value-types.md). Como todos os tipos de valor têm um construtor acessível sem parâmetros, a `struct` restrição implica a `new()` restrição e não pode ser combinada com a `new()` restrição. Não é possível combinar a `struct` restrição com a `unmanaged` restrição.|
 |`where T : class`|O argumento de tipo deve ser um tipo de referência. Essa restrição se aplica também a qualquer classe, interface, delegado ou tipo de matriz. Em um contexto anulável no C# 8,0 ou posterior, `T` deve ser um tipo de referência não anulável. |
 |`where T : class?`|O argumento de tipo deve ser um tipo de referência, anulável ou não anulável. Essa restrição se aplica também a qualquer classe, interface, delegado ou tipo de matriz.|
 |`where T : notnull`|O argumento de tipo deve ser um tipo não anulável. O argumento pode ser um tipo de referência não anulável em C# 8,0 ou posterior, ou um tipo de valor não anulável. |
@@ -122,7 +122,7 @@ Você pode usá-lo conforme mostrado no exemplo a seguir para criar uma enum e c
 
 [!code-csharp[using the enum constrained method](snippets/GenericWhereConstraints.cs#20)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Collections.Generic>
 - [Guia de programação C#](../index.md)

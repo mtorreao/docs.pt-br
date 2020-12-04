@@ -2,12 +2,12 @@
 title: Publicação de aplicativos
 description: Saiba mais sobre as maneiras de publicar um aplicativo .NET Core. O .NET Core pode publicar aplicativos específicos da plataforma ou de plataforma cruzada. Você pode publicar um aplicativo como independente ou dependente de estrutura. Cada modo afeta como um usuário executa seu aplicativo.
 ms.date: 04/01/2020
-ms.openlocfilehash: 27206065c899e41a44685f72cfb35ae57986aa4c
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 03d53c8b5184d7276a69a1058d6b1b2f1e62dc81
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654666"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599571"
 ---
 # <a name="net-core-application-publishing-overview"></a>Visão geral da publicação de aplicativos do .NET Core
 
@@ -67,7 +67,7 @@ A publicação de um aplicativo como dependente de estrutura produz um [binário
 
 O binário de plataforma cruzada do seu aplicativo pode ser executado com o `dotnet <filename.dll>` comando e pode ser executado em qualquer plataforma. Se o aplicativo usar um pacote NuGet que tenha implementações específicas de plataforma, as dependências de todas as plataformas serão copiadas para a pasta de publicação junto com o aplicativo.
 
-Você pode criar um executável para uma plataforma específica passando os `-r <RID> --self-contained false` parâmetros para o [`dotnet publish`](../tools/dotnet-publish.md) comando. Quando o `-r` parâmetro é omitido, um executável é criado para sua plataforma atual. Todos os pacotes NuGet que têm dependências específicas da plataforma para a plataforma de destino são copiados para a pasta de publicação.
+Você pode criar um executável para uma plataforma específica passando os `-r <RID> --self-contained false` parâmetros para o [`dotnet publish`](../tools/dotnet-publish.md) comando. Quando o `-r` parâmetro é omitido, um executável é criado para sua plataforma atual. Todos os pacotes NuGet que têm dependências específicas da plataforma para a plataforma de destino são copiados para a pasta de publicação. Se você não precisar de um executável específico do platfrom, poderá especificar `<UseAppHost>False</UseAppHost>` no arquivo do projeto. Para obter mais informações, consulte [referência do MSBuild para projetos do SDK do .net](../project-sdk/msbuild-props.md#useapphost).
 
 ### <a name="advantages"></a>Vantagens
 
@@ -111,7 +111,7 @@ dotnet publish -r linux-x64 --self-contained false
 
 Publicar seu aplicativo como independente produz um executável específico da plataforma. A pasta de publicação de saída contém todos os componentes do aplicativo, incluindo as bibliotecas do .NET Core e o tempo de execução de destino. O aplicativo é isolado de outros aplicativos do .NET Core e não usa um tempo de execução compartilhado localmente instalado. O usuário do seu aplicativo não é necessário para baixar e instalar o .NET Core.
 
-O binário executável é produzido para a plataforma de destino especificada. Por exemplo, se você tiver um aplicativo chamado **word_reader**e publicar um executável independente para o Windows, um arquivo de *word_reader.exe* será criado. Publicação para Linux ou macOS, um arquivo de *word_reader* é criado. A plataforma e a arquitetura de destino são especificadas com o `-r <RID>` parâmetro para o [`dotnet publish`](../tools/dotnet-publish.md) comando. Para obter mais informações sobre RIDs, consulte [Catálogo de RID do .NET Core](../rid-catalog.md).
+O binário executável é produzido para a plataforma de destino especificada. Por exemplo, se você tiver um aplicativo chamado **word_reader** e publicar um executável independente para o Windows, um arquivo de *word_reader.exe* será criado. Publicação para Linux ou macOS, um arquivo de *word_reader* é criado. A plataforma e a arquitetura de destino são especificadas com o `-r <RID>` parâmetro para o [`dotnet publish`](../tools/dotnet-publish.md) comando. Para obter mais informações sobre RIDs, consulte [Catálogo de RID do .NET Core](../rid-catalog.md).
 
 Se o aplicativo tiver dependências específicas da plataforma, como um pacote NuGet que contém dependências específicas da plataforma, eles serão copiados para a pasta de publicação junto com o aplicativo.
 
@@ -179,7 +179,7 @@ Publicar um aplicativo independente e ReadyToRun. Um executável do Windows de 6
 dotnet publish -c Release -r win-x64 -p:PublishReadyToRun=true
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Implantando aplicativos .NET Core com o CLI do .NET Core.](deploy-with-cli.md)
 - [Implantação de aplicativos .NET Core com o Visual Studio.](deploy-with-vs.md)

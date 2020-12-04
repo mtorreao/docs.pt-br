@@ -2,12 +2,12 @@
 title: Criar uma biblioteca de classes .NET usando Visual Studio Code
 description: Saiba como criar uma biblioteca de classes .NET usando Visual Studio Code.
 ms.date: 11/18/2020
-ms.openlocfilehash: 4daa077fc54da3de2f808d831e06ee5f9bb3bde7
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: 4473163b76060623b364d7dabf7366c3575e3dcd
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94916085"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599493"
 ---
 # <a name="tutorial-create-a-net-class-library-using-visual-studio-code"></a>Tutorial: criar uma biblioteca de classes do .NET usando Visual Studio Code
 
@@ -166,13 +166,13 @@ Adicione um aplicativo de console que usa a biblioteca de classes. O aplicativo 
 
    O programa solicita que o usuário insira uma cadeia de caracteres. Ele indica se a cadeia de caracteres começa com um caractere maiúsculo. Se o usuário pressionar a tecla <kbd>Enter</kbd> sem inserir uma cadeia de caracteres, o aplicativo será encerrado e a janela do console será fechada.
 
-1. Salve suas alterações.
+1. Salve as alterações.
 
 ## <a name="add-a-project-reference"></a>Adicionar uma referência ao projeto
 
 Inicialmente, o novo projeto de aplicativo de console não tem acesso à biblioteca de classes. Para permitir que ele chame métodos na biblioteca de classes, crie uma referência de projeto para o projeto de biblioteca de classes.
 
-1. Execute o seguinte comando:
+1. Execute o comando a seguir:
 
    ```dotnetcli
    dotnet add ShowCase/ShowCase.csproj reference StringLibrary/StringLibrary.csproj
@@ -184,7 +184,7 @@ Inicialmente, o novo projeto de aplicativo de console não tem acesso à bibliot
    Reference `..\StringLibrary\StringLibrary.csproj` added to the project.
    ```
 
-## <a name="run-the-app"></a>Executar o aplicativo
+## <a name="run-the-app"></a>Execute o aplicativo
 
 1. Execute o seguinte comando no terminal:
 
@@ -211,6 +211,7 @@ Inicialmente, o novo projeto de aplicativo de console não tem acesso à bibliot
 ## <a name="additional-resources"></a>Recursos adicionais
 
 * [Desenvolver bibliotecas com a CLI do .NET](libraries.md)
+* [.Net Standard versões e plataformas às quais eles dão suporte](../../standard/net-standard.md).
 
 ## <a name="next-steps"></a>Próximas etapas
 

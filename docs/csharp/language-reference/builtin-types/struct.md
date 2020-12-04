@@ -9,12 +9,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: daf332dae483d75ef27e78dad5ee912734ccdb5f
-ms.sourcegitcommit: 532b03d5bbab764d63356193b04cd2281bc01239
+ms.openlocfilehash: 96a39609e9ae8b11e9872b049134136fe1ff3e2a
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2020
-ms.locfileid: "92526596"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599096"
 ---
 # <a name="structure-types-c-reference"></a>Tipos de estrutura (referência C#)
 
@@ -129,6 +129,10 @@ Para declarar uma `ref` struct como [`readonly`](#readonly-struct) , combine os 
 [!code-csharp[readonly ref struct](snippets/shared/StructType.cs#ReadonlyRef)]
 
 No .NET, exemplos de uma `ref` estrutura são <xref:System.Span%601?displayProperty=nameWithType> e <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> .
+
+## <a name="struct-constraint"></a>restrição de struct
+
+Você também usa a `struct` palavra-chave na [ `struct` restrição](../../programming-guide/generics/constraints-on-type-parameters.md) para especificar que um parâmetro de tipo é um tipo de valor não anulável. Os tipos de estrutura e [Enumeração](enum.md) atendem à `struct` restrição.
 
 ## <a name="conversions"></a>Conversões
 

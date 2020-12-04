@@ -11,16 +11,16 @@ helpviewer_keywords:
 - enumeration type [C#]
 - bit flags [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 930efdbdc6a20ea301331c1ce6fc664da43bfc5f
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: a21bdf63247dc5fec95922de017e1d3502e08565
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471844"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599428"
 ---
 # <a name="enumeration-types-c-reference"></a>Tipos de enumeração (referência C#)
 
-Um *tipo de enumeração* (ou *tipo*de enumeração) é um [tipo de valor](value-types.md) definido por um conjunto de constantes nomeadas do tipo [numérico integral](integral-numeric-types.md) subjacente. Para definir um tipo de enumeração, use a `enum` palavra-chave e especifique os nomes dos *membros de enumeração*:
+Um *tipo de enumeração* (ou *tipo* de enumeração) é um [tipo de valor](value-types.md) definido por um conjunto de constantes nomeadas do tipo [numérico integral](integral-numeric-types.md) subjacente. Para definir um tipo de enumeração, use a `enum` palavra-chave e especifique os nomes dos *membros de enumeração*:
 
 ```csharp
 enum Season
@@ -62,7 +62,7 @@ Para obter mais informações e exemplos, consulte a <xref:System.FlagsAttribute
 
 O <xref:System.Enum?displayProperty=nameWithType> tipo é a classe base abstrata de todos os tipos de enumeração. Ele fornece vários métodos para obter informações sobre um tipo de enumeração e seus valores. Para obter mais informações e exemplos, consulte a <xref:System.Enum?displayProperty=nameWithType> página de referência da API.
 
-A partir do C# 7,3, você pode usar `System.Enum` em uma restrição de classe base (que é conhecida como [restrição de enumeração](../../programming-guide/generics/constraints-on-type-parameters.md#enum-constraints)) para especificar que um parâmetro de tipo é um tipo de enumeração.
+A partir do C# 7,3, você pode usar `System.Enum` em uma restrição de classe base (que é conhecida como [restrição de enumeração](../../programming-guide/generics/constraints-on-type-parameters.md#enum-constraints)) para especificar que um parâmetro de tipo é um tipo de enumeração. Qualquer tipo de enumeração também satisfaz a `struct` restrição, que é usada para especificar que um parâmetro de tipo é um tipo de valor não anulável.
 
 ## <a name="conversions"></a>Conversões
 

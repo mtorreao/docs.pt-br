@@ -4,12 +4,12 @@ description: Saiba como instalar o .NET para Apache Spark nos notebooks Jupyter 
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: e2319fec833147ce50c7b94dd8ccc84f552f20d2
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: ff6b3a64c01fb9148d3abe3d04579233d11a4f73
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688274"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599649"
 ---
 # <a name="install-net-for-apache-spark-on-jupyter-notebooks-on-azure-hdinsight-spark-clusters"></a>Instalar o .NET para Apache Spark em blocos de anotações do Jupyter em clusters Azure HDInsight Spark
 
@@ -70,7 +70,7 @@ No portal do Azure, selecione o **cluster HDInsight Spark** criado na etapa ante
    |Propriedade  |Descrição  |
    |---------|---------|
    | Tipo de script | Personalizado |
-   | Name | *Instalar o .NET para Apache Spark experiência de notebook interativa* |
+   | Nome | *Instalar o .NET para Apache Spark experiência de notebook interativa* |
    | URI do script Bash | O URI para o qual você carregou `install-interactive-notebook.sh`. |
    | Tipo(s) de nó| Cabeçalho e trabalho |
    | Parâmetros | .NET para Apache Spark versão. Você pode verificar o [.net em busca de Apache Spark versões](https://github.com/dotnet/spark/releases). Por exemplo, se você quiser instalar o Sparkdotnet versão 1.0.0, ele seria `1.0.0` .
@@ -121,11 +121,11 @@ Siga as instruções na seção [parar servidor Livy](#stop-the-livy-server) par
 
    Quando solicitado, selecione **confirmar reiniciar tudo** para continuar e clique em **OK** para concluir.
 
-## <a name="submit-jobs-through-a-jupyter-notebook"></a>Enviar trabalhos por meio de um notebook Jupyter
+## <a name="submit-jobs-through-a-jupyter-notebook"></a>Enviar trabalhos por meio de um Jupyter Notebook
 
 Depois de concluir as etapas anteriores, agora você pode enviar seu .NET para trabalhos de Apache Spark por meio de notebooks Jupyter.
 
-1. Crie um novo .NET para Apache Spark notebook. Inicie um notebook Jupyter do seu cluster do HDI no portal do Azure.
+1. Crie um novo .NET para Apache Spark notebook. Inicie um Jupyter Notebook de seu cluster do HDI no portal do Azure.
 
    ![Iniciar Jupyter Notebook](./media/hdinsight-notebook-installation/launch-notebook.png)
 

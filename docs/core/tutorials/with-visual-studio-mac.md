@@ -1,17 +1,17 @@
 ---
-title: Criar um aplicativo de console do .NET Core usando Visual Studio para Mac
-description: Saiba como criar um aplicativo de console do .NET Core usando Visual Studio para Mac.
-ms.date: 06/02/2020
-ms.openlocfilehash: 0248e48865541a7c73b9e219a06a57996c5cf601
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+title: Criar um aplicativo de console .NET usando Visual Studio para Mac
+description: Saiba como criar um aplicativo de console .NET usando Visual Studio para Mac.
+ms.date: 11/30/2020
+ms.openlocfilehash: 1351b06eec32cd8d3d9d44926655405fe2246f58
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400520"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599480"
 ---
-# <a name="tutorial-create-a-net-core-console-application-using-visual-studio-for-mac"></a>Tutorial: criar um aplicativo de console do .NET Core usando Visual Studio para Mac
+# <a name="tutorial-create-a-net-console-application-using-visual-studio-for-mac"></a>Tutorial: criar um aplicativo de console .NET usando o Visual Studio para Mac
 
-Este tutorial mostra como criar e executar um aplicativo de console do .NET Core usando Visual Studio para Mac.
+Este tutorial mostra como criar e executar um aplicativo de console .NET usando Visual Studio para Mac.
 
 > [!NOTE]
 > Seus comentários são muito importantes. Há duas maneiras de enviar comentários à equipe de desenvolvimento no Visual Studio para Mac:
@@ -21,15 +21,13 @@ Este tutorial mostra como criar e executar um aplicativo de console do .NET Core
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-* [Visual Studio para Mac versão 8,6 ou posterior](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). Selecione a opção para instalar o .NET Core. A instalação do Xamarin é opcional para o desenvolvimento do .NET Core. Para obter mais informações, consulte os seguintes recursos:
+* [Visual Studio para Mac versão 8,8 ou posterior](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). Selecione a opção para instalar o .NET Core. A instalação do Xamarin é opcional para o desenvolvimento do .NET. Para obter mais informações, consulte os seguintes recursos:
 
   * [Tutorial: instalar o Visual Studio para Mac](/visualstudio/mac/installation).
   * [Versões do MacOS com suporte](../install/windows.md).
-  * [Versões do .NET Core com suporte pelo Visual Studio para Mac](/visualstudio/mac/net-core-support).
+  * [Versões do .NET com suporte pelo Visual Studio para Mac](/visualstudio/mac/net-core-support).
 
-## <a name="create-the-app"></a>Criar o aplicativo
-
-Crie um projeto de aplicativo de console do .NET Core chamado "HelloWorld".
+## <a name="create-the-app"></a>Crie o aplicativo
 
 1. Iniciar Visual Studio para Mac.
 
@@ -41,9 +39,7 @@ Crie um projeto de aplicativo de console do .NET Core chamado "HelloWorld".
 
    :::image type="content" source="media/with-visual-studio-mac/visual-studio-mac-new-dialog.png" alt-text="Lista de modelos de novo projeto":::
 
-1. Na lista **suspensa estrutura de destino** da caixa de diálogo **configurar seu novo aplicativo de console** , selecione **.NET Core 3,1** e selecione **Avançar**.
-
-   :::image type="content" source="media/with-visual-studio-mac/target-framework.png" alt-text="Selecionar estrutura de destino":::
+1. Na lista suspensa **estrutura de destino** da caixa de diálogo **configurar seu novo aplicativo de console** , selecione **.NET 5,0** e selecione **Avançar**.
 
 1. Digite "HelloWorld" para o **nome do projeto** e selecione **criar**.
 
@@ -70,7 +66,7 @@ namespace HelloWorld
 
 `Main` é o ponto de entrada do aplicativo, o método que é chamado automaticamente pelo runtime quando ele inicia o aplicativo. Todos os argumentos de linha de comando fornecidos quando o aplicativo é iniciado estão disponíveis na `args` matriz.
 
-## <a name="run-the-app"></a>Executar o aplicativo
+## <a name="run-the-app"></a>Execute o aplicativo
 
 1. Pressione <kbd>⌥</kbd><kbd>⌘</kbd><kbd>↵</kbd> (<kbd>option</kbd> + <kbd>comando</kbd>Option + <kbd>Enter</kbd>) para executar o aplicativo sem depuração.
 
@@ -82,7 +78,7 @@ namespace HelloWorld
 
 Aprimore o aplicativo para solicitar ao usuário seu nome e exibi-lo junto com a data e hora.
 
-1. No *Program.cs* , substitua o conteúdo do `Main` método, que é a linha que chama `Console.WriteLine` , com o seguinte código:
+1. No *Program.cs*, substitua o conteúdo do `Main` método, que é a linha que chama `Console.WriteLine` , com o seguinte código:
 
    :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="MainMethod":::
 
@@ -102,7 +98,7 @@ Aprimore o aplicativo para solicitar ao usuário seu nome e exibi-lo junto com a
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Neste tutorial, você criou um aplicativo de console do .NET Core. No próximo tutorial, você depurará o aplicativo.
+Neste tutorial, você criou um aplicativo de console .NET. No próximo tutorial, você depurará o aplicativo.
 
 > [!div class="nextstepaction"]
-> [Depurar um aplicativo de console do .NET Core usando Visual Studio para Mac](debugging-with-visual-studio-mac.md)
+> [Depurar um aplicativo de console .NET usando Visual Studio para Mac](debugging-with-visual-studio-mac.md)
