@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: 5489c77fa7290bdd1c03e04d8cc777ab772fdce7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7b8c634404cf2f214cc4bee5d754443e9302a723
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95699624"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739510"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! operador (NULL-tolerante) (referência C#)
 
-Disponível em C# 8,0 e posterior, o operador de sufixo unário `!` é o operador NULL-tolerante. Em um [contexto de anotação anulável](../../nullable-references.md#nullable-annotation-context)habilitado, você usa o operador NULL-tolerante para declarar que a expressão `x` de um tipo de referência não é `null` : `x!` . O operador de prefixo unário `!` é o [operador lógico de negação](boolean-logical-operators.md#logical-negation-operator-).
+Disponível em C# 8,0 e posterior, o operador de sufixo unário `!` é o operador NULL-tolerante ou NULL-supressão. Em um [contexto de anotação anulável](../../nullable-references.md#nullable-annotation-context)habilitado, você usa o operador NULL-tolerante para declarar que a expressão `x` de um tipo de referência não é `null` : `x!` . O operador de prefixo unário `!` é o [operador lógico de negação](boolean-logical-operators.md#logical-negation-operator-).
 
 O operador NULL-tolerante não tem nenhum efeito no tempo de execução. Ele afeta apenas a análise de fluxo estático do compilador, alterando o estado nulo da expressão. Em tempo de execução, `x!` a expressão é avaliada como o resultado da expressão subjacente `x` .
 

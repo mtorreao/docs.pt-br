@@ -8,16 +8,19 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: ca3a9cb914befbc8e0982070b818b27ee3143793
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 8efac4d5e3fddcb9fdc6e08bcc933f2776420ced
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "96585543"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739968"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>Visão geral da análise de código-fonte do .NET
 
-Os analisadores do .NET Compiler Platform (Roslyn) inspecionam código em C# ou no Visual Basic em busca de problemas de estilo e de qualidade. Do .NET 5.0 em diante, esses analisadores estão incluídos no SDK do .NET. (Anteriormente, você instalou analisadores de qualidade de código como um [pacote NuGet](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers)e analisadores de estilo de código foram instalados com o Visual Studio.)
+Os analisadores do .NET Compiler Platform (Roslyn) inspecionam código em C# ou no Visual Basic em busca de problemas de estilo e de qualidade. Do .NET 5.0 em diante, esses analisadores estão incluídos no SDK do .NET. Se você não quiser migrar para o SDK do .NET 5 + ou se preferir um modelo baseado em pacote NuGet, os analisadores também estarão disponíveis no `Microsoft.CodeAnalysis.NetAnalyzers` [pacote NuGet](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers). Você pode preferir um modelo baseado em pacote para atualizações de versão sob demanda.
+
+> [!NOTE]
+> Os analisadores .NET são independentes da plataforma de destino. Ou seja, seu projeto não precisa ter como destino uma plataforma .NET específica. Os analisadores funcionam para projetos direcionados `net5.0` , bem como para versões anteriores do .net, como `netcoreapp` , `netstandard` e `net472` .
 
 - [Análise de qualidade de código (regras "CAxxxx")](#code-quality-analysis)
 - [Análise de estilo de código (regras "IDExxxx")](#code-style-analysis)

@@ -3,13 +3,13 @@ title: Provedores de log no .NET
 description: Saiba como a API do provedor de log é usada em aplicativos .NET.
 author: IEvangelist
 ms.author: dapine
-ms.date: 09/25/2020
-ms.openlocfilehash: 4d4658b7ca892d101af32f5cf8ac48a4beabfb92
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.date: 12/04/2020
+ms.openlocfilehash: fdec9018e58c6038b5589c01e775bbb5f10b6b10
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91804750"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740086"
 ---
 # <a name="logging-providers-in-net"></a>Provedores de log no .NET
 
@@ -24,7 +24,7 @@ Os modelos de aplicativo do .NET Worker padrão:
   - [EventSource](#event-source)
   - [EventLog](#windows-eventlog): somente Windows
 
-:::code language="csharp" source="snippets/configuration/console/Program.cs" highlight="12":::
+:::code language="csharp" source="snippets/configuration/console/Program.cs" highlight="18":::
 
 O código anterior mostra a `Program` classe criada com os modelos de aplicativo do .net Worker. As várias seções a seguir fornecem exemplos baseados nos modelos de aplicativo do .NET Worker, que usam o host genérico.
 
@@ -102,7 +102,7 @@ Consulte [dotnet-Trace](../diagnostics/dotnet-trace.md) para obter instruções 
 
 ### <a name="windows-eventlog"></a>EventLog do Windows
 
-O `EventLog` provedor envia a saída de log para o log de eventos do Windows. Ao contrário dos outros provedores, o `EventLog` provedor ***não*** herda as configurações padrão de não provedor. Se `EventLog` as configurações de log não forem especificadas, elas serão padronizadas como padrão `LogLevel.Warning` .
+O `EventLog` provedor envia a saída de log para o log de eventos do Windows. Ao contrário dos outros provedores, o `EventLog` provedor ***não** herda as configurações padrão de não provedor. Se `EventLog` as configurações de log não forem especificadas, elas serão padronizadas como padrão `LogLevel.Warning` .
 
 Para registrar em log eventos inferiores <xref:Microsoft.Extensions.Logging.LogLevel.Warning?displayProperty=nameWithType> a, defina explicitamente o nível de log. O exemplo a seguir define o nível de log padrão do log de eventos como <xref:Microsoft.Extensions.Logging.LogLevel.Information?displayProperty=nameWithType> :
 
@@ -127,8 +127,14 @@ O código a seguir altera o `SourceName` do valor padrão de `".NET Runtime"` pa
 ```csharp
 public class Program
 {
-    public static Task Main(string[] args) =>
-        CreateHostBuilder(args).Build().RunAsync();
+    static async Task Main(string[] args)
+    {
+        using IHost host = CreateHostBuilder(args).Build();
+
+        // Application code should start here.
+
+        await host.RunAsync();
+    }
 
     static IHostBuilder CreateHostBuilder(string[] args) =>
         Host.CreateDefaultBuilder(args)
@@ -149,8 +155,14 @@ Para definir as configurações do provedor, use <xref:Microsoft.Extensions.Logg
 ```csharp
 class Program
 {
-    static Task Main(string[] args) =>
-        CreateHostBuilder(args).Build().RunAsync();
+    static async Task Main(string[] args)
+    {
+        using IHost host = CreateHostBuilder(args).Build();
+
+        // Application code should start here.
+
+        await host.RunAsync();
+    }
 
     static IHostBuilder CreateHostBuilder(string[] args) =>
         Host.CreateDefaultBuilder(args)
@@ -160,7 +172,7 @@ class Program
                 services.Configure<AzureFileLoggerOptions>(options =>
                 {
                     options.FileName = "azure-diagnostics-";
-                    options.FileSizeLimit = 50 * 1024;
+                    options.FileSizeLimit = 50 _ 1024;
                     options.RetainedFileCountLimit = 5;
                 })
                 .Configure<AzureBlobLoggerOptions>(options =>
@@ -199,7 +211,7 @@ Navegue até a página **fluxo de log** para exibir os logs. As mensagens regist
 
 O pacote do provedor [Microsoft. Extensions. Logging. ApplicationInsights](https://www.nuget.org/packages/Microsoft.Extensions.Logging.ApplicationInsights) grava logs em [aplicativo Azure insights](/azure/azure-monitor/app/cloudservices). O Application Insights é um serviço que monitora um aplicativo web e fornece ferramentas para consultar e analisar os dados de telemetria. Se você usar esse provedor, poderá consultar e analisar os logs usando as ferramentas do Application Insights.
 
-Para saber mais, consulte os recursos a seguir:
+Para obter mais informações, consulte os seguintes recursos:
 
 - [Visão geral do Application Insights](/azure/application-insights/app-insights-overview)
 - [ApplicationInsightsLoggerProvider para logs do .NET Core ILogger](/azure/azure-monitor/app/ilogger) – Comece aqui se você quiser implementar o provedor de log sem o restante da telemetria do Application Insights.

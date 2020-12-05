@@ -3,13 +3,13 @@ title: Provedores de configuração no .NET
 description: Saiba como a API do provedor de configuração é usada para configurar aplicativos .NET.
 author: IEvangelist
 ms.author: dapine
-ms.date: 09/16/2020
-ms.openlocfilehash: d5333e8e52feb7d28e2149a988dc7ce53a926a50
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.date: 12/04/2020
+ms.openlocfilehash: 301e23170428f2291ccaa1bd882007cadfbce3b1
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874747"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740007"
 ---
 # <a name="configuration-providers-in-net"></a>Provedores de configuração no .NET
 
@@ -40,7 +40,7 @@ Sobrecargas podem especificar:
 
 Considere o seguinte código:
 
-:::code language="csharp" source="snippets/configuration/console-json/Program.cs" range="1-33,37-38" highlight="17-23":::
+:::code language="csharp" source="snippets/configuration/console-json/Program.cs" range="1-39,43-44" highlight="23-29":::
 
 O código anterior:
 
@@ -65,11 +65,11 @@ Para obter informações sobre tipos de registro, consulte [tipos de registro em
 
 O código a seguir cria a raiz de configuração, associa uma seção ao `TransientFaultHandlingOptions` tipo de registro e imprime os valores associados na janela do console:
 
-:::code language="csharp" source="snippets/configuration/console-json/Program.cs" range="25-32":::
+:::code language="csharp" source="snippets/configuration/console-json/Program.cs" range="31-38":::
 
 O aplicativo gravaria a seguinte saída de exemplo:
 
-:::code language="csharp" source="snippets/configuration/console-json/Program.cs" range="34-36":::
+:::code language="csharp" source="snippets/configuration/console-json/Program.cs" range="40-42":::
 
 ### <a name="xml-configuration-provider"></a>Provedor de configuração XML
 
@@ -77,7 +77,7 @@ A <xref:Microsoft.Extensions.Configuration.Xml.XmlConfigurationProvider> classe 
 
 O código a seguir demonstra a configuração de arquivos XML usando o provedor de configuração XML.
 
-:::code language="csharp" source="snippets/configuration/console-xml/Program.cs" range="1-28,46,52-53" highlight="17-28":::
+:::code language="csharp" source="snippets/configuration/console-xml/Program.cs" range="1-34,52,58-59" highlight="23-34":::
 
 O código anterior:
 
@@ -100,11 +100,11 @@ Elementos repetidos que usam o mesmo nome de elemento funcionarão se o atributo
 
 O código a seguir lê o arquivo de configuração anterior e exibe as chaves e valores:
 
-:::code language="csharp" source="snippets/configuration/console-xml/Program.cs" range="30-45":::
+:::code language="csharp" source="snippets/configuration/console-xml/Program.cs" range="36-51":::
 
 O aplicativo gravaria a seguinte saída de exemplo:
 
-:::code language="csharp" source="snippets/configuration/console-xml/Program.cs" range="47-51":::
+:::code language="csharp" source="snippets/configuration/console-xml/Program.cs" range="53-57":::
 
 É possível usar atributos para fornecer valores:
 
@@ -129,7 +129,7 @@ A <xref:Microsoft.Extensions.Configuration.Ini.IniConfigurationProvider> classe 
 
 O código a seguir limpa todos os provedores de configuração e adiciona o `IniConfigurationProvider` com dois arquivos ini como a origem:
 
-:::code language="csharp" source="snippets/configuration/console-ini/Program.cs" range="1-31,38-39" highlight="18-24":::
+:::code language="csharp" source="snippets/configuration/console-ini/Program.cs" range="1-37,44-45" highlight="24-30":::
 
 Segue um exemplo *appsettings.ini* arquivo com várias definições de configuração:
 
@@ -137,15 +137,15 @@ Segue um exemplo *appsettings.ini* arquivo com várias definições de configura
 
 O código a seguir exibe as definições de configuração anteriores, gravando-as na janela do console:
 
-:::code language="csharp" source="snippets/configuration/console-ini/Program.cs" range="26-30":::
+:::code language="csharp" source="snippets/configuration/console-ini/Program.cs" range="32-36":::
 
 O aplicativo gravaria a seguinte saída de exemplo:
 
-:::code language="csharp" source="snippets/configuration/console-ini/Program.cs" range="32-37":::
+:::code language="csharp" source="snippets/configuration/console-ini/Program.cs" range="38-43":::
 
 ## <a name="environment-variable-configuration-provider"></a>Provedor de configuração de variável de ambiente
 
-Usando a configuração padrão, o <xref:Microsoft.Extensions.Configuration.EnvironmentVariables.EnvironmentVariablesConfigurationProvider> carrega a configuração de pares chave-valor da variável de ambiente depois de ler *appsettings.jsem*, *appSettings.* `Environment` *. JSON*e o Gerenciador de segredo. Portanto, os valores de chave lidos dos valores de substituição de ambiente lidos de *appsettings.jsem*, *appSettings.* `Environment` *. JSON*e o Gerenciador de segredo.
+Usando a configuração padrão, o <xref:Microsoft.Extensions.Configuration.EnvironmentVariables.EnvironmentVariablesConfigurationProvider> carrega a configuração de pares chave-valor da variável de ambiente depois de ler *appsettings.jsem*, *appSettings.* `Environment` *. JSON* e o Gerenciador de segredo. Portanto, os valores de chave lidos dos valores de substituição de ambiente lidos de *appsettings.jsem*, *appSettings.* `Environment` *. JSON* e o Gerenciador de segredo.
 
 O `:` separador não funciona com chaves hierárquicas de variáveis de ambiente em todas as plataformas. O sublinhado duplo ( `__` ) é substituído automaticamente por um `:` e tem suporte em todas as plataformas. Por exemplo, o `:` separador não tem suporte do [bash](https://linuxhint.com/bash-environment-variables), mas sim `__` .
 
@@ -184,7 +184,7 @@ Para testar se os comandos anteriores substituem *appsettings.js* e *appSettings
 
 Chame <xref:Microsoft.Extensions.Configuration.EnvironmentVariablesExtensions.AddEnvironmentVariables%2A> com uma cadeia de caracteres para especificar um prefixo para variáveis de ambiente:
 
-:::code language="csharp" source="snippets/configuration/console-env/Program.cs" highlight="15-16":::
+:::code language="csharp" source="snippets/configuration/console-env/Program.cs" highlight="21-22":::
 
 No código anterior:
 
@@ -307,7 +307,7 @@ O <xref:Microsoft.Extensions.Configuration.Memory.MemoryConfigurationProvider> u
 
 O código a seguir adiciona uma coleção de memória ao sistema de configuração:
 
-:::code language="csharp" source="snippets/configuration/console-memory/Program.cs" highlight="16-23":::
+:::code language="csharp" source="snippets/configuration/console-memory/Program.cs" highlight="22-29":::
 
 No código anterior, <xref:Microsoft.Extensions.Configuration.MemoryConfigurationBuilderExtensions.AddInMemoryCollection(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})?displayProperty=nameWithType> adiciona o provedor de memória após os provedores de configuração padrão. Para obter um exemplo de como ordenar os provedores de configuração, consulte [provedor de configuração XML](#xml-configuration-provider).
 

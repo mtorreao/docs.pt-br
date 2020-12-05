@@ -6,16 +6,16 @@ ms.author: casoper
 ms.date: 11/13/2020
 ms.topic: quickstart
 ms.prod: dotnet
-ms.openlocfilehash: 09e0c46a08e08a2021a9dffe214d3d62d6fb8ec5
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 2919db55304590f5557aa0cbda50cc4bd6640443
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "96585605"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739524"
 ---
 # <a name="quickstart---use-net-to-drive-a-raspberry-pi-sense-hat"></a>Início rápido – usar o .NET para impulsionar um Raspberry Pi sensor HAT
 
-O Raspberry Pi [sensor Hat](https://www.raspberrypi.org/products/sense-hat/) <span class="docon docon-navigate-external x-hidden-focus"></span> é uma placa complementar para o Raspberry Pi. O sensor chapéu é equipado com uma matriz de LED RGB de 8 × 8, um joystick de cinco botões e inclui os seguintes sensores:
+O Raspberry Pi [sensor Hat](https://www.raspberrypi.org/products/sense-hat/) <span class="docon docon-navigate-external x-hidden-focus"></span> (**H** hardware **A** ttached em **T** op) é um quadro complementar para o Raspberry Pi. O sensor chapéu é equipado com uma matriz de LED RGB de 8 × 8, um joystick de cinco botões e inclui os seguintes sensores:
 
 - Giroscópio
 - Acelerômetro
@@ -52,7 +52,7 @@ Observe a saída do console conforme os dados do sensor são exibidos. A matriz 
 
 ## <a name="get-the-source-code"></a>Obter o código-fonte
 
-A fonte para este guia de início rápido está [disponível no GitHub](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/quickstarts/SenseHat.Quickstart). <span class="docon docon-navigate-external x-hidden-focus"></span>
+A fonte para este guia de início rápido está [disponível no GitHub](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/quickstarts/SenseHat.Quickstart) <span class="docon docon-navigate-external x-hidden-focus"></span> .
 
 ## <a name="next-steps"></a>Próximas etapas
 

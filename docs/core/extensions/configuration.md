@@ -5,12 +5,12 @@ author: IEvangelist
 ms.author: dapine
 ms.date: 09/16/2020
 ms.topic: overview
-ms.openlocfilehash: f5dc7c99b209b16dfb8595f9d50dcb1428bbde84
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 5955e46c2f5acb6776ada4e3fd6a65507d3faa1f
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91607992"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740120"
 ---
 # <a name="configuration-in-net"></a>Configuração no .NET
 
@@ -29,13 +29,13 @@ A configuração no .NET é executada usando um ou mais [provedores de configura
 
 Os novos aplicativos de console .NET criados usando [dotnet novo](../tools/dotnet-new.md) ou Visual Studio, por padrão, *não* expõem recursos de configuração. Para adicionar a configuração em um novo aplicativo de console .NET, [adicione uma referência de pacote](../tools/dotnet-add-package.md) a `Microsoft.Extensions.Hosting` . Modifique o arquivo *Program.cs* para corresponder ao seguinte código:
 
-:::code language="csharp" source="snippets/configuration/console/Program.cs" highlight="12":::
+:::code language="csharp" source="snippets/configuration/console/Program.cs" highlight="18":::
 
 O <xref:Microsoft.Extensions.Hosting.Host.CreateDefaultBuilder(System.String[])?displayProperty=nameWithType> método fornece a configuração padrão para o aplicativo na seguinte ordem:
 
 1. [ChainedConfigurationProvider](xref:Microsoft.Extensions.Configuration.ChainedConfigurationSource) : Adiciona um existente `IConfiguration` como uma origem.
 1. *appsettings.js* usando o [provedor de configuração JSON](configuration-providers.md#file-configuration-provider).
-1. *appSettings.* `Environment` *. JSON* usando o [provedor de configuração JSON](configuration-providers.md#file-configuration-provider). Por exemplo, *appSettings*. ***Produção***. *JSON* e *appSettings*. ***Desenvolvimento***. *JSON*.
+1. *appSettings.* `Environment` *. JSON* usando o [provedor de configuração JSON](configuration-providers.md#file-configuration-provider). Por exemplo, *appSettings*. ***Produção * * _._json* e *appSettings*. * * * desenvolvimento** _._json *.
 1. Segredos do aplicativo quando o aplicativo é executado no `Development` ambiente.
 1. Variáveis de ambiente usando o [provedor de configuração de variáveis de ambiente](configuration-providers.md#environment-variable-configuration-provider).
 1. Argumentos de linha de comando usando o [provedor de configuração de linha de comando](configuration-providers.md#command-line-configuration-provider).

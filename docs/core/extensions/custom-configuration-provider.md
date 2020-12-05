@@ -3,14 +3,14 @@ title: Implementar um provedor de configuração personalizado no .NET
 description: Saiba como implementar um provedor de configuração personalizada em aplicativos .NET.
 author: IEvangelist
 ms.author: dapine
-ms.date: 09/16/2020
+ms.date: 12/04/2020
 ms.topic: how-to
-ms.openlocfilehash: 968bf202eeea32742444681260d5ab0b27b403f9
-ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
+ms.openlocfilehash: 22e46b7df8b02421633d6be251d990879baa8b2b
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90720732"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740113"
 ---
 # <a name="implement-a-custom-configuration-provider-in-net"></a>Implementar um provedor de configuração personalizado no .NET
 
@@ -58,7 +58,7 @@ Um `AddEntityConfiguration` método de extensão permite adicionar a origem de c
 
 O código a seguir mostra como usar o `EntityConfigurationProvider` personalizado em *Program.cs*:
 
-:::code language="csharp" source="snippets/configuration/custom-provider/Program.cs" highlight="21-22":::
+:::code language="csharp" source="snippets/configuration/custom-provider/Program.cs" highlight="27-28":::
 
 ## <a name="see-also"></a>Confira também
 

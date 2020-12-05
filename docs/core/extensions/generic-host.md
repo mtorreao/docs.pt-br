@@ -3,13 +3,13 @@ title: Host Genérico .NET
 author: IEvangelist
 description: Saiba mais sobre o host genérico do .NET, que é responsável pela inicialização do aplicativo e pelo gerenciamento do tempo de vida.
 ms.author: dapine
-ms.date: 09/18/2020
-ms.openlocfilehash: d00a8aeae8b4de2cbcb091992fa739c47da6dafc
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.date: 12/04/2020
+ms.openlocfilehash: ddb71b70d15121b7f59899fba38b2bf861219878
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94916170"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740093"
 ---
 # <a name="net-generic-host"></a>Host Genérico .NET
 
@@ -18,7 +18,7 @@ Os modelos de serviço de trabalho criam um host genérico .NET, <xref:Microsoft
 Um *host* é um objeto que encapsula os recursos de um aplicativo, tais como:
 
 - DI (injeção de dependência)
-- Registrando em log
+- Registro em log
 - Configuração
 - Implementações de `IHostedService`
 
@@ -74,7 +74,7 @@ O método <xref:Microsoft.Extensions.Hosting.Host.CreateDefaultBuilder%2A>:
   - EventLog (somente quando em execução no Windows)
 - Habilita validação de escopo e [validação de dependência](xref:Microsoft.Extensions.DependencyInjection.ServiceProviderOptions.ValidateOnBuild) quando o ambiente é `Development` .
 
-O `ConfigureServices` método expõe a capacidade de adicionar serviços à <xref:Microsoft.Extensions.DependencyInjection.IServiceCollection?displayProperty=nameWithType> instância. Posteriormente, esses serviços podem se tornar de injeção de dependência.
+O `ConfigureServices` método expõe a capacidade de adicionar serviços à <xref:Microsoft.Extensions.DependencyInjection.IServiceCollection?displayProperty=nameWithType> instância. Posteriormente, esses serviços podem ser disponibilizados da injeção de dependência.
 
 ## <a name="framework-provided-services"></a>Serviços fornecidos pela estrutura
 
@@ -128,9 +128,9 @@ Para adicionar a configuração do host, chame <xref:Microsoft.Extensions.Hostin
 
 O exemplo a seguir cria a configuração de host:
 
-:::code language="csharp" source="snippets/configuration/console-host/Program.cs" highlight="13-19":::
+:::code language="csharp" source="snippets/configuration/console-host/Program.cs" highlight="19-25":::
 
-## <a name="app-configuration"></a>Configuração do aplicativo
+## <a name="app-configuration"></a>Configuração de aplicativo
 
 A configuração de aplicativo é criada chamando <xref:Microsoft.Extensions.Hosting.HostBuilder.ConfigureAppConfiguration%2A> em `IHostBuilder`. `ConfigureAppConfiguration` pode ser chamado várias vezes com resultados aditivos. O aplicativo usa a opção que define um valor por último em uma chave determinada.
 
@@ -138,7 +138,7 @@ A configuração criada pelo `ConfigureAppConfiguration` está disponível em [H
 
 Para obter mais informações, consulte [Configuration in .net](configuration.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Configuração no .NET](configuration.md)
 - [Host da Web do ASP.NET Core](/aspnet/core/fundamentals/host/web-host)
