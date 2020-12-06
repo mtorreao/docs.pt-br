@@ -4,12 +4,12 @@ description: 'Saiba como criar uma sintaxe conveniente para escrever computaçõ
 ms.date: 08/15/2020
 f1_keywords:
 - let!_FS
-ms.openlocfilehash: bc3842b6f1075d68d1997e78c8bd8485731fca52
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a0a71533ea1bc87b75f028ad0d416326f627672a
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705300"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739295"
 ---
 # <a name="computation-expressions"></a>Expressões de computação
 
@@ -111,7 +111,7 @@ let squares =
     }
 
 for sq in squares do
-    printfn "%d" sq
+    printfn $"%d{sq}"
 ```
 
 Na maioria dos casos, ele pode ser omitido por chamadores. A maneira mais comum de omitir `yield` é com o `->` operador:
@@ -123,7 +123,7 @@ let squares =
     }
 
 for sq in squares do
-    printfn "%d" sq
+    printfn $"%d{sq}"
 ```
 
 Para expressões mais complexas que podem produzir muitos valores diferentes, e talvez condicionalmente, simplesmente omitir a palavra-chave pode fazer:
@@ -167,7 +167,7 @@ let squaresAndCubes =
         yield! cubes
     }
 
-printfn "%A" squaresAndCubes // Prints - 1; 4; 9; 1; 8; 27
+printfn $"{squaresAndCubes}"  // Prints - 1; 4; 9; 1; 8; 27
 ```
 
 Quando avaliado, a expressão de computação chamada por `yield!` terá seus itens devolvidos um-por-um, mesclando o resultado.
@@ -390,7 +390,7 @@ let eventually = new EventuallyBuilder()
 
 let comp = eventually {
     for x in 1..2 do
-        printfn " x = %d" x
+        printfn $" x = %d{x}"
     return 3 + 4 }
 
 // Try the remaining lines in F# interactive to see how this
@@ -430,7 +430,7 @@ type FSharp.Linq.QueryBuilder with
         Enumerable.Any (source.Source, Func<_,_>(predicate)) |> not
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Referência de linguagem F #](index.md)
 - [Fluxos de trabalho assíncronos](asynchronous-workflows.md)

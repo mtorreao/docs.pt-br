@@ -2,12 +2,12 @@
 title: Correspondência padrão
 description: 'Saiba como os padrões são usados em F # para comparar dados com estruturas lógicas, decompor dados em partes constituintes ou extrair informações de dados.'
 ms.date: 11/12/2020
-ms.openlocfilehash: e167712b082b7f587e41a78edcaf0a0db9c7294b
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 932f50b7947f6df728149437dd3ceb19c42e5c6a
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687799"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740270"
 ---
 # <a name="pattern-matching"></a>Correspondência padrão
 
@@ -29,7 +29,7 @@ Cada padrão atua como uma regra para transformar a entrada de alguma maneira. N
 
 Os padrões com suporte são mostrados na tabela a seguir. Em tempo de execução, a entrada é testada em relação a cada um dos seguintes padrões na ordem listada na tabela, e os padrões são aplicados recursivamente, de primeiro até o último, conforme aparecem no seu código e da esquerda para a direita para os padrões em cada linha.
 
-|Name|Descrição|Exemplo|
+|Nome|Descrição|Exemplo|
 |----|-----------|-------|
 |Padrão de constante|Qualquer literal numérico, de caractere ou de cadeia de caracteres, uma constante de enumeração ou um identificador literal definido|`1.0`, `"test"`, `30`, `Color.Red`|
 |Padrão de identificador|Um valor de case de uma união discriminada, um rótulo de exceção ou um caso de padrão ativo|`Some(x)`<br /><br />`Failure(msg)`|
@@ -88,8 +88,8 @@ Você pode usar os campos nomeados em uma expressão de correspondência de padr
 ```fsharp
 let matchShape shape =
     match shape with
-    | Rectangle(height = h) -> printfn "Rectangle with length %f" h
-    | Circle(r) -> printfn "Circle with radius %f" r
+    | Rectangle(height = h) -> printfn $"Rectangle with length %f{h}"
+    | Circle(r) -> printfn $"Circle with radius %f{r}"
 ```
 
 O uso do campo nomeado é opcional, portanto, no exemplo anterior, ambos `Circle(r)` e `Circle(radius = r)` têm o mesmo efeito.
@@ -98,7 +98,7 @@ Quando você especifica vários campos, use o ponto-e-vírgula (;) como um separ
 
 ```fsharp
 match shape with
-| Rectangle(height = h; width = w) -> printfn "Rectangle with height %f and width %f" h w
+| Rectangle(height = h; width = w) -> printfn $"Rectangle with height %f{h} and width %f{w}"
 | _ -> ()
 ```
 
@@ -232,7 +232,7 @@ f "asdf" // does not match
 
 Consulte o [`nameof`](nameof.md) operador para obter informações sobre o que você pode obter um nome.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Expressões de correspondência](match-expressions.md)
 - [Padrões ativos](active-patterns.md)

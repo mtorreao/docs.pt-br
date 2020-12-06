@@ -2,12 +2,12 @@
 title: Introdução ao F# no Visual Studio Code
 description: 'Saiba como usar F # com Visual Studio Code e o pacote de plug-in Ionide.'
 ms.date: 12/23/2018
-ms.openlocfilehash: 3317d0037d3c14a6b55079385d7b27e499c0c392
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.openlocfilehash: 11fb0d443fb7c2b3f270d45bfeaa91102ba28efd
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050540"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739796"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Introdução ao F# no Visual Studio Code
 
@@ -36,7 +36,7 @@ Depois que o projeto for carregado no Visual Studio Code, você deverá ver o pa
 
 Primeiro, verifique se o script do .NET Core é o seu ambiente de script padrão:
 
-1. Abra as configurações de Visual Studio Code (configurações de preferências de**código**  >  **Preferences**  >  **Settings**).
+1. Abra as configurações de Visual Studio Code (configurações de preferências de **código**  >  **Preferences**  >  **Settings**).
 1. Procure o termo **script F #**.
 1. Clique na caixa de seleção que diz **FSharp: usar scripts do SDK**.
 
@@ -144,7 +144,7 @@ Agora, na `main` função, chame sua função de gerador de Pig Latin nos argume
 let main argv =
     for name in argv do
         let newName = PigLatin.toPigLatin name
-        printfn "%s in Pig Latin is: %s" name newName
+        printfn %"{name} in Pig Latin is: {newName}"
 
     0
 ```

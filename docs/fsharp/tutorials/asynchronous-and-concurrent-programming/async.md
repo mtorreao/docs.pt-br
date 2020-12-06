@@ -2,12 +2,12 @@
 title: Programação assíncrona
 description: 'Saiba como o F # fornece suporte limpo para assincronia com base em um modelo de programação de nível de linguagem derivado dos principais conceitos de programação funcional.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 2e5d4fb744b4443eb9caf90cc1bf01473b809127
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 04b397ddbfb468aa3bc4ee245175d3ec9bdedb50
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811763"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739321"
 ---
 # <a name="async-programming-in-f"></a>Programação assíncrona em F\#
 
@@ -33,7 +33,7 @@ Se você considerar o etymology da palavra "Asynchronous", há duas partes envol
 - "a", significando "não".
 - "síncrono", significando "ao mesmo tempo".
 
-Ao reunir esses dois termos, você verá que "assíncrono" significa "não ao mesmo tempo". É isso! Não há implicação de simultaneidade ou paralelismo nessa definição. Isso também é verdade na prática.
+Ao reunir esses dois termos, você verá que "assíncrono" significa "não ao mesmo tempo". Pronto! Não há implicação de simultaneidade ou paralelismo nessa definição. Isso também é verdade na prática.
 
 Em termos práticos, cálculos assíncronos em F # são agendados para execução independente do fluxo do programa principal. Essa execução independente não implica em simultaneidade ou paralelismo, nem significa que uma computação sempre ocorre em segundo plano. Na verdade, as Computações assíncronas podem até mesmo executar de forma síncrona, dependendo da natureza da computação e do ambiente em que a computação está sendo executada.
 
@@ -57,7 +57,7 @@ let printTotalFileBytes path =
     async {
         let! bytes = File.ReadAllBytesAsync(path) |> Async.AwaitTask
         let fileName = Path.GetFileName(path)
-        printfn "File %s has %d bytes" fileName bytes.Length
+        printfn $"File {fileName} has %d{bytes.Length} bytes"
     }
 
 [<EntryPoint>]
@@ -87,7 +87,7 @@ let printTotalFileBytes path =
     async {
         let! bytes = File.ReadAllBytesAsync(path) |> Async.AwaitTask
         let fileName = Path.GetFileName(path)
-        printfn "File %s has %d bytes" fileName bytes.Length
+        printfn $"File {fileName} has %d{bytes.Length} bytes"
     }
 
 [<EntryPoint>]
@@ -119,7 +119,7 @@ let printTotalFileBytes path =
     async {
         let! bytes = File.ReadAllBytesAsync(path) |> Async.AwaitTask
         let fileName = Path.GetFileName(path)
-        printfn "File %s has %d bytes" fileName bytes.Length
+        printfn $"File {fileName} has %d{bytes.Length} bytes"
     }
 
 [<EntryPoint>]

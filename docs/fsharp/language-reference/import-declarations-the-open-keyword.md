@@ -2,12 +2,12 @@
 title: 'Declarações de importação: a palavra-chave open'
 description: 'Saiba mais sobre as declarações de importação de F # e como elas especificam um módulo ou namespace cujos elementos você pode referenciar sem usar um nome totalmente qualificado.'
 ms.date: 08/15/2020
-ms.openlocfilehash: ab208c53809e120bc216c8f8b4d04a322d67cf2f
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 4d3fd159aa4b334e9db0d7f756047470ad9c0829
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94557175"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739679"
 ---
 # <a name="import-declarations-the-open-keyword"></a>Importar declarações: a `open` palavra-chave
 
@@ -39,7 +39,7 @@ O compilador F # não emite um erro ou aviso quando as ambiguidades ocorrem quan
 ```fsharp
 open List
 open Seq
-printfn "%A" empty
+printfn %"{empty}"
 ```
 
 Portanto, tenha cuidado ao abrir módulos ou namespaces, como `List` ou `Seq` que contenham Membros com nomes idênticos; em vez disso, considere usar os nomes qualificados. Você deve evitar qualquer situação na qual o código seja dependente da ordem das declarações de importação.
@@ -89,7 +89,7 @@ Você pode aplicar o `AutoOpen` atributo a um assembly se desejar abrir automati
 
 Alguns módulos, registros ou tipos de União podem especificar o `RequireQualifiedAccess` atributo. Ao referenciar elementos desses módulos, registros ou uniões, você deve usar um nome qualificado, independentemente de você incluir uma declaração de importação. Se você usar esse atributo estrategicamente em tipos que definem nomes comumente usados, você ajudará a evitar colisões de nomes e, portanto, tornará o código mais resiliente às alterações nas bibliotecas. Para obter mais informações, consulte [RequireQualifiedAccessAttribute](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-requirequalifiedaccessattribute.html).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Referência de linguagem F #](index.md)
 - [Namespaces](namespaces.md)
