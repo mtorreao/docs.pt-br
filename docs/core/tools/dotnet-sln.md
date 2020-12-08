@@ -1,19 +1,19 @@
 ---
 title: Comando dotnet sln
 description: O comando dotnet-sln oferece uma opção conveniente para adicionar, remover e listar projetos em um arquivo de solução.
-ms.date: 02/14/2020
-ms.openlocfilehash: 898c53772a28b8cc3b65532dfc3d9bd6e73d467c
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.date: 12/07/2020
+ms.openlocfilehash: 480634550f6fa1983bb46f51b439dc8a686ead3c
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634364"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851686"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
 **Este artigo aplica-se a:** ✔️ SDK do .NET Core 2. x e versões posteriores
 
-## <a name="name"></a>Name
+## <a name="name"></a>Nome
 
 `dotnet sln` -Lista ou modifica os projetos em um arquivo de solução .NET.
 
@@ -25,7 +25,7 @@ dotnet sln [<SOLUTION_FILE>] [command]
 dotnet sln [command] -h|--help
 ```
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descrição
 
 O `dotnet sln` comando fornece uma maneira conveniente de listar e modificar projetos em um arquivo de solução.
 
@@ -194,3 +194,19 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
   ```dotnetcli
   dotnet sln todo.sln remove (ls -r **/*.csproj)
   ```
+
+- Crie uma solução, um aplicativo de console e duas bibliotecas de classe. Adicione os projetos à solução e use a `--solution-folder` opção de `dotnet sln` para organizar as bibliotecas de classes em uma pasta de solução.
+
+  ```dotnetcli
+  dotnet new sln -n mysolution
+  dotnet new console -o myapp
+  dotnet new classlib -o mylib1
+  dotnet new classlib -o mylib2
+  dotnet sln mysolution.sln add myapp\myapp.csproj
+  dotnet sln mysolution.sln add mylib1\mylib1.csproj --solution-folder mylibs
+  dotnet sln mysolution.sln add mylib2\mylib2.csproj --solution-folder mylibs
+  ```
+
+  A captura de tela a seguir mostra o resultado no Visual Studio 2019 **Gerenciador de soluções**:
+
+  :::image type="content" source="media/dotnet-sln/dotnet-sln-solution-folder.png" alt-text="Gerenciador de Soluções mostrando projetos de biblioteca de classes agrupados em uma pasta de solução.":::

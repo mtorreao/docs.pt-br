@@ -4,12 +4,12 @@ author: IEvangelist
 description: Saiba como usar a estrutura de registro em log fornecida pelo pacote do NuGet Microsoft.Extensions.Logging.
 ms.author: dapine
 ms.date: 09/30/2020
-ms.openlocfilehash: 5a4d333368082389c4dfc134bb6a9a2e618d47e9
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.openlocfilehash: 73c16c80e7e000533b880e908b38109d2b1e88fd
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94982316"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851725"
 ---
 # <a name="logging-in-net"></a>Registro em log no .NET
 
@@ -162,7 +162,7 @@ namespace Example
         private readonly ILogger _logger;
 
         public DefaultService(ILoggerFactory loggerFactory) =>
-            _logger = logger.CreateLogger("CustomCategory");
+            _logger = loggerFactory.CreateLogger("CustomCategory");
 
         // ...
     }
@@ -185,7 +185,7 @@ A tabela a seguir lista os <xref:Microsoft.Extensions.Logging.LogLevel> valores,
 | [Aviso](xref:Microsoft.Extensions.Logging.LogLevel) | 3 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogWarning%2A> | Para eventos anormais ou inesperados. Normalmente inclui erros ou condições que não fazem com que o aplicativo falhe. |
 | [Erro](xref:Microsoft.Extensions.Logging.LogLevel) | 4 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogError%2A> | Para erros e exceções que não podem ser manipulados. Essas mensagens indicam uma falha na operação ou solicitação atual, não uma falha em todo o aplicativo. |
 | [Crítico](xref:Microsoft.Extensions.Logging.LogLevel) | 5 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogCritical%2A> | Para falhas que exigem atenção imediata. Exemplos: cenários de perda de dados, espaço em disco insuficiente. |
-| [Nenhuma](xref:Microsoft.Extensions.Logging.LogLevel) | 6 |  | Especifica que nenhuma mensagem deve ser gravada. |
+| [Nenhum](xref:Microsoft.Extensions.Logging.LogLevel) | 6 |  | Especifica que nenhuma mensagem deve ser gravada. |
 
 Na tabela anterior, o `LogLevel` é listado da severidade mais baixa para a mais alta.
 

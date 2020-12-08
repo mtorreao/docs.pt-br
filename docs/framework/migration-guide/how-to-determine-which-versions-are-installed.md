@@ -1,24 +1,27 @@
 ---
 title: Determinar quais versões do .NET Framework estão instaladas
 description: Use o código, regedit.exe ou PowerShell para detectar quais versões do .NET Framework estão instaladas em um computador consultando o registro do Windows.
-ms.date: 02/03/2020
+ms.date: 12/04/2020
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - versions, determining for .NET Framework
-- .NET Framework, determining version
+- .NET Framework, determining installed versions
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-ms.openlocfilehash: b4c5b6911a4be4f9ac156b600646c649549f88f8
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: a219514fafdcb17db259e089afa8318dbab24811
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96438140"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851823"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Como determinar quais versões do .NET Framework estão instaladas
 
 Os usuários podem [instalar](../install/index.md) e executar várias versões do .NET Framework em seus computadores. Ao desenvolver ou implantar seu aplicativo, talvez seja necessário saber quais versões do .NET Framework estão instaladas no computador do usuário. O registro contém uma lista das versões do .NET Framework instaladas no computador.
+
+> [!NOTE]
+> Este artigo é específico para .NET Framework. Para determinar qual .NET Core e .NET 5 + SDKs e tempos de execução estão instalados, consulte [como verificar se o .net já está instalado](../../core/install/how-to-detect-installed-versions.md).
 
 .NET Framework consiste em dois componentes principais, que têm a versão separada:
 
@@ -37,6 +40,21 @@ As ferramentas mantidas pela Comunidade estão disponíveis para ajudar a detect
   Um módulo do PowerShell 2,0.
 
 Para obter informações sobre como detectar as atualizações instaladas para cada versão do .NET Framework, consulte [como: determinar quais .NET Framework atualizações estão instaladas](how-to-determine-which-net-framework-updates-are-installed.md).
+
+## <a name="determine-which-net-implementation-and-version-an-app-is-running-on"></a>Determinar a implementação e a versão do .NET em que um aplicativo está em execução
+
+Você pode usar a <xref:System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription?displayProperty=nameWithType> propriedade para consultar a implementação e a versão do .net em que seu aplicativo está sendo executado. Se o aplicativo estiver em execução no .NET Framework, a saída será semelhante a:
+
+```output
+.NET Framework 4.8.4250.0
+```
+
+Por comparação, se o aplicativo estiver em execução no .NET Core ou no .NET 5 +, a saída será semelhante a:
+
+```output
+.NET Core 3.1.9
+.NET 5.0.0
+```
 
 ## <a name="detect-net-framework-45-and-later-versions"></a>Detectar .NET Framework 4,5 e versões posteriores
 
@@ -81,13 +99,13 @@ Para determinar se uma versão *mínima* do .NET Framework está presente, verif
 
 ### <a name="use-registry-editor"></a>Usar o editor do registro
 
-01. No menu **Iniciar**, escolha **Executar**, insira *regedit* e, em seguida, selecione **OK**.
+1. No menu **Iniciar**, escolha **Executar**, insira *regedit* e, em seguida, selecione **OK**.
 
    (Você deve ter credenciais administrativas para executar o regedit.)
 
-01. No editor do registro, abra a seguinte subchave: **HKEY_LOCAL_MACHINE \\ software \\ Microsoft \\ NET Framework Setup \\ NDP \\ v4 \\ Full**. Se a subchave **completa** não estiver presente, você não terá .NET Framework 4,5 ou posterior instalado.
+1. No editor do registro, abra a seguinte subchave: **HKEY_LOCAL_MACHINE \\ software \\ Microsoft \\ NET Framework Setup \\ NDP \\ v4 \\ Full**. Se a subchave **completa** não estiver presente, você não terá .NET Framework 4,5 ou posterior instalado.
 
-01. Verifique se há uma entrada de REG_DWORD chamada **versão**. Se ele existir, você terá .NET Framework 4,5 ou posterior instalado. Seu valor corresponde a uma versão específica do .NET Framework. Na figura a seguir, por exemplo, o valor da entrada de **versão** é 528040, que é a chave de versão para .NET Framework 4,8.
+1. Verifique se há uma entrada de REG_DWORD chamada **versão**. Se ele existir, você terá .NET Framework 4,5 ou posterior instalado. Seu valor corresponde a uma versão específica do .NET Framework. Na figura a seguir, por exemplo, o valor da entrada de **versão** é 528040, que é a chave de versão para .NET Framework 4,8.
 
    ![Entrada de registro para .NET Framework 4,5](./media/clr-installdir.png )
 

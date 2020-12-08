@@ -6,16 +6,16 @@ ms.author: adegeo
 ms.date: 11/10/2020
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 39020a32cdea9b82dc9d30e62e663ebc4ee39ebb
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 2fc12c8c398b1a74d623e53884df666f4d4b85f1
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687435"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851608"
 ---
 # <a name="how-to-check-that-net-is-already-installed"></a>Como verificar se o .NET já está instalado
 
-Este artigo ensina como verificar quais versões do .NET Runtime e do SDK estão instaladas no seu computador. O .NET pode já ter sido instalado se você tiver um ambiente de desenvolvimento integrado, como o Visual Studio ou o Visual Studio para Mac.
+Este artigo ensina como verificar quais versões do .NET Runtime e do SDK estão instaladas no seu computador. Se você tiver um ambiente de desenvolvimento integrado, como o Visual Studio ou o Visual Studio para Mac, o .NET pode já ter sido instalado.
 
 A instalação de um SDK instala o tempo de execução correspondente.
 
@@ -139,7 +139,7 @@ Microsoft.NETCore.App 5.0.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 ## <a name="check-for-install-folders"></a>Verificar pastas de instalação
 
-É possível que o .NET esteja instalado, mas não adicionado à `PATH` variável do seu sistema operacional ou perfil do usuário. A execução dos comandos das seções anteriores pode não funcionar. Como alternativa, você pode verificar se as pastas de instalação do .NET existem.
+É possível que o .NET esteja instalado, mas não adicionado à `PATH` variável do seu sistema operacional ou perfil do usuário. Nesse caso, os comandos das seções anteriores podem não funcionar. Como alternativa, você pode verificar se as pastas de instalação do .NET existem.
 
 Quando você instala o .NET de um instalador ou script, ele é instalado em uma pasta padrão. Na maior parte do tempo, o instalador ou o script que você está usando para instalar o .NET oferece uma opção para instalar em uma pasta diferente. Se você optar por instalar o em uma pasta diferente, ajuste o início do caminho da pasta.
 
@@ -148,7 +148,7 @@ Quando você instala o .NET de um instalador ou script, ele é instalado em uma 
 - **executável dotnet**\
 _C: \\ arquivos de programas \\ dotnet \\dotnet.exe_
 
-- **SDK DO .NET**\
+- **SDK .NET**\
 _C: \\ arquivos de \\ programas \\ SDK do dotnet \\ {versão}\\_
 
 - **Tempo de execução do .NET**\
@@ -161,7 +161,7 @@ _C: \\ arquivos de programas \\ dotnet \\ compartilhado \\ {tipo de tempo de exe
 - **executável dotnet**\
 _/home/user/share/dotnet/dotnet_
 
-- **SDK DO .NET**\
+- **SDK .NET**\
 _/home/user/share/dotnet/sdk/{version}/_
 
 - **Tempo de execução do .NET**\
@@ -174,7 +174,7 @@ _/home/user/share/dotnet/shared/{runtime-type}/{version}/_
 - **executável dotnet**\
 _/usr/local/share/dotnet/dotnet_
 
-- **SDK DO .NET**\
+- **SDK .NET**\
 _/usr/local/share/dotnet/sdk/{version}/_
 
 - **Tempo de execução do .NET**\
@@ -191,3 +191,7 @@ Você pode ver as versões do SDK e as versões de tempo de execução com o com
 - [Instale o tempo de execução e o SDK do .net para Windows](windows.md).
 - [Instale o tempo de execução e o SDK do .net para MacOS](macos.md).
 - [Instale o tempo de execução e o SDK do .net para Linux](linux.md).
+
+## <a name="see-also"></a>Confira também
+
+- [Determinar quais versões do .NET Framework estão instaladas](../../framework/migration-guide/how-to-determine-which-versions-are-installed.md)

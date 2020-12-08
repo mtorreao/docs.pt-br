@@ -5,18 +5,20 @@ ms.date: 09/24/2020
 ms.topic: conceptual
 no-loc:
 - EditorConfig
-ms.openlocfilehash: af2ebb74786f0ae884ffee4636765cae43fcb23f
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 4f7b392a2b066023fec75c5295bd94651654d645
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "96585039"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851784"
 ---
 # <a name="configuration-options-for-code-analysis"></a>Opções de configuração para análise de código
 
 As regras de análise de código têm várias opções de configuração. Essas opções são especificadas como pares chave-valor em um [arquivo de configuração do analisador](configuration-files.md) usando a sintaxe `<option key> = <option value>` .
 
-A opção mais comum que você configurará é a severidade de uma regra. Você pode configurar o nível de severidade para todas as regras do analisador, incluindo [regras de qualidade de código](quality-rules/index.md) e regras de estilo de [código](style-rules/index.md).
+A opção mais comum que você configurará é a severidade de uma [regra](#severity-level). Você pode configurar o nível de severidade para todas as regras do analisador, incluindo [regras de qualidade de código](quality-rules/index.md) e regras de estilo de [código](style-rules/index.md). Por exemplo, para habilitar uma regra como um aviso, você pode adicionar o seguinte par chave-valor a um EditorConfig arquivo.
+
+`dotnet_diagnostic.<rule ID>.severity = warning`
 
 Você também pode configurar opções adicionais para personalizar o comportamento da regra:
 
