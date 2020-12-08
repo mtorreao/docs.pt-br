@@ -6,13 +6,13 @@ ms.author: wiwagn
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 12/04/2019
-ms.openlocfilehash: 6241a9a3a51bd4d5228841caeaf3a7b652fc6eaa
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.date: 12/01/2020
+ms.openlocfilehash: 2a9e55250018352c8019d30a4d615ec39e619e31
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608355"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851224"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Características de aplicativos Web modernos
 
@@ -25,7 +25,7 @@ O ASP.NET Core é otimizado para aplicativos Web modernos e cenários de hospeda
 
 ## <a name="reference-application-eshoponweb"></a>Referência de aplicativo: eShopOnWeb
 
-Estas diretrizes incluem um aplicativo de referência, o _eShopOnWeb_, que demonstra alguns dos princípios e das recomendações. O aplicativo é uma loja online simples compatível com navegação em um catálogo de camisetas, canecas e outros itens de marketing. O aplicativo de referência é deliberadamente simples para facilitar o entendimento.
+Estas diretrizes incluem um aplicativo de referência, o _eShopOnWeb_, que demonstra alguns dos princípios e das recomendações. O aplicativo é uma loja online simples, que dá suporte à navegação por meio de um catálogo de camisas, café Mugs e outros itens de marketing. O aplicativo de referência é deliberadamente simples para facilitar o entendimento.
 
 ![eShopOnWeb](./media/image2-1.png)
 
@@ -42,7 +42,7 @@ O ASP.NET Core é otimizado para a nuvem (nuvem pública, nuvem privada, qualque
 
 ## <a name="cross-platform"></a>Plataforma cruzada
 
-O ASP.NET Core é multiplataforma e pode ser executado no Windows, no macOS e no Linux. Isso abre muitas opções novas para o desenvolvimento e a implantação de aplicativos criados com o ASP.NET Core. Os contêineres do Docker, tanto do Linux quanto do Windows, podem hospedar aplicativos ASP.NET Core, permitindo que eles aproveitem os benefícios de [contêineres e microsserviços](../microservices/index.md).
+O ASP.NET Core é multiplataforma e pode ser executado no Windows, no macOS e no Linux. Esse recurso abre muitas opções novas para o desenvolvimento e a implantação de aplicativos criados com o ASP.NET Core. Os contêineres do Docker, tanto do Linux quanto do Windows, podem hospedar aplicativos ASP.NET Core, permitindo que eles aproveitem os benefícios de [contêineres e microsserviços](../microservices/index.md).
 
 ## <a name="modular-and-loosely-coupled"></a>Flexível e acoplado de forma flexível
 

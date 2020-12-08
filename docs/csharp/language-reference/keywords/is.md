@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: d30ebfa2dc47265185a96514efbddc3e4937438c
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: c38649a9e3b3f75ec35fb8711324302a682b504e
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "94982388"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851328"
 ---
 # <a name="is-c-reference"></a>is (Referência de C#)
 
@@ -32,7 +32,7 @@ Começando com o C# 7.0, as instruções `is` e [switch](switch.md) permitem a c
 Ao usar o padrão de tipo para realizar a correspondência de padrões, `is` testa se uma expressão pode ser convertida em um tipo especificado e, caso possa, a converte em uma variável desse tipo. Trata-se de uma extensão simples da instrução `is` que habilita a conversão e a avaliação de tipo concisas. A forma geral do padrão de tipo `is` é:
 
 ```csharp
-   expr is type varname
+expr is type varname
 ```
 
 Em que *expr* é uma expressão que é avaliada como uma instância de algum tipo, *digite* é o nome do tipo para o qual o resultado de *expr* deve ser convertido e *VarName* é o objeto para o qual o resultado de *expr* é convertido se o `is` teste for `true` .
@@ -130,5 +130,5 @@ Para saber mais, confira a seção [O operador is](~/_csharplang/spec/expression
 ## <a name="see-also"></a>Confira também
 
 - [Referência de C#](../index.md)
-- [Palavras-chave do C#](index.md)
+- [Palavras-chave de C#](index.md)
 - [Operadores cast e teste de tipo](../operators/type-testing-and-cast.md)

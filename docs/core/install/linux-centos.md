@@ -4,12 +4,12 @@ description: Demonstra as várias maneiras de instalar o SDK do .NET e o tempo d
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: b30aa206057107aa17fcd62e0f042f9fe3ad56dc
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 2c3453c79a1dc31f01577bc0c1b9e320eb307c0a
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031924"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851673"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-centos"></a>Instalar o SDK do .NET ou o tempo de execução do .NET no CentOS
 
@@ -27,7 +27,7 @@ A tabela a seguir é uma lista de versões do .NET com suporte no momento no Cen
 - Um ❌ indica que a versão do CentOS ou do .net não tem suporte nessa versão do CentOS.
 - Quando uma versão do CentOS e uma versão do .NET têm ✔️, essa combinação de so e .NET é suportada.
 
-| CentOS                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5,0 |
+| CentOS                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |--------------------------|---------------|---------------|----------------|
 | ✔️ [8](#centos-8-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
 | ✔️ [7](#centos-7-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
@@ -50,14 +50,7 @@ Não há mais suporte para as seguintes versões do .NET. Os downloads para eles
 
 ## <a name="centos-8-"></a>CentOS 8 ✔️
 
-> [!TIP]
-> O .NET 5,0 ainda não está disponível nos repositórios de pacote padrão, mas o .NET Core 3,1 é. Para instalar o .NET Core 3,1, use o `dnf install` comando com o pacote apropriado, como `aspnetcore-runtime-3.1` ou `dotnet-sdk-3.1` . As instruções a seguir são para o .NET 5,0.
-
-[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
-
-```bash
-sudo rpm -Uvh https://packages.microsoft.com/config/centos/8/packages-microsoft-prod.rpm
-```
+O .NET 5,0 está disponível nos repositórios de pacotes padrão do CentOS 8.
 
 [!INCLUDE [linux-dnf-install-50](includes/linux-install-50-dnf.md)]
 
