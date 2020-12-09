@@ -12,12 +12,12 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: 17671b86dc6d1d7b45a01cb0bf7c5c42f624d99f
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 008455a77f98cd9975b04001121217866cc2ba6e
+ms.sourcegitcommit: 0014aa4d5cb2da56a70e03fc68f663d64df5247a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96438127"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96918600"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>Como escrever conversores personalizados para serialização JSON (Marshalling) no .NET
 
@@ -44,6 +44,8 @@ Você também pode escrever conversores personalizados para personalizar ou este
 * [Suporte à desserialização polimórfico](#support-polymorphic-deserialization).
 * [Dar suporte à viagem de ida \<T> e volta para pilha](#support-round-trip-for-stackt).
 ::: zone-end
+
+No código que você escreve para um conversor personalizado, esteja ciente da penalidade de desempenho substancial para usar novas <xref:System.Text.Json.JsonSerializerOptions> instâncias. Para obter mais informações, consulte [reutilizar instâncias de JsonSerializerOptions](system-text-json-configure-options.md#reuse-jsonserializeroptions-instances).
 
 ## <a name="custom-converter-patterns"></a>Padrões de conversor personalizado
 

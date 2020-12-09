@@ -1,7 +1,7 @@
 ---
 title: Como criar uma instância de JsonSerializerOptions com System.Text.Json
-description: Saiba como instanciar instâncias JsonSerializerOptions copiando instâncias existentes ou com padrões da Web.
-ms.date: 11/30/2020
+description: Saiba como evitar problemas de desempenho e como usar construtores disponíveis para instâncias de JsonSerializerOptions.
+ms.date: 12/02/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
@@ -11,16 +11,30 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 0febfe15f36856f10699fd327fb17c146277eb9b
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 257c99e117dea9a9b3ab2352c9a442d71a2cdabd
+ms.sourcegitcommit: 0014aa4d5cb2da56a70e03fc68f663d64df5247a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96439910"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96918548"
 ---
 # <a name="how-to-instantiate-jsonserializeroptions-instances-with-no-locsystemtextjson"></a>Como instanciar instâncias JsonSerializerOptions com System.Text.Json
 
-Neste artigo, você aprenderá como instanciar <xref:System.Text.Json.JsonSerializerOptions> instâncias copiando instâncias existentes ou com padrões da Web.
+Este artigo explica como evitar problemas de desempenho ao usar o <xref:System.Text.Json.JsonSerializerOptions> . Ele também mostra como usar os construtores com parâmetros que estão disponíveis.
+
+## <a name="reuse-jsonserializeroptions-instances"></a>Reutilizar instâncias JsonSerializerOptions
+
+Se você usar `JsonSerializerOptions` repetidamente com as mesmas opções, não crie uma nova `JsonSerializerOptions` instância toda vez que usá-la. Reutilize a mesma instância para cada chamada. Esta orientação se aplica ao código que você escreve para conversores personalizados e quando você chama <xref:System.Text.Json.JsonSerializer.Serialize%2A?displayProperty=nameWithType> ou <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> .
+
+O código a seguir demonstra a penalidade de desempenho para usar novas instâncias de opções.
+
+:::code language="csharp" source="snippets/system-text-json-configure-options/csharp/ReuseOptionsInstances.cs":::
+
+O código anterior serializa um objeto pequeno 100.000 vezes usando a mesma instância de opções. Em seguida, ele serializa o mesmo objeto, o mesmo número de vezes, e cria uma nova instância de opções a cada vez. Uma diferença típica de tempo de execução é 190 em comparação com 40.140 milissegundos. A diferença é ainda maior se você aumentar o número de iterações.
+
+O serializador passa por uma fase de aquecimento durante a primeira serialização de cada tipo no grafo do objeto quando uma nova instância de opções é passada para ele. Esse aquecimento inclui a criação de um cache de metadados que são necessários para a serialização. Os metadados incluem delegados para getters de propriedade, setters, argumentos de construtor, atributos especificados e assim por diante. Esse cache de metadados é armazenado na instância de opções. O mesmo processo e cache de aquecimento aplica-se à desserialização.
+
+O tamanho do cache de metadados em uma `JsonSerializerOptions` instância depende do número de tipos a serem serializados. Se você passar por vários tipos — por exemplo, tipos gerados dinamicamente — para o serializador, o tamanho do cache continuará crescendo e poderá acabar causando um `OutOfMemoryException` .
 
 ## <a name="copy-jsonserializeroptions"></a>Copiar JsonSerializerOptions
 
@@ -60,11 +74,11 @@ Um `JsonSerializerOptions` Construtor que especifica um conjunto de padrões nã
 ## <a name="see-also"></a>Confira também
 
 * [System.Text.Json sobre](system-text-json-overview.md)
-* [Habilitar correspondência que não diferencia maiúsculas de minúsculas](system-text-json-character-casing.md)
-* [Personalizar nomes e valores de propriedade](system-text-json-customize-properties.md)
-* [Ignorar Propriedades](system-text-json-ignore-properties.md)
+* [Habilitar a correspondência sem diferenciação de maiúsculas e minúsculas](system-text-json-character-casing.md)
+* [Personalizar nomes e valores da propriedade](system-text-json-customize-properties.md)
+* [Ignorar propriedades](system-text-json-ignore-properties.md)
 * [Permitir JSON inválido](system-text-json-invalid-json.md)
-* [Processar JSON de estouro](system-text-json-handle-overflow.md)
+* [Manipular JSON de estouro](system-text-json-handle-overflow.md)
 * [Preservar referências circulares](system-text-json-preserve-references.md)
 * [Tipos imutáveis e acessadores não públicos](system-text-json-immutability.md)
 * [Serialização polimórfica](system-text-json-polymorphism.md)

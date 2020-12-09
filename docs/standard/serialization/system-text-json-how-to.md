@@ -1,7 +1,7 @@
 ---
 title: Como serializar e desserializar JSON usando C#-.NET
 description: Saiba como usar o System.Text.Json namespace para serializar e desserializar do JSON no .net. Inclui o código de exemplo.
-ms.date: 11/30/2020
+ms.date: 12/02/2020
 ms.custom: contperfq2
 no-loc:
 - System.Text.Json
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 9ea9e2fef5ef66f2a5ff816168abfbd7b2e75276
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: dc1f8dab0d8d1ab5001797140a3bbfe4a02cb52b
+ms.sourcegitcommit: 0014aa4d5cb2da56a70e03fc68f663d64df5247a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96437678"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96918561"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>Como serializar e desserializar (empacotar e desempacotar) JSON no .NET
 
@@ -248,6 +248,8 @@ Aqui está um tipo de exemplo a ser serializado e a saída JSON bem impressa:
   "Summary": "Hot"
 }
 ```
+
+Se você usar `JsonSerializerOptions` repetidamente com as mesmas opções, não crie uma nova `JsonSerializerOptions` instância toda vez que usá-la. Reutilize a mesma instância para cada chamada. Para obter mais informações, consulte [reutilizar instâncias de JsonSerializerOptions](system-text-json-configure-options.md#reuse-jsonserializeroptions-instances).
 
 ## <a name="include-fields"></a>Incluir campos
 
