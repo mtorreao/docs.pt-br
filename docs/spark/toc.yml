@@ -59,7 +59,7 @@
           href: how-to-guides/dotnet-interactive-udf-issue.md
         - name: Implantar binários de trabalho e do UDF
           href: how-to-guides/deploy-worker-udf-binaries.md
-    - name: Usar notebooks Jupyter
+    - name: Usar o Jupyter Notebooks
       href: how-to-guides/dotnet-spark-jupyter-notebooks.md
     - name: Guia de difusão
       href: how-to-guides/broadcast-guide.md
