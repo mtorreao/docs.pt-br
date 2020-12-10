@@ -2,12 +2,12 @@
 title: dotnet – ferramenta de diagnóstico de contadores – CLI do .NET
 description: Saiba como instalar e usar a ferramenta dotnet-Counter CLI para monitoramento de integridade ad hoc e investigação de desempenho de primeiro nível.
 ms.date: 11/17/2020
-ms.openlocfilehash: 7dd4c06f3abe423552ba1d3eb82f6d0c35a84d0b
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 48e3b038ddb5c9421367612a592c5ba6b9459791
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822211"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009541"
 ---
 # <a name="investigate-performance-counters-dotnet-counters"></a>Investigar contadores de desempenho (dotNet-contadores)
 
@@ -29,7 +29,7 @@ Há duas maneiras de baixar e instalar `dotnet-counters` :
 
   Baixe o executável da ferramenta que corresponde à sua plataforma:
 
-  | SO  | Plataforma |
+  | Sistema operacional  | Plataforma |
   | --- | -------- |
   | Windows | [x86](https://aka.ms/dotnet-counters/win-x86) \| [x64](https://aka.ms/dotnet-counters/win-x64) \| [ARM](https://aka.ms/dotnet-counters/win-arm) \| [ARM-x64](https://aka.ms/dotnet-counters/win-arm64) |
   | macOS   | [x64](https://aka.ms/dotnet-counters/osx-x64) |
@@ -71,7 +71,7 @@ Coletar periodicamente os valores de contador selecionados e exportá-los para u
 ### <a name="synopsis"></a>Sinopse
 
 ```console
-dotnet-counters collect [-h|--help] [-p|--process-id] [-n|--name] [--refresh-interval] [--counters <COUNTERS>] [--format] [-o|--output] [-- <command>]
+dotnet-counters collect [-h|--help] [-p|--process-id] [-n|--name] [--diagnostic-port] [--refresh-interval] [--counters <COUNTERS>] [--format] [-o|--output] [-- <command>]
 ```
 
 ### <a name="options"></a>Opções
@@ -83,6 +83,10 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [-n|--name] [--refresh-int
 - **`-n|--name <name>`**
 
   O nome do processo do qual coletar dados do contador.
+
+- **`--diagnostic-port`**
+
+  O nome da porta de diagnóstico a ser criada. Consulte [usando a porta de diagnóstico](#using-diagnostic-port) para saber como usar essa opção para iniciar o monitoramento de contadores da inicialização do aplicativo.
 
 - **`--refresh-interval <SECONDS>`**
 
@@ -106,6 +110,9 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [-n|--name] [--refresh-int
 
   > [!NOTE]
   > O uso dessa opção monitora o primeiro processo do .NET 5,0 que se comunica de volta à ferramenta, o que significa que, se o comando iniciar vários aplicativos .NET, ele só coletará o primeiro aplicativo. Portanto, é recomendável usar essa opção em aplicativos independentes ou usando a `dotnet exec <app.dll>` opção.
+
+  > [!NOTE]
+  > Iniciar um executável .NET por meio de dotnet-Counters fará com que sua entrada/saída seja redirecionada e você não poderá interagir com seu STDIN/STDOUT. Sair da ferramenta por meio de CTRL + C ou SIGTERM irá encerrar com segurança a ferramenta e o processo filho. Se o processo filho for encerrado antes da ferramenta, a ferramenta também será encerrada e o rastreamento deverá ser visível com segurança. Se você precisar usar stdin/stdout, poderá usar a `--diagnostic-port` opção. Consulte [usando a porta de diagnóstico](#using-diagnostic-port) para obter mais informações.
 
 ### <a name="examples"></a>Exemplos
 
@@ -180,7 +187,7 @@ Exibe a atualização periódica de valores dos contadores selecionados.
 ### <a name="synopsis"></a>Sinopse
 
 ```console
-dotnet-counters monitor [-h|--help] [-p|--process-id] [-n|--name] [--refresh-interval] [--counters] [-- <command>]
+dotnet-counters monitor [-h|--help] [-p|--process-id] [-n|--name] [--diagnostic-port] [--refresh-interval] [--counters] [-- <command>]
 ```
 
 ### <a name="options"></a>Opções
@@ -192,6 +199,10 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [-n|--name] [--refresh-int
 - **`-n|--name <name>`**
 
   O nome do processo a ser monitorado.
+
+- **`--diagnostic-port`**
+
+  O nome da porta de diagnóstico a ser criada. Consulte [usando a porta de diagnóstico](#using-diagnostic-port) para saber como usar essa opção para iniciar o monitoramento de contadores da inicialização do aplicativo.
 
 - **`--refresh-interval <SECONDS>`**
 
@@ -207,6 +218,9 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [-n|--name] [--refresh-int
 
   > [!NOTE]
   > O uso dessa opção monitora o primeiro processo do .NET 5,0 que se comunica de volta à ferramenta, o que significa que, se o comando iniciar vários aplicativos .NET, ele só coletará o primeiro aplicativo. Portanto, é recomendável usar essa opção em aplicativos independentes ou usando a `dotnet exec <app.dll>` opção.
+
+  > [!NOTE]
+  > Iniciar um executável .NET por meio de dotnet-Counters fará com que sua entrada/saída seja redirecionada e você não poderá interagir com seu STDIN/STDOUT. Sair da ferramenta por meio de CTRL + C ou SIGTERM irá encerrar com segurança a ferramenta e o processo filho. Se o processo filho for encerrado antes da ferramenta, a ferramenta também será encerrada e o rastreamento deverá ser visível com segurança. Se você precisar usar stdin/stdout, poderá usar a `--diagnostic-port` opção. Consulte [usando a porta de diagnóstico](#using-diagnostic-port) para obter mais informações.
 
 ### <a name="examples"></a>Exemplos
 
@@ -313,6 +327,48 @@ dotnet-counters ps [-h|--help]
 ```console
 > dotnet-counters ps
   
-  15683 WebApi     /home/suwhang/repos/WebApi/WebApi
+  15683 WebApi     /home/user/repos/WebApi/WebApi
   16324 dotnet     /usr/local/share/dotnet/dotnet
 ```
+
+## <a name="using-diagnostic-port"></a>Usando a porta de diagnóstico
+
+  > [!IMPORTANT]
+  > Isso funciona somente para aplicativos que executam o .NET 5,0 ou posterior.
+
+A porta de diagnóstico é um novo recurso de tempo de execução que foi adicionado no .NET 5 que permite que você inicie o monitoramento ou coleta de contadores da inicialização do aplicativo. Para fazer isso usando o `dotnet-counters` , você pode usar o `dotnet-counters <collect|monitor> -- <command>` conforme descrito nos exemplos acima ou usar a `--diagnostic-port` opção.
+
+Usar `dotnet-counters <collect|monitor> -- <command>` o para iniciar o aplicativo como um processo filho é a maneira mais simples de monitorá-lo rapidamente a partir de sua inicialização.
+
+No entanto, quando você quiser obter um controle mais preciso sobre o tempo de vida do aplicativo que está sendo monitorado (por exemplo, monitorar o aplicativo pelos primeiros 10 minutos e continuar executando) ou se precisar interagir com o aplicativo usando a CLI, o uso da `--diagnostic-port` opção permitirá que você controle o aplicativo de destino que está sendo monitorado e `dotnet-counters` .
+
+1. O comando a seguir faz o dotnet-Counters criar um soquete de diagnóstico chamado `myport.sock` e aguardar uma conexão.
+
+    > ```dotnet-cli
+    > dotnet-counters collect --diagnostic-port myport.sock
+    > ```
+
+    Saída:
+
+    > ```bash
+    > Waiting for connection on myport.sock
+    > Start an application with the following environment variable: DOTNET_DiagnosticPorts=/home/user/myport.sock
+    > ```
+
+2. Em um console separado, inicie o aplicativo de destino com a variável de ambiente `DOTNET_DiagnosticPorts` definida como o valor na `dotnet-counters` saída.
+
+    > ```bash
+    > export DOTNET_DiagnosticPorts=/home/user/myport.sock
+    > ./my-dotnet-app arg1 arg2
+    > ```
+
+    Isso deve, então, habilitar `dotnet-counters` para começar a coletar contadores em `my-dotnet-app` :
+
+    > ```bash
+    > Waiting for connection on myport.sock
+    > Start an application with the following environment variable: DOTNET_DiagnosticPorts=myport.sock
+    > Starting a counter session. Press Q to quit.
+    > ```
+
+    > [!IMPORTANT]
+    > Iniciar seu aplicativo com `dotnet run` pode ser problemático porque a CLI dotnet pode gerar muitos processos filho que não são seu aplicativo e podem se conectar `dotnet-counters` antes do seu aplicativo, deixando seu aplicativo para ser suspenso em tempo de execução. É recomendável que você use diretamente uma versão independente do aplicativo ou use `dotnet exec` para iniciar o aplicativo.

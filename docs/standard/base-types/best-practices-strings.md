@@ -17,12 +17,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: d0a928fffb84e925ae167885e6d2456dc45b6892
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: bf11edc3669916ba4d30a3648692ca9b084d4340
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825072"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009801"
 ---
 # <a name="best-practices-for-comparing-strings-in-net"></a>Práticas recomendadas para comparar cadeias de caracteres no .NET
 
@@ -167,9 +167,6 @@ As comparações ordinais que não diferenciam maiúsculas de minúsculas são a
 
 Essas comparações ainda são muito rápidas.
 
-> [!NOTE]
-> O comportamento de cadeia de caracteres do sistema de arquivos, chaves do Registro e valores e variáveis de ambiente é melhor representado por <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType>.
-
 <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> e <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> usam os valores binários diretamente e são mais adequados para correspondência. Quando você não tiver certeza sobre as configurações de comparação, use um destes dois valores. No entanto, como elas executam uma comparação byte por byte, elas não classificam por uma ordem de classificação linguística (como um dicionário de inglês), mas por ordem de classificação binária. Os resultados podem parecer estranhos na maioria dos contextos se exibido aos usuários.
 
 A semântica ordinal é o padrão para sobrecargas de <xref:System.String.Equals%2A?displayProperty=nameWithType> que não incluem um argumento <xref:System.StringComparison> (incluindo o operador de igualdade). Em qualquer caso, é recomendável que você chame uma sobrecarga que tenha um parâmetro <xref:System.StringComparison>.
@@ -197,12 +194,12 @@ De forma geral, a cultura invariável tem muito poucas propriedades que a tornam
 
 A tabela a seguir descreve o mapeamento do contexto da cadeia de caracteres semântica para um <xref:System.StringComparison> membro de enumeração:
 
-|Dados|Comportamento|System.StringComparison correspondente<br /><br /> value|
+|Dados|Comportamento|System.StringComparison correspondente<br /><br /> valor|
 |----------|--------------|-----------------------------------------------------|
 |Identificadores internos que diferenciam maiúsculas de minúsculas.<br /><br /> Identificadores que diferenciam maiúsculas e minúsculas nos padrões como XML e HTTP.<br /><br /> Configurações relacionadas à segurança que diferenciam maiúsculas de minúsculas.|Um identificador não linguístico, em que bytes correspondem exatamente.|<xref:System.StringComparison.Ordinal>|
 |Identificadores internos que não diferenciam maiúsculas de minúsculas.<br /><br /> Identificadores que não diferenciam maiúsculas e minúsculas em padrões como XML e HTTP.<br /><br /> Caminhos de arquivo.<br /><br /> Chaves do Registro e valores.<br /><br /> Variáveis de ambiente.<br /><br /> Identificadores de recurso (por exemplo, nomes de identificador).<br /><br /> Configurações relacionadas à segurança que não diferenciam maiúsculas de minúsculas.|Um identificador não linguístico, em que as maiúsculas e minúsculas são irrelevantes; especialmente, dados armazenados na maioria dos serviços de sistema do Windows.|<xref:System.StringComparison.OrdinalIgnoreCase>|
-|Alguns dados persistentes, linguisticamente relevantes.<br /><br /> Exibição de dados linguísticos que requer uma ordem de classificação fixa.|Dados independentes de cultura que ainda são linguisticamente relevantes.|<xref:System.StringComparison.InvariantCulture><br /><br /> - ou -<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|
-|Dados exibidos para o usuário.<br /><br /> A maioria das entradas do usuário.|Dados que exigem os costumes linguísticos locais.|<xref:System.StringComparison.CurrentCulture><br /><br /> - ou -<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|
+|Alguns dados persistentes, linguisticamente relevantes.<br /><br /> Exibição de dados linguísticos que requer uma ordem de classificação fixa.|Dados independentes de cultura que ainda são linguisticamente relevantes.|<xref:System.StringComparison.InvariantCulture><br /><br /> -ou-<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|
+|Dados exibidos para o usuário.<br /><br /> A maioria das entradas do usuário.|Dados que exigem os costumes linguísticos locais.|<xref:System.StringComparison.CurrentCulture><br /><br /> -ou-<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|
 
 ## <a name="common-string-comparison-methods-in-net"></a>Métodos comuns de comparação de cadeia de caracteres no .NET
 

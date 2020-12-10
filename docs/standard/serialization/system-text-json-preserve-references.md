@@ -1,7 +1,7 @@
 ---
 title: Como preservar referências com System.Text.Json
 description: Saiba como preservar referências e manipular referências circulares ao serializar e desserializar de JSON no .NET.
-ms.date: 11/30/2020
+ms.date: 12/09/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
@@ -11,18 +11,14 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 9254ca261c7d748c04c311fa56359014f752ff31
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: d358c953c0979ca097c080fcd750d5ef95b07de0
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96439890"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97008728"
 ---
-# <a name="how-to-handle-circular-references-with-no-locsystemtextjson"></a>Como lidar com referências circulares com System.Text.Json
-
-Neste artigo, você aprenderá a lidar com referências circulares com o `System.Text.Json` namespace.
-
-## <a name="preserve-references-and-handle-circular-references"></a>Preservar referências e manipular referências circulares
+# <a name="how-to-preserve-references-and-handle-circular-references-with-no-locsystemtextjson"></a>Como preservar referências e manipular referências circulares com System.Text.Json
 
 ::: zone pivot="dotnet-5-0"
 
@@ -59,12 +55,19 @@ System.Text.Json no .NET Core 3,1 dá suporte apenas a serialização por valor 
 ## <a name="see-also"></a>Confira também
 
 * [System.Text.Json sobre](system-text-json-overview.md)
-* [Criar instância de JsonSerializerOptions](system-text-json-configure-options.md)
-* [Habilitar correspondência que não diferencia maiúsculas de minúsculas](system-text-json-character-casing.md)
-* [Personalizar nomes e valores de propriedade](system-text-json-customize-properties.md)
-* [Ignorar Propriedades](system-text-json-ignore-properties.md)
+* [Como serializar e desserializar JSON](system-text-json-how-to.md)
+* [Instanciar instâncias JsonSerializerOptions](system-text-json-configure-options.md)
+* [Habilitar a correspondência sem diferenciação de maiúsculas e minúsculas](system-text-json-character-casing.md)
+* [Personalizar nomes e valores da propriedade](system-text-json-customize-properties.md)
+* [Ignorar propriedades](system-text-json-ignore-properties.md)
 * [Permitir JSON inválido](system-text-json-invalid-json.md)
-* [Processar JSON de estouro](system-text-json-handle-overflow.md)
+* [Manipular JSON de estouro](system-text-json-handle-overflow.md)
 * [Tipos imutáveis e acessadores não públicos](system-text-json-immutability.md)
 * [Serialização polimórfica](system-text-json-polymorphism.md)
+* [Migrar do Newtonsoft.Json para o System.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [Personalizar codificação de caracteres](system-text-json-character-encoding.md)
+* [Escrever serializadores personalizados e desserializadores](write-custom-serializer-deserializer.md)
+* [Gravar conversores personalizados para serialização JSON](system-text-json-converters-how-to.md)
+* [Suporte a DateTime e DateTimeOffset](../datetime/system-text-json-support.md)
 * [System.Text.Json Referência de API](xref:System.Text.Json)
+* [System.Text.Json. Referência de API de serialização](xref:System.Text.Json.Serialization)

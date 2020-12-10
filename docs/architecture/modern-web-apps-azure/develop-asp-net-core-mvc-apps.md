@@ -7,12 +7,12 @@ ms.date: 12/01/2020
 no-loc:
 - Blazor
 - WebAssembly
-ms.openlocfilehash: 94dda02045f4c3bb1b5bdd64ab6b40eb22f6817c
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: c0fc92b2dbc25a1a48e0264b64c79fc8631fa8f0
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851420"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009658"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Desenvolver aplicativos ASP.NET Core MVC
 
@@ -52,7 +52,7 @@ app.UseEndpoints(endpoints =>
 });
 ```
 
-Nesse exemplo, uma rota chamada "default" foi adicionada à tabela de roteamento. Ele define um modelo de rota com espaços reservados para o _controlador_, a _ação_ e a _ID_. Os espaços reservados de controlador e ação têm o padrão especificado ("início" e "índice", respectivamente) e o espaço reservado de ID é opcional (em virtude de "?" aplicado a ele). A convenção definida aqui indica que a primeira parte de uma solicitação deve corresponder ao nome do controlador, a segunda parte à ação, e, em seguida, se for necessário, uma terceira parte representará um parâmetro de ID. As rotas convencionais costumam ser definidas em um lugar para o aplicativo, como no método Configure na classe Startup.
+Nesse exemplo, uma rota chamada "default" foi adicionada à tabela de roteamento. Ele define um modelo de rota com espaços reservados para `controller` , `action` e `id` . Os `controller` `action` espaços reservados e têm o padrão especificado ( `Home` e `Index` , respectivamente) e o `id` espaço reservado é opcional (em virtude de um "?" aplicado a ele). A Convenção definida aqui indica que a primeira parte de uma solicitação deve corresponder ao nome do controlador, à segunda parte da ação e, se necessário, uma terceira parte representará um parâmetro de ID. Normalmente, as rotas convencionais são definidas em um único lugar para o aplicativo, como no `Configure` método na `Startup` classe.
 
 As rotas de atributo são aplicadas aos controladores e às ações diretamente, em vez de serem especificadas globalmente. Essa abordagem tem a vantagem de torná-las muito mais detectáveis quando você está olhando para um método específico, mas significa que as informações de roteamento não são mantidas em um único lugar no aplicativo. Com as rotas de atributo, você pode especificar com facilidade várias rotas para determinada ação, além de combinar rotas entre controladores e ações. Por exemplo:
 
@@ -91,7 +91,7 @@ No exemplo anterior, a página em questão corresponderia a uma rota com um par�
 "/Products/123"
 ```
 
-Depois que for feita a correspondência de uma solicitação específica a uma rota, mas antes da chamada do método de ação, o ASP.NET Core MVC executará o [model binding](/aspnet/core/mvc/models/model-binding) e a [validação de modelos](/aspnet/core/mvc/models/validation) na solicitação. O model binding é responsável por converter os dados HTTP de entrada nos tipos .NET especificados como parâmetros do método de ação a ser chamado. Por exemplo, se o método de ação espera um `int id` parâmetro, a associação de modelo tentará fornecer esse parâmetro de um valor fornecido como parte da solicitação. Para fazer isso, o model binding procurará valores em um formulário publicado, valores na própria rota e valores de cadeia de caracteres de consulta. Supondo que um valor de ID seja encontrado, ele será convertido em um inteiro antes de ser passado para o método de ação.
+Depois que for feita a correspondência de uma solicitação específica a uma rota, mas antes da chamada do método de ação, o ASP.NET Core MVC executará o [model binding](/aspnet/core/mvc/models/model-binding) e a [validação de modelos](/aspnet/core/mvc/models/validation) na solicitação. O model binding é responsável por converter os dados HTTP de entrada nos tipos .NET especificados como parâmetros do método de ação a ser chamado. Por exemplo, se o método de ação espera um `int id` parâmetro, a associação de modelo tentará fornecer esse parâmetro de um valor fornecido como parte da solicitação. Para fazer isso, o model binding procurará valores em um formulário publicado, valores na própria rota e valores de cadeia de caracteres de consulta. Supondo que um `id` valor seja encontrado, ele será convertido em um inteiro antes de ser passado para o método de ação.
 
 Após a associação do modelo, mas antes da chamada do método de ação, ocorre a validação de modelos. A validação de modelos usa atributos opcionais no tipo de modelo e pode ajudar a garantir que o objeto de modelo fornecido está em conformidade com determinados requisitos de dados. Determinados valores podem ser especificados como obrigatórios ou limitados a um determinado tamanho ou intervalo numérico, etc. Se os atributos de validação forem especificados, mas o modelo não estiver de acordo com seus requisitos, a Propriedade ModelState. IsValid será false e o conjunto de regras de validação com falha estará disponível para envio ao cliente que faz a solicitação.
 
@@ -169,15 +169,15 @@ O resultado final dessa abordagem é que os controladores sejam muito menores e 
 
 > ### <a name="references--mapping-requests-to-responses"></a>Referências – Mapeando solicitações para respostas
 >
-> - **Roteamento para ações do controlador**
+> - **Roteamento para ações do controlador**\
  > <https://docs.microsoft.com/aspnet/core/mvc/controllers/routing>
-> - **Associação de modelo**
+> - **Associação de modelo**\
  > <https://docs.microsoft.com/aspnet/core/mvc/models/model-binding>
-> - **Validação do modelo**
+> - **Validação do modelo**\
  > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
-> - **Filter**
+> - **Filter**\
  > <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
-> - **Atributo ApiController**
+> - **Atributo ApiController**\
  > <https://docs.microsoft.com/aspnet/core/web-api/>
 
 ## <a name="working-with-dependencies"></a>Trabalhando com dependências
@@ -391,13 +391,13 @@ Você pode ler mais sobre como implementar filtros e baixar um exemplo funcional
 
 > ### <a name="references--structuring-applications"></a>Referências – estruturando aplicativos
 >
-> - **Áreas**  
+> - **Área**\
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
-> - **MSDN Magazine – fatias de recurso do ASP.NET Core MVC**  
+> - **MSDN Magazine – fatias de recursos para ASP.NET Core MVC**\
 >   <https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc>
-> - **Filtros**  
+> - **Filter**\
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
-> - **MSDN Magazine – filtros reais ASP.NET Core MVC**  
+> - **MSDN Magazine – filtros reais ASP.NET Core MVC**\
 >   <https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters>
 
 ## <a name="security"></a>Segurança
@@ -447,7 +447,7 @@ Saiba mais sobre como [configurar a autenticação de dois fatores](/aspnet/core
 
 A autenticação é o processo de determinar quem está acessando o sistema. Se você estiver usando ASP.NET Core identidade e os métodos de configuração mostrados na seção anterior, ele configurará automaticamente alguns padrões de autenticação no aplicativo. No entanto, você também pode configurar esses padrões manualmente ou substituir aqueles definidos por addidentity. Se você estiver usando a identidade, ela configurará a autenticação baseada em cookie como o *esquema* padrão.
 
-Na autenticação baseada na Web, normalmente há até 5 ações que podem ser executadas no decorrer da autenticação de um cliente de um sistema. Eles são:
+Na autenticação baseada na Web, normalmente há até cinco ações que podem ser executadas no decorrer da autenticação de um cliente de um sistema. Eles são:
 
 - Autenticação. Use as informações fornecidas pelo cliente para criar uma identidade para usar no aplicativo.
 - Desafio. Essa ação é usada para exigir que o cliente se identifique.
@@ -501,13 +501,13 @@ Blazor Os aplicativos de servidor podem aproveitar os mesmos recursos de autenti
 
 > ### <a name="references--authentication"></a>Referências – autenticação
 >
-> - **Ações de autenticação e padrões**  
+> - **Ações de autenticação e padrões**\
 >   <https://stackoverflow.com/a/52493428>
-> - **Autenticação e autorização para SPAs**
+> - **Autenticação e autorização para SPAs**\
 >   <https://docs.microsoft.com/aspnet/core/security/authentication/identity-api-authorization>
-> - **BlazorAutenticação e autorização do ASP.NET Core**
+> - **BlazorAutenticação e autorização do ASP.NET Core**\
 >   <https://docs.microsoft.com/aspnet/core/blazor/security/>
-> - **Segurança: autenticação e autorização no ASP.NET Web Forms e Blazor**
+> - **Segurança: autenticação e autorização no ASP.NET Web Forms e Blazor**\
 >   <https://docs.microsoft.com/dotnet/architecture/blazor-for-web-forms-developers/security-authentication-authorization>
 
 ### <a name="authorization"></a>Autorização
@@ -584,17 +584,17 @@ Tenha um cuidado especial ao "distribuir sua própria" implementação de cripto
 
 > ### <a name="references--security"></a>Referências – Segurança
 >
-> - **Visão geral da documentação sobre segurança**  
+> - **Visão geral dos documentos de segurança**\
 >   <https://docs.microsoft.com/aspnet/core/security/>
-> - **Impondo o SSL em um aplicativo ASP.NET Core**  
+> - **Impondo SSL em um aplicativo ASP.NET Core**\
 >   <https://docs.microsoft.com/aspnet/core/security/enforcing-ssl>
-> - **Introdução ao Identity**  
+> - **Introdução à identidade**\
 >   <https://docs.microsoft.com/aspnet/core/security/authentication/identity>
-> - **Introdução à autorização**  
+> - **Introdução à autorização**\
 >   <https://docs.microsoft.com/aspnet/core/security/authorization/introduction>
-> - **Autenticação e autorização para aplicativos de API no Serviço de Aplicativo do Azure**  
+> - **Autenticação e autorização para aplicativos de API no serviço Azure App**\
 >   <https://docs.microsoft.com/azure/app-service-api/app-service-api-authentication>
-> - **Servidor de identidade**  
+> - **Servidor de identidade**\
 >   <https://github.com/IdentityServer>
 
 ## <a name="client-communication"></a>Comunicação com o cliente
@@ -653,9 +653,9 @@ Considere maneiras pelas quais os aplicativos se comunicam diretamente com aplic
 
 > ### <a name="references--client-communication"></a>Referências – Comunicação do cliente
 >
-> - **ASP.NET Core SignalR**  
+> - **Sinalizador de ASP.NET Core**\
 >   <https://github.com/dotnet/aspnetcore/tree/master/src/SignalR>
-> - **WebSocket Manager**  
+> - **Gerenciador do WebSocket**\
 >   <https://github.com/radu-matei/websocket-manager>
 
 ## <a name="domain-driven-design--should-you-apply-it"></a>Design controlado por domínio: você deve aplicá-lo?
@@ -702,7 +702,7 @@ Uma abordagem híbrida é usar o DDD somente para as áreas transacionais ou mai
 
 > ### <a name="references--domain-driven-design"></a>Referências – Design Controlado por Domínio
 >
-> - **DDD simplificado (resposta do StackOverflow)**  
+> - **DDD em inglês simples (resposta StackOverflow)**\
 >   <https://stackoverflow.com/questions/1222392/can-someone-explain-domain-driven-design-ddd-in-plain-english-please/1222488#1222488>
 
 ## <a name="deployment"></a>Implantação
@@ -745,13 +745,13 @@ _Saiba mais sobre as opções de implantação do Azure no [capítulo 10](develo
 
 > ### <a name="references--deployment"></a>Referências – Implantação
 >
-> - **Visão geral de hospedagem e implantação**  
+> - **Visão geral de hospedagem e implantação**\
 >   <https://docs.microsoft.com/aspnet/core/publishing/>
-> - **Quando usar o Kestrel com um proxy reverso**  
+> - **Quando usar o Kestrel com um proxy reverso**\
 >   <https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel#when-to-use-kestrel-with-a-reverse-proxy>
-> - **Hospedar aplicativos ASP.NET Core no Docker**  
+> - **Hospedar aplicativos ASP.NET Core no Docker**\
 >   <https://docs.microsoft.com/aspnet/core/publishing/docker>
-> - **Introdução ao Gateway de Aplicativo do Azure**  
+> - **Introdução ao gateway de Aplicativo Azure**\
 >   <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
 >[!div class="step-by-step"]

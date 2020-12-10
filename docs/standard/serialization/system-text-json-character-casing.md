@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 2d663ac8c1c15d61959a62c40d9a3b0993484032
-ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
+ms.openlocfilehash: 3e2fb8cbdd35e772b5e97c731199f69aa834bd0a
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96599070"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009736"
 ---
 # <a name="how-to-enable-case-insensitive-property-name-matching-with-no-locsystemtextjson"></a>Como habilitar a correspondência de nome de propriedade que não diferencia maiúsculas de minúsculas com System.Text.Json
 
@@ -45,12 +45,19 @@ Aqui está um exemplo de JSON com nomes de Propriedade do camel case. Ele pode s
 ## <a name="see-also"></a>Confira também
 
 * [System.Text.Json sobre](system-text-json-overview.md)
-* [Criar uma instância de JsonSerializerOptions](system-text-json-configure-options.md)
+* [Como serializar e desserializar JSON](system-text-json-how-to.md)
+* [Instanciar instâncias JsonSerializerOptions](system-text-json-configure-options.md)
 * [Personalizar nomes e valores da propriedade](system-text-json-customize-properties.md)
 * [Ignorar propriedades](system-text-json-ignore-properties.md)
 * [Permitir JSON inválido](system-text-json-invalid-json.md)
 * [Manipular JSON de estouro](system-text-json-handle-overflow.md)
-* [Preservar referências circulares](system-text-json-preserve-references.md)
+* [Preservar referências](system-text-json-preserve-references.md)
 * [Tipos imutáveis e acessadores não públicos](system-text-json-immutability.md)
 * [Serialização polimórfica](system-text-json-polymorphism.md)
+* [Migrar do Newtonsoft.Json para o System.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [Personalizar codificação de caracteres](system-text-json-character-encoding.md)
+* [Escrever serializadores personalizados e desserializadores](write-custom-serializer-deserializer.md)
+* [Gravar conversores personalizados para serialização JSON](system-text-json-converters-how-to.md)
+* [Suporte a DateTime e DateTimeOffset](../datetime/system-text-json-support.md)
 * [System.Text.Json Referência de API](xref:System.Text.Json)
+* [System.Text.Json. Referência de API de serialização](xref:System.Text.Json.Serialization)

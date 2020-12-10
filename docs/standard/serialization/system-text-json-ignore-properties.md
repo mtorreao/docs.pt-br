@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: ed7ef8509d6660bbbbaf194a87aa9d4815143507
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 6d703156d50a3e00a33cea5e15be2df911ed7c1b
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96439885"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97008806"
 ---
 # <a name="how-to-ignore-properties-with-no-locsystemtextjson"></a>Como ignorar Propriedades com System.Text.Json
 
@@ -137,12 +137,19 @@ Não há uma maneira interna de impedir a serialização de propriedades com pad
 ## <a name="see-also"></a>Confira também
 
 * [System.Text.Json sobre](system-text-json-overview.md)
-* [Criar instância de JsonSerializerOptions](system-text-json-configure-options.md)
-* [Habilitar correspondência que não diferencia maiúsculas de minúsculas](system-text-json-character-casing.md)
-* [Personalizar nomes e valores de propriedade](system-text-json-customize-properties.md)
+* [Como serializar e desserializar JSON](system-text-json-how-to.md)
+* [Instanciar instâncias JsonSerializerOptions](system-text-json-configure-options.md)
+* [Habilitar a correspondência sem diferenciação de maiúsculas e minúsculas](system-text-json-character-casing.md)
+* [Personalizar nomes e valores da propriedade](system-text-json-customize-properties.md)
 * [Permitir JSON inválido](system-text-json-invalid-json.md)
-* [Processar JSON de estouro](system-text-json-handle-overflow.md)
-* [Preservar referências circulares](system-text-json-preserve-references.md)
+* [Manipular JSON de estouro](system-text-json-handle-overflow.md)
+* [Preservar referências](system-text-json-preserve-references.md)
 * [Tipos imutáveis e acessadores não públicos](system-text-json-immutability.md)
 * [Serialização polimórfica](system-text-json-polymorphism.md)
+* [Migrar do Newtonsoft.Json para o System.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [Personalizar codificação de caracteres](system-text-json-character-encoding.md)
+* [Escrever serializadores personalizados e desserializadores](write-custom-serializer-deserializer.md)
+* [Gravar conversores personalizados para serialização JSON](system-text-json-converters-how-to.md)
+* [Suporte a DateTime e DateTimeOffset](../datetime/system-text-json-support.md)
 * [System.Text.Json Referência de API](xref:System.Text.Json)
+* [System.Text.Json. Referência de API de serialização](xref:System.Text.Json.Serialization)

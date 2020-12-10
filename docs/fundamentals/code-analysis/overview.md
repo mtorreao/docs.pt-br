@@ -8,12 +8,12 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: 657975742c3efc2985264fe16cb316357b959e73
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: 2f59b97de6f92e5a9bf927e1318286e400017dad
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851810"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009840"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>Visão geral da análise de código-fonte do .NET
 
@@ -40,7 +40,7 @@ As regras de *análise de qualidade de código* ("CAxxxx") inspecionam seu códi
 
 As regras a seguir estão habilitadas, por padrão, no .NET 5,0.
 
-| ID do diagnóstico | Category | Severidade | Descrição |
+| ID do diagnóstico | Categoria | Severidade | Descrição |
 | - | - | - | - |
 | [CA1416](/visualstudio/code-quality/ca1416) | Interoperabilidade | Aviso | Analisador de compatibilidade de plataforma |
 | [CA1417](/visualstudio/code-quality/ca1417) | Interoperabilidade | Aviso | Não usar `OutAttribute` em parâmetros de cadeia de caracteres para P/Invokes |
@@ -101,19 +101,18 @@ Por padrão, você obterá as regras de análise de código mais recentes e as s
 
 ## <a name="code-style-analysis"></a>Análise de estilo de código
 
-As regras de *análise de estilo de código* ("IDExxxx") permitem que você defina e mantenha o estilo de código consistente em sua codebase. As configurações de habilitação padrão são:
+As regras de *análise de estilo de código* ("IDExxxx") permitem que você defina e mantenha o estilo de código consistente na codebase. As configurações de habilitação padrão são:
 
 - Compilação de linha de comando: a análise de estilo de código está desabilitada, por padrão, para todos os projetos .NET em compilações de linha de comando.
 - Visual Studio: a análise de estilo de código está habilitada, por padrão, para todos os projetos .NET dentro do Visual Studio como [ações rápidas de refatoração de código](/visualstudio/ide/code-generation-in-visual-studio).
 
-Iniciando o .NET 5,0, você pode habilitar a análise do estilo de código no Build, tanto na linha de comando quanto no Visual Studio. Violações de estilo de código aparecem como avisos ou erros com um prefixo "IDE". Isso permite que você imponha estilos de código consistentes no momento da compilação.
+A partir do .NET 5,0, você pode habilitar a análise de estilo de código no Build, tanto na linha de comando quanto dentro do Visual Studio. Violações de estilo de código aparecem como avisos ou erros com um prefixo "IDE". Isso permite que você imponha estilos de código consistentes no momento da compilação.
 
 Para obter uma lista completa de regras de análise de estilo de código, consulte [regras de estilo de código](style-rules/index.md).
 
-> [!NOTE]
-> O recurso de análise de estilo de código é experimental e pode mudar entre as versões do .NET 5 e do .NET 6.
+### <a name="enable-on-build"></a>Habilitar no Build
 
-Etapas para habilitar a análise do estilo de código na compilação:
+Siga estas etapas para habilitar a análise de estilo de código na compilação:
 
 1. Defina a propriedade [EnforceCodeStyleInBuild](../../core/project-sdk/msbuild-props.md#enforcecodestyleinbuild) do MSBuild como `true` .
 
@@ -136,6 +135,9 @@ Etapas para habilitar a análise do estilo de código na compilação:
    # IDE0040: Accessibility modifiers required (disabled on build)
    dotnet_diagnostic.IDE0040.severity = silent
    ```
+
+> [!NOTE]
+> O recurso de análise de estilo de código é experimental e pode mudar entre as versões do .NET 5 e do .NET 6.
 
 ## <a name="suppress-a-warning"></a>Suprimir um aviso
 

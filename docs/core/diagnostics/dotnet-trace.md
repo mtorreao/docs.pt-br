@@ -2,12 +2,12 @@
 title: dotnet-ferramenta de diagnóstico de rastreamento-CLI do .NET
 description: Saiba como instalar e usar a ferramenta de CLI de rastreamento dotnet para coletar rastreamentos do .NET de um processo em execução sem o criador de perfil nativo, usando o .NET EventPipe.
 ms.date: 11/17/2020
-ms.openlocfilehash: 6bc5ad449f62ed0080ff6b1f401f1871d90cf5ec
-ms.sourcegitcommit: c6de55556add9f92af17e0f8d1da8f356a19a03d
+ms.openlocfilehash: 868ce7828eee6bd7f2101d5d6a65c7f7bf87fe24
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96549326"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009528"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-utilitário de análise de desempenho de rastreamento
 
@@ -29,7 +29,7 @@ Há duas maneiras de baixar e instalar `dotnet-trace` :
 
   Baixe o executável da ferramenta que corresponde à sua plataforma:
 
-  | SO  | Plataforma |
+  | Sistema operacional  | Plataforma |
   | --- | -------- |
   | Windows | [x86](https://aka.ms/dotnet-trace/win-x86) \| [x64](https://aka.ms/dotnet-trace/win-x64) \| [ARM](https://aka.ms/dotnet-trace/win-arm) \| [ARM-x64](https://aka.ms/dotnet-trace/win-arm64) |
   | macOS   | [x64](https://aka.ms/dotnet-trace/osx-x64) |
@@ -78,7 +78,7 @@ Coleta um rastreamento de diagnóstico de um processo em execução.
 ```console
 dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--clrevents <clrevents>]
     [--format <Chromium|NetTrace|Speedscope>] [-h|--help]
-    [-n, --name <name>]  [-o|--output <trace-file-path>] [-p|--process-id <pid>]
+    [-n, --name <name>] [--diagnostic-port] [-o|--output <trace-file-path>] [-p|--process-id <pid>]
     [--profile <profile-name>] [--providers <list-of-comma-separated-providers>]
     [-- <command>] (for target applications running .NET 5.0 or later)
 ```
@@ -104,6 +104,10 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
 - **`-n, --name <name>`**
 
   O nome do processo do qual coletar o rastreamento.
+
+- **`--diagnostic-port <path-to-port>`**
+
+  O nome da porta de diagnóstico a ser criada. Consulte [usar a porta de diagnóstico para coletar um rastreamento da inicialização do aplicativo](#use-diagnostic-port-to-collect-a-trace-from-app-startup) para saber como usar essa opção para coletar um rastreamento da inicialização do aplicativo.
 
 - **`-o|--output <trace-file-path>`**
 
@@ -250,6 +254,48 @@ Você pode parar de coletar o rastreamento pressionando `<Enter>` ou `<Ctrl + C>
 > `hello.exe`A inicialização por meio de dotnet-Trace fará com que sua entrada/saída seja redirecionada e você não conseguirá interagir com seu STDIN/STDOUT.
 > Sair da ferramenta por meio de CTRL + C ou SIGTERM irá encerrar com segurança a ferramenta e o processo filho.
 > Se o processo filho for encerrado antes da ferramenta, a ferramenta também será encerrada e o rastreamento deverá ser visível com segurança.
+
+## <a name="use-diagnostic-port-to-collect-a-trace-from-app-startup"></a>Usar a porta de diagnóstico para coletar um rastreamento da inicialização do aplicativo
+
+  > [!IMPORTANT]
+  > Isso funciona somente para aplicativos que executam o .NET 5,0 ou posterior.
+
+A porta de diagnóstico é um novo recurso de tempo de execução que foi adicionado no .NET 5 que permite iniciar o rastreamento da inicialização do aplicativo. Para fazer isso usando o `dotnet-trace` , você pode usar o `dotnet-trace collect -- <command>` conforme descrito nos exemplos acima ou usar a `--diagnostic-port` opção.
+
+Usar o `dotnet-trace <collect|monitor> -- <command>` para iniciar o aplicativo como um processo filho é a maneira mais simples de rastreá-lo rapidamente a partir de sua inicialização.
+
+No entanto, quando você quiser obter um controle mais preciso sobre o tempo de vida do aplicativo que está sendo rastreado (por exemplo, monitorar o aplicativo pelos primeiros 10 minutos apenas e continuar executando) ou se precisar interagir com o aplicativo usando a CLI, o uso da `--diagnostic-port` opção permitirá que você controle o aplicativo de destino que está sendo monitorado e `dotnet-trace` .
+
+1. O comando a seguir `dotnet-trace` cria um soquete de diagnóstico chamado `myport.sock` e aguarda uma conexão.
+
+    > ```dotnet-cli
+    > dotnet-trace collect --diagnostic-port myport.sock
+    > ```
+
+    Saída:
+
+    > ```bash
+    > Waiting for connection on myport.sock
+    > Start an application with the following environment variable: DOTNET_DiagnosticPorts=/home/user/myport.sock
+    > ```
+
+2. Em um console separado, inicie o aplicativo de destino com a variável de ambiente `DOTNET_DiagnosticPorts` definida como o valor na `dotnet-trace` saída.
+
+    > ```bash
+    > export DOTNET_DiagnosticPorts=/home/user/myport.sock
+    > ./my-dotnet-app arg1 arg2
+    > ```
+
+    Isso deve, então, habilitar `dotnet-trace` para iniciar o rastreamento `my-dotnet-app` :
+
+    > ```bash
+    > Waiting for connection on myport.sock
+    > Start an application with the following environment variable: DOTNET_DiagnosticPorts=myport.sock
+    > Starting a counter session. Press Q to quit.
+    > ```
+
+    > [!IMPORTANT]
+    > Iniciar seu aplicativo com `dotnet run` pode ser problemático porque a CLI dotnet pode gerar muitos processos filho que não são seu aplicativo e podem se conectar `dotnet-trace` antes do seu aplicativo, deixando seu aplicativo para ser suspenso em tempo de execução. É recomendável que você use diretamente uma versão independente do aplicativo ou use `dotnet exec` para iniciar o aplicativo.
 
 ## <a name="view-the-trace-captured-from-dotnet-trace"></a>Exibir o rastreamento capturado de dotnet-Trace
 

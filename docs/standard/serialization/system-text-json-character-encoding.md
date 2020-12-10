@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: f6a50a3ca2a5e871294cf7c056cbf197a61cd668
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: cfb83af0c58e0c9dfb73ecb8e2177d255e403fae
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96439907"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009619"
 ---
 # <a name="how-to-customize-character-encoding-with-no-locsystemtextjson"></a>Como personalizar a codificação de caracteres com System.Text.Json
 
@@ -86,6 +86,19 @@ Para minimizar a saída, você pode usar <xref:System.Text.Encodings.Web.JavaScr
 ## <a name="see-also"></a>Confira também
 
 * [System.Text.Json sobre](system-text-json-overview.md)
-* [Como escrever serializadores personalizados e desserializadores](write-custom-serializer-deserializer.md)
-* [Como escrever conversores personalizados para serialização JSON](system-text-json-converters-how-to.md)
+* [Como serializar e desserializar JSON](system-text-json-how-to.md)
+* [Instanciar instâncias JsonSerializerOptions](system-text-json-configure-options.md)
+* [Habilitar a correspondência sem diferenciação de maiúsculas e minúsculas](system-text-json-character-casing.md)
+* [Personalizar nomes e valores da propriedade](system-text-json-customize-properties.md)
+* [Ignorar propriedades](system-text-json-ignore-properties.md)
+* [Permitir JSON inválido](system-text-json-invalid-json.md)
+* [Manipular JSON de estouro](system-text-json-handle-overflow.md)
+* [Preservar referências](system-text-json-preserve-references.md)
+* [Tipos imutáveis e acessadores não públicos](system-text-json-immutability.md)
+* [Serialização polimórfica](system-text-json-polymorphism.md)
+* [Migrar do Newtonsoft.Json para o System.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [Escrever serializadores personalizados e desserializadores](write-custom-serializer-deserializer.md)
+* [Gravar conversores personalizados para serialização JSON](system-text-json-converters-how-to.md)
+* [Suporte a DateTime e DateTimeOffset](../datetime/system-text-json-support.md)
 * [System.Text.Json Referência de API](xref:System.Text.Json)
+* [System.Text.Json. Referência da API de serialização](xref:System.Text.Json.Serialization)
