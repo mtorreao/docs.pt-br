@@ -4,12 +4,12 @@ description: Saiba mais sobre quais versões do Windows você pode instalar no .
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: 786814549724948fa69b18a05cee966e0940aaf4
-ms.sourcegitcommit: c6de55556add9f92af17e0f8d1da8f356a19a03d
+ms.openlocfilehash: b5c0949bbd591906536094a33d8583a265d8a4c8
+ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96549339"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97110228"
 ---
 # <a name="install-net-on-windows"></a>Instalar o .NET no Windows
 
@@ -37,6 +37,7 @@ As datas de fim de serviço das versões do Windows 10 são segmentadas por edi�
 
 | Sistema operacional            | .NET Core 2.1 | .NET Core 3.1 | .NET 5 |
 |-----------------------------|---------------|---------------|--------|
+| Windows 10, versão 20H2    | ✔️           | ✔️            | ✔️    |
 | Windows 10, versão 2004    | ✔️           | ✔️            | ✔️    |
 | Windows 10, versão 1909    | ✔️           | ✔️            | ✔️    |
 | Windows 10, versão 1903    | ✔️           | ✔️            | ✔️    |
@@ -95,7 +96,7 @@ As seguintes versões do Windows têm suporte com o .NET 5,0:
 > [!NOTE]
 > Um `+` símbolo representa a versão mínima.
 
-| SO                  | Versão       | Arquiteturas   |
+| Sistema operacional                  | Versão       | Arquiteturas   |
 |---------------------|---------------|-----------------|
 | Cliente do Windows 10   | Versão 1607 + | x64, x86, ARM64 |
 | Windows Client      | 7 SP1 +, 8,1   | x64, x86        |
@@ -112,7 +113,7 @@ As seguintes versões do Windows têm suporte com o .NET Core 3,1:
 > [!NOTE]
 > Um `+` símbolo representa a versão mínima.
 
-| SO                            | Versão                        | Arquiteturas   |
+| Sistema operacional                            | Versão                        | Arquiteturas   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Windows Client                | 7 SP1 +, 8,1                    | x64, x86        |
 | Cliente do Windows 10             | Versão 1607 +                  | x64, x86        |
@@ -130,7 +131,7 @@ As seguintes versões do Windows têm suporte com o .NET Core 3,0:
 > [!NOTE]
 > Um `+` símbolo representa a versão mínima.
 
-| SO                            | Versão                        | Arquiteturas   |
+| Sistema operacional                            | Versão                        | Arquiteturas   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Windows Client                | 7 SP1 +, 8,1                    | x64, x86        |
 | Cliente do Windows 10             | Versão 1607 +                  | x64, x86        |
@@ -148,7 +149,7 @@ As seguintes versões do Windows têm suporte com o .NET Core 2,2:
 > [!NOTE]
 > Um `+` símbolo representa a versão mínima.
 
-| SO                            | Versão                        | Arquiteturas   |
+| Sistema operacional                            | Versão                        | Arquiteturas   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Windows Client                | 7 SP1 +, 8,1                    | x64, x86        |
 | Cliente do Windows 10             | Versão 1607 +                  | x64, x86        |
@@ -164,7 +165,7 @@ As seguintes versões do Windows têm suporte com o .NET Core 2,1:
 > [!NOTE]
 > Um `+` símbolo representa a versão mínima.
 
-| SO                            | Versão                        | Arquiteturas   |
+| Sistema operacional                            | Versão                        | Arquiteturas   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Windows Client                | 7 SP1 +, 8,1                    | x64, x86        |
 | Cliente do Windows 10             | Versão 1607 +                  | x64, x86        |

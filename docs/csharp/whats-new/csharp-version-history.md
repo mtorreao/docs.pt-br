@@ -3,12 +3,12 @@ title: O histórico da linguagem C# – Guia do C#
 description: Qual era a aparência da linguagem nas primeiras versões e como ela evoluiu desde então?
 author: erikdietrich
 ms.date: 04/08/2020
-ms.openlocfilehash: 349f2cfbe0fc93060eb6927ee8c3528c16b99aca
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 7258dc8b8fcfbd6354b5ceee4183429bfee14038
+ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91805083"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97110722"
 ---
 # <a name="the-history-of-c"></a>O histórico da linguagem C\#
 
@@ -134,17 +134,17 @@ Mas `async` e `await` são as verdadeiras estrelas dessa versão. Quando esses r
 
 Nas versões 3.0 e 5.0, o C# recebeu alguns novos recursos importantes em uma linguagem orientada a objeto. Com a versão 6,0, lançada com o Visual Studio 2015, ela desapareceria com um recurso de Killer dominante e, em vez disso, lançaria muitos recursos menores que tornaram a programação C# mais produtiva. Eis algumas delas:
 
-- [Importações estáticas](./csharp-6.md#using-static)
-- [Filtros de exceção](./csharp-6.md#exception-filters)
-- [Inicializadores de propriedade automática](./csharp-6.md#auto-property-initializers)
-- [Membros aptos para expressão](./csharp-6.md#expression-bodied-function-members)
-- [Propagador nulo](./csharp-6.md#null-conditional-operators)
-- [Interpolação de cadeia de caracteres](./csharp-6.md#string-interpolation)
-- [operador nameof](./csharp-6.md#the-nameof-expression)
-- [Inicializadores de índice](csharp-6.md#extension-add-methods-in-collection-initializers)
+- [Importações estáticas](../language-reference/keywords/using-static.md)
+- [Filtros de exceção](../language-reference/keywords/when.md)
+- [Inicializadores de propriedade automática](../properties.md)
+- [Membros aptos para expressão](../language-reference/operators/lambda-operator.md#expression-body-definition)
+- [Propagador nulo](../language-reference/operators/member-access-operators.md#null-conditional-operators--and-)
+- [Interpolação de cadeia de caracteres](../language-reference/tokens/interpolated.md)
+- [operador nameof](../language-reference/operators/nameof.md)
 
 Outros novos recursos incluem:
 
+- Inicializadores de índice
 - Await em blocos catch/finally
 - Valores padrão para propriedades somente getter
 

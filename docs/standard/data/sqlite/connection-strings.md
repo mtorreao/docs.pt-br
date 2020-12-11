@@ -1,13 +1,13 @@
 ---
 title: Cadeias de conexão
-ms.date: 12/13/2019
+ms.date: 12/08/2020
 description: As palavras-chave e os valores com suporte das cadeias de conexão.
-ms.openlocfilehash: 3c50b31689abf6d47aa8f83a6f6f755bcfec0ea3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 35283664c4ac3985d4f517fde77644ab2a891120
+ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555387"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97110735"
 ---
 # <a name="connection-strings"></a>Cadeias de conexão
 
@@ -31,7 +31,7 @@ Os caminhos que começam com a `|DataDirectory|` cadeia de caracteres de substit
 
 Essa palavra-chave também dá suporte a [nomes de fileuri](https://www.sqlite.org/uri.html).
 
-### <a name="mode"></a>Modo
+### <a name="mode"></a>Mode
 
 O modo de conexão.
 
@@ -49,8 +49,8 @@ O modo de cache usado pela conexão.
 | Valor   | Descrição                                                                                    |
 | ------- | ---------------------------------------------------------------------------------------------- |
 | Padrão | Usa o modo padrão da biblioteca SQLite subjacente. Este é o padrão.                   |
-| Particular | Cada conexão usa um cache privado.                                                          |
-| Compartilhado  | As conexões compartilham um cache. Esse modo pode alterar o comportamento do bloqueio de transação e tabela. |
+| Privados | Cada conexão usa um cache privado.                                                          |
+| Compartilhada  | As conexões compartilham um cache. Esse modo pode alterar o comportamento do bloqueio de transação e tabela. |
 
 ### <a name="password"></a>Senha
 
@@ -59,11 +59,17 @@ A chave de criptografia. Quando especificado, `PRAGMA key` é enviado imediatame
 > [!WARNING]
 > A senha não tem efeito quando a criptografia não tem suporte da biblioteca SQLite nativa.
 
+> [!NOTE]
+> A palavra-chave password foi adicionada na versão 3,0.
+
 ### <a name="foreign-keys"></a>Chaves estrangeiras
 
 Um valor que indica se as restrições de chave estrangeira devem ser habilitadas.
 
-| Valor   | DESCRIÇÃO
+> [!NOTE]
+> A palavra-chave Foreign Keys foi adicionada na versão 3,0.
+
+| Valor   | Descrição
 | ------- | --- |
 | True    | Envia `PRAGMA foreign_keys = 1` imediatamente após a abertura da conexão.
 | Falso   | Envia `PRAGMA foreign_keys = 0` imediatamente após a abertura da conexão.
@@ -75,7 +81,10 @@ Não há necessidade de habilitar chaves estrangeiras se, como em e_sqlite3, SQL
 
 Um valor que indica se os gatilhos recursivos devem ser habilitados.
 
-| Valor | DESCRIÇÃO                                                                 |
+> [!NOTE]
+> A palavra-chave triggers recursivos foi adicionada na versão 3,0.
+
+| Valor | Descrição                                                                 |
 | ----- | --------------------------------------------------------------------------- |
 | True  | Envia `PRAGMA recursive_triggers` imediatamente após a abertura da conexão. |
 | Falso | Não envia `PRAGMA recursive_triggers` . Este é o padrão.              |
@@ -128,8 +137,8 @@ Um banco de dados compartilhável e na memória identificado pelo nome *comparti
 Data Source=Sharable;Mode=Memory;Cache=Shared
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-* [Cadeias de caracteres de conexão no ADO.NET](../../../framework/data/adonet/connection-strings.md)
+* [Cadeias de conexão em ADO.NET](../../../framework/data/adonet/connection-strings.md)
 * [Bancos de dados na memória](in-memory-databases.md)
 * [Transações](transactions.md)

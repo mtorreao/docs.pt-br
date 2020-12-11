@@ -6,19 +6,19 @@ ms.author: tdykstra
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
-ms.date: 11/30/2020
+ms.date: 12/09/2020
 zone_pivot_groups: dotnet-version
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 418637639790199755803bf374ef99af949ae9b3
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 4a33d9de96af805c3696ceed5cd30a3fa8547222
+ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009892"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97110826"
 ---
 # <a name="how-to-migrate-from-no-locnewtonsoftjson-to-no-locsystemtextjson"></a>Como migrar do Newtonsoft.Json para o System.Text.Json
 
@@ -369,6 +369,10 @@ Para obter mais informações, consulte [preservar referências e manipular refe
 
 ::: zone pivot="dotnet-5-0"
 `Newtonsoft.Json`E as `System.Text.Json` coleções de suporte do tipo `Dictionary<TKey, TValue>` .
+
+> [!CAUTION]
+> A desserialização para um `Dictionary<TKey, TValue>` onde `TKey` é digitada como algo diferente de `string` pode introduzir uma vulnerabilidade de segurança no aplicativo de consumo. Para obter mais informações, consulte [dotnet/tempo de execução # 4761](https://github.com/dotnet/runtime/issues/4761).
+
 ::: zone-end
 
 ::: zone pivot="dotnet-core-3-1"
@@ -822,4 +826,4 @@ Se você precisar continuar a usar `Newtonsoft.Json` para determinadas estrutura
 * [Gravar conversores personalizados para serialização JSON](system-text-json-converters-how-to.md)
 * [Suporte a DateTime e DateTimeOffset](../datetime/system-text-json-support.md)
 * [System.Text.Json Referência de API](xref:System.Text.Json)
-* [System.Text.Json. Referência da API de serialização](xref:System.Text.Json.Serialization)
+* [System.Text.Json. Referência de API de serialização](xref:System.Text.Json.Serialization)
