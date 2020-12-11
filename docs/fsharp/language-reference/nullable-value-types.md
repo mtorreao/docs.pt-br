@@ -1,19 +1,19 @@
 ---
 title: Tipos de valor anuláveis
-description: 'Saiba como usar tipos de valor anulável, uma maneira de representar um tipo de valor que também pode ser NULL, em F #.'
+description: 'Saiba como usar tipos de valor anulável, uma maneira de representar tipos de valor que também podem ser nulos, em F #.'
 ms.date: 11/19/2020
-ms.openlocfilehash: da0cd85bd651db81ba98c02a9db31d92dc52a8c6
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: e28cbfc57c5631573f46ac36462517cf011e96d2
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96740399"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009632"
 ---
 # <a name="nullable-value-types"></a>Tipos de valor anuláveis
 
 Um _tipo de valor anulável_ `Nullable<'T>` representa qualquer tipo de [struct](structures.md) que também pode ser `null` . Isso é útil ao interagir com bibliotecas e componentes que podem escolher representar esses tipos de tipos, como inteiros, com um `null` valor por motivos de eficiência. O tipo subjacente que faz backup desse constructo é <xref:System.Nullable%601?displayProperty=nameWithType> .
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
 ```fsharp
 Nullable<'T>
@@ -62,7 +62,7 @@ Isso ocorre porque `Nullable<'T>` o não tem `null` um valor adequado.
 
 ## <a name="pass-and-assign-to-members"></a>Passar e atribuir a membros
 
-Uma diferença importante entre trabalhar com membros e valores F # é que os tipos de valores anuláveis podem ser inferidos implicitamente quando você estiver trabalhando com membros. Considere o método folling que usa um tipo de valor anulável como entrada:
+Uma diferença importante entre trabalhar com membros e valores F # é que os tipos de valores anuláveis podem ser inferidos implicitamente quando você estiver trabalhando com membros. Considere o seguinte método que usa um tipo de valor anulável como entrada:
 
 ```fsharp
 type C() =
@@ -74,7 +74,7 @@ c.M(12)
 c.NVT <- 12
 ```
 
-No exemplo anterior, você pode passar `12` para o método `M` . Você também pode atribuir `12` à propriedade auto `NVT` . O compilador F # converterá implicitamente uma chamada ou atribuição como esta quando o tipo de destino corresponder à entrada, se a entrada puder ser construída como um tipo de valor nullabel.
+No exemplo anterior, você pode passar `12` para o método `M` . Você também pode atribuir `12` à propriedade auto `NVT` . Se a entrada puder ser construída como um tipo de valor anulável e corresponder ao tipo de destino, o compilador de F # converterá implicitamente tais chamadas ou atribuições.
 
 ## <a name="examine-a-nullable-value-type-instance"></a>Examinar uma instância de tipo de valor anulável
 
