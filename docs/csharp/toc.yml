@@ -52,8 +52,6 @@
       href: tutorials/exploration/top-level-statements.md
     - name: Explorar padrões em objetos
       href: tutorials/exploration/patterns-objects.md
-    - name: Explorar o C# 6
-      href: tutorials/exploration/csharp-6.yml
     - name: Explorar a interpolação de cadeia de caracteres – interativo
       href: tutorials/exploration/interpolated-strings.yml
     - name: Explorar a interpolação de cadeia de caracteres – em seu ambiente
@@ -93,8 +91,6 @@
       href: whats-new/csharp-8.md
     - name: C# 7.0-7.3
       href: whats-new/csharp-7.md
-    - name: C# 6
-      href: whats-new/csharp-6.md
     - name: Alterações da falha no compilador
       href: whats-new/breaking-changes.md
     - name: Histórico de versão do C#
