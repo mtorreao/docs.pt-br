@@ -2,12 +2,12 @@
 title: Alterações significativas na biblioteca do .NET
 description: Lista as alterações significativas nas principais bibliotecas do .NET para as versões 1.0-3.0 do .NET Core.
 ms.date: 07/27/2020
-ms.openlocfilehash: 0f42429e44776fc70bb99ed3bdf346f0d5dbc9eb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 092ff36a5e07c9e226fe2a67d5e7cfd391e9d16b
+ms.sourcegitcommit: fcbe432482464b1639decad78cc4dc8387c6269e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "96031950"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97366873"
 ---
 # <a name="core-net-libraries-breaking-changes-in-net-core-10-30"></a>Principais bibliotecas do .NET que violam as alterações no .NET Core 1.0-3.0
 
@@ -17,6 +17,7 @@ As seguintes alterações significativas estão documentadas nesta página:
 
 | Alteração significativa | Versão introduzida |
 | - | :-: |
+| [Passar GroupCollection para métodos de extensão assumindo IEnumerable \<T> requer ambiguidade](#passing-groupcollection-to-extension-methods-taking-ienumerablet-requires-disambiguation) | 3.0 |
 | [As APIs que relatam versão agora relatam produto e não versão de arquivo](#apis-that-report-version-now-report-product-and-not-file-version) | 3.0 |
 | [Instâncias EncoderFallbackBuffer personalizadas não podem retornar recursivamente](#custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively) | 3.0 |
 | [Alterações de comportamento de análise e formatação de ponto flutuante](#floating-point-formatting-and-parsing-behavior-changed) | 3.0 |
@@ -36,13 +37,17 @@ As seguintes alterações significativas estão documentadas nesta página:
 
 ## <a name="net-core-30"></a>.NET Core 3.0
 
-[!INCLUDE[APIs that report version now report product and not file version](~/includes/core-changes/corefx/3.0/version-information-changes.md)]
+[!INCLUDE [disambiguate-generic-type-for-groupcollection](../../../includes/core-changes/corefx/3.0/disambiguate-generic-type-for-groupcollection.md)]
 
 ***
 
-[!INCLUDE[Custom EncoderFallbackBuffer instances cannot fall back recursively](~/includes/core-changes/corefx/3.0/custom-encoderfallbackbuffer-cannot-be-recursive.md)]
+[!INCLUDE[APIs that report version now report product and not file version](~/includes/core-changes/corefx/3.0/version-information-changes.md)]
 
 **_
+
+[!INCLUDE[Custom EncoderFallbackBuffer instances cannot fall back recursively](~/includes/core-changes/corefx/3.0/custom-encoderfallbackbuffer-cannot-be-recursive.md)]
+
+_*_
 
 [!INCLUDE[Floating point formatting and parsing behavior changes](~/includes/core-changes/corefx/3.0/floating-point-changes.md)]
 
