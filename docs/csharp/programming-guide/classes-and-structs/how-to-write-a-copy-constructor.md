@@ -6,14 +6,14 @@ helpviewer_keywords:
 - C# Language, copy constructor
 - copy constructor [C#]
 ms.topic: how-to
-ms.custom: contperfq2
+ms.custom: contperf-fy21q2
 ms.assetid: fba899b5-fc41-428e-a745-3ebdbf37990a
-ms.openlocfilehash: 85899d2de05312be921199387cc1155fa8e9d2f1
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: dfc702bfe183b3712b20c64f9e82d2d3c3edd6d5
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95098977"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97512366"
 ---
 # <a name="how-to-write-a-copy-constructor-c-programming-guide"></a>Como escrever um construtor de cópia (guia de programação C#)
 
@@ -25,7 +25,7 @@ O C# não fornece um construtor de cópia para objetos, mas é possível escreve
   
  [!code-csharp[csProgGuideObjects#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#16)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.ICloneable>
 - [Guia de programação C#](../index.md)

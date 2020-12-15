@@ -1,7 +1,7 @@
 ---
 title: Como escrever conversores personalizados para serialização JSON-.NET
 description: Saiba como criar conversores personalizados para as classes de serialização JSON que são fornecidas no System.Text.Json namespace.
-ms.date: 12/09/2020
+ms.date: 12/14/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: 33334ccd8bad4ac5a9f5dccde79ff3ae09ca8f89
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 390438e3dca7a5d40dd9957090f498b495996e05
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97008858"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97513192"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>Como escrever conversores personalizados para serialização JSON (Marshalling) no .NET
 
@@ -84,7 +84,7 @@ O código anterior é o mesmo que o mostrado no dicionário de [suporte com uma 
 As etapas a seguir explicam como criar um conversor seguindo o padrão básico:
 
 * Crie uma classe que derive de <xref:System.Text.Json.Serialization.JsonConverter%601> onde `T` é o tipo a ser serializado e desserializado.
-* Substitua o `Read` método para desserializar o JSON de entrada e convertê-lo no tipo `T` . Use o <xref:System.Text.Json.Utf8JsonReader> que é passado para o método para ler o JSON.
+* Substitua o `Read` método para desserializar o JSON de entrada e convertê-lo no tipo `T` . Use o <xref:System.Text.Json.Utf8JsonReader> que é passado para o método para ler o JSON. Você não precisa se preocupar em lidar com dados parciais, pois o serializador passa todos os dados para o escopo JSON atual. Portanto, não é necessário chamar <xref:System.Text.Json.Utf8JsonReader.Skip%2A> ou <xref:System.Text.Json.Utf8JsonReader.TrySkip%2A> ou para validar que <xref:System.Text.Json.Utf8JsonReader.Read%2A> retorna `true` .
 * Substitua o `Write` método para serializar o objeto de entrada do tipo `T` . Use o <xref:System.Text.Json.Utf8JsonWriter> que é passado para o método para gravar o JSON.
 * Substitua o `CanConvert` método somente se necessário. A implementação padrão retorna `true` quando o tipo a ser convertido é do tipo `T` . Portanto, os conversores que suportam apenas `T` o tipo não precisam substituir esse método. Para obter um exemplo de um conversor que precisa substituir esse método, consulte a seção [desserialização polimórfica](#support-polymorphic-deserialization) mais adiante neste artigo.
 
@@ -377,7 +377,7 @@ Esse comportamento de tratamento nulo é principalmente para otimizar o desempen
 ::: zone pivot="dotnet-5-0"
 Para habilitar um conversor personalizado para tratar `null` de uma referência ou tipo de valor, substitua <xref:System.Text.Json.Serialization.JsonConverter%601.HandleNull%2A?displayProperty=nameWithType> para retornar `true` , conforme mostrado no exemplo a seguir:
 
-:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/CustomConverterHandleNull.cs" highlight="19":::
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/CustomConverterHandleNull.cs" highlight="18":::
 ::: zone-end
 
 ## <a name="other-custom-converter-samples"></a>Outras amostras de conversor personalizadas

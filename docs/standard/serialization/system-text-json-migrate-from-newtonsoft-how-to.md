@@ -6,19 +6,19 @@ ms.author: tdykstra
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
-ms.date: 12/09/2020
+ms.date: 12/14/2020
 zone_pivot_groups: dotnet-version
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 4a33d9de96af805c3696ceed5cd30a3fa8547222
-ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
+ms.openlocfilehash: 8c2d4baa9b9a3b19b8f1bde09bea0ab718092e24
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97110826"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97512639"
 ---
 # <a name="how-to-migrate-from-no-locnewtonsoftjson-to-no-locsystemtextjson"></a>Como migrar do Newtonsoft.Json para o System.Text.Json
 
@@ -81,6 +81,7 @@ A tabela a seguir lista os `Newtonsoft.Json` recursos e `System.Text.Json` equiv
 | Permitir nomes de propriedade sem aspas                   | ❌ [Sem suporte](#json-strings-property-names-and-string-values) |
 | Permitir aspas simples em vez de valores de cadeia de caracteres              | ❌ [Sem suporte](#json-strings-property-names-and-string-values) |
 | Permitir valores JSON que não são de cadeia de caracteres para propriedades de cadeia de caracteres    | ❌ [Sem suporte](#non-string-values-for-string-properties) |
+| `TypeNameHandling.All` configuração global                 | ❌ [Sem suporte](#typenamehandlingall-not-supported) |
 ::: zone-end
 
 ::: zone pivot="dotnet-core-3-1"
@@ -122,6 +123,7 @@ A tabela a seguir lista os `Newtonsoft.Json` recursos e `System.Text.Json` equiv
 | Permitir nomes de propriedade sem aspas                   | ❌ [Sem suporte](#json-strings-property-names-and-string-values) |
 | Permitir aspas simples em vez de valores de cadeia de caracteres              | ❌ [Sem suporte](#json-strings-property-names-and-string-values) |
 | Permitir valores JSON que não são de cadeia de caracteres para propriedades de cadeia de caracteres    | ❌ [Sem suporte](#non-string-values-for-string-properties) |
+| `TypeNameHandling.All` configuração global                 | ❌ [Sem suporte](#typenamehandlingall-not-supported) |
 ::: zone-end
 
 Esta não é uma lista completa de `Newtonsoft.Json` recursos. A lista inclui muitos dos cenários que foram solicitados em [problemas do GitHub](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json) ou postagens do [StackOverflow](https://stackoverflow.com/questions/tagged/system.text.json) . Se você implementar uma solução alternativa para um dos cenários listados aqui que não tem um código de exemplo, e se você quiser compartilhar sua solução, selecione **esta página** na seção de **comentários** na parte inferior desta página. Isso cria um problema no repositório GitHub da documentação e o lista na seção de **comentários** nesta página também.
@@ -807,6 +809,10 @@ Se você precisar continuar a usar `Newtonsoft.Json` para determinadas estrutura
 
 * [UnifiedJsonWriter.JsonTextWriter.cs](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/installer/managed/Microsoft.Extensions.DependencyModel/UnifiedJsonWriter.JsonTextWriter.cs)
 * [UnifiedJsonWriter.Utf8JsonWriter.cs](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/installer/managed/Microsoft.Extensions.DependencyModel/UnifiedJsonWriter.Utf8JsonWriter.cs)
+
+## <a name="typenamehandlingall-not-supported"></a>TypeNameHandling. All sem suporte
+
+A decisão de excluir `TypeNameHandling.All` a funcionalidade equivalente do `System.Text.Json` era intencional. Permitir que um conteúdo JSON especifique suas próprias informações de tipo é uma fonte comum de vulnerabilidades em aplicativos Web. Em particular, a configuração do `Newtonsoft.Json` com `TypeNameHandling.All` permite que o cliente remoto incorpore um aplicativo executável inteiro na própria carga JSON, de modo que durante a desserialização, o aplicativo Web extrai e executa o código inserido. Para obter mais informações, confira [sexta-feira os ataques JSON 13 PowerPoint](https://www.blackhat.com/docs/us-17/thursday/us-17-Munoz-Friday-The-13th-Json-Attacks.pdf) e [sexta-feira aos detalhes dos ataques JSON 13](https://www.blackhat.com/docs/us-17/thursday/us-17-Munoz-Friday-The-13th-JSON-Attacks-wp.pdf).
 
 ## <a name="additional-resources"></a>Recursos adicionais
 

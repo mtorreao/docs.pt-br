@@ -2,7 +2,7 @@
 title: Como serializar e desserializar JSON usando C#-.NET
 description: Saiba como usar o System.Text.Json namespace para serializar e desserializar do JSON no .net. Inclui o código de exemplo.
 ms.date: 12/02/2020
-ms.custom: contperfq2
+ms.custom: contperf-fy21q2
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 1ea4ff71b9e21bd7c5b12598581b33e1e96ebb19
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 46203aa1b4daa4281c7c26191f7df947967fa1c0
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97008832"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97513257"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>Como serializar e desserializar (empacotar e desempacotar) JSON no .NET
 
@@ -282,7 +282,7 @@ Também há métodos de extensão para System.Text.Json em [HttpContent](xref:Sy
 Métodos de extensão em `HttpClient` e `HttpContent` não estão disponíveis no System.Text.Json no .NET Core 3,1.
 ::: zone-end
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 * [System.Text.Json sobre](system-text-json-overview.md)
 * [Instanciar instâncias JsonSerializerOptions](system-text-json-configure-options.md)

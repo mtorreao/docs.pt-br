@@ -3,19 +3,19 @@ title: 'Tutorial: criar algoritmos com correspondência de padrões'
 description: Este tutorial avançado demonstra como usar as técnicas de correspondência de padrões para criar a funcionalidade usando dados e algoritmos que são criados separadamente.
 ms.date: 10/06/2020
 ms.technology: csharp-whats-new
-ms.custom: contperfq1
-ms.openlocfilehash: ee8b3a90a06fabd4e9d73d7682efecda6cbfd23e
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.custom: contperf-fy21q1
+ms.openlocfilehash: 730098bf599dfc855676c86ab7a6e7f3ef7658f1
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955623"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97513218"
 ---
 # <a name="tutorial-use-pattern-matching-to-build-type-driven-and-data-driven-algorithms"></a>Tutorial: usar a correspondência de padrões para criar algoritmos orientados a dados e baseados em tipos.
 
 O C#7 introduziu recursos básicos de correspondência de padrões. Esses recursos são estendidos em C# 8 e C# 9 com novas expressões e padrões. É possível escrever uma funcionalidade que se comporte como se você tivesse estendido tipos que poderiam estar em outras bibliotecas. Outro uso dos padrões é criar a funcionalidade de que seu aplicativo precisa, mas que não é um recurso fundamental do tipo que está sendo estendido.
 
-Neste tutorial, você aprenderá a:
+Neste tutorial, você aprenderá como:
 
 > [!div class="checklist"]
 >
@@ -300,7 +300,7 @@ O código anterior funciona corretamente, mas não é legível. Você precisa en
 
 A tabela a seguir mostra as combinações de valores de entrada e multiplicador de preços para os horários de pico:
 
-| Dia        | Hora         | Direction | Premium |
+| Dia        | Hora         | Direção | Premium |
 | ---------- | ------------ | --------- |--------:|
 | Weekday    | horário de pico da manhã | entrada   | x 2,00  |
 | Weekday    | horário de pico da manhã | saída  | x 1,00  |
@@ -345,7 +345,7 @@ Depois, adicione uma função semelhante para categorizar o tempo nos blocos:
 
 [!code-csharp[GetTimeBand](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#GetTimeBand)]
 
-Você adiciona um privado `enum` para converter cada intervalo de tempo em um valor discreto. Em seguida, o `GetTimeBand` método usa *padrões relacionais*e *conjuntiva ou padrões*, ambos adicionados em C# 9,0. O padrão relacional permite que você teste um valor numérico usando `<` ,, `>` `<=` ou `>=` . O `or` padrão testa se uma expressão corresponde a um ou mais padrões. Você também pode usar um `and` padrão para garantir que uma expressão corresponda a dois padrões distintos e um `not` padrão para testar se uma expressão não corresponde a um padrão.
+Você adiciona um privado `enum` para converter cada intervalo de tempo em um valor discreto. Em seguida, o `GetTimeBand` método usa *padrões relacionais* e *conjuntiva ou padrões*, ambos adicionados em C# 9,0. O padrão relacional permite que você teste um valor numérico usando `<` ,, `>` `<=` ou `>=` . O `or` padrão testa se uma expressão corresponde a um ou mais padrões. Você também pode usar um `and` padrão para garantir que uma expressão corresponda a dois padrões distintos e um `not` padrão para testar se uma expressão não corresponde a um padrão.
 
 Depois de criar esses métodos, é possível usar outra expressão `switch` com o **padrão de tupla** para calcular o preço premium. Você pode construir uma expressão `switch` com todos os 16 braços:
 

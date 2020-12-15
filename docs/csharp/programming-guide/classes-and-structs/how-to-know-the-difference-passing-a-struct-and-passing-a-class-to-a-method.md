@@ -7,14 +7,14 @@ helpviewer_keywords:
 - passing parameters [C#], structs vs. classes
 - methods [C#], passing classes vs. structs
 ms.topic: how-to
-ms.custom: contperfq2
+ms.custom: contperf-fy21q2
 ms.assetid: 9c1313a6-32a8-4ea7-a59f-450f66af628b
-ms.openlocfilehash: fd64a5e1a02a7039f9e49ac6592e75c6466d4bc6
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: 6f6f02125ba09b8a49e097cd3dfedf3d8ef7e505
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95098873"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97512749"
 ---
 # <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>Como saber a diferença entre passar uma struct e passar uma referência de classe para um método (guia de programação C#)
 
@@ -30,9 +30,9 @@ O exemplo a seguir demonstra como passar um [struct](../../language-reference/bu
 
  [!code-csharp[csProgGuideObjects#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#32)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Guia de programação C#](../index.md)
 - [Classes](./classes.md)
 - [Tipos de estrutura](../../language-reference/builtin-types/struct.md)
-- [Passando parâmetros](./passing-parameters.md)
+- [Passar parâmetros](./passing-parameters.md)

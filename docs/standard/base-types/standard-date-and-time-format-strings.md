@@ -14,13 +14,13 @@ helpviewer_keywords:
 - formatting [.NET], time
 - date and time strings
 ms.topic: reference
-ms.custom: contperfq2
-ms.openlocfilehash: 688aaf7a1814e132f3bffa48394873653bf314e8
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.custom: contperf-fy21q2
+ms.openlocfilehash: a7a981562ed2410f2118d8d15b53f0ce8d751399
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851126"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97512431"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Cadeias de caracteres de formato de data e hora padrão
 
@@ -480,7 +480,7 @@ Além disso, se o constructo <xref:System.Globalization.CultureInfo.%23ctor%28Sy
 
 A formatação é influenciada pelas propriedades do objeto <xref:System.Globalization.DateTimeFormatInfo> atual, que é fornecido implicitamente pela cultura de thread atual ou explicitamente pelo parâmetro <xref:System.IFormatProvider> do método que invoca a formatação. Para o parâmetro <xref:System.IFormatProvider>, seu aplicativo deve especificar um objeto <xref:System.Globalization.CultureInfo>, que representa uma cultura, ou um objeto <xref:System.Globalization.DateTimeFormatInfo>, que representa as convenções de formatação de data e hora de uma determinada cultura. Muitos dos especificadores de formato padrão de data e hora são aliases para padrões de formatação definidos pelas propriedades do objeto <xref:System.Globalization.DateTimeFormatInfo> atual. Seu aplicativo pode alterar o resultado produzido por alguns especificadores de formato padrão de data e hora alterando os padrões de formatação de data e hora correspondentes da propriedade <xref:System.Globalization.DateTimeFormatInfo>.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.DateTime?displayProperty=nameWithType>
 - <xref:System.DateTimeOffset?displayProperty=nameWithType>

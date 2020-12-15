@@ -6,14 +6,14 @@ helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.topic: how-to
-ms.custom: contperfq2
+ms.custom: contperf-fy21q2
 ms.assetid: 43f511be-346c-4b8a-995e-aded94542ece
-ms.openlocfilehash: 42ea67e9012fd55fbceb8a7bad4c8df8bf6bf6da
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: 972deaa4616c15c00e83e26891c4473eae7bfcf8
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95099381"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97513049"
 ---
 # <a name="how-to-define-constants-in-c"></a>Como definir constantes em C\#
 
@@ -32,6 +32,6 @@ As constantes são campos cujos valores são definidos em tempo de compilação 
   
  O uso do qualificador de nome de classe ajuda a garantir que você e outras pessoas que usam a constante entendam que ele é constante e não pode ser modificado.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Classes e structs](./index.md)

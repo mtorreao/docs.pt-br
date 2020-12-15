@@ -13,12 +13,12 @@ helpviewer_keywords:
 - regular expressions [.NET], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
-ms.openlocfilehash: aceccc019542bb1afe3082881626cfc32740a338
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 659ba966ab18f2c5db13af3ac687af57dea7b126
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733640"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97513205"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Exemplo de expressão regular: Verificação de HREFs
 
@@ -46,7 +46,7 @@ O exemplo a seguir procura uma cadeia de caracteres de entrada e exibe todos os 
 |`\s*`|Corresponder a zero ou mais caracteres de espaço em branco.|  
 |`=`|Corresponder ao sinal de igual.|  
 |`\s*`|Corresponder a zero ou mais caracteres de espaço em branco.|  
-|`(?:\["'\](?<1>\[^"'\]*)["']|(?<1>\S+))`|Corresponde a um dos seguintes itens, sem atribuir o resultado a um grupo capturado:<br /> <ul><li><p>Um sinal de aspas ou apóstrofo, seguido por zero ou mais ocorrências de qualquer caractere que não seja um sinal de aspas ou apóstrofo, seguido por um sinal de aspas ou apóstrofo. O grupo chamado `1` está incluído nesse padrão.</p></li><li><p>Um ou mais caracteres diferentes de espaço em branco. O grupo chamado `1` está incluído nesse padrão.</p></li></ul>|  
+|`(?:\["'\](?<1>\[^"'\]*)["']\|(?<1>\S+))`|Corresponde a um dos seguintes itens, sem atribuir o resultado a um grupo capturado:<br /> <ul><li><p>Um sinal de aspas ou apóstrofo, seguido por zero ou mais ocorrências de qualquer caractere que não seja um sinal de aspas ou apóstrofo, seguido por um sinal de aspas ou apóstrofo. O grupo chamado `1` está incluído nesse padrão.</p></li><li><p>Um ou mais caracteres diferentes de espaço em branco. O grupo chamado `1` está incluído nesse padrão.</p></li></ul>|  
 |`(?<1>[^"']*)`|Atribuir zero ou mais ocorrências de qualquer caractere diferente de aspas simples ou apóstrofe ao grupo de captura chamado `1`.|  
 |`(?<1>\S+)`|Atribuir um ou mais caracteres diferentes de espaço em branco ao grupo de captura chamado `1`.|  
   
@@ -60,6 +60,6 @@ O exemplo a seguir procura uma cadeia de caracteres de entrada e exibe todos os 
   
  Para resolver esses problemas, a classe <xref:System.Text.RegularExpressions.Regex> dá suporte à sintaxe `(?<name>…)` para capturar uma correspondência em um slot especificado (o slot pode ser nomeado usando uma cadeia de caracteres ou um inteiro; inteiros podem ser recuperados mais rapidamente). Assim, todas as correspondências alternativas para a mesma cadeia de caracteres podem ser direcionadas para o mesmo local. Em caso de conflito, a última correspondência solta em um slot é a correspondência com êxito. (No entanto, está disponível uma lista completa de diversas correspondências para um único slot. Confira a coleção <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> para obter detalhes).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Expressões regulares do .NET](regular-expressions.md)

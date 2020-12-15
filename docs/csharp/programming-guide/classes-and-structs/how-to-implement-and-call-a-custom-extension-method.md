@@ -5,14 +5,14 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.topic: how-to
-ms.custom: contperfq2
+ms.custom: contperf-fy21q2
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
-ms.openlocfilehash: d344489e88ddc2c8cac51afeb5bbc76bc7b42913
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: 4ae48a05d451a3276b3a0f2ee4d6c633ce7db306
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95099068"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97512998"
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Como implementar e chamar um método de extensão personalizado (guia de programação C#)
 
@@ -44,7 +44,7 @@ Este tópico mostra como implementar seus próprios métodos de extensão para q
 
  Os métodos de extensão não apresentam nenhuma vulnerabilidade de segurança específica. Eles nunca podem ser usados para representar os métodos existentes em um tipo, porque todos os conflitos de nome são resolvidos em favor da instância ou do método estático, definidos pelo próprio tipo. Os métodos de extensão não podem acessar nenhum dado particular na classe estendida.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Guia de programação C#](../index.md)
 - [Métodos de Extensão](./extension-methods.md)

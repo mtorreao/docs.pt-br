@@ -3,12 +3,12 @@ title: 'Tutorial: criar uma ferramenta .NET'
 description: Saiba como criar uma ferramenta .NET. Uma ferramenta é um aplicativo de console que é instalado usando a CLI do .NET.
 ms.topic: tutorial
 ms.date: 02/12/2020
-ms.openlocfilehash: 93d0567f3d73707f828f84fad6128804debf6579
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 8f2dd15982aff9fe2d9db9ce2cff8ac1b22e440e
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94633772"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97512626"
 ---
 # <a name="tutorial-create-a-net-tool-using-the-net-cli"></a>Tutorial: criar uma ferramenta .NET usando a CLI do .NET
 
@@ -18,13 +18,13 @@ Este tutorial ensina como criar e empacotar uma ferramenta .NET. A CLI do .NET p
 
 A ferramenta que você criará é um aplicativo de console que recebe uma mensagem como entrada e exibe a mensagem junto com linhas de texto que criam a imagem de um robô.
 
-Este é o primeiro de uma série de três tutoriais. Neste tutorial, você criará e empacotará uma ferramenta. Nos próximos dois tutoriais, você [usará a ferramenta como uma ferramenta global](global-tools-how-to-use.md) e [usará a ferramenta como uma ferramenta local](local-tools-how-to-use.md).
+Este é o primeiro de uma série de três tutoriais. Neste tutorial, você criará e empacotará uma ferramenta. Nos próximos dois tutoriais, você [usará a ferramenta como uma ferramenta global](global-tools-how-to-use.md) e [usará a ferramenta como uma ferramenta local](local-tools-how-to-use.md). Os procedimentos para criar uma ferramenta são os mesmos se você usá-la como uma ferramenta global ou como uma ferramenta local.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- [SDK do .NET Core 3,1](https://dotnet.microsoft.com/download) ou uma versão posterior.
+- [SDK do .net 5,0](https://dotnet.microsoft.com/download) ou uma versão posterior.
 
-  Este tutorial e o tutorial a seguir [para ferramentas globais](global-tools-how-to-use.md) se aplicam ao SDK do .NET Core 2,1 e versões posteriores porque as ferramentas globais estão disponíveis a partir dessa versão. Mas este tutorial pressupõe que você tenha instalado o 3,1 ou posterior para que você tenha a opção de continuar no [tutorial de ferramentas locais](local-tools-how-to-use.md). As ferramentas locais estão disponíveis a partir do SDK do .NET Core 3,0. Os procedimentos para criar uma ferramenta são os mesmos se você usá-la como uma ferramenta global ou como uma ferramenta local.
+  Este tutorial usa o SDK do .NET 5,0, mas as ferramentas globais estão disponíveis a partir do SDK do .NET Core 2,1. As ferramentas locais estão disponíveis a partir do SDK do .NET Core 3,0.
   
 - Um editor de texto ou editor de código de sua escolha.
 
@@ -158,7 +158,7 @@ Antes de poder empacotar e distribuir o aplicativo como uma ferramenta, você pr
 
    `<ToolCommandName>` é um elemento opcional que especifica o comando que invocará a ferramenta após sua instalação. Se esse elemento não for fornecido, o nome do comando para a ferramenta será o nome do arquivo de projeto sem a extensão *. csproj* .
 
-   `<PackageOutputPath>` é um elemento opcional que determina onde o pacote NuGet será produzido. O pacote NuGet é o que o CLI do .NET Core usa para instalar sua ferramenta.
+   `<PackageOutputPath>` é um elemento opcional que determina onde o pacote NuGet será produzido. O pacote NuGet é o que a CLI do .NET usa para instalar sua ferramenta.
 
    O arquivo de projeto agora é semelhante ao exemplo a seguir:
 
@@ -168,7 +168,7 @@ Antes de poder empacotar e distribuir o aplicativo como uma ferramenta, você pr
      <PropertyGroup>
 
        <OutputType>Exe</OutputType>
-       <TargetFramework>netcoreapp3.1</TargetFramework>
+       <TargetFramework>net5.0</TargetFramework>
   
        <PackAsTool>true</PackAsTool>
        <ToolCommandName>botsay</ToolCommandName>
@@ -189,7 +189,7 @@ Antes de poder empacotar e distribuir o aplicativo como uma ferramenta, você pr
   
    Quando você quiser liberar uma ferramenta publicamente, poderá carregá-la no `https://www.nuget.org` . Depois que a ferramenta estiver disponível no NuGet, os desenvolvedores poderão instalar a ferramenta usando o comando [dotnet ferramenta de instalação](dotnet-tool-install.md) . Para este tutorial, você instala o pacote diretamente da pasta *nupkg* local, portanto, não é necessário carregar o pacote no NuGet.
 
-## <a name="troubleshoot"></a>Solução de problemas
+## <a name="troubleshoot"></a>Solucionar problemas
 
 Se você receber uma mensagem de erro ao seguir o tutorial, consulte [solucionar problemas de uso da ferramenta .net](troubleshoot-usage-issues.md).
 

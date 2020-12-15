@@ -8,14 +8,14 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.topic: how-to
-ms.custom: contperfq2
+ms.custom: contperf-fy21q2
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 0a9585d05a817d09308e06558352f78a5347a8f1
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: 430887ebb16570439a89f3625ac12a1fbb368227
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95099166"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97513153"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Como converter uma cadeia de caracteres em um número (guia de programação C#)
 
@@ -57,7 +57,7 @@ A tabela a seguir lista alguns dos métodos da classe <xref:System.Convert> que 
   
 [!code-csharp[Parsing with Convert methods](~/samples/snippets/csharp/programming-guide/string-to-number/convert/program.cs)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Types](./index.md)
 - [Como determinar se uma cadeia de caracteres representa um valor numérico](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
