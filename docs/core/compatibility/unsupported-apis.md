@@ -3,12 +3,12 @@ title: APIs sem suporte no .NET Core e no .NET 5 +
 titleSuffix: ''
 description: Saiba quais APIs do .NET sempre geram uma exceção no .NET Core e no .NET 5,0 e versões posteriores.
 ms.date: 10/13/2020
-ms.openlocfilehash: 51d73557a48910d9cb1c4d3cdced34dfe4d849d8
-ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
+ms.openlocfilehash: 1bd41192d0d6752d2b659da9fb6387dac321b2c3
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94329775"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97593260"
 ---
 # <a name="apis-that-always-throw-exceptions-on-net-core-and-net-5"></a>APIs que sempre lançam exceções no .NET Core e no .NET 5 +
 
@@ -90,7 +90,8 @@ Este artigo organiza as APIs afetadas por namespace.
 | <xref:System.Diagnostics.Process.MinWorkingSet?displayProperty=nameWithType> (definir somente) | Linux |
 | <xref:System.Diagnostics.Process.ProcessorAffinity?displayProperty=nameWithType> | macOS |
 | <xref:System.Diagnostics.Process.MainWindowHandle?displayProperty=nameWithType> | Linux e macOS |
-| <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> | Linux e macOS |
+| <xref:System.Diagnostics.Process.Start(System.String,System.String,System.String,System.Security.SecureString,System.String)?displayProperty=nameWithType> | Linux e macOS |
+| <xref:System.Diagnostics.Process.Start(System.String,System.String,System.Security.SecureString,System.String)?displayProperty=nameWithType> | Linux e macOS |
 | <xref:System.Diagnostics.ProcessStartInfo.UserName?displayProperty=nameWithType> | Linux e macOS |
 | <xref:System.Diagnostics.ProcessStartInfo.PasswordInClearText?displayProperty=nameWithType> | Linux e macOS |
 | <xref:System.Diagnostics.ProcessStartInfo.Domain?displayProperty=nameWithType> | Linux e macOS |

@@ -1,21 +1,28 @@
 ---
 title: Alterações significativas do MSBuild
-description: Lista as alterações significativas no MSBuild para .NET Core 3,0.
-ms.date: 02/10/2020
-ms.openlocfilehash: a30e32ebb16e3d251625d7a8f9e4349d4d7a69cf
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+description: Lista as alterações significativas no MSBuild para .NET Core 3,0-3,1.
+ms.date: 12/14/2020
+ms.openlocfilehash: 1ed5878845406fa7727c644f1e196d63a860646a
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95689219"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97593442"
 ---
-# <a name="msbuild-breaking-changes-in-net-core-30"></a>Alterações significativas do MSBuild no .NET Core 3,0
+# <a name="msbuild-breaking-changes-in-net-core-30---31"></a>Alterações significativas do MSBuild no .NET Core 3,0-3,1
 
 As seguintes alterações significativas estão documentadas nesta página:
 
 | Alteração significativa | Versão introduzida |
 | - | - |
+| [As compilações de tempo de design retornam apenas referências de pacote de nível superior](#design-time-builds-only-return-top-level-package-references) | 3.1 |
 | [Alteração de nome de arquivo de manifesto de recurso](#resource-manifest-file-name-change) | 3.0 |
+
+## <a name="net-core-31"></a>.NET Core 3.1
+
+[!INCLUDE [design-time-builds-return-top-level-package-refs](../../../includes/core-changes/msbuild/3.1/design-time-builds-return-top-level-package-refs.md)]
+
+***
 
 ## <a name="net-core-30"></a>.NET Core 3.0
 

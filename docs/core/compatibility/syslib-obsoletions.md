@@ -2,12 +2,12 @@
 title: Recursos obsoletos no .NET 5 +
 description: Saiba mais sobre as APIs que estão marcadas como obsoletas no .NET 5,0 e versões posteriores que produzem avisos do compilador SYSLIB.
 ms.date: 10/20/2020
-ms.openlocfilehash: aa5716ba8fe46c7c4ae2faafe7cc963551eecef7
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 336958c93e3db8f66cfbec89476a666e5e103b70
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440758"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97593299"
 ---
 # <a name="obsolete-features-in-net-5"></a>Recursos obsoletos no .NET 5
 
@@ -25,18 +25,18 @@ A tabela a seguir fornece um índice para o `SYSLIBxxxx` obsoletions no .NET 5 +
 
 | ID do diagnóstico | Descrição |
 | - | - |
-| [SYSLIB0001](syslib0001.md) | A codificação UTF-7 é insegura e não deve ser usada. Considere usar UTF-8 em vez disso. |
-| [SYSLIB0002](syslib0002.md) | <xref:System.Security.Permissions.PrincipalPermissionAttribute> Não é respeitado pelo tempo de execução e não deve ser usado. |
-| [SYSLIB0003](syslib0003.md) | A CAS (segurança de acesso ao código) não tem suporte nem é respeitada pelo tempo de execução. |
-| [SYSLIB0004](syslib0004.md) | Não há suporte para o recurso CER (região de execução restrita). |
-| [SYSLIB0005](syslib0005.md) | Não há suporte para o GAC (cache de assembly global). |
-| [SYSLIB0006](syslib0006.md) | <xref:System.Threading.Thread.Abort?displayProperty=nameWithType> Não é suportado e gera <xref:System.PlatformNotSupportedException> . |
-| [SYSLIB0007](syslib0007.md) | Não há suporte para a implementação padrão desse algoritmo de criptografia. |
-| [SYSLIB0008](syslib0008.md) | A <xref:System.Runtime.CompilerServices.DebugInfoGenerator.CreatePdbGenerator> API não é suportada e gera <xref:System.PlatformNotSupportedException> . |
-| [SYSLIB0009](syslib0009.md) | Os <xref:System.Net.AuthenticationManager.Authenticate%2A?displayProperty=nameWithType> <xref:System.Net.AuthenticationManager.PreAuthenticate%2A?displayProperty=nameWithType> métodos e não têm suporte e geram <xref:System.PlatformNotSupportedException> . |
-| [SYSLIB0010](syslib0010.md) | Algumas APIs de comunicação remota não têm suporte e geram <xref:System.PlatformNotSupportedException> . |
-| [SYSLIB0011](syslib0011.md) | <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> a serialização está obsoleta e não deve ser usada. |
-| [SYSLIB0012](syslib0012.md) | <xref:System.Reflection.Assembly.CodeBase?displayProperty=nameWithType> e <xref:System.Reflection.Assembly.EscapedCodeBase?displayProperty=nameWithType> são incluídos apenas para .NET Framework compatibilidade. Use <xref:System.Reflection.Assembly.Location?displayProperty=nameWithType> em seu lugar. |
+| [SYSLIB0001](syslib-warnings/syslib0001.md) | A codificação UTF-7 é insegura e não deve ser usada. Considere usar UTF-8 em vez disso. |
+| [SYSLIB0002](syslib-warnings/syslib0002.md) | <xref:System.Security.Permissions.PrincipalPermissionAttribute> Não é respeitado pelo tempo de execução e não deve ser usado. |
+| [SYSLIB0003](syslib-warnings/syslib0003.md) | A CAS (segurança de acesso ao código) não tem suporte nem é respeitada pelo tempo de execução. |
+| [SYSLIB0004](syslib-warnings/syslib0004.md) | Não há suporte para o recurso CER (região de execução restrita). |
+| [SYSLIB0005](syslib-warnings/syslib0005.md) | Não há suporte para o GAC (cache de assembly global). |
+| [SYSLIB0006](syslib-warnings/syslib0006.md) | <xref:System.Threading.Thread.Abort?displayProperty=nameWithType> Não é suportado e gera <xref:System.PlatformNotSupportedException> . |
+| [SYSLIB0007](syslib-warnings/syslib0007.md) | Não há suporte para a implementação padrão desse algoritmo de criptografia. |
+| [SYSLIB0008](syslib-warnings/syslib0008.md) | A <xref:System.Runtime.CompilerServices.DebugInfoGenerator.CreatePdbGenerator> API não é suportada e gera <xref:System.PlatformNotSupportedException> . |
+| [SYSLIB0009](syslib-warnings/syslib0009.md) | Os <xref:System.Net.AuthenticationManager.Authenticate%2A?displayProperty=nameWithType> <xref:System.Net.AuthenticationManager.PreAuthenticate%2A?displayProperty=nameWithType> métodos e não têm suporte e geram <xref:System.PlatformNotSupportedException> . |
+| [SYSLIB0010](syslib-warnings/syslib0010.md) | Algumas APIs de comunicação remota não têm suporte e geram <xref:System.PlatformNotSupportedException> . |
+| [SYSLIB0011](syslib-warnings/syslib0011.md) | <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> a serialização está obsoleta e não deve ser usada. |
+| [SYSLIB0012](syslib-warnings/syslib0012.md) | <xref:System.Reflection.Assembly.CodeBase?displayProperty=nameWithType> e <xref:System.Reflection.Assembly.EscapedCodeBase?displayProperty=nameWithType> são incluídos apenas para .NET Framework compatibilidade. Use <xref:System.Reflection.Assembly.Location?displayProperty=nameWithType> em vez disso. |
 
 ## <a name="suppress-warnings"></a>Suprimir avisos
 

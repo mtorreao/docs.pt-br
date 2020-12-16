@@ -2,12 +2,12 @@
 title: dotnet-ferramenta de diagnóstico de rastreamento-CLI do .NET
 description: Saiba como instalar e usar a ferramenta de CLI de rastreamento dotnet para coletar rastreamentos do .NET de um processo em execução sem o criador de perfil nativo, usando o .NET EventPipe.
 ms.date: 11/17/2020
-ms.openlocfilehash: 868ce7828eee6bd7f2101d5d6a65c7f7bf87fe24
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: a2925ac0a0815fe48ca9b36b643ff896aa3c0ff6
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009528"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97593201"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-utilitário de análise de desempenho de rastreamento
 
@@ -144,6 +144,9 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
   > [!NOTE]
   > O uso dessa opção monitora o primeiro processo do .NET 5,0 que se comunica de volta à ferramenta, o que significa que, se o comando iniciar vários aplicativos .NET, ele só coletará o primeiro aplicativo. Portanto, é recomendável usar essa opção em aplicativos independentes ou usando a `dotnet exec <app.dll>` opção.
 
+> [!NOTE]
+> Parar o rastreamento pode levar muito tempo (até minutos) para aplicativos grandes. O tempo de execução precisa enviar pelo cache de tipo para todo o código gerenciado que foi capturado no rastreamento.
+
 ## <a name="dotnet-trace-convert"></a>dotnet-conversão de rastreamento
 
 Converte `nettrace` rastreamentos em formatos alternativos para uso com ferramentas de análise de rastreamento alternativas.
@@ -154,7 +157,7 @@ Converte `nettrace` rastreamentos em formatos alternativos para uso com ferramen
 dotnet-trace convert [<input-filename>] [--format <Chromium|NetTrace|Speedscope>] [-h|--help] [-o|--output <output-filename>]
 ```
 
-### <a name="arguments"></a>Argumentos
+### <a name="arguments"></a>Arguments
 
 - **`<input-filename>`**
 
@@ -169,6 +172,9 @@ dotnet-trace convert [<input-filename>] [--format <Chromium|NetTrace|Speedscope>
 - **`-o|--output <output-filename>`**
 
   Nome de arquivo de saída. A extensão do formato de destino será adicionada.
+
+> [!NOTE]
+> `nettrace`A conversão de arquivos em `chromium` ou `speedscope` arquivos é irreversível. `speedscope` e `chromium` os arquivos não têm todas as informações necessárias para reconstruir os `nettrace` arquivos. No entanto, o `convert` comando preserva o `nettrace` arquivo original, portanto, não exclua esse arquivo se você planeja abri-lo no futuro.
 
 ## <a name="dotnet-trace-ps"></a>dotnet-rastrear PS
 
@@ -200,7 +206,7 @@ Para coletar rastreamentos usando `dotnet-trace` :
   - No Linux, por exemplo, o `ps` comando.
   - [dotnet-rastrear PS](#dotnet-trace-ps)
 
-- Execute o comando a seguir:
+- Execute o seguinte comando:
 
   ```console
   dotnet-trace collect --process-id <PID>
@@ -333,7 +339,7 @@ O comando anterior desabilita os eventos de tempo de execução e o profiler de 
 
 O tempo de execução do .NET Core dá suporte aos provedores .NET a seguir. O .NET Core usa as mesmas palavras-chave para habilitar `Event Tracing for Windows (ETW)` os `EventPipe` rastreamentos e.
 
-| Nome do provedor                            | Informações |
+| Nome do provedor                            | Informações do |
 |------------------------------------------|-------------|
 | `Microsoft-Windows-DotNETRuntime`        | [O provedor de runtime](../../framework/performance/clr-etw-providers.md#the-runtime-provider)<br>[Palavras-chave de tempo de execução CLR](../../framework/performance/clr-etw-keywords-and-levels.md#runtime) |
 | `Microsoft-Windows-DotNETRuntimeRundown` | [O provedor de encerramento](../../framework/performance/clr-etw-providers.md#the-rundown-provider)<br>[Palavras-chave de resumo do CLR](../../framework/performance/clr-etw-keywords-and-levels.md#rundown) |

@@ -2,12 +2,12 @@
 title: dotnet-ferramenta de diagnóstico do gcdump – CLI do .NET
 description: Saiba como instalar e usar a ferramenta de CLI do dotnet-gcdump para coletar despejos de GC (coletor de lixo) de processos do .NET em tempo real usando o .NET EventPipe.
 ms.date: 11/17/2020
-ms.openlocfilehash: 59de1845ada9e5bdd0b24bf4312517283324ce94
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 02e1a7c5d86b582289672a027464aefd67a6f490
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826034"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97593364"
 ---
 # <a name="heap-analysis-tool-dotnet-gcdump"></a>Ferramenta de análise de heap (dotNet-gcdump)
 
@@ -29,7 +29,7 @@ Há duas maneiras de baixar e instalar `dotnet-gcdump` :
 
   Baixe o executável da ferramenta que corresponde à sua plataforma:
 
-  | SO  | Plataforma |
+  | Sistema operacional  | Plataforma |
   | --- | -------- |
   | Windows | [x86](https://aka.ms/dotnet-gcdump/win-x86) \| [x64](https://aka.ms/dotnet-gcdump/win-x64) \| [ARM](https://aka.ms/dotnet-gcdump/win-arm) \| [ARM-x64](https://aka.ms/dotnet-gcdump/win-arm64) |
   | macOS   | [x64](https://aka.ms/dotnet-gcdump/osx-x64) |
@@ -68,6 +68,9 @@ Você pode coletar vários `.gcdump` s e abri-los simultaneamente no Visual Stud
 ## `dotnet-gcdump collect`
 
 Coleta um despejo de GC de um processo em execução no momento.
+
+> [!WARNING]
+> Para percorrer o heap de GC, esse comando dispara uma coleta de lixo de geração 2 (completa), que pode suspender o tempo de execução por um longo tempo, especialmente quando o heap de GC for grande. Não use esse comando em ambientes sensíveis ao desempenho quando o heap de GC for grande.
 
 ### <a name="synopsis"></a>Sinopse
 

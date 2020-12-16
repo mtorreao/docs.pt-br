@@ -3,12 +3,12 @@ title: Analisador de compatibilidade de plataforma
 description: Um analisador de Roslyn que pode ajudar a detectar problemas de compatibilidade de plataforma em aplicativos e bibliotecas de plataforma cruzada.
 author: buyaa-n
 ms.date: 09/17/2020
-ms.openlocfilehash: 808e89df49a82e091862a052e62a367e6860fe47
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 427a2d8ae61a82699e5cf0987fcd1c5a45152cac
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819481"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97594911"
 ---
 # <a name="platform-compatibility-analyzer"></a>Analisador de compatibilidade de plataforma
 
@@ -26,7 +26,7 @@ As novas APIs incluem:
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-O analisador de compatibilidade de plataforma é um dos analisadores de qualidade de código Roslyn. Do .NET 5.0 em diante, esses analisadores estão [incluídos no SDK do .NET](../../fundamentals/code-analysis/overview.md). O analisador de compatibilidade de plataforma é habilitado por padrão somente para projetos direcionados `net5.0` ou para uma versão posterior. No entanto, você pode [habilitá-lo](../../fundamentals/code-analysis/quality-rules/ca1416.md#configurability) para projetos direcionados a outras estruturas.
+O analisador de compatibilidade de plataforma é um dos analisadores de qualidade de código Roslyn. Do .NET 5.0 em diante, esses analisadores estão [incluídos no SDK do .NET](../../fundamentals/code-analysis/overview.md). O analisador de compatibilidade de plataforma é habilitado por padrão somente para projetos direcionados `net5.0` ou para uma versão posterior. No entanto, você pode [habilitá-lo](../../fundamentals/code-analysis/quality-rules/ca1416.md#configure-code-to-analyze) para projetos direcionados a outras estruturas.
 
 ## <a name="how-the-analyzer-determines-platform-dependency"></a>Como o analisador determina a dependência da plataforma
 
