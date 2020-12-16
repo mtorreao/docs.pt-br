@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 150882f3e4c9ff7abe811e09da94b8141de75778
-ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
+ms.openlocfilehash: 4125df1d64fe7f3f2eb1eb4a821ed46c8270c95f
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97366849"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97532001"
 ---
 ### <a name="exclude-specific-types-and-their-derived-types"></a>Excluir tipos específicos e seus tipos derivados
 
@@ -16,7 +16,7 @@ dotnet_code_quality.CAXXXX.excluded_type_names_with_derived_types = MyType
 
 Formatos de nome de símbolo permitidos no valor de opção (separados por `|` ):
 
-- Digite somente Name (inclui todos os tipos com o nome, independentemente do tipo ou namespace que a contém)..
+- Somente nome de tipo (inclui todos os tipos com o nome, independentemente do tipo ou namespace que o contém).
 - Nomes totalmente qualificados no [formato de ID de documentação](../../docs/csharp/programming-guide/xmldoc/processing-the-xml-file.md#id-strings)do símbolo, com um `T:` prefixo opcional.
 
 Exemplos:
