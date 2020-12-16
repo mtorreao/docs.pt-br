@@ -1,0 +1,265 @@
+---
+title: 'Tutorial: detectar anomalias em chamadas telefônicas'
+description: Saiba como criar um aplicativo de detecção de anomalias para dados de série temporal. Este tutorial cria um aplicativo de console .NET Core usando C# no Visual Studio 2019.
+ms.date: 12/04/2020
+ms.topic: tutorial
+ms.custom: mvc
+ms.openlocfilehash: 69b617e760c1dd6a579c925168c92630756f92fc
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97596454"
+---
+# <a name="tutorial-detect-anomalies-in-time-series-with-mlnet"></a><span data-ttu-id="38fd8-104">Tutorial: detectar anomalias na série temporal com ML.NET</span><span class="sxs-lookup"><span data-stu-id="38fd8-104">Tutorial: Detect anomalies in time series with ML.NET</span></span>
+
+<span data-ttu-id="38fd8-105">Saiba como criar um aplicativo de detecção de anomalias para dados de série temporal.</span><span class="sxs-lookup"><span data-stu-id="38fd8-105">Learn how to build an anomaly detection application for time series data.</span></span> <span data-ttu-id="38fd8-106">Este tutorial cria um aplicativo de console .NET Core usando C# no Visual Studio 2019.</span><span class="sxs-lookup"><span data-stu-id="38fd8-106">This tutorial creates a .NET Core console application using C# in Visual Studio 2019.</span></span>
+
+<span data-ttu-id="38fd8-107">Neste tutorial, você aprenderá como:</span><span class="sxs-lookup"><span data-stu-id="38fd8-107">In this tutorial, you learn how to:</span></span>
+> [!div class="checklist"]
+>
+> * <span data-ttu-id="38fd8-108">Carregar os dados</span><span class="sxs-lookup"><span data-stu-id="38fd8-108">Load the data</span></span>
+> * <span data-ttu-id="38fd8-109">Detectar período para uma série temporal</span><span class="sxs-lookup"><span data-stu-id="38fd8-109">Detect period for a time series</span></span>
+> * <span data-ttu-id="38fd8-110">Detectar anomalias para uma série de tempo periódico</span><span class="sxs-lookup"><span data-stu-id="38fd8-110">Detect anomaly for a periodical time series</span></span>
+
+<span data-ttu-id="38fd8-111">Você pode encontrar o código-fonte para este tutorial no repositório [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/ProductSalesAnomalyDetection).</span><span class="sxs-lookup"><span data-stu-id="38fd8-111">You can find the source code for this tutorial at the [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/ProductSalesAnomalyDetection) repository.</span></span>
+
+## <a name="prerequisites"></a><span data-ttu-id="38fd8-112">Pré-requisitos</span><span class="sxs-lookup"><span data-stu-id="38fd8-112">Prerequisites</span></span>
+
+* <span data-ttu-id="38fd8-113">[Visual Studio 2019 versão 16.7.8 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) com a carga de trabalho "desenvolvimento de plataforma cruzada do .NET Core" instalada.</span><span class="sxs-lookup"><span data-stu-id="38fd8-113">[Visual Studio 2019 version 16.7.8 or later](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) with the ".NET Core cross-platform development" workload installed.</span></span>
+
+* [<span data-ttu-id="38fd8-114">O conjunto de phone-calls.csv</span><span class="sxs-lookup"><span data-stu-id="38fd8-114">The phone-calls.csv dataset</span></span>](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/AnomalyDetection_PhoneCalls/SrCnnDetection/Data/phone-calls.csv)
+
+## <a name="create-a-console-application"></a><span data-ttu-id="38fd8-115">Criar um aplicativo de console</span><span class="sxs-lookup"><span data-stu-id="38fd8-115">Create a console application</span></span>
+
+1. <span data-ttu-id="38fd8-116">Crie um **aplicativo de console do .NET Core em C#** chamado "ProductSalesAnomalyDetection".</span><span class="sxs-lookup"><span data-stu-id="38fd8-116">Create a **C# .NET Core Console Application** called "ProductSalesAnomalyDetection".</span></span>
+
+2. <span data-ttu-id="38fd8-117">Crie um diretório chamado *dados* em seu projeto para salvar os arquivos do conjunto de dados.</span><span class="sxs-lookup"><span data-stu-id="38fd8-117">Create a directory named *Data* in your project to save your data set files.</span></span>
+
+3. <span data-ttu-id="38fd8-118">Instalar o **Pacote NuGet Microsoft.ML**:</span><span class="sxs-lookup"><span data-stu-id="38fd8-118">Install the **Microsoft.ML NuGet Package**:</span></span>
+
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
+
+    <span data-ttu-id="38fd8-119">No Gerenciador de Soluções, clique com o botão direito do mouse no seu projeto e selecione **Gerenciar Pacotes NuGet**.</span><span class="sxs-lookup"><span data-stu-id="38fd8-119">In Solution Explorer, right-click on your project and select **Manage NuGet Packages**.</span></span> <span data-ttu-id="38fd8-120">Escolha "nuget.org" como a origem do pacote, selecione a guia procurar, procure **Microsoft.ml** e selecione o botão **instalar** .</span><span class="sxs-lookup"><span data-stu-id="38fd8-120">Choose "nuget.org" as the Package source, select the Browse tab, search for **Microsoft.ML** and select the **Install** button.</span></span> <span data-ttu-id="38fd8-121">Selecione o botão **OK** na caixa de diálogo **Visualizar Alterações** e selecione o botão **Aceito** na caixa de diálogo **Aceitação da Licença**, se concordar com o termos de licença para os pacotes listados.</span><span class="sxs-lookup"><span data-stu-id="38fd8-121">Select the **OK** button on the **Preview Changes** dialog and then select the **I Accept** button on the **License Acceptance** dialog if you agree with the license terms for the packages listed.</span></span> <span data-ttu-id="38fd8-122">Repita essas etapas para **Microsoft. ml. timeseries**.</span><span class="sxs-lookup"><span data-stu-id="38fd8-122">Repeat these steps for **Microsoft.ML.TimeSeries**.</span></span>
+
+4. <span data-ttu-id="38fd8-123">Adicione as seguintes instruções `using` à parte superior do arquivo *Program.cs*:</span><span class="sxs-lookup"><span data-stu-id="38fd8-123">Add the following `using` statements at the top of your *Program.cs* file:</span></span>
+
+    [!code-csharp[AddUsings](./snippets/phone-calls-anomaly-detection/csharp/Program.cs#AddUsings "Add necessary usings")]
+
+### <a name="download-your-data"></a><span data-ttu-id="38fd8-124">Baixar seus dados</span><span class="sxs-lookup"><span data-stu-id="38fd8-124">Download your data</span></span>
+
+1. <span data-ttu-id="38fd8-125">Baixe o conjunto de dados e salve-o na pasta *Data* criada anteriormente:</span><span class="sxs-lookup"><span data-stu-id="38fd8-125">Download the dataset and save it to the *Data* folder you previously created:</span></span>
+
+    <span data-ttu-id="38fd8-126">Clique com o botão direito do mouse em [*phone-calls.csv*](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/AnomalyDetection_PhoneCalls/SrCnnDetection/Data/phone-calls.csv) e selecione "Salvar link (ou destino) como..."</span><span class="sxs-lookup"><span data-stu-id="38fd8-126">Right click on [*phone-calls.csv*](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/AnomalyDetection_PhoneCalls/SrCnnDetection/Data/phone-calls.csv) and select "Save Link (or Target) As..."</span></span>
+
+     <span data-ttu-id="38fd8-127">Salve o arquivo \*.csv na pasta *Data* ou, depois de salvá-lo em outro lugar, mova o arquivo \*.csv para a pasta *Data*.</span><span class="sxs-lookup"><span data-stu-id="38fd8-127">Make sure you either save the \*.csv file to the *Data* folder, or after you save it elsewhere, move the \*.csv file to the *Data* folder.</span></span>
+
+2. <span data-ttu-id="38fd8-128">No Gerenciador de Soluções, clique com o botão direito do mouse no arquivo \*.csv e selecione **Propriedades**.</span><span class="sxs-lookup"><span data-stu-id="38fd8-128">In Solution Explorer, right-click the \*.csv file and select **Properties**.</span></span> <span data-ttu-id="38fd8-129">Em **avançado**, altere o valor de **copiar para diretório de saída** para **copiar se mais recente**.</span><span class="sxs-lookup"><span data-stu-id="38fd8-129">Under **Advanced**, change the value of **Copy to Output Directory** to **Copy if newer**.</span></span>
+
+<span data-ttu-id="38fd8-130">A tabela a seguir é uma visualização de dados do seu arquivo \*.csv:</span><span class="sxs-lookup"><span data-stu-id="38fd8-130">The following table is a data preview from your \*.csv file:</span></span>
+
+| <span data-ttu-id="38fd8-131">timestamp</span><span class="sxs-lookup"><span data-stu-id="38fd8-131">timestamp</span></span>  | <span data-ttu-id="38fd8-132">value</span><span class="sxs-lookup"><span data-stu-id="38fd8-132">value</span></span> |
+|--------|--------------|
+| <span data-ttu-id="38fd8-133">2018/9/3</span><span class="sxs-lookup"><span data-stu-id="38fd8-133">2018/9/3</span></span>  | <span data-ttu-id="38fd8-134">36,69670857</span><span class="sxs-lookup"><span data-stu-id="38fd8-134">36.69670857</span></span>  |
+| <span data-ttu-id="38fd8-135">2018/9/4</span><span class="sxs-lookup"><span data-stu-id="38fd8-135">2018/9/4</span></span>  | <span data-ttu-id="38fd8-136">35,74160571</span><span class="sxs-lookup"><span data-stu-id="38fd8-136">35.74160571</span></span>  |
+| <span data-ttu-id="38fd8-137">.....</span><span class="sxs-lookup"><span data-stu-id="38fd8-137">.....</span></span>  | <span data-ttu-id="38fd8-138">.....</span><span class="sxs-lookup"><span data-stu-id="38fd8-138">.....</span></span>  |
+| <span data-ttu-id="38fd8-139">2018/10/3</span><span class="sxs-lookup"><span data-stu-id="38fd8-139">2018/10/3</span></span>  | <span data-ttu-id="38fd8-140">34,49893429</span><span class="sxs-lookup"><span data-stu-id="38fd8-140">34.49893429</span></span>  |
+| <span data-ttu-id="38fd8-141">...</span><span class="sxs-lookup"><span data-stu-id="38fd8-141">...</span></span>    | <span data-ttu-id="38fd8-142">....</span><span class="sxs-lookup"><span data-stu-id="38fd8-142">....</span></span>   |
+
+<span data-ttu-id="38fd8-143">Esse arquivo representa uma série temporal.</span><span class="sxs-lookup"><span data-stu-id="38fd8-143">This file represents a time-series.</span></span> <span data-ttu-id="38fd8-144">Cada linha no arquivo é um ponto de dados.</span><span class="sxs-lookup"><span data-stu-id="38fd8-144">Each row in the file is a data point.</span></span> <span data-ttu-id="38fd8-145">Cada piont de dados tem dois atributos, `timestamp` ou seja, e `value` , para reprensent o número de chamadas telefônicas a cada dia.</span><span class="sxs-lookup"><span data-stu-id="38fd8-145">Each data piont has two attributes, namely, `timestamp` and `value`, to reprensent the number of phone calls at each day.</span></span> <span data-ttu-id="38fd8-146">O número de chamadas telefônicas é transformado em diferenciação.</span><span class="sxs-lookup"><span data-stu-id="38fd8-146">The number of phone calls is transformed to de-sensitivity.</span></span>
+
+### <a name="create-classes-and-define-paths"></a><span data-ttu-id="38fd8-147">Criar classes e definir demarcadores</span><span class="sxs-lookup"><span data-stu-id="38fd8-147">Create classes and define paths</span></span>
+
+<span data-ttu-id="38fd8-148">Em seguida, defina suas estruturas de dados de classe de entrada e de previsão.</span><span class="sxs-lookup"><span data-stu-id="38fd8-148">Next, define your input and prediction class data structures.</span></span>
+
+<span data-ttu-id="38fd8-149">Adicione uma nova classe ao seu projeto:</span><span class="sxs-lookup"><span data-stu-id="38fd8-149">Add a new class to your project:</span></span>
+
+1. <span data-ttu-id="38fd8-150">No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto e, em seguida, selecione **Adicionar > Novo Item**.</span><span class="sxs-lookup"><span data-stu-id="38fd8-150">In **Solution Explorer**, right-click the project, and then select **Add > New Item**.</span></span>
+
+2. <span data-ttu-id="38fd8-151">Na **caixa de diálogo Adicionar novo item**, selecione **classe** e altere o campo **nome** para *PhoneCallsData.cs*.</span><span class="sxs-lookup"><span data-stu-id="38fd8-151">In the **Add New Item dialog box**, select **Class** and change the **Name** field to *PhoneCallsData.cs*.</span></span> <span data-ttu-id="38fd8-152">Em seguida, selecione o botão **Adicionar**.</span><span class="sxs-lookup"><span data-stu-id="38fd8-152">Then, select the **Add** button.</span></span>
+
+   <span data-ttu-id="38fd8-153">O arquivo *PhoneCallsData.cs* é aberto no editor de código.</span><span class="sxs-lookup"><span data-stu-id="38fd8-153">The *PhoneCallsData.cs* file opens in the code editor.</span></span>
+
+3. <span data-ttu-id="38fd8-154">Adicione a seguinte `using` instrução à parte superior de *PhoneCallsData.cs*:</span><span class="sxs-lookup"><span data-stu-id="38fd8-154">Add the following `using` statement to the top of *PhoneCallsData.cs*:</span></span>
+
+   ```csharp
+   using Microsoft.ML.Data;
+   ```
+
+4. <span data-ttu-id="38fd8-155">Remova a definição de classe existente e adicione o código a seguir, que tem duas classes `PhoneCallsData` e `PhoneCallsPrediction` , ao arquivo *PhoneCallsData.cs* :</span><span class="sxs-lookup"><span data-stu-id="38fd8-155">Remove the existing class definition and add the following code, which has two classes `PhoneCallsData` and `PhoneCallsPrediction`, to the *PhoneCallsData.cs* file:</span></span>
+
+    [!code-csharp[DeclareTypes](./snippets/phone-calls-anomaly-detection/csharp/PhoneCallsData.cs#DeclareTypes "Declare data record types")]
+
+    <span data-ttu-id="38fd8-156">`PhoneCallsData` especifica uma classe de dados de entrada.</span><span class="sxs-lookup"><span data-stu-id="38fd8-156">`PhoneCallsData` specifies an input data class.</span></span> <span data-ttu-id="38fd8-157">O atributo [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) especifica quais colunas (por índice de coluna) no conjunto de dados devem ser carregadas.</span><span class="sxs-lookup"><span data-stu-id="38fd8-157">The [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) attribute specifies which columns (by column index) in the dataset should be loaded.</span></span> <span data-ttu-id="38fd8-158">Ele tem dois atributos `timestamp` e `value` correspondem aos mesmos atributos no arquivo de dados.</span><span class="sxs-lookup"><span data-stu-id="38fd8-158">It has two attributes `timestamp` and `value` that correspond to the same attributes in the data file.</span></span>
+
+    <span data-ttu-id="38fd8-159">`PhoneCallsPrediction` especifica a classe de dados de previsão.</span><span class="sxs-lookup"><span data-stu-id="38fd8-159">`PhoneCallsPrediction` specifies the prediction data class.</span></span> <span data-ttu-id="38fd8-160">Para o detector SR-CNN, a previsão depende do [modo de detecção](xref:Microsoft.ML.TimeSeries.SrCnnDetectMode) especificado.</span><span class="sxs-lookup"><span data-stu-id="38fd8-160">For SR-CNN detector, the prediction depends on the [detect mode](xref:Microsoft.ML.TimeSeries.SrCnnDetectMode) specified.</span></span> <span data-ttu-id="38fd8-161">Neste exemplo, selecionamos o `AnomalyAndMargin` modo.</span><span class="sxs-lookup"><span data-stu-id="38fd8-161">In this sample we select the `AnomalyAndMargin` mode.</span></span> <span data-ttu-id="38fd8-162">A saída contém sete colunas.</span><span class="sxs-lookup"><span data-stu-id="38fd8-162">The output contains seven columns.</span></span> <span data-ttu-id="38fd8-163">Na maioria dos casos,, `IsAnomaly` `ExpectedValue` `UpperBoundary` e `LowerBoundary` são informais o suficiente.</span><span class="sxs-lookup"><span data-stu-id="38fd8-163">In most cases, `IsAnomaly`, `ExpectedValue`, `UpperBoundary` and `LowerBoundary` are informative enough.</span></span> <span data-ttu-id="38fd8-164">Eles informam se um ponto é uma anomalia, o valor esperado do ponto e a região de limite inferior/superior do ponto.</span><span class="sxs-lookup"><span data-stu-id="38fd8-164">They tell you if a point is an anomaly, the expected value of the point and the lower / upper boundary region of the point.</span></span>
+
+5. <span data-ttu-id="38fd8-165">Adicione o seguinte código à linha à direita acima do `Main` método para especificar o caminho para o arquivo de dados:</span><span class="sxs-lookup"><span data-stu-id="38fd8-165">Add the following code to the line right above the `Main` method to specify the path to your data file:</span></span>
+
+    [!code-csharp[Declare global variables](./snippets/phone-calls-anomaly-detection/csharp/Program.cs#DeclareGlobalVariables "Declare global variables")]
+
+### <a name="initialize-variables-in-main"></a><span data-ttu-id="38fd8-166">Inicializar variáveis em Main</span><span class="sxs-lookup"><span data-stu-id="38fd8-166">Initialize variables in Main</span></span>
+
+1. <span data-ttu-id="38fd8-167">Substitua a linha `Console.WriteLine("Hello World!")` no método `Main` pelo seguinte código para declarar e inicializar a variável `mlContext`:</span><span class="sxs-lookup"><span data-stu-id="38fd8-167">Replace the `Console.WriteLine("Hello World!")` line in the `Main` method with the following code to declare and initialize the `mlContext` variable:</span></span>
+
+    [!code-csharp[CreateMLContext](./snippets/phone-calls-anomaly-detection/csharp/Program.cs#CreateMLContext "Create the ML Context")]
+
+    <span data-ttu-id="38fd8-168">A [classe MLContext](xref:Microsoft.ML.MLContext) é um ponto de partida para todas as operações do ML.NET e a inicialização do `mlContext` cria um ambiente do ML.NET que pode ser compartilhado entre os objetos de fluxo de trabalho da criação de modelo.</span><span class="sxs-lookup"><span data-stu-id="38fd8-168">The [MLContext class](xref:Microsoft.ML.MLContext) is a starting point for all ML.NET operations, and initializing `mlContext` creates a new ML.NET environment that can be shared across the model creation workflow objects.</span></span> <span data-ttu-id="38fd8-169">Ele é semelhante, conceitualmente, a `DBContext` no Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="38fd8-169">It's similar, conceptually, to `DBContext` in Entity Framework.</span></span>
+
+### <a name="load-the-data"></a><span data-ttu-id="38fd8-170">Carregar os dados</span><span class="sxs-lookup"><span data-stu-id="38fd8-170">Load the data</span></span>
+
+<span data-ttu-id="38fd8-171">Os dados do ML.NET são representados como uma [classe IDataView](xref:Microsoft.ML.IDataView).</span><span class="sxs-lookup"><span data-stu-id="38fd8-171">Data in ML.NET is represented as an [IDataView class](xref:Microsoft.ML.IDataView).</span></span> <span data-ttu-id="38fd8-172">`IDataView` é uma maneira flexível e eficiente de descrever dados tabulares (numéricos e texto).</span><span class="sxs-lookup"><span data-stu-id="38fd8-172">`IDataView` is a flexible, efficient way of describing tabular data (numeric and text).</span></span> <span data-ttu-id="38fd8-173">Os dados podem ser carregados de um arquivo de texto ou de outras fontes (por exemplo, banco de dados SQL ou arquivos de log) para um objeto `IDataView`.</span><span class="sxs-lookup"><span data-stu-id="38fd8-173">Data can be loaded from a text file or from other sources (for example, SQL database or log files) to an `IDataView` object.</span></span>
+
+1. <span data-ttu-id="38fd8-174">Adicione o seguinte código como a próxima linha do método `Main`:</span><span class="sxs-lookup"><span data-stu-id="38fd8-174">Add the following code as the next line of the `Main` method:</span></span>
+
+    [!code-csharp[LoadData](./snippets/phone-calls-anomaly-detection/csharp/Program.cs#LoadData "loading dataset")]
+
+    <span data-ttu-id="38fd8-175">O [LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) define o esquema de dados e lê o arquivo.</span><span class="sxs-lookup"><span data-stu-id="38fd8-175">The [LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) defines the data schema and reads in the file.</span></span> <span data-ttu-id="38fd8-176">Ele usa as variáveis de caminho de dados e retorna uma `IDataView`.</span><span class="sxs-lookup"><span data-stu-id="38fd8-176">It takes in the data path variables and returns an `IDataView`.</span></span>
+
+## <a name="time-series-anomaly-detection"></a><span data-ttu-id="38fd8-177">Detecção de anomalias de série temporal</span><span class="sxs-lookup"><span data-stu-id="38fd8-177">Time series anomaly detection</span></span>
+
+<span data-ttu-id="38fd8-178">Detecção de anomalias de série temporal é o processo de detectar exceções de dados de série temporal; pontos em uma determinada série temporal de entrada em que o comportamento não é o esperado, ou "estranho".</span><span class="sxs-lookup"><span data-stu-id="38fd8-178">Time series anomaly detection is the process of detecting time-series data outliers; points on a given input time-series where the behavior isn't what was expected, or "weird".</span></span> <span data-ttu-id="38fd8-179">Essas anomalias normalmente são indicativas de alguns eventos de interesse no domínio problemático: um ataque cibernético em contas de usuário, queda de energia, disparo de RPS em um servidor, vazamento de memória, etc.</span><span class="sxs-lookup"><span data-stu-id="38fd8-179">These anomalies are typically indicative of some events of interest in the problem domain: a cyber-attack on user accounts, power outage, bursting RPS on a server, memory leak, etc.</span></span>
+
+<span data-ttu-id="38fd8-180">Para localizar anomalias na série temporal, você deve primeiro determinar o período da série.</span><span class="sxs-lookup"><span data-stu-id="38fd8-180">To find anomaly on time series, you should first determine the period of the series.</span></span> <span data-ttu-id="38fd8-181">Em seguida, a série temporal pode ser decomposta em vários componentes como `Y = T + S + R` , onde `Y` é a série original, `T` é o componente de tendência, `S` é a componnent sazonal e `R` é o componente residual da série.</span><span class="sxs-lookup"><span data-stu-id="38fd8-181">Then, the time series can be decomposed into several components as `Y = T + S + R`, where `Y` is the original series, `T` is the trend component, `S` is the seasonal componnent and `R` is the residual component of the series.</span></span> <span data-ttu-id="38fd8-182">Essa etapa é chamada de [decomposição](https://en.wikipedia.org/wiki/Decomposition_of_time_series).</span><span class="sxs-lookup"><span data-stu-id="38fd8-182">This step is called [decomposition](https://en.wikipedia.org/wiki/Decomposition_of_time_series).</span></span> <span data-ttu-id="38fd8-183">Por fim, a detecção é executada no componente residual para localizar as anomalias.</span><span class="sxs-lookup"><span data-stu-id="38fd8-183">Finally, detection is performed on the residual component to find the anomalies.</span></span> <span data-ttu-id="38fd8-184">No ML.NET, o algoritmo SR-CNN é um algoritmo avançado e de romance baseado em Spectral residuais (SR) e rede neural de restauração (CNN) para detectar anomalias na série temporal (consulte o artigo [serviço de detecção de anomalias de série temporal no Microsoft](https://arxiv.org/pdf/1906.03821.pdf) para obter mais detalhes sobre esse algoritmo).</span><span class="sxs-lookup"><span data-stu-id="38fd8-184">In ML.NET, The SR-CNN algorithm is an advanced and novel algorithm that is based on Spectral Residual (SR) and Convolutional Neural Network(CNN) to detect anomaly on time-series( Refer to the [Time-Series Anomaly Detection Service at Microsoft](https://arxiv.org/pdf/1906.03821.pdf) paper for more details on this algorithm).</span></span>
+
+<span data-ttu-id="38fd8-185">Neste tutorial, você verá que esses procedimentos podem ser concluídos usando duas funções.</span><span class="sxs-lookup"><span data-stu-id="38fd8-185">In this tutorial, you will see that these procedures can be completed using two functions.</span></span>
+
+## <a name="detect-period"></a><span data-ttu-id="38fd8-186">Período de detecção</span><span class="sxs-lookup"><span data-stu-id="38fd8-186">Detect Period</span></span>
+
+<span data-ttu-id="38fd8-187">Na primeira etapa, invocamos a `DetectSeasonality` função para determinar o período da série.</span><span class="sxs-lookup"><span data-stu-id="38fd8-187">In the first step, we invoke the `DetectSeasonality` function to determine the period of the series.</span></span>
+
+### <a name="create-the-detectperiod-method"></a><span data-ttu-id="38fd8-188">Criar o método DetectPeriod</span><span class="sxs-lookup"><span data-stu-id="38fd8-188">Create the DetectPeriod method</span></span>
+
+1. <span data-ttu-id="38fd8-189">Crie o `DetectPeriod` método, logo abaixo do `Main` método, usando o seguinte código:</span><span class="sxs-lookup"><span data-stu-id="38fd8-189">Create the `DetectPeriod` method, just below the `Main` method, using the following code:</span></span>
+
+    ```csharp
+    static void DetectPeriod(MLContext mlContext, IDataView phoneCalls)
+    {
+
+    }
+    ```
+
+2. <span data-ttu-id="38fd8-190">Use a função [DetectSeasonality](xref:Microsoft.ML.TimeSeriesCatalog.DetectSeasonality) para detectar o período.</span><span class="sxs-lookup"><span data-stu-id="38fd8-190">Use the [DetectSeasonality](xref:Microsoft.ML.TimeSeriesCatalog.DetectSeasonality) function to detect period.</span></span> <span data-ttu-id="38fd8-191">Adicione-o ao método `DetectPeriod` com o seguinte código:</span><span class="sxs-lookup"><span data-stu-id="38fd8-191">Add it to the `DetectPeriod` method with the following code:</span></span>
+
+    [!code-csharp[DetectSeasonality](./snippets/phone-calls-anomaly-detection/csharp/Program.cs#DetectSeasonality)]
+
+3. <span data-ttu-id="38fd8-192">Exiba o valor do período adicionando o seguinte como a próxima linha de código no `DetectPeriod` método:</span><span class="sxs-lookup"><span data-stu-id="38fd8-192">Display the period value by adding the following as the next line of code in the `DetectPeriod` method:</span></span>
+
+    [!code-csharp[DisplayPeriod](./snippets/phone-calls-anomaly-detection/csharp/Program.cs#DisplayPeriod)]
+
+4. <span data-ttu-id="38fd8-193">Adicione a seguinte chamada ao `DetectPeriod` método no `Main` método:</span><span class="sxs-lookup"><span data-stu-id="38fd8-193">Add the following call to the `DetectPeriod` method in the `Main` method:</span></span>
+
+    [!code-csharp[CallDetectPeriod](./snippets/phone-calls-anomaly-detection/csharp/Program.cs#CallDetectPeriod)]
+
+### <a name="period-detection-results"></a><span data-ttu-id="38fd8-194">Resultados da detecção de período</span><span class="sxs-lookup"><span data-stu-id="38fd8-194">Period detection results</span></span>
+
+<span data-ttu-id="38fd8-195">Execute o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="38fd8-195">Run the application.</span></span> <span data-ttu-id="38fd8-196">Seus resultados devem ser semelhantes aos seguintes.</span><span class="sxs-lookup"><span data-stu-id="38fd8-196">Your results should be similar to the following.</span></span>
+
+```console
+Period of the series is: 7.
+```
+
+## <a name="detect-anomaly"></a><span data-ttu-id="38fd8-197">Detectar anomalias</span><span class="sxs-lookup"><span data-stu-id="38fd8-197">Detect Anomaly</span></span>
+
+<span data-ttu-id="38fd8-198">Nesta etapa, você usa o [`SrCnnEntireDetector`](xref:Microsoft.ML.Transforms.TimeSeries.SrCnnEntireAnomalyDetector) para localizar anomalias.</span><span class="sxs-lookup"><span data-stu-id="38fd8-198">In this step, you use the [`SrCnnEntireDetector`](xref:Microsoft.ML.Transforms.TimeSeries.SrCnnEntireAnomalyDetector) to find anomalies.</span></span>
+
+### <a name="create-the-detectanomaly-method"></a><span data-ttu-id="38fd8-199">Criar o método DetectAnomaly</span><span class="sxs-lookup"><span data-stu-id="38fd8-199">Create the DetectAnomaly method</span></span>
+
+1. <span data-ttu-id="38fd8-200">Crie o `DetectAnomaly` método, logo abaixo do `DetectPeriod` método, usando o seguinte código:</span><span class="sxs-lookup"><span data-stu-id="38fd8-200">Create the `DetectAnomaly` method, just below the `DetectPeriod` method, using the following code:</span></span>
+
+    ```csharp
+    static void DetectAnomaly(MLContext mlContext, IDataView phoneCalls, int period)
+    {
+
+    }
+    ```
+
+2. <span data-ttu-id="38fd8-201">Configure o [SrCnnEntireAnomalyDetectorOptions](xref:Microsoft.ML.Transforms.TimeSeries.SrCnnEntireAnomalyDetectorOptions) no `DetectAnomaly` método com o seguinte código:</span><span class="sxs-lookup"><span data-stu-id="38fd8-201">Setup [SrCnnEntireAnomalyDetectorOptions](xref:Microsoft.ML.Transforms.TimeSeries.SrCnnEntireAnomalyDetectorOptions) in the `DetectAnomaly` method with the following code:</span></span>
+
+    [!code-csharp[SetupSrCnnParameters](./snippets/phone-calls-anomaly-detection/csharp/Program.cs#SetupSrCnnParameters)]
+
+3. <span data-ttu-id="38fd8-202">Detecte anomalias pelo algoritmo SR-CNN adicionando a seguinte linha de código ao `DetectAnomaly` método:</span><span class="sxs-lookup"><span data-stu-id="38fd8-202">Detect anomaly by SR-CNN algorithm by adding the following line of code in the `DetectAnomaly` method:</span></span>
+
+    [!code-csharp[DetectAnomaly](./snippets/phone-calls-anomaly-detection/csharp/Program.cs#DetectAnomaly)]
+
+4. <span data-ttu-id="38fd8-203">Converta a exibição de dados de saída em um tipo fortemente tipado `IEnumerable` para facilitar a exibição usando o [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable%2A) método com o seguinte código:</span><span class="sxs-lookup"><span data-stu-id="38fd8-203">Convert the output data view into a strongly typed `IEnumerable` for easier display using the [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable%2A) method with the following code:</span></span>
+
+    [!code-csharp[CreateEnumerableForResult](./snippets/phone-calls-anomaly-detection/csharp/Program.cs#CreateEnumerableForResult)]
+
+5. <span data-ttu-id="38fd8-204">Crie um cabeçalho de exibição com o código a seguir como a próxima linha no método `DetectAnomaly`:</span><span class="sxs-lookup"><span data-stu-id="38fd8-204">Create a display header with the following code as the next line in the `DetectAnomaly` method:</span></span>
+
+    [!code-csharp[DisplayHeader](./snippets/phone-calls-anomaly-detection/csharp/Program.cs#DisplayHeader)]
+
+    <span data-ttu-id="38fd8-205">Você exibirá as informações a seguir nos resultados da detecção de ponto de alteração:</span><span class="sxs-lookup"><span data-stu-id="38fd8-205">You'll display the following information in your change point detection results:</span></span>
+
+    * <span data-ttu-id="38fd8-206">`Index` é o índice de cada ponto.</span><span class="sxs-lookup"><span data-stu-id="38fd8-206">`Index` is the index of each point.</span></span>
+    * <span data-ttu-id="38fd8-207">`Anomaly` é o indicador de wheather que cada ponto é detectado como anomalia.</span><span class="sxs-lookup"><span data-stu-id="38fd8-207">`Anomaly` is the indicator of wheather each point is detected as anomaly.</span></span>
+    * <span data-ttu-id="38fd8-208">`ExpectedValue` é o valor estimado de cada ponto.</span><span class="sxs-lookup"><span data-stu-id="38fd8-208">`ExpectedValue` is the estimated value of each point.</span></span>
+    * <span data-ttu-id="38fd8-209">`LowerBoundary` é o menor valor que cada ponto pode ser não ser anormal.</span><span class="sxs-lookup"><span data-stu-id="38fd8-209">`LowerBoundary` is the lowest value each point can be to be not anomaly.</span></span>
+    * <span data-ttu-id="38fd8-210">`UpperBoundary` é o maior valor que cada ponto pode ser não ser anormal.</span><span class="sxs-lookup"><span data-stu-id="38fd8-210">`UpperBoundary` is the highest value each point can be to be not anomaly.</span></span>
+
+6. <span data-ttu-id="38fd8-211">Itere por meio do `predictions` `IEnumerable` e exiba os resultados com o seguinte código:</span><span class="sxs-lookup"><span data-stu-id="38fd8-211">Iterate through the `predictions` `IEnumerable` and display the results with the following code:</span></span>
+
+    [!code-csharp[DisplayAnomalyDetectionResults](./snippets/phone-calls-anomaly-detection/csharp/Program.cs#DisplayAnomalyDetectionResults)]
+
+7. <span data-ttu-id="38fd8-212">Adicione a seguinte chamada ao `DetectAnomaly` método no `Main` método:</span><span class="sxs-lookup"><span data-stu-id="38fd8-212">Add the following call to the `DetectAnomaly` method in the `Main` method:</span></span>
+
+    [!code-csharp[CallDetectAnomaly](./snippets/phone-calls-anomaly-detection/csharp/Program.cs#CallDetectAnomaly)]
+
+## <a name="anomaly-detection-results"></a><span data-ttu-id="38fd8-213">Resultados da detecção de anomalias</span><span class="sxs-lookup"><span data-stu-id="38fd8-213">Anomaly detection results</span></span>
+
+<span data-ttu-id="38fd8-214">Execute o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="38fd8-214">Run the application.</span></span> <span data-ttu-id="38fd8-215">Seus resultados devem ser semelhantes aos seguintes.</span><span class="sxs-lookup"><span data-stu-id="38fd8-215">Your results should be similar to the following.</span></span> <span data-ttu-id="38fd8-216">Durante o processamento, as mensagens são exibidas.</span><span class="sxs-lookup"><span data-stu-id="38fd8-216">During processing, messages are displayed.</span></span> <span data-ttu-id="38fd8-217">Você pode ver avisos ou mensagens de processamento.</span><span class="sxs-lookup"><span data-stu-id="38fd8-217">You may see warnings, or processing messages.</span></span> <span data-ttu-id="38fd8-218">Algumas mensagens foram removidas dos resultados a seguir para fins de clareza.</span><span class="sxs-lookup"><span data-stu-id="38fd8-218">Some messages have been removed from the following results for clarity.</span></span>
+
+```console
+Detect period of the series
+Period of the series is: 7.
+Detect anomaly points in the series
+Index   Data    Anomaly AnomalyScore    Mag     ExpectedValue   BoundaryUnit    UpperBoundary   LowerBoundary
+0,0,36.841787256739266,41.14206982401966,32.541504689458876
+1,0,35.67303618137362,39.97331874865401,31.372753614093227
+2,0,34.710132999891826,39.029491313022824,30.390774686760828
+3,0,33.44765248883495,37.786086547816545,29.10921842985335
+4,0,28.937110922276364,33.25646923540736,24.61775260914537
+5,0,5.143895892785781,9.444178460066171,0.843613325505391
+6,0,5.163325228419392,9.463607795699783,0.8630426611390014
+7,0,36.76414836240396,41.06443092968435,32.46386579512357
+8,0,35.77908590657007,40.07936847385046,31.478803339289676
+9,0,34.547259536635245,38.847542103915636,30.246976969354854
+10,0,33.55193524820608,37.871293561337076,29.23257693507508
+11,0,29.091800129624648,33.392082696905035,24.79151756234426
+12,0,5.154836630338823,9.455119197619213,0.8545540630584334
+13,0,5.234332502492464,9.534615069772855,0.934049935212073
+14,0,36.54992549471526,40.85020806199565,32.24964292743487
+15,0,35.79526470980883,40.095547277089224,31.494982142528443
+16,0,34.34099013096804,38.64127269824843,30.040707563687647
+17,0,33.61201516582131,37.9122977331017,29.31173259854092
+18,0,29.223563320561812,33.5238458878422,24.923280753281425
+19,0,5.170512168851533,9.470794736131923,0.8702296015711433
+20,0,5.2614938889462834,9.561776456226674,0.9612113216658926
+21,0,36.37103858487317,40.67132115215356,32.07075601759278
+22,0,35.813544599026855,40.113827166307246,31.513262031746464
+23,0,34.05600492733225,38.356287494612644,29.755722360051863
+24,0,33.65828319077884,37.95856575805923,29.358000623498448
+25,0,29.381125690882463,33.681408258162854,25.080843123602072
+26,0,5.261543539820418,9.561826107100808,0.9612609725400283
+27,0,5.4873712582971805,9.787653825577571,1.1870886910167897
+28,1,36.504694001629254,40.804976568909645,32.20441143434886  <-- alert is on, detecte anomaly
+...
+```
+
+<span data-ttu-id="38fd8-219">Parabéns!</span><span class="sxs-lookup"><span data-stu-id="38fd8-219">Congratulations!</span></span> <span data-ttu-id="38fd8-220">Agora você criou com êxito modelos de aprendizado de máquina para detectar períodos e anomalias em uma série temporal.</span><span class="sxs-lookup"><span data-stu-id="38fd8-220">You've now successfully built machine learning models for detecting period and anomaly on a periodical series.</span></span>
+
+<span data-ttu-id="38fd8-221">Você pode encontrar o código-fonte para este tutorial no repositório [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/PhoneCallsAnomalyDetection).</span><span class="sxs-lookup"><span data-stu-id="38fd8-221">You can find the source code for this tutorial at the [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/PhoneCallsAnomalyDetection) repository.</span></span>
+
+<span data-ttu-id="38fd8-222">Neste tutorial, você aprendeu a:</span><span class="sxs-lookup"><span data-stu-id="38fd8-222">In this tutorial, you learned how to:</span></span>
+> [!div class="checklist"]
+>
+> * <span data-ttu-id="38fd8-223">Carregar os dados</span><span class="sxs-lookup"><span data-stu-id="38fd8-223">Load the data</span></span>
+> * <span data-ttu-id="38fd8-224">Detectar período nos dados de série temporal</span><span class="sxs-lookup"><span data-stu-id="38fd8-224">Detect period on the time series data</span></span>
+> * <span data-ttu-id="38fd8-225">Detectar anomalias nos dados de série temporal</span><span class="sxs-lookup"><span data-stu-id="38fd8-225">Detect anomaly on the time series data</span></span>
+
+## <a name="next-steps"></a><span data-ttu-id="38fd8-226">Próximas etapas</span><span class="sxs-lookup"><span data-stu-id="38fd8-226">Next steps</span></span>
+
+<span data-ttu-id="38fd8-227">Confira o repositório do GitHub de exemplos de Machine Learning para explorar um exemplo de Detecção de Anomalias de Consumo de Energia.</span><span class="sxs-lookup"><span data-stu-id="38fd8-227">Check out the Machine Learning samples GitHub repository to explore a Power Consumption Anomaly Detection sample.</span></span>
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="38fd8-228">dotnet/machinelearning-samples GitHub repository</span><span class="sxs-lookup"><span data-stu-id="38fd8-228">dotnet/machinelearning-samples GitHub repository</span></span>](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/AnomalyDetection_PowerMeterReadings)
