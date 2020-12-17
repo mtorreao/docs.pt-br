@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4ffef401c07dbb27db7c0225acdc6817d95bfe11
-ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
+ms.openlocfilehash: 2046762be2ae5d6d4c9f7fb061849b63e7ab06a2
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91451393"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97612705"
 ---
 ## <a name="available-counters"></a>Contadores disponíveis
 
@@ -17,7 +17,7 @@ Os contadores a seguir são publicados como parte do tempo de execução do .NET
 | Contador | Descrição |
 |--|--|
 | :::no-loc text="% Time in GC since last GC"::: (`time-in-gc`) | A porcentagem de tempo no GC desde o último GC |
-| :::no-loc text="Allocation Rate"::: (`alloc-rate`) | A taxa de alocação em bytes |
+| :::no-loc text="Allocation Rate"::: (`alloc-rate`) | O número de bytes alocados por intervalo de atualização |
 | :::no-loc text="CPU Usage"::: (`cpu-usage`) | A porcentagem de uso da CPU do processo |
 | :::no-loc text="Exception Count"::: (`exception-count`) | O número de exceções que ocorreram |
 | :::no-loc text="GC Heap Size"::: (`gc-heap-size`) | O número de bytes considerados alocados com base em <xref:System.GC.GetTotalMemory(System.Boolean)?displayProperty=nameWithType> |
@@ -48,7 +48,7 @@ Os contadores a seguir são publicados como parte do [ASP.NET Core](/aspnet/core
 |--|--|
 | :::no-loc text="Current Requests"::: (`current-requests`) | O número total de solicitações que foram iniciadas, mas ainda não foram interrompidas |
 | :::no-loc text="Failed Requests"::: (`failed-requests`) | O número total de solicitações com falha ocorridas durante a vida útil do aplicativo |
-| :::no-loc text="Request Rate"::: (`requests-per-second`) | O número de solicitações que ocorrem por segundo |
+| :::no-loc text="Request Rate"::: (`requests-per-second`) | O número de solicitações que ocorrem por intervalo de atualização |
 | :::no-loc text="Total Requests"::: (`total-requests`) | O número total de solicitações que ocorreram durante a vida útil do aplicativo |
 
 ### <a name="microsoftaspnetcorehttpconnections-counters"></a>Contadores "Microsoft. AspNetCore. http. Connections"
@@ -70,12 +70,12 @@ Os contadores a seguir são publicados como parte do [servidor web ASP.NET Core 
 | Contador | Descrição |
 |--|--|
 | :::no-loc text="Connection Queue Length"::: (`connection-queue-length`) | O comprimento atual da fila de conexão |
-| :::no-loc text="Connection Rate"::: (`connections-per-second`) | O número de conexões por segundo com o servidor Web |
+| :::no-loc text="Connection Rate"::: (`connections-per-second`) | O número de conexões por intervalo de atualização para o servidor Web |
 | :::no-loc text="Current Connections"::: (`current-connections`) | O número atual de conexões ativas com o servidor Web |
 | :::no-loc text="Current TLS Handshakes"::: (`current-tls-handshakes`) | O número atual de Handshakes TLS |
 | :::no-loc text="Current Upgraded Requests (WebSockets)"::: (`current-upgraded-requests`) | O número atual de solicitações atualizadas (WebSockets) |
 | :::no-loc text="Failed TLS Handshakes"::: (`failed-tls-handshakes`) | O número total de Handshakes de TLS com falha |
 | :::no-loc text="Request Queue Length"::: (`request-queue-length`) | O comprimento atual da fila de solicitações |
-| :::no-loc text="TLS Handshake Rate"::: (`tls-handshakes-per-second`) | O número de Handshakes TLS por segundo |
+| :::no-loc text="TLS Handshake Rate"::: (`tls-handshakes-per-second`) | O número de Handshakes TLS por intervalo de atualização |
 | :::no-loc text="Total Connections"::: (`total-connections`) | O número total de conexões com o servidor Web |
 | :::no-loc text="Total TLS Handshakes"::: (`total-tls-handshakes`) | O número total de Handshakes TLS com o servidor Web |
