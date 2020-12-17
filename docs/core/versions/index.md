@@ -2,12 +2,12 @@
 title: Como o tempo de execução .NET e o SDK têm controle de versão
 description: Este artigo explica como o .NET SDK e o tempo de execução têm controle de versão (semelhante ao controle de versões semânticos).
 ms.date: 12/07/2020
-ms.openlocfilehash: 2fe0b162b52f1e4500ec87f7d5d92054cd569552
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 2fbc2775f31b4eab1c9883282c58accd9bb2b9f5
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009300"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633618"
 ---
 # <a name="overview-of-how-net-is-versioned"></a>Visão geral de como o .NET tem controle de versão
 
@@ -19,16 +19,16 @@ O tempo de execução do .NET tem uma abordagem principal/secundária/patch para
 
 O SDK do .NET não segue o controle de versão semântico. O SDK do .NET libera mais rápido e seus números de versão devem comunicar o tempo de execução alinhado e as versões secundárias e de patch próprias do SDK.
 
-As duas primeiras posições do número de versão do SDK do .NET são bloqueadas para o tempo de execução do .NET lançado com o. Cada versão do SDK pode criar aplicativos para esse runtime ou qualquer versão inferior.
+As duas primeiras posições do número de versão do SDK do .NET são bloqueadas para a versão do .NET Runtime lançada com o. Cada versão do SDK pode criar aplicativos para esse runtime ou qualquer versão inferior.
 
-A terceira posição do número de versão do SDK comunica o número de patch e da versão secundária. A versão secundária é multiplicada por 100. Versão secundária 1, versão de patch 2 seria representada como 102. Os últimos dois dígitos representam o número de patch. Por exemplo, aqui está uma possível sequência de números de versão de tempo de execução e SDK:
+A terceira posição do número de versão do SDK comunica o número de patch e da versão secundária. A versão secundária é multiplicada por 100. Os últimos dois dígitos representam o número de patch. Versão secundária 1, versão de patch 2 seria representada como 102. Por exemplo, aqui está uma possível sequência de números de versão de tempo de execução e SDK:
 
 | Alterar                | Execução do .NET      | SDK do .NET ( \* )     |
 |-----------------------|-------------------|-------------------|
 | Versão inicial       | 2.2.0             | 2.2.100           |
 | Patch do SDK             | 2.2.0             | 2.2.101           |
-| Runtime e Patch do SDK | 2.2.1             | 2.2.102           |
-| Alteração de Recurso do SDK    | 2.2.1             | 2.2.200           |
+| Tempo de execução e patch do SDK | 2.2.1             | 2.2.102           |
+| Alteração de recurso do SDK    | 2.2.1             | 2.2.200           |
 
 OBSERVAÇÕES:
 

@@ -3,16 +3,16 @@ title: Organizando e testando projetos com a CLI do .NET
 description: Este tutorial explica como organizar e testar projetos .NET na linha de comando.
 author: cartermp
 ms.date: 09/10/2018
-ms.openlocfilehash: 93e8a6b8afd9f9405bf21488998a61c2e761bf1e
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: 263eaf15beac008de8bb353a385b8f3588a7fefc
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97512249"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633631"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-cli"></a>Organizando e testando projetos com a CLI do .NET
 
-Este tutorial segue o [tutorial: criar um aplicativo de console com o .NET usando Visual Studio Code](with-visual-studio-code.md), levando você além da criação de um aplicativo de console simples para desenvolver aplicativos avançados e bem organizados. Depois de mostrar como usar pastas para organizar seu código, este tutorial mostra como estender um aplicativo de console com a estrutura de teste [xUnit](https://xunit.github.io/).
+Este tutorial segue o [tutorial: criar um aplicativo de console com o .NET usando Visual Studio Code](with-visual-studio-code.md), levando você além da criação de um aplicativo de console simples para desenvolver aplicativos avançados e bem organizados. Depois de mostrar como usar pastas para organizar seu código, este tutorial mostra como estender um aplicativo de console com a estrutura de teste [xUnit](https://xunit.net/).
 
 ## <a name="using-folders-to-organize-code"></a>Usar pastas para organizar o código
 
@@ -104,7 +104,7 @@ Exercício opcional: você pode adicionar um novo tipo de animal de estimação,
 
 ### <a name="testing-the-sample"></a>Testando o exemplo
 
-O projeto `NewTypes` está em funcionamento e você o organizou mantendo os tipos relacionados a animais de estimação em uma pasta. Em seguida, crie seu projeto de teste e comece a escrever testes com a estrutura de teste [xUnit](https://xunit.github.io/). O teste de unidade permite que você verifique automaticamente o comportamento dos seus tipos de animal de estimação para confirmar se eles estão funcionando corretamente.
+O projeto `NewTypes` está em funcionamento e você o organizou mantendo os tipos relacionados a animais de estimação em uma pasta. Em seguida, crie seu projeto de teste e comece a escrever testes com a estrutura de teste [xUnit](https://xunit.net/). O teste de unidade permite que você verifique automaticamente o comportamento dos seus tipos de animal de estimação para confirmar se eles estão funcionando corretamente.
 
 Navegue de volta para a pasta *src* e crie uma pasta *test* com uma pasta *NewTypesTests* dentro dela. Em um prompt de comando da pasta *NewTypesTests*, execute `dotnet new xunit`. Isso gera dois arquivos: *NewTypesTests.csproj* e *UnitTest1.cs*.
 

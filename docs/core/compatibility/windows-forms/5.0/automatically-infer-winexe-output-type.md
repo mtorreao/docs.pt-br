@@ -1,13 +1,13 @@
 ---
 title: 'Alteração significativa: OutputType definido como WinExe para aplicativos WPF e WinForms'
-description: Saiba mais sobre a alteração significativa no .NET 5,0 em que OutputType é definido automaticamente como WinExe para aplicativos Windows Forms.
+description: Saiba mais sobre a alteração significativa no SDK do .NET 5.0.100 em que OutputType é definido automaticamente como WinExe para aplicativos Windows Forms.
 ms.date: 09/18/2020
-ms.openlocfilehash: 7b2c7a76983c9e7958808e3cc4716be7792841c6
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: 0b56db57d5242f2fb001c4de339a7f696c088dfc
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97513179"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633841"
 ---
 # <a name="outputtype-set-to-winexe-for-wpf-and-winforms-apps"></a>OutputType definido como WinExe para aplicativos WPF e WinForms
 
@@ -23,7 +23,7 @@ Nas versões anteriores do SDK do .NET, o valor especificado para `OutputType` n
 </PropertyGroup>
 ```
 
-A partir da versão 5.0.1 do SDK do .NET, `OutputType` é automaticamente definida para o `WinExe` WPF e Windows Forms aplicativos direcionados a qualquer versão de estrutura, incluindo .NET Framework. Por exemplo:
+A partir da versão 5.0.100 do SDK do .NET, `OutputType` é automaticamente definido para o `WinExe` WPF e Windows Forms aplicativos direcionados a qualquer versão de estrutura, incluindo .NET Framework. Por exemplo:
 
 ```xml
 <PropertyGroup>
@@ -37,7 +37,7 @@ Supõe-se que a maioria dos usuários não queira que uma janela do console seja
 
 ## <a name="version-introduced"></a>Versão introduzida
 
-.NET 5.0.1
+5.0.100 .NET
 
 ## <a name="recommended-action"></a>Ação recomendada
 

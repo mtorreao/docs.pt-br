@@ -4,12 +4,12 @@ description: Saiba como criar bibliotecas do .NET usando a CLI do .NET. Você cr
 author: cartermp
 ms.topic: how-to
 ms.date: 12/14/2020
-ms.openlocfilehash: 5a70cec4a991f673f4d5d3e7b00cd704c6799f47
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: 6f4c1feac7630a6a0250e4b0b39ef01152f5a400
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97512405"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633670"
 ---
 # <a name="develop-libraries-with-the-net-cli"></a>Desenvolver bibliotecas com a CLI do .NET
 
@@ -206,7 +206,7 @@ Cada um deles contém os `.dll` arquivos para cada destino.
 
 ## <a name="how-to-test-libraries-on-net"></a>Como testar bibliotecas no .NET
 
-É importante ser capaz de testar em várias plataformas. Você pode usar o [xUnit](https://xunit.github.io/) ou MSTest pronto para uso. Ambos são perfeitamente adequados para o teste de unidade de sua biblioteca no .NET. A maneira de configurar sua solução com projetos de teste dependerá da [estrutura da sua solução](#structuring-a-solution). O exemplo a seguir pressupõe que os diretórios de origem e de teste estão no mesmo diretório de nível superior.
+É importante ser capaz de testar em várias plataformas. Você pode usar o [xUnit](https://xunit.net/) ou MSTest pronto para uso. Ambos são perfeitamente adequados para o teste de unidade de sua biblioteca no .NET. A maneira de configurar sua solução com projetos de teste dependerá da [estrutura da sua solução](#structuring-a-solution). O exemplo a seguir pressupõe que os diretórios de origem e de teste estão no mesmo diretório de nível superior.
 
 > [!NOTE]
 > Isso usa alguns comandos da [CLI do .net](../tools/index.md) . Consulte [dotnet new](../tools/dotnet-new.md) e [dotnet sln](../tools/dotnet-sln.md) para obter mais informações.

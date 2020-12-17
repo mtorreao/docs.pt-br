@@ -5,12 +5,12 @@ ms.date: 09/24/2020
 ms.topic: conceptual
 no-loc:
 - EditorConfig
-ms.openlocfilehash: cf9b8f4033e6774684b2b7e3b788ef3c157d95df
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0d64df42ffb1763afed3e883c4f043755e158489
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96585635"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633982"
 ---
 # <a name="configuration-files-for-code-analysis-rules"></a>Arquivos de configuração para regras de análise de código
 
@@ -68,7 +68,7 @@ dotnet_diagnostic.CA1000.severity = warning
 
 ## <a name="global-analyzerconfig"></a>AnalyzerConfig global
 
-A partir do SDK do .NET 5,0 (que tem suporte no Visual Studio 2019 versão 16,8 e versões posteriores), você também pode configurar opções do analisador com arquivos _AnalyzerConfig_ globais. Esses arquivos são usados para fornecer **opções que se aplicam a todos os arquivos de origem em um projeto**, independentemente de seus nomes de arquivo ou caminhos de arquivo.
+A partir do SDK do .NET 5 (que tem suporte no Visual Studio 2019 versão 16,8 e versões posteriores), você também pode configurar opções do analisador com arquivos _AnalyzerConfig_ globais. Esses arquivos são usados para fornecer **opções que se aplicam a todos os arquivos de origem em um projeto**, independentemente de seus nomes de arquivo ou caminhos de arquivo.
 
 Ao contrário dos [EditorConfig](#editorconfig) arquivos, os arquivos de configuração global não podem ser usados para definir as configurações de estilo do editor para ides, como recuar tamanho ou se deseja aparar o espaço em branco à direita. Em vez disso, eles são projetados puramente para especificar opções de configuração do analisador de nível de projeto.
 

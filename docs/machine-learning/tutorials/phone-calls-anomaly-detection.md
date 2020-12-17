@@ -4,12 +4,12 @@ description: Saiba como criar um aplicativo de detecção de anomalias para dado
 ms.date: 12/04/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 69b617e760c1dd6a579c925168c92630756f92fc
-ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
+ms.openlocfilehash: 3451a44f8fa7ae85625687b7d52f120c411df1b6
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97596454"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97634047"
 ---
 # <a name="tutorial-detect-anomalies-in-time-series-with-mlnet"></a>Tutorial: detectar anomalias na série temporal com ML.NET
 
@@ -22,7 +22,7 @@ Neste tutorial, você aprenderá como:
 > * Detectar período para uma série temporal
 > * Detectar anomalias para uma série de tempo periódico
 
-Você pode encontrar o código-fonte para este tutorial no repositório [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/ProductSalesAnomalyDetection).
+Você pode encontrar o código-fonte para este tutorial no repositório [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/PhoneCallsAnomalyDetection).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -66,7 +66,7 @@ A tabela a seguir é uma visualização de dados do seu arquivo \*.csv:
 | 2018/10/3  | 34,49893429  |
 | ...    | ....   |
 
-Esse arquivo representa uma série temporal. Cada linha no arquivo é um ponto de dados. Cada piont de dados tem dois atributos, `timestamp` ou seja, e `value` , para reprensent o número de chamadas telefônicas a cada dia. O número de chamadas telefônicas é transformado em diferenciação.
+Esse arquivo representa uma série temporal. Cada linha no arquivo é um ponto de dados. Cada ponto de dados tem dois atributos, `timestamp` ou seja, e `value` , para representar o número de chamadas telefônicas a cada dia. O número de chamadas telefônicas é transformado em diferenciação.
 
 ### <a name="create-classes-and-define-paths"></a>Criar classes e definir demarcadores
 
@@ -92,7 +92,7 @@ Adicione uma nova classe ao seu projeto:
 
     `PhoneCallsData` especifica uma classe de dados de entrada. O atributo [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) especifica quais colunas (por índice de coluna) no conjunto de dados devem ser carregadas. Ele tem dois atributos `timestamp` e `value` correspondem aos mesmos atributos no arquivo de dados.
 
-    `PhoneCallsPrediction` especifica a classe de dados de previsão. Para o detector SR-CNN, a previsão depende do [modo de detecção](xref:Microsoft.ML.TimeSeries.SrCnnDetectMode) especificado. Neste exemplo, selecionamos o `AnomalyAndMargin` modo. A saída contém sete colunas. Na maioria dos casos,, `IsAnomaly` `ExpectedValue` `UpperBoundary` e `LowerBoundary` são informais o suficiente. Eles informam se um ponto é uma anomalia, o valor esperado do ponto e a região de limite inferior/superior do ponto.
+    `PhoneCallsPrediction` especifica a classe de dados de previsão. Para o detector SR-CNN, a previsão depende do [modo de detecção](xref:Microsoft.ML.TimeSeries.SrCnnDetectMode) especificado. Neste exemplo, selecionamos o `AnomalyAndMargin` modo. A saída contém sete colunas. Na maioria dos casos,,, `IsAnomaly` `ExpectedValue` `UpperBoundary` e `LowerBoundary` são informais o suficiente. Eles informam se um ponto é uma anomalia, o valor esperado do ponto e a região de limite inferior/superior do ponto.
 
 5. Adicione o seguinte código à linha à direita acima do `Main` método para especificar o caminho para o arquivo de dados:
 
@@ -120,7 +120,7 @@ Os dados do ML.NET são representados como uma [classe IDataView](xref:Microsoft
 
 Detecção de anomalias de série temporal é o processo de detectar exceções de dados de série temporal; pontos em uma determinada série temporal de entrada em que o comportamento não é o esperado, ou "estranho". Essas anomalias normalmente são indicativas de alguns eventos de interesse no domínio problemático: um ataque cibernético em contas de usuário, queda de energia, disparo de RPS em um servidor, vazamento de memória, etc.
 
-Para localizar anomalias na série temporal, você deve primeiro determinar o período da série. Em seguida, a série temporal pode ser decomposta em vários componentes como `Y = T + S + R` , onde `Y` é a série original, `T` é o componente de tendência, `S` é a componnent sazonal e `R` é o componente residual da série. Essa etapa é chamada de [decomposição](https://en.wikipedia.org/wiki/Decomposition_of_time_series). Por fim, a detecção é executada no componente residual para localizar as anomalias. No ML.NET, o algoritmo SR-CNN é um algoritmo avançado e de romance baseado em Spectral residuais (SR) e rede neural de restauração (CNN) para detectar anomalias na série temporal (consulte o artigo [serviço de detecção de anomalias de série temporal no Microsoft](https://arxiv.org/pdf/1906.03821.pdf) para obter mais detalhes sobre esse algoritmo).
+Para localizar anomalias na série temporal, você deve primeiro determinar o período da série. Em seguida, a série temporal pode ser decomposta em vários componentes como `Y = T + S + R` , onde `Y` é a série original, `T` é o componente de tendência, `S` é o componente sazonal e `R` é o componente residual da série. Essa etapa é chamada de [decomposição](https://en.wikipedia.org/wiki/Decomposition_of_time_series). Por fim, a detecção é executada no componente residual para localizar as anomalias. No ML.NET, o algoritmo SR-CNN é um algoritmo avançado e romance baseado em Spectral residuais (SR) e rede neural (CNN) para detectar anomalias na série temporal. Para obter mais informações sobre esse algoritmo, consulte [serviço de detecção de anomalias de série temporal na Microsoft](https://arxiv.org/pdf/1906.03821.pdf).
 
 Neste tutorial, você verá que esses procedimentos podem ser concluídos usando duas funções.
 
@@ -139,7 +139,7 @@ Na primeira etapa, invocamos a `DetectSeasonality` função para determinar o pe
     }
     ```
 
-2. Use a função [DetectSeasonality](xref:Microsoft.ML.TimeSeriesCatalog.DetectSeasonality) para detectar o período. Adicione-o ao método `DetectPeriod` com o seguinte código:
+2. Use a <xref:Microsoft.ML.TimeSeriesCatalog.DetectSeasonality%2A> função para detectar o período. Adicione-o ao método `DetectPeriod` com o seguinte código:
 
     [!code-csharp[DetectSeasonality](./snippets/phone-calls-anomaly-detection/csharp/Program.cs#DetectSeasonality)]
 
@@ -161,7 +161,7 @@ Period of the series is: 7.
 
 ## <a name="detect-anomaly"></a>Detectar anomalias
 
-Nesta etapa, você usa o [`SrCnnEntireDetector`](xref:Microsoft.ML.Transforms.TimeSeries.SrCnnEntireAnomalyDetector) para localizar anomalias.
+Nesta etapa, você usa o <xref:Microsoft.ML.TimeSeriesCatalog.DetectEntireAnomalyBySrCnn%2A> método para localizar anomalias.
 
 ### <a name="create-the-detectanomaly-method"></a>Criar o método DetectAnomaly
 
@@ -174,7 +174,7 @@ Nesta etapa, você usa o [`SrCnnEntireDetector`](xref:Microsoft.ML.Transforms.Ti
     }
     ```
 
-2. Configure o [SrCnnEntireAnomalyDetectorOptions](xref:Microsoft.ML.Transforms.TimeSeries.SrCnnEntireAnomalyDetectorOptions) no `DetectAnomaly` método com o seguinte código:
+2. Configure <xref:Microsoft.ML.TimeSeries.SrCnnEntireAnomalyDetectorOptions> no `DetectAnomaly` método com o seguinte código:
 
     [!code-csharp[SetupSrCnnParameters](./snippets/phone-calls-anomaly-detection/csharp/Program.cs#SetupSrCnnParameters)]
 
@@ -193,7 +193,7 @@ Nesta etapa, você usa o [`SrCnnEntireDetector`](xref:Microsoft.ML.Transforms.Ti
     Você exibirá as informações a seguir nos resultados da detecção de ponto de alteração:
 
     * `Index` é o índice de cada ponto.
-    * `Anomaly` é o indicador de wheather que cada ponto é detectado como anomalia.
+    * `Anomaly` é o indicador de se cada ponto é detectado como anomalia.
     * `ExpectedValue` é o valor estimado de cada ponto.
     * `LowerBoundary` é o menor valor que cada ponto pode ser não ser anormal.
     * `UpperBoundary` é o maior valor que cada ponto pode ser não ser anormal.
@@ -243,7 +243,7 @@ Index   Data    Anomaly AnomalyScore    Mag     ExpectedValue   BoundaryUnit    
 25,0,29.381125690882463,33.681408258162854,25.080843123602072
 26,0,5.261543539820418,9.561826107100808,0.9612609725400283
 27,0,5.4873712582971805,9.787653825577571,1.1870886910167897
-28,1,36.504694001629254,40.804976568909645,32.20441143434886  <-- alert is on, detecte anomaly
+28,1,36.504694001629254,40.804976568909645,32.20441143434886  <-- alert is on, detected anomaly
 ...
 ```
 

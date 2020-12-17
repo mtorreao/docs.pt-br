@@ -2,13 +2,13 @@
 title: 'Tutorial: criar uma ferramenta .NET'
 description: Saiba como criar uma ferramenta .NET. Uma ferramenta é um aplicativo de console que é instalado usando a CLI do .NET.
 ms.topic: tutorial
-ms.date: 02/12/2020
-ms.openlocfilehash: 8f2dd15982aff9fe2d9db9ce2cff8ac1b22e440e
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.date: 12/14/2020
+ms.openlocfilehash: dc5cf014336848ff1a3035647a386419653a083b
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97512626"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633891"
 ---
 # <a name="tutorial-create-a-net-tool-using-the-net-cli"></a>Tutorial: criar uma ferramenta .NET usando a CLI do .NET
 
@@ -22,10 +22,10 @@ Este é o primeiro de uma série de três tutoriais. Neste tutorial, você criar
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- [SDK do .net 5,0](https://dotnet.microsoft.com/download) ou uma versão posterior.
+- [SDK do .NET 5.0.100](https://dotnet.microsoft.com/download) ou uma versão posterior.
 
   Este tutorial usa o SDK do .NET 5,0, mas as ferramentas globais estão disponíveis a partir do SDK do .NET Core 2,1. As ferramentas locais estão disponíveis a partir do SDK do .NET Core 3,0.
-  
+
 - Um editor de texto ou editor de código de sua escolha.
 
 ## <a name="create-a-project"></a>Criar um projeto
@@ -35,10 +35,22 @@ Este é o primeiro de uma série de três tutoriais. Neste tutorial, você criar
 1. Navegue até a pasta *repositório* e insira o seguinte comando:
 
    ```dotnetcli
-   dotnet new console -n microsoft.botsay
+   dotnet new console -n microsoft.botsay -f net5.0
    ```
 
    O comando cria uma nova pasta chamada *Microsoft. botsay* na pasta *Repository* .
+
+   > [!NOTE]
+   > Para este tutorial, você cria uma ferramenta que tem como alvo o .NET 5,0. Para direcionar uma estrutura diferente, altere a `-f|--framework` opção. Para direcionar várias estruturas, altere o `TargetFramework` elemento para um `TargetFrameworks` elemento no arquivo de projeto, conforme mostrado no exemplo a seguir:
+   >
+   > ```xml
+   > <Project Sdk="Microsoft.NET.Sdk">
+   >   <PropertyGroup>
+   >     <OutputType>Exe</OutputType>
+   >     <TargetFrameworks>netcoreapp3.1;net5.0</TargetFrameworks>
+   >   </PropertyGroup>
+   > </Project>
+   > ```
 
 1. Navegue até a pasta *Microsoft. botsay* .
 
@@ -130,7 +142,7 @@ Este é o primeiro de uma série de três tutoriais. Neste tutorial, você criar
    }
    ```
 
-1. Salve suas alterações.
+1. Salve as alterações.
 
 ## <a name="test-the-application"></a>Testar o aplicativo
 
@@ -164,16 +176,16 @@ Antes de poder empacotar e distribuir o aplicativo como uma ferramenta, você pr
 
    ```xml
    <Project Sdk="Microsoft.NET.Sdk">
-  
+
      <PropertyGroup>
 
        <OutputType>Exe</OutputType>
        <TargetFramework>net5.0</TargetFramework>
-  
+
        <PackAsTool>true</PackAsTool>
        <ToolCommandName>botsay</ToolCommandName>
        <PackageOutputPath>./nupkg</PackageOutputPath>
-  
+
      </PropertyGroup>
 
    </Project>
@@ -186,7 +198,7 @@ Antes de poder empacotar e distribuir o aplicativo como uma ferramenta, você pr
    ```
 
    O arquivo *Microsoft. botsay. 1.0.0. nupkg* é criado na pasta identificada pelo `<PackageOutputPath>` valor do arquivo *Microsoft. botsay. csproj* , que neste exemplo é a pasta *./nupkg* .
-  
+
    Quando você quiser liberar uma ferramenta publicamente, poderá carregá-la no `https://www.nuget.org` . Depois que a ferramenta estiver disponível no NuGet, os desenvolvedores poderão instalar a ferramenta usando o comando [dotnet ferramenta de instalação](dotnet-tool-install.md) . Para este tutorial, você instala o pacote diretamente da pasta *nupkg* local, portanto, não é necessário carregar o pacote no NuGet.
 
 ## <a name="troubleshoot"></a>Solucionar problemas

@@ -1,31 +1,33 @@
 ---
-title: 'Alteração significativa: a desserialização requer uma cadeia de caracteres de caractere único'
-description: Saiba mais sobre a alteração significativa no .NET 5,0 em que JsonSerializer. Desserialize requer uma cadeia de caracteres de caractere único.
-ms.date: 10/18/2020
-ms.openlocfilehash: 780f2928d776ecb6db9a7fc05a720e889eb363e7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+title: 'Alteração significativa: o caractere de desserialização requer uma cadeia de caracteres de caractere único'
+description: Saiba mais sobre a alteração significativa no .NET 5,0, em que System.Text.Jsrequer uma cadeia de caracteres de caractere único no JSON ao desserializar para um destino Char.
+ms.date: 12/15/2020
+ms.openlocfilehash: 39a2d25b00bf8855cfbf46a4d78b8545052703e5
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760511"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633865"
 ---
-# <a name="jsonserializerdeserialize-requires-single-character-string"></a>JsonSerializer. Desserialize requer cadeia de caracteres de caractere único
+# <a name="systemtextjson-requires-single-char-string-to-deserialize-a-char"></a>System.Text.Json requer uma cadeia de caracteres de caractere único para desserializar um Char
 
-Quando o parâmetro de tipo é <xref:System.Char> , o argumento de cadeia de caracteres <xref:System.Text.Json.JsonSerializer.Deserialize%60%601(System.String,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType> deve conter um único caractere para que a desserialização tenha sucesso.
+Para desserializar com êxito um <xref:System.Char> using <xref:System.Text.Json> , a cadeia de caracteres JSON deve conter um único caractere.
 
 ## <a name="change-description"></a>Descrição das alterações
 
-Nas versões anteriores do .NET, se você passar uma cadeia de caracteres com vários caracteres para <xref:System.Text.Json.JsonSerializer.Deserialize%60%601(System.String,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType> e o parâmetro de tipo for <xref:System.Char> , a desserialização terá êxito e apenas o primeiro caractere será desserializado.
-
-No .NET 5,0 e posterior, quando o parâmetro de tipo é <xref:System.Char> , a passagem de algo diferente de uma cadeia de caracteres de caractere único faz com que um seja <xref:System.Text.Json.JsonException> gerado.
+Nas versões anteriores do .NET, uma `char` cadeia de caracteres múltipla no JSON é desserializada com êxito para uma `char` propriedade ou campo. Somente a primeira `char` da cadeia de caracteres é usada, como no exemplo a seguir:
 
 ```csharp
-// .NET Core 3.0 and 3.1: Returns the first character 'a'.
-// .NET 5.0 and later: Throws JsonException because payload has more than one character.
-JsonSerializer.Deserialize<char>("\"abc\"");
+// .NET Core 3.0 and 3.1: Returns the first char 'a'.
+// .NET 5.0 and later: Throws JsonException because payload has more than one char.
+char deserializedChar = JsonSerializer.Deserialize<char>("\"abc\"");
+```
 
+No .NET 5,0 e posterior, qualquer coisa que não seja uma `char` cadeia de caracteres única faz com que a <xref:System.Text.Json.JsonException> seja gerada quando o destino de desserialização for um `char` . A cadeia de caracteres de exemplo a seguir é desserializada com êxito em todas as versões do .NET:
+
+```csharp
 // Correct usage.
-JsonSerializer.Deserialize<char>("\"a\"");
+char deserializedChar = JsonSerializer.Deserialize<char>("\"a\"");
 ```
 
 ## <a name="version-introduced"></a>Versão introduzida
@@ -34,21 +36,21 @@ JsonSerializer.Deserialize<char>("\"a\"");
 
 ## <a name="reason-for-change"></a>Motivo da alteração
 
-<xref:System.Text.Json.JsonSerializer.Deserialize%60%601(System.String,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType> analisa o texto que representa um único valor JSON em uma instância do tipo especificado pelo parâmetro de tipo genérico. A análise só terá sucesso quando a carga fornecida for válida para o parâmetro de tipo genérico especificado. Para um <xref:System.Char> tipo de valor, uma carga válida é uma cadeia de caracteres única.
+A análise para desserialização deve ter sucesso apenas quando a carga fornecida é válida para o tipo de destino. Para um `char` tipo, a única carga válida é uma cadeia de `char` caracteres única.
 
 ## <a name="recommended-action"></a>Ação recomendada
 
-Ao analisar uma cadeia de caracteres em um <xref:System.Char> tipo usando <xref:System.Text.Json.JsonSerializer.Deserialize%60%601(System.String,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType> , verifique se a cadeia de caracteres consiste em um único caractere.
+Quando você desserializar JSON em um `char` destino, certifique-se de que a cadeia de caracteres consiste em um único `char` .
 
 ## <a name="affected-apis"></a>APIs afetadas
 
-- <xref:System.Text.Json.JsonSerializer.Deserialize%60%601(System.String,System.Text.Json.JsonSerializerOptions)?displayProperty=fullName>
+- <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=fullName>
 
 <!--
 
 ### Affected APIs
 
-- `M:System.Text.Json.JsonSerializer.Deserialize``1(System.String,System.Text.Json.JsonSerializerOptions)`
+- `Overload:System.Text.Json.JsonSerializer.Deserialize`
 
 ### Category
 

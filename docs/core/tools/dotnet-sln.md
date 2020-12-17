@@ -2,12 +2,12 @@
 title: Comando dotnet sln
 description: O comando dotnet-sln oferece uma opção conveniente para adicionar, remover e listar projetos em um arquivo de solução.
 ms.date: 12/07/2020
-ms.openlocfilehash: 480634550f6fa1983bb46f51b439dc8a686ead3c
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: af502efe842e9c9610137738d86c05e00a3b37df
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851686"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633644"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -25,7 +25,7 @@ dotnet sln [<SOLUTION_FILE>] [command]
 dotnet sln [command] -h|--help
 ```
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>Description
 
 O `dotnet sln` comando fornece uma maneira conveniente de listar e modificar projetos em um arquivo de solução.
 
@@ -35,7 +35,7 @@ Para usar o comando `dotnet sln`, o arquivo de solução já deve existir. Se vo
 dotnet new sln
 ```
 
-## <a name="arguments"></a>Argumentos
+## <a name="arguments"></a>Arguments
 
 - **`SOLUTION_FILE`**
 
@@ -59,7 +59,7 @@ Lista todos os projetos em um arquivo de solução.
 dotnet sln list [-h|--help]
 ```
 
-#### <a name="arguments"></a>Argumentos
+#### <a name="arguments"></a>Arguments
 
 - **`SOLUTION_FILE`**
 
@@ -82,7 +82,7 @@ dotnet sln [<SOLUTION_FILE>] add [--in-root] [-s|--solution-folder <PATH>] <PROJ
 dotnet sln add [-h|--help]
 ```
 
-#### <a name="arguments"></a>Argumentos
+#### <a name="arguments"></a>Arguments
 
 - **`SOLUTION_FILE`**
 
@@ -104,7 +104,7 @@ dotnet sln add [-h|--help]
 
 - **`-s|--solution-folder <PATH>`**
 
-  O caminho da pasta da solução de destino para a qual adicionar os projetos. Disponível desde o SDK do .NET Core 3.0.
+  O caminho da [pasta da solução](/visualstudio/ide/solutions-and-projects-in-visual-studio#solution-folder) de destino para a qual adicionar os projetos. Disponível desde o SDK do .NET Core 3.0.
 
 ### `remove`
 
@@ -117,7 +117,7 @@ dotnet sln [<SOLUTION_FILE>] remove <PROJECT_PATH> [<PROJECT_PATH>...]
 dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
 ```
 
-#### <a name="arguments"></a>Argumentos
+#### <a name="arguments"></a>Arguments
 
 - **`SOLUTION_FILE`**
 

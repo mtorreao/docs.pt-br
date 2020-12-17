@@ -4,12 +4,12 @@ description: Como instalar, usar, atualizar e remover ferramentas .NET. Aborda f
 author: KathleenDollard
 ms.topic: how-to
 ms.date: 02/12/2020
-ms.openlocfilehash: 3669ed17d58542aab0435ccea22700c82ba8ea26
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 8839fd4fba72c9f973d906eabb72919306a847dd
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94556895"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633878"
 ---
 # <a name="how-to-manage-net-tools"></a>Como gerenciar ferramentas .NET
 
@@ -40,8 +40,6 @@ Aqui estão algumas maneiras de encontrar ferramentas:
 
 * Use o comando [dotnet ferramenta de pesquisa](dotnet-tool-search.md) para encontrar uma ferramenta que é publicada no NuGet.org.
 * Pesquise o site do [NuGet](https://www.nuget.org) usando o filtro de tipo de pacote "ferramenta .net". Para obter mais informações, consulte [Localizando e escolhendo pacotes](/nuget/consume-packages/finding-and-choosing-packages).
-* Consulte a lista de ferramentas no repositório GitHub [natemcmaster/dotnet-Tools](https://github.com/natemcmaster/dotnet-tools) .
-* Use [ToolGet](https://www.toolget.net/) para procurar ferramentas .net.
 * Consulte o código-fonte para as ferramentas criadas pela equipe de ASP.NET Core no [diretório de ferramentas do repositório do GitHub dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/tree/master/src/Tools).
 * Saiba mais sobre as ferramentas de diagnóstico em [ferramentas de diagnóstico do .net](../diagnostics/index.md#net-core-diagnostic-global-tools).
 
@@ -68,7 +66,7 @@ Tool 'dotnetsay' (version '2.1.4') was successfully installed.
 
 O local padrão para os binários de uma ferramenta depende do sistema operacional:
 
-| SO          | Caminho                          |
+| Sistema operacional          | Caminho                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
@@ -276,7 +274,7 @@ dotnet <command> --help
 
 Se uma ferramenta não for instalada ou executada, consulte [solucionar problemas de uso da ferramenta .net](troubleshoot-usage-issues.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Tutorial: criar uma ferramenta .NET usando a CLI do .NET](global-tools-how-to-create.md)
 - [Tutorial: instalar e usar uma ferramenta global do .NET usando a CLI do .NET](global-tools-how-to-use.md)
