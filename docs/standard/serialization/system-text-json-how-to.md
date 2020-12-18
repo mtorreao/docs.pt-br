@@ -1,7 +1,7 @@
 ---
 title: Como serializar e desserializar JSON usando C#-.NET
 description: Saiba como usar o System.Text.Json namespace para serializar e desserializar do JSON no .net. Inclui o código de exemplo.
-ms.date: 12/02/2020
+ms.date: 12/16/2020
 ms.custom: contperf-fy21q2
 no-loc:
 - System.Text.Json
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 46203aa1b4daa4281c7c26191f7df947967fa1c0
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: b69dfd6238f529c3b315d63a93a82da0f316f459
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97513257"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678248"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>Como serializar e desserializar (empacotar e desempacotar) JSON no .NET
 
@@ -188,6 +188,15 @@ Para desserializar de um arquivo usando código síncrono, leia o arquivo em uma
 Para desserializar de um arquivo usando código assíncrono, chame o <xref:System.Text.Json.JsonSerializer.DeserializeAsync%2A> método:
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripToFileAsync.cs" id="Deserialize":::
+
+> [!TIP]
+> Se você tiver o JSON que deseja desserializar e não tiver a classe para desserializá-lo, o Visual Studio 2019 poderá gerar automaticamente a classe de que você precisa:
+>
+> 1. Copie o JSON que você precisa para desserializar.
+> 1. Crie um arquivo de classe e exclua o código do modelo.
+> 1. Escolha **Editar**  >  **colar**  >  **JSON especial como classes**.
+>
+> O resultado é uma classe que você pode usar para o destino de desserialização.
 
 ## <a name="deserialize-from-utf-8"></a>Desserializar de UTF-8
 

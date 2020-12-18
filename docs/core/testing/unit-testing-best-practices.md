@@ -4,12 +4,12 @@ description: Conheça as melhores práticas para escrever testes de unidade que 
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 6c1e9a665ad541bf6109634a6df857880ee47042
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 56f51cde0e52a9e6a38e5291c81470beee61adef
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281643"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678116"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Melhores práticas de teste de unidade com .NET Core e .NET Standard
 
@@ -48,7 +48,7 @@ Escrever testes para seu código o desacoplará naturalmente, porque seria mais 
 ## <a name="characteristics-of-a-good-unit-test"></a>Características de um bom teste de unidade
 
 - **Rápido**. Não é incomum para projetos maduros ter milhares de testes de unidade. Os testes de unidade devem levar muito pouco tempo para serem executados. Milissegundos.
-- **Isolado**. Testes de unidade são autônomos, podem ser executados em isolamento e não têm dependências em nenhum fator externo, como um sistema de arquivos ou o banco de dados.
+- **Isolados**. Testes de unidade são autônomos, podem ser executados em isolamento e não têm dependências em nenhum fator externo, como um sistema de arquivos ou o banco de dados.
 - **Repetível**. A execução de um teste de unidade deve ser consistente com seus resultados, ou seja, ele sempre retornará o mesmo resultado se você não alterar nada entre execuções.
 - **Verificação automática**. O teste deve ser capaz de detectar automaticamente se ele foi aprovado ou reprovado sem nenhuma interação humana.
 - **Em tempo hábil**. Um teste de unidade não deve levar um tempo desproporcionalmente longo para ser escrito comparado com o código que está sendo testado. Se você achar que o teste do código está levando uma grande quantidade de tempo comparado com a escrita do código, considere um design mais testável.
@@ -67,7 +67,7 @@ A *simulação* de termos, infelizmente, geralmente é usada para falar sobre os
 
 *Simulação* -um objeto fictício é um objeto falso no sistema que decide se um teste de unidade foi aprovado ou não. Uma simulação começa como falsa até ser declarada.
 
-*Stub* – Um stub é uma substituição controlável para uma dependência existente (ou colaborador) no sistema. Ao usar um stub, é possível testar seu código sem lidar diretamente com a dependência. Por padrão, uma falsificação começa como um stub.
+*Stub* – Um stub é uma substituição controlável para uma dependência existente (ou colaborador) no sistema. Ao usar um stub, é possível testar seu código sem lidar diretamente com a dependência. Por padrão, um stub começa como falso.
 
 Considere o seguinte snippet de código:
 
@@ -188,7 +188,7 @@ Nomear variáveis em testes de unidade é tão importante, se não mais importan
 #### <a name="why"></a>Por quê?
 
 - Evita a necessidade de o leitor do teste inspecionar o código de produção a fim de descobrir o que torna o valor especial.
-- Mostra explicitamente o que você está tentando *provar* , em vez de o que você está tentando *realizar*.
+- Mostra explicitamente o que você está tentando *provar*, em vez de o que você está tentando *realizar*.
 
 Cadeias de caracteres mágicas podem gerar confusão no leitor dos seus testes. Se uma cadeia de caracteres parecer estar fora do comum, eles poderão ser perguntar por que um determinado valor foi escolhido para um parâmetro ou valor retornado. Talvez isso os leve a examinar mais detalhadamente os detalhes da implementação, em vez de se concentrar no teste.
 

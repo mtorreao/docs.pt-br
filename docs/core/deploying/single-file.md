@@ -3,13 +3,13 @@ title: Aplicativo de arquivo único
 description: Saiba o que é um aplicativo de arquivo único e por que você deve considerar o uso desse modelo de implantação de aplicativo.
 author: lakshanf
 ms.author: lakshanf
-ms.date: 08/28/2020
-ms.openlocfilehash: 16e9586cfc29072fa2ca70dc482272a5a0e7306a
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.date: 12/17/2020
+ms.openlocfilehash: e2d2c9ed4c28d11a77e4f840602982a36cf1c80c
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050410"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678152"
 ---
 # <a name="single-file-deployment-and-executable"></a>Implantação de arquivo único e executável
 
@@ -96,6 +96,39 @@ Por exemplo, adicione a seguinte propriedade ao arquivo de projeto de um assembl
 </PropertyGroup>
 ```
 
+## <a name="publish-a-single-file-app---sample-project-file"></a>Publicar um aplicativo de arquivo único-arquivo de projeto de exemplo
+
+Aqui está um arquivo de projeto de exemplo que especifica a publicação de arquivo único:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <PublishTrimmed>true</PublishTrimmed>
+    <PublishReadyToRun>true</PublishReadyToRun>
+  </PropertyGroup>
+
+</Project>
+```
+
+Essas propriedades têm as seguintes funções:
+
+* `PublishSingleFile` – Habilita a publicação de arquivo único.
+* `SelfContained` -Determina se o aplicativo será independente ou dependente de estrutura.
+* `RuntimeIdentifier` -Especifica o [sistema operacional e o tipo de CPU](../rid-catalog.md) que você está direcionando.
+* `PublishTrimmed` – Habilita o uso de [corte de assembly](trim-self-contained.md), que tem suporte apenas para aplicativos independentes.
+* `PublishReadyToRun` – Habilita [a compilação da AoT (antecipada de tempo)](ready-to-run.md).
+
+**Observações:**
+
+* OS aplicativos são específicos do sistema operacional e da arquitetura. Você precisa publicar para cada configuração, como Linux x64, Linux ARM64, Windows x64 e assim por diante.
+* Arquivos de configuração, como *\*.runtimeconfig.jsno*, são incluídos no único arquivo. Se um arquivo de configuração adicional for necessário, você poderá colocá-lo ao lado do único arquivo.
+
 ## <a name="publish-a-single-file-app---cli"></a>Publicar um aplicativo de arquivo único-CLI
 
 Publicar um aplicativo de arquivo único usando o comando [dotnet Publish](../tools/dotnet-publish.md) . Ao publicar seu aplicativo, defina as seguintes propriedades:
@@ -129,7 +162,7 @@ O Visual Studio cria perfis de publicação reutilizáveis que controlam como se
 
 01. Escolha **Editar**.
 
-    :::image type="content" source="media/single-file/visual-studio-publish-edit-settings.png" alt-text="Gerenciador de Soluções com um menu de clique com o botão direito do mouse, realçando a opção publicar.":::
+    :::image type="content" source="media/single-file/visual-studio-publish-edit-settings.png" alt-text="Perfil de publicação do Visual Studio com o botão Editar.":::
 
 01. Na caixa de diálogo **configurações de perfil** , defina as seguintes opções:
 
@@ -139,7 +172,7 @@ O Visual Studio cria perfis de publicação reutilizáveis que controlam como se
 
     Escolha **salvar** para salvar as configurações e retornar para a caixa de diálogo de **publicação** .
 
-    :::image type="content" source="media/single-file/visual-studio-publish-single-file-properties.png" alt-text="Gerenciador de Soluções com um menu de clique com o botão direito do mouse, realçando a opção publicar.":::
+    :::image type="content" source="media/single-file/visual-studio-publish-single-file-properties.png" alt-text="Caixa de diálogo Configurações de perfil com modo de implantação, tempo de execução de destino e opções de arquivo único realçadas.":::
 
 01. Escolha **publicar** para publicar seu aplicativo como um único arquivo.
 
@@ -149,7 +182,7 @@ Para obter mais informações, consulte [publicar aplicativos .NET Core com o Vi
 
 Visual Studio para Mac não fornece opções para publicar seu aplicativo como um único arquivo. Você precisará publicar manualmente seguindo as instruções da seção [publicar um único arquivo app-CLI](#publish-a-single-file-app---cli) . Para obter mais informações, consulte [publicar aplicativos .NET Core com CLI do .NET Core](deploy-with-cli.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Implantação de aplicativo .NET Core](index.md).
 - [Publicar aplicativos .NET Core com CLI do .NET Core](deploy-with-cli.md).

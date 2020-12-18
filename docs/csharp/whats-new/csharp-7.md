@@ -3,12 +3,12 @@ title: Novidades no C# 7.0 – Guia do C#
 description: Obtenha uma visão geral dos novos recursos na versão 7.0 da linguagem C#.
 ms.date: 10/02/2020
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 84f5961d573b99438320a75d7f89bc7fd94f6266
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: c238439b0f435e579d932b3b1eb13e9b0061fa5f
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955207"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678229"
 ---
 # <a name="whats-new-in-c-70-through-c-73"></a>O que há de novo no C# 7,0 até C# 7,3
 
@@ -21,7 +21,7 @@ O c# 7.0-7.3 adiciona esses recursos e temas à linguagem C#:
 - [Tuplas e Descartes](#tuples-and-discards)
   - Você pode criar tipos simples e sem nome que contêm vários campos públicos. Compiladores e ferramentas IDE entendem a semântica desses tipos.
   - Descartes são variáveis temporárias de somente gravação usadas em atribuições quando o valor atribuído não tem importância. Eles são mais úteis ao desconstruir tuplas e tipos definidos pelo usuário, bem como ao chamar métodos com parâmetros `out`.
-- [Correspondência padrão](#pattern-matching)
+- [Correspondência de padrões](#pattern-matching)
   - Você pode criar a lógica de ramificação com base em tipos e valores arbitrários dos membros desses tipos.
 - [`async``Main`método](#async-main)
   - O ponto de entrada para um aplicativo pode ter o modificador `async`.
@@ -235,7 +235,7 @@ O atributo `SomeThingAboutFieldAttribute` é aplicado ao campo de suporte gerado
 
 ## <a name="more-expression-bodied-members"></a>Mais membros aptos para expressão
 
-O C# 6 introduziu [membros aptos para expressão](csharp-6.md#expression-bodied-function-members) para funções de membro e propriedades somente leitura. O C# 7.0 expande os membros permitidos que podem ser implementados como expressões. No C# 7.0, você pode implementar *construtores*, *finalizadores* e acessadores `get` e `set` em *propriedades* e *indexadores*. O código a seguir mostra exemplos de cada um:
+O C# 6 introduziu Membros Expression-apto para para funções membro e propriedades somente leitura. O C# 7.0 expande os membros permitidos que podem ser implementados como expressões. No C# 7.0, você pode implementar *construtores*, *finalizadores* e acessadores `get` e `set` em *propriedades* e *indexadores*. O código a seguir mostra exemplos de cada um:
 
 [!code-csharp[ExpressionBodiedMembers](~/samples/snippets/csharp/new-in-7/expressionmembers.cs#ExpressionBodiedEverything "new expression-bodied members")]
 

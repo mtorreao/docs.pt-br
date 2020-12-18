@@ -3,12 +3,12 @@ title: Visão geral das ferramentas de diagnóstico – .NET Core
 description: Uma visão geral das ferramentas e das técnicas disponíveis para diagnosticar aplicativos .NET Core.
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: c43e661ad8c9f665151e0240bf6b54e61b9acfef
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 0aa404497cb7d6a488fb51e1df8f7f45d4f213fd
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031911"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678096"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>Quais ferramentas de diagnóstico estão disponíveis no .NET Core?
 
@@ -24,6 +24,10 @@ Os [depuradores gerenciados](managed-debuggers.md) permitem que você interaja c
 
 O [registro em log e o rastreamento](logging-tracing.md) são técnicas relacionadas. Eles se referem ao código de instrumentação para criar arquivos de log. Os arquivos registram os detalhes do que um programa faz. Esses detalhes podem ser usados para diagnosticar os problemas mais complexos. Quando aliados aos carimbos de data/hora, essas técnicas também são valiosas para as investigações de desempenho.
 
+## <a name="metrics"></a>Métricas
+
+O [EventCounters](event-counters.md) permite que você grave métricas para identificar e monitorar problemas de desempenho. As métricas incorrem em uma sobrecarga de desempenho inferior em comparação com o rastreamento, tornando-a mais adequada para um monitoramento de desempenho Always on. O tempo de execução e as bibliotecas do .NET publicam vários [EventCounters bem conhecidos](available-counters.md) que você também pode monitorar.
+
 ## <a name="unit-testing"></a>Teste de unidade
 
 O [teste de unidade](../testing/index.md) é um componente fundamental da integração e da implantação contínuas de software de alta qualidade. Os testes de unidade são projetados para fornecer um aviso antecipado quando você interrompe algo.
@@ -35,10 +39,6 @@ Um [despejo](./dumps.md) é um arquivo que contém um instantâneo do processo n
 ## <a name="collect-diagnostics-in-containers"></a>Coletar diagnósticos em contêineres
 
 As mesmas ferramentas de diagnóstico usadas em ambientes Linux não-contêineres também podem ser usadas para [coletar diagnósticos em contêineres](diagnostics-in-containers.md). Há apenas algumas alterações de uso necessárias para garantir que as ferramentas funcionem em um contêiner do Docker.
-
-## <a name="debug-linux-dumps"></a>Depurar despejos do Linux
-
-[Depurar despejos do Linux](debug-linux-dumps.md) explica como coletar e analisar despejos no Linux.
 
 ## <a name="net-core-diagnostic-global-tools"></a>Ferramentas globais de diagnóstico do .NET Core
 
@@ -83,6 +83,10 @@ O .NET Core inclui o que é chamado de `EventPipe` por meio do qual os dados de 
 ### <a name="debug-deadlock"></a>Depurar deadlock
 
 [Tutorial: debug deadlock](debug-deadlock.md) mostra como usar a ferramenta [dotnet-dump](dotnet-dump.md) para investigar threads e bloqueios.
+
+### <a name="debug-linux-dumps"></a>Depurar despejos do Linux
+
+[Depurar despejos do Linux](debug-linux-dumps.md) explica como coletar e analisar despejos no Linux.
 
 ### <a name="measure-performance-using-eventcounters"></a>Medir o desempenho usando o EventCounters
 
