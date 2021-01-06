@@ -2,12 +2,12 @@
 title: Registros
 description: 'Saiba como os registros F # representam agregações simples de valores nomeados, opcionalmente com membros.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 03de96b9c53bc21e7a7723a15d2a8451d100ba76
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2da31da0ec830d458a370e64ca105048181f5d74
+ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95682023"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97899633"
 ---
 # <a name="records"></a>Registros
 
@@ -163,7 +163,7 @@ let weirdString = p.WeirdToString()
 
 ## <a name="differences-between-records-and-classes"></a>Diferenças entre registros e classes
 
-Os campos de registro diferem das classes no que são expostos automaticamente como propriedades e são usados na criação e cópia de registros. A construção do registro também difere da construção da classe. Em um tipo de registro, você não pode definir um construtor. Em vez disso, a sintaxe de construção descrita neste tópico se aplica. Classes não têm relação direta entre parâmetros de construtor, campos e propriedades.
+Os campos de registro diferem dos campos de classe nos quais são expostos automaticamente como propriedades e são usados na criação e cópia de registros. A construção do registro também difere da construção da classe. Em um tipo de registro, você não pode definir um construtor. Em vez disso, a sintaxe de construção descrita neste tópico se aplica. Classes não têm relação direta entre parâmetros de construtor, campos e propriedades.
 
 Como tipos de União e estrutura, os registros têm semântica de igualdade estrutural. As classes têm semântica de igualdade de referência. O código de exemplo a seguir demonstra isso.
 
@@ -185,4 +185,4 @@ Se você precisar de igualdade de referência para registros, adicione o atribut
 - [Classes](classes.md)
 - [Referência de linguagem F #](index.md)
 - [Referência-igualdade](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-referenceequalityattribute.html)
-- [Correspondência padrão](pattern-matching.md)
+- [Correspondência de padrões](pattern-matching.md)

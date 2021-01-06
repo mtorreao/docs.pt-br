@@ -2,12 +2,12 @@
 title: Depurar despejos do Linux
 description: Neste artigo, você aprenderá a coletar e analisar despejos de ambientes Linux.
 ms.date: 08/27/2020
-ms.openlocfilehash: 94f923f2ec7b5fa20c2ebc9b83540094348dff03
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: e6f2eea3af718853ad7365a5209b397a66035dde
+ms.sourcegitcommit: 35ca2255c6c86968eaef9e3a251c9739ce8e4288
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95099140"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753595"
 ---
 # <a name="debug-linux-dumps"></a>Depurar despejos do Linux
 
@@ -15,7 +15,10 @@ ms.locfileid: "95099140"
 
 ## <a name="collect-dumps-on-linux"></a>Coletar despejos no Linux
 
-As duas maneiras recomendadas de coletar despejos no Linux são [`dotnet-dump`](dotnet-dump.md) as [`createdump`](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md) ferramentas ou.
+As duas maneiras recomendadas de coletar despejos no Linux são:
+
+* [`dotnet-dump`](dotnet-dump.md) Ferramenta CLI
+* [Variáveis de ambiente](dumps.md#collecting-dumps-on-crash) que coletam despejos em falhas
 
 ### <a name="managed-dumps-with-dotnet-dump"></a>Despejos gerenciados com `dotnet-dump`
 
@@ -81,7 +84,7 @@ Na linha de comando acima, `<dump-file>` é o caminho do despejo a ser analisado
 
 Depois que o LLDB é iniciado, pode ser necessário usar o `setsymbolserver` comando para apontar para o local correto do símbolo ( `setsymbolserver -ms` para usar o servidor de símbolos da Microsoft ou `setsymbolserver -directory <path>` para especificar um caminho local). Os símbolos nativos podem ser carregados executando `loadsymbols` . Neste ponto, os [comandos do SOS](https://github.com/dotnet/diagnostics/blob/master/documentation/sos-debugging-extension.md) podem ser usados para analisar o despejo.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [dotnet-SOS](dotnet-sos.md) para obter mais detalhes sobre como instalar a extensão SOS.
 - [dotnet-símbolo](dotnet-symbol.md) para obter mais detalhes sobre como instalar e usar a ferramenta de download de símbolos.

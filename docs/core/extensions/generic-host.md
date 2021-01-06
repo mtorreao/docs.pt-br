@@ -3,13 +3,13 @@ title: Host Genérico .NET
 author: IEvangelist
 description: Saiba mais sobre o host genérico do .NET, que é responsável pela inicialização do aplicativo e pelo gerenciamento do tempo de vida.
 ms.author: dapine
-ms.date: 12/04/2020
-ms.openlocfilehash: ddb71b70d15121b7f59899fba38b2bf861219878
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.date: 12/18/2020
+ms.openlocfilehash: bf6d5ad624bbed46994633abace0af64712757f3
+ms.sourcegitcommit: 3d6d6595a03915f617349781f455f838a44b0f44
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96740093"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97700730"
 ---
 # <a name="net-generic-host"></a>Host Genérico .NET
 
@@ -18,7 +18,7 @@ Os modelos de serviço de trabalho criam um host genérico .NET, <xref:Microsoft
 Um *host* é um objeto que encapsula os recursos de um aplicativo, tais como:
 
 - DI (injeção de dependência)
-- Registro em log
+- Log
 - Configuração
 - Implementações de `IHostedService`
 
@@ -120,9 +120,12 @@ Insira o <xref:Microsoft.Extensions.Hosting.IHostEnvironment> serviço em uma cl
 
 ## <a name="host-configuration"></a>Configuração do host
 
-A configuração do host é usada para as propriedades da implementação <xref:Microsoft.Extensions.Hosting.IHostEnvironment>.
+A configuração do host é usada para configurar as propriedades da implementação do [IHostEnvironment](#ihostenvironment) .
 
-A configuração do host está disponível por meio de [HostBuilderContext.Configuration](xref:Microsoft.Extensions.Hosting.HostBuilderContext.Configuration) dentro de <xref:Microsoft.Extensions.Hosting.HostBuilder.ConfigureAppConfiguration%2A>. Após `ConfigureAppConfiguration`, `HostBuilderContext.Configuration` é substituído com a configuração do aplicativo.
+A configuração do host está disponível em [HostBuilderContext.Configuração](xref:Microsoft.Extensions.Hosting.HostBuilderContext.Configuration) dentro do <xref:Microsoft.Extensions.Hosting.HostBuilder.ConfigureAppConfiguration%2A> método. Ao chamar o `ConfigureAppConfiguration` método, `HostBuilderContext` e `IConfigurationBuilder` são passados para o `configureDelegate` . O `configureDelegate` é definido como um `Action<HostBuilderContext, IConfigurationBuilder>` . O contexto do construtor de hosts expõe a `.Configuration` propriedade, que é uma instância do `IConfiguration` . Ele representa a configuração criada a partir do host, enquanto o `IConfigurationBuilder` é o objeto do construtor usado para configurar o aplicativo.
+
+> [!TIP]
+> After `ConfigureAppConfiguration` é chamado de `HostBuilderContext.Configuration` é substituído pela [configuração do aplicativo](#app-configuration).
 
 Para adicionar a configuração do host, chame <xref:Microsoft.Extensions.Hosting.HostBuilder.ConfigureHostConfiguration%2A> em `IHostBuilder`. `ConfigureHostConfiguration` pode ser chamado várias vezes com resultados aditivos. O host usa a opção que define um valor por último em uma chave determinada.
 
@@ -134,11 +137,11 @@ O exemplo a seguir cria a configuração de host:
 
 A configuração de aplicativo é criada chamando <xref:Microsoft.Extensions.Hosting.HostBuilder.ConfigureAppConfiguration%2A> em `IHostBuilder`. `ConfigureAppConfiguration` pode ser chamado várias vezes com resultados aditivos. O aplicativo usa a opção que define um valor por último em uma chave determinada.
 
-A configuração criada pelo `ConfigureAppConfiguration` está disponível em [HostBuilderContext.Configuration](xref:Microsoft.Extensions.Hosting.HostBuilderContext.Configuration%2A) para operações subsequentes e como um serviço da DI. A configuração do host também é adicionada à configuração do aplicativo.
+A configuração criada pelo `ConfigureAppConfiguration` está disponível em [HostBuilderContext.Configuração](xref:Microsoft.Extensions.Hosting.HostBuilderContext.Configuration%2A) para operações subsequentes e como um serviço de di. A configuração do host também é adicionada à configuração do aplicativo.
 
 Para obter mais informações, consulte [Configuration in .net](configuration.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Configuração no .NET](configuration.md)
 - [Host da Web do ASP.NET Core](/aspnet/core/fundamentals/host/web-host)

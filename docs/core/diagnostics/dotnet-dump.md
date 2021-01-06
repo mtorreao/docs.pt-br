@@ -2,12 +2,12 @@
 title: dotnet – ferramenta de diagnóstico de despejo-CLI do .NET
 description: Saiba como instalar e usar a ferramenta de CLI de despejo de dotnet para coletar e analisar despejos do Windows e do Linux sem nenhum depurador nativo.
 ms.date: 11/17/2020
-ms.openlocfilehash: ea9a70c4dc47b5006339e9a197712092eb66b241
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: eaffbb1f2959dba5c25a603b6f785c7480e4a8c0
+ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822198"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97765040"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>Utilitário de coleta e análise de despejo (dotNet-dump)
 
@@ -32,7 +32,7 @@ Há duas maneiras de baixar e instalar `dotnet-dump` :
 
   Baixe o executável da ferramenta que corresponde à sua plataforma:
 
-  | SO  | Plataforma |
+  | Sistema operacional  | Plataforma |
   | --- | -------- |
   | Windows | [x86](https://aka.ms/dotnet-dump/win-x86) \| [x64](https://aka.ms/dotnet-dump/win-x64) \| [ARM](https://aka.ms/dotnet-dump/win-arm) \| [ARM-x64](https://aka.ms/dotnet-dump/win-arm64) |
   | macOS   | [x64](https://aka.ms/dotnet-dump/osx-x64) |
@@ -146,34 +146,37 @@ dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 | `clrstack <arguments>`              | Fornece um rastreamento de pilha apenas do código gerenciado.                                                  |
 | `clrthreads <arguments>`            | Lista os threads gerenciados em execução.                                                            |
 | `dumpasync <arguments>`             | Exibe informações sobre máquinas de estado assíncrono no heap coletado por lixo.                |
-| `dumpassembly <arguments>`          | Exibe detalhes sobre um assembly.                                                           |
-| `dumpclass <arguments>`             | Exibe informações sobre uma estrutura de classe do EE no endereço especificado.                     |
-| `dumpdelegate <arguments>`          | Exibe informações sobre um delegado.                                                        |
-| `dumpdomain <arguments>`            | Exibe informações sobre todos os AppDomains e todos os assemblies nos domínios.                |
+| `dumpassembly <arguments>`          | Exibe detalhes sobre o assembly no endereço especificado.                                 |
+| `dumpclass <arguments>`             | Exibe informações sobre a `EEClass` estrutura no endereço especificado.                  |
+| `dumpdelegate <arguments>`          | Exibe informações sobre o delegado no endereço especificado.                             |
+| `dumpdomain <arguments>`            | Exibe informações sobre todos os AppDomains e todos os assemblies no domínio especificado.       |
 | `dumpheap <arguments>`              | Exibe informações sobre o heap coletado por lixo e estatísticas de coleção sobre objetos.       |
 | `dumpil <arguments>`                | Exibe o MSIL (Microsoft Intermediate Language) associado a um método gerenciado. |
 | `dumplog <arguments>`               | Grava o conteúdo de um log de estresse na memória no arquivo especificado.                         |
-| `dumpmd <arguments>`                | Exibe informações sobre uma estrutura MethodDesc no endereço especificado.                   |
-| `dumpmodule <arguments>`            | Exibe informações sobre uma estrutura de módulo do EE no endereço especificado.                    |
-| `dumpmt <arguments>`                | Exibe informações sobre uma tabela de métodos no endereço especificado.                           |
-| `dumpobj <arguments>`               | Exibe informações sobre um objeto no endereço especificado.                                       |
+| `dumpmd <arguments>`                | Exibe informações sobre a `MethodDesc` estrutura no endereço especificado.               |
+| `dumpmodule <arguments>`            | Exibe informações sobre o módulo no endereço especificado.                               |
+| `dumpmt <arguments>`                | Exibe informações sobre o `MethodTable` no endereço especificado.                        |
+| `dumpobj <arguments>`               | Exibe informações sobre o objeto no endereço especificado.                                      |
 | `dso|dumpstackobjects <arguments>`  | Exibe todos os objetos gerenciados encontradas dentro dos limites da pilha atual.                    |
 | `eeheap <arguments>`                | Exibe informações sobre a memória de processo consumida por estruturas de dados de tempo de execução internas.              |
 | `finalizequeue <arguments>`         | Exibe todos os objetos registrados para a finalização.                                             |
-| `gcroot <arguments>`                | Exibe informações sobre referências (ou raízes) para um objeto no endereço especificado.              |
+| `gcroot <arguments>`                | Exibe informações sobre referências (ou raízes) para o objeto no endereço especificado.             |
 | `gcwhere <arguments>`               | Exibe o local no heap de GC do argumento passado.                               |
-| `ip2md <arguments>`                 | Exibe a estrutura MethodDesc no endereço especificado no código JIT.                       |
+| `ip2md <arguments>`                 | Exibe a `MethodDesc` estrutura no endereço especificado no código JIT.                     |
 | `histclear <arguments>`             | Libera todos os recursos usados pela família de comandos `hist*`.                                |
 | `histinit <arguments>`              | Inicializa as estruturas de SOS com base no log de estresse salvo no elemento a ser depurado.                     |
 | `histobj <arguments>`               | Exibe as realocações de log de estresse da coleta de lixo relacionadas ao `<arguments>` .              |
-| `histobjfind <arguments>`           | Exibe todas as entradas de log que fazem referência a um objeto no endereço especificado.               |
+| `histobjfind <arguments>`           | Exibe todas as entradas de log que fazem referência ao objeto no endereço especificado.              |
 | `histroot <arguments>`              | Exibe informações relacionadas a ambas as promoções e realocações da raiz especificada.        |
 | `lm|modules`                        | Exibe os módulos nativos no processo.                                                   |
-| `name2ee <arguments>`               | Exibe a estrutura de MethodTable e a estrutura EEClass para o `<argument>` .                |
-| `pe|printexception <arguments>`     | Exibe qualquer objeto derivado da classe de exceção no endereço `<argument>` .             |
+| `name2ee <arguments>`               | Exibe as `MethodTable` `EEClass` estruturas e para o `<argument>` .                     |
+| `pe|printexception <arguments>`     | Exibe qualquer objeto derivado da <xref:System.Exception> classe para o `<argument>` .      |
 | `setsymbolserver <arguments>`       | Habilita o suporte ao servidor de símbolos                                                             |
 | `syncblk <arguments>`               | Exibe as informações do SyncBlock de suporte.                                                           |
 | `threads|setthread <threadid>`      | Define ou exibe a ID de thread atual para os comandos SOS.                                  |
+
+> [!NOTE]
+> Detalhes adicionais podem ser encontrados na [extensão de depuração SOS para .net](sos-debugging-extension.md).
 
 ## <a name="using-dotnet-dump"></a>Usando `dotnet-dump`
 
@@ -243,7 +246,7 @@ Em Microsoft .NET principais imagens do Docker do SDK do Linux, alguns `dotnet-d
 
 Para contornar esse problema, instale o pacote "libc6-dev".
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Blog sobre coleta e análise de despejos de memória](https://devblogs.microsoft.com/dotnet/collecting-and-analyzing-memory-dumps/)
 - [Ferramenta de análise de heap (dotNet-gcdump)](dotnet-gcdump.md)

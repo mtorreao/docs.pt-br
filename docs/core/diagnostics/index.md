@@ -3,12 +3,12 @@ title: Visão geral das ferramentas de diagnóstico – .NET Core
 description: Uma visão geral das ferramentas e das técnicas disponíveis para diagnosticar aplicativos .NET Core.
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: 0aa404497cb7d6a488fb51e1df8f7f45d4f213fd
-ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
+ms.openlocfilehash: d468ec5b9cc050cc54f6c53f8a4ea4531f8b58f5
+ms.sourcegitcommit: 35ca2255c6c86968eaef9e3a251c9739ce8e4288
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97678096"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753608"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>Quais ferramentas de diagnóstico estão disponíveis no .NET Core?
 
@@ -35,6 +35,10 @@ O [teste de unidade](../testing/index.md) é um componente fundamental da integr
 ## <a name="dumps"></a>Despejos
 
 Um [despejo](./dumps.md) é um arquivo que contém um instantâneo do processo no momento da criação. Eles podem ser úteis para examinar o estado do aplicativo para fins de depuração.
+
+## <a name="symbols"></a>Símbolos
+
+Os símbolos são um requisito fundamental para depuração e outras ferramentas de diagnóstico. O conteúdo dos arquivos de símbolo varia entre linguagens, compiladores e plataformas. Em um símbolo de nível muito alto, há um mapeamento entre o código-fonte e o binário produzido pelo compilador. Esses mapeamentos são usados para fornecer itens como informações de número de linha e nomes de suas variáveis locais em ferramentas de diagnóstico, como o [Visual Studio](/visualstudio/debugger/what-is-debugging) e o [Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging).  O link a seguir contém uma explicação detalhada dos [símbolos](/windows/win32/dxtecharts/debugging-with-symbols) para o Windows, embora muitos dos conceitos também se apliquem a outras plataformas. Os [símbolos portáteis do .net](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) têm uma extensão de arquivo "PDB" semelhante ao Windows PDB, embora não sejam compatíveis com o formato PDB do Windows.
 
 ## <a name="collect-diagnostics-in-containers"></a>Coletar diagnósticos em contêineres
 
@@ -64,7 +68,7 @@ O .NET Core inclui o que é chamado de `EventPipe` por meio do qual os dados de 
 
 ### <a name="dotnet-sos"></a>dotnet-sos
 
-[dotnet-SOS](dotnet-sos.md) é usado para instalar a [extensão de depuração SOS](../../framework/tools/sos-dll-sos-debugging-extension.md) no Linux ou MacOS (ou no Windows, se estiver usando ferramentas de depuração mais antigas).
+[dotnet-SOS](dotnet-sos.md) instala a [extensão de depuração SOS](sos-debugging-extension.md) no Linux e MacOS (e no Windows se você estiver usando o [windbg/CDB](https://docs.microsoft.com/windows-hardware/drivers/debugger/debugger-download-tools)).
 
 ### <a name="perfcollect"></a>PerfCollect
 
@@ -83,6 +87,10 @@ O .NET Core inclui o que é chamado de `EventPipe` por meio do qual os dados de 
 ### <a name="debug-deadlock"></a>Depurar deadlock
 
 [Tutorial: debug deadlock](debug-deadlock.md) mostra como usar a ferramenta [dotnet-dump](dotnet-dump.md) para investigar threads e bloqueios.
+
+### <a name="debug-a-stackoverflow"></a>Depurar um StackOverflow
+
+[Tutorial: Depurar um StackOverflow](debug-stackoverflow.md) demonstra como depurar um <xref:System.StackOverflowException> no Linux.
 
 ### <a name="debug-linux-dumps"></a>Depurar despejos do Linux
 

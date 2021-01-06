@@ -5,12 +5,12 @@ ms.date: 11/30/2020
 ms.topic: overview
 ms.author: dapine
 author: IEvangelist
-ms.openlocfilehash: d0b8533dd63dd7d24f49e11093770b52d7daea89
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 7984f235044db5dfc7533343e7d43cd7745fba33
+ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96437867"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97899450"
 ---
 # <a name="whats-new-in-net-5"></a>Novidades do .NET 5
 
@@ -49,7 +49,7 @@ Não há planos de portar as tecnologias a seguir de .NET Framework para o .NET 
 | Tecnologia            | Alternativa recomendada                                                                         |
 |-----------------------|-------------------------------------------------------------------------------------------------|
 | Web Forms             | ASP.NET Core [mais](/aspnet/core/blazor) ou [Razor Pages](/aspnet/core/tutorials/razor-pages) |
-| Windows Workflow (WF) | [CoreWF de código-fonte aberto](https://github.com/UiPath-Open/corewf)                                     |
+| Windows Workflow (WF) | [CoreWF de código-fonte aberto](https://github.com/UiPath-Open/corewf) ou [Elsa-Workflow](https://github.com/elsa-workflows/elsa-core) |
 
 ### <a name="windows-communication-foundation"></a>Windows Communication Foundation
 
@@ -153,7 +153,7 @@ Há novos recursos no e para o [System.Text.Jsem](../standard/serialization/syst
 - [Copiar JsonSerializerOptions](../standard/serialization/system-text-json-configure-options.md#copy-jsonserializeroptions)
 - [Criar JsonSerializerOptions com padrões da Web](../standard/serialization/system-text-json-configure-options.md#web-defaults-for-jsonserializeroptions)
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [A jornada para um .NET](https://channel9.msdn.com/Events/Build/2020/BOD106)
 - [Melhorias de desempenho no .NET 5](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-5)

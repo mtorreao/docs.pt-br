@@ -1,17 +1,17 @@
 ---
-title: Formatação do log do console
+title: Formatação de log de console
 description: Saiba como usar a formatação de log de console disponível ou implementar a formatação de log personalizada para seus aplicativos .NET.
 author: IEvangelist
 ms.author: dapine
-ms.date: 10/22/2020
-ms.openlocfilehash: 28a3de833b759e043ec3e2cb5016852f9a861cee
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.date: 12/17/2020
+ms.openlocfilehash: 0ec8fc2018febe4273aa646d1682be197933f925
+ms.sourcegitcommit: 3d6d6595a03915f617349781f455f838a44b0f44
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92897643"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97700815"
 ---
-# <a name="console-log-formatting"></a>Formatação do log do console
+# <a name="console-log-formatting"></a>Formatação de log de console
 
 No .NET 5, o suporte à formatação personalizada foi adicionado aos logs do console no `Microsoft.Extensions.Logging.Console` namespace. Há três opções de formatação predefinidas disponíveis: [`Simple`](#simple) , [`Systemd`](#systemd) e [`Json`](#json) .
 
@@ -72,7 +72,7 @@ info: Microsoft.Hosting.Lifetime[0]
       Now listening on: https://localhost:5001
 ```
 
-Por padrão, o `Simple` formatador de log do console é selecionado com a configuração padrão. Você altera isso chamando `AddJsonConsole` no *Program.cs* :
+Por padrão, o `Simple` formatador de log do console é selecionado com a configuração padrão. Você altera isso chamando `AddJsonConsole` no *Program.cs*:
 
 :::code language="csharp" source="snippets/logging/console-formatter-json/Program.cs" highlight="17-26":::
 
@@ -151,6 +151,19 @@ Um formatador de cor personalizado que manipula a aplicação de cores personali
 :::code language="csharp" source="snippets/logging/console-formatter-custom/CustomColorFormatter.cs" highlight="15-18,52-65":::
 
 Quando você executar o aplicativo, os logs mostrarão a `CustomPrefix` mensagem na cor verde quando `FormatterOptions.ColorBehavior` for `Enabled` .
+
+> [!NOTE]
+> Quando <xref:Microsoft.Extensions.Logging.Console.LoggerColorBehavior> é `Disabled` , as mensagens de log _não_ interpretam códigos de cores ANSI inseridos nas mensagens de log. Em vez disso, eles geram a mensagem bruta. Considere o seguinte exemplo:
+>
+> ```csharp
+> logger.LogInformation("Random log \x1B[42mwith green background\x1B[49m message");
+> ```
+>
+> Isso produziria a cadeia de caracteres textual e _não_ é colorido.
+>
+> ```output
+> Random log \x1B[42mwith green background\x1B[49m message
+> ```
 
 ## <a name="see-also"></a>Veja também
 

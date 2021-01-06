@@ -4,12 +4,12 @@ author: IEvangelist
 description: Saiba como usar o padrão de opções para representar grupos de configurações relacionadas em aplicativos .NET.
 ms.author: dapine
 ms.date: 12/04/2020
-ms.openlocfilehash: 76d99337c51920115a38c400daca1649d0e74a99
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 14a81608c41f63abfc562e1a845ca893ff7cdf25
+ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96740014"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97764916"
 ---
 # <a name="options-pattern-in-net"></a>Padrão de opções no .NET
 
@@ -339,6 +339,6 @@ services.PostConfigureAll<CustomOptions>(customOptions =>
 });
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Configuração no .NET](configuration.md)

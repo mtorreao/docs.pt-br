@@ -2,12 +2,12 @@
 title: Despejos-.NET
 description: Uma introdução a despejos no .NET.
 ms.date: 10/12/2020
-ms.openlocfilehash: 56cf4085d10658c828bac39be93eed3f774e00d5
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7a4c7bf54b3e9ea43e685eafbd00b4a373326520
+ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96242767"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97764936"
 ---
 # <a name="dumps"></a>Despejos
 
@@ -53,7 +53,13 @@ Para coletar o despejo em sua própria solicitação, você pode usar o `dotnet-
 
 ## <a name="analyze-dumps"></a>Analisar despejos
 
-Os despejos podem ser analisados usando [`dotnet-dump`](dotnet-dump.md) .
+Você pode anlayze despejos usando a [`dotnet-dump`](dotnet-dump.md) ferramenta CLI ou com o [Visual Studio](https://docs.microsoft.com/visualstudio/debugger/using-dump-files).
+
+> [!NOTE]
+> O Visual Studio versão 16,8 e posterior permite que você [abra despejos do Linux](https://devblogs.microsoft.com/visualstudio/linux-managed-memory-dump-debugging/) gerados no .NET Core 3.1.7 ou posterior.  
+
+> [!NOTE]
+> Se a depuração nativa for necessária, a [extensão do depurador SOS](sos-debugging-extension.md) poderá ser usada com [LLDB no Linux e no MacOS](debug-linux-dumps.md#analyze-dumps-on-linux). O SOS também tem suporte com o [windbg/CDB](/windows-hardware/drivers/debugger/debugger-download-tools) no Windows, embora o Visual Studio seja recomendado.
 
 ## <a name="see-also"></a>Veja também
 

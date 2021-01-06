@@ -5,12 +5,12 @@ author: IEvangelist
 ms.author: dapine
 ms.date: 10/29/2020
 ms.topic: guide
-ms.openlocfilehash: 092fdc70bd5d6bae82c4c1da96db4d5ac08df452
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 6b12d0d607dc0aed8f281943cecf3afa69b0575a
+ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063163"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97899436"
 ---
 # <a name="dependency-injection-guidelines"></a>Diretrizes de injeção de dependência
 
@@ -149,7 +149,7 @@ Os seguintes contêineres de terceiros podem ser usados com aplicativos ASP.NET 
 
 Crie serviços singleton thread-safe. Se um serviço singleton tiver uma dependência em um serviço transitório, o serviço transitório também poderá exigir a segurança do thread dependendo de como ele é usado pelo singleton.
 
-O método de fábrica de um único serviço, como o segundo argumento para [addsingleton \<TService> (IServiceCollection, Func \<IServiceProvider,TService> )](xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton%2A), não precisa ser thread-safe. Como um construtor de tipo ( `static` ), é garantido que ele seja chamado apenas uma vez por um único thread.
+O método de fábrica de um serviço singleton, como o segundo argumento para [addsingleton \<TService> (IServiceCollection, Func \<IServiceProvider,TService> )](xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton%2A), não precisa ser thread-safe. Como um construtor de tipo ( `static` ), é garantido que ele seja chamado apenas uma vez por um único thread.
 
 ## <a name="recommendations"></a>Recomendações
 
@@ -169,7 +169,7 @@ A DI é uma *alternativa* aos padrões de acesso a objeto estático/global. Talv
 
 ## <a name="example-anti-patterns"></a>Antipadrões de exemplo
 
-Além das diretrizes neste artigo, há vários antipadrões *que você **deve** evitar* . Alguns desses antipadrões são aprender a desenvolver os tempos de execução em si.
+Além das diretrizes neste artigo, há vários antipadrões *que você **deve** evitar*. Alguns desses antipadrões são aprender a desenvolver os tempos de execução em si.
 
 > [!WARNING]
 > Esses são antipadrões de exemplo, *não copiam* o código, *não usam esses* padrões e evitam esses padrões com todos os custos.
@@ -190,7 +190,7 @@ O termo "fábricas de DI" refere-se aos métodos de sobrecarga que existem ao ch
 
 :::code language="csharp" source="snippets/configuration/di-anti-patterns/Program.cs" range="32-45" highlight="4-8":::
 
-No código anterior, o recebe `implementationFactory` uma expressão lambda em que o corpo chama <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> um método de `Task<Bar>` retorno. Isso ***causa um deadlock*** . O `GetBarAsync` método simplesmente emula uma operação de trabalho assíncrona com <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> e, em seguida, chama <xref:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService%60%601(System.IServiceProvider)> .
+No código anterior, o recebe `implementationFactory` uma expressão lambda em que o corpo chama <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> um método de `Task<Bar>` retorno. Isso ***causa um deadlock***. O `GetBarAsync` método simplesmente emula uma operação de trabalho assíncrona com <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> e, em seguida, chama <xref:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService%60%601(System.IServiceProvider)> .
 
 :::code language="csharp" source="snippets/configuration/di-anti-patterns/Program.cs" range="47-53":::
 
@@ -220,7 +220,7 @@ Ao usar serviços com escopo, se você não estiver criando um escopo ou dentro 
 
 No código anterior, `Bar` é recuperado em um <xref:Microsoft.Extensions.DependencyInjection.IServiceScope> , que está correto. O antipadrão é a recuperação de `Bar` fora do escopo, e a variável é nomeada `avoid` para mostrar qual exemplo de recuperação está incorreto.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Injeção de dependência no .NET](dependency-injection.md)
 - [Tutorial: usar injeção de dependência no .NET](dependency-injection-usage.md)

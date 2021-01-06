@@ -2,12 +2,12 @@
 title: Registro em log e rastreamento – .NET Core
 description: Uma introdução ao rastreamento e registro em log do .NET Core.
 ms.date: 10/12/2020
-ms.openlocfilehash: 86444f2451079e54050f6698f3e45ddff0700acf
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: fac8eeed63e8737ad42699d81b421747b207c69a
+ms.sourcegitcommit: 35ca2255c6c86968eaef9e3a251c9739ce8e4288
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820573"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753621"
 ---
 # <a name="net-core-logging-and-tracing"></a>Log e rastreamento do .NET Core
 
@@ -36,11 +36,11 @@ A escolha da API de estilo de impressão a ser usada cabe a você. As principais
   - Útil para informações que seu cliente talvez precise ver na versão.
   - Por ser a abordagem mais simples, costuma ser usado para a depuração temporária ad hoc. Geralmente, esse código de depuração nunca é submetido a check-in no controle do código-fonte.
 - <xref:System.Diagnostics.Trace?displayProperty=nameWithType>
-  - Habilitado somente quando `TRACE` é definido.
+  - Habilitada somente quando `TRACE` é definida pela adição `#define TRACE` à sua fonte ou à especificação da opção `/d:TRACE` durante a compilação.
   - Grava em anexado <xref:System.Diagnostics.Trace.Listeners> , por padrão, o <xref:System.Diagnostics.DefaultTraceListener> .
   - Use essa API ao criar logs que serão habilitados na maioria dos builds.
 - <xref:System.Diagnostics.Debug?displayProperty=nameWithType>
-  - Habilitado somente quando `DEBUG` é definido.
+  - Habilitada somente quando `DEBUG` é definida pela adição `#define DEBUG` à sua fonte ou à especificação da opção `/d:DEBUG` durante a compilação.
   - Grava em um depurador anexado.
   - Em `*nix` gravações em stderr, se `COMPlus_DebugWriteToStdErr` estiver definido.
   - Use essa API ao criar logs que serão habilitados apenas nos builds de depuração.
@@ -95,6 +95,8 @@ Por exemplo, para permitir que você faça a melhor escolha para o seu aplicativ
 - A [interpolação de cadeia de caracteres C#](../../csharp/language-reference/tokens/interpolated.md) pode simplificar o código de registro
 
 - [Lista de eventos do provedor de tempo de execução](../../fundamentals/diagnostics/runtime-events.md)
+
+- [Provedores de eventos bem conhecidos no .NET](well-known-event-providers.md)
 
 - A <xref:System.Exception.Message?displayProperty=nameWithType> propriedade é útil para registrar exceções.
 

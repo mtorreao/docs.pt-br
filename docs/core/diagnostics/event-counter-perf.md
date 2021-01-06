@@ -3,20 +3,20 @@ title: Medir o desempenho usando o EventCounters no .NET Core
 description: Neste tutorial, você aprenderá a medir o desempenho usando o EventCounters.
 ms.date: 08/07/2020
 ms.topic: tutorial
-ms.openlocfilehash: 75f6f1469c87eb1fe8a3064a815ec72943771f88
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 2ed7f234b685dab91ab275105d26b474e3bd1a87
+ms.sourcegitcommit: 3d6d6595a03915f617349781f455f838a44b0f44
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96437456"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97700737"
 ---
 # <a name="tutorial-measure-performance-using-eventcounters-in-net-core"></a>Tutorial: medir o desempenho usando o EventCounters no .NET Core
 
 **Este artigo aplica-se a: ✔️** SDK do .net Core 3,0 e versões posteriores
 
-Neste tutorial, você aprenderá como um <xref:System.Diagnostics.Tracing.EventCounter> pode ser usado para medir o desempenho com uma alta frequência de eventos. Você pode usar os [contadores disponíveis](event-counters.md#available-counters) publicados por vários pacotes oficiais do .NET Core, provedores de terceiros ou criar suas próprias métricas para monitoramento.
+Neste tutorial, você aprenderá como um <xref:System.Diagnostics.Tracing.EventCounter> pode ser usado para medir o desempenho com uma alta frequência de eventos. Você pode usar os [contadores disponíveis](available-counters.md) publicados por vários pacotes oficiais do .NET Core, provedores de terceiros ou criar suas próprias métricas para monitoramento.
 
-Neste tutorial, você vai:
+Neste tutorial, você irá:
 
 > [!div class="checklist"]
 >

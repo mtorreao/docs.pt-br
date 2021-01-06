@@ -2,12 +2,12 @@
 title: dotnet-ferramenta de diagnóstico de símbolo-CLI do .NET
 description: Saiba como instalar e usar a ferramenta dotnet-Symbol CLI para baixar arquivos necessários para depurar despejos e minidespejos do .NET.
 ms.date: 11/17/2020
-ms.openlocfilehash: 8ea694e5331f1e4e75b3b3ad644428568e515331
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 69c05544e886d9d41113c8a2383f760b85d01124
+ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825332"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97764988"
 ---
 # <a name="symbol-downloader-dotnet-symbol"></a>Downloader de símbolos (dotNet-Symbol)
 
@@ -15,7 +15,7 @@ ms.locfileid: "94825332"
 
 ## <a name="install"></a>Instalar
 
-Para instalar a versão de lançamento mais recente do `dotnet-trace` [pacote NuGet](https://www.nuget.org/packages/dotnet-trace), use o comando de [instalação da ferramenta dotnet](../tools/dotnet-tool-install.md) :
+Para instalar a versão de lançamento mais recente do `dotnet-symbol` [pacote NuGet](https://www.nuget.org/packages/dotnet-symbol), use o comando de [instalação da ferramenta dotnet](../tools/dotnet-tool-install.md) :
 
 ```dotnetcli
 dotnet tool install --global dotnet-symbol
@@ -98,3 +98,8 @@ dotnet-symbol --host-only --debugging <dump file path>
 - 404 não encontrado ao baixar símbolos.
 
    O download de símbolo só tem suporte em versões oficiais do .NET Core Runtime adquiridas por meio de canais oficiais, como [o site oficial](https://dotnet.microsoft.com/download/dotnet-core) e as [fontes padrão nos scripts de instalação dotnet](../tools/dotnet-install-script.md). Um erro 404 ao baixar arquivos de depuração pode indicar que o despejo foi criado com um tempo de execução do .NET Core de outra fonte, como um compilado da origem localmente ou para um distribuição Linux específico ou de sites da Comunidade como Archlinux. Nesses casos, o arquivo necessário para depuração (dotNet, libcoreclr.so e libmscordaccore.so) deve ser copiado dessas fontes ou do ambiente no qual o arquivo de despejo foi criado.
+
+## <a name="see-also"></a>Veja também
+
+* [Depurando com símbolos](/windows/win32/dxtecharts/debugging-with-symbols)
+* [PDBs portáteis](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md)

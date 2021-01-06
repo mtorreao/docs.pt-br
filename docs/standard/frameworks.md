@@ -5,12 +5,12 @@ ms.date: 11/06/2020
 ms.prod: dotnet
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 1a0d6ef9d31b85fd6c083604dd11b9ca9ff09c79
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7a3dcd61c330607bacf0d05dbd775c62cfa15b37
+ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827913"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97765053"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>Estruturas de destino em projetos no estilo SDK
 
@@ -22,7 +22,7 @@ Um aplicativo ou uma biblioteca também pode se destinar a uma implementação e
 
 Para algumas estruturas de destino, como .NET Framework, as APIs são definidas pelos assemblies que a estrutura instala em um sistema e podem incluir APIs de estrutura de aplicativo (por exemplo, ASP.NET).
 
-Para estruturas de destino baseadas em pacote (por exemplo, .NET 5, .NET Core e .NET Standard), as APIs são definidas pelos pacotes incluídos no aplicativo ou na biblioteca. Um *metapacote* é um pacote NuGet que não tem nenhum conteúdo próprio, mas é uma lista de dependências (outros pacotes). Uma estrutura de destino com base em pacote NuGet especifica implicitamente um metapacote que faz referência a todos os pacotes que, juntos, compõem a estrutura.
+Para estruturas de destino baseadas em pacote (por exemplo, .NET 5, .NET Core e .NET Standard), as APIs são definidas pelos pacotes NuGet incluídos no aplicativo ou na biblioteca.
 
 ## <a name="latest-versions"></a>Versões mais recentes
 
@@ -33,7 +33,7 @@ A tabela a seguir define as estruturas de destino mais comuns, como elas são re
 | .NET 5                | 5.0                         | NET 5.0                         | N/D                                     |
 | .NET Standard         | 2.1                         | netstandard 2.1                 | N/D                                     |
 | .NET Core             | 3.1                         | netcoreapp 3.1                  | 2.1                                     |
-| .NET Framework        | 4.8                         | net48                          | 2.0                                     |
+| .NET Framework        | 4.8                         | net48                          | 2,0                                     |
 
 ## <a name="supported-target-frameworks"></a>Estruturas de destino com suporte
 
@@ -189,7 +189,7 @@ As seguintes estruturas de destino estão preteridas. Os pacotes direcionados a 
 | win10                                                                                      | uap10.0     |
 | winrt                                                                                      | netcore45   |
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Nomes de estrutura de destino no .NET 5](https://github.com/dotnet/designs/blob/master/accepted/2020/net5/net5.md)
 - [Desenvolver bibliotecas com as ferramentas de plataforma cruzada](../core/tutorials/libraries.md)

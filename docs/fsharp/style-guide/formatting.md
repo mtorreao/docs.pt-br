@@ -2,12 +2,12 @@
 title: Diretrizes de formatação de código do F#
 description: 'Aprenda as diretrizes para formatar o código F #.'
 ms.date: 08/31/2020
-ms.openlocfilehash: 7e20c76f4cfafa50a15b6501a498b228b526057e
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: 01a5f9ce0c9b5a67bb0c70bce0829ac300032883
+ms.sourcegitcommit: c3093e9d106d8ca87cc86eef1f2ae4ecfb392118
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97513062"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97737184"
 ---
 # <a name="f-code-formatting-guidelines"></a>Diretrizes de formatação de código do F#
 
@@ -180,11 +180,34 @@ Se você tiver uma definição de função longa, coloque os parâmetros em nova
 
 ```fsharp
 module M =
-    let LongFunctionWithLotsOfParameters
+    let longFunctionWithLotsOfParameters
         (aVeryLongParam: AVeryLongTypeThatYouNeedToUse)
         (aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse)
         (aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse)
         =
+        // ... the body of the method follows
+
+    let longFunctionWithLotsOfParametersAndReturnType
+        (aVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+        (aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+        (aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+        : ReturnType =
+        // ... the body of the method follows
+
+    let longFunctionWithLongTupleParameter
+        (
+            aVeryLongParam: AVeryLongTypeThatYouNeedToUse,
+            aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse,
+            aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse
+        ) =
+        // ... the body of the method follows
+
+    let longFunctionWithLongTupleParameterAndReturnType
+        (
+            aVeryLongParam: AVeryLongTypeThatYouNeedToUse,
+            aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse,
+            aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse
+        ) : ReturnType =
         // ... the body of the method follows
 ```
 
@@ -588,10 +611,11 @@ type MyRecord =
 
 let foo a =
     a
-    |> Option.map (fun x ->
-        {
-            MyField = x
-        })
+    |> Option.map
+        (fun x ->
+            {
+                MyField = x
+            })
 ```
 
 As mesmas regras se aplicam a elementos de lista e matriz.
@@ -802,10 +826,11 @@ A correspondência de padrões de funções anônimas, começando pelo `function
 
 ```fsharp
 lambdaList
-|> List.map (function
-    | Abs(x, body) -> 1 + sizeLambda 0 body
-    | App(lam1, lam2) -> sizeLambda (sizeLambda 0 lam1) lam2
-    | Var v -> 1)
+|> List.map
+    (function
+        | Abs(x, body) -> 1 + sizeLambda 0 body
+        | App(lam1, lam2) -> sizeLambda (sizeLambda 0 lam1) lam2
+        | Var v -> 1)
 ```
 
 Correspondência de padrões em funções definidas por `let` ou `let rec` devem ser recuadas quatro espaços após o início de `let` , mesmo que a `function` palavra-chave seja usada:
@@ -838,11 +863,27 @@ with
 
 ## <a name="formatting-function-parameter-application"></a>Formatando o aplicativo de parâmetros de função
 
-Em geral, a maioria dos aplicativos de parâmetro de função é feita na mesma linha.
-
-Se você quiser aplicar parâmetros a uma função em uma nova linha, recue-os por um escopo.
+Em geral, a maioria dos argumentos é fornecida na mesma linha:
 
 ```fsharp
+let x = sprintf "\t%s - %i\n\r" x.IngredientName x.Quantity
+
+let printListWithOffset a list1 =
+    List.iter (fun elem -> printfn $"%d{a + elem}") list1
+```
+
+Quando os pipelines estão preocupados, o mesmo normalmente também é verdadeiro, em que uma função na forma curried é aplicada como um argumento na mesma linha:
+
+```
+let printListWithOffsetPiped a list1 =
+    list1
+    |> List.iter (fun elem -> printfn $"%d{a + elem}")
+```
+
+No entanto, talvez você queira passar argumentos para uma função em uma nova linha, como uma questão de legibilidade ou porque a lista de argumentos ou os nomes de argumentos são muito longos. Nesse caso, recue com um escopo:
+
+```fsharp
+
 // OK
 sprintf "\t%s - %i\n\r"
      x.IngredientName x.Quantity
@@ -860,23 +901,23 @@ let printVolumes x =
         (convertVolumeImperialPint x)
 ```
 
-As mesmas diretrizes se aplicam a expressões lambda como argumentos de função. Se o corpo de uma expressão lambda, o corpo pode ter outra linha, recuada por um escopo
+Para expressões lambda, você também pode considerar colocar o corpo de uma expressão lambda em uma nova linha, recuada por um escopo, se for longa o suficiente:
 
 ```fsharp
-let printListWithOffset a list1 =
-    List.iter
-        (fun elem -> printfn $"%d{a + elem}")
-        list1
-
-// OK if lambda body is long enough
 let printListWithOffset a list1 =
     List.iter
         (fun elem ->
             printfn $"%d{a + elem}")
         list1
+
+let printListWithOffsetPiped a list1 =
+    list1
+    |> List.iter
+        (fun elem ->
+            printfn $"%d{a + elem}")
 ```
 
-No entanto, se o corpo de uma expressão lambda for maior que uma linha, considere a possibilidade de separá-la em uma função separada em vez de ter uma construção de várias linhas aplicada como um único argumento a uma função.
+Se o corpo de uma expressão lambda tiver várias linhas, considere refatorá-la em uma função com escopo local.
 
 ### <a name="formatting-infix-operators"></a>Formatando operadores infixos
 
