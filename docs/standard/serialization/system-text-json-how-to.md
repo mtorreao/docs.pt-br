@@ -1,7 +1,7 @@
 ---
 title: Como serializar e desserializar JSON usando C#-.NET
 description: Saiba como usar o System.Text.Json namespace para serializar e desserializar do JSON no .net. Inclui o código de exemplo.
-ms.date: 12/16/2020
+ms.date: 01/04/2021
 ms.custom: contperf-fy21q2
 no-loc:
 - System.Text.Json
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: b69dfd6238f529c3b315d63a93a82da0f316f459
-ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
+ms.openlocfilehash: bd257cf8d79ea2afa209fe71ad7eff969a62d6b2
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97678248"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938709"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>Como serializar e desserializar (empacotar e desempacotar) JSON no .NET
 
@@ -30,6 +30,9 @@ A maior parte do código de exemplo de serialização define <xref:System.Text.J
 Os exemplos de código referem-se à seguinte classe e variantes dela:
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WF":::
+
+> [!NOTE]
+> System.Text.Json usa [structs de referência](../../csharp/language-reference/builtin-types/struct.md#ref-struct), que não têm suporte do Visual Basic. Se você tentar usar System.Text.Json APIs com Visual Basic, obterá erros de compilação BC40000. A mensagem de erro indica que o problema é uma API obsoleta, mas o problema real é a falta de `ref struct` suporte no compilador.
 
 ## <a name="namespaces"></a>Namespaces
 
@@ -291,7 +294,7 @@ Também há métodos de extensão para System.Text.Json em [HttpContent](xref:Sy
 Métodos de extensão em `HttpClient` e `HttpContent` não estão disponíveis no System.Text.Json no .NET Core 3,1.
 ::: zone-end
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 * [System.Text.Json sobre](system-text-json-overview.md)
 * [Instanciar instâncias JsonSerializerOptions](system-text-json-configure-options.md)

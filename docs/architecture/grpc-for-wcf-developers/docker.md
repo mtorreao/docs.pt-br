@@ -1,13 +1,13 @@
 ---
 title: Docker-gRPC para desenvolvedores do WCF
 description: Criando imagens do Docker para aplicativos ASP.NET Core gRPC
-ms.date: 09/02/2019
-ms.openlocfilehash: 0a680d0918868829042e521506fa8c1a1628bf5c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 12/15/2020
+ms.openlocfilehash: f662dbd67f00b828f3e1dfa47359a450dd1c5900
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95688439"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938410"
 ---
 # <a name="create-docker-images"></a>Criar imagens do Docker
 
@@ -29,10 +29,10 @@ Para cada imagem, há quatro variantes com base em diferentes distribuições do
 
 | Marca (s) de imagem | Linux | Observações |
 | --------- | ----- | ----- |
-| 3,0-Buster, 3,0 | Debian 10 | A imagem padrão se nenhuma variante do sistema operacional for especificada. |
-| 3,0 – Alpine Ski | Alpine 3,9 | As imagens da Alpine base são muito menores do que Debian ou Ubuntu. |
-| 3,0-disco | Ubuntu 19.04 | |
-| 3,0-Bionic | Ubuntu 18.04 | |
+| 5,0-Buster, 5,0 | Debian 10 | A imagem padrão se nenhuma variante do sistema operacional for especificada. |
+| 5,0 – Alpine Ski | Alpine 3,9 | As imagens da Alpine base são muito menores do que Debian ou Ubuntu. |
+| 5,0-disco | Ubuntu 19.04 | |
+| 5,0-Bionic | Ubuntu 18.04 | |
 
 A imagem do Alpine base é de cerca de 100 MB, em comparação com 200 MB para as imagens Debian e Ubuntu. Alguns pacotes de software ou bibliotecas podem não estar disponíveis no gerenciamento de pacotes da Alpine Ski. Se você não tiver certeza de qual imagem usar, provavelmente deverá escolher o Debian padrão.
 
@@ -41,29 +41,31 @@ A imagem do Alpine base é de cerca de 100 MB, em comparação com 200 MB para a
 
 ## <a name="create-a-docker-image"></a>Criar uma imagem do Docker
 
-Uma imagem do Docker é definida por um *Dockerfile*. Esse é um arquivo de texto que contém todos os comandos necessários para compilar o aplicativo e instalar quaisquer dependências necessárias para compilar ou executar o aplicativo. O exemplo a seguir mostra a Dockerfile mais simples para um aplicativo ASP.NET Core 3,0:
+Uma imagem do Docker é definida por um *Dockerfile*. Esse *Dockerfile* é um arquivo de texto que contém todos os comandos necessários para compilar o aplicativo e instalar quaisquer dependências necessárias para compilar ou executar o aplicativo. O exemplo a seguir mostra a Dockerfile mais simples para um aplicativo ASP.NET Core 5,0:
 
 ```dockerfile
-# Application build steps
-FROM mcr.microsoft.com/dotnet/sdk:3.0 as builder
+FROM mcr.microsoft.com/dotnet/sdk:5.0 as build
 
 WORKDIR /src
 
-COPY . .
+COPY ./StockKube.sln .
+COPY ./src/StockData/StockData.csproj ./src/StockData/
+COPY ./src/StockWeb/StockWeb.csproj ./src/StockWeb/
 
 RUN dotnet restore
 
-RUN dotnet publish -c Release -o /published src/StockData/StockData.csproj
+COPY . .
 
-# Runtime image creation
-FROM mcr.microsoft.com/dotnet/aspnet:3.0
+RUN dotnet publish --no-restore -c Release -o /published src/StockData/StockData.csproj
+
+FROM mcr.microsoft.com/dotnet/aspnet:5.0 as runtime
 
 # Uncomment the line below if running with HTTPS
 # ENV ASPNETCORE_URLS=https://+:443
 
 WORKDIR /app
 
-COPY --from=builder /published .
+COPY --from=build /published .
 
 ENTRYPOINT [ "dotnet", "StockData.dll" ]
 ```
@@ -72,7 +74,7 @@ O Dockerfile tem duas partes: a primeira usa a `sdk` imagem base para compilar e
 
 ### <a name="the-build-steps"></a>As etapas de compilação
 
-| Etapa | DESCRIÇÃO |
+| Etapa | Descrição |
 | ---- | ----------- |
 | `FROM ...` | Declara a imagem base e atribui o `builder` alias. |
 | `WORKDIR /src` | Cria o `/src` diretório e o define como o diretório de trabalho atual. |
@@ -82,7 +84,7 @@ O Dockerfile tem duas partes: a primeira usa a `sdk` imagem base para compilar e
 
 ### <a name="the-runtime-image-steps"></a>As etapas da imagem de tempo de execução
 
-| Etapa | DESCRIÇÃO |
+| Etapa | Descrição |
 | ---- | ----------- |
 | `FROM ...` | Declara uma nova imagem de base. |
 | `WORKDIR /app` | Cria o `/app` diretório e o define como o diretório de trabalho atual. |
@@ -91,18 +93,18 @@ O Dockerfile tem duas partes: a primeira usa a `sdk` imagem base para compilar e
 
 ### <a name="https-in-docker"></a>HTTPS no Docker
 
-As imagens base da Microsoft para o Docker definem a `ASPNETCORE_URLS` variável de ambiente como `http://+:80` , o que significa que Kestrel é executado sem https nessa porta. Se você estiver usando HTTPS com um certificado personalizado (conforme descrito em [aplicativos gRPC hospedados internamente](self-hosted.md)), você deverá substituir isso. Defina a variável de ambiente na parte de criação da imagem de tempo de execução de seu Dockerfile.
+As imagens base da Microsoft para o Docker definem a `ASPNETCORE_URLS` variável de ambiente como `http://+:80` , o que significa que Kestrel é executado sem https nessa porta. Se você estiver usando HTTPS com um certificado personalizado (conforme descrito em [aplicativos gRPC hospedados internamente](self-hosted.md)), deverá substituir essa configuração. Defina a variável de ambiente na parte de criação da imagem de tempo de execução de seu Dockerfile.
 
 ```dockerfile
 # Runtime image creation
-FROM mcr.microsoft.com/dotnet/aspnet:3.0
+FROM mcr.microsoft.com/dotnet/aspnet:5.0
 
 ENV ASPNETCORE_URLS=https://+:443
 ```
 
 ### <a name="the-dockerignore-file"></a>O arquivo. dockerignore
 
-Assim como `.gitignore` os arquivos que excluem determinados arquivos e diretórios do controle do código-fonte, o `.dockerignore` arquivo pode ser usado para excluir arquivos e diretórios de serem copiados para a imagem durante a compilação. Isso não apenas poupa tempo de cópia, mas também pode evitar alguns erros que surgem de ter o `obj` diretório do seu PC copiado para a imagem. No mínimo, você deve adicionar entradas para `bin` e `obj` ao seu `.dockerignore` arquivo.
+Assim como `.gitignore` os arquivos que excluem determinados arquivos e diretórios do controle do código-fonte, o `.dockerignore` arquivo pode ser usado para excluir arquivos e diretórios de serem copiados para a imagem durante a compilação. Esse arquivo não apenas poupa tempo de cópia, mas também pode evitar alguns erros que surgem de ter o `obj` diretório do seu PC copiado para a imagem. No mínimo, você deve adicionar entradas para `bin` e `obj` ao seu `.dockerignore` arquivo.
 
 ```console
 bin/
@@ -111,10 +113,10 @@ obj/
 
 ## <a name="build-the-image"></a>Criar a imagem
 
-Para uma solução com um único aplicativo e, portanto, um único Dockerfile, é mais simples colocar o Dockerfile no diretório base. Em outras palavras, coloque-o no mesmo diretório que o `.sln` arquivo. Nesse caso, para criar a imagem, use o seguinte `docker build` comando do diretório que contém o Dockerfile.
+Para uma `StockKube.sln` solução que contém dois aplicativos diferentes `StockData` e `StockWeb` , é mais simples colocar o Dockerfile para cada um deles no diretório base. Nesse caso, para criar a imagem, use o comando a seguir `docker build` do mesmo diretório em que o `.sln` arquivo reside.
 
 ```console
-docker build --tag stockdata .
+docker build -t stockdata:1.0.0 -f .\src\StockData\Dockerfile .
 ```
 
 O `--tag` sinalizador com nome confuso (que pode ser reduzido `-t` ) especifica o nome completo da imagem, incluindo a marca real, se especificado. O `.` no final especifica o contexto no qual a compilação será executada; o diretório de trabalho atual para os `COPY` comandos no Dockerfile.
@@ -122,7 +124,7 @@ O `--tag` sinalizador com nome confuso (que pode ser reduzido `-t` ) especifica 
 Se você tiver vários aplicativos em uma única solução, poderá manter o Dockerfile de cada aplicativo em sua própria pasta, ao lado do `.csproj` arquivo. Você ainda deve executar o `docker build` comando do diretório base para garantir que a solução e todos os projetos sejam copiados para a imagem. Você pode especificar um Dockerfile abaixo do diretório atual usando o `--file` sinalizador (ou `-f` ).
 
 ```console
-docker build --tag stockdata --file src/StockData/Dockerfile .
+docker build -t stockdata:1.0.0 -f .\src\StockData\Dockerfile .
 ```
 
 ## <a name="run-the-image-in-a-container-on-your-machine"></a>Executar a imagem em um contêiner em seu computador
@@ -130,27 +132,27 @@ docker build --tag stockdata --file src/StockData/Dockerfile .
 Para executar a imagem em sua instância local do Docker, use o `docker run` comando.
 
 ```console
-docker run -ti -p 5000:80 stockdata
+docker run -ti -p 5000:80 stockdata:1.0.0
 ```
 
 O `-ti` sinalizador conecta o terminal atual ao terminal do contêiner e é executado no modo interativo. A `-p 5000:80` porta de publicação (links) 80 no contêiner para a porta 5000 na interface de rede do localhost.
 
 ## <a name="push-the-image-to-a-registry"></a>Efetue o push da imagem para um Registro
 
-Depois de verificar se a imagem funciona, envie-a por push para um registro do Docker para disponibilizá-la em outros sistemas. As redes internas precisarão provisionar um registro do Docker. Isso pode ser tão simples quanto executar a [própria `registry` imagem do Docker](https://docs.docker.com/registry/deploying/) (o registro do Docker é executado em um contêiner do Docker), mas há várias soluções mais abrangentes disponíveis. Para o compartilhamento externo e o uso de nuvem, há vários registros gerenciados disponíveis, como o [registro de contêiner do Azure](/azure/container-registry/) ou o [Hub do Docker](https://docs.docker.com/docker-hub/repos/).
+Depois de verificar se a imagem funciona, envie-a por push para um registro do Docker para disponibilizá-la em outros sistemas. As redes internas precisarão provisionar um registro do Docker. Essa atividade pode ser tão simples quanto executar a [própria `registry` imagem do Docker](https://docs.docker.com/registry/deploying/) (o registro do Docker é executado em um contêiner do Docker), mas há várias soluções mais abrangentes disponíveis. Para o compartilhamento externo e o uso de nuvem, há vários registros gerenciados disponíveis, como o [registro de contêiner do Azure](/azure/container-registry/) ou o [Hub do Docker](https://docs.docker.com/docker-hub/repos/).
 
 Para enviar por push para o Hub do Docker, Prefixe o nome da imagem com o nome do usuário ou da organização.
 
 ```console
-docker tag stockdata myorg/stockdata
-docker push myorg/stockdata
+docker tag stockdata:1.0.0 <myorg>/stockdata:1.0.0
+docker push <myorg>/stockdata:1.0.0
 ```
 
 Para enviar por push para um registro privado, Prefixe o nome da imagem com o nome do host do registro e o nome da organização.
 
 ```console
-docker tag stockdata internal-registry:5000/myorg/stockdata
-docker push internal-registry:5000/myorg/stockdata
+docker tag stockdata <internal-registry:5000>/<myorg>/stockdata:1.0.0
+docker push <internal-registry:5000>/<myorg>/stockdata:1.0.0
 ```
 
 Depois que a imagem estiver em um registro, você poderá implantá-la em hosts do Docker individuais ou em um mecanismo de orquestração de contêiner, como kubernetes.

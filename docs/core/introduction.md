@@ -4,12 +4,12 @@ description: Saiba mais sobre o .NET, uma plataforma de desenvolvimento de softw
 author: tdykstra
 ms.date: 11/16/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 1fd452ac9b7740c428e92cc6a510bab5f4d2d7d0
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 0adc348c1fc340fe481d9987cdbe28c6cf8b065d
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687511"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938670"
 ---
 # <a name="introduction-to-net"></a>Introdução ao .NET
 
@@ -24,7 +24,7 @@ O .NET é uma plataforma de desenvolvimento de software livre gratuita para a cr
   * [Windows Forms](/dotnet/desktop/winforms/)
   * [UWP (Plataforma Universal do Windows)](/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
 * [Jogos](https://dotnet.microsoft.com/apps/games)
-* [Internet das Coisas (IoT)](/dotnet/iot)
+* [Internet das coisas (IoT)](/dotnet/iot)
 * [Aprendizado de máquina](../machine-learning/index.yml)
 * [Aplicativos de console](tutorials/with-visual-studio-code.md)
 * [Serviços do Windows](/aspnet/core/host-and-deploy/windows-service)
@@ -144,6 +144,13 @@ O download do SDK inclui os seguintes componentes:
 * [Bibliotecas de tempo de execução](#runtime-libraries). Fornece tipos de dados primitivos e utilitários fundamentais.
 * O tempo de execução de ASP.NET Core. Fornece serviços básicos para aplicativos conectados à Internet, como aplicativos Web, aplicativos de IoT e back-ends móveis.
 * O tempo de execução da área de trabalho. Fornece serviços básicos para aplicativos da área de trabalho do Windows, incluindo Windows Forms e WPF.
+
+O download do tempo de execução inclui os seguintes componentes:
+
+* Opcionalmente, o tempo de execução da área de trabalho ou ASP.NET Core.
+* O [tempo de execução do .net](#clr). Fornece um sistema de tipos, carregamento de assembly, coletor de lixo, interoperabilidade nativa e outros serviços básicos.
+* [Bibliotecas de tempo de execução](#runtime-libraries). Fornece tipos de dados primitivos e utilitários fundamentais.
+* O  [driver](tools/index.md#driver)`dotnet`. Um comando da CLI que executa aplicativos dependentes da estrutura.
 
 Para obter mais informações, consulte os seguintes recursos:
 
@@ -287,7 +294,7 @@ As bibliotecas para algumas funcionalidades de aplicativos comumente usadas não
 | [Microsoft.Extensions.Hosting](https://www.nuget.org/packages/Microsoft.Extensions.Hosting) | [Gerenciamento de tempo de vida do aplicativo (host genérico)](extensions/generic-host.md) |
 | [Microsoft. Extensions. DependencyInjection](https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection) | [DI (injeção de dependência)](extensions/dependency-injection.md)
 | [Microsoft.Extensions.Configuração](https://www.nuget.org/packages/Microsoft.Extensions.Configuration) | [Configuration](extensions/configuration.md) |
-| [Microsoft.Extensions.Logging](https://www.nuget.org/packages/Microsoft.Extensions.Logging) | [Logging](extensions/logging.md) |
+| [Microsoft.Extensions.Logging](https://www.nuget.org/packages/Microsoft.Extensions.Logging) | [Registro em log](extensions/logging.md) |
 | [Microsoft. Extensions. opções](https://www.nuget.org/packages/Microsoft.Extensions.Options) | [Padrão de opções](extensions/options.md) |
 
 Para obter mais informações, consulte o [repositório dotnet/extensões no GitHub](https://github.com/dotnet/extensions).

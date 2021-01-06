@@ -1,13 +1,13 @@
 ---
 title: Convenções de codificação do F#
 description: 'Aprenda as diretrizes gerais e os idiomas ao escrever o código F #.'
-ms.date: 01/15/2020
-ms.openlocfilehash: 87955c379f0abba929b0ced75d62d2601f37dc5a
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.date: 01/5/2021
+ms.openlocfilehash: e69ceb2f3c37404ca8d8ed972f985340e62ecb59
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739896"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938683"
 ---
 # <a name="f-coding-conventions"></a>Convenções de codificação do F#
 
@@ -135,7 +135,7 @@ Há muitas ocasiões em que a inicialização de um valor pode ter efeitos colat
 ```fsharp
 // This is bad!
 module MyApi =
-    let dep1 = File.ReadAllText "/Users/{your name}/connectionstring.txt"
+    let dep1 = File.ReadAllText "/Users/<name>/connectionstring.txt"
     let dep2 = Environment.GetEnvironmentVariable "DEP_2"
 
     let private r = Random()
@@ -190,9 +190,9 @@ Nesse caso, há três maneiras conhecidas de retirar dinheiro de uma conta banc�
 let handleWithdrawal amount =
     let w = withdrawMoney amount
     match w with
-    | Success am -> printfn "Successfully withdrew %f{am}"
-    | InsufficientFunds balance -> printfn "Failed: balance is %f{balance}"
-    | CardExpired expiredDate -> printfn "Failed: card expired on %O{expiredDate}"
+    | Success am -> printfn $"Successfully withdrew %f{am}"
+    | InsufficientFunds balance -> printfn $"Failed: balance is %f{balance}"
+    | CardExpired expiredDate -> printfn $"Failed: card expired on {expiredDate}"
     | UndisclosedFailure -> printfn "Failed: unknown"
 ```
 
@@ -209,7 +209,7 @@ Primeiro, é recomendável que você leia as [diretrizes de design de exceção]
 
 As principais construções disponíveis em F # para fins de geração de exceções devem ser consideradas na seguinte ordem de preferência:
 
-| Função | Sintaxe | Finalidade |
+| Função | Syntax | Finalidade |
 |----------|--------|---------|
 | `nullArg` | `nullArg "argumentName"` | Gera um `System.ArgumentNullException` com o nome do argumento especificado. |
 | `invalidArg` | `invalidArg "argumentName" "message"` | Gera um `System.ArgumentException` com um nome de argumento e uma mensagem especificados. |
@@ -238,7 +238,7 @@ A reconciliação da funcionalidade a ser executada diante de uma exceção com 
 
 ### <a name="do-not-use-monadic-error-handling-to-replace-exceptions"></a>Não use o tratamento de erros monadic para substituir exceções
 
-As exceções são vistas como um pouco da na programação funcional. Na verdade, as exceções violam a pureza, portanto, é seguro considerá-las não muito funcionais. No entanto, isso ignora a realidade de onde o código deve ser executado e que podem ocorrer erros de tempo de execução. Em geral, escreva o código na suposição de que a maioria das coisas não é pura nem total, para minimizar surpresas desagradáveis.
+As exceções geralmente são vistas como da na programação funcional. Na verdade, as exceções violam a pureza, portanto, é seguro considerá-las não muito funcionais. No entanto, isso ignora a realidade de onde o código deve ser executado e que podem ocorrer erros de tempo de execução. Em geral, escreva o código na suposição de que a maioria das coisas não é pura nem total, para minimizar surpresas desagradáveis.
 
 É importante considerar os seguintes pontos fortes/aspectos principais de exceções em relação à sua relevância e à sua adequação no tempo de execução do .NET e no ecossistema entre linguagens como um todo:
 
@@ -317,7 +317,7 @@ As funções na forma curried não rotulam seus argumentos. Isso tem implicaçõ
 
 ```fsharp
 let func name age =
-    printfn "My name is {name} and I am %d{age} years old!"
+    printfn $"My name is {name} and I am %d{age} years old!"
 
 let funcWithApplication =
     printfn "My name is %s and I am %d years old!"
@@ -331,7 +331,7 @@ val func : name:string -> age:int -> unit
 val funcWithApplication : (string -> int -> unit)
 ```
 
-No local de chamada, as dicas de ferramenta em ferramentas como o Visual Studio não fornecerão informações significativas sobre o que os `string` tipos de entrada e de `int` fato representam.
+No local de chamada, as dicas de ferramenta em ferramentas como o Visual Studio lhe darão a assinatura de tipo, mas como não há nomes definidos, ele não exibirá nomes. Os nomes são essenciais para um bom design de API porque ajudam os chamadores a entender melhor o significado por trás da API. O uso de código sem ponto na API pública pode dificultar a compreensão dos chamadores.
 
 Se você encontrar um código sem ponto como o `funcWithApplication` que é de consumo público, é recomendável fazer uma η completa para que as ferramentas possam escolher nomes significativos para os argumentos.
 
@@ -658,7 +658,7 @@ O F # tem suporte total para objetos e conceitos orientados a objeto (OO). Embor
 * Implementando `IDisposable` e `IEnumerable`
 * Extensões de tipo
 * Eventos
-* Structs
+* Estruturas
 * Delegados
 * Enumerações
 

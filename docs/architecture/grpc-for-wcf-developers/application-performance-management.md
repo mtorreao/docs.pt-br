@@ -1,17 +1,17 @@
 ---
 title: Gerenciamento de desempenho de aplicativos-gRPC para desenvolvedores do WCF
 description: Registro em log, métricas e rastreamento para aplicativos ASP.NET Core gRPC.
-ms.date: 09/02/2019
-ms.openlocfilehash: 8a13d1c4df95768e55c90ac491150bfc78ec2bab
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.date: 12/15/2020
+ms.openlocfilehash: 8a2a89e268e3b2dffdcc945ac71b2de85b4d4964
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94982336"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938449"
 ---
 # <a name="application-performance-management"></a>Gerenciamento de desempenho de aplicativos
 
-Em ambientes de produção como o kubernetes, é importante monitorar os aplicativos para garantir que eles estejam sendo executados de forma ideal. O registro em log e as métricas são particularmente importantes. ASP.NET Core, incluindo o gRPC, fornece suporte interno para produzir e gerenciar mensagens de log e dados de métrica, bem como dados de *rastreamento* .
+Em ambientes de produção como o kubernetes, é importante monitorar os aplicativos para garantir que eles estejam sendo executados de forma ideal. O registro em log e as métricas são importantes em particular. ASP.NET Core, incluindo o gRPC, fornece suporte interno para produzir e gerenciar mensagens de log e dados de métrica, bem como dados de *rastreamento* .
 
 ## <a name="the-difference-between-logging-and-metrics"></a>A diferença entre registro em log e métricas
 
@@ -110,7 +110,7 @@ A natureza numérica dos dados de métricas significa que ele é ideal para impu
 
 ## <a name="distributed-tracing"></a>Rastreamento distribuído
 
-O rastreamento distribuído é um desenvolvimento relativamente recente no monitoramento, que tem surgido do uso crescente de microserviços e arquiteturas distribuídas. Uma única solicitação de um navegador cliente, aplicativo ou dispositivo pode ser dividida em várias etapas e subsolicitaçãos e envolve o uso de muitos serviços em uma rede. Isso dificulta a correlação de mensagens de log e métricas com a solicitação específica que as disparou. O rastreamento distribuído aplica identificadores a solicitações, e isso permite que os logs e as métricas sejam correlacionados a uma operação específica. Isso é semelhante ao [rastreamento de ponta a ponta do WCF](../../framework/wcf/diagnostics/tracing/end-to-end-tracing.md), mas é aplicado em várias plataformas.
+O rastreamento distribuído é um desenvolvimento relativamente recente no monitoramento, que tem surgido do uso crescente de microserviços e arquiteturas distribuídas. Uma única solicitação de um navegador cliente, aplicativo ou dispositivo pode ser dividida em várias etapas e subsolicitaçãos e envolve o uso de muitos serviços em uma rede. Essa atividade dificulta a correlação de mensagens de log e métricas com a solicitação específica que as disparou. O rastreamento distribuído aplica identificadores a solicitações e permite que os logs e as métricas sejam correlacionados a uma operação específica. Esse rastreamento é semelhante ao [rastreamento de ponta a ponta do WCF](../../framework/wcf/diagnostics/tracing/end-to-end-tracing.md), mas é aplicado em várias plataformas.
 
 O rastreamento distribuído cresceu rapidamente em popularidade e está começando a padronizar. A base de computação nativa da nuvem criou o [padrão de rastreamento aberto](https://opentracing.io), tentando fornecer bibliotecas neutras ao fornecedor para trabalhar com back-ends, como [Jaeger](https://www.jaegertracing.io/) e o [APM elástico](https://www.elastic.co/products/apm). Ao mesmo tempo, o Google criou o [projeto OpenCensus](https://opencensus.io/) para abordar o mesmo conjunto de problemas. Esses dois projetos estão se mesclando em um novo projeto, [OpenTelemetry](https://opentelemetry.io), que visa ser o padrão do setor do futuro.
 
@@ -120,9 +120,9 @@ O rastreamento distribuído baseia-se no conceito de *spans*: operações nomead
 
 ### <a name="distributed-tracing-with-diagnosticsource"></a>Rastreamento distribuído com `DiagnosticSource`
 
-O .NET Core tem um módulo interno que mapeia bem para rastreamentos distribuídos e abrange: [diagnosticname](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#diagnosticsource-users-guide). Além de fornecer uma maneira simples de produzir e consumir diagnósticos em um processo, o `DiagnosticSource` módulo tem o conceito de uma *atividade*. Uma atividade é efetivamente uma implementação de um rastreamento distribuído ou um intervalo dentro de um rastreamento. Os elementos internos do módulo cuidam das atividades pai/filho, incluindo a alocação de identificadores. Para obter mais informações sobre como usar o `Activity` tipo, consulte o [Guia do usuário da atividade no GitHub](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-user-guide).
+O .NET tem um módulo interno que mapeia bem para rastreamentos e spans distribuídos: [diagnosticname](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#diagnosticsource-users-guide). Além de fornecer uma maneira simples de produzir e consumir diagnósticos em um processo, o `DiagnosticSource` módulo tem o conceito de uma *atividade*. Uma atividade é efetivamente uma implementação de um rastreamento distribuído ou um intervalo dentro de um rastreamento. Os elementos internos do módulo cuidam das atividades pai/filho, incluindo a alocação de identificadores. Para obter mais informações sobre como usar o `Activity` tipo, consulte o [Guia do usuário da atividade no GitHub](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-user-guide).
 
-Como faz `DiagnosticSource` parte da estrutura principal, há suporte para vários componentes principais. Eles incluem <xref:System.Net.Http.HttpClient> , Entity Framework Core e ASP.NET Core, incluindo o suporte explícito na estrutura gRPC. Quando ASP.NET Core recebe uma solicitação, ele verifica um par de cabeçalhos HTTP que correspondem ao padrão de [contexto de rastreamento W3C](https://www.w3.org/TR/trace-context) . Se os cabeçalhos forem encontrados, uma atividade será iniciada usando os valores de identidade e o contexto dos cabeçalhos. Se nenhum cabeçalho for encontrado, uma atividade será iniciada com valores de identidade gerados que correspondam ao formato padrão. Qualquer diagnóstico gerado pela estrutura ou pelo código do aplicativo durante o tempo de vida dessa atividade pode ser marcado com os identificadores de rastreamento e span. O `HttpClient` suporte estende isso mais adiante, verificando se há uma atividade atual em cada solicitação e adicionando automaticamente os cabeçalhos de rastreamento à solicitação de saída.
+Como `DiagnosticSource` o é uma parte da estrutura principal e posterior, ele tem suporte por vários componentes principais. Eles incluem <xref:System.Net.Http.HttpClient> , Entity Framework Core e ASP.NET Core, incluindo o suporte explícito na estrutura gRPC. Quando ASP.NET Core recebe uma solicitação, ele verifica um par de cabeçalhos HTTP que correspondem ao padrão de [contexto de rastreamento W3C](https://www.w3.org/TR/trace-context) . Se os cabeçalhos forem encontrados, uma atividade será iniciada usando os valores de identidade e o contexto dos cabeçalhos. Se nenhum cabeçalho for encontrado, uma atividade será iniciada com valores de identidade gerados que correspondam ao formato padrão. Qualquer diagnóstico gerado pela estrutura ou pelo código do aplicativo durante o tempo de vida dessa atividade pode ser marcado com os identificadores de rastreamento e span. O `HttpClient` suporte estende essa funcionalidade ainda mais verificando se há uma atividade atual em cada solicitação e adicionando automaticamente os cabeçalhos de rastreamento à solicitação de saída.
 
 As bibliotecas de cliente e servidor do ASP.NET Core gRPC incluem suporte explícito para `DiagnosticSource` e e `Activity` criam atividades, e aplicam e usam informações de cabeçalho automaticamente.
 
@@ -155,7 +155,7 @@ public class Startup
 
 O pacote OpenTracing é uma camada de abstração e, como tal, requer implementação específica para o back-end. As implementações da API OpenTracing estão disponíveis para os seguintes back-ends de software livre.
 
-| Nome | Pacote | Site |
+| Nome | Pacote | Site da Web |
 | ---- | ------- | -------- |
 | Jaeger | [Jaeger](https://www.nuget.org/packages/Jaeger/) | [jaegertracing.io](https://jaegertracing.io) |
 | APM elástico | [Elástico. APM. NetCoreAll](https://www.nuget.org/packages/Elastic.Apm.NetCoreAll/) | [elastic.co/products/apm](https://www.elastic.co/products/apm) |
