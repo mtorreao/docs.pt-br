@@ -15,5 +15,7 @@
       href: ./fs0009.md
     - name: 'FS0025: correspondência de padrão incompleta'
       href: ./fs0025.md
+    - name: FS0037 – definição duplicada
+      href: ./fs0037.md
     - name: FS0052 – cópia defensiva
       href: ./fs0052.md

@@ -393,14 +393,28 @@ items:
               - name: Visão geral
                 displayName: dumps
                 href: ../core/diagnostics/dumps.md
+              - name: Depurar um StackOverflow
+                href: ../core/diagnostics/debug-stackoverflow.md
               - name: Despejos do Linux
                 href: ../core/diagnostics/debug-linux-dumps.md
+              - name: Extensão do depurador de SOS
+                href: ../core/diagnostics/sos-debugging-extension.md
           - name: EventCounters
-            href: ../core/diagnostics/event-counters.md
+            items:
+              - name: Visão geral
+                displayName: EventCounters
+                href: ../core/diagnostics/event-counters.md
+              - name: Contadores bem conhecidos no .NET
+                href: ../core/diagnostics/available-counters.md
           - name: EventPipe
             href: ../core/diagnostics/eventpipe.md
           - name: Registro em log e rastreamento
-            href: ../core/diagnostics/logging-tracing.md
+            items:
+              - name: Visão geral
+                displayName: logging and tracing
+                href: ../core/diagnostics/logging-tracing.md
+              - name: Provedores de eventos bem conhecidos
+                href: ../core/diagnostics/well-known-event-providers.md
           - name: Eventos de runtime
             items:
               - name: Visão geral
@@ -579,8 +593,6 @@ items:
                         href: code-analysis/quality-rules/ca1069.md
                       - name: CA1070
                         href: code-analysis/quality-rules/ca1070.md
-                      - name: CA1071
-                        href: code-analysis/quality-rules/ca1071.md
                   - name: Regras de documentação
                     items:
                       - name: Visão geral
