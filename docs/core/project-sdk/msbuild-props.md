@@ -4,12 +4,12 @@ description: Referência para as propriedades e os itens do MSBuild que são com
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: 27944a6726f8d74a3b00c7c774faa8037c0f2f0e
-ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
+ms.openlocfilehash: e7deb8c32fd01452524122e41f758ab037020ee4
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97899620"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970701"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>Referência do MSBuild para projetos do SDK do .NET
 
@@ -81,11 +81,37 @@ Você pode especificar propriedades como `PackageId` ,, `PackageVersion` , `Pack
 
 ## <a name="publish-properties-and-items"></a>Publicar Propriedades e itens
 
+- [AppendRuntimeIdentifierToOutputPath](#appendruntimeidentifiertooutputpath)
+- [AppendTargetFrameworkToOutputPath](#appendtargetframeworktooutputpath)
 - [CopyLocalLockFileAssemblies](#copylocallockfileassemblies)
 - [RuntimeIdentifier](#runtimeidentifier)
 - [RuntimeIdentifiers](#runtimeidentifiers)
 - [TrimmerRootAssembly](#trimmerrootassembly)
 - [UseAppHost](#useapphost)
+
+### <a name="appendtargetframeworktooutputpath"></a>AppendTargetFrameworkToOutputPath
+
+A `AppendTargetFrameworkToOutputPath` propriedade controla se o [moniker da estrutura de destino (TFM)](../../standard/frameworks.md) é anexado ao caminho de saída (que é definido por [OutputPath](/visualstudio/msbuild/common-msbuild-project-properties#list-of-common-properties-and-parameters)). O SDK do .NET acrescenta automaticamente a estrutura de destino e, se presente, o identificador de tempo de execução ao caminho de saída. `AppendTargetFrameworkToOutputPath`A configuração para `false` impede que o TFM seja anexado ao caminho de saída. No entanto, sem o TFM no caminho de saída, vários artefatos de compilação podem substituir um ao outro.
+
+Por exemplo, para um aplicativo .NET 5,0, o caminho de saída muda de `bin\Debug\net5.0` para `bin\Debug` com a seguinte configuração:
+
+```xml
+<PropertyGroup>
+  <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+</PropertyGroup>
+```
+
+### <a name="appendruntimeidentifiertooutputpath"></a>AppendRuntimeIdentifierToOutputPath
+
+A `AppendRuntimeIdentifierToOutputPath` propriedade controla se o [RID (identificador de tempo de execução)](../rid-catalog.md) é anexado ao caminho de saída. O SDK do .NET acrescenta automaticamente a estrutura de destino e, se presente, o identificador de tempo de execução ao caminho de saída. `AppendRuntimeIdentifierToOutputPath`A configuração para `false` impede que o RID seja anexado ao caminho de saída.
+
+Por exemplo, para um aplicativo .NET 5,0 e um RID do `win10-x64` , o caminho de saída muda de `bin\Debug\net5.0\win10-x64` para `bin\Debug\net5.0` com a seguinte configuração:
+
+```xml
+<PropertyGroup>
+  <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+</PropertyGroup>
+```
 
 ### <a name="copylocallockfileassemblies"></a>CopyLocalLockFileAssemblies
 
@@ -181,7 +207,86 @@ A `LangVersion` propriedade permite especificar uma versão de linguagem de prog
 
 Para obter mais informações, consulte [controle de versão da linguagem C#](../../csharp/language-reference/configure-language-version.md#override-a-default).
 
+## <a name="default-item-inclusion-properties"></a>Propriedades de inclusão de item padrão
+
+- [DefaultExcludesInProjectFolder](#defaultexcludesinprojectfolder)
+- [DefaultItemExcludes](#defaultitemexcludes)
+- [EnableDefaultCompileItems](#enabledefaultcompileitems)
+- [EnableDefaultEmbeddedResourceItems](#enabledefaultembeddedresourceitems)
+- [EnableDefaultItems](#enabledefaultitems)
+- [EnableDefaultNoneItems](#enabledefaultnoneitems)
+
+Para obter mais informações, consulte [inclusões e exclusões padrão](overview.md#default-includes-and-excludes).
+
+### <a name="defaultitemexcludes"></a>DefaultItemExcludes
+
+Use a `DefaultItemExcludes` propriedade para definir padrões de glob para arquivos e pastas que devem ser excluídos do globs de inclusão, exclusão e remoção. Por padrão, as pastas *./bin* e *./obj* são excluídas dos padrões de glob.
+
+```xml
+<PropertyGroup>
+  <DefaultItemExcludes>$(DefaultItemExcludes);**/*.myextension</DefaultItemExcludes>
+</PropertyGroup>
+```
+
+### <a name="defaultexcludesinprojectfolder"></a>DefaultExcludesInProjectFolder
+
+Use a `DefaultExcludesInProjectFolder` propriedade para definir padrões de glob para arquivos e pastas na pasta do projeto que deve ser excluída da inclusão, exclusão e remoção de globs. Por padrão, as pastas que começam com um ponto ( `.` ), como *. git* e *. vs*, são excluídas dos padrões de glob.
+
+Essa propriedade é muito semelhante à `DefaultItemExcludes` propriedade, exceto pelo fato de que ela só considera arquivos e pastas na pasta do projeto. Quando um padrão glob não corresponde intencionalmente a itens fora da pasta do projeto com um caminho relativo, use a `DefaultExcludesInProjectFolder` propriedade em vez da `DefaultItemExcludes` propriedade.
+
+```xml
+<PropertyGroup>
+  <DefaultExcludesInProjectFolder>$(DefaultExcludesInProjectFolder);**/myprefix*/**</DefaultExcludesInProjectFolder>
+</PropertyGroup>
+```
+
+### <a name="enabledefaultitems"></a>EnableDefaultItems
+
+A `EnableDefaultItems` propriedade controla se os itens de compilação, itens de recursos inseridos e `None` itens são incluídos implicitamente no projeto. O valor padrão é `true`. Defina a `EnableDefaultItems` propriedade como `false` para desabilitar toda a inclusão de arquivo implícita.
+
+```xml
+<PropertyGroup>
+  <EnableDefaultItems>false</EnableDefaultItems>
+</PropertyGroup>
+```
+
+### <a name="enabledefaultcompileitems"></a>EnableDefaultCompileItems
+
+A `EnableDefaultCompileItems` propriedade controla se os itens de compilação são incluídos implicitamente no projeto. O valor padrão é `true`. Defina a `EnableDefaultCompileItems` propriedade como `false` para desabilitar a inclusão implícita de *. cs e outros arquivos de extensão de idioma.
+
+```xml
+<PropertyGroup>
+  <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+</PropertyGroup>
+```
+
+### <a name="enabledefaultembeddedresourceitems"></a>EnableDefaultEmbeddedResourceItems
+
+A `EnableDefaultEmbeddedResourceItems` propriedade controla se os itens de recurso incorporados estão implicitamente incluídos no projeto. O valor padrão é `true`. Defina a `EnableDefaultEmbeddedResourceItems` propriedade como `false` para desabilitar a inclusão implícita de arquivos de recursos inseridos.
+
+```xml
+<PropertyGroup>
+  <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+</PropertyGroup>
+```
+
+### <a name="enabledefaultnoneitems"></a>EnableDefaultNoneItems
+
+A `EnableDefaultNoneItems` propriedade controla se os `None` itens (arquivos que não têm nenhuma função no processo de compilação) são incluídos implicitamente no projeto. O valor padrão é `true`. Defina a `EnableDefaultNoneItems` propriedade como `false` para desabilitar a inclusão implícita de `None` itens.
+
+```xml
+<PropertyGroup>
+  <EnableDefaultNoneItems>false</EnableDefaultNoneItems>
+</PropertyGroup>
+```
+
 ## <a name="code-analysis-properties"></a>Propriedades de análise de código
+
+- [AnalysisLevel](#analysislevel)
+- [Analysismode](#analysismode)
+- [CodeAnalysisTreatWarningsAsErrors](#codeanalysistreatwarningsaserrors)
+- [EnableNETAnalyzers](#enablenetanalyzers)
+- [EnforceCodeStyleInBuild](#enforcecodestyleinbuild)
 
 ### <a name="analysislevel"></a>AnalysisLevel
 
@@ -471,7 +576,7 @@ A `RunArguments` propriedade define os argumentos que são passados para o aplic
 
 ### <a name="runworkingdirectory"></a>RunWorkingDirectory
 
-A `RunWorkingDirectory` propriedade define o diretório de trabalho no qual o processo do aplicativo será iniciado. Se você não especificar um diretório, `OutDir` será usado como o diretório de trabalho.
+A `RunWorkingDirectory` propriedade define o diretório de trabalho no qual o processo do aplicativo será iniciado. Pode ser um caminho absoluto ou um caminho relativo ao diretório do projeto. Se você não especificar um diretório, `OutDir` será usado como o diretório de trabalho.
 
 ```xml
 <PropertyGroup>
@@ -479,7 +584,7 @@ A `RunWorkingDirectory` propriedade define o diretório de trabalho no qual o pr
 </PropertyGroup>
 ```
 
-## <a name="hosting-properties-and-items"></a>Hospedando Propriedades e itens
+## <a name="hosting-properties"></a>Propriedades de hospedagem
 
 - [EnableComHosting](#enablecomhosting)
 - [EnableDynamicLoading](#enabledynamicloading)

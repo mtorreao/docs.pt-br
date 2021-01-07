@@ -3,13 +3,13 @@ title: Instalar o .NET no RHEL-.NET
 description: Demonstra as várias maneiras de instalar o SDK do .NET e o tempo de execução do .NET no RHEL.
 author: adegeo
 ms.author: adegeo
-ms.date: 11/10/2020
-ms.openlocfilehash: 0b6138185bfd3e2f50c1b31e82779165715a5b6e
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.date: 01/06/2021
+ms.openlocfilehash: d585017919507a8fdcbb24778a0ff3ab3d9049c2
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851634"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970792"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-rhel"></a>Instalar o SDK do .NET ou o tempo de execução do .NET no RHEL
 
@@ -43,10 +43,6 @@ Não há mais suporte para as seguintes versões do .NET. Os downloads para eles
 ## <a name="remove-preview-versions"></a>Remover versões de visualização
 
 [!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
-
-## <a name="how-to-install-other-versions"></a>Como instalar outras versões
-
-Consulte a [documentação do Red Hat para .net](https://access.redhat.com/documentation/net/5.0/) nas etapas necessárias para instalar outras versões do .net.
 
 ## <a name="rhel-8-"></a>RHEL 8 ✔️
 
@@ -140,22 +136,15 @@ source scl_source enable rh-dotnet31
 
 Como alternativa ao tempo de execução de ASP.NET Core, você pode instalar o tempo de execução do .NET Core que não inclui suporte a ASP.NET Core: substitua `rh-dotnet31-aspnetcore-runtime-3.1` nos comandos acima por `rh-dotnet31-dotnet-runtime-3.1` .
 
-## <a name="snap"></a>Snap
-
-[!INCLUDE [linux-install-snap](includes/linux-install-snap.md)]
-
 ## <a name="dependencies"></a>Dependências
 
 [!INCLUDE [linux-rpm-install-dependencies](includes/linux-rpm-install-dependencies.md)]
 
-## <a name="scripted-install"></a>Instalação com script
+## <a name="how-to-install-other-versions"></a>Como instalar outras versões
 
-[!INCLUDE [linux-install-scripted](includes/linux-install-scripted.md)]
-
-## <a name="manual-install"></a>Instalação manual
-
-[!INCLUDE [linux-install-manual](includes/linux-install-manual.md)]
+Consulte a [documentação do Red Hat para .net](https://access.redhat.com/documentation/net/5.0/) nas etapas necessárias para instalar outras versões do .net.
 
 ## <a name="next-steps"></a>Próximas etapas
 
+- [Como habilitar o preenchimento com TAB para a CLI do .NET](../tools/enable-tab-autocomplete.md)
 - [Tutorial: criar um aplicativo de console com o SDK do .NET usando o Visual Studio Code](../tutorials/with-visual-studio-code.md)

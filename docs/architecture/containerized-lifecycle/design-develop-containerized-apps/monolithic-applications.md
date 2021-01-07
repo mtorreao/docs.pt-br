@@ -1,13 +1,13 @@
 ---
 title: Aplicativos monolíticos
 description: Entenda os principais conceitos da implantação de aplicativos monolíticos em contêineres.
-ms.date: 08/06/2020
-ms.openlocfilehash: c9a5baf209a47f62f421a236c0b04fe5dae37e3a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/06/2021
+ms.openlocfilehash: a66c76c473c116b303975040d893348182b96713
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91163538"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970532"
 ---
 # <a name="monolithic-applications"></a>Aplicativos monolíticos
 
@@ -69,7 +69,7 @@ Seja para validar rapidamente um contêiner implantado no Azure ou simplesmente 
 
 Usar o Serviço de Aplicativo do Azure é intuitivo e você pode começar a trabalhar rapidamente, porque ele oferece uma ótima integração com o Git para processar seu código, compilá-lo no Microsoft Visual Studio e implantá-lo diretamente no Azure. No entanto, tradicionalmente (sem o Docker), se você precisasse de outras funcionalidades, estruturas ou dependências não compatíveis com os Serviços de Aplicativos, deveria aguardar até a equipe do Azure atualizar essas dependências no Serviço de Aplicativo ou migrar para outros serviços como o Service Fabric, os Serviços de Nuvem ou até mesmo VMs simples, em que você tem mais controle e pode instalar um componente ou estrutura obrigatória para o aplicativo.
 
-Agora, conforme mostrado na Figura 4-4, ao usar o Visual Studio 2017, o suporte para contêineres no Serviço de Aplicativo do Azure oferece a capacidade de incluir tudo o que você deseja no ambiente do aplicativo. Se você tiver adicionado uma dependência ao aplicativo porque ele está sendo executado em um contêiner, terá a capacidade de incluir essas dependências no Dockerfile ou na imagem do Docker.
+Agora, como mostra a Figura 4-4, ao usar o Visual Studio 2019, o suporte a contêineres no serviço Azure App oferece a capacidade de incluir o que desejar em seu ambiente de aplicativo. Se você tiver adicionado uma dependência ao aplicativo porque ele está sendo executado em um contêiner, terá a capacidade de incluir essas dependências no Dockerfile ou na imagem do Docker.
 
 ![Captura de tela da caixa de diálogo Criar serviço de aplicativo mostrando um registro de contêiner.](./media/monolithic-applications/publish-azure-app-service-container.png)
 

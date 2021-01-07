@@ -1,13 +1,13 @@
 ---
 title: Docker-gRPC para desenvolvedores do WCF
 description: Criando imagens do Docker para aplicativos ASP.NET Core gRPC
-ms.date: 12/15/2020
-ms.openlocfilehash: f662dbd67f00b828f3e1dfa47359a450dd1c5900
-ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
+ms.date: 01/06/2021
+ms.openlocfilehash: f59518a28b0a1dee75c792ba03bd4af826638502
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97938410"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970083"
 ---
 # <a name="create-docker-images"></a>Criar imagens do Docker
 
@@ -15,7 +15,7 @@ Esta seção aborda a criação de imagens do Docker para ASP.NET Core aplicativ
 
 ## <a name="microsoft-base-images-for-aspnet-core-applications"></a>Imagens base da Microsoft para aplicativos ASP.NET Core
 
-A Microsoft fornece uma variedade de imagens básicas para a criação e a execução de aplicativos .NET Core. Para criar uma imagem ASP.NET Core 3,0, você usa duas imagens base:
+A Microsoft fornece uma variedade de imagens básicas para a criação e a execução de aplicativos .NET. Para criar uma imagem ASP.NET Core 5,0, você usa duas imagens base:
 
 - Uma imagem do SDK para compilar e publicar o aplicativo.
 - Uma imagem de tempo de execução para implantação.
@@ -29,10 +29,9 @@ Para cada imagem, há quatro variantes com base em diferentes distribuições do
 
 | Marca (s) de imagem | Linux | Observações |
 | --------- | ----- | ----- |
-| 5,0-Buster, 5,0 | Debian 10 | A imagem padrão se nenhuma variante do sistema operacional for especificada. |
-| 5,0 – Alpine Ski | Alpine 3,9 | As imagens da Alpine base são muito menores do que Debian ou Ubuntu. |
-| 5,0-disco | Ubuntu 19.04 | |
-| 5,0-Bionic | Ubuntu 18.04 | |
+| 5,0-Buster-Slim, 5,0 | Debian 10 | A imagem padrão se nenhuma variante do sistema operacional for especificada. |
+| 5,0 – Alpine Ski | Alpine 3,12 | As imagens da Alpine base são muito menores do que Debian ou Ubuntu. |
+| 5,0 – focal| Ubuntu 20.04 | |
 
 A imagem do Alpine base é de cerca de 100 MB, em comparação com 200 MB para as imagens Debian e Ubuntu. Alguns pacotes de software ou bibliotecas podem não estar disponíveis no gerenciamento de pacotes da Alpine Ski. Se você não tiver certeza de qual imagem usar, provavelmente deverá escolher o Debian padrão.
 
@@ -116,7 +115,7 @@ obj/
 Para uma `StockKube.sln` solução que contém dois aplicativos diferentes `StockData` e `StockWeb` , é mais simples colocar o Dockerfile para cada um deles no diretório base. Nesse caso, para criar a imagem, use o comando a seguir `docker build` do mesmo diretório em que o `.sln` arquivo reside.
 
 ```console
-docker build -t stockdata:1.0.0 -f .\src\StockData\Dockerfile .
+docker build -t stockdata:1.0.0 -f ./src/StockData/Dockerfile .
 ```
 
 O `--tag` sinalizador com nome confuso (que pode ser reduzido `-t` ) especifica o nome completo da imagem, incluindo a marca real, se especificado. O `.` no final especifica o contexto no qual a compilação será executada; o diretório de trabalho atual para os `COPY` comandos no Dockerfile.
@@ -124,7 +123,7 @@ O `--tag` sinalizador com nome confuso (que pode ser reduzido `-t` ) especifica 
 Se você tiver vários aplicativos em uma única solução, poderá manter o Dockerfile de cada aplicativo em sua própria pasta, ao lado do `.csproj` arquivo. Você ainda deve executar o `docker build` comando do diretório base para garantir que a solução e todos os projetos sejam copiados para a imagem. Você pode especificar um Dockerfile abaixo do diretório atual usando o `--file` sinalizador (ou `-f` ).
 
 ```console
-docker build -t stockdata:1.0.0 -f .\src\StockData\Dockerfile .
+docker build -t stockdata:1.0.0 -f ./src/StockData/Dockerfile .
 ```
 
 ## <a name="run-the-image-in-a-container-on-your-machine"></a>Executar a imagem em um contêiner em seu computador

@@ -2,12 +2,12 @@
 title: Migração do .NET Core com project.json
 description: Saiba como migrar um projeto .NET Core mais antigo usando project.json
 ms.date: 07/19/2017
-ms.openlocfilehash: 0d4190a02389089a888d8b52dd8e7c412636b575
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 73fbfed6943e3eb535e6eead3b3496edd3426c26
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538244"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970714"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>Migração de projetos do .NET Core com project.json
 
@@ -36,7 +36,7 @@ Quando você abre um arquivo *. xproj* ou um arquivo de solução que referencia
 
 O Visual Studio migra os projetos selecionados automaticamente. Ao migrar uma solução, se você não escolher todos os projetos, a mesma caixa de diálogo será exibida solicitando que você atualize os projetos restantes dessa solução. Depois que o projeto for migrado, você poderá ver e modificar seu conteúdo clicando com o botão direito do mouse no projeto na janela **Gerenciador de soluções** e selecionando **Edit \<project name> . csproj**.
 
-Os arquivos que foram migrados (*project.jsem*, *global.jsem*, *. xproj*e arquivo de solução) são movidos para uma pasta de *backup* . O arquivo de solução migrado é atualizado para o Visual Studio 2017 ou o Visual Studio 2019 e você não poderá abrir esse arquivo de solução no Visual Studio 2015 ou em versões anteriores. Um arquivo chamado *UpgradeLog.htm* que contém um relatório de migração também é salvo e aberto automaticamente.
+Os arquivos que foram migrados (*project.jsem*, *global.jsem*, *. xproj* e arquivo de solução) são movidos para uma pasta de *backup* . O arquivo de solução migrado é atualizado para o Visual Studio 2017 ou o Visual Studio 2019 e você não poderá abrir esse arquivo de solução no Visual Studio 2015 ou em versões anteriores. Um arquivo chamado *UpgradeLog.htm* que contém um relatório de migração também é salvo e aberto automaticamente.
 
 > [!IMPORTANT]
 > No Visual Studio 2019 versão 16,3 e posterior, você não pode carregar ou migrar um arquivo *. xproj* . Além disso, o Visual Studio 2015 não fornece a capacidade de migrar um arquivo *. xproj* . Se você estiver usando uma dessas versões do Visual Studio, instale uma versão adequada do Visual Studio ou use a ferramenta de migração de linha de comando descrita a seguir.
@@ -45,7 +45,7 @@ Os arquivos que foram migrados (*project.jsem*, *global.jsem*, *. xproj*e arquiv
 
 No cenário de linha de comando, você pode usar o [`dotnet migrate`](../tools/dotnet-migrate.md) comando. Ele migra um projeto, uma solução ou um conjunto de pastas nessa ordem, dependendo de quais foram encontrados. Ao migrar um projeto, o projeto e todas as suas dependências são migrados.
 
-Os arquivos que foram migrados (*project.json*, *global.json*e *. xproj*) são movidos para uma pasta de *backup* .
+Os arquivos que foram migrados (*project.json*, *global.json* e *. xproj*) são movidos para uma pasta de *backup* .
 
 > [!NOTE]
 > Se você estiver usando Visual Studio Code, o `dotnet migrate` comando não modificará arquivos específicos de Visual Studio Code, como *tasks.jsem*. Esses arquivos precisam ser alterados manualmente.
@@ -80,12 +80,12 @@ O formato csproj do .NET Core foi mudando e evoluindo com cada nova versão de p
 - Remova as instruções `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` e `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` da parte superior e inferior do projeto. Essas instruções estão implícitas no SDK. Portanto, não é necessário que elas estejam no projeto.
 - Se você tiver `Microsoft.NETCore.App` ou `NETStandard.Library` `<PackageReference>` itens em seu projeto, deverá removê-los. Essas referências do pacote estão [implícitas no SDK](../tools/csproj.md).
 - Remova o `Microsoft.NET.Sdk` `<PackageReference>` elemento, se ele existir. A referência do SDK é fornecida por meio do atributo `Sdk` no elemento `<Project>`.
-- Remova os [globs](https://en.wikipedia.org/wiki/Glob_(programming)) que são [implícitos pelo SDK](../project-sdk/overview.md#default-compilation-includes). Deixar esses globs em seu projeto causará um erro no build, uma vez que os itens de compilação serão duplicados.
+- Remova os [globs](https://en.wikipedia.org/wiki/Glob_(programming)) que são [implícitos pelo SDK](../project-sdk/overview.md#default-includes-and-excludes). Deixar esses globs em seu projeto causará um erro no build, uma vez que os itens de compilação serão duplicados.
 
 Após essas etapas, seu projeto deverá estar totalmente compatível com o formato csproj do RTM .NET Core.
 
 Para obter exemplos de antes e depois da migração do formato csproj antigo para o novo, consulte o artigo [Updating Visual Studio 2017 RC – .NET Core Tooling improvements](https://devblogs.microsoft.com/dotnet/updating-visual-studio-2017-rc-net-core-tooling-improvements/) (Atualizando o Visual Studio 2017 RC – melhorias na ferramenta .NET Core) no blog do .NET.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Portar, migrar e atualizar projetos do Visual Studio](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)

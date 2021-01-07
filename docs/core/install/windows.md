@@ -3,13 +3,13 @@ title: Instalar o .NET no Windows
 description: Saiba mais sobre quais versões do Windows você pode instalar no .NET.
 author: adegeo
 ms.author: adegeo
-ms.date: 11/10/2020
-ms.openlocfilehash: b5c0949bbd591906536094a33d8583a265d8a4c8
-ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
+ms.date: 01/06/2021
+ms.openlocfilehash: 9d39ec28ea2cea875ddd6da34b92eeb740ee6638
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97110228"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970740"
 ---
 # <a name="install-net-on-windows"></a>Instalar o .NET no Windows
 
@@ -98,7 +98,7 @@ As seguintes versões do Windows têm suporte com o .NET 5,0:
 
 | Sistema operacional                  | Versão       | Arquiteturas   |
 |---------------------|---------------|-----------------|
-| Cliente do Windows 10   | Versão 1607 + | x64, x86, ARM64 |
+| Cliente do Windows 10   | Versão 1607+ | x64, x86, ARM64 |
 | Windows Client      | 7 SP1 +, 8,1   | x64, x86        |
 | Windows Server      | 2012 R2 +      | x64, x86        |
 | Núcleo do Windows Server | 2012 R2 +      | x64, x86        |
@@ -116,9 +116,9 @@ As seguintes versões do Windows têm suporte com o .NET Core 3,1:
 | Sistema operacional                            | Versão                        | Arquiteturas   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Windows Client                | 7 SP1 +, 8,1                    | x64, x86        |
-| Cliente do Windows 10             | Versão 1607 +                  | x64, x86        |
+| Cliente do Windows 10             | Versão 1607+                  | x64, x86        |
 | Windows Server                | 2012 R2 +                       | x64, x86        |
-| Nano Server                   | Versão 1803 +                  | x64, ARM32      |
+| Nano Server                   | Versão 1803+                  | x64, ARM32      |
 
 Para obter mais informações sobre OS sistemas operacionais, as distribuições e a política de ciclo de vida com suporte do .NET Core 3,1, consulte [versões do sistema operacional .net core 3,1 com suporte](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md).
 
@@ -134,9 +134,9 @@ As seguintes versões do Windows têm suporte com o .NET Core 3,0:
 | Sistema operacional                            | Versão                        | Arquiteturas   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Windows Client                | 7 SP1 +, 8,1                    | x64, x86        |
-| Cliente do Windows 10             | Versão 1607 +                  | x64, x86        |
+| Cliente do Windows 10             | Versão 1607+                  | x64, x86        |
 | Windows Server                | 2012 R2 +                       | x64, x86        |
-| Nano Server                   | Versão 1803 +                  | x64, ARM32      |
+| Nano Server                   | Versão 1803+                  | x64, ARM32      |
 
 Para obter mais informações sobre OS sistemas operacionais, as distribuições e a política de ciclo de vida com suporte do .NET Core 3,0, consulte [versões do sistema operacional .net core 3,0 com suporte](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md).
 
@@ -152,9 +152,9 @@ As seguintes versões do Windows têm suporte com o .NET Core 2,2:
 | Sistema operacional                            | Versão                        | Arquiteturas   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Windows Client                | 7 SP1 +, 8,1                    | x64, x86        |
-| Cliente do Windows 10             | Versão 1607 +                  | x64, x86        |
+| Cliente do Windows 10             | Versão 1607+                  | x64, x86        |
 | Windows Server                | 2008 R2 SP1 +                   | x64, x86        |
-| Nano Server                   | Versão 1803 +                   | x64, ARM32      |
+| Nano Server                   | Versão 1803+                   | x64, ARM32      |
 
 Para obter mais informações sobre OS sistemas operacionais, as distribuições e a política de ciclo de vida com suporte do .NET Core 2,2, consulte [versões do sistema operacional .net core 2,2 com suporte](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md).
 
@@ -168,9 +168,9 @@ As seguintes versões do Windows têm suporte com o .NET Core 2,1:
 | Sistema operacional                            | Versão                        | Arquiteturas   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Windows Client                | 7 SP1 +, 8,1                    | x64, x86        |
-| Cliente do Windows 10             | Versão 1607 +                  | x64, x86        |
+| Cliente do Windows 10             | Versão 1607+                  | x64, x86        |
 | Windows Server                | 2008 R2 SP1 +                   | x64, x86        |
-| Nano Server                   | Versão 1803 +                  | x86            |
+| Nano Server                   | Versão 1803+                  | x86            |
 
 Para obter mais informações sobre OS sistemas operacionais, as distribuições e a política de ciclo de vida com suporte do .NET Core 2,1, consulte [versões do sistema operacional .net core 2,1 com suporte](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md).
 

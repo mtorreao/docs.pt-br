@@ -1,19 +1,19 @@
 ---
 title: Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)
 description: Obtenha uma visão geral de alto nível do processo de desenvolvimento e implantação para desenvolver e implantar aplicativos em contêineres com o Docker e a plataforma e as ferramentas da Microsoft.
-ms.date: 11/10/2020
-ms.openlocfilehash: cf20ea97ec252649cdb14add40ead67b6319520a
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.date: 01/06/2021
+ms.openlocfilehash: 94c277e349bacee9b9fc7b160043005dd4135958
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506656"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970109"
 ---
 # <a name="containerized-docker-application-lifecycle-with-microsoft-platform-and-tools"></a>Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)
 
 ![Capa do livro](./media/devops-book-cover-large-we.png)
 
-**Edição v 3.1** -atualizado para ASP.NET Core 3,1
+**Edição v 5.0** -atualizado para ASP.NET Core 5,0
 
 Consulte o [changelog](https://aka.ms/DockerLifecycleEbookChangelog) para obter as atualizações do livro e as contribuições da Comunidade.
 
@@ -29,7 +29,7 @@ Escrevemos este guia para ajudá-lo a entender a arquitetura de aplicativos em c
 
 Autor:
 
-> **Cesar de la Torre** , Gerente sênior de produtos , equipe de produto do .NET, Microsoft Corp.
+> **Cesar de la Torre**, Gerente sênior de produtos , equipe de produto do .NET, Microsoft Corp.
 
 Editor de aquisições:
 
@@ -37,7 +37,7 @@ Editor de aquisições:
 
 Editor de desenvolvimento:
 
-> **Bob Russell** , profissional de soluções na Microsoft
+> **Bob Russell**, profissional de soluções na Microsoft
 >
 > [**Publicação octal, Inc.**](http://www.octalpub.com/)
 
@@ -49,15 +49,15 @@ Produção editorial:
 
 Copyeditor:
 
-> **Bob Russell** , profissional de soluções na Microsoft
+> **Bob Russell**, profissional de soluções na Microsoft
 
 Participantes e revisores:
 
-> **Nish Anil** , Gerente de Programa Sênior, Equipe .NET, Microsoft
+> **Nish Anil**, Gerente de Programa Sênior, Equipe .NET, Microsoft
 >
-> **Miguel Veloso** , engenheiro de desenvolvimento de software em conceitos simples
+> **Miguel Veloso**, engenheiro de desenvolvimento de software em conceitos simples
 >
-> **Pedro Ghosh** , consultor principal da Neudesic
+> **Pedro Ghosh**, consultor principal da Neudesic
 
 ## <a name="copyright"></a>Direitos autorais
 
@@ -71,7 +71,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright &copy; 2020 da Microsoft Corporation
+Copyright &copy; 2021 da Microsoft Corporation
 
 Todos os direitos reservados. Nenhuma parte do conteúdo deste guia pode ser reproduzida ou transmitida de nenhuma forma nem por nenhum meio sem a permissão por escrito do publicador.
 

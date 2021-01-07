@@ -3,13 +3,13 @@ title: Instalar o .NET no SLES-.NET
 description: Demonstra as várias maneiras de instalar o SDK do .NET e o tempo de execução do .NET no SLES.
 author: adegeo
 ms.author: adegeo
-ms.date: 11/10/2020
-ms.openlocfilehash: f351a9b11ab16910963a1db88d88b6949b56ae11
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.date: 01/06/2021
+ms.openlocfilehash: 80da69616dd1507b809ef56d439645d569a6a805
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031794"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970779"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-sles"></a>Instalar o SDK do .NET ou o tempo de execução do .NET no SLES
 
@@ -25,7 +25,7 @@ A tabela a seguir é uma lista de versões do .NET com suporte no momento no SLE
 - Um ❌ indica que a versão do SLES ou do .net não tem suporte nessa versão do SLES.
 - Quando uma versão do SLES e uma versão do .NET têm ✔️, essa combinação de so e .NET é suportada.
 
-| SLES                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5,0 |
+| SLES                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |------------------------|---------------|---------------|----------------|
 | ✔️ [15](#sles-15-)     | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
 | ✔️ [12 SP2](#sles-12-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
@@ -39,10 +39,6 @@ Não há mais suporte para as seguintes versões do .NET Core. Os downloads para
 ## <a name="remove-preview-versions"></a>Remover versões de visualização
 
 [!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
-
-## <a name="how-to-install-other-versions"></a>Como instalar outras versões
-
-[!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
 
 ## <a name="sles-15-"></a>✔️ SLES 15
 
@@ -72,6 +68,10 @@ sudo rpm -Uvh https://packages.microsoft.com/config/sles/12/packages-microsoft-p
 
 [!INCLUDE [linux-zyp-install-50](includes/linux-install-50-zyp.md)]
 
+## <a name="how-to-install-other-versions"></a>Como instalar outras versões
+
+[!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
 ## <a name="troubleshoot-the-package-manager"></a>Solucionar problemas do Gerenciador de pacotes
 
 Esta seção fornece informações sobre erros comuns que você pode obter ao usar o Gerenciador de pacotes para instalar o .NET.
@@ -99,14 +99,7 @@ Para aplicativos .NET que usam o assembly *System. Drawing. Common* , você tamb
   > [!WARNING]
   > Você pode instalar uma versão recente do *libgdiplus* adicionando o repositório do mono ao seu sistema. Para obter mais informações, consulte <https://www.mono-project.com/download/stable/>.
 
-## <a name="scripted-install"></a>Instalação com script
-
-[!INCLUDE [linux-install-scripted](includes/linux-install-scripted.md)]
-
-## <a name="manual-install"></a>Instalação manual
-
-[!INCLUDE [linux-install-manual](includes/linux-install-manual.md)]
-
 ## <a name="next-steps"></a>Próximas etapas
 
+- [Como habilitar o preenchimento com TAB para a CLI do .NET](../tools/enable-tab-autocomplete.md)
 - [Tutorial: criar um aplicativo de console com o SDK do .NET usando o Visual Studio Code](../tutorials/with-visual-studio-code.md)

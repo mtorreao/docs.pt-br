@@ -17,12 +17,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: bf11edc3669916ba4d30a3648692ca9b084d4340
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 840e5b0e6a523ac8e3f24586d4980958cd58f613
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009801"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970883"
 ---
 # <a name="best-practices-for-comparing-strings-in-net"></a>Práticas recomendadas para comparar cadeias de caracteres no .NET
 
@@ -194,12 +194,12 @@ De forma geral, a cultura invariável tem muito poucas propriedades que a tornam
 
 A tabela a seguir descreve o mapeamento do contexto da cadeia de caracteres semântica para um <xref:System.StringComparison> membro de enumeração:
 
-|Dados|Comportamento|System.StringComparison correspondente<br /><br /> valor|
+|Dados|Comportamento|System.StringComparison correspondente<br /><br /> value|
 |----------|--------------|-----------------------------------------------------|
 |Identificadores internos que diferenciam maiúsculas de minúsculas.<br /><br /> Identificadores que diferenciam maiúsculas e minúsculas nos padrões como XML e HTTP.<br /><br /> Configurações relacionadas à segurança que diferenciam maiúsculas de minúsculas.|Um identificador não linguístico, em que bytes correspondem exatamente.|<xref:System.StringComparison.Ordinal>|
 |Identificadores internos que não diferenciam maiúsculas de minúsculas.<br /><br /> Identificadores que não diferenciam maiúsculas e minúsculas em padrões como XML e HTTP.<br /><br /> Caminhos de arquivo.<br /><br /> Chaves do Registro e valores.<br /><br /> Variáveis de ambiente.<br /><br /> Identificadores de recurso (por exemplo, nomes de identificador).<br /><br /> Configurações relacionadas à segurança que não diferenciam maiúsculas de minúsculas.|Um identificador não linguístico, em que as maiúsculas e minúsculas são irrelevantes; especialmente, dados armazenados na maioria dos serviços de sistema do Windows.|<xref:System.StringComparison.OrdinalIgnoreCase>|
-|Alguns dados persistentes, linguisticamente relevantes.<br /><br /> Exibição de dados linguísticos que requer uma ordem de classificação fixa.|Dados independentes de cultura que ainda são linguisticamente relevantes.|<xref:System.StringComparison.InvariantCulture><br /><br /> -ou-<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|
-|Dados exibidos para o usuário.<br /><br /> A maioria das entradas do usuário.|Dados que exigem os costumes linguísticos locais.|<xref:System.StringComparison.CurrentCulture><br /><br /> -ou-<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|
+|Alguns dados persistentes, linguisticamente relevantes.<br /><br /> Exibição de dados linguísticos que requer uma ordem de classificação fixa.|Dados independentes de cultura que ainda são linguisticamente relevantes.|<xref:System.StringComparison.InvariantCulture><br /><br /> - ou -<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|
+|Dados exibidos para o usuário.<br /><br /> A maioria das entradas do usuário.|Dados que exigem os costumes linguísticos locais.|<xref:System.StringComparison.CurrentCulture><br /><br /> - ou -<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|
 
 ## <a name="common-string-comparison-methods-in-net"></a>Métodos comuns de comparação de cadeia de caracteres no .NET
 
@@ -234,7 +234,7 @@ A classe <xref:System.String> permite que você teste a igualdade chamando as so
 
 Interpretação padrão: <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.
 
-Você deve ter cuidado ao usar esses métodos, pois forçar uma cadeia de caracteres para maiúsculas ou minúsculas normalmente é usado como uma normalização pequena para comparar cadeias de caracteres independentemente de maiúsculas e minúsculas. Nesse caso, considere o uso de uma comparação que não diferencie maiúsculas de minúsculas.
+Tenha cuidado ao usar os <xref:System.String.ToUpper?displayProperty=nameWithType> métodos e <xref:System.String.ToLower?displayProperty=nameWithType> , porque forçar uma cadeia de caracteres para letras maiúsculas ou minúsculas geralmente é usada como uma pequena normalização para comparar cadeias de caracteres independentemente do caso. Nesse caso, considere o uso de uma comparação que não diferencie maiúsculas de minúsculas.
 
 Os métodos <xref:System.String.ToUpperInvariant%2A?displayProperty=nameWithType> e <xref:System.String.ToLowerInvariant%2A?displayProperty=nameWithType> também estão disponíveis. <xref:System.String.ToUpperInvariant%2A> é o modo padrão para normalizar maiúsculas e minúsculas. As comparações feitas usando <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> são a composição de duas chamadas de maneira comportamental: chamar <xref:System.String.ToUpperInvariant%2A> em ambos os argumentos de cadeia de caracteres e fazer uma comparação usando <xref:System.StringComparison.Ordinal?displayProperty=nameWithType>.
 
@@ -244,7 +244,7 @@ Também há sobrecargas disponíveis para converter para maiúsculas e minúscul
 
 Interpretação padrão: <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.
 
-Esses métodos funcionam da mesma forma que os métodos <xref:System.String.ToUpper%2A?displayProperty=nameWithType> e <xref:System.String.ToLower%2A?displayProperty=nameWithType> descritos na seção anterior.
+Os <xref:System.Char.ToUpper(System.Char)?displayProperty=nameWithType> <xref:System.Char.ToLower(System.Char)?displayProperty=nameWithType> métodos e funcionam de forma semelhante <xref:System.String.ToUpper?displayProperty=nameWithType> aos <xref:System.String.ToLower?displayProperty=nameWithType> métodos e descritos na seção anterior.
 
 ### <a name="stringstartswith-and-stringendswith"></a>String.StartsWith e String.EndsWith
 
@@ -299,6 +299,6 @@ O exemplo a seguir cria um objeto <xref:System.Collections.Hashtable> passando-o
 [!code-csharp[Conceptual.Strings.BestPractices#10](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/indirect2.cs#10)]
 [!code-vb[Conceptual.Strings.BestPractices#10](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/indirect2.vb#10)]
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Globalização em aplicativos .NET](../globalization-localization/globalization.md)

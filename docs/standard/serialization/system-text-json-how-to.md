@@ -12,12 +12,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: bd257cf8d79ea2afa209fe71ad7eff969a62d6b2
-ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
+ms.openlocfilehash: 541ac80ce40b0410167b14f96e36b354d19411db
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97938709"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970896"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>Como serializar e desserializar (empacotar e desempacotar) JSON no .NET
 
@@ -311,5 +311,6 @@ Métodos de extensão em `HttpClient` e `HttpContent` não estão disponíveis n
 * [Escrever serializadores personalizados e desserializadores](write-custom-serializer-deserializer.md)
 * [Gravar conversores personalizados para serialização JSON](system-text-json-converters-how-to.md)
 * [Suporte a DateTime e DateTimeOffset](../datetime/system-text-json-support.md)
+* [Tipos de coleção com suporte no System.Text.Json](system-text-json-supported-collection-types.md)
 * [System.Text.Json Referência de API](xref:System.Text.Json)
 * [System.Text.Json. Referência de API de serialização](xref:System.Text.Json.Serialization)

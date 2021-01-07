@@ -3,12 +3,12 @@ title: Comparação entre project.json e csproj
 description: Veja um mapeamento entre os elementos project.json e csproj.
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: c8638bc30ba09d8e8d464159aded60dcde4b8dc0
-ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
+ms.openlocfilehash: 7de9f623a57a6a094debd3e018edc1560d837fc2
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87427015"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970870"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Um mapeamento entre as propriedades de project.json e csproj
 
@@ -620,7 +620,7 @@ No MSBuild, isso é feito com [itens](/visualstudio/msbuild/common-msbuild-proje
 ```
 
 > [!NOTE]
-> Muitos dos [padrões de recurso de curinga](https://en.wikipedia.org/wiki/Glob_(programming)) são adicionados automaticamente pelo SDK do .NET Core. Para obter mais informações, consulte a [compilação padrão inclui](../project-sdk/overview.md#default-compilation-includes).
+> Muitos dos [padrões de recurso de curinga](https://en.wikipedia.org/wiki/Glob_(programming)) são adicionados automaticamente pelo SDK do .NET Core. Para obter mais informações, consulte a [compilação padrão inclui](../project-sdk/overview.md#default-includes-and-excludes).
 
 Todos os elementos `ItemGroup` do MSBuild dão suporte a `Include`, `Exclude` e `Remove`.
 

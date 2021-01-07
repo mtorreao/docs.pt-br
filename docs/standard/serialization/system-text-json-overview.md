@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: cb5c15c2a5c336e2d5b4a3754fa7a02a370602f3
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: b4432e7a137720216e7c0941b3384ce7ad7049e9
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009879"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970909"
 ---
 # <a name="json-serialization-and-deserialization-marshalling-and-unmarshalling-in-net---overview"></a>Serialização e desserialização JSON (empacotamento e desempacotamento) no .NET-visão geral
 
@@ -51,5 +51,6 @@ A biblioteca também fornece classes para trabalhar com um modelo de objeto de d
 * [Escrever serializadores personalizados e desserializadores](write-custom-serializer-deserializer.md)
 * [Gravar conversores personalizados para serialização JSON](system-text-json-converters-how-to.md)
 * [Suporte a DateTime e DateTimeOffset](../datetime/system-text-json-support.md)
+* [Tipos de coleção com suporte no System.Text.Json](system-text-json-supported-collection-types.md)
 * [System.Text.Json Referência de API](xref:System.Text.Json)
 * [System.Text.Json. Referência de API de serialização](xref:System.Text.Json.Serialization)

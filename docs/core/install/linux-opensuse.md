@@ -3,13 +3,13 @@ title: Instalar o .NET em openSUSE-.NET
 description: Demonstra as várias maneiras de instalar o SDK do .NET e o tempo de execução do .NET no openSUSE.
 author: adegeo
 ms.author: adegeo
-ms.date: 11/10/2020
-ms.openlocfilehash: eb31e3109ccd40999c22a27607d48544bf117dc2
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.date: 01/06/2021
+ms.openlocfilehash: 7a519f19f708e1f12af1e9715bad4f38a607f9c3
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031859"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970805"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-opensuse"></a>Instalar o SDK do .NET ou o tempo de execução do .NET no openSUSE
 
@@ -27,7 +27,7 @@ A tabela a seguir é uma lista de versões do .NET com suporte no momento no ope
 - Um ❌ indica que a versão do openSUSE ou do .net não tem suporte nessa versão do openSUSE.
 - Quando uma versão do openSUSE e uma versão do .NET têm ✔️, há suporte para essa combinação de so e .NET.
 
-| openSUSE                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5,0 |
+| openSUSE                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |----------------------------|---------------|---------------|----------------|
 | ✔️ [15](#opensuse-15-)     | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
 
@@ -40,10 +40,6 @@ Não há mais suporte para as seguintes versões do .NET. Os downloads para eles
 ## <a name="remove-preview-versions"></a>Remover versões de visualização
 
 [!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
-
-## <a name="how-to-install-other-versions"></a>Como instalar outras versões
-
-[!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
 
 ## <a name="opensuse-15-"></a>openSUSE 15 ✔️
 
@@ -59,6 +55,10 @@ sudo chown root:root /etc/zypp/repos.d/microsoft-prod.repo
 
 [!INCLUDE [linux-zyp-install-50](includes/linux-install-50-zyp.md)]
 
+## <a name="how-to-install-other-versions"></a>Como instalar outras versões
+
+[!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
 ## <a name="troubleshoot-the-package-manager"></a>Solucionar problemas do Gerenciador de pacotes
 
 Esta seção fornece informações sobre erros comuns que você pode obter ao usar o Gerenciador de pacotes para instalar o .NET.
@@ -70,10 +70,6 @@ Esta seção fornece informações sobre erros comuns que você pode obter ao us
 ### <a name="failed-to-fetch"></a>Falha ao buscar
 
 [!INCLUDE [package-manager-failed-to-fetch-rpm](includes/package-manager-failed-to-fetch-rpm.md)]
-
-## <a name="snap"></a>Snap
-
-[!INCLUDE [linux-install-snap](includes/linux-install-snap.md)]
 
 ## <a name="dependencies"></a>Dependências
 
@@ -94,14 +90,7 @@ Para aplicativos .NET que usam o assembly *System. Drawing. Common* , você tamb
   > [!WARNING]
   > Você pode instalar uma versão recente do *libgdiplus* adicionando o repositório do mono ao seu sistema. Para obter mais informações, consulte <https://www.mono-project.com/download/stable/>.
 
-## <a name="scripted-install"></a>Instalação com script
-
-[!INCLUDE [linux-install-scripted](includes/linux-install-scripted.md)]
-
-## <a name="manual-install"></a>Instalação manual
-
-[!INCLUDE [linux-install-manual](includes/linux-install-manual.md)]
-
 ## <a name="next-steps"></a>Próximas etapas
 
+- [Como habilitar o preenchimento com TAB para a CLI do .NET](../tools/enable-tab-autocomplete.md)
 - [Tutorial: criar um aplicativo de console com o SDK do .NET usando o Visual Studio Code](../tutorials/with-visual-studio-code.md)

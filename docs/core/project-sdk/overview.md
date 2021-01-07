@@ -4,12 +4,12 @@ titleSuffix: ''
 description: Saiba mais sobre os SDKs do projeto .NET.
 ms.date: 09/17/2020
 ms.topic: conceptual
-ms.openlocfilehash: 6b6651f674f09d5d0d18ddb873096037ad3b2ba5
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.openlocfilehash: 270735c9eef9f1930680687917317ac8bdf39e6d
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247561"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970688"
 ---
 # <a name="net-project-sdks"></a>SDKs do projeto .NET
 
@@ -83,9 +83,9 @@ Se o projeto tiver várias estruturas de destino, concentre os resultados do com
 
 `dotnet msbuild -property:TargetFramework=netcoreapp2.0 -preprocess:output.xml`
 
-### <a name="default-compilation-includes"></a>A compilação padrão inclui
+### <a name="default-includes-and-excludes"></a>Inclusões e exclusões padrão
 
-O padrão inclui e exclui itens de compilação, recursos incorporados e `None` itens são definidos no SDK. Ao contrário dos projetos .NET Framework não SDK, você não precisa especificar esses itens no arquivo de projeto, pois os padrões abrangem os casos de uso mais comuns. Isso torna o arquivo de projeto menor e mais fácil de entender e editar manualmente, se necessário.
+O padrão inclui e exclui [ `Compile` itens,](/visualstudio/msbuild/common-msbuild-project-items#compile) [recursos incorporados](/visualstudio/msbuild/common-msbuild-project-items#embeddedresource)e [ `None` itens](/visualstudio/msbuild/common-msbuild-project-items#none) são definidos no SDK. Ao contrário dos projetos .NET Framework não SDK, você não precisa especificar esses itens no arquivo de projeto, pois os padrões abrangem os casos de uso mais comuns. Esse comportamento torna o arquivo de projeto menor e mais fácil de entender e editar manualmente, se necessário.
 
 A tabela a seguir mostra quais elementos e quais [globs](https://en.wikipedia.org/wiki/Glob_(programming)) são incluídos e excluídos no SDK do .net:
 
@@ -96,7 +96,7 @@ A tabela a seguir mostra quais elementos e quais [globs](https://en.wikipedia.or
 | Nenhum              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs; \*\*/\*.resx |
 
 > [!NOTE]
-> As `./bin` `./obj` pastas e, que são representadas pelas `$(BaseOutputPath)` Propriedades do e do `$(BaseIntermediateOutputPath)` MSBuild, são excluídas do globs por padrão. As exclusões são representadas pela propriedade `$(DefaultItemExcludes)` .
+> As `./bin` `./obj` pastas e, que são representadas pelas `$(BaseOutputPath)` Propriedades do e do `$(BaseIntermediateOutputPath)` MSBuild, são excluídas do globs por padrão. As exclusões são representadas pela [Propriedade DefaultItemExcludes](msbuild-props.md#defaultitemexcludes).
 
 #### <a name="build-errors"></a>Erros de compilação
 
@@ -110,7 +110,7 @@ Para resolver os erros, siga um destes procedimentos:
 
 - Remova os itens explícitos `Compile` , `EmbeddedResource` ou `None` que correspondem aos implícitos listados na tabela anterior.
 
-- Defina a `EnableDefaultItems` propriedade como `false` para desabilitar toda a inclusão de arquivo implícito:
+- Defina a [Propriedade EnableDefaultItems](msbuild-props.md#enabledefaultitems) como `false` para desabilitar toda a inclusão de arquivo implícito:
 
   ```xml
   <PropertyGroup>
@@ -120,7 +120,7 @@ Para resolver os erros, siga um destes procedimentos:
 
   Se você quiser especificar arquivos a serem publicados com seu aplicativo, ainda poderá usar os mecanismos do MSBuild conhecidos para isso, por exemplo, o `Content` elemento.
 
-- Desabilite seletivamente apenas `Compile` , `EmbeddedResource` , ou `None` globs definindo a `EnableDefaultCompileItems` propriedade, `EnableDefaultEmbeddedResourceItems` ou `EnableDefaultNoneItems` como `false` :
+- Desabilite seletivamente `Compile` apenas, `EmbeddedResource` , ou `None` globs definindo a propriedade [EnableDefaultCompileItems](msbuild-props.md#enabledefaultcompileitems), [EnableDefaultEmbeddedResourceItems](msbuild-props.md#enabledefaultembeddedresourceitems)ou [EnableDefaultNoneItems](msbuild-props.md#enabledefaultnoneitems) para `false` :
 
   ```xml
   <PropertyGroup>
@@ -176,7 +176,7 @@ Para consumir um destino personalizado em seu projeto, adicione um `PackageRefer
 
 Você pode configurar como usar o destino personalizado. Como é um destino do MSBuild, ele pode depender de um determinado destino, executado após outro destino ou ser invocado manualmente usando o `dotnet msbuild -t:<target-name>` comando. No entanto, para proporcionar uma melhor experiência do usuário, você pode combinar ferramentas por projeto e destinos personalizados. Nesse cenário, a ferramenta por projeto aceita todos os parâmetros necessários e converte-os na [`dotnet msbuild`](../tools/dotnet-msbuild.md) invocação necessária que executa o destino. Veja um exemplo desse tipo de sinergia no repositório [Exemplos do MVP Summit 2016 Hackathon](https://github.com/dotnet/MVPSummitHackathon2016) do projeto [`dotnet-packer`](https://github.com/dotnet/MVPSummitHackathon2016/tree/master/dotnet-packer).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Instalar o .NET Core](../install/index.yml)
 - [Como usar SDKs de projeto do MSBuild](/visualstudio/msbuild/how-to-use-project-sdk)
