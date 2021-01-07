@@ -49,17 +49,17 @@ Adicione as seguintes interfaces ao diretório raiz do projeto:
 
 A `IOperation` interface define uma única `OperationId` propriedade.
 
-*Eu Transient Operation.cs*
+*ITransientOperation.cs*
 
-::: linguagem de código = "CSharp" origem = "trechos/configuração/console-di/I Transient Operation.cs":::
+:::code language="csharp" source="snippets/configuration/console-di/ITransientOperation.cs":::
 
-*Eu Scoped Operation.cs*
+*IScopedOperation.cs*
 
-::: linguagem de código = "CSharp" origem = "trechos/configuração/console-di/I Scoped Operation.cs":::
+:::code language="csharp" source="snippets/configuration/console-di/IScopedOperation.cs":::
 
-*Eu Singleton Operation.cs*
+*ISingletonOperation.cs*
 
-::: linguagem de código = "CSharp" origem = "trechos/configuração/console-di/I Singleton Operation.cs":::
+:::code language="csharp" source="snippets/configuration/console-di/ISingletonOperation.cs":::
 
 Todas as subinterfaces de `IOperation` nome do seu tempo de vida de serviço pretendido. Por exemplo, " Transient " ou " Singleton ".
 
